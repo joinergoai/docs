@@ -24,12 +24,12 @@
 <text x="54" y="318" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Billing</text>
 <rect x="260" y="128" width="300" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" />
 <rect x="260" y="128" width="5" height="90" rx="3" fill="#2563eb" />
-<text x="282" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Primary admin</text>
-<text x="282" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Workspace owner and final setup</text>
+<text x="282" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">RevOps</text>
+<text x="282" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Workspace setup and governance</text>
 <text x="282" y="202" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">owner</text>
 <rect x="590" y="128" width="300" height="90" rx="10" fill="#ffffff" stroke="#cbd5e1" />
 <rect x="590" y="128" width="5" height="90" rx="3" fill="#2563eb" />
-<text x="612" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Secondary admins</text>
+<text x="612" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Operators</text>
 <text x="612" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Delegated configuration and team</text>
 <text x="612" y="202" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">management</text>
 <rect x="260" y="254" width="300" height="116" rx="10" fill="#ffffff" stroke="#cbd5e1" />
@@ -48,8 +48,8 @@
 <text x="282" y="458" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Use after CRM, templates, or defaults are configured</text>
 <circle cx="496" cy="156" r="18" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="3" />
 <path d="M 514 156 L 710 72" stroke="#ea580c" stroke-width="2" marker-end="url(#screen-arrow)" />
-<rect x="710" y="50" width="242" height="44" rx="8" fill="#ffffff" stroke="#ea580c" />
-<text x="724" y="68" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Primary admin owns setup</text>
+<rect x="710" y="50" width="216" height="44" rx="8" fill="#ffffff" stroke="#ea580c" />
+<text x="724" y="68" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">RevOps owns setup</text>
 <circle cx="740" cy="308" r="18" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-width="3" />
 <path d="M 758 308 L 812 382" stroke="#0f766e" stroke-width="2" marker-end="url(#screen-arrow)" />
 <rect x="812" y="360" width="234" height="44" rx="8" fill="#ffffff" stroke="#0f766e" />

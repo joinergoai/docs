@@ -26,11 +26,11 @@
 <text x="54" y="360" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Reporting</text>
 <rect x="260" y="132" width="640" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1" />
 <rect x="260" y="132" width="5" height="68" rx="3" fill="#2563eb" />
-<text x="282" y="162" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Primary admin path</text>
-<text x="282" y="188" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">CRM, field mapping, teams, defaults, reporting</text>
+<text x="282" y="162" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">RevOps setup path</text>
+<text x="282" y="188" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">CRM, field mapping, teams, defaults, grading, reporting</text>
 <rect x="260" y="220" width="640" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1" />
 <rect x="260" y="220" width="5" height="68" rx="3" fill="#2563eb" />
-<text x="282" y="250" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Secondary admin path</text>
+<text x="282" y="250" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Operator support path</text>
 <text x="282" y="276" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Delegated setup, users, templates, notetaker defaults</text>
 <rect x="260" y="308" width="640" height="68" rx="10" fill="#ffffff" stroke="#cbd5e1" />
 <rect x="260" y="308" width="5" height="68" rx="3" fill="#2563eb" />

@@ -1,28 +1,28 @@
 ---
-title: "Primary admin setup for founders, RevOps, and sales leaders"
-description: "Set up Ergo as the workspace owner responsible for CRM readiness, teams, permissions, defaults, reporting, and rollout."
-keywords: ["Primary admin setup for founders, RevOps, and sales leaders","Onboarding","Ergo docs"]
+title: "RevOps setup for Ergo rollout"
+description: "Set up Ergo as the RevOps owner responsible for CRM readiness, teams, permissions, defaults, call grading, reporting, and rollout."
+keywords: ["RevOps setup for Ergo rollout","Onboarding","Ergo docs"]
 ---
 
 
-![Annotated onboarding view showing the primary admin setup path for CRM, teams, defaults, reporting, and rollout.](../images/onboarding-setup-by-role-annotated.svg)
+![Annotated onboarding view showing the RevOps setup path for CRM, teams, defaults, reporting, grading, and rollout.](../images/onboarding-setup-by-role-annotated.svg)
 
 
 ## Who is this for?
 
-- For founders, RevOps, VPs, sales leaders, and operations owners acting as the primary admin for rollout.
-- Requires CRM, Google Workspace or Microsoft 365, Notetaker.
+- For RevOps owners, sales operations leaders, GTM systems owners, founders acting as RevOps, and super admins responsible for setup governance.
+- Requires CRM, Google Workspace or Microsoft 365, Notetaker, Reporting.
 
 ## Before you start
 
 - Have production CRM admin access ready, including permission to approve or create properties, pipelines, and stages.
-- Know which CRM, email/calendar, collaboration, notetaker, reporting, and access decisions should be centralized before users join.
-- Bring your current pipeline stage definitions, locked stages, meeting naming rules, and reporting defaults.
+- Know which CRM, email/calendar, collaboration, notetaker, reporting, grading, and access decisions should be centralized before users join.
+- Bring your current pipeline stage definitions, locked stages, meeting naming rules, reporting defaults, and call-grading rubric criteria.
 
 
 ## Setup steps
 
-- **Step 1: Welcome and role check.** Confirm you are the rollout owner for workspace-level decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, and reporting.
+- **Step 1: Welcome and role check.** Confirm RevOps owns the workspace-level setup decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, call grading, and reporting.
 - **Step 2: Connect your CRM.** Choose Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM. Use production CRM access with permission to read and update the records, objects, properties, pipelines, and stages Ergo should manage.
 - **Step 3: Connect your email and calendar.** Connect Google Workspace or Microsoft 365 for the admin account. This lets Ergo see the admin calendar, email context, and setup status; each user still connects their own personal email/calendar later.
 - **Step 4: Configure workspace email behavior.** Review Email Analysis, Followup Emails, and Surfacing if it is enabled for the workspace. Decide what should be on by default before users start expecting drafts, follow-ups, or CRM updates.
@@ -34,9 +34,10 @@ keywords: ["Primary admin setup for founders, RevOps, and sales leaders","Onboar
 - **Step 10: Configure CRM properties.** Review and approve the deal, contact, and company properties Ergo should sync with CRM. Create or sync the required properties before expecting reliable CRM writeback or reporting fields.
 - **Step 11: Configure pipeline stages.** Sync or create the stages Ergo should track. Add clear descriptions, exit points, entry points, and locked stages where automation should not move deals, such as Closed Won or Closed Lost.
 - **Step 12: Configure pricing.** If you are a super admin, set how your company charges customers so Ergo can reason about deal amounts. Non-super-admins may see this step as informational and can continue.
-- **Step 13: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.
-- **Step 14: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.
-- **Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, and one report with a small pilot group.
+- **Step 13: Configure call grading with sales leadership.** Create or approve the default grading rubric before managers use scores in coaching. Keep the rubric specific enough that aggregate reports can show real differences across reps, categories, and time periods.
+- **Step 14: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.
+- **Step 15: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.
+- **Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, one graded call, and one report with a small pilot group.
 
 ## Common issues
 
@@ -48,7 +49,7 @@ keywords: ["Primary admin setup for founders, RevOps, and sales leaders","Onboar
 
 ## Related articles
 
-- [Primary admin tips for success](./primary-admin-tips-for-success)
+- [RevOps tips for success](./revops-tips-for-success)
 - [Connect your CRM](./connect-your-crm)
 - [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [Admin dashboard overview](../admin/admin-dashboard-overview)
+- [Call grading rubrics](../reporting/call-grading-rubrics)

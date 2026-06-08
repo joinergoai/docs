@@ -96,17 +96,18 @@ const relatedByTitle = {
   "Security, data retention, and LLM usage": ["Recording/privacy basics", "Reviewing AI-generated outputs", "Getting support"],
   "Recording/privacy basics": ["Recording disclaimer", "Security, data retention, and LLM usage", "Transcript or recording missing"],
   "Getting support": ["Permission or access denied", "Notetaker did not join", "CRM sync issues"],
-  "First-time setup checklist": ["Setup by role", "Primary admin setup for founders, RevOps, and sales leaders", "AE setup", "Connect email and calendar"],
-  "Setup by role": ["Primary admin setup for founders, RevOps, and sales leaders", "Secondary admin and operator setup", "AE setup", "CSM setup", "Spectator and viewer setup", "AE tips for success", "CSM tips for success"],
-  "Primary admin setup for founders, RevOps, and sales leaders": ["Primary admin tips for success", "Connect your CRM", "Field mapping setup: required before CRM updates work", "Admin dashboard overview"],
-  "Secondary admin and operator setup": ["Secondary admin and operator tips for success", "User sync", "Email templates setup", "Sync CRM/settings to team members"],
+  "First-time setup checklist": ["Setup by role", "RevOps setup for Ergo rollout", "AE setup", "Connect email and calendar"],
+  "Setup by role": ["RevOps setup for Ergo rollout", "Operator setup", "AE setup", "CSM setup", "Sales manager tips for success", "Spectator and viewer setup"],
+  "RevOps setup for Ergo rollout": ["RevOps tips for success", "Connect your CRM", "Field mapping setup: required before CRM updates work", "Call grading rubrics"],
+  "Operator setup": ["Operator tips for success", "User sync", "Email templates setup", "Sync CRM/settings to team members"],
   "AE setup": ["AE tips for success", "Connect email and calendar", "Email templates setup", "Review/edit AI drafts"],
   "CSM setup": ["CSM tips for success", "Connect email and calendar", "Meeting detail page", "Follow-ups panel"],
   "Spectator and viewer setup": ["Spectator and viewer tips for success", "Spectator access", "Meeting availability and visibility", "Permission or access denied"],
-  "Primary admin tips for success": ["Primary admin setup for founders, RevOps, and sales leaders", "CRM properties setup", "Pipeline stages", "Reporting defaults"],
-  "Secondary admin and operator tips for success": ["Secondary admin and operator setup", "User sync", "Sync CRM/settings to team members", "Permission or access denied"],
+  "RevOps tips for success": ["RevOps setup for Ergo rollout", "CRM properties setup", "Pipeline stages", "Call grading rubrics"],
+  "Operator tips for success": ["Operator setup", "User sync", "Sync CRM/settings to team members", "Permission or access denied"],
   "AE tips for success": ["AE setup", "Dashboard/upcoming meetings", "Review/edit AI drafts", "Slack monitoring and pre-call context"],
   "CSM tips for success": ["CSM setup", "Meeting detail page", "Follow-ups panel", "Search across meetings, emails, and documents"],
+  "Sales manager tips for success": ["Call grading rubrics", "Chart builder", "Reporting overview", "Deal and account health", "Meeting detail page"],
   "Spectator and viewer tips for success": ["Spectator and viewer setup", "Spectator access", "Meeting availability and visibility", "Share charts/dashboards"],
   "Connect your CRM": ["CRM properties setup", "Pipeline stages", "Field mapping setup: required before CRM updates work"],
   "Connect email and calendar": ["Google Workspace", "Microsoft 365", "Calendar scopes and meeting auto-join"],
@@ -165,17 +166,17 @@ const imageByTitle = {
   },
   "Setup by role": {
     file: "onboarding-setup-by-role-annotated.svg",
-    alt: "Annotated onboarding view showing setup paths for primary admins, secondary admins, users, and spectators.",
+    alt: "Annotated onboarding view showing setup paths for RevOps, operators, users, sales managers, and spectators.",
   },
   "First-time setup checklist": {
     file: "onboarding-setup-by-role-annotated.svg",
     alt: "Annotated onboarding checklist showing role-specific setup paths in Ergo.",
   },
-  "Primary admin setup for founders, RevOps, and sales leaders": {
+  "RevOps setup for Ergo rollout": {
     file: "onboarding-setup-by-role-annotated.svg",
-    alt: "Annotated onboarding view showing the primary admin setup path for CRM, teams, defaults, reporting, and rollout.",
+    alt: "Annotated onboarding view showing the RevOps setup path for CRM, teams, defaults, reporting, grading, and rollout.",
   },
-  "Secondary admin and operator setup": {
+  "Operator setup": {
     file: "product-admin-dashboard.png",
     alt: "Product screenshot showing delegated setup, user management, and access controls.",
   },
@@ -191,11 +192,11 @@ const imageByTitle = {
     file: "product-admin-dashboard.png",
     alt: "Product screenshot showing spectator and viewer access controls.",
   },
-  "Primary admin tips for success": {
+  "RevOps tips for success": {
     file: "product-field-mapping.png",
     alt: "Product screenshot showing field mapping, pipeline stages, and CRM setup areas for admins.",
   },
-  "Secondary admin and operator tips for success": {
+  "Operator tips for success": {
     file: "product-admin-dashboard.png",
     alt: "Product screenshot showing admin controls for delegated setup and user support.",
   },
@@ -206,6 +207,10 @@ const imageByTitle = {
   "CSM tips for success": {
     file: "product-meetings-dashboard.png",
     alt: "Product screenshot showing meetings and account context for customer success workflows.",
+  },
+  "Sales manager tips for success": {
+    file: "product-reporting-dashboard.png",
+    alt: "Product screenshot showing reporting dashboards for managers reviewing team performance.",
   },
   "Spectator and viewer tips for success": {
     file: "product-reporting-dashboard.png",
@@ -463,19 +468,20 @@ function descriptionFor(row) {
   const specific = {
     "Welcome to Ergo": "Start here to understand what Ergo does, what to set up first, and where each workflow lives.",
     "Navigating Ergo": "Find the main Ergo workspaces for meetings, drafts, deals, reporting, integrations, admin settings, and support.",
-    "Setup by role": "Understand which setup tasks belong to primary admins, secondary admins, users, spectators, and desktop users.",
-    "Primary admin setup for founders, RevOps, and sales leaders": "Set up Ergo as the workspace owner responsible for CRM readiness, teams, permissions, defaults, reporting, and rollout.",
-    "Secondary admin and operator setup": "Help operate Ergo setup after the primary admin defines systems, permissions, team defaults, and rollout rules.",
+    "Setup by role": "Understand which setup and success tasks belong to RevOps, operators, AEs, CSMs, sales managers, spectators, and desktop users.",
+    "RevOps setup for Ergo rollout": "Set up Ergo as the RevOps owner responsible for CRM readiness, teams, permissions, defaults, call grading, reporting, and rollout.",
+    "Operator setup": "Help operate Ergo setup after RevOps defines systems, permissions, team defaults, and rollout rules.",
     "AE setup": "Complete the personal setup AEs need for meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.",
     "CSM setup": "Complete the personal setup CSMs need for customer meetings, summaries, account context, follow-ups, and handoff workflows.",
     "Spectator and viewer setup": "Give viewers limited access to the meetings, reports, or shared links they need without full user setup.",
-    "Primary admin tips for success": "Roll out Ergo successfully by setting stable CRM, field mapping, pipeline, notetaker, reporting, and access defaults before inviting users broadly.",
-    "Secondary admin and operator tips for success": "Support rollout without overriding the primary admin by syncing approved settings, helping users finish setup, and escalating permission-bound changes.",
+    "RevOps tips for success": "Roll out Ergo successfully by setting stable CRM, field mapping, pipeline, notetaker, grading, reporting, and access defaults before inviting users broadly.",
+    "Operator tips for success": "Support rollout without overriding RevOps-owned decisions by syncing approved settings, helping users finish setup, and escalating permission-bound changes.",
     "AE tips for success": "Use Ergo day to day for meeting capture, post-call drafts, deal review, chat, CRM updates, and Slack pre-call prep.",
     "CSM tips for success": "Use Ergo for customer meetings, account context, handoffs, follow-ups, renewals, expansion signals, and customer-facing recaps.",
+    "Sales manager tips for success": "Use Ergo for call grading, aggregate grading, coaching, rep workflows, use-case reviews, and forecasting signals.",
     "Spectator and viewer tips for success": "Help viewers get value from Ergo through focused meeting, reporting, dashboard, and shared-link access without granting unnecessary setup permissions.",
     "First-time setup checklist": "Complete the first setup pass for admins, users, spectators, integrations, meetings, and CRM readiness.",
-    "Roles and permissions": "Understand primary admin, secondary admin, user, spectator, desktop, and access-specific permissions in Ergo.",
+    "Roles and permissions": "Understand admin, user, spectator, desktop, and access-specific permissions in Ergo.",
     "Spectator access": "Give limited meeting, reporting, or shared-link visibility without granting full user access.",
     "Data sources and freshness": "Understand which connected sources feed Ergo and why meetings, CRM, drafts, and reports update on different timelines.",
     "Reviewing AI-generated outputs": "Review summaries, drafts, CRM updates, reports, and generated documents before using them externally.",
@@ -503,7 +509,7 @@ function descriptionFor(row) {
     "Reporting overview": "Use reporting dashboards, charts, filters, and shared views to inspect team and customer activity.",
     "Chart builder": "Build reporting charts from the right source fields, filters, buckets, time ranges, and drilldowns.",
     "Admin dashboard overview": "Use the admin dashboard to manage teams, members, access, settings, and organization defaults.",
-    "Organization and team hierarchy": "Understand how teams, primary admins, secondary admins, users, and spectators shape access in Ergo.",
+    "Organization and team hierarchy": "Understand how teams, admins, users, and spectators shape access in Ergo.",
     "Promote/demote/convert roles": "Change a person's role or access level without over-granting meeting, reporting, or admin visibility.",
     "Grant meeting/reporting access": "Give users and spectators the meeting or reporting access they need and no more.",
   };
@@ -548,31 +554,34 @@ function customerAudience(row) {
     title.includes("defaults");
 
   if (row.title === "Setup by role" || row.title === "First-time setup checklist") {
-    return "primary admins who own rollout, secondary admins helping with delegated setup, users completing personal setup, and spectators receiving limited access";
+    return "RevOps owners who configure the workspace, operators helping with delegated setup, users completing personal setup, managers using team workflows, and spectators receiving limited access";
   }
-  if (row.title === "Primary admin setup for founders, RevOps, and sales leaders") {
-    return "founders, RevOps, VPs, sales leaders, and operations owners acting as the primary admin for rollout";
+  if (row.title === "RevOps setup for Ergo rollout") {
+    return "RevOps owners, sales operations leaders, GTM systems owners, founders acting as RevOps, and super admins responsible for setup governance";
   }
-  if (row.title === "Primary admin tips for success") {
-    return "founders, RevOps, VPs, sales leaders, operations owners, and super admins responsible for making Ergo reliable before users depend on it";
+  if (row.title === "RevOps tips for success") {
+    return "RevOps owners, sales operations leaders, GTM systems owners, founders acting as RevOps, and super admins making Ergo reliable before users depend on it";
   }
-  if (row.title === "Secondary admin and operator setup") {
-    return "RevOps teammates, sales operations, customer operations, enablement, or managers helping administer Ergo after the primary admin sets direction";
+  if (row.title === "Operator setup") {
+    return "operators, RevOps teammates, sales operations, customer operations, enablement, or delegated admins helping administer Ergo after RevOps sets direction";
   }
-  if (row.title === "Secondary admin and operator tips for success") {
-    return "secondary admins, operators, enablement teammates, RevOps teammates, and managers who help users complete setup and support day-to-day adoption";
+  if (row.title === "Operator tips for success") {
+    return "operators, enablement teammates, RevOps teammates, delegated admins, and managers who help users complete setup and support day-to-day adoption";
   }
   if (row.title === "AE setup") {
-    return "AEs, account executives, founders selling directly, and sales managers coaching reps on daily Ergo workflows";
+    return "AEs, account executives, founders selling directly, and sellers completing daily Ergo workflows";
   }
   if (row.title === "AE tips for success") {
-    return "AEs, account executives, founders selling directly, sales managers coaching reps, and sellers who want a practical daily Ergo workflow";
+    return "AEs, account executives, founders selling directly, and sellers who want a practical daily Ergo workflow";
   }
   if (row.title === "CSM setup") {
     return "CSMs, account managers, customer success leaders, founders handling customers, and post-sale teams using Ergo for customer context";
   }
   if (row.title === "CSM tips for success") {
     return "CSMs, account managers, customer success leaders, post-sale operators, and founders using Ergo for customer context and follow-through";
+  }
+  if (row.title === "Sales manager tips for success") {
+    return "sales managers, frontline managers, revenue leaders, enablement partners, and founders coaching reps through calls, pipeline, and forecast reviews";
   }
   if (row.title === "Spectator and viewer setup") {
     return "spectators, executives, managers, advisors, or cross-functional viewers who only need limited meeting or reporting visibility";
@@ -581,7 +590,7 @@ function customerAudience(row) {
     return "spectators, executives, managers, advisors, board observers, and cross-functional viewers who need fast visibility without operating Ergo day to day";
   }
   if (row.title === "Roles and permissions") {
-    return "primary admins, secondary admins, RevOps, founders, sales leaders, users, and spectators who need to understand what each access level means";
+    return "RevOps, operators, founders, sales leaders, admins, users, and spectators who need to understand what each access level means";
   }
   if (row.title === "Connect email and calendar" || row.title === "Google Workspace" || row.title === "Microsoft 365") {
     return "users connecting their own email/calendar and admins helping teams finish setup or reconnect expired grants";
@@ -595,19 +604,19 @@ function customerAudience(row) {
   }
   if (row.category === "Integrations") {
     if (title.includes("slack") || title.includes("pylon") || title.includes("crm") || title.includes("salesforce") || title.includes("hubspot") || title.includes("attio") || title.includes("pipedrive")) {
-      return "primary admins, secondary admins, RevOps, support operations, and sales operations teams that manage connected systems";
+      return "RevOps, operators, support operations, and sales operations teams that manage connected systems";
     }
     if (hasUsers) return "users connecting personal sources and admins helping teams troubleshoot connection or reconnect issues";
-    return "primary admins, secondary admins, RevOps, and operators managing workspace integrations";
+    return "RevOps, operators, and admins managing workspace integrations";
   }
   if (row.category === "Drafts, email, and templates") {
     if (isAdminArea || title.includes("auto-send") || title.includes("team access")) {
-      return "primary admins, secondary admins, RevOps, and sales leaders setting team draft behavior and email controls";
+      return "RevOps, operators, and sales leaders setting team draft behavior and email controls";
     }
     return "sales reps, account owners, founders, and managers reviewing or sending follow-up drafts";
   }
   if (row.category === "Field mapping and CRM configuration") {
-    return "primary admins, secondary admins with CRM permissions, RevOps, sales operations, and CRM owners";
+    return "RevOps, sales operations, CRM owners, and admins with CRM permissions";
   }
   if (row.category === "Deals and CRM workspace") {
     if (title.includes("bulk")) return "RevOps, sales leaders, founders, and users trusted to make bulk updates or send bulk drafts";
@@ -617,14 +626,14 @@ function customerAudience(row) {
     return "founders, sales leaders, RevOps, managers, and users with reporting access";
   }
   if (row.category === "Admin") {
-    return "primary admins and secondary admins with permission for this area";
+    return "admins with permission for this area";
   }
   if (row.category === "Desktop") {
     return "desktop users who record locally and admins helping them verify permissions, detection, and uploads";
   }
   if (row.category === "Knowledge base and generated docs") {
     return hasAdmins
-      ? "primary admins, secondary admins, RevOps, and users managing document context or generated customer materials"
+      ? "RevOps, operators, admins, and users managing document context or generated customer materials"
       : "users managing document context or generated customer materials";
   }
   if (row.category === "Ergo AI, search, and automation") {
@@ -633,7 +642,7 @@ function customerAudience(row) {
 
   const parts = [];
   if (hasAdmins) {
-    parts.push(isAdminArea ? "primary admins and secondary admins with permission for this area" : "primary admins, secondary admins, RevOps, sales leaders, and operators who manage rollout");
+    parts.push(isAdminArea ? "admins with permission for this area" : "RevOps, operators, sales leaders, and admins who manage rollout");
   }
   if (hasUsers) {
     parts.push("users who complete setup or use this workflow day to day");
@@ -652,7 +661,7 @@ function customerAudience(row) {
 function customerAccess(row) {
   const parts = [];
   if (row.access.includes("Admin-only")) {
-    parts.push("Requires the primary admin role or a secondary admin permission that covers this area.");
+    parts.push("Requires admin access or a delegated permission that covers this area.");
   } else if (row.access.includes("Reporting access")) {
     parts.push("Requires reporting access.");
   } else if (row.access.includes("Desktop-only")) {
@@ -688,10 +697,10 @@ function sectionAudience(category) {
       "Everyone using Ergo, plus rollout owners who need a shared vocabulary for roles, data, privacy, AI outputs, and support.",
     ],
     Onboarding: [
-      "Primary admins who own rollout, secondary admins helping configure teams, users completing personal setup, and spectators receiving limited access.",
+      "RevOps owners configuring the workspace, operators helping with delegated setup, users completing personal setup, sales managers using team workflows, and spectators receiving limited access.",
     ],
     Integrations: [
-      "Primary admins, secondary admins, RevOps, sales operations, support operations, and users connecting personal sources like email or calendar.",
+      "RevOps, operators, sales operations, support operations, admins, and users connecting personal sources like email or calendar.",
     ],
     "Meetings and notes": [
       "Sales reps, account owners, CSMs, founders, managers, spectators, and admins responsible for meeting capture and visibility.",
@@ -703,7 +712,7 @@ function sectionAudience(category) {
       "Sales reps, account owners, founders, sales leaders, managers, RevOps, and users working from pipeline and account context.",
     ],
     "Field mapping and CRM configuration": [
-      "Primary admins, secondary admins with CRM permissions, RevOps, sales operations, and CRM owners.",
+      "RevOps, sales operations, CRM owners, and admins with CRM permissions.",
     ],
     "Drafts, email, and templates": [
       "Sales reps, account owners, founders, managers, RevOps, and admins shaping post-call email workflows.",
@@ -718,7 +727,7 @@ function sectionAudience(category) {
       "Founders, sales leaders, RevOps, managers, and users with reporting access.",
     ],
     Admin: [
-      "Primary admins and secondary admins with permission for the relevant teams, members, settings, access, or defaults.",
+      "Admins with permission for the relevant teams, members, settings, access, or defaults.",
     ],
     Troubleshooting: [
       "Anyone diagnosing setup, meeting capture, CRM sync, drafts, search, reporting, integrations, desktop, or access issues.",
@@ -731,10 +740,10 @@ function sectionBeforeStart(category) {
   const items = {
     "Start and guidelines": [
       "Know which workspace and team you are using.",
-      "Ask a primary or secondary admin when access, connected sources, or recording defaults are unclear.",
+      "Ask your RevOps owner, operator, or admin when access, connected sources, or recording defaults are unclear.",
     ],
     Onboarding: [
-      "Decide who owns primary admin setup before inviting the broader team.",
+      "Decide who owns RevOps setup before inviting the broader team.",
       "Connect workspace-level systems before asking users to finish personal setup.",
       "Use role-specific setup articles when a person only needs part of the full setup path.",
     ],
@@ -778,7 +787,7 @@ function sectionBeforeStart(category) {
       "Check filters, date ranges, source fields, and data freshness before interpreting results.",
     ],
     Admin: [
-      "Sign in as the primary admin or as a secondary admin with permission for the area you are changing.",
+      "Sign in with admin access or a delegated permission for the area you are changing.",
       "Confirm the workspace, team, member, and downstream access impact before saving changes.",
     ],
     Troubleshooting: [
@@ -791,15 +800,16 @@ function sectionBeforeStart(category) {
 
 const articleAudienceTitles = new Set([
   "Setup by role",
-  "Primary admin setup for founders, RevOps, and sales leaders",
-  "Secondary admin and operator setup",
+  "RevOps setup for Ergo rollout",
+  "Operator setup",
   "AE setup",
   "CSM setup",
   "Spectator and viewer setup",
-  "Primary admin tips for success",
-  "Secondary admin and operator tips for success",
+  "RevOps tips for success",
+  "Operator tips for success",
   "AE tips for success",
   "CSM tips for success",
+  "Sales manager tips for success",
   "Spectator and viewer tips for success",
   "Roles and permissions",
   "Spectator access",
@@ -810,15 +820,16 @@ function shouldShowArticleAudience(row) {
 }
 
 const articleBeforeStartTitles = new Set([
-  "Primary admin setup for founders, RevOps, and sales leaders",
-  "Secondary admin and operator setup",
+  "RevOps setup for Ergo rollout",
+  "Operator setup",
   "AE setup",
   "CSM setup",
   "Spectator and viewer setup",
-  "Primary admin tips for success",
-  "Secondary admin and operator tips for success",
+  "RevOps tips for success",
+  "Operator tips for success",
   "AE tips for success",
   "CSM tips for success",
+  "Sales manager tips for success",
   "Spectator and viewer tips for success",
   "Connect your CRM",
   "Connect email and calendar",
@@ -862,15 +873,15 @@ function articleBeforeStart(row) {
     title.includes("expired grant");
 
   const roleSpecific = {
-    "Primary admin setup for founders, RevOps, and sales leaders": [
+    "RevOps setup for Ergo rollout": [
       "Have production CRM admin access ready, including permission to approve or create properties, pipelines, and stages.",
-      "Know which CRM, email/calendar, collaboration, notetaker, reporting, and access decisions should be centralized before users join.",
-      "Bring your current pipeline stage definitions, locked stages, meeting naming rules, and reporting defaults.",
+      "Know which CRM, email/calendar, collaboration, notetaker, reporting, grading, and access decisions should be centralized before users join.",
+      "Bring your current pipeline stage definitions, locked stages, meeting naming rules, reporting defaults, and call-grading rubric criteria.",
     ],
-    "Secondary admin and operator setup": [
-      "Confirm which primary admin account you should sync from.",
-      "Know which areas you can manage yourself and which require the primary admin or a super admin.",
-      "Have your own email/calendar account ready; personal Google or Microsoft grants do not transfer from the primary admin.",
+    "Operator setup": [
+      "Confirm which RevOps-approved admin account or source settings you should sync from.",
+      "Know which areas you can manage yourself and which require RevOps or super-admin help.",
+      "Have your own email/calendar account ready; personal Google or Microsoft grants do not transfer through admin sync.",
     ],
     "AE setup": [
       "Make sure your account is provisioned in the correct workspace and team.",
@@ -887,14 +898,14 @@ function articleBeforeStart(row) {
       "Identify the exact meetings, reports, dashboards, folders, teams, or shared links they should see.",
       "Ask an admin to provision access before sending the viewer to Ergo.",
     ],
-    "Primary admin tips for success": [
-      "Use this after or during the primary admin setup flow.",
-      "Have one owner for CRM, one owner for user rollout, and one owner for support/adoption follow-up.",
+    "RevOps tips for success": [
+      "Use this after or during the RevOps setup flow.",
+      "Have one owner for CRM, one owner for call grading and reporting, one owner for user rollout, and one owner for support/adoption follow-up.",
       "Keep the first rollout narrow enough to test one meeting, one draft, one CRM update, and one report.",
     ],
-    "Secondary admin and operator tips for success": [
+    "Operator tips for success": [
       "Use this after your own setup is complete and you are helping others finish theirs.",
-      "Keep a short list of what you can change directly versus what needs primary-admin approval.",
+      "Keep a short list of what you can change directly versus what needs RevOps or super-admin approval.",
       "Know where users should report missing meetings, expired grants, wrong team access, or draft issues.",
     ],
     "AE tips for success": [
@@ -907,6 +918,11 @@ function articleBeforeStart(row) {
       "Know where account context lives: meetings, deal or company records, documents, search, and reporting.",
       "Review customer-facing recaps, handoffs, and follow-ups before sending.",
     ],
+    "Sales manager tips for success": [
+      "Confirm reporting access, manager visibility, and team membership are set up for the reps you coach.",
+      "Ask RevOps which grading rubric is active, what each category means, and when rubric changes are reviewed.",
+      "Make sure enough rep meetings are being captured before interpreting aggregate grading or forecast patterns.",
+    ],
     "Spectator and viewer tips for success": [
       "Use this after a viewer has been provisioned and can sign in or open a shared link.",
       "Keep viewer access focused on the specific dashboard, report, meeting folder, or shared resource they need.",
@@ -917,7 +933,7 @@ function articleBeforeStart(row) {
   if (roleSpecific[row.title]) return roleSpecific[row.title];
 
   if (row.access.includes("Admin-only")) {
-    items.push("Sign in as the primary admin or as a secondary admin with permission for this area.");
+    items.push("Sign in with admin access or delegated permission for this area.");
   }
   if (row.access.includes("Reporting access")) {
     items.push("Confirm reporting is enabled and the viewer has reporting access.");
@@ -1006,39 +1022,39 @@ function beforeStart(row) {
     title.includes("reconnecting") ||
     title.includes("expired grant");
 
-  if (row.title === "Primary admin setup for founders, RevOps, and sales leaders") {
+  if (row.title === "RevOps setup for Ergo rollout") {
     return [
       "Have production CRM admin access ready, including permission to create or approve properties and pipeline settings.",
       "Know your current sales stages, which stages should be locked, and where new deals should enter the pipeline.",
-      "Decide who owns rollout decisions for CRM, notetaker behavior, templates, reporting, and user access.",
+      "Decide who owns rollout decisions for CRM, notetaker behavior, templates, call grading, reporting, and user access.",
       "Bring access to Google Workspace or Microsoft 365, Slack, and reporting owners if those systems are part of rollout.",
     ];
   }
-  if (row.title === "Secondary admin and operator setup") {
+  if (row.title === "Operator setup") {
     return [
-      "Confirm which primary admin account you should sync from.",
+      "Confirm which RevOps-approved admin account or source settings you should sync from.",
       "Make sure your own Ergo account is provisioned in the correct workspace and team.",
-      "Know which setup areas you are allowed to manage versus which require the primary admin.",
+      "Know which setup areas you are allowed to manage versus which require RevOps or super-admin approval.",
     ];
   }
   if (row.title === "AE setup" || row.title === "CSM setup") {
     return [
       "Make sure your account is provisioned in the correct workspace and team.",
       "Have access to your own Google Workspace or Microsoft 365 account.",
-      "Ask your primary or secondary admin which notetaker source, templates, and Slack workflow your team uses.",
+      "Ask your RevOps owner, operator, or manager which notetaker source, templates, and Slack workflow your team uses.",
     ];
   }
   if (row.title === "Spectator and viewer setup") {
     return [
       "Confirm the viewer should have limited access rather than full user access.",
       "Identify the exact meetings, reports, dashboards, folders, or shared links they should see.",
-      "Ask a primary or secondary admin to provision access before sending the viewer a link.",
+      "Ask an admin, RevOps owner, or delegated operator to provision access before sending the viewer a link.",
     ];
   }
 
   if (row.access.includes("Admin-only")) {
     const items = [
-      "Sign in as the primary admin or as a secondary admin with permission for this area.",
+      "Sign in with admin access or delegated permission for this area.",
       "Confirm you are working in the intended organization or team.",
     ];
     if (row.requiredIntegration !== "None") {
@@ -1065,7 +1081,7 @@ function beforeStart(row) {
     return [
       connectorText,
       "Make sure you are signed in to the correct Ergo workspace.",
-      "If you do not see the page or setting, ask your primary admin or a secondary admin to check your access.",
+      "If you do not see the page or setting, ask RevOps, an operator, or an admin to check your access.",
     ];
   }
   if (row.access.includes("Desktop-only")) {
@@ -1078,7 +1094,7 @@ function beforeStart(row) {
   return [
     "Sign in to Ergo.",
     "Confirm you are in the correct workspace.",
-    "If a step is missing, ask your primary admin or a secondary admin to confirm your access.",
+    "If a step is missing, ask RevOps, an operator, or an admin to confirm your access.",
   ];
 }
 
@@ -1114,13 +1130,13 @@ function setupSteps(row) {
     "Welcome to Ergo": [
       "Start with the setup checklist so Ergo has the data sources it needs.",
       "Connect calendar and email before relying on meetings, summaries, or drafts.",
-      "Ask your primary admin or a secondary admin which CRM, collaboration, and notetaker sources your workspace uses.",
+      "Ask your RevOps owner, operator, or admin which CRM, collaboration, and notetaker sources your workspace uses.",
       "Use the left navigation to move between meetings, drafts, reporting, integrations, and admin areas.",
     ],
     "Roles and permissions": [
-      "Start by deciding whether the person should be a primary admin, secondary admin, user, spectator, or desktop user.",
-      "Use a primary admin for org-level setup and ownership, including CRM setup, team structure, billing or usage review, and defaults.",
-      "Use secondary admins for team-level setup or delegated configuration when they should help manage users, settings, or reporting without owning everything.",
+      "Start by deciding whether the person needs admin access, user access, spectator access, desktop access, or a delegated permission.",
+      "Use RevOps ownership for org-level setup decisions, including CRM setup, field mapping, team structure, call grading, reporting defaults, and rollout governance.",
+      "Use operators or delegated admins for team-level setup, user support, settings sync, templates, or reporting help after RevOps has set direction.",
       "Use users for day-to-day workflows like meetings, drafts, templates, follow-ups, search, and deal review.",
       "Use spectator access for limited viewing workflows instead of granting full user access.",
     ],
@@ -1167,22 +1183,24 @@ function setupSteps(row) {
       "Review the sources and actions Ergo cites before acting on an answer.",
     ],
     "First-time setup checklist": [
-      "Ask the primary admin to complete workspace-level setup first: CRM, field mapping, teams, defaults, reporting access, and any required collaboration tools.",
-      "Have secondary admins complete delegated team setup, user sync, templates, notetaker defaults, or reporting setup where they have permission.",
+      "Ask RevOps to complete workspace-level setup first: CRM, field mapping, teams, defaults, call grading, reporting access, and any required collaboration tools.",
+      "Have operators complete delegated team setup, user sync, templates, notetaker defaults, or reporting setup where they have permission.",
       "Have users connect email and calendar, review templates and personal preferences, confirm notetaker behavior, and run one test meeting or draft workflow.",
+      "Have sales managers review grading, aggregate reporting, coaching workflows, and forecast views only after enough rep meetings are captured.",
       "Give spectators only the meeting, reporting, or shared-link access they need.",
       "Run one test workflow before rolling the setup out to more teams.",
     ],
     "Setup by role": [
-      "Use the primary admin setup guide when a founder, RevOps owner, VP, sales leader, or ops owner is responsible for systems, permissions, teams, defaults, and rollout.",
-      "Use the secondary admin and operator setup guide when someone helps administer users, templates, access, or reporting after the primary setup direction is clear.",
+      "Use the RevOps setup guide when the owner is responsible for systems, permissions, teams, CRM mappings, grading, reporting, defaults, and rollout.",
+      "Use the operator setup guide when someone helps administer users, templates, access, or reporting after RevOps setup direction is clear.",
       "Use the AE setup guide for individual sellers who need meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.",
       "Use the CSM setup guide for post-sale users who need customer meetings, summaries, account context, handoffs, and follow-up workflows.",
+      "Use the sales manager tips guide for managers using grading, aggregate grading, coaching, team use cases, and forecasting signals.",
       "Use spectator and viewer setup when someone should view selected meetings, reports, or shared links without a full user workflow.",
       "After a person finishes setup, use the matching tips for success article to understand the practical habits for that role.",
     ],
-    "Primary admin setup for founders, RevOps, and sales leaders": [
-      "**Step 1: Welcome and role check.** Confirm you are the rollout owner for workspace-level decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, and reporting.",
+    "RevOps setup for Ergo rollout": [
+      "**Step 1: Welcome and role check.** Confirm RevOps owns the workspace-level setup decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, call grading, and reporting.",
       "**Step 2: Connect your CRM.** Choose Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM. Use production CRM access with permission to read and update the records, objects, properties, pipelines, and stages Ergo should manage.",
       "**Step 3: Connect your email and calendar.** Connect Google Workspace or Microsoft 365 for the admin account. This lets Ergo see the admin calendar, email context, and setup status; each user still connects their own personal email/calendar later.",
       "**Step 4: Configure workspace email behavior.** Review Email Analysis, Followup Emails, and Surfacing if it is enabled for the workspace. Decide what should be on by default before users start expecting drafts, follow-ups, or CRM updates.",
@@ -1194,24 +1212,25 @@ function setupSteps(row) {
       "**Step 10: Configure CRM properties.** Review and approve the deal, contact, and company properties Ergo should sync with CRM. Create or sync the required properties before expecting reliable CRM writeback or reporting fields.",
       "**Step 11: Configure pipeline stages.** Sync or create the stages Ergo should track. Add clear descriptions, exit points, entry points, and locked stages where automation should not move deals, such as Closed Won or Closed Lost.",
       "**Step 12: Configure pricing.** If you are a super admin, set how your company charges customers so Ergo can reason about deal amounts. Non-super-admins may see this step as informational and can continue.",
-      "**Step 13: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.",
-      "**Step 14: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.",
-      "**Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, and one report with a small pilot group.",
+      "**Step 13: Configure call grading with sales leadership.** Create or approve the default grading rubric before managers use scores in coaching. Keep the rubric specific enough that aggregate reports can show real differences across reps, categories, and time periods.",
+      "**Step 14: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.",
+      "**Step 15: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.",
+      "**Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, one graded call, and one report with a small pilot group.",
     ],
-    "Secondary admin and operator setup": [
-      "**Step 1: Welcome and role check.** Confirm you are helping operate setup after the primary admin has defined the workspace-level CRM, pipeline, field, notetaker, reporting, and access choices.",
-      "**Step 2: Sync with Admin.** Open Sync with Admin, choose the primary admin account to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, alternate domains, partnership domains, and advanced settings.",
+    "Operator setup": [
+      "**Step 1: Welcome and role check.** Confirm you are helping operate setup after RevOps has defined the workspace-level CRM, pipeline, field, notetaker, grading, reporting, and access choices.",
+      "**Step 2: Sync with Admin.** Open Sync with Admin, choose the RevOps-approved admin account or source settings to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, alternate domains, partnership domains, and advanced settings.",
       "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. Admin sync does not transfer personal inbox, calendar, or OAuth grants.",
-      "**Step 4: Configure your workspace behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Keep personal settings aligned with the primary admin's rollout unless you have a reason to differ.",
-      "**Step 5: Review templates.** Confirm whether you should use the team template, edit templates for your team, or leave templates to the primary admin. Templates shape post-call drafts for users.",
+      "**Step 4: Configure your workspace behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Keep personal settings aligned with RevOps' rollout unless you have a reason to differ.",
+      "**Step 5: Review templates.** Confirm whether you should use the team template, edit templates for your team, or leave templates to RevOps. Templates shape post-call drafts for users.",
       "**Step 6: Connect the notetaker.** Confirm the approved notetaker source and connect only the source your workspace expects. Ergo Notetaker requires a connected Google or Microsoft calendar first.",
       "**Step 7: Connect collaboration tools.** Connect Slack for notifications and call prep. Beeper appears only when enabled. Pylon appears only for admins when the org-level Pylon workflow is available.",
       "**Operator follow-through: help users finish setup.** Verify users are in the right workspace and team, have connected email/calendar, know the notetaker behavior, and can find drafts, meetings, and support.",
       "**Operator follow-through: sync to team members carefully.** Use admin/team sync only after the source settings are approved, because syncing too early can spread incomplete CRM, template, or advanced settings.",
     ],
     "AE setup": [
-      "**Step 1: Welcome and role check.** Confirm you are completing the user flow, not the primary admin flow. Most AEs do not configure CRM, field mapping, pipeline stages, or org-wide reporting.",
-      "**Step 2: Sync with Admin.** If prompted, sync from the primary admin so you inherit the team's approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
+      "**Step 1: Welcome and role check.** Confirm you are completing the user flow, not the RevOps setup flow. Most AEs do not configure CRM, field mapping, pipeline stages, call grading, or org-wide reporting.",
+      "**Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the team's approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
       "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. This lets Ergo detect your sales meetings, read relevant email context, and create drafts in your connected email workflow.",
       "**Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. These settings affect whether Ergo monitors relevant emails, drafts follow-ups, and surfaces stalled deal follow-ups.",
       "**Step 5: Review templates.** Confirm that post-call templates are enabled and that the template tone fits how you follow up. You can review, edit, or create templates if your workspace allows it.",
@@ -1221,7 +1240,7 @@ function setupSteps(row) {
     ],
     "CSM setup": [
       "**Step 1: Welcome and role check.** Confirm you are completing the user flow for customer-success work. Most CSMs do not configure org-wide CRM, properties, stages, or reporting defaults unless they also have admin duties.",
-      "**Step 2: Sync with Admin.** If prompted, sync from the primary admin so you inherit the approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
+      "**Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
       "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account so Ergo can detect customer meetings and use relevant account communication context.",
       "**Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Decide whether follow-up drafts should support recaps, handoffs, renewal notes, escalation updates, or customer next steps.",
       "**Step 5: Review templates.** Confirm whether your team has CS-specific templates for check-ins, support escalations, renewals, expansions, executive recaps, or handoffs.",
@@ -1231,28 +1250,29 @@ function setupSteps(row) {
     ],
     "Spectator and viewer setup": [
       "**Step 1: Confirm limited-access intent.** Use spectator or viewer access when the person should inspect selected meetings, dashboards, reports, or shared links without operating daily Ergo workflows.",
-      "**Step 2: Provision the viewer.** Ask a primary or secondary admin to add or convert the person and grant only the meeting, reporting, dashboard, folder, team, or shared-link visibility they need.",
+      "**Step 2: Provision the viewer.** Ask an admin, RevOps owner, or delegated operator to add or convert the person and grant only the meeting, reporting, dashboard, folder, team, or shared-link visibility they need.",
       "**Step 3: Sync with Admin if the onboarding flow asks for it.** Spectators may see a Sync with Admin step so their limited workspace context is aligned with admin configuration.",
       "**Step 4: Connect workspace access when prompted.** The spectator onboarding path includes the email/calendar connection step. If the person is only viewing a shared link, an admin may instead send the specific shared resource.",
       "**Step 5: Confirm notetaker/viewer behavior.** Spectator onboarding shows the Ergo Notetaker path only; viewers generally should not configure third-party notetakers or org-wide recording settings.",
       "**Step 6: Walk through the exact destination.** Show the viewer the meetings, reports, dashboards, folders, or shared links they should use. Executives and managers usually need a dashboard/report walkthrough, not CRM or email setup.",
       "**Step 7: Review and revoke access when needed.** Re-check access after team changes, leadership changes, project completion, or when a shared link should no longer be valid.",
     ],
-    "Primary admin tips for success": [
+    "RevOps tips for success": [
       "**Decide centrally before inviting broadly.** Users get value faster when CRM, stages, fields, templates, notetaker behavior, reporting defaults, and access rules are set before they sign in.",
       "**Use production data for the real rollout.** Ergo's AI, CRM updates, draft quality, and reporting depend on real CRM records, real calendar events, real pipeline stages, and real communication history.",
       "**Treat field mapping as a prerequisite.** If properties, permissions, or stages are incomplete, downstream CRM updates and reporting will look unreliable even when the notetaker and drafts work.",
+      "**Define grading before managers use it.** Work with sales leadership to create a rubric that matches the coaching motion, qualification process, and deal review habits. If the score feels wrong, review the rubric criteria before dismissing the grade.",
       "**Lock stages that automation should not move.** Closed Won, Closed Lost, renewal-complete, and other final states should be protected when your process requires it.",
-      "**Keep the first pilot small.** Test one admin, one AE, one CSM, one customer meeting, one draft, one CRM update, one Slack notification, and one reporting dashboard before rolling out to the full team.",
+      "**Keep the first pilot small.** Test one RevOps owner, one operator, one AE, one CSM, one sales manager, one customer meeting, one draft, one CRM update, one Slack notification, one graded call, and one reporting dashboard before rolling out to the full team.",
       "**Create a support loop for the first week.** Ask users to report missing meetings, wrong deal matching, unexpected drafts, access issues, and CRM writeback problems with the meeting or deal link.",
-      "**Measure adoption from workflows, not logins.** Good rollout signs include admitted notetakers, reviewed drafts, corrected CRM context, useful Slack briefs, and managers using reports.",
+      "**Measure adoption from workflows, not logins.** Good rollout signs include admitted notetakers, reviewed drafts, corrected CRM context, useful Slack briefs, managers using reports, and coaching conversations grounded in call evidence.",
     ],
-    "Secondary admin and operator tips for success": [
-      "**Know the source of truth.** When you sync or push settings, use only primary-admin-approved CRM, stage, property, template, domain, and advanced settings.",
-      "**Do not repeat primary setup unless you own it.** Secondary admins should usually inherit CRM configuration instead of reconnecting or redefining fields independently.",
+    "Operator tips for success": [
+      "**Know the source of truth.** When you sync or push settings, use only RevOps-approved CRM, stage, property, template, domain, grading, reporting, and advanced settings.",
+      "**Do not repeat RevOps setup unless you own it.** Operators should usually inherit CRM configuration instead of reconnecting or redefining fields independently.",
       "**Triage users by setup layer.** First check workspace/team, then role/access, then email/calendar grants, then notetaker status, then templates/draft settings, then CRM mapping.",
       "**Keep personal grants separate from admin sync.** A user can inherit team settings, but each person still connects their own Google Workspace or Microsoft 365 account.",
-      "**Escalate permission-bound issues quickly.** CRM connection, org-wide Pylon, reporting defaults, pricing configuration, and some access changes may require primary admin or super-admin help.",
+      "**Escalate permission-bound issues quickly.** CRM connection, org-wide Pylon, reporting defaults, grading rubrics, pricing configuration, and some access changes may require RevOps or super-admin help.",
       "**Sync to users after confirming the source.** Spreading incomplete templates, stage settings, or advanced settings creates avoidable cleanup for every user.",
     ],
     "AE tips for success": [
@@ -1273,6 +1293,17 @@ function setupSteps(row) {
       "**Use search for account recall.** Search by customer, stakeholder, topic, meeting, date range, risk, feature request, or commitment when preparing for a customer conversation.",
       "**Separate internal and customer meetings.** Confirm which meetings should be captured and which should be skipped so internal planning calls do not create confusing customer outputs.",
       "**Use reporting as a signal layer.** Expansion signals, churn signals, feature requests, objections, and account health are useful only when fields, rubrics, and meeting capture are set correctly.",
+    ],
+    "Sales manager tips for success": [
+      "**Use grading to make coaching specific.** Review call scores from the meeting detail page alongside the summary, transcript, action items, and rubric reasoning. Treat AI grades as coaching signals, not final judgments.",
+      "**Calibrate the rubric with RevOps.** If several grades feel off, review the criteria with RevOps and sales leadership. A broad rubric can make every rep look the same; specific categories produce more useful coaching and reporting.",
+      "**Use aggregate grading to find team patterns.** In Reporting and Chart Builder, use rubric fields to compare category scores by rep, team, time range, stage, meeting type, or outcome. Look for the lowest average category before choosing the next team-coaching theme.",
+      "**Coach from evidence, not anecdotes.** For 1:1s, open two or three recent calls, find the moments tied to low or high rubric categories, and coach the exact behavior: discovery depth, objection handling, next-step commitment, qualification, customer language, or talk balance.",
+      "**Use it with reps transparently.** Share the rubric before using scores in coaching, review call moments together, agree on one behavior to change, and track whether the category improves over the next few calls.",
+      "**Separate manager use cases.** Use Ergo for onboarding new reps, reinforcing methodology, reviewing lost deals, finding best-performer patterns, preparing pipeline reviews, checking follow-up hygiene, and spotting stalled opportunities.",
+      "**Use forecasting as a second opinion.** Combine deal health, recent buyer engagement, meeting frequency, decision-maker involvement, next-step clarity, CRM stage, close date, and call-quality signals. A low score or weak grade should trigger inspection, not automatically change the forecast.",
+      "**Review response hygiene with rep performance.** Use response rate, median response time, missed opportunities, handoffs, and teammate-handled replies to coach follow-up habits that affect pipeline momentum.",
+      "**Close the loop with RevOps.** Ask RevOps to adjust rubrics, reporting fields, visibility, or dashboard defaults when manager workflows do not match how the team actually coaches and forecasts.",
     ],
     "Spectator and viewer tips for success": [
       "**Start from the question the viewer needs answered.** Executives, managers, advisors, and board observers usually need a dashboard, report, meeting recording, summary, or shared link, not full setup.",
@@ -2548,7 +2579,7 @@ function commonIssues(row) {
       "The user needs to refresh after an access change.",
     ];
   }
-  if (title === "Primary admin setup for founders, RevOps, and sales leaders") {
+  if (title === "RevOps setup for Ergo rollout") {
     return [
       "CRM, field mapping, and pipeline setup are treated as optional even though downstream CRM updates depend on them.",
       "Users are invited before workspace defaults, notetaker behavior, templates, and reporting access are ready.",
@@ -2557,12 +2588,12 @@ function commonIssues(row) {
       "Founders, VPs, or RevOps owners expect users to self-configure choices that should be decided centrally first.",
     ];
   }
-  if (title === "Secondary admin and operator setup") {
+  if (title === "Operator setup") {
     return [
-      "The secondary admin is asked to troubleshoot users without knowing which settings the primary admin owns.",
+      "The operator is asked to troubleshoot users without knowing which settings RevOps owns.",
       "Team members are provisioned into the wrong team or workspace.",
-      "The secondary admin selects their own email in Sync with Admin instead of the primary admin account to inherit from.",
-      "The secondary admin expects CRM setup to be repeated even though primary admin configuration should already be inherited.",
+      "The operator selects their own email in Sync with Admin instead of the RevOps-approved source account to inherit from.",
+      "The operator expects CRM setup to be repeated even though RevOps configuration should already be inherited.",
       "Settings are synced to users before the source settings are approved.",
       "Users ask operators to fix CRM, reporting, or notetaker behavior that requires broader admin permission.",
     ];
@@ -2595,7 +2626,7 @@ function commonIssues(row) {
       "Access remains available after the viewer no longer needs it.",
     ];
   }
-  if (title === "Primary admin tips for success") {
+  if (title === "RevOps tips for success") {
     return [
       "Users are invited before CRM, templates, notetaker behavior, reporting defaults, or access rules are ready.",
       "The pilot uses sandbox or synthetic records, so AI outputs and reports do not reflect real workflows.",
@@ -2604,13 +2635,23 @@ function commonIssues(row) {
       "No one owns the first-week feedback loop for missing meetings, wrong context, or draft quality.",
     ];
   }
-  if (title === "Secondary admin and operator tips for success") {
+  if (title === "Operator tips for success") {
     return [
-      "The operator does not know which settings the primary admin approved.",
-      "Users ask the secondary admin to fix issues that require primary-admin or super-admin permission.",
+      "The operator does not know which settings RevOps approved.",
+      "Users ask the operator to fix issues that require RevOps, admin, or super-admin permission.",
       "Personal email/calendar grants are confused with synced admin configuration.",
       "Settings are pushed to teams before the source configuration is ready.",
       "Support triage starts from the symptom instead of checking workspace, role, grants, notetaker, templates, and CRM mapping in order.",
+    ];
+  }
+  if (title === "Sales manager tips for success") {
+    return [
+      "The manager treats AI grades as final or punitive instead of using them as coaching signals.",
+      "The rubric is too broad, so aggregate grades look similar across reps and categories.",
+      "The team reviews aggregate grading before enough captured meetings exist for a useful pattern.",
+      "Reporting filters are too narrow, hiding the calls or reps the manager expects to review.",
+      "A forecast call overweights one grade or health score instead of combining CRM, engagement, meeting, and rep-follow-up context.",
+      "Managers cannot see rep calls because team membership, reporting access, meeting visibility, or user onboarding is incomplete.",
     ];
   }
   if (title === "AE tips for success") {
@@ -2925,7 +2966,7 @@ Welcome to Ergo's customer help center. Start with setup if you are new, jump in
 - Setup articles explain prerequisites and first-time configuration.
 - Workflow articles explain how to use a product surface.
 - Troubleshooting articles start from a symptom and walk through checks.
-- Admin-area articles are written for primary admins, secondary admins with permission, and RevOps or operations owners.
+- Admin-area articles are written for RevOps owners, operators, admins, and delegated teammates with permission.
 `;
 }
 
@@ -2938,8 +2979,8 @@ function writeFile(relativePath, contents) {
 function writeImages() {
   const images = {
     "roles-access-matrix.svg": svgDiagram("Roles and access", [
-      ["Primary admin", "Owns workspace setup, CRM configuration, teams, defaults, and broad access"],
-      ["Secondary admin", "Helps manage delegated team setup, users, reporting, or settings"],
+      ["RevOps", "Owns workspace setup, CRM configuration, field mapping, grading, reporting, and rollout"],
+      ["Operator", "Helps manage delegated team setup, users, templates, reporting, or settings"],
       ["User", "Uses meetings, drafts, search, follow-ups, deals, and personal setup"],
       ["Spectator", "Views limited meetings, reports, or shared links"],
       ["Desktop user", "Captures meetings and notes from Ergo Desktop"],
@@ -2949,8 +2990,8 @@ function writeImages() {
       ["Welcome", "CRM", "Email", "Workspace", "Templates", "Notetaker", "Reporting"],
       "Onboarding",
       [
-        { x: 260, y: 132, w: 640, h: 68, title: "Primary admin path", body: "CRM, field mapping, teams, defaults, reporting" },
-        { x: 260, y: 220, w: 640, h: 68, title: "Secondary admin path", body: "Delegated setup, users, templates, notetaker defaults" },
+        { x: 260, y: 132, w: 640, h: 68, title: "RevOps setup path", body: "CRM, field mapping, teams, defaults, grading, reporting" },
+        { x: 260, y: 220, w: 640, h: 68, title: "Operator support path", body: "Delegated setup, users, templates, notetaker defaults" },
         { x: 260, y: 308, w: 640, h: 68, title: "User path", body: "Email, calendar, personal preferences, drafts, test meeting" },
         { x: 260, y: 396, w: 640, h: 68, title: "Spectator path", body: "Workspace, limited visibility, meeting or reporting access" },
       ],
@@ -2965,14 +3006,14 @@ function writeImages() {
       ["Admin", "Teams", "Members", "Access", "Settings", "Billing"],
       "Admin Dashboard",
       [
-        { x: 260, y: 128, w: 300, h: 90, title: "Primary admin", body: "Workspace owner and final setup owner" },
-        { x: 590, y: 128, w: 300, h: 90, title: "Secondary admins", body: "Delegated configuration and team management" },
+        { x: 260, y: 128, w: 300, h: 90, title: "RevOps", body: "Workspace setup and governance owner" },
+        { x: 590, y: 128, w: 300, h: 90, title: "Operators", body: "Delegated configuration and team management" },
         { x: 260, y: 254, w: 300, h: 116, title: "Team members", body: "Users, spectators, and desktop users" },
         { x: 590, y: 254, w: 300, h: 116, title: "Access controls", body: "Meeting visibility, reporting, role changes" },
         { x: 260, y: 402, w: 630, h: 70, title: "Sync settings to team members", body: "Use after CRM, templates, or defaults are configured" },
       ],
       [
-        { x: 496, y: 156, lx: 710, ly: 72, label: "Primary admin owns setup", width: 242 },
+        { x: 496, y: 156, lx: 710, ly: 72, label: "RevOps owns setup", width: 216 },
         { x: 740, y: 308, lx: 812, ly: 382, label: "Grant only needed access", width: 234 },
         { x: 532, y: 438, lx: 720, ly: 504, label: "Sync after setup is ready", width: 244 },
       ]

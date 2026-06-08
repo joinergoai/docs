@@ -80,15 +80,16 @@ Notable customer examples from the MCP research include AsyncHealth for Outlook/
 | Getting support | Start and guidelines | User; Admin; Super Admin; Spectator | Live | P0 | Pylon chat widget | None | Backlog | Docs |
 | First-time setup checklist | Onboarding | User; Admin; Super Admin; Spectator | Live | P0 | Onboarding route | None | Backlog | Docs |
 | Setup by role | Onboarding | User; Admin; Super Admin; Spectator | Live | P0 | Onboarding role flow | None | Backlog | Docs |
-| Primary admin setup for founders, RevOps, and sales leaders | Onboarding | Admin; Super Admin | Live | P0 | Onboarding admin role flow | CRM; Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
-| Secondary admin and operator setup | Onboarding | Admin; Super Admin | Live | P1 | Onboarding secondary admin role flow | Google Workspace or Microsoft 365; CRM; Notetaker | Backlog | Docs |
+| RevOps setup for Ergo rollout | Onboarding | Admin; Super Admin | Live | P0 | Onboarding admin role flow | CRM; Google Workspace or Microsoft 365; Notetaker; Reporting | Backlog | Docs |
+| Operator setup | Onboarding | Admin; Super Admin | Live | P1 | Delegated onboarding operator flow | Google Workspace or Microsoft 365; CRM; Notetaker | Backlog | Docs |
 | AE setup | Onboarding | User; Admin; Super Admin | Live | P0 | Onboarding user role flow | Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
 | CSM setup | Onboarding | User; Admin; Super Admin | Live | P1 | Onboarding user role flow | Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
 | Spectator and viewer setup | Onboarding | Spectator; Admin; Super Admin | Live | P1 | Spectator role | None | Backlog | Docs |
-| Primary admin tips for success | Onboarding | Admin; Super Admin | Live | P1 | Onboarding admin role flow | CRM; Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
-| Secondary admin and operator tips for success | Onboarding | Admin; Super Admin | Live | P2 | Onboarding secondary admin role flow | Google Workspace or Microsoft 365; CRM; Notetaker | Backlog | Docs |
+| RevOps tips for success | Onboarding | Admin; Super Admin | Live | P1 | Onboarding admin role flow | CRM; Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
+| Operator tips for success | Onboarding | Admin; Super Admin | Live | P2 | Delegated onboarding operator flow | Google Workspace or Microsoft 365; CRM; Notetaker | Backlog | Docs |
 | AE tips for success | Onboarding | User; Admin; Super Admin | Live | P0 | Onboarding user role flow | Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
 | CSM tips for success | Onboarding | User; Admin; Super Admin | Live | P1 | Onboarding user role flow | Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
+| Sales manager tips for success | Onboarding | User; Admin; Super Admin | Reporting access | P1 | ReportingProtectedRoute; Call grading rubrics; Rep performance | Notetaker; CRM | Backlog | Docs |
 | Spectator and viewer tips for success | Onboarding | Spectator; Admin; Super Admin | Live | P2 | Spectator role | None | Backlog | Docs |
 | Connect your CRM | Onboarding | Admin; Super Admin | Live | P0 | Admin onboarding step | Salesforce; HubSpot; Attio; Pipedrive; Ergo CRM | Backlog | Docs |
 | Connect email and calendar | Onboarding | User; Admin; Super Admin; Spectator | Live | P0 | Onboarding workspace step | Google Workspace or Microsoft 365 | Backlog | Docs |
