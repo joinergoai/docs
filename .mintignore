@@ -1,7 +1,29 @@
-# Mintlify automatically ignores these files and directories:
-# .git, .github, .claude, .agents, .idea, node_modules,
-# README.md, LICENSE.md, CHANGELOG.md, CONTRIBUTING.md
+src/**
+public/**
+scripts/**
+dist/**
+dist-ssr/**
+node_modules/**
+.git/**
+.github/**
+.husky/**
+.vscode/**
+.idea/**
+.worktrees/**
+.superpowers/**
 
-# Draft content
-drafts/
-*.draft.mdx
+*.log
+*.local
+*.ts
+*.tsx
+*.js
+*.jsx
+*.cjs
+*.css
+*.html
+*.json
+!docs.json
+
+customer-docs/ergo-customer-user-docs-inventory.md
+customer-docs/docs-operating-plan.md
+customer-docs/scripts/**

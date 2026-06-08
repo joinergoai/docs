@@ -1,0 +1,45 @@
+---
+title: "Stage drift resolution"
+description: "Configure stage drift resolution so Ergo can update CRM data reliably."
+keywords: ["Stage drift resolution","Field mapping and CRM configuration","Ergo docs"]
+---
+
+# Stage drift resolution
+
+Audience: Admin; Super Admin · Access: Live · Requires: CRM
+
+## Who can use this
+
+Admin; Super Admin. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+
+## Before you start
+
+- Confirm the required source is connected or available: CRM.
+- Make sure you are signed in to the correct Ergo workspace.
+- If you do not see the page or setting, ask an admin to check your role and access.
+
+## Steps
+
+- Compare the stages in Ergo with the stages in your CRM.
+- Identify renamed, deleted, reordered, or newly created stages.
+- Update mappings so Ergo and the CRM agree.
+- Re-test one deal after resolving drift.
+
+## What to expect
+
+- CRM updates depend on connection status, mapped properties, permissions, and pipeline/stage configuration.
+- Schema or stage changes in the CRM can require remapping in Ergo.
+- Test on a single record before rolling changes out broadly.
+
+## Common issues
+
+- The CRM property does not exist or has the wrong type.
+- The connected CRM account cannot read or update the property.
+- Pipeline or stage mappings changed in the CRM.
+- Ergo is looking at a different deal or company record than expected.
+
+## Related articles
+
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Pipeline stages](../setup/pipeline-stages)
+- [Field mapping setup: required before CRM updates work](./field-mapping-setup-required-before-crm-updates-work)

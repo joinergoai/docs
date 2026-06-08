@@ -1,0 +1,47 @@
+---
+title: "Stage drift conflicts"
+description: "Diagnose and resolve stage drift conflicts in Ergo."
+keywords: ["Stage drift conflicts","Troubleshooting","Ergo troubleshooting"]
+---
+
+# Stage drift conflicts
+
+Audience: Admin; Super Admin · Access: Live · Requires: CRM
+
+## Symptoms
+
+Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+
+## Most common causes
+
+- The CRM property does not exist or has the wrong type.
+- The connected CRM account cannot read or update the property.
+- Pipeline or stage mappings changed in the CRM.
+- Ergo is looking at a different deal or company record than expected.
+
+## What to check
+
+- Check whether CRM stages were renamed, deleted, reordered, or added.
+- Open Field Mapping and review stage mappings.
+- Resolve drift by mapping each Ergo stage to the correct CRM stage.
+- Test with one deal before applying broader changes.
+
+## Resolution steps
+
+1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
+2. Check the related setup article before retrying the workflow.
+3. Reconnect required integrations or update access when those checks identify the cause.
+4. Retry the workflow from Ergo.
+5. Contact support if the issue persists after the checks above.
+
+## When to contact support
+
+- The workflow still fails after checking setup and reconnecting required integrations.
+- A meeting, draft, or CRM update is missing after the expected processing window.
+- The customer-facing error message does not explain what to fix next.
+
+## Related articles
+
+- [Stage drift resolution](../field-mapping/stage-drift-resolution)
+- [Pipeline stages](../setup/pipeline-stages)
+- [CRM sync issues](./crm-sync-issues)

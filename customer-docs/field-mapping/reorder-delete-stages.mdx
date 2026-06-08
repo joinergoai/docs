@@ -1,0 +1,45 @@
+---
+title: "Reorder/delete stages"
+description: "Configure reorder/delete stages so Ergo can update CRM data reliably."
+keywords: ["Reorder/delete stages","Field mapping and CRM configuration","Ergo docs"]
+---
+
+# Reorder/delete stages
+
+Audience: Admin; Super Admin · Access: Live · Requires: CRM
+
+## Who can use this
+
+Admin; Super Admin. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+
+## Before you start
+
+- Confirm the required source is connected or available: CRM.
+- Make sure you are signed in to the correct Ergo workspace.
+- If you do not see the page or setting, ask an admin to check your role and access.
+
+## Steps
+
+- Review active pipeline usage before changing stages.
+- Reorder stages to match the CRM.
+- Delete only stages that are no longer used.
+- Resolve drift after stage changes.
+
+## What to expect
+
+- CRM updates depend on connection status, mapped properties, permissions, and pipeline/stage configuration.
+- Schema or stage changes in the CRM can require remapping in Ergo.
+- Test on a single record before rolling changes out broadly.
+
+## Common issues
+
+- The CRM property does not exist or has the wrong type.
+- The connected CRM account cannot read or update the property.
+- Pipeline or stage mappings changed in the CRM.
+- Ergo is looking at a different deal or company record than expected.
+
+## Related articles
+
+- [Field mapping](./index)
+- [Troubleshooting](../troubleshooting/index)
+- [Getting support](../start-here/getting-support)

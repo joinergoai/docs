@@ -1,0 +1,47 @@
+---
+title: "Field mapping setup: required before CRM updates work"
+description: "Configure field mapping setup: required before CRM updates work so Ergo can update CRM data reliably."
+keywords: ["Field mapping setup: required before CRM updates work","Field mapping and CRM configuration","Ergo docs"]
+---
+
+# Field mapping setup: required before CRM updates work
+
+Audience: Admin; Super Admin · Access: Live · Requires: CRM
+
+![Flow diagram showing CRM connection, field mapping, permissions, and CRM updates.](../images/field-mapping-crm-flow.svg)
+
+## Who can use this
+
+Admin; Super Admin. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+
+## Before you start
+
+- Confirm the required source is connected or available: CRM.
+- Make sure you are signed in to the correct Ergo workspace.
+- If you do not see the page or setting, ask an admin to check your role and access.
+
+## Steps
+
+- Confirm CRM connection and admin permissions.
+- Map required properties for deals, companies, meetings, and reporting.
+- Validate pipeline and stage mappings.
+- Test updates on one record before relying on automation across the team.
+
+## What to expect
+
+- CRM updates depend on connection status, mapped properties, permissions, and pipeline/stage configuration.
+- Schema or stage changes in the CRM can require remapping in Ergo.
+- Test on a single record before rolling changes out broadly.
+
+## Common issues
+
+- The CRM property does not exist or has the wrong type.
+- The connected CRM account cannot read or update the property.
+- Pipeline or stage mappings changed in the CRM.
+- Ergo is looking at a different deal or company record than expected.
+
+## Related articles
+
+- [CRM properties](./crm-properties)
+- [Stage drift resolution](./stage-drift-resolution)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
