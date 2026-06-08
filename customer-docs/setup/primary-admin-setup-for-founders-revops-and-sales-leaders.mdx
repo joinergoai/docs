@@ -1,0 +1,40 @@
+---
+title: "Primary admin setup for founders, RevOps, and sales leaders"
+description: "Set up Ergo as the workspace owner responsible for CRM readiness, teams, permissions, defaults, reporting, and rollout."
+keywords: ["Primary admin setup for founders, RevOps, and sales leaders","Onboarding","Ergo docs"]
+---
+
+
+![Annotated onboarding view showing the primary admin setup path for CRM, teams, defaults, reporting, and rollout.](../images/onboarding-setup-by-role-annotated.svg)
+
+
+## Who is this for?
+
+- For founders, RevOps, VPs, sales leaders, and operations owners acting as the primary admin for rollout.
+- Requires CRM, Google Workspace or Microsoft 365, Notetaker, Reporting.
+
+
+## Setup steps
+
+- Prepare production CRM access before onboarding; do not connect a sandbox or test CRM if you expect useful AI output.
+- Connect the CRM with an account that can read and update the objects, properties, stages, and records Ergo should manage.
+- Set up pipeline stages with clear entry points, exit points, and locked stages such as Closed Won when automated restaging should not happen.
+- Add or approve Ergo-recommended CRM properties, including fields that may not be displayed to reps but still give Ergo context for automation and reporting.
+- Configure email/calendar guidance for the team: inbox monitoring, follow-up drafts, surfacing, and any external email client setting. Each user still authenticates their own email.
+- Enable the notetaker, review what meetings it will join, connect Slack if your team uses Slack nudges or pre-call briefs, and set recording/disclaimer defaults.
+- Create teams, assign secondary admins, provision users, grant reporting or spectator access, and run a small test with one meeting, one draft, one CRM update, and one report before broad rollout.
+
+## Common issues
+
+- CRM, field mapping, and pipeline setup are treated as optional even though downstream CRM updates depend on them.
+- Users are invited before workspace defaults, notetaker behavior, templates, and reporting access are ready.
+- The connected CRM or email/calendar account does not have the permissions Ergo needs.
+- A sandbox or synthetic CRM is connected even though Ergo needs production CRM data for useful AI output.
+- Founders, VPs, or RevOps owners expect users to self-configure choices that should be decided centrally first.
+
+## Related articles
+
+- [Setup by role](./setup-by-role)
+- [Connect your CRM](./connect-your-crm)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [Admin dashboard overview](../admin/admin-dashboard-overview)

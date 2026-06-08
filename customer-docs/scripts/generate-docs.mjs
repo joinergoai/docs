@@ -96,8 +96,13 @@ const relatedByTitle = {
   "Security, data retention, and LLM usage": ["Recording/privacy basics", "Reviewing AI-generated outputs", "Getting support"],
   "Recording/privacy basics": ["Recording disclaimer", "Security, data retention, and LLM usage", "Transcript or recording missing"],
   "Getting support": ["Permission or access denied", "Notetaker did not join", "CRM sync issues"],
-  "First-time setup checklist": ["Setup by role", "Connect email and calendar", "Connect your CRM", "Notetaker setup"],
-  "Setup by role": ["First-time setup checklist", "Roles and permissions", "Connect your CRM"],
+  "First-time setup checklist": ["Setup by role", "Primary admin setup for founders, RevOps, and sales leaders", "AE setup", "Connect email and calendar"],
+  "Setup by role": ["Primary admin setup for founders, RevOps, and sales leaders", "Secondary admin and operator setup", "AE setup", "CSM setup", "Spectator and viewer setup"],
+  "Primary admin setup for founders, RevOps, and sales leaders": ["Setup by role", "Connect your CRM", "Field mapping setup: required before CRM updates work", "Admin dashboard overview"],
+  "Secondary admin and operator setup": ["Setup by role", "User sync", "Email templates setup", "Sync CRM/settings to team members"],
+  "AE setup": ["Setup by role", "Connect email and calendar", "Email templates setup", "Review/edit AI drafts"],
+  "CSM setup": ["Setup by role", "Connect email and calendar", "Meeting detail page", "Follow-ups panel"],
+  "Spectator and viewer setup": ["Setup by role", "Spectator access", "Meeting availability and visibility", "Permission or access denied"],
   "Connect your CRM": ["CRM properties setup", "Pipeline stages", "Field mapping setup: required before CRM updates work"],
   "Connect email and calendar": ["Google Workspace", "Microsoft 365", "Calendar scopes and meeting auto-join"],
   "Notetaker setup": ["Ergo Notetaker", "Schedule or cancel the notetaker", "Notetaker waiting-room admission guide"],
@@ -109,11 +114,11 @@ const relatedByTitle = {
   "Microsoft 365": ["Connect email and calendar", "Calendar scopes and meeting auto-join", "Expired grants and reconnecting"],
   "Expired grants and reconnecting": ["Google/Microsoft/Slack reconnects", "Connect email and calendar", "Slack"],
   Slack: ["Google/Microsoft/Slack reconnects", "Slack monitoring and pre-call context", "Permission or access denied"],
-  "Ergo Notetaker": ["Notetaker setup", "Notetaker did not join", "Add Bot to Meeting for external links"],
-  "Schedule or cancel the notetaker": ["Ergo Notetaker", "Add Bot to Meeting for external links", "What happens when a meeting is rescheduled"],
-  "Notetaker waiting-room admission guide": ["Notetaker did not join", "Schedule or cancel the notetaker", "Add Bot to Meeting for external links"],
-  "What happens when a meeting is rescheduled": ["Add Bot to Meeting for external links", "Notetaker did not join", "Meeting availability and visibility"],
-  "Add Bot to Meeting for external links": ["Schedule or cancel the notetaker", "Notetaker waiting-room admission guide", "Notetaker did not join"],
+  "Ergo Notetaker": ["Notetaker setup", "Notetaker did not join", "Add the bot to a live or ad hoc meeting"],
+  "Schedule or cancel the notetaker": ["Ergo Notetaker", "Add the bot to a live or ad hoc meeting", "What happens when a meeting is rescheduled"],
+  "Notetaker waiting-room admission guide": ["Notetaker did not join", "Schedule or cancel the notetaker", "Add the bot to a live or ad hoc meeting"],
+  "What happens when a meeting is rescheduled": ["Add the bot to a live or ad hoc meeting", "Notetaker did not join", "Meeting availability and visibility"],
+  "Add the bot to a live or ad hoc meeting": ["Schedule or cancel the notetaker", "Notetaker waiting-room admission guide", "Notetaker did not join"],
   "Meeting processing time and status states": ["Transcript or recording missing", "Why some meetings do not generate insights or drafts", "Meeting availability and visibility"],
   "Why some meetings do not generate insights or drafts": ["Meeting processing time and status states", "Turn post-call drafts on or off", "Draft send failures"],
   "Recording disclaimer": ["Recording/privacy basics", "Default meeting summary settings", "Recording disclaimer defaults"],
@@ -134,7 +139,7 @@ const relatedByTitle = {
   "CRM sync issues": ["Field mapping setup: required before CRM updates work", "Stage drift conflicts", "Expired grants and reconnecting"],
   "Stage drift conflicts": ["Stage drift resolution", "Pipeline stages", "CRM sync issues"],
   "Google/Microsoft/Slack reconnects": ["Expired grants and reconnecting", "Connect email and calendar", "Slack"],
-  "Notetaker did not join": ["Notetaker waiting-room admission guide", "Add Bot to Meeting for external links", "What happens when a meeting is rescheduled"],
+  "Notetaker did not join": ["Notetaker waiting-room admission guide", "Add the bot to a live or ad hoc meeting", "What happens when a meeting is rescheduled"],
   "Transcript or recording missing": ["Meeting processing time and status states", "Delete/retry processing", "Getting support"],
   "Draft send failures": ["Failed drafts retry/report", "Expired grants and reconnecting", "Turn post-call drafts on or off"],
   "Permission or access denied": ["Roles and permissions", "Spectator access", "Grant meeting/reporting access"],
@@ -153,6 +158,26 @@ const imageByTitle = {
     file: "onboarding-setup-by-role-annotated.svg",
     alt: "Annotated onboarding checklist showing role-specific setup paths in Ergo.",
   },
+  "Primary admin setup for founders, RevOps, and sales leaders": {
+    file: "onboarding-setup-by-role-annotated.svg",
+    alt: "Annotated onboarding view showing the primary admin setup path for CRM, teams, defaults, reporting, and rollout.",
+  },
+  "Secondary admin and operator setup": {
+    file: "admin-dashboard-roles-annotated.svg",
+    alt: "Annotated admin dashboard showing delegated setup, user management, and access controls.",
+  },
+  "AE setup": {
+    file: "drafts-templates-annotated.svg",
+    alt: "Annotated drafts and templates workspace showing the AE setup path for email drafts and follow-up workflows.",
+  },
+  "CSM setup": {
+    file: "meetings-dashboard-annotated.svg",
+    alt: "Annotated meetings dashboard showing the CSM setup path for meetings, follow-ups, and account context.",
+  },
+  "Spectator and viewer setup": {
+    file: "admin-dashboard-roles-annotated.svg",
+    alt: "Annotated admin dashboard showing spectator and viewer access controls.",
+  },
   "Connect email and calendar": {
     file: "calendar-email-connection-flow.svg",
     alt: "Flow diagram showing email and calendar connection before meeting capture and draft workflows.",
@@ -165,7 +190,7 @@ const imageByTitle = {
     file: "calendar-email-connection-flow.svg",
     alt: "Flow diagram showing calendar scopes feeding meeting detection and auto-join behavior.",
   },
-  "Add Bot to Meeting for external links": {
+  "Add the bot to a live or ad hoc meeting": {
     file: "meetings-add-bot-flow.svg",
     alt: "Flow diagram showing how Add Bot to Meeting sends Ergo to an external meeting link.",
   },
@@ -358,6 +383,11 @@ function descriptionFor(row) {
     "Welcome to Ergo": "Start here to understand what Ergo does, what to set up first, and where each workflow lives.",
     "Navigating Ergo": "Find the main Ergo workspaces for meetings, drafts, deals, reporting, integrations, admin settings, and support.",
     "Setup by role": "Understand which setup tasks belong to primary admins, secondary admins, users, spectators, and desktop users.",
+    "Primary admin setup for founders, RevOps, and sales leaders": "Set up Ergo as the workspace owner responsible for CRM readiness, teams, permissions, defaults, reporting, and rollout.",
+    "Secondary admin and operator setup": "Help operate Ergo setup after the primary admin defines systems, permissions, team defaults, and rollout rules.",
+    "AE setup": "Complete the personal setup AEs need for meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.",
+    "CSM setup": "Complete the personal setup CSMs need for customer meetings, summaries, account context, follow-ups, and handoff workflows.",
+    "Spectator and viewer setup": "Give viewers limited access to the meetings, reports, or shared links they need without full user setup.",
     "First-time setup checklist": "Complete the first setup pass for admins, users, spectators, integrations, meetings, and CRM readiness.",
     "Roles and permissions": "Understand primary admin, secondary admin, user, spectator, desktop, and access-specific permissions in Ergo.",
     "Spectator access": "Give limited meeting, reporting, or shared-link visibility without granting full user access.",
@@ -378,7 +408,7 @@ function descriptionFor(row) {
     "Turn post-call drafts on or off": "Control whether Ergo creates post-call email drafts for users, teams, or eligible meeting types.",
     "Draft email logic: when drafts are created and how to dismiss": "Understand why a meeting did or did not create a draft and what to do with unwanted drafts.",
     "Dashboard/upcoming meetings": "Use the dashboard to check upcoming meetings, notetaker status, and meeting readiness before calls.",
-    "Add Bot to Meeting for external links": "Manually dispatch the Ergo bot to a live Zoom, Google Meet, or Microsoft Teams link.",
+    "Add the bot to a live or ad hoc meeting": "Manually dispatch the Ergo bot to a live, ad hoc, or external Zoom, Google Meet, or Microsoft Teams link.",
     "Notetaker waiting-room admission guide": "Help meeting hosts admit the Ergo bot and recover when the bot is waiting, removed, or missed.",
     "Meeting processing time and status states": "Understand why recordings, transcripts, summaries, insights, and drafts can finish at different times.",
     "Why some meetings do not generate insights or drafts": "Check meeting type, source, filters, and email setup when expected insights or drafts are missing.",
@@ -433,6 +463,21 @@ function customerAudience(row) {
 
   if (row.title === "Setup by role" || row.title === "First-time setup checklist") {
     return "primary admins who own rollout, secondary admins helping with delegated setup, users completing personal setup, and spectators receiving limited access";
+  }
+  if (row.title === "Primary admin setup for founders, RevOps, and sales leaders") {
+    return "founders, RevOps, VPs, sales leaders, and operations owners acting as the primary admin for rollout";
+  }
+  if (row.title === "Secondary admin and operator setup") {
+    return "RevOps teammates, sales operations, customer operations, enablement, or managers helping administer Ergo after the primary admin sets direction";
+  }
+  if (row.title === "AE setup") {
+    return "AEs, account executives, founders selling directly, and sales managers coaching reps on daily Ergo workflows";
+  }
+  if (row.title === "CSM setup") {
+    return "CSMs, account managers, customer success leaders, founders handling customers, and post-sale teams using Ergo for customer context";
+  }
+  if (row.title === "Spectator and viewer setup") {
+    return "spectators, executives, managers, advisors, or cross-functional viewers who only need limited meeting or reporting visibility";
   }
   if (row.title === "Roles and permissions") {
     return "primary admins, secondary admins, RevOps, founders, sales leaders, users, and spectators who need to understand what each access level means";
@@ -536,6 +581,201 @@ function audienceBlock(row) {
   return [...items, ...customerAccess(row)];
 }
 
+function sectionAudience(category) {
+  const audiences = {
+    "Start and guidelines": [
+      "Everyone using Ergo, plus rollout owners who need a shared vocabulary for roles, data, privacy, AI outputs, and support.",
+    ],
+    Onboarding: [
+      "Primary admins who own rollout, secondary admins helping configure teams, users completing personal setup, and spectators receiving limited access.",
+    ],
+    Integrations: [
+      "Primary admins, secondary admins, RevOps, sales operations, support operations, and users connecting personal sources like email or calendar.",
+    ],
+    "Meetings and notes": [
+      "Sales reps, account owners, CSMs, founders, managers, spectators, and admins responsible for meeting capture and visibility.",
+    ],
+    Desktop: [
+      "Desktop users recording locally and admins helping them verify permissions, meeting detection, recording, and upload health.",
+    ],
+    "Deals and CRM workspace": [
+      "Sales reps, account owners, founders, sales leaders, managers, RevOps, and users working from pipeline and account context.",
+    ],
+    "Field mapping and CRM configuration": [
+      "Primary admins, secondary admins with CRM permissions, RevOps, sales operations, and CRM owners.",
+    ],
+    "Drafts, email, and templates": [
+      "Sales reps, account owners, founders, managers, RevOps, and admins shaping post-call email workflows.",
+    ],
+    "Knowledge base and generated docs": [
+      "Users and admins managing document context, generated customer materials, post-call instructions, and sharing.",
+    ],
+    "Ergo AI, search, and automation": [
+      "Sales reps, account owners, founders, managers, RevOps, and admins using customer context, search, scheduled runs, or follow-ups.",
+    ],
+    Reporting: [
+      "Founders, sales leaders, RevOps, managers, and users with reporting access.",
+    ],
+    Admin: [
+      "Primary admins and secondary admins with permission for the relevant teams, members, settings, access, or defaults.",
+    ],
+    Troubleshooting: [
+      "Anyone diagnosing setup, meeting capture, CRM sync, drafts, search, reporting, integrations, desktop, or access issues.",
+    ],
+  };
+  return audiences[category] ?? ["People using this area of Ergo."];
+}
+
+function sectionBeforeStart(category) {
+  const items = {
+    "Start and guidelines": [
+      "Know which workspace and team you are using.",
+      "Ask a primary or secondary admin when access, connected sources, or recording defaults are unclear.",
+    ],
+    Onboarding: [
+      "Decide who owns primary admin setup before inviting the broader team.",
+      "Connect workspace-level systems before asking users to finish personal setup.",
+      "Use role-specific setup articles when a person only needs part of the full setup path.",
+    ],
+    Integrations: [
+      "Use the account your team expects Ergo to read from or write through.",
+      "Approve every required scope during connection or reconnect.",
+      "Check channel, calendar, queue, object, and field permissions when a connected source looks incomplete.",
+    ],
+    "Meetings and notes": [
+      "Connect calendar and the intended notetaker source first.",
+      "Check meeting links, waiting rooms, meeting ownership, and source calendars when the bot does not join.",
+      "Remember that recordings, transcripts, summaries, insights, and drafts can finish separately.",
+    ],
+    Desktop: [
+      "Install Ergo Desktop, sign in with the same Ergo account, and grant macOS permissions.",
+      "Run a short test capture before relying on Desktop for customer calls.",
+    ],
+    "Deals and CRM workspace": [
+      "Connect CRM and complete field mapping before relying on CRM writeback or AI deal context.",
+      "Check filters, views, ownership, and record matching before assuming a deal or company is missing.",
+    ],
+    "Field mapping and CRM configuration": [
+      "Use a CRM account that can read and update the fields Ergo needs.",
+      "Map properties, pipelines, and stages before enabling broad CRM automation.",
+      "Test changes on one record before rolling them out.",
+    ],
+    "Drafts, email, and templates": [
+      "Connect email/calendar and confirm draft generation is enabled for the user or team.",
+      "Review AI drafts before sending unless your workspace has explicitly approved an auto-send workflow.",
+    ],
+    "Knowledge base and generated docs": [
+      "Confirm document scope before upload or sharing.",
+      "Wait for document processing before expecting Ergo to use the file as context.",
+    ],
+    "Ergo AI, search, and automation": [
+      "Name the customer, deal, meeting, document, date range, or source you want Ergo to use.",
+      "Check sources and actions before relying on an answer or scheduled output.",
+    ],
+    Reporting: [
+      "Confirm reporting is enabled and the viewer has reporting access.",
+      "Check filters, date ranges, source fields, and data freshness before interpreting results.",
+    ],
+    Admin: [
+      "Sign in as the primary admin or as a secondary admin with permission for the area you are changing.",
+      "Confirm the workspace, team, member, and downstream access impact before saving changes.",
+    ],
+    Troubleshooting: [
+      "Capture the workspace, affected user, integration, meeting/deal/report/draft, and approximate time window.",
+      "Start with the article closest to the symptom, then escalate with the checks you already tried.",
+    ],
+  };
+  return items[category] ?? ["Confirm workspace, access, and required integrations before starting."];
+}
+
+const articleAudienceTitles = new Set([
+  "Setup by role",
+  "Primary admin setup for founders, RevOps, and sales leaders",
+  "Secondary admin and operator setup",
+  "AE setup",
+  "CSM setup",
+  "Spectator and viewer setup",
+  "Roles and permissions",
+  "Spectator access",
+]);
+
+function shouldShowArticleAudience(row) {
+  return articleAudienceTitles.has(row.title);
+}
+
+const articleBeforeStartTitles = new Set([
+  "Connect your CRM",
+  "Connect email and calendar",
+  "Notetaker setup",
+  "CRM properties setup",
+  "Pipeline stages",
+  "Field mapping setup: required before CRM updates work",
+  "Create/sync CRM properties",
+  "Add the bot to a live or ad hoc meeting",
+  "Upload external recordings",
+  "Share/revoke/password-protect meetings",
+  "Install and sign in to Ergo Desktop",
+  "macOS permissions",
+  "Desktop onboarding checklist",
+  "Troubleshoot missed detection or upload failures",
+  "Grant meeting/reporting access",
+  "Global meeting access",
+  "Sync CRM/settings to team members",
+  "Reporting email cadences",
+  "Email/Slack delivery for scheduled runs",
+  "Share charts/dashboards",
+  "Expired grants and reconnecting",
+]);
+
+function shouldShowArticleBeforeStart(row) {
+  if (articleBeforeStartTitles.has(row.title)) return true;
+  if (row.category === "Integrations") return true;
+  return false;
+}
+
+function articleBeforeStart(row) {
+  if (!shouldShowArticleBeforeStart(row)) return [];
+
+  const title = row.title.toLowerCase();
+  const items = [];
+  const requirement = row.requiredIntegration !== "None" ? friendlyRequirement(row.requiredIntegration) : null;
+  const isConnectionArticle =
+    row.category === "Integrations" ||
+    title.startsWith("connect ") ||
+    title.includes("reconnecting") ||
+    title.includes("expired grant");
+
+  if (row.access.includes("Admin-only")) {
+    items.push("Sign in as the primary admin or as a secondary admin with permission for this area.");
+  }
+  if (row.access.includes("Reporting access")) {
+    items.push("Confirm reporting is enabled and the viewer has reporting access.");
+  }
+  if (row.access.includes("Desktop-only")) {
+    items.push("Install Ergo Desktop, sign in, and grant required macOS permissions.");
+  }
+  if (row.access.includes("Beta/Gated")) {
+    items.push("Confirm this feature is enabled for your workspace.");
+  }
+  if (row.access.includes("Shared link")) {
+    items.push("Confirm the link, password, or viewer access is still valid.");
+  }
+
+  if (requirement) {
+    if (isConnectionArticle) {
+      items.push(`Have access to the ${requirement} account or admin console you plan to connect.`);
+      items.push("Use the account your team expects Ergo to read from or write through.");
+    } else if (row.category === "Meetings and notes" && title.includes("bot")) {
+      items.push("Have the live meeting link available.");
+      items.push("Make sure the meeting host can admit the Ergo bot if there is a waiting room.");
+    } else {
+      items.push(`Confirm ${requirement} is connected or available.`);
+    }
+  }
+
+  return [...new Set(items)];
+}
+
 function articleType(row) {
   const title = row.title.toLowerCase();
   if (isTroubleshootingLike(row)) return "troubleshooting";
@@ -592,6 +832,36 @@ function beforeStart(row) {
     title.startsWith("connect ") ||
     title.includes("reconnecting") ||
     title.includes("expired grant");
+
+  if (row.title === "Primary admin setup for founders, RevOps, and sales leaders") {
+    return [
+      "Have production CRM admin access ready, including permission to create or approve properties and pipeline settings.",
+      "Know your current sales stages, which stages should be locked, and where new deals should enter the pipeline.",
+      "Decide who owns rollout decisions for CRM, notetaker behavior, templates, reporting, and user access.",
+      "Bring access to Google Workspace or Microsoft 365, Slack, and reporting owners if those systems are part of rollout.",
+    ];
+  }
+  if (row.title === "Secondary admin and operator setup") {
+    return [
+      "Confirm which primary admin account you should sync from.",
+      "Make sure your own Ergo account is provisioned in the correct workspace and team.",
+      "Know which setup areas you are allowed to manage versus which require the primary admin.",
+    ];
+  }
+  if (row.title === "AE setup" || row.title === "CSM setup") {
+    return [
+      "Make sure your account is provisioned in the correct workspace and team.",
+      "Have access to your own Google Workspace or Microsoft 365 account.",
+      "Ask your primary or secondary admin which notetaker source, templates, and Slack workflow your team uses.",
+    ];
+  }
+  if (row.title === "Spectator and viewer setup") {
+    return [
+      "Confirm the viewer should have limited access rather than full user access.",
+      "Identify the exact meetings, reports, dashboards, folders, or shared links they should see.",
+      "Ask a primary or secondary admin to provision access before sending the viewer a link.",
+    ];
+  }
 
   if (row.access.includes("Admin-only")) {
     const items = [
@@ -731,11 +1001,54 @@ function setupSteps(row) {
       "Run one test workflow before rolling the setup out to more teams.",
     ],
     "Setup by role": [
-      "Primary admins should connect CRM, configure field mapping, create or review teams, set company details, meeting-title phrases, pipeline stages, pricing, advanced settings, and reporting defaults.",
-      "Secondary admins should complete any delegated setup they own, such as user sync, team settings, templates, collaboration tools, notetaker defaults, reporting access, or helping users finish setup.",
-      "Users should connect email/calendar, review personal workspace settings, set template preferences, confirm notetaker behavior, and learn the daily workflows they will use.",
-      "Spectators should confirm their workspace, view-only access, and any meeting or reporting links they are expected to review.",
-      "RevOps, founders, and sales leaders should verify that the role split matches how the team actually operates before inviting the broader org.",
+      "Use the primary admin setup guide when a founder, RevOps owner, VP, sales leader, or ops owner is responsible for systems, permissions, teams, defaults, and rollout.",
+      "Use the secondary admin and operator setup guide when someone helps administer users, templates, access, or reporting after the primary setup direction is clear.",
+      "Use the AE setup guide for individual sellers who need meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.",
+      "Use the CSM setup guide for post-sale users who need customer meetings, summaries, account context, handoffs, and follow-up workflows.",
+      "Use spectator and viewer setup when someone should view selected meetings, reports, or shared links without a full user workflow.",
+    ],
+    "Primary admin setup for founders, RevOps, and sales leaders": [
+      "Prepare production CRM access before onboarding; do not connect a sandbox or test CRM if you expect useful AI output.",
+      "Connect the CRM with an account that can read and update the objects, properties, stages, and records Ergo should manage.",
+      "Set up pipeline stages with clear entry points, exit points, and locked stages such as Closed Won when automated restaging should not happen.",
+      "Add or approve Ergo-recommended CRM properties, including fields that may not be displayed to reps but still give Ergo context for automation and reporting.",
+      "Configure email/calendar guidance for the team: inbox monitoring, follow-up drafts, surfacing, and any external email client setting. Each user still authenticates their own email.",
+      "Enable the notetaker, review what meetings it will join, connect Slack if your team uses Slack nudges or pre-call briefs, and set recording/disclaimer defaults.",
+      "Create teams, assign secondary admins, provision users, grant reporting or spectator access, and run a small test with one meeting, one draft, one CRM update, and one report before broad rollout.",
+    ],
+    "Secondary admin and operator setup": [
+      "Confirm what the primary admin delegated: user provisioning, team membership, template cleanup, notetaker defaults, reporting access, support triage, or settings sync.",
+      "Use Sync with Admin when your setup should inherit the primary admin's CRM configuration, pipeline stages, and property mappings.",
+      "Select the primary admin's email in the sync dropdown; it is the admin account you are syncing from, not necessarily your own account.",
+      "Connect your own email/calendar and Slack after syncing; those personal grants do not transfer from the primary admin.",
+      "Help users finish personal setup, verify first meetings or drafts, and troubleshoot wrong workspace, expired grants, missing admin email, and hidden reporting access.",
+      "Sync CRM/settings to team members only after the primary admin has approved the source settings.",
+    ],
+    "AE setup": [
+      "Connect email and calendar so Ergo can detect customer meetings and support post-call drafts.",
+      "Confirm the notetaker source for your workspace and check upcoming meetings before calls.",
+      "Review or customize post-call email templates, draft preferences, signature behavior, and personal instructions.",
+      "Use Slack pre-call briefs and Ergo context before meetings; most AEs do not need to live in the Ergo dashboard every day.",
+      "Use your inbox as the main daily surface: post-call follow-up drafts arrive after processed calls, and surfacing drafts appear when Ergo finds deals needing attention.",
+      "Review every draft before sending. Ergo creates drafts and nudges; it should not be treated as auto-send unless your workspace has explicitly configured that workflow.",
+      "Check summaries, action items, follow-ups, and CRM context after calls, then report missing meetings, duplicate drafts, wrong deal matching, or missing transcript/recording details with the meeting link and customer name.",
+    ],
+    "CSM setup": [
+      "Connect email and calendar so Ergo can detect customer meetings and support account follow-up workflows.",
+      "Ask the primary admin whether your workspace has a CS pipeline, renewal/expansion stages, or CS-specific CRM properties before your first customer workflow.",
+      "Confirm which customer meetings should be captured and which internal meetings should be skipped.",
+      "Review templates and instructions for recap emails, renewal or expansion notes, handoffs, support escalations, and customer next steps.",
+      "Use meeting history, account context, documents, and search to prepare for customer check-ins, escalations, renewals, and handoffs.",
+      "After meetings, review summaries, action items, follow-ups, account health, and shared links before sending customer-facing updates.",
+      "If your team wants expansion, churn-risk, or playbook-grading signals, ask an admin to configure the right reporting fields or rubrics.",
+    ],
+    "Spectator and viewer setup": [
+      "Confirm the person should only view selected meetings, reports, or shared links rather than use daily Ergo workflows.",
+      "Ask a primary or secondary admin to add or convert the person as a spectator or grant limited viewer access.",
+      "Grant only the team, meeting, report, dashboard, folder, or shared-link visibility they need.",
+      "Give managers and executives a dashboard walkthrough for deal health, team pipeline, call recordings, summaries, reporting, and AI questions; they usually do not need to configure CRM or email.",
+      "Have the viewer sign in to the correct workspace and verify the exact page, dashboard, report, or link they should use.",
+      "Review access after team changes, role changes, or when a shared link should be revoked.",
     ],
     "Connect your CRM": [
       "Choose the CRM your workspace uses: Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM.",
@@ -995,7 +1308,7 @@ function setupSteps(row) {
       "Use Add Bot to Meeting if the meeting is starting soon or the bot did not re-dispatch.",
       "For recurring meetings, verify the specific occurrence that changed.",
     ],
-    "Add Bot to Meeting for external links": [
+    "Add the bot to a live or ad hoc meeting": [
       "Copy the Zoom, Google Meet, or Microsoft Teams link.",
       "Open Add Bot to Meeting from the meetings area.",
       "Paste the meeting link and dispatch Ergo.",
@@ -2003,6 +2316,53 @@ function commonIssues(row) {
       "The user needs to refresh after an access change.",
     ];
   }
+  if (title === "Primary admin setup for founders, RevOps, and sales leaders") {
+    return [
+      "CRM, field mapping, and pipeline setup are treated as optional even though downstream CRM updates depend on them.",
+      "Users are invited before workspace defaults, notetaker behavior, templates, and reporting access are ready.",
+      "The connected CRM or email/calendar account does not have the permissions Ergo needs.",
+      "A sandbox or synthetic CRM is connected even though Ergo needs production CRM data for useful AI output.",
+      "Founders, VPs, or RevOps owners expect users to self-configure choices that should be decided centrally first.",
+    ];
+  }
+  if (title === "Secondary admin and operator setup") {
+    return [
+      "The secondary admin is asked to troubleshoot users without knowing which settings the primary admin owns.",
+      "Team members are provisioned into the wrong team or workspace.",
+      "The secondary admin selects their own email in Sync with Admin instead of the primary admin account to inherit from.",
+      "The secondary admin expects CRM setup to be repeated even though primary admin configuration should already be inherited.",
+      "Settings are synced to users before the source settings are approved.",
+      "Users ask operators to fix CRM, reporting, or notetaker behavior that requires broader admin permission.",
+    ];
+  }
+  if (title === "AE setup") {
+    return [
+      "Email/calendar is disconnected or connected to the wrong account.",
+      "The AE expects drafts before the meeting qualifies, processes, or has usable notetaker/email context.",
+      "The AE expects Ergo to auto-send follow-up emails instead of creating reviewable drafts.",
+      "The AE expects to work primarily from the Ergo dashboard instead of inbox drafts and Slack nudges.",
+      "The meeting is matched to the wrong deal or company because the CRM record or meeting title is unclear.",
+      "The AE sends an AI draft before reviewing facts, recipients, links, and next steps.",
+    ];
+  }
+  if (title === "CSM setup") {
+    return [
+      "Internal meetings are captured or customer meetings are skipped because calendar rules are unclear.",
+      "The CSM cannot see a meeting, account, or report because access is team-specific or shared-link based.",
+      "Summaries or follow-ups miss account context because documents, CRM records, or prior meetings are not linked.",
+      "The team expects CS renewal, expansion, or handoff workflows to work before a CS pipeline or CS-specific properties are configured.",
+      "The team expects sales-only draft or insight behavior to apply the same way to post-sale workflows.",
+    ];
+  }
+  if (title === "Spectator and viewer setup") {
+    return [
+      "The viewer is given full user access when limited meeting or reporting visibility would be safer.",
+      "A manager or executive expects to configure CRM or email even though their setup is usually just provisioning and dashboard walkthrough.",
+      "The viewer signs into the wrong workspace or opens a link without the required access.",
+      "A shared link, meeting folder, report, or dashboard was not actually shared with the viewer.",
+      "Access remains available after the viewer no longer needs it.",
+    ];
+  }
   if (title.includes("reporting") || row.category === "Reporting") {
     return [
       "The viewer does not have reporting access.",
@@ -2159,6 +2519,13 @@ function pageMdx(row, rowByTitle) {
     : "";
   const isTroubleshooting = isTroubleshootingLike(row);
   const heading = stepsHeading(row);
+  const articleAudience = shouldShowArticleAudience(row)
+    ? `\n## Who is this for?\n\n${renderList(audienceBlock(row))}\n`
+    : "";
+  const before = articleBeforeStart(row);
+  const beforeBlock = before.length > 0
+    ? `\n## Before you start\n\n${renderList(before)}\n`
+    : "";
 
   if (isTroubleshooting) {
     return `---
@@ -2168,10 +2535,6 @@ keywords: ${JSON.stringify([row.title, row.category, "Ergo troubleshooting"])}
 ---
 
 ${imageBlock}
-## Who is this for?
-
-${renderList(audienceBlock(row))}
-
 ## Symptoms
 
 Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
@@ -2209,13 +2572,7 @@ keywords: ${JSON.stringify([row.title, row.category, "Ergo docs"])}
 ---
 
 ${imageBlock}
-## Who is this for?
-
-${renderList(audienceBlock(row))}
-
-## Before you start
-
-${renderList(beforeStart(row))}
+${articleAudience}${beforeBlock}
 
 ## ${heading}
 
@@ -2240,6 +2597,8 @@ function sectionIndexMdx(category, rows) {
   const pageLinks = rows
     .map((row) => `- [${row.title}](./${slugify(row.title)})`)
     .join("\n");
+  const audience = sectionAudience(category);
+  const before = sectionBeforeStart(category);
 
   return `---
 title: "${escapeYaml(meta.group)}"
@@ -2248,6 +2607,14 @@ icon: "${meta.icon}"
 ---
 
 ${meta.description}
+
+## Who this section is for
+
+${renderList(audience)}
+
+## Before you start
+
+${renderList(before)}
 
 ## Articles
 

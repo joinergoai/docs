@@ -158,7 +158,7 @@ Prioritize setup, access, meetings, CRM mapping, drafts, reconnects, and trouble
 - Schedule or cancel the notetaker
 - Notetaker waiting-room admission guide
 - What happens when a meeting is rescheduled
-- Add Bot to Meeting for external links
+- Add the bot to a live or ad hoc meeting
 - Meeting processing time and status states
 - Why some meetings do not generate insights or drafts
 - Recording disclaimer

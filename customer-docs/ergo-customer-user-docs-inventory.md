@@ -47,7 +47,7 @@ Notable customer examples from the MCP research include AsyncHealth for Outlook/
 |---|---|---|---|---|
 | Pylon #1580 | A customer directly asked whether Ergo has user guides, and support said there are none today | Treat start-here docs as urgent, not polish | Welcome to Ergo; Navigating Ergo; First-time setup checklist; Getting support | P0 |
 | Ergo MCP research | Customers often treat missed notetaker joins as an Ergo failure even when the host did not admit the bot, the bot was removed, or the meeting moved calendars | Separate setup, admission, reschedule, and vendor-status troubleshooting | Notetaker waiting-room admission guide; What happens when a meeting is rescheduled; Notetaker did not join | P0 |
-| Pylon #1569 | Users ask how to add Ergo to an external Zoom link | Add a direct manual-dispatch workflow | Add Bot to Meeting for external links | P0 |
+| Pylon #1569 | Users ask how to add Ergo to an external Zoom link | Add a direct manual-dispatch workflow | Add the bot to a live or ad hoc meeting | P0 |
 | Pylon #1576 | Users ask how long notetaker processing takes and why summaries, insights, or drafts are missing | Set expectations for processing states and sales-only behavior | Meeting processing time and status states; Why some meetings do not generate insights or drafts | P0 |
 | Pylon #1572 and Sphinx MCP evidence | Running Ergo and another notetaker such as Granola can create duplicate drafts or confusing ownership | Document recommended coexistence setup and no-dedupe limitations | Using multiple notetakers with Ergo; Duplicate drafts from multiple notetakers | P1 |
 | Pylon #1577 and ERGO-2310 | Users report the desktop/notetaker not stopping after a call ends | Add desktop stop, pause, and upload troubleshooting | Troubleshoot missed detection or upload failures; Desktop settings and updates | P0 |
@@ -61,7 +61,7 @@ Notable customer examples from the MCP research include AsyncHealth for Outlook/
 | Pylon #1503 | A meeting can have a recording but no transcript or notes after provider failure | Explain asset-specific failure states and retry/reporting path | Transcript or recording missing; Delete/retry processing | P0 |
 | ERGO-2265 | Duplicate Pylon deliveries and weak failure logging created customer confusion | Add Pylon delivery queue and duplicate-delivery troubleshooting | Pylon delivery failures, duplicate deliveries, and queue health | P1 |
 | ERGO-2342 and ERGO-2142 | Slack reconnects can fail because stale org/team mappings survive disconnects | Explain Slack reconnect, stale mapping, and channel listing issues | Slack disconnect/reconnect and stale channel mappings; Slack Enterprise Grid channel listing issues | P1 |
-| ERGO-1968 | Rescheduling an active calendar event can leave meetings missing or unprocessed | Include reschedule edge cases and manual redispatch | What happens when a meeting is rescheduled; Add Bot to Meeting for external links | P0 |
+| ERGO-1968 | Rescheduling an active calendar event can leave meetings missing or unprocessed | Include reschedule edge cases and manual redispatch | What happens when a meeting is rescheduled; Add the bot to a live or ad hoc meeting | P0 |
 | ERGO-2013 | Duplicate pre-call briefings can appear when Slack/customer-channel context is misconfigured | Add Slack pre-call context troubleshooting | Slack monitoring and pre-call context; Add Ergo to new Slack customer channels | P1 |
 
 ## Article Index
@@ -80,6 +80,11 @@ Notable customer examples from the MCP research include AsyncHealth for Outlook/
 | Getting support | Start and guidelines | User; Admin; Super Admin; Spectator | Live | P0 | Pylon chat widget | None | Backlog | Docs |
 | First-time setup checklist | Onboarding | User; Admin; Super Admin; Spectator | Live | P0 | Onboarding route | None | Backlog | Docs |
 | Setup by role | Onboarding | User; Admin; Super Admin; Spectator | Live | P0 | Onboarding role flow | None | Backlog | Docs |
+| Primary admin setup for founders, RevOps, and sales leaders | Onboarding | Admin; Super Admin | Live | P0 | Onboarding admin role flow | CRM; Google Workspace or Microsoft 365; Notetaker; Reporting | Backlog | Docs |
+| Secondary admin and operator setup | Onboarding | Admin; Super Admin | Live | P1 | Onboarding secondary admin role flow | Google Workspace or Microsoft 365; CRM; Notetaker | Backlog | Docs |
+| AE setup | Onboarding | User; Admin; Super Admin | Live | P0 | Onboarding user role flow | Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
+| CSM setup | Onboarding | User; Admin; Super Admin | Live | P1 | Onboarding user role flow | Google Workspace or Microsoft 365; Notetaker | Backlog | Docs |
+| Spectator and viewer setup | Onboarding | Spectator; Admin; Super Admin | Live | P1 | Spectator role | None | Backlog | Docs |
 | Connect your CRM | Onboarding | Admin; Super Admin | Live | P0 | Admin onboarding step | Salesforce; HubSpot; Attio; Pipedrive; Ergo CRM | Backlog | Docs |
 | Connect email and calendar | Onboarding | User; Admin; Super Admin; Spectator | Live | P0 | Onboarding workspace step | Google Workspace or Microsoft 365 | Backlog | Docs |
 | Workspace configuration | Onboarding | User; Admin; Super Admin | Live | P1 | Onboarding workspace_config step | Google Workspace or Microsoft 365 | Backlog | Docs |
@@ -127,7 +132,7 @@ Notable customer examples from the MCP research include AsyncHealth for Outlook/
 | One bot per org: shared notetaking behavior | Meetings and notes | User; Admin; Super Admin; Spectator | Live | P1 | None | Ergo Notetaker | Backlog | Docs |
 | What happens when a meeting is rescheduled | Meetings and notes | User; Admin; Super Admin; Spectator | Live | P0 | None | Calendar; Ergo Notetaker | Backlog | Docs |
 | Recurring meetings | Meetings and notes | User; Admin; Super Admin; Spectator | Live | P1 | None | Calendar; Ergo Notetaker | Backlog | Docs |
-| Add Bot to Meeting for external links | Meetings and notes | User; Admin; Super Admin; Spectator | Live | P0 | None | Calendar; Ergo Notetaker | Backlog | Docs |
+| Add the bot to a live or ad hoc meeting | Meetings and notes | User; Admin; Super Admin; Spectator | Live | P0 | None | Calendar; Ergo Notetaker | Backlog | Docs |
 | Skip internal meetings | Meetings and notes | User; Admin; Super Admin | Live | P1 | Meeting filters | Calendar; Ergo Notetaker | Backlog | Docs |
 | Meeting filter: what sales-only processing means | Meetings and notes | User; Admin; Super Admin | Live | P1 | Meeting filters | Calendar; Ergo Notetaker | Backlog | Docs |
 | Meeting processing time and status states | Meetings and notes | User; Admin; Super Admin; Spectator | Live | P0 | None | Notetaker or Desktop Notetaker | Backlog | Docs |
