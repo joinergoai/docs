@@ -142,12 +142,24 @@ const relatedByTitle = {
 
 const imageByTitle = {
   "Roles and permissions": {
-    file: "roles-access-matrix.svg",
-    alt: "Diagram showing User, Admin, Super Admin, Spectator, and Desktop access levels.",
+    file: "admin-dashboard-roles-annotated.svg",
+    alt: "Annotated admin dashboard showing primary admin, secondary admin, user, and spectator access.",
+  },
+  "Setup by role": {
+    file: "onboarding-setup-by-role-annotated.svg",
+    alt: "Annotated onboarding view showing setup paths for primary admins, secondary admins, users, and spectators.",
+  },
+  "First-time setup checklist": {
+    file: "onboarding-setup-by-role-annotated.svg",
+    alt: "Annotated onboarding checklist showing role-specific setup paths in Ergo.",
   },
   "Connect email and calendar": {
     file: "calendar-email-connection-flow.svg",
     alt: "Flow diagram showing email and calendar connection before meeting capture and draft workflows.",
+  },
+  "Connect your CRM": {
+    file: "integrations-settings-annotated.svg",
+    alt: "Annotated integrations page showing CRM connection and setup areas.",
   },
   "Calendar scopes and meeting auto-join": {
     file: "calendar-email-connection-flow.svg",
@@ -166,12 +178,12 @@ const imageByTitle = {
     alt: "Flow diagram showing how meeting type and source affect summaries, insights, and draft generation.",
   },
   "Field mapping setup: required before CRM updates work": {
-    file: "field-mapping-crm-flow.svg",
-    alt: "Flow diagram showing CRM connection, field mapping, permissions, and CRM updates.",
+    file: "field-mapping-annotated.svg",
+    alt: "Annotated field mapping screen showing CRM properties, pipeline stages, permissions, and sync checks.",
   },
   "Field Mapping overview": {
-    file: "field-mapping-crm-flow.svg",
-    alt: "Flow diagram showing how field mapping connects Ergo outputs to CRM properties.",
+    file: "field-mapping-annotated.svg",
+    alt: "Annotated field mapping screen showing how CRM fields, pipeline stages, permissions, and sync checks fit together.",
   },
   "CRM sync issues": {
     file: "field-mapping-crm-flow.svg",
@@ -223,6 +235,82 @@ const imageByTitle = {
   },
 };
 
+function visualFor(row) {
+  if (imageByTitle[row.title]) return imageByTitle[row.title];
+
+  const title = row.title.toLowerCase();
+  const category = row.category;
+
+  if (category === "Admin" || title.includes("role") || title.includes("permission") || title.includes("spectator")) {
+    return {
+      file: "admin-dashboard-roles-annotated.svg",
+      alt: "Annotated admin dashboard showing team membership, role controls, and access settings.",
+    };
+  }
+  if (category === "Onboarding" || title.includes("setup") || title.includes("configuration")) {
+    return {
+      file: "onboarding-setup-by-role-annotated.svg",
+      alt: "Annotated onboarding screen showing role-specific setup sections.",
+    };
+  }
+  if (category === "Integrations" || title.includes("reconnect") || title.includes("grant")) {
+    return {
+      file: "integrations-settings-annotated.svg",
+      alt: "Annotated integrations page showing connected sources, reconnect states, and setup tabs.",
+    };
+  }
+  if (category === "Meetings and notes" || title.includes("notetaker") || title.includes("meeting")) {
+    return {
+      file: "meetings-dashboard-annotated.svg",
+      alt: "Annotated meetings dashboard showing upcoming meetings, notetaker status, and manual bot dispatch.",
+    };
+  }
+  if (category === "Desktop" || title.includes("desktop")) {
+    return {
+      file: "desktop-settings-annotated.svg",
+      alt: "Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.",
+    };
+  }
+  if (category === "Deals and CRM workspace" || title.includes("deal") || title.includes("company")) {
+    return {
+      file: "deals-crm-annotated.svg",
+      alt: "Annotated deals workspace showing pipeline views, filters, deal health, and CRM context.",
+    };
+  }
+  if (category === "Field mapping and CRM configuration" || title.includes("crm") || title.includes("stage")) {
+    return {
+      file: "field-mapping-annotated.svg",
+      alt: "Annotated field mapping screen showing CRM properties, pipeline stages, and sync checks.",
+    };
+  }
+  if (category === "Drafts, email, and templates" || title.includes("draft") || title.includes("email")) {
+    return {
+      file: "drafts-templates-annotated.svg",
+      alt: "Annotated drafts and templates workspace showing draft queues, review controls, and send states.",
+    };
+  }
+  if (category === "Knowledge base and generated docs" || title.includes("document")) {
+    return {
+      file: "knowledge-base-annotated.svg",
+      alt: "Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.",
+    };
+  }
+  if (category === "Ergo AI, search, and automation" || title.includes("search") || title.includes("agent")) {
+    return {
+      file: "ai-search-automation-annotated.svg",
+      alt: "Annotated Ergo AI and search workspace showing sources, actions, filters, and scheduled runs.",
+    };
+  }
+  if (category === "Reporting" || title.includes("report") || title.includes("dashboard")) {
+    return {
+      file: "reporting-dashboard-annotated.svg",
+      alt: "Annotated reporting dashboard showing filters, chart builder, sharing, and scheduled delivery.",
+    };
+  }
+
+  return null;
+}
+
 function parseInventory(markdown) {
   const rows = [];
   let inIndex = false;
@@ -266,35 +354,267 @@ function pagePathFor(row) {
 }
 
 function descriptionFor(row) {
+  const specific = {
+    "Welcome to Ergo": "Start here to understand what Ergo does, what to set up first, and where each workflow lives.",
+    "Navigating Ergo": "Find the main Ergo workspaces for meetings, drafts, deals, reporting, integrations, admin settings, and support.",
+    "Setup by role": "Understand which setup tasks belong to primary admins, secondary admins, users, spectators, and desktop users.",
+    "First-time setup checklist": "Complete the first setup pass for admins, users, spectators, integrations, meetings, and CRM readiness.",
+    "Roles and permissions": "Understand primary admin, secondary admin, user, spectator, desktop, and access-specific permissions in Ergo.",
+    "Spectator access": "Give limited meeting, reporting, or shared-link visibility without granting full user access.",
+    "Data sources and freshness": "Understand which connected sources feed Ergo and why meetings, CRM, drafts, and reports update on different timelines.",
+    "Reviewing AI-generated outputs": "Review summaries, drafts, CRM updates, reports, and generated documents before using them externally.",
+    "Prompting Ergo effectively": "Ask Ergo clearer questions by naming the customer, source, output format, and constraints you want it to use.",
+    "Recording/privacy basics": "Understand notetaker recording, disclaimers, shared links, and privacy choices before using meeting capture.",
+    "Getting support": "Send Ergo support enough context to troubleshoot meetings, drafts, integrations, CRM sync, or access issues quickly.",
+    "Connect your CRM": "Connect the workspace CRM and prepare field mapping, permissions, pipelines, and stages for reliable writeback.",
+    "Connect email and calendar": "Connect Google Workspace or Microsoft 365 so Ergo can detect meetings and create email workflows.",
+    "Notetaker setup": "Choose and configure the notetaker source that will capture meetings for summaries, transcripts, and follow-up workflows.",
+    "CRM properties setup": "Map required CRM properties during onboarding before expecting Ergo to update records or reporting fields.",
+    "Pipeline stages": "Configure CRM pipelines and stages so Ergo can classify, update, and report on deals correctly.",
+    "Field Mapping overview": "Understand how CRM properties, permissions, pipelines, and stage drift affect Ergo writeback.",
+    "Field mapping setup: required before CRM updates work": "Complete field mapping before expecting Ergo to write CRM updates, reports, or stage changes.",
+    "Drafts inbox": "Review generated follow-up drafts, failed drafts, scheduled messages, sent items, and dismissed drafts.",
+    "Review/edit AI drafts": "Check AI-generated drafts for tone, facts, recipients, next steps, and links before sending.",
+    "Turn post-call drafts on or off": "Control whether Ergo creates post-call email drafts for users, teams, or eligible meeting types.",
+    "Draft email logic: when drafts are created and how to dismiss": "Understand why a meeting did or did not create a draft and what to do with unwanted drafts.",
+    "Dashboard/upcoming meetings": "Use the dashboard to check upcoming meetings, notetaker status, and meeting readiness before calls.",
+    "Add Bot to Meeting for external links": "Manually dispatch the Ergo bot to a live Zoom, Google Meet, or Microsoft Teams link.",
+    "Notetaker waiting-room admission guide": "Help meeting hosts admit the Ergo bot and recover when the bot is waiting, removed, or missed.",
+    "Meeting processing time and status states": "Understand why recordings, transcripts, summaries, insights, and drafts can finish at different times.",
+    "Why some meetings do not generate insights or drafts": "Check meeting type, source, filters, and email setup when expected insights or drafts are missing.",
+    "Install and sign in to Ergo Desktop": "Install Ergo Desktop, sign in, grant permissions, and run a test capture before customer calls.",
+    "macOS permissions": "Grant the macOS permissions Ergo Desktop needs for microphone access, meeting detection, recording, and upload.",
+    "Reporting overview": "Use reporting dashboards, charts, filters, and shared views to inspect team and customer activity.",
+    "Chart builder": "Build reporting charts from the right source fields, filters, buckets, time ranges, and drilldowns.",
+    "Admin dashboard overview": "Use the admin dashboard to manage teams, members, access, settings, and organization defaults.",
+    "Organization and team hierarchy": "Understand how teams, primary admins, secondary admins, users, and spectators shape access in Ergo.",
+    "Promote/demote/convert roles": "Change a person's role or access level without over-granting meeting, reporting, or admin visibility.",
+    "Grant meeting/reporting access": "Give users and spectators the meeting or reporting access they need and no more.",
+  };
+  if (specific[row.title]) return specific[row.title];
+
   const lowerTitle = customerSentence(row.title);
   if (isTroubleshootingLike(row)) return `Diagnose and resolve ${lowerTitle} in Ergo.`;
   const base = {
-    "Start and guidelines": `Learn ${lowerTitle} in Ergo and where it fits in the customer workflow.`,
-    Onboarding: `Set up ${lowerTitle} during Ergo onboarding.`,
-    Integrations: `Connect, verify, and maintain the ${row.title} integration in Ergo.`,
-    "Meetings and notes": `Use Ergo for ${lowerTitle} and understand what to expect.`,
-    Desktop: `Use Ergo Desktop for ${lowerTitle}.`,
-    "Deals and CRM workspace": `Learn ${lowerTitle} in the Deals and CRM workspace.`,
-    "Field mapping and CRM configuration": `Configure ${lowerTitle} so Ergo can update CRM data reliably.`,
-    "Drafts, email, and templates": `Manage ${lowerTitle} in Ergo.`,
-    "Knowledge base and generated docs": `Manage ${lowerTitle} in Ergo's document workspace.`,
-    "Ergo AI, search, and automation": `Use ${lowerTitle} across Ergo AI, search, and automation workflows.`,
-    Reporting: `Use ${lowerTitle} in Ergo reporting.`,
-    Admin: `Admin guide for ${lowerTitle} in Ergo.`,
+    "Start and guidelines": `Use this guide to understand ${lowerTitle} before working in Ergo.`,
+    Onboarding: `Complete the ${lowerTitle} onboarding step with the right owner and prerequisites.`,
+    Integrations: `Connect and maintain ${row.title} with the right account, permissions, reconnect path, and failure checks.`,
+    "Meetings and notes": `Handle ${lowerTitle} in the meetings and notetaker workflow.`,
+    Desktop: `Set up and use Ergo Desktop for ${lowerTitle}.`,
+    "Deals and CRM workspace": `Use ${lowerTitle} to inspect customer context, pipeline state, and CRM activity in Ergo.`,
+    "Field mapping and CRM configuration": `Configure ${lowerTitle} so CRM updates, stage logic, and reporting fields work reliably.`,
+    "Drafts, email, and templates": `Use ${lowerTitle} for post-call email drafting, review, sending, and team follow-up workflows.`,
+    "Knowledge base and generated docs": `Use ${lowerTitle} to manage document context, generated docs, sharing, and deal links.`,
+    "Ergo AI, search, and automation": `Use ${lowerTitle} with the right customer context, sources, filters, and automation checks.`,
+    Reporting: `Use ${lowerTitle} to build, interpret, share, or schedule reporting in Ergo.`,
+    Admin: `Manage ${lowerTitle} across teams, members, access, defaults, and organization settings.`,
     Troubleshooting: `Diagnose and resolve ${lowerTitle} in Ergo.`,
   };
   return base[row.category] ?? `Learn ${lowerTitle} in Ergo.`;
 }
 
-function contextLine(row) {
-  const parts = [`Audience: ${row.audience}`, `Access: ${row.access}`];
-  if (row.requiredIntegration !== "None") parts.push(`Requires: ${friendlyRequirement(row.requiredIntegration)}`);
-  return parts.join(" · ");
+function customerAudience(row) {
+  const roles = new Set(row.audience.split(";").map((role) => role.trim()));
+  const title = row.title.toLowerCase();
+  const hasAdmins = roles.has("Admin") || roles.has("Super Admin");
+  const hasUsers = roles.has("User");
+  const hasSpectators = roles.has("Spectator");
+  const hasDesktop = roles.has("Desktop");
+  const isAdminArea =
+    row.category === "Admin" ||
+    row.access.includes("Admin-only") ||
+    row.category === "Field mapping and CRM configuration" ||
+    title.includes("crm properties") ||
+    title.includes("pipeline") ||
+    title.includes("stage") ||
+    title.includes("field mapping") ||
+    title.includes("configuration") ||
+    title.includes("defaults");
+
+  if (row.title === "Setup by role" || row.title === "First-time setup checklist") {
+    return "primary admins who own rollout, secondary admins helping with delegated setup, users completing personal setup, and spectators receiving limited access";
+  }
+  if (row.title === "Roles and permissions") {
+    return "primary admins, secondary admins, RevOps, founders, sales leaders, users, and spectators who need to understand what each access level means";
+  }
+  if (row.title === "Connect email and calendar" || row.title === "Google Workspace" || row.title === "Microsoft 365") {
+    return "users connecting their own email/calendar and admins helping teams finish setup or reconnect expired grants";
+  }
+  if (row.title.includes("Notetaker") || row.category === "Meetings and notes") {
+    const people = ["sales reps, account owners, CSMs, founders, and managers who capture or review customer meetings"];
+    if (hasAdmins) people.push("admins setting meeting capture and visibility defaults");
+    if (hasSpectators) people.push("spectators viewing shared meetings");
+    if (hasDesktop) people.push("desktop users capturing meetings locally");
+    return people.join("; ");
+  }
+  if (row.category === "Integrations") {
+    if (title.includes("slack") || title.includes("pylon") || title.includes("crm") || title.includes("salesforce") || title.includes("hubspot") || title.includes("attio") || title.includes("pipedrive")) {
+      return "primary admins, secondary admins, RevOps, support operations, and sales operations teams that manage connected systems";
+    }
+    if (hasUsers) return "users connecting personal sources and admins helping teams troubleshoot connection or reconnect issues";
+    return "primary admins, secondary admins, RevOps, and operators managing workspace integrations";
+  }
+  if (row.category === "Drafts, email, and templates") {
+    if (isAdminArea || title.includes("auto-send") || title.includes("team access")) {
+      return "primary admins, secondary admins, RevOps, and sales leaders setting team draft behavior and email controls";
+    }
+    return "sales reps, account owners, founders, and managers reviewing or sending follow-up drafts";
+  }
+  if (row.category === "Field mapping and CRM configuration") {
+    return "primary admins, secondary admins with CRM permissions, RevOps, sales operations, and CRM owners";
+  }
+  if (row.category === "Deals and CRM workspace") {
+    if (title.includes("bulk")) return "RevOps, sales leaders, founders, and users trusted to make bulk updates or send bulk drafts";
+    return "sales reps, account owners, founders, sales leaders, RevOps, and managers reviewing pipeline or account context";
+  }
+  if (row.category === "Reporting") {
+    return "founders, sales leaders, RevOps, managers, and users with reporting access";
+  }
+  if (row.category === "Admin") {
+    return "primary admins and secondary admins with permission for this area";
+  }
+  if (row.category === "Desktop") {
+    return "desktop users who record locally and admins helping them verify permissions, detection, and uploads";
+  }
+  if (row.category === "Knowledge base and generated docs") {
+    return hasAdmins
+      ? "primary admins, secondary admins, RevOps, and users managing document context or generated customer materials"
+      : "users managing document context or generated customer materials";
+  }
+  if (row.category === "Ergo AI, search, and automation") {
+    return "sales reps, account owners, founders, managers, RevOps, and admins using customer context, search, or scheduled runs";
+  }
+
+  const parts = [];
+  if (hasAdmins) {
+    parts.push(isAdminArea ? "primary admins and secondary admins with permission for this area" : "primary admins, secondary admins, RevOps, sales leaders, and operators who manage rollout");
+  }
+  if (hasUsers) {
+    parts.push("users who complete setup or use this workflow day to day");
+  }
+  if (hasSpectators) {
+    parts.push("spectators with limited meeting, reporting, or shared-link access");
+  }
+  if (hasDesktop) {
+    parts.push("desktop users capturing meetings from the Ergo Desktop app");
+  }
+
+  if (parts.length === 0) return "people using this workflow in Ergo";
+  return [...new Set(parts)].join("; ");
+}
+
+function customerAccess(row) {
+  const parts = [];
+  if (row.access.includes("Admin-only")) {
+    parts.push("Requires the primary admin role or a secondary admin permission that covers this area.");
+  } else if (row.access.includes("Reporting access")) {
+    parts.push("Requires reporting access.");
+  } else if (row.access.includes("Desktop-only")) {
+    parts.push("Only applies to Ergo Desktop.");
+  } else if (row.access.includes("Shared link")) {
+    parts.push("May be available through a shared link.");
+  } else if (row.access.includes("Beta/Gated")) {
+    parts.push("Only appears when enabled for your workspace.");
+  }
+
+  if (row.requiredIntegration !== "None") {
+    const requirement = friendlyRequirement(row.requiredIntegration);
+    const isAccessLabel = requirement === "Reporting" && row.access.includes("Reporting access");
+    if (!isAccessLabel) {
+      parts.push(requirement === "Reporting" ? "Requires reporting enabled for your workspace." : `Requires ${requirement}.`);
+    }
+  }
+  if (row.featureGate !== "None" && (row.access.includes("Beta/Gated") || row.featureGate.includes("enabled"))) {
+    parts.push("Ask your Ergo team if the feature does not appear.");
+  }
+
+  return parts;
+}
+
+function audienceBlock(row) {
+  const items = [`For ${customerAudience(row)}.`];
+  return [...items, ...customerAccess(row)];
+}
+
+function articleType(row) {
+  const title = row.title.toLowerCase();
+  if (isTroubleshootingLike(row)) return "troubleshooting";
+  if (
+    row.category === "Onboarding" ||
+    row.category === "Integrations" ||
+    title.startsWith("connect") ||
+    title.startsWith("install") ||
+    title.includes("setup") ||
+    title.includes("macos permissions")
+  ) {
+    return "setup";
+  }
+  if (
+    row.category === "Admin" ||
+    row.category === "Field mapping and CRM configuration" ||
+    title.includes("settings") ||
+    title.includes("defaults") ||
+    title.includes("configuration") ||
+    title.includes("properties") ||
+    title.includes("pipeline") ||
+    title.includes("stage")
+  ) {
+    return "configuration";
+  }
+  if (
+    title.includes("overview") ||
+    title.includes("welcome") ||
+    title.includes("navigating") ||
+    title.includes("privacy") ||
+    title.includes("freshness") ||
+    title.includes("reviewing") ||
+    title.includes("prompting") ||
+    title.includes("roles and permissions") ||
+    title.includes("security")
+  ) {
+    return "overview";
+  }
+  return "workflow";
+}
+
+function stepsHeading(row) {
+  const type = articleType(row);
+  if (type === "setup") return "Setup steps";
+  if (type === "configuration") return "Configure it";
+  if (type === "overview") return "Key things to know";
+  return "Use this workflow";
 }
 
 function beforeStart(row) {
+  const title = row.title.toLowerCase();
+  const isConnectionArticle =
+    row.category === "Integrations" ||
+    title.startsWith("connect ") ||
+    title.includes("reconnecting") ||
+    title.includes("expired grant");
+
+  if (row.access.includes("Admin-only")) {
+    const items = [
+      "Sign in as the primary admin or as a secondary admin with permission for this area.",
+      "Confirm you are working in the intended organization or team.",
+    ];
+    if (row.requiredIntegration !== "None") {
+      const requirement = friendlyRequirement(row.requiredIntegration);
+      items.push(requirement === "Reporting" ? "Confirm reporting is enabled for your workspace." : `Confirm ${requirement} is enabled or connected if this setting depends on it.`);
+    }
+    items.push("Review the change with the affected users before updating access or defaults.");
+    return items;
+  }
   if (row.requiredIntegration !== "None") {
     const requirement = friendlyRequirement(row.requiredIntegration);
+    if (isConnectionArticle) {
+      return [
+        "Sign in to the correct Ergo workspace.",
+        `Have access to the ${requirement} account or admin console you plan to connect.`,
+        "Use the account your team expects Ergo to read from or write through.",
+        "If you are reconnecting, use the same account when possible and approve every requested scope.",
+      ];
+    }
     const connectorText =
       requirement.includes(", ") || requirement.includes(" or ")
         ? `Confirm the relevant source is connected or available: ${requirement}.`
@@ -302,14 +622,7 @@ function beforeStart(row) {
     return [
       connectorText,
       "Make sure you are signed in to the correct Ergo workspace.",
-      "If you do not see the page or setting, ask an admin to check your role and access.",
-    ];
-  }
-  if (row.access.includes("Admin-only")) {
-    return [
-      "Sign in with an Admin or Super Admin account.",
-      "Confirm you are working in the intended organization or team.",
-      "Review the change with the affected users before updating access or defaults.",
+      "If you do not see the page or setting, ask your primary admin or a secondary admin to check your access.",
     ];
   }
   if (row.access.includes("Desktop-only")) {
@@ -322,7 +635,7 @@ function beforeStart(row) {
   return [
     "Sign in to Ergo.",
     "Confirm you are in the correct workspace.",
-    "If a step is missing, ask an admin to confirm your access.",
+    "If a step is missing, ask your primary admin or a secondary admin to confirm your access.",
   ];
 }
 
@@ -358,13 +671,14 @@ function setupSteps(row) {
     "Welcome to Ergo": [
       "Start with the setup checklist so Ergo has the data sources it needs.",
       "Connect calendar and email before relying on meetings, summaries, or drafts.",
-      "Ask your admin which CRM, collaboration, and notetaker sources your workspace uses.",
+      "Ask your primary admin or a secondary admin which CRM, collaboration, and notetaker sources your workspace uses.",
       "Use the left navigation to move between meetings, drafts, reporting, integrations, and admin areas.",
     ],
     "Roles and permissions": [
-      "Identify the person as a User, Admin, Super Admin, Spectator, or Desktop user.",
-      "Check whether the workflow needs admin-only access, reporting access, shared-link access, or desktop access.",
-      "Update the role from Admin when the person needs broader permissions.",
+      "Start by deciding whether the person should be a primary admin, secondary admin, user, spectator, or desktop user.",
+      "Use a primary admin for org-level setup and ownership, including CRM setup, team structure, billing or usage review, and defaults.",
+      "Use secondary admins for team-level setup or delegated configuration when they should help manage users, settings, or reporting without owning everything.",
+      "Use users for day-to-day workflows like meetings, drafts, templates, follow-ups, search, and deal review.",
       "Use spectator access for limited viewing workflows instead of granting full user access.",
     ],
     "Spectator access": [
@@ -410,17 +724,18 @@ function setupSteps(row) {
       "Review the sources and actions Ergo cites before acting on an answer.",
     ],
     "First-time setup checklist": [
-      "Connect your email and calendar.",
-      "Connect your CRM if your role owns CRM setup.",
-      "Configure workspace settings, templates, collaboration tools, and notetaker behavior.",
-      "Complete CRM properties, pipeline stages, pricing, advanced settings, and reporting defaults when they apply.",
-      "Run one test meeting or workflow before rolling Ergo out to the team.",
+      "Ask the primary admin to complete workspace-level setup first: CRM, field mapping, teams, defaults, reporting access, and any required collaboration tools.",
+      "Have secondary admins complete delegated team setup, user sync, templates, notetaker defaults, or reporting setup where they have permission.",
+      "Have users connect email and calendar, review templates and personal preferences, confirm notetaker behavior, and run one test meeting or draft workflow.",
+      "Give spectators only the meeting, reporting, or shared-link access they need.",
+      "Run one test workflow before rolling the setup out to more teams.",
     ],
     "Setup by role": [
-      "Users should connect email/calendar, review workspace setup, templates, collaboration, and notetaker settings.",
-      "Admins should also connect CRM, configure company details, properties, stages, pricing, and reporting defaults.",
-      "Spectators should complete user sync, workspace, and notetaker-related setup when prompted.",
-      "Super Admins should verify team hierarchy and cross-team access before inviting the broader org.",
+      "Primary admins should connect CRM, configure field mapping, create or review teams, set company details, meeting-title phrases, pipeline stages, pricing, advanced settings, and reporting defaults.",
+      "Secondary admins should complete any delegated setup they own, such as user sync, team settings, templates, collaboration tools, notetaker defaults, reporting access, or helping users finish setup.",
+      "Users should connect email/calendar, review personal workspace settings, set template preferences, confirm notetaker behavior, and learn the daily workflows they will use.",
+      "Spectators should confirm their workspace, view-only access, and any meeting or reporting links they are expected to review.",
+      "RevOps, founders, and sales leaders should verify that the role split matches how the team actually operates before inviting the broader org.",
     ],
     "Connect your CRM": [
       "Choose the CRM your workspace uses: Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM.",
@@ -1407,7 +1722,7 @@ function setupSteps(row) {
       "Use the dashboard as a directional adoption view, not a replacement for meeting-level investigation.",
     ],
     "Cross-org analytics": [
-      "Confirm you have Super Admin access.",
+      "Confirm your account has organization-level analytics access.",
       "Open cross-org analytics where enabled.",
       "Review organization filters before comparing data.",
       "Use care when sharing cross-org results.",
@@ -1680,18 +1995,26 @@ function commonIssues(row) {
       "Old channel mappings are still affecting context or delivery.",
     ];
   }
-  if (title.includes("reporting") || title.includes("dashboard") || row.category === "Reporting") {
+  if (row.category === "Admin" || title.includes("Permission") || title.includes("access")) {
+    return [
+      "The user is in the wrong workspace.",
+      "The user has the wrong role or spectator status.",
+      "The page requires meeting, reporting, shared-link, or admin-area access.",
+      "The user needs to refresh after an access change.",
+    ];
+  }
+  if (title.includes("reporting") || row.category === "Reporting") {
     return [
       "The viewer does not have reporting access.",
       "Filters or time ranges exclude the expected data.",
-      "Underlying meetings, CRM fields, or reports have not synced yet.",
+      "Meetings, CRM fields, or reporting fields are still syncing.",
       "A shared link or embedded dashboard does not include the expected permissions.",
     ];
   }
   if (title.includes("Search")) {
     return [
       "Filters, date ranges, or source modes are too narrow.",
-      "The underlying meetings, emails, or documents have not processed yet.",
+      "Meetings, emails, or documents are still processing.",
       "The search phrase does not match the customer, deal, or source text.",
       "The user does not have access to the result source.",
     ];
@@ -1752,19 +2075,27 @@ function commonIssues(row) {
       "A draft failed to sync or send and needs retry or report.",
     ];
   }
-  if (row.category === "Admin" || title.includes("Permission") || title.includes("access")) {
+  if (row.category === "Onboarding") {
     return [
-      "The user is in the wrong workspace.",
-      "The user has the wrong role or spectator status.",
-      "The page requires reporting, admin, shared-link, or global meeting access.",
-      "The user needs to refresh after an access change.",
+      "The person is in the wrong workspace.",
+      "Their role or permission does not match the setup path.",
+      "A required integration is not connected yet.",
+      "A setup step is hidden until earlier setup is complete or enabled for the workspace.",
+    ];
+  }
+  if (row.category === "Start and guidelines") {
+    return [
+      "The person is using the wrong workspace or team context.",
+      "Their role, permission, or spectator access does not match the workflow.",
+      "A connected source is missing, stale, or still syncing.",
+      "AI output needs source review before it is used externally.",
     ];
   }
   return [
     "The user is in the wrong workspace.",
     "A required integration is not connected.",
     "The user does not have the required role or access.",
-    "The underlying meeting, deal, draft, or report is still processing.",
+    "The relevant meeting, deal, draft, report, or integration is still processing or syncing.",
   ];
 }
 
@@ -1822,11 +2153,12 @@ function renderRelated(row, rowByTitle) {
 }
 
 function pageMdx(row, rowByTitle) {
-  const image = imageByTitle[row.title];
+  const image = visualFor(row);
   const imageBlock = image
     ? `\n![${image.alt}](../images/${image.file})\n`
     : "";
   const isTroubleshooting = isTroubleshootingLike(row);
+  const heading = stepsHeading(row);
 
   if (isTroubleshooting) {
     return `---
@@ -1835,10 +2167,11 @@ description: "${escapeYaml(descriptionFor(row))}"
 keywords: ${JSON.stringify([row.title, row.category, "Ergo troubleshooting"])}
 ---
 
-# ${row.title}
-
-${contextLine(row)}
 ${imageBlock}
+## Who is this for?
+
+${renderList(audienceBlock(row))}
+
 ## Symptoms
 
 Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
@@ -1875,25 +2208,18 @@ description: "${escapeYaml(descriptionFor(row))}"
 keywords: ${JSON.stringify([row.title, row.category, "Ergo docs"])}
 ---
 
-# ${row.title}
-
-${contextLine(row)}
 ${imageBlock}
-## Who can use this
+## Who is this for?
 
-${row.audience}. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+${renderList(audienceBlock(row))}
 
 ## Before you start
 
 ${renderList(beforeStart(row))}
 
-## Steps
+## ${heading}
 
 ${renderList(setupSteps(row))}
-
-## What to expect
-
-${renderList(whatToExpect(row))}
 
 ## Common issues
 
@@ -1911,7 +2237,6 @@ function escapeYaml(value) {
 
 function sectionIndexMdx(category, rows) {
   const meta = sectionMeta[category];
-  const dir = categoryDirs[category];
   const pageLinks = rows
     .map((row) => `- [${row.title}](./${slugify(row.title)})`)
     .join("\n");
@@ -1922,11 +2247,9 @@ description: "${escapeYaml(meta.description)}"
 icon: "${meta.icon}"
 ---
 
-# ${meta.group}
-
 ${meta.description}
 
-## Start here
+## Articles
 
 ${pageLinks}
 
@@ -1936,31 +2259,29 @@ If you are trying to fix something specific, start with the article closest to t
 `;
 }
 
-function rootIndexMdx() {
+function rootIndexMdx(prefix = ".") {
   return `---
 title: "Ergo Docs"
 description: "Customer help center for setting up, using, and troubleshooting Ergo."
 ---
 
-# Ergo Docs
-
 Welcome to Ergo's customer help center. Start with setup if you are new, jump into the product area you are using, or use troubleshooting when something is blocking you.
 
 ## Recommended first articles
 
-- [Welcome to Ergo](./start-here/welcome-to-ergo)
-- [First-time setup checklist](./setup/first-time-setup-checklist)
-- [Connect email and calendar](./setup/connect-email-and-calendar)
-- [Notetaker setup](./setup/notetaker-setup)
-- [Field mapping setup](./field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [Troubleshooting](./troubleshooting/index)
+- [Welcome to Ergo](${prefix}/start-here/welcome-to-ergo)
+- [First-time setup checklist](${prefix}/setup/first-time-setup-checklist)
+- [Connect email and calendar](${prefix}/setup/connect-email-and-calendar)
+- [Notetaker setup](${prefix}/setup/notetaker-setup)
+- [Field mapping setup](${prefix}/field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [Troubleshooting](${prefix}/troubleshooting/index)
 
 ## How to use these docs
 
 - Setup articles explain prerequisites and first-time configuration.
 - Workflow articles explain how to use a product surface.
 - Troubleshooting articles start from a symptom and walk through checks.
-- Admin articles are labeled for Admin or Super Admin users.
+- Admin-area articles are written for primary admins, secondary admins with permission, and RevOps or operations owners.
 `;
 }
 
@@ -1973,12 +2294,197 @@ function writeFile(relativePath, contents) {
 function writeImages() {
   const images = {
     "roles-access-matrix.svg": svgDiagram("Roles and access", [
-      ["User", "Core workspace, meetings, drafts"],
-      ["Admin", "Team setup, members, integrations"],
-      ["Super Admin", "Org-wide settings and access"],
-      ["Spectator", "Limited viewing workflows"],
-      ["Desktop", "Desktop app capture and settings"],
+      ["Primary admin", "Owns workspace setup, CRM configuration, teams, defaults, and broad access"],
+      ["Secondary admin", "Helps manage delegated team setup, users, reporting, or settings"],
+      ["User", "Uses meetings, drafts, search, follow-ups, deals, and personal setup"],
+      ["Spectator", "Views limited meetings, reports, or shared links"],
+      ["Desktop user", "Captures meetings and notes from Ergo Desktop"],
     ]),
+    "onboarding-setup-by-role-annotated.svg": svgAnnotatedScreen(
+      "Setup by role",
+      ["Welcome", "CRM", "Email", "Workspace", "Templates", "Notetaker", "Reporting"],
+      "Onboarding",
+      [
+        { x: 260, y: 132, w: 640, h: 68, title: "Primary admin path", body: "CRM, field mapping, teams, defaults, reporting" },
+        { x: 260, y: 220, w: 640, h: 68, title: "Secondary admin path", body: "Delegated setup, users, templates, notetaker defaults" },
+        { x: 260, y: 308, w: 640, h: 68, title: "User path", body: "Email, calendar, personal preferences, drafts, test meeting" },
+        { x: 260, y: 396, w: 640, h: 68, title: "Spectator path", body: "Workspace, limited visibility, meeting or reporting access" },
+      ],
+      [
+        { x: 818, y: 164, lx: 850, ly: 94, label: "Workspace owners start here", width: 252 },
+        { x: 356, y: 342, lx: 686, ly: 520, label: "Users finish personal setup", width: 250 },
+        { x: 642, y: 430, lx: 790, ly: 454, label: "Spectators stay limited", width: 214 },
+      ]
+    ),
+    "admin-dashboard-roles-annotated.svg": svgAnnotatedScreen(
+      "Admin roles and access",
+      ["Admin", "Teams", "Members", "Access", "Settings", "Billing"],
+      "Admin Dashboard",
+      [
+        { x: 260, y: 128, w: 300, h: 90, title: "Primary admin", body: "Workspace owner and final setup owner" },
+        { x: 590, y: 128, w: 300, h: 90, title: "Secondary admins", body: "Delegated configuration and team management" },
+        { x: 260, y: 254, w: 300, h: 116, title: "Team members", body: "Users, spectators, and desktop users" },
+        { x: 590, y: 254, w: 300, h: 116, title: "Access controls", body: "Meeting visibility, reporting, role changes" },
+        { x: 260, y: 402, w: 630, h: 70, title: "Sync settings to team members", body: "Use after CRM, templates, or defaults are configured" },
+      ],
+      [
+        { x: 496, y: 156, lx: 710, ly: 72, label: "Primary admin owns setup", width: 242 },
+        { x: 740, y: 308, lx: 812, ly: 382, label: "Grant only needed access", width: 234 },
+        { x: 532, y: 438, lx: 720, ly: 504, label: "Sync after setup is ready", width: 244 },
+      ]
+    ),
+    "integrations-settings-annotated.svg": svgAnnotatedScreen(
+      "Integrations",
+      ["CRM", "Notetaking", "Email", "Slack", "Documents", "MCP"],
+      "Integration Settings",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "CRM", body: "Salesforce, HubSpot, Attio, Pipedrive, Ergo CRM" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Email and calendar", body: "Google Workspace or Microsoft 365" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Notetakers", body: "Ergo, Desktop, Gong, Fireflies, Fathom, Granola" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Collaboration", body: "Slack, Pylon, Beeper, external agent tools" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Reconnect states", body: "Expired grants block dependent workflows until scopes are approved again" },
+      ],
+      [
+        { x: 476, y: 158, lx: 742, ly: 82, label: "Connect with update permissions", width: 282 },
+        { x: 716, y: 176, lx: 806, ly: 212, label: "Calendar drives meetings", width: 228 },
+        { x: 524, y: 416, lx: 718, ly: 500, label: "Reconnect with the expected account", width: 306 },
+      ]
+    ),
+    "meetings-dashboard-annotated.svg": svgAnnotatedScreen(
+      "Meetings and notetaker",
+      ["Dashboard", "Meetings", "Notes", "Clips", "Share", "History"],
+      "Upcoming meetings",
+      [
+        { x: 260, y: 128, w: 630, h: 72, title: "Customer meeting", body: "Notetaker scheduled, calendar source connected" },
+        { x: 260, y: 222, w: 300, h: 110, title: "Add Bot to Meeting", body: "Manual dispatch for live or external links" },
+        { x: 590, y: 222, w: 300, h: 110, title: "Waiting room", body: "Host may need to admit the Ergo bot" },
+        { x: 260, y: 364, w: 630, h: 84, title: "Processing outputs", body: "Recording, transcript, summary, insights, and drafts can finish separately" },
+      ],
+      [
+        { x: 772, y: 166, lx: 792, ly: 82, label: "Check notetaker status before the call", width: 314 },
+        { x: 404, y: 276, lx: 642, ly: 276, label: "Use for external links", width: 214 },
+        { x: 742, y: 400, lx: 790, ly: 500, label: "Outputs may arrive at different times", width: 312 },
+      ]
+    ),
+    "field-mapping-annotated.svg": svgAnnotatedScreen(
+      "Field mapping",
+      ["CRM", "Properties", "Pipelines", "Stages", "Drift", "Permissions"],
+      "Field Mapping",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "CRM properties", body: "Map each Ergo field to the right CRM property" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Property permissions", body: "Connected CRM user must read and update fields" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Pipelines and stages", body: "Match Ergo stages to CRM stages" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Stage drift", body: "Resolve renamed, deleted, or reordered stages" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Test one record", body: "Verify writeback before enabling broader automation" },
+      ],
+      [
+        { x: 432, y: 166, lx: 692, ly: 76, label: "Mapping is required before writeback", width: 312 },
+        { x: 742, y: 166, lx: 806, ly: 218, label: "Check CRM permissions", width: 224 },
+        { x: 742, y: 300, lx: 786, ly: 408, label: "Fix drift after CRM changes", width: 254 },
+      ]
+    ),
+    "drafts-templates-annotated.svg": svgAnnotatedScreen(
+      "Drafts and templates",
+      ["Drafts", "Needs review", "Failed", "Scheduled", "Sent", "Templates"],
+      "Drafts",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "Needs review", body: "AI drafts should be checked before sending" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Reprompt", body: "Ask for shorter, warmer, or more detailed copy" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Send or schedule", body: "Confirm recipients, links, and timing" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Failed drafts", body: "Reconnect email, retry, or report the issue" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Templates", body: "Set reusable follow-up structure and team tone" },
+      ],
+      [
+        { x: 406, y: 166, lx: 656, ly: 76, label: "Review AI output before sending", width: 286 },
+        { x: 700, y: 300, lx: 794, ly: 378, label: "Failures usually start with email connection", width: 340 },
+        { x: 550, y: 420, lx: 742, ly: 510, label: "Templates shape future drafts", width: 262 },
+      ]
+    ),
+    "desktop-settings-annotated.svg": svgAnnotatedScreen(
+      "Ergo Desktop",
+      ["Account", "Permissions", "Recording", "Transcript", "Uploads", "Updates"],
+      "Desktop Settings",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "Signed in", body: "Use the same Ergo account as the browser app" },
+        { x: 570, y: 128, w: 280, h: 92, title: "macOS permissions", body: "Grant microphone and any prompted permissions" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Recording status", body: "Check capture before and during meetings" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Upload health", body: "Uploads need the app open and network available" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Updates", body: "Re-test capture after changing permissions or updating" },
+      ],
+      [
+        { x: 720, y: 166, lx: 802, ly: 82, label: "Permissions control capture", width: 250 },
+        { x: 416, y: 300, lx: 652, ly: 304, label: "Check status during the meeting", width: 296 },
+        { x: 718, y: 300, lx: 780, ly: 430, label: "Upload failures need meeting time and app version", width: 366 },
+      ]
+    ),
+    "deals-crm-annotated.svg": svgAnnotatedScreen(
+      "Deals and CRM",
+      ["Deals", "Companies", "Pipeline", "Views", "Health", "Activity"],
+      "Deals",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "Pipeline or view", body: "Choose the slice of deals you want to inspect" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Filters and sorting", body: "Narrow by owner, stage, health, or account" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Deal health", body: "Review signal with source activity" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Deal detail", body: "Meetings, emails, documents, and CRM fields" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Bulk actions", body: "Filter first, then review the selected records carefully" },
+      ],
+      [
+        { x: 392, y: 166, lx: 696, ly: 80, label: "Views keep teams focused", width: 236 },
+        { x: 718, y: 300, lx: 788, ly: 386, label: "Open source tabs before acting", width: 276 },
+        { x: 542, y: 420, lx: 746, ly: 510, label: "Bulk actions depend on the filtered set", width: 326 },
+      ]
+    ),
+    "knowledge-base-annotated.svg": svgAnnotatedScreen(
+      "Knowledge base and documents",
+      ["Knowledge", "Generated", "Status", "Deals", "Share", "Instructions"],
+      "Documents",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "Upload source docs", body: "Choose user or organization scope" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Processing status", body: "Wait for ready before expecting AI usage" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Generated documents", body: "Review source context before sharing" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Linked deals", body: "Attach docs to the right customer context" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Sharing", body: "Share or revoke access when external visibility changes" },
+      ],
+      [
+        { x: 402, y: 166, lx: 696, ly: 76, label: "Scope controls who can use the doc", width: 310 },
+        { x: 710, y: 166, lx: 796, ly: 230, label: "Status matters before AI uses it", width: 286 },
+        { x: 552, y: 420, lx: 728, ly: 506, label: "Review before sharing", width: 224 },
+      ]
+    ),
+    "ai-search-automation-annotated.svg": svgAnnotatedScreen(
+      "Ergo AI, search, and automation",
+      ["Chat", "Sources", "Search", "Runs", "Follow-ups", "Actions"],
+      "Ergo AI",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "Ask with context", body: "Name the customer, deal, meeting, or date range" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Sources", body: "Check meetings, emails, documents, and CRM context" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Search filters", body: "Widen filters when expected results are missing" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Scheduled runs", body: "Review first deliveries before relying on automation" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Follow-ups", body: "Use due, overdue, and related context views" },
+      ],
+      [
+        { x: 724, y: 166, lx: 794, ly: 78, label: "Sources explain the answer", width: 246 },
+        { x: 400, y: 300, lx: 668, ly: 304, label: "Filters are the usual missing-results cause", width: 346 },
+        { x: 718, y: 300, lx: 782, ly: 420, label: "Monitor run history", width: 210 },
+      ]
+    ),
+    "reporting-dashboard-annotated.svg": svgAnnotatedScreen(
+      "Reporting",
+      ["Dashboards", "Reports", "Charts", "Filters", "Share", "Cadences"],
+      "Reporting",
+      [
+        { x: 260, y: 128, w: 280, h: 92, title: "Dashboard filters", body: "Confirm team, date range, and fields first" },
+        { x: 570, y: 128, w: 280, h: 92, title: "Chart builder", body: "Choose fields, buckets, and drilldowns" },
+        { x: 260, y: 254, w: 280, h: 92, title: "Custom fields", body: "Fields must be mapped and populated" },
+        { x: 570, y: 254, w: 280, h: 92, title: "Share access", body: "Viewers need reporting access or a valid share link" },
+        { x: 260, y: 382, w: 590, h: 70, title: "Cadences", body: "Preview and review run history after enabling email delivery" },
+      ],
+      [
+        { x: 396, y: 166, lx: 690, ly: 78, label: "Filters explain many empty dashboards", width: 336 },
+        { x: 722, y: 300, lx: 792, ly: 386, label: "Sharing still needs access", width: 244 },
+        { x: 548, y: 420, lx: 748, ly: 508, label: "Preview before recurring emails", width: 284 },
+      ]
+    ),
     "calendar-email-connection-flow.svg": svgFlow("Email and calendar connection", [
       "Connect account",
       "Approve scopes",
@@ -2057,6 +2563,78 @@ function writeImages() {
   for (const [file, contents] of Object.entries(images)) {
     writeFile(`customer-docs/images/${file}`, contents);
   }
+}
+
+function svgAnnotatedScreen(title, navItems, screenTitle, cards, callouts) {
+  const width = 1080;
+  const height = 640;
+  const nav = navItems
+    .map((item, index) => {
+      const y = 112 + index * 42;
+      const selected = index === 0;
+      return `<rect x="34" y="${y - 24}" width="164" height="32" rx="7" fill="${selected ? "#e2e8f0" : "transparent"}" />
+<text x="54" y="${y - 4}" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="${selected ? "700" : "500"}" fill="#0f172a">${escapeXml(item)}</text>`;
+    })
+    .join("\n");
+
+  const cardEls = cards
+    .map((card) => {
+      const accent = card.accent ?? "#2563eb";
+      return `<rect x="${card.x}" y="${card.y}" width="${card.w}" height="${card.h}" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="${card.x}" y="${card.y}" width="5" height="${card.h}" rx="3" fill="${accent}" />
+<text x="${card.x + 22}" y="${card.y + 30}" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">${escapeXml(card.title)}</text>
+${svgWrappedText(card.body, card.x + 22, card.y + 56, Math.max(26, Math.floor((card.w - 44) / 8)), 13, "#475569")}`;
+    })
+    .join("\n");
+
+  const calloutEls = callouts
+    .map((callout, index) => {
+      const labelWidth = callout.width ?? 260;
+      const color = index % 2 === 0 ? "#ea580c" : "#0f766e";
+      return `<circle cx="${callout.x}" cy="${callout.y}" r="18" fill="${color}" fill-opacity="0.12" stroke="${color}" stroke-width="3" />
+<path d="M ${callout.x + 18} ${callout.y} L ${callout.lx} ${callout.ly}" stroke="${color}" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="${callout.lx}" y="${callout.ly - 22}" width="${labelWidth}" height="44" rx="8" fill="#ffffff" stroke="${color}" />
+${svgWrappedText(callout.label, callout.lx + 14, callout.ly - 4, Math.floor((labelWidth - 28) / 8), 12, "#0f172a", 2)}`;
+    })
+    .join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(title)}">
+<defs>
+<marker id="screen-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#0f172a" />
+</marker>
+</defs>
+<rect width="${width}" height="${height}" rx="18" fill="#f8fafc" />
+<rect x="20" y="20" width="1040" height="600" rx="14" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="20" y="20" width="210" height="600" rx="14" fill="#f1f5f9" />
+<rect x="20" y="20" width="1040" height="56" rx="14" fill="#ffffff" stroke="#e2e8f0" />
+<text x="44" y="55" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#0f172a">Ergo</text>
+<text x="260" y="55" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#0f172a">${escapeXml(screenTitle)}</text>
+${nav}
+${cardEls}
+${calloutEls}
+</svg>
+`;
+}
+
+function svgWrappedText(value, x, y, maxChars, fontSize = 13, color = "#334155", maxLines = 3) {
+  const words = value.split(" ");
+  const lines = [];
+  let current = "";
+  for (const word of words) {
+    const next = current ? `${current} ${word}` : word;
+    if (next.length > maxChars && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = next;
+    }
+  }
+  if (current) lines.push(current);
+  return lines
+    .slice(0, maxLines)
+    .map((line, index) => `<text x="${x}" y="${y + index * (fontSize + 5)}" font-family="Inter, Arial, sans-serif" font-size="${fontSize}" fill="${color}">${escapeXml(line)}</text>`)
+    .join("\n");
 }
 
 function svgFlow(title, steps) {
@@ -2168,7 +2746,8 @@ function main() {
   const contentRows = allRows;
   const rowByTitle = new Map(contentRows.map((row) => [row.title, row]));
 
-  writeFile("customer-docs/index.mdx", rootIndexMdx());
+  writeFile("index.mdx", rootIndexMdx("./customer-docs"));
+  writeFile("customer-docs/index.mdx", rootIndexMdx("."));
   writeImages();
 
   const grouped = [];

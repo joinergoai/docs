@@ -2,18 +2,18 @@
 <rect width="980" height="352" rx="16" fill="#f8fafc" />
 <text x="40" y="42" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Roles and access</text>
 <rect x="40" y="68" width="880" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" />
-<text x="68" y="95" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">User</text>
-<text x="250" y="95" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Core workspace, meetings, drafts</text>
+<text x="68" y="95" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Primary admin</text>
+<text x="250" y="95" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Owns workspace setup, CRM configuration, teams, defaults, and broad access</text>
 <rect x="40" y="120" width="880" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" />
-<text x="68" y="147" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Admin</text>
-<text x="250" y="147" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Team setup, members, integrations</text>
+<text x="68" y="147" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Secondary admin</text>
+<text x="250" y="147" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Helps manage delegated team setup, users, reporting, or settings</text>
 <rect x="40" y="172" width="880" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" />
-<text x="68" y="199" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Super Admin</text>
-<text x="250" y="199" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Org-wide settings and access</text>
+<text x="68" y="199" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">User</text>
+<text x="250" y="199" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Uses meetings, drafts, search, follow-ups, deals, and personal setup</text>
 <rect x="40" y="224" width="880" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" />
 <text x="68" y="251" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Spectator</text>
-<text x="250" y="251" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Limited viewing workflows</text>
+<text x="250" y="251" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Views limited meetings, reports, or shared links</text>
 <rect x="40" y="276" width="880" height="42" rx="8" fill="#ffffff" stroke="#cbd5e1" />
-<text x="68" y="303" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Desktop</text>
-<text x="250" y="303" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Desktop app capture and settings</text>
+<text x="68" y="303" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Desktop user</text>
+<text x="250" y="303" font-family="Inter, Arial, sans-serif" font-size="15" fill="#334155">Captures meetings and notes from Ergo Desktop</text>
 </svg>

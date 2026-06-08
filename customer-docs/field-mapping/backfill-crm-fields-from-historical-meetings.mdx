@@ -1,37 +1,29 @@
 ---
 title: "Backfill CRM fields from historical meetings"
-description: "Configure backfill CRM fields from historical meetings so Ergo can update CRM data reliably."
+description: "Configure backfill CRM fields from historical meetings so CRM updates, stage logic, and reporting fields work reliably."
 keywords: ["Backfill CRM fields from historical meetings","Field mapping and CRM configuration","Ergo docs"]
 ---
 
-# Backfill CRM fields from historical meetings
-
-Audience: Admin; Super Admin · Access: Live · Requires: CRM, Notetaker
 
 ![Flow diagram showing options for historical CRM field backfills.](../images/crm-backfill-flow.svg)
 
-## Who can use this
+## Who is this for?
 
-Admin; Super Admin. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+- For primary admins, secondary admins with CRM permissions, RevOps, sales operations, and CRM owners.
+- Requires CRM, Notetaker.
 
 ## Before you start
 
 - Confirm the relevant source is connected or available: CRM, Notetaker.
 - Make sure you are signed in to the correct Ergo workspace.
-- If you do not see the page or setting, ask an admin to check your role and access.
+- If you do not see the page or setting, ask your primary admin or a secondary admin to check your access.
 
-## Steps
+## Configure it
 
 - Confirm whether the field needs a live sync or a historical backfill.
 - Review current product support before expecting automatic backfill.
 - Use deal-by-deal review or exported meeting context when native backfill is unavailable.
 - Contact support for high-volume backfill needs or data migration planning.
-
-## What to expect
-
-- CRM updates depend on connection status, mapped properties, permissions, and pipeline/stage configuration.
-- Schema or stage changes in the CRM can require remapping in Ergo.
-- Test on a single record before rolling changes out broadly.
 
 ## Common issues
 

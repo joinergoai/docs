@@ -1,35 +1,30 @@
 ---
 title: "Salesforce"
-description: "Connect, verify, and maintain the Salesforce integration in Ergo."
+description: "Connect and maintain Salesforce with the right account, permissions, reconnect path, and failure checks."
 keywords: ["Salesforce","Integrations","Ergo docs"]
 ---
 
-# Salesforce
 
-Audience: Admin; Super Admin · Access: Live · Requires: Salesforce
+![Annotated integrations page showing connected sources, reconnect states, and setup tabs.](../images/integrations-settings-annotated.svg)
 
-## Who can use this
+## Who is this for?
 
-Admin; Super Admin. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+- For primary admins, secondary admins, RevOps, support operations, and sales operations teams that manage connected systems.
+- Requires Salesforce.
 
 ## Before you start
 
-- Confirm the required source is connected or available: Salesforce.
-- Make sure you are signed in to the correct Ergo workspace.
-- If you do not see the page or setting, ask an admin to check your role and access.
+- Sign in to the correct Ergo workspace.
+- Have access to the Salesforce account or admin console you plan to connect.
+- Use the account your team expects Ergo to read from or write through.
+- If you are reconnecting, use the same account when possible and approve every requested scope.
 
-## Steps
+## Setup steps
 
 - Connect Salesforce from Integrations using an account with the right object and field permissions.
 - Map CRM properties before expecting updates to write back.
 - Confirm pipeline and stage settings match the Salesforce sales process.
 - Reconnect Salesforce if grants expire or sync behavior changes.
-
-## What to expect
-
-- Ergo should reflect the update after the relevant integration, permission, or processing step completes.
-- If the expected page or control is missing, check role and integration access.
-- Use support when setup looks correct but the workflow still does not work.
 
 ## Common issues
 

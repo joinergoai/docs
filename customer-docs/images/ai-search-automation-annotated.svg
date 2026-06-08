@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-label="Ergo AI, search, and automation">
+<defs>
+<marker id="screen-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#0f172a" />
+</marker>
+</defs>
+<rect width="1080" height="640" rx="18" fill="#f8fafc" />
+<rect x="20" y="20" width="1040" height="600" rx="14" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="20" y="20" width="210" height="600" rx="14" fill="#f1f5f9" />
+<rect x="20" y="20" width="1040" height="56" rx="14" fill="#ffffff" stroke="#e2e8f0" />
+<text x="44" y="55" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#0f172a">Ergo</text>
+<text x="260" y="55" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#0f172a">Ergo AI</text>
+<rect x="34" y="88" width="164" height="32" rx="7" fill="#e2e8f0" />
+<text x="54" y="108" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Chat</text>
+<rect x="34" y="130" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="150" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Sources</text>
+<rect x="34" y="172" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="192" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Search</text>
+<rect x="34" y="214" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="234" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Runs</text>
+<rect x="34" y="256" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="276" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Follow-ups</text>
+<rect x="34" y="298" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="318" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Actions</text>
+<rect x="260" y="128" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="260" y="128" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="282" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Ask with context</text>
+<text x="282" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Name the customer, deal,</text>
+<text x="282" y="202" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">meeting, or date range</text>
+<rect x="570" y="128" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="570" y="128" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="592" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Sources</text>
+<text x="592" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Check meetings, emails,</text>
+<text x="592" y="202" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">documents, and CRM context</text>
+<rect x="260" y="254" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="260" y="254" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="282" y="284" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Search filters</text>
+<text x="282" y="310" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Widen filters when expected</text>
+<text x="282" y="328" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">results are missing</text>
+<rect x="570" y="254" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="570" y="254" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="592" y="284" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Scheduled runs</text>
+<text x="592" y="310" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Review first deliveries</text>
+<text x="592" y="328" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">before relying on automation</text>
+<rect x="260" y="382" width="590" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="260" y="382" width="5" height="70" rx="3" fill="#2563eb" />
+<text x="282" y="412" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Follow-ups</text>
+<text x="282" y="438" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Use due, overdue, and related context views</text>
+<circle cx="724" cy="166" r="18" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="3" />
+<path d="M 742 166 L 794 78" stroke="#ea580c" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="794" y="56" width="246" height="44" rx="8" fill="#ffffff" stroke="#ea580c" />
+<text x="808" y="74" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Sources explain the answer</text>
+<circle cx="400" cy="300" r="18" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-width="3" />
+<path d="M 418 300 L 668 304" stroke="#0f766e" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="668" y="282" width="346" height="44" rx="8" fill="#ffffff" stroke="#0f766e" />
+<text x="682" y="300" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Filters are the usual missing-results</text>
+<text x="682" y="317" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">cause</text>
+<circle cx="718" cy="300" r="18" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="3" />
+<path d="M 736 300 L 782 420" stroke="#ea580c" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="782" y="398" width="210" height="44" rx="8" fill="#ffffff" stroke="#ea580c" />
+<text x="796" y="416" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Monitor run history</text>
+</svg>

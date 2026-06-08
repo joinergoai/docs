@@ -1,37 +1,29 @@
 ---
 title: "Field Mapping overview"
-description: "Configure field mapping overview so Ergo can update CRM data reliably."
+description: "Understand how CRM properties, permissions, pipelines, and stage drift affect Ergo writeback."
 keywords: ["Field Mapping overview","Field mapping and CRM configuration","Ergo docs"]
 ---
 
-# Field Mapping overview
 
-Audience: Admin; Super Admin; Spectator Admin · Access: Live · Requires: CRM
+![Annotated field mapping screen showing how CRM fields, pipeline stages, permissions, and sync checks fit together.](../images/field-mapping-annotated.svg)
 
-![Flow diagram showing how field mapping connects Ergo outputs to CRM properties.](../images/field-mapping-crm-flow.svg)
+## Who is this for?
 
-## Who can use this
-
-Admin; Super Admin; Spectator Admin. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+- For primary admins, secondary admins with CRM permissions, RevOps, sales operations, and CRM owners.
+- Requires CRM.
 
 ## Before you start
 
 - Confirm the required source is connected or available: CRM.
 - Make sure you are signed in to the correct Ergo workspace.
-- If you do not see the page or setting, ask an admin to check your role and access.
+- If you do not see the page or setting, ask your primary admin or a secondary admin to check your access.
 
-## Steps
+## Configure it
 
 - Connect your CRM first.
 - Review required properties, pipeline, stages, and permissions.
 - Map Ergo fields to CRM fields before expecting updates.
 - Resolve drift or permission issues before enabling broad automation.
-
-## What to expect
-
-- CRM updates depend on connection status, mapped properties, permissions, and pipeline/stage configuration.
-- Schema or stage changes in the CRM can require remapping in Ergo.
-- Test on a single record before rolling changes out broadly.
 
 ## Common issues
 

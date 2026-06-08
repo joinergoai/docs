@@ -1,37 +1,30 @@
 ---
 title: "Expired grants and reconnecting"
-description: "Connect, verify, and maintain the Expired grants and reconnecting integration in Ergo."
+description: "Connect and maintain Expired grants and reconnecting with the right account, permissions, reconnect path, and failure checks."
 keywords: ["Expired grants and reconnecting","Integrations","Ergo docs"]
 ---
 
-# Expired grants and reconnecting
-
-Audience: User; Admin; Super Admin; Spectator · Access: Live · Requires: Any connected integration
 
 ![Flow diagram showing how an expired grant is reconnected.](../images/integration-reconnect-flow.svg)
 
-## Who can use this
+## Who is this for?
 
-User; Admin; Super Admin; Spectator. If you do not see this workflow in Ergo, ask an admin to confirm your role, team, and access.
+- For users connecting personal sources and admins helping teams troubleshoot connection or reconnect issues.
+- Requires Any connected integration.
 
 ## Before you start
 
-- Confirm the required source is connected or available: Any connected integration.
-- Make sure you are signed in to the correct Ergo workspace.
-- If you do not see the page or setting, ask an admin to check your role and access.
+- Sign in to the correct Ergo workspace.
+- Have access to the Any connected integration account or admin console you plan to connect.
+- Use the account your team expects Ergo to read from or write through.
+- If you are reconnecting, use the same account when possible and approve every requested scope.
 
-## Steps
+## Setup steps
 
 - Open Integrations and find the disconnected or expired integration.
 - Reconnect with the same account when possible.
 - Approve every required scope during the reconnect flow.
 - Re-test the workflow that was blocked, such as meeting detection, draft sync, or Slack delivery.
-
-## What to expect
-
-- Ergo should reflect the update after the relevant integration, permission, or processing step completes.
-- If the expected page or control is missing, check role and integration access.
-- Use support when setup looks correct but the workflow still does not work.
 
 ## Common issues
 

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="640" viewBox="0 0 1080 640" role="img" aria-label="Knowledge base and documents">
+<defs>
+<marker id="screen-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#0f172a" />
+</marker>
+</defs>
+<rect width="1080" height="640" rx="18" fill="#f8fafc" />
+<rect x="20" y="20" width="1040" height="600" rx="14" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="20" y="20" width="210" height="600" rx="14" fill="#f1f5f9" />
+<rect x="20" y="20" width="1040" height="56" rx="14" fill="#ffffff" stroke="#e2e8f0" />
+<text x="44" y="55" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800" fill="#0f172a">Ergo</text>
+<text x="260" y="55" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#0f172a">Documents</text>
+<rect x="34" y="88" width="164" height="32" rx="7" fill="#e2e8f0" />
+<text x="54" y="108" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Knowledge</text>
+<rect x="34" y="130" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="150" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Generated</text>
+<rect x="34" y="172" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="192" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Status</text>
+<rect x="34" y="214" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="234" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Deals</text>
+<rect x="34" y="256" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="276" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Share</text>
+<rect x="34" y="298" width="164" height="32" rx="7" fill="transparent" />
+<text x="54" y="318" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#0f172a">Instructions</text>
+<rect x="260" y="128" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="260" y="128" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="282" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Upload source docs</text>
+<text x="282" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Choose user or organization</text>
+<text x="282" y="202" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">scope</text>
+<rect x="570" y="128" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="570" y="128" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="592" y="158" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Processing status</text>
+<text x="592" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Wait for ready before</text>
+<text x="592" y="202" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">expecting AI usage</text>
+<rect x="260" y="254" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="260" y="254" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="282" y="284" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Generated documents</text>
+<text x="282" y="310" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Review source context before</text>
+<text x="282" y="328" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">sharing</text>
+<rect x="570" y="254" width="280" height="92" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="570" y="254" width="5" height="92" rx="3" fill="#2563eb" />
+<text x="592" y="284" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Linked deals</text>
+<text x="592" y="310" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Attach docs to the right</text>
+<text x="592" y="328" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">customer context</text>
+<rect x="260" y="382" width="590" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" />
+<rect x="260" y="382" width="5" height="70" rx="3" fill="#2563eb" />
+<text x="282" y="412" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Sharing</text>
+<text x="282" y="438" font-family="Inter, Arial, sans-serif" font-size="13" fill="#475569">Share or revoke access when external visibility changes</text>
+<circle cx="402" cy="166" r="18" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="3" />
+<path d="M 420 166 L 696 76" stroke="#ea580c" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="696" y="54" width="310" height="44" rx="8" fill="#ffffff" stroke="#ea580c" />
+<text x="710" y="72" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Scope controls who can use the doc</text>
+<circle cx="710" cy="166" r="18" fill="#0f766e" fill-opacity="0.12" stroke="#0f766e" stroke-width="3" />
+<path d="M 728 166 L 796 230" stroke="#0f766e" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="796" y="208" width="286" height="44" rx="8" fill="#ffffff" stroke="#0f766e" />
+<text x="810" y="226" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Status matters before AI uses it</text>
+<circle cx="552" cy="420" r="18" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="3" />
+<path d="M 570 420 L 728 506" stroke="#ea580c" stroke-width="2" marker-end="url(#screen-arrow)" />
+<rect x="728" y="484" width="224" height="44" rx="8" fill="#ffffff" stroke="#ea580c" />
+<text x="742" y="502" font-family="Inter, Arial, sans-serif" font-size="12" fill="#0f172a">Review before sharing</text>
+</svg>
