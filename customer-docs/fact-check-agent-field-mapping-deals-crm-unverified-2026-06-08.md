@@ -8,6 +8,7 @@ These notes were intentionally kept out of public customer docs or softened beca
 - MCP stated bulk actions are only documented in list view and did not confirm stage/owner/delete bulk actions. Frontend code confirms bulk stage move, status, owner, pin/unpin, delete, draft generation, and clear drafts, so public docs mention these but keep scope/permission cautions.
 - MCP did not confirm bulk Slack draft GA behavior. Frontend code shows a Slack draft option gated by `ff-agent-integrations`, so public docs describe Slack drafts only when the relevant integration/feature access is enabled.
 - MCP mentioned deal stage updates not being automatic and lead/custom-object limitations. These were not added to assigned pages because they belong in integrations/setup/troubleshooting or require broader product confirmation.
+- Linear showed deal-view tasks/notes and audit trail work in progress. Public docs do not claim task/note CRM sync or audit trail availability.
 
 ## Field Mapping
 
