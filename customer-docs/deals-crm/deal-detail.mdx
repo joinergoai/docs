@@ -1,30 +1,47 @@
 ---
 title: "Deal detail"
-description: "Use deal detail to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Deal detail","Deals and CRM workspace","Ergo docs"]
+description: "Review a deal's CRM fields, activity, emails, meetings, AI overview, health, contacts, and company context from the detail page."
+keywords: ["deal detail", "deal activity", "deal fields", "deal context"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Open deal detail when you need to inspect one opportunity more deeply than the board allows. Deal detail combines CRM-backed fields with related activity, AI context, and company/contact context.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open a deal from the board, search, or related company.
-- Review health, stage, activity, emails, meetings, and documents.
-- Check AI summaries against source tabs before acting.
-- Update CRM fields only after confirming the right deal.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Open a deal from kanban or list view.
+- Review the sidebar fields, activity timeline, deal info, emails, and meetings.
+- Use the right rail for company and contact context.
+- Draft follow-up from the deal only after checking recent emails and meetings.
+- Edit fields only when they are mapped and intended for writeback.
+
+## What to expect
+
+- Deal detail can hide the main app sidebar and restore it when you leave.
+- Custom deal tabs are local layout helpers for organizing selected fields; they are not a CRM object model.
+- Email, meeting, and activity context appears when it is available to Ergo and matched to the deal.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The deal ID no longer exists in Ergo's CRM-backed data.
+- Activity is attached to the company or contact but not the deal.
+- Field customization hides a field you expected to see.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Company board](./company-board)
+- [Company detail](./company-detail)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

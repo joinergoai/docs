@@ -1,30 +1,50 @@
 ---
 title: "Reporting: competitors, custom fields, and backfill"
-description: "Use reporting: competitors, custom fields, and backfill to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Reporting: competitors, custom fields, and backfill","Reporting","Ergo docs"]
+description: "Plan competitor and custom reporting fields without overpromising historical backfill or immediate chart completeness."
+keywords: ["Competitor reporting", "Custom fields", "Reporting backfill", "Historical reporting", "Reclustering"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Competitor and custom-field reporting is most useful when the field definition is stable and the source data is available. Use this page before promising a historical trend or executive dashboard.
 
+## Create the field first
 
-## Use this workflow
+1. Define the question the field should answer.
+2. Choose field type: sentence, picklist, or numerical.
+3. Write the field description with examples of what should count and what should not.
+4. Add picklist options or numerical buckets if needed.
+5. Decide whether the field is organization-level or team-level.
 
-- Confirm which fields or competitors should appear in reports.
-- Check that the underlying fields are mapped and populated.
-- Understand whether historical data is available or needs backfill.
-- Contact support for high-volume reporting backfill needs.
+For competitor tracking, keep option labels consistent. If one competitor appears under multiple spellings, charts become harder to read.
 
-## Common issues
+## Historical data and backfill caveats
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+Do not assume every new field populates historical charts right away. Historical availability depends on:
+
+- Whether the relevant meetings or emails were captured.
+- Whether the source data has been processed.
+- Whether the field has been clustered or reprocessed.
+- Whether the selected time range includes source records with that field.
+- Whether team scope or access grants hide part of the data.
+
+If a historical report is required, confirm the backfill path before sharing the dashboard.
+
+## Reclustering and field tuning
+
+Some reporting fields can be reclustered with updated instructions. Use this when the clusters are too broad, too narrow, or organized around the wrong themes. Reclustering may take time, and charts can change after the new clusters finish processing.
+
+## Safer rollout path
+
+- Start with one dashboard and a short review window.
+- Validate the chart against source examples.
+- Tune field definitions and buckets.
+- Then share the dashboard or add the field to reporting email cadences.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Custom reporting fields](./custom-reporting-fields)
+- [Picklist and numerical buckets](./picklist-and-numerical-buckets)
+- [Reporting email cadences](./reporting-email-cadences)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

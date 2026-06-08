@@ -1,43 +1,50 @@
 ---
 title: "Add Ergo to new Slack customer channels"
-description: "Diagnose and resolve add Ergo to new Slack customer channels in Ergo."
-keywords: ["Add Ergo to new Slack customer channels","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot new Slack customer channels that do not yet have Ergo monitoring or delivery."
+keywords: ["add Ergo to Slack", "new Slack channel", "Slack monitoring", "Slack Connect", "troubleshooting"]
 ---
 
+Use this page when a new customer Slack channel should be monitored or used for delivery, but Ergo has not started using it.
 
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- A new Slack channel has no pre-call context, CRM capture, or delivery.
+- Ergo cannot find, draft for, or post to the target channel.
+- Search or scheduled delivery cannot select the channel.
+- The channel is Slack Connect/external and behaves differently from internal channels.
 
 ## Most common causes
 
-- Slack is disconnected or was reconnected with the wrong workspace.
-- Ergo is not in the customer channel.
-- Private, shared, or Enterprise Grid channel permissions block visibility.
-- Old channel mappings are still affecting context or delivery.
+- Ergo is not a member of the new channel.
+- The channel was created after the last Slack setup or destination selection.
+- The connected Slack user cannot see the channel.
+- External-channel app permissions prevent the bot from being added by the current user.
 
 ## What to check
 
-- Open the customer Slack channel.
-- Add Ergo or confirm Ergo has channel access.
-- Verify the channel appears in Ergo where relevant.
-- Test pre-call context or delivery after adding the channel.
+- Confirm Slack is connected in Integrations.
+- Add Ergo to the channel or ask a Slack admin/channel owner to add it.
+- Use the exact channel name when configuring monitoring, CRM capture, scheduled runs, or delivery.
+- For external channels, confirm the channel allows the Ergo app.
+- Reconnect Slack if the channel still does not appear after access and membership are correct.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Add Ergo to one target channel, then retry the workflow that needs that channel.
+- Re-save delivery or monitoring settings that were configured before the channel existed.
+- Do not expect historical messages from before Ergo joined the channel to appear automatically.
+- Confirm future messages or deliveries work before adding several channels at once.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when Slack is connected, Ergo has been added, the channel is visible to the connected user, and future activity still does not flow.
+- Include the Ergo workspace, Slack workspace, channel name, channel type, workflow tested, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
 - [Troubleshooting](./index)
+- [Slack disconnect/reconnect and stale channel mappings](./slack-disconnect-reconnect-and-stale-channel-mappings)
+- [Pylon delivery failures, duplicate deliveries, and queue health](./pylon-delivery-failures-duplicate-deliveries-and-queue-health)
 - [Getting support](../start-here/getting-support)
+- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)

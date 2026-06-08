@@ -1,30 +1,51 @@
 ---
 title: "Email signatures and draft footers"
-description: "Use email signatures and draft footers for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Email signatures and draft footers","Drafts, email, and templates","Ergo docs"]
+description: "Configure signatures, import from Gmail, and avoid duplicate sign-offs in sent drafts."
+keywords: ["Email signatures and draft footers", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Signature settings control what gets appended to emails sent through Ergo. Review them before a team rollout so generated drafts do not duplicate sign-offs or footers.
 
+## Who can use this
 
-## Use this workflow
+- Users sending email through Ergo.
+- Admins and RevOps teams standardizing outbound email setup.
 
-- Confirm the user's email signature source.
-- Check whether Ergo is pulling signatures from Google Workspace, Microsoft 365, or another configured tool.
-- Review generated drafts for unwanted footers or watermarks.
-- Contact support if signatures or footers do not match workspace settings.
+## Before you start
+
+- Connect the sender's email account.
+- Decide whether to import an existing Gmail signature or enter one manually.
+- Review whether your workspace uses a sent-with-Ergo footer or similar marker.
+
+## Steps
+
+- Open email signature settings.
+- Review the current signature.
+- Import from Gmail when available, or save a manual signature.
+- Remove the signature if it should not be appended.
+- Toggle sent-with-Ergo footer behavior if your workspace exposes that setting.
+- Send a test draft to confirm the final email renders correctly.
+
+## What to expect
+
+- Signature settings can include signature HTML, last updated time, Google token status, and sent-with-Ergo footer state.
+- Draft body and signature are separate. Avoid manually adding a second signature block to the body.
+- Import from Gmail depends on Google access.
+- Signature changes affect future sends; already-sent emails do not change.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Gmail import fails because the Google grant is missing or expired.
+- A user adds a manual sign-off in the body and also has a saved signature.
+- The signature uses formatting that renders differently in the provider.
+- The footer setting is changed but old drafts still contain manually typed footer text.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Google Workspace](../integrations/google-workspace)
+- [Email signature](../integrations/email-signature)
+- [Draft send failures](../troubleshooting/draft-send-failures)

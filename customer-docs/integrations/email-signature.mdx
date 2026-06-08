@@ -1,35 +1,48 @@
 ---
 title: "Email signature"
-description: "Connect and maintain Email signature with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Email signature","Integrations","Ergo docs"]
+description: "Configure the signature Ergo appends to generated email drafts and sends."
+keywords: ["Email signature", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect or refresh the signature Ergo should append to generated emails.
+
+## Who can use this
+
+- Users whose AI-generated emails should include their own signature.
+- Admins and operators troubleshooting duplicate or missing signatures.
 
 ## Before you start
 
-- Have access to the Google Workspace or Microsoft 365 account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Connect your email provider first.
+- Confirm the signature in your mail client is the signature you want Ergo to use.
+- Avoid adding closing/signature text inside templates when a connected signature will be appended automatically.
 
+## Steps
 
-## Setup steps
+- Open the email signature settings in Ergo.
+- Fetch or refresh the signature from your connected email account.
+- Send or preview a test draft in the workflow your team uses to confirm the signature appears once.
+- Update the signature in your email provider, then refresh it in Ergo if the content changes.
 
-- Open the area of Ergo where email signature is managed.
-- Confirm prerequisites and access.
-- Complete the visible setup or workflow steps.
-- Test the workflow with one meeting, deal, draft, or user before expanding usage.
+## What to expect
+
+- Ergo can append the connected signature to generated email output.
+- Signature display can vary by draft destination or mail client, so verify the path your team actually sends from.
+- Draft generation is instructed not to write a separate sign-off or signature when the system appends one.
+- If no connected signature is available, templates and draft review become more important.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The email provider connection is expired.
+- The signature was changed in the email provider but not refreshed in Ergo.
+- A template includes its own signature, causing duplicate closings.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Google Workspace](./google-workspace)
+- [Microsoft 365](./microsoft-365)
+- [Email signatures and draft footers](../drafts-email/email-signatures-and-draft-footers)
+- [Review and edit AI drafts](../drafts-email/review-edit-ai-drafts)

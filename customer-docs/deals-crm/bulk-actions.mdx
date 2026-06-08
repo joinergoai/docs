@@ -1,30 +1,46 @@
 ---
 title: "Bulk actions"
-description: "Use bulk actions to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Bulk actions","Deals and CRM workspace","Ergo docs"]
+description: "Use bulk actions to update selected deals, assign owners, move stages, change close dates, or generate drafts with care."
+keywords: ["bulk actions", "bulk move", "bulk owner", "bulk drafts"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use bulk actions only after you have confirmed the selected records, pipeline, and active filters. The bulk bar appears after you select one or more deals.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Filter the record list before selecting items.
-- Review selected records carefully.
-- Run the bulk action only when the set is correct.
-- Check completion or error states after the action runs.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Select deals from kanban or list view.
+- Move selected deals to another available stage in the current pipeline.
+- Assign an owner, change close dates, or generate email drafts where available.
+- Review the selected count and target action before confirming destructive or broad updates.
+
+## What to expect
+
+- Bulk stage and owner actions depend on pipeline scope, CRM permissions, and CRM-backed write behavior.
+- Broad updates should be reviewed carefully; filtered views can make selection context easy to misread.
+- Bulk-generated drafts are queued for review and should not be treated as sent.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Selection includes records from the wrong filtered view.
+- The target stage is disabled or not part of the selected pipeline.
+- CRM permissions or field mapping prevent the update.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Activity, emails, meetings, and documents tabs](./activity-emails-meetings-and-documents-tabs)
+- [Bulk email/Slack drafts](./bulk-email-slack-drafts)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

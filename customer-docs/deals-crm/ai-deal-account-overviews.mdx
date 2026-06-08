@@ -1,30 +1,46 @@
 ---
 title: "AI deal/account overviews"
-description: "Use AI deal/account overviews to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["AI deal/account overviews","Deals and CRM workspace","Ergo docs"]
+description: "Read AI deal and company overviews as source-backed summaries, then verify recent meetings, emails, CRM fields, and connected activity."
+keywords: ["AI overview", "deal summary", "company summary", "source verification"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use AI overviews to get oriented quickly on a deal or company. They are only as good as the available CRM, meeting, email, and connected activity context, so review the underlying sources before sending a message or updating the CRM.
 
+## Who can use this
 
-## Key things to know
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
 
 - Open the deal or company detail page.
-- Read the AI overview alongside source activity.
-- Check meetings, emails, and documents when an overview looks incomplete.
-- Use feedback or support when the overview cites the wrong context.
+- Read the overview alongside health, activity, emails, meetings, and CRM fields.
+- Check activity, email, meeting, CRM, and connected-source sections for the evidence behind important claims.
+- Ask follow-up questions only when you have confirmed the context is current enough.
+
+## What to expect
+
+- Deal and company overviews can be generated at a point in time and may not reflect activity that Ergo has not indexed yet.
+- Overview quality depends on source availability and record matching.
+- Overviews should not be treated as complete or final without source review.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Recent activity is missing from the associated deal or company, or an overview has not been generated yet.
+- The overview is summarizing the company while you expected deal-specific context, or the reverse.
+- Source records are duplicated or mismatched.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Deal and account health](./deal-and-account-health)
+- [Activity, emails, meetings, and documents tabs](./activity-emails-meetings-and-documents-tabs)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

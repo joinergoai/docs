@@ -1,33 +1,53 @@
 ---
 title: "First-time setup checklist"
-description: "Complete the first setup pass for admins, users, spectators, integrations, meetings, and CRM readiness."
-keywords: ["First-time setup checklist","Onboarding","Ergo docs"]
+description: "Complete first-time Ergo setup in the right order: shared setup first, personal setup next, then one controlled test."
+keywords: ["First-time setup checklist", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding checklist showing role-specific setup paths in Ergo.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page as the first setup pass before inviting a broader team or judging whether Ergo outputs are complete.
 
+## Who can use this
 
-## Setup steps
+- Admins and setup owners coordinating the rollout.
+- Users completing personal connections after shared systems are ready.
+- Spectators or managers who need limited access to meetings or reporting.
 
-- Ask RevOps to complete workspace-level setup first: CRM, field mapping, teams, defaults, call grading, reporting access, and any required collaboration tools.
-- Have operators complete delegated team setup, user sync, templates, notetaker defaults, or reporting setup where they have permission.
-- Have users connect email and calendar, review templates and personal preferences, confirm notetaker behavior, and run one test meeting or draft workflow.
-- Have sales managers review grading, aggregate reporting, coaching workflows, and forecast views only after enough rep meetings are captured.
-- Give spectators only the meeting, reporting, or shared-link access they need.
-- Run one test workflow before rolling the setup out to more teams.
+## Before you start
+
+- Decide who owns Ergo account setup before inviting the broader team.
+- Confirm whether you are setting up shared systems, personal connections, or limited access.
+- Confirm whether you are a user, admin, super admin, or spectator.
+- Keep gated areas such as CRM fields, field mapping, pricing, reporting, and organization defaults with the right admin owner.
+
+## Steps
+
+- Complete shared setup first: CRM connection, field mapping, pipeline stages, company details, meeting-title phrases, collaboration tools, notetaker defaults, email templates, and reporting or pricing setup when enabled.
+- Then complete personal setup: email/calendar connection, notetaker or desktop capture path, collaboration access, and any sync-from-admin step that applies to the user.
+- Use [Setup by role](./setup-by-role) when someone only needs the part of the setup path they own.
+- Verify one controlled workflow before broad rollout: one meeting or call, dashboard visibility, expected processing state, and CRM, reporting, or draft output when configured.
+
+## What to expect
+
+- The setup path can differ by role, spectator status, feature availability, and reporting access.
+- Admin-owned setup can unlock source context for users, but each user may still need personal email/calendar, notetaker, or collaboration access.
+- Downstream outputs depend on connected sources, permissions, field mapping, filters, and processing state.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- A required source is disconnected, stale, or not matched to the right account.
+- A user expects to change an admin-owned setting.
+- A spectator or shared-link viewer expects broader access than their scope grants.
+- A filter, permission, or setting hides the expected result.
+- A meeting is detected but the notetaker, desktop capture, processing, or downstream output did not complete.
 
 ## Related articles
 
+- [Setup](./index)
 - [Setup by role](./setup-by-role)
-- [RevOps setup for Ergo rollout](./revops-setup-for-ergo-rollout)
-- [AE setup](./ae-setup)
+- [Connect your CRM](./connect-your-crm)
 - [Connect email and calendar](./connect-email-and-calendar)
+- [Notetaker setup](./notetaker-setup)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

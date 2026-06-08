@@ -1,48 +1,62 @@
 ---
 title: "AE setup"
-description: "Complete the personal setup AEs need for meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context."
-keywords: ["AE setup","Onboarding","Ergo docs"]
+description: "Set up Ergo for account executives who need meetings, deal context, and reviewable post-call drafts."
+keywords: ["AE setup", "Setup", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing the drafts workspace for post-call email review.](../images/product-drafts-inbox.png)
 
+Use this page when an AE is completing personal setup after the admin or RevOps owner has prepared the shared CRM, field, template, and notetaker configuration.
 
-## Who is this for?
+## Who can use this
 
-- For AEs, account executives, founders selling directly, and sellers completing daily Ergo workflows.
-- Requires Google Workspace or Microsoft 365, Notetaker.
+- AEs and other sellers completing personal setup.
+- Operators or admins helping sellers finish setup.
+- Managers checking whether seller workflows are ready for rollout.
 
 ## Before you start
 
-- Make sure your account is provisioned in the correct workspace and team.
-- Have access to your own Google Workspace or Microsoft 365 account.
-- Ask which notetaker, Slack workflow, and post-call draft policy your team uses.
+- Confirm the shared CRM, field mapping, pipeline stages, templates, and notetaker defaults are ready or owned by an admin.
+- Confirm whether the AE should use Sync with Admin to inherit approved CRM keys, fields, stages, company context, meeting-title rules, templates, domains, and advanced settings.
+- Use the AE's primary work email and calendar account. Personal email/calendar grants do not transfer through admin sync.
+- Confirm the AE has the right team, role, deal access, reporting access when needed, and collaboration access.
 
+## Steps
 
-## Setup steps
+- Complete Sync with Admin if onboarding asks for it.
+- Connect Google Workspace or Microsoft 365 so Ergo can see the AE's calendar, relevant email context, and draft destination.
+- Review email settings such as inbox monitoring, follow-up drafts, response drafts, external email-client behavior, and surfacing when those controls are available.
+- Confirm templates are enabled and that the default post-call structure matches the team's follow-up style.
+- Connect the approved notetaker or desktop capture path after calendar setup, then confirm the AE knows when to admit the bot or use manual add-to-meeting.
+- Connect Slack or other collaboration tools only when the team uses those workflows for call prep, alerts, handoffs, or CRM-update notifications.
+- Test one real external meeting: capture the meeting, check transcript and summary, verify deal or customer context, review the generated draft when enabled, and confirm any CRM or reporting output that the team expects.
 
-- **Step 1: Welcome and role check.** Confirm you are completing the user flow, not the RevOps setup flow. Most AEs do not configure CRM, field mapping, pipeline stages, call grading, or org-wide reporting.
-- **Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the team's approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.
-- **Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. This lets Ergo detect your sales meetings, read relevant email context, and create drafts in your connected email workflow.
-- **Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. These settings affect whether Ergo monitors relevant emails, drafts follow-ups, and surfaces stalled deal follow-ups.
-- **Step 5: Review templates.** Confirm that post-call templates are enabled and that the template tone fits how you follow up. You can review, edit, or create templates if your workspace allows it.
-- **Step 6: Confirm notetaker setup.** Check which notetaker your team uses and confirm it can see your calendar. For live calls, admit the bot from the waiting room when needed.
-- **Step 7: Connect collaboration tools.** Connect Slack if your team uses pre-call briefs, CRM-update notifications, or deal alerts. Beeper appears only if enabled for your workspace.
-- **First test: run one customer meeting.** After the call, confirm the transcript, summary, action items, CRM context, and follow-up draft appear before relying on Ergo for a full call day.
+## What to expect
+
+- AEs usually follow the standard user onboarding path, not the admin CRM/field-mapping path.
+- Post-call drafts are reviewable outputs. Do not rely on automated sending unless the team has explicitly enabled and approved that workflow elsewhere.
+- Drafts depend on connected email/calendar, draft settings, meeting capture, source relevance, templates, recipient context, and processing state.
+- Deals, search, Slack, and reporting may be hidden or incomplete when the AE lacks access or the source is not connected.
 
 ## Common issues
 
-- Email/calendar is disconnected or connected to the wrong account.
-- The AE expects drafts before the meeting qualifies, processes, or has usable notetaker/email context.
-- The AE expects Ergo to auto-send follow-up emails instead of creating reviewable drafts.
-- The AE expects to work primarily from the Ergo dashboard instead of inbox drafts and Slack nudges.
-- The meeting is matched to the wrong deal or company because the CRM record or meeting title is unclear.
-- The AE sends an AI draft before reviewing facts, recipients, links, and next steps.
+- Email/calendar is disconnected, stale, or connected to the wrong account.
+- The AE expects a draft before the meeting is captured, processed, relevant, or matched to usable email/deal context.
+- A draft contains weak context because the meeting, CRM record, thread, template, or recipient information is incomplete.
+- The bot is missing because the calendar owner, meeting link, host admission, or duplicate notetaker setup is wrong.
+- Deals, drafts, search results, or reports are hidden by access, filters, saved views, or feature availability.
 
 ## Related articles
 
+- [Setup](./index)
+- [Operator setup](./operator-setup)
 - [AE tips for success](./ae-tips-for-success)
 - [Connect email and calendar](./connect-email-and-calendar)
+- [Notetaker setup](./notetaker-setup)
 - [Email templates setup](./email-templates-setup)
+- [Collaboration tools setup](./collaboration-tools-setup)
 - [Review/edit AI drafts](../drafts-email/review-edit-ai-drafts)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [CSM setup](./csm-setup)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

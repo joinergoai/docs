@@ -1,46 +1,52 @@
 ---
 title: "Stage drift conflicts"
-description: "Diagnose and resolve stage drift conflicts in Ergo."
-keywords: ["Stage drift conflicts","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot CRM pipeline stages that changed after Ergo setup and no longer match expected stage definitions."
+keywords: ["stage drift", "pipeline stages", "CRM stages", "field mapping", "troubleshooting"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use this page when CRM pipeline stages were renamed, reordered, deleted, moved, or recreated after Ergo setup.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- Ergo stage definitions differ from the current CRM pipeline.
+- A stage disappeared, was renamed, moved, archived, deleted, or recreated in CRM.
+- A deal appears in an unexpected stage or no-stage state.
+- CRM stage updates fail after pipeline changes.
 
 ## Most common causes
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- CRM pipeline or stage configuration changed after Ergo setup.
+- A display name changed, but the underlying stage identifier did not.
+- A stage was deleted and recreated with the same label but a different identifier.
+- A deleted stage still has deals, or the CRM blocks deletion/movement until those deals are handled.
 
 ## What to check
 
-- Check whether CRM stages were renamed, deleted, reordered, or added.
-- Open Field Mapping and review stage mappings.
-- Resolve drift by mapping each Ergo stage to the correct CRM stage.
-- Test with one deal before applying broader changes.
+- Open Field Mapping and compare the selected pipelines and stages against the CRM.
+- Sync stages from CRM before editing automation logic.
+- Check whether the change was only a rename or a structural change such as delete/recreate or moving stages between pipelines.
+- Check stage deal counts before deleting stages.
+- Confirm each affected deal is in the intended pipeline and active stage in the CRM.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Resolve drift from the Field Mapping/stage pages instead of manually overwriting definitions in several places.
+- If a stage was recreated, remap or resync the current CRM stage before retrying updates.
+- If deals are stuck in a removed stage, move them in the CRM or use the CRM's supported deletion behavior first.
+- Test with one known deal before applying broader stage changes.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when Field Mapping shows current stages but a known deal still resolves to the wrong stage.
+- Include the workspace, CRM, pipeline, affected stage, example deal, recent stage change, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
-- [Stage drift resolution](../field-mapping/stage-drift-resolution)
-- [Pipeline stages](../setup/pipeline-stages)
+- [Troubleshooting](./index)
 - [CRM sync issues](./crm-sync-issues)
+- [Google/Microsoft/Slack reconnects](./google-microsoft-slack-reconnects)
+- [Getting support](../start-here/getting-support)
+- [Field Mapping overview](../field-mapping/field-mapping-overview)

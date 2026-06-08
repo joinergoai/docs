@@ -1,30 +1,35 @@
 ---
 title: "Meeting filter: what sales-only processing means"
-description: "Handle meeting filter: what sales-only processing means in the meetings and notetaker workflow."
-keywords: ["Meeting filter: what sales-only processing means","Meetings and notes","Ergo docs"]
+description: "Understand how meeting type affects insights, drafts, CRM updates, and reporting outputs."
+keywords: ["sales-only processing", "meeting filter", "insights", "drafts"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Some workflows depend on whether Ergo treats a meeting as relevant for sales or customer-facing processing. Capture and downstream generation are separate decisions.
 
+## What this affects
 
-## Use this workflow
+- Whether a meeting appears in customer-facing sales workflows.
+- Whether follow-up drafts, CRM updates, or reporting insights are generated.
+- How a transcript is used later for sales workflows, search, or manual review.
 
-- Review which meeting types should receive sales insights or drafts.
-- Check whether a meeting was classified as sales or non-sales.
-- Use instructions and settings to guide classification where available.
-- Contact support if classification repeatedly misses your expected sales calls.
+## What it does not mean
 
-## Common issues
+- It does not mean the bot failed to record.
+- It does not schedule, cancel, or remove the bot.
+- It does not mean the transcript is unavailable.
+- It does not mean every sales workflow will run immediately after capture.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## How to review a meeting
+
+- Open the meeting detail page.
+- Check recording and transcript availability first.
+- Then check whether summaries, insights, drafts, CRM links, and reporting outputs are present.
+- If the meeting should have generated downstream outputs, review the source, attendees, title, and processing state before escalating.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)
+- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
+- [Push notes or meetings to automations](./push-notes-or-meetings-to-automations)

@@ -1,30 +1,36 @@
 ---
 title: "Meeting availability and visibility"
-description: "Handle meeting availability and visibility in the meetings and notetaker workflow."
-keywords: ["Meeting availability and visibility","Meetings and notes","Ergo docs"]
+description: "Understand who can see meeting records and how sharing differs from internal visibility."
+keywords: ["meeting visibility", "meeting access", "private meeting", "shared meeting"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Meeting visibility controls who can find a meeting inside Ergo. Sharing controls who can open a shared link. These are separate.
 
+## Internal visibility
 
-## Use this workflow
+- Owners can view their own meetings.
+- Internal attendees can view meetings when access rules include them.
+- Team admins and admins may have broader visibility depending on role, team membership, and explicit grants.
+- Private meetings restrict internal visibility and can revoke existing share tokens when privacy is enabled.
 
-- Confirm the meeting is on a connected calendar.
-- Check whether the viewer has access to the meeting, folder, or shared link.
-- Ask an admin to review global meeting access when a team member needs broader visibility.
-- Use support if the meeting exists but the expected viewer cannot access it.
+## Shared links
 
-## Common issues
+- Shared links are opened through a share token.
+- Password-protected links require the password.
+- Some shared access flows can require authenticated shared access instead of showing the meeting immediately.
+- Revoking a share link removes the public token; it does not delete the meeting.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What to check when access fails
+
+- Whether the user is the owner, an internal attendee, an allowed user, or an admin with the right scope.
+- Whether the meeting is private.
+- Whether the shared link was revoked or password-protected.
+- Whether the user is trying to access a clip link instead of the full meeting link.
 
 ## Related articles
 
-- [Global meeting access](../admin/global-meeting-access)
+- [Share/revoke/password-protect meetings](./share-revoke-password-protect-meetings)
+- [Meeting history and folders](./meeting-history-and-folders)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)

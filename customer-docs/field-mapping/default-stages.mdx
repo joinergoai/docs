@@ -1,30 +1,46 @@
 ---
 title: "Default stages"
-description: "Configure default stages so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Default stages","Field mapping and CRM configuration","Ergo docs"]
+description: "Use default stages as a starting point only when they match your CRM process and have been reviewed by the CRM owner."
+keywords: ["default stages", "pipeline templates", "stage setup"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Default stages can help a team get started, but they should not replace your actual CRM process. Review every default stage before using it in automation or reporting.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Choose the stages Ergo should use by default.
-- Confirm the defaults match your CRM pipeline.
-- Review downstream reporting before changing defaults.
-- Test after saving stage changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Compare the default stages with your CRM pipeline.
+- Add only the stages that match your sales motion.
+- Edit names and descriptions before automation uses them.
+- Confirm the target pipeline and stage order before saving.
+
+## What to expect
+
+- Default stages are configuration helpers, not proof that the CRM is ready.
+- Stage descriptions and IDs still need to align with the active CRM pipeline.
+- Adding defaults to the wrong pipeline can create downstream board and writeback confusion.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- Default stages do not match your CRM stage names or criteria.
+- A default stage was added without a useful description.
+- The wrong pipeline was selected before adding stages.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Stage definitions and AI descriptions](./stage-definitions-and-ai-descriptions)
+- [Reorder/delete stages](./reorder-delete-stages)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

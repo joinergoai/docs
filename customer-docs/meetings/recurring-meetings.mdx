@@ -1,30 +1,33 @@
 ---
 title: "Recurring meetings"
-description: "Handle recurring meetings in the meetings and notetaker workflow."
-keywords: ["Recurring meetings","Meetings and notes","Ergo docs"]
+description: "Schedule or cancel the Ergo notetaker for one recurring meeting occurrence or future occurrences."
+keywords: ["recurring meetings", "series", "all future", "this only", "notetaker"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Recurring meetings need an extra decision: whether you are changing one occurrence or the future series.
 
+## Schedule recurring meetings
 
-## Use this workflow
+- Turn on the notetaker for the occurrence you want to capture.
+- If Ergo prompts for a recurring action, choose the option that matches the intended scope.
+- Recheck the next occurrence if the series has exceptions or changed links.
 
-- Review the specific recurring occurrence in Ergo.
-- Confirm the date, time, and meeting link for the occurrence.
-- Use Add Bot to Meeting if a changed occurrence does not dispatch correctly.
-- Check recurring meetings after calendar edits or ownership changes.
+## Cancel recurring meetings
 
-## Common issues
+- Choose **this only** when a single occurrence should skip the notetaker.
+- Choose **all future** when future occurrences should not be scheduled.
+- Review already scheduled future events, because existing notetaker records may need to be canceled as part of the series change.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## Caveats
+
+- Calendar providers represent recurring series differently, so a single changed occurrence can have a different event ID from the series.
+- If the meeting URL is reused across a recurring series, verify the specific occurrence before assuming the whole series is configured.
+- Calendar sync, provider scheduling, and dashboard display can update at different times.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
+- [What happens when a meeting is rescheduled](./what-happens-when-a-meeting-is-rescheduled)
+- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)

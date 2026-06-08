@@ -1,36 +1,46 @@
 ---
 title: "MCP/external agent tools"
-description: "Connect and maintain MCP/external agent tools with the right account, permissions, reconnect path, and failure checks."
-keywords: ["MCP/external agent tools","Integrations","Ergo docs"]
+description: "Connect external MCP clients to Ergo Agent when the MCP setup is enabled for your workspace."
+keywords: ["MCP/external agent tools", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when your workspace has MCP access enabled and you want to connect an external client such as Codex, Cursor, or Claude Code to Ergo Agent.
+
+## Who can use this
+
+- Admins and technical operators setting up external agent access.
+- Users who have been given an approved MCP setup path by their team.
 
 ## Before you start
 
-- Confirm this feature is enabled for your workspace.
-- Have access to the External agent tools account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm the MCP tab or setup instructions are enabled for your workspace.
+- Use the account whose Ergo context the external agent should access.
+- Review what the external client will be allowed to ask or retrieve before connecting.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and find the MCP or external agent setup area.
+- Copy the MCP URL or client-specific setup command shown in Ergo.
+- Complete OAuth in the external client.
+- Ask a small test question and verify the answer uses the expected Ergo context.
 
-- Confirm your workspace has access to external agent tooling.
-- Use the provided setup path for the agent or client you are connecting.
-- Verify that the connected tool can see the intended Ergo context.
-- Contact support for beta access, setup, or troubleshooting.
+## What to expect
+
+- MCP access is permission-aware and tied to the authenticated Ergo user.
+- External clients may expose setup, login, or reconnect flows differently.
+- If the MCP tab or command is not visible, treat the feature as unavailable for that workspace until enabled.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The workspace does not have MCP access enabled.
+- OAuth was completed with the wrong Ergo user.
+- The external client cached an old MCP configuration and needs reconnect.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Chat with Ergo](../ai-search-automation/chat-with-ergo)
+- [Understanding sources and actions in chat](../ai-search-automation/understanding-sources-actions-in-chat)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

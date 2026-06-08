@@ -1,30 +1,39 @@
 ---
 title: "Meeting processing time and status states"
-description: "Understand why recordings, transcripts, summaries, insights, and drafts can finish at different times."
-keywords: ["Meeting processing time and status states","Meetings and notes","Ergo docs"]
+description: "Understand separate recording, transcript, summary, insight, draft, and desktop-upload processing states."
+keywords: ["meeting processing", "processing status", "transcript", "summary", "desktop recording"]
 ---
-
 
 ![Flow diagram showing recording, transcript, summary, insights, and drafts as separate processing outputs.](../images/meeting-processing-flow.svg)
 
+Do not treat a meeting as one all-or-nothing state. Ergo can have a recording ready while transcript, summary, insights, drafts, or reporting are still pending.
 
+## State types to keep separate
 
-## Use this workflow
+- **Recording state**: whether media was captured and stored.
+- **Transcript state**: whether transcript segments are available.
+- **Summary state**: whether a meeting summary or generated note is ready.
+- **Insight and reporting state**: whether reporting fields or rubric outputs have been computed.
+- **Draft state**: whether post-call emails or follow-ups were generated.
+- **Desktop processing state**: desktop recordings can show `processing`, `completed`, `completed_no_transcript`, or `failed`.
 
-- Open the meeting detail page after the call ends.
-- Check whether the recording, transcript, summary, insights, and drafts are each available.
-- Wait for processing to complete before retrying or reporting missing outputs.
-- Contact support if processing remains stuck or a required output is missing after the expected window.
+## What to do while processing
 
-## Common issues
+- Wait for the specific output you need instead of retrying everything immediately.
+- Refresh the meeting list or detail page after a few minutes.
+- For desktop recordings, a processing card can appear before the completed meeting record is ready.
+- Use retry only where the UI exposes retry for the failed output.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## When to escalate
+
+- The recording is missing after the bot was admitted and recording.
+- The transcript is empty or failed for a meeting with meaningful audio.
+- A desktop recording remains failed.
+- A required draft or reporting output is missing after the meeting has a transcript.
 
 ## Related articles
 
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Video, transcript, and action items](./video-transcript-and-action-items)
 - [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)
-- [Meeting availability and visibility](./meeting-availability-and-visibility)
+- [Delete/retry processing](./delete-retry-processing)
+- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)

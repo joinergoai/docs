@@ -1,30 +1,38 @@
 ---
 title: "Meeting detail page"
-description: "Handle meeting detail page in the meetings and notetaker workflow."
-keywords: ["Meeting detail page","Meetings and notes","Ergo docs"]
+description: "Review a completed meeting's recording, transcript, summary, action items, clips, AI chat, and related workflow context."
+keywords: ["meeting detail", "meeting recording", "meeting transcript", "meeting summary"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+The meeting detail page is the source of truth for a completed meeting record.
 
+## What you can review
 
-## Use this workflow
+- Video or recording playback when media is available.
+- Transcript entries with speaker and timestamp context.
+- Summary, action items, and generated analysis.
+- Clips created from the transcript or video.
+- Related deals, contacts, drafts, reporting occurrences, or automation actions when available.
+- Meeting chat that answers questions using the meeting transcript.
 
-- Open a processed meeting from Dashboard, Meetings, a link, or a CRM activity.
-- Review recording, transcript, summary, insights, action items, and drafts separately.
-- Use Ask AI or sharing controls when available.
-- Report the meeting if a specific output is missing or incorrect.
+## What to check first
+
+- Meeting source: bot, desktop recording, external upload, manual note, or another integration.
+- Processing status, especially for desktop recordings.
+- Whether the transcript exists before expecting summaries or AI answers.
+- Visibility and privacy state before sharing.
 
 ## Common issues
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- A transcript exists but downstream insights are still pending.
+- The recording exists but the meeting is private or not shared.
+- The meeting has multiple capture sources and the expected output is attached to a different record.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Video, transcript, and action items](./video-transcript-and-action-items)
+- [Ask AI about a meeting](./ask-ai-about-a-meeting)
+- [Create and share clips](./create-and-share-clips)
+- [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)

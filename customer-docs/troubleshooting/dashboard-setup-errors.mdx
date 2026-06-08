@@ -1,45 +1,50 @@
 ---
 title: "Dashboard setup errors"
-description: "Diagnose and resolve dashboard setup errors in Ergo."
-keywords: ["Dashboard setup errors","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot onboarding and dashboard setup steps that do not complete or save as expected."
+keywords: ["dashboard setup", "onboarding", "setup errors", "integrations", "troubleshooting"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page when onboarding or a setup step appears incomplete after the user has tried to connect sources or save workspace settings.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- Onboarding cannot advance to the next step.
+- A setup step saves but later appears incomplete.
+- A connected source, workspace setting, notetaker, CRM field, or reporting default is missing.
+- The user skipped onboarding and later finds core workflows are not running.
 
 ## Most common causes
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The user's role-specific setup path has not been completed.
+- A required CRM, email, calendar, collaboration, notetaker, or reporting step is missing.
+- The connected account does not have the permission or scopes needed for the workflow.
+- Setup was completed for one user, but another user still needs their own source connections.
 
 ## What to check
 
-- Check whether onboarding setup is complete.
-- Confirm required integrations are connected.
-- Refresh the dashboard after setup changes.
-- Contact support if setup appears complete but dashboard errors remain.
+- Follow the setup checklist in role order instead of jumping between steps.
+- Confirm each source shows connected after OAuth completes.
+- Ask an admin or Super Admin to complete workspace-level settings when the user cannot see them.
+- Check whether the user is a standard user, admin, Super Admin, or spectator before changing access.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Reconnect the source only when the setup step shows disconnected, expired, or incomplete.
+- For CRM setup, confirm field mapping, stages, and property permissions before expecting updates.
+- For meeting setup, confirm calendar/notetaker state and retry with one upcoming meeting.
+- For reporting setup, confirm dashboard creation and reporting access separately.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when the expected role, connected source, and setup step are confirmed but the issue repeats.
+- Include the workspace, affected user, setup step, source system, visible error, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
 - [Troubleshooting](./index)
+- [Sign-in and desktop callback issues](./sign-in-and-desktop-callback-issues)
+- [CRM sync issues](./crm-sync-issues)
 - [Getting support](../start-here/getting-support)

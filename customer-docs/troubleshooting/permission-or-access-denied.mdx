@@ -1,46 +1,51 @@
 ---
 title: "Permission or access denied"
-description: "Diagnose and resolve permission or access denied in Ergo."
-keywords: ["Permission or access denied","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot hidden pages, denied access, shared-link access, and missing role or reporting permissions."
+keywords: ["access denied", "permissions", "reporting access", "meeting access", "shared links"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when a user cannot open a page, meeting, report, draft, shared link, admin control, or source-backed workflow they expected to access.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- A page is hidden or returns access denied.
+- A shared link asks for authentication, password, or one-time access.
+- A user cannot see meetings, reporting, drafts, field mapping, or admin controls.
+- A spectator or standard user expects an admin-only workflow.
 
 ## Most common causes
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- Role, team, spectator, meeting access, or reporting access is insufficient.
+- The user is in the wrong workspace or signed in with the wrong account.
+- Feature flag, source connection, or workspace access is not enabled for that user.
+- Shared link password, authentication, or one-time access is required.
+- The source object is private, deleted, filtered, or not shared with that viewer.
 
 ## What to check
 
-- Confirm the user is signed into the correct workspace.
-- Check their role and spectator status.
-- Check whether the page requires admin, reporting, shared-link, or global meeting access.
-- Ask an admin to update access or contact support if access looks correct.
+- Confirm the user is in the correct workspace and signed in with the expected account.
+- Confirm role, team membership, spectator status, and admin/Super Admin status.
+- Check reporting access grants, dashboard sharing, meeting access, and global meeting access separately.
+- Check whether the source object exists and is visible to the acting user.
+- Use a shared meeting, chart, dashboard, clip, note, or document link when narrow access is enough.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Ask an admin to adjust the narrowest access that matches the task.
+- Do not share broad credentials to work around an access issue.
+- If the user needs reporting, grant reporting access; if they need a meeting, share or grant meeting access.
+- If the user needs admin controls, confirm they are an admin and that the control is not Super Admin-only.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when the correct role, workspace, access grant, and source object are confirmed but access is still denied.
+- Include the workspace, affected user, requested page/object/link, current role, expected access, actual error, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Spectator access](../start-here/spectator-access)
-- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
+- [Troubleshooting](./index)
+- [Search/reporting has no results](./search-reporting-has-no-results)
+- [Getting support](../start-here/getting-support)

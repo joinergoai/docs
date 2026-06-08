@@ -1,35 +1,51 @@
 ---
 title: "Global meeting access"
-description: "Manage global meeting access across teams, members, access, defaults, and organization settings."
-keywords: ["Global meeting access","Admin","Ergo docs"]
+description: "Control whether members can view meetings across the organization."
+keywords: ["global meeting access", "meeting visibility", "admin"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when every organization member should have broad meeting visibility. For one-person or team-specific exceptions, use [Grant meeting/reporting access](./grant-meeting-reporting-access) instead.
+
+## Who can use this
+
+- Super admins can view and change the global meeting access setting.
+- Other admins and members inherit the resulting meeting visibility behavior, but they do not manage the organization-wide switch.
 
 ## Before you start
 
-- Sign in with admin access or delegated permission for this area.
-- Confirm Notetaker is connected or available.
+- Confirm this should apply to the whole organization, not a single team or user.
+- Notify teams before broadening access to meetings they may not expect others to see.
+- Review whether individual meeting grants are enough.
+- Be ready to have affected users refresh meeting lists after the change.
 
+## Steps
 
-## Configure it
+1. Open **Admin** as a super admin.
+2. Find **Global Meeting Access**.
+3. Turn the switch on or off.
+4. Confirm the change and ask users to refresh their meeting views.
 
-- Open Admin meeting access settings.
-- Confirm who needs cross-team meeting visibility.
-- Enable global access only for the users or roles that need it.
-- Review access periodically to avoid over-sharing meeting content.
+## What to expect
+
+- When global meeting access is enabled, meeting access scope resolves to organization-wide access for members.
+- When it is disabled, users fall back to their normal access: owned meetings, attended meetings, team-admin visibility, and any custom meeting grants.
+- The toggle invalidates meeting-related data in the dashboard so meeting lists can reload with the new scope.
+- This setting affects meeting visibility. It does not grant reporting dashboard access, CRM permissions, or role changes.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The switch is missing.** Confirm the acting user is a super admin.
+- **Only one user needs more access.** Use meeting grants instead of enabling global access.
+- **A user still cannot see a report.** Add reporting access separately.
+- **Meeting lists look stale.** Refresh the dashboard after the setting changes.
 
 ## Related articles
 
-- [Meeting availability and visibility](../meetings/meeting-availability-and-visibility)
+- [Admin](./index)
 - [Grant meeting/reporting access](./grant-meeting-reporting-access)
+- [Sync CRM/settings to team members](./sync-crm-settings-to-team-members)
+- [Default meeting summary settings](./default-meeting-summary-settings)
+- [Roles and permissions](../start-here/roles-and-permissions)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

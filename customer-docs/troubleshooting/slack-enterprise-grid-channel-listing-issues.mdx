@@ -1,43 +1,50 @@
 ---
 title: "Slack Enterprise Grid channel listing issues"
-description: "Diagnose and resolve Slack enterprise grid channel listing issues in Ergo."
-keywords: ["Slack Enterprise Grid channel listing issues","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot missing Slack channels in channel lists, recipient search, and delivery setup."
+keywords: ["Slack Enterprise Grid", "Slack channels", "channel listing", "Slack Connect", "troubleshooting"]
 ---
 
+Use this page when a Slack channel is missing from Ergo setup, recipient search, monitoring, or delivery configuration.
 
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- A Slack channel is missing from setup, channel search, or delivery destinations.
+- Enterprise Grid or Slack Connect channels do not appear as expected.
+- Slack context, monitoring, or delivery cannot find the target channel.
+- Private or external channels appear differently from public workspace channels.
 
 ## Most common causes
 
-- Slack is disconnected or was reconnected with the wrong workspace.
-- Ergo is not in the customer channel.
-- Private, shared, or Enterprise Grid channel permissions block visibility.
-- Old channel mappings are still affecting context or delivery.
+- Ergo is not a member of the channel.
+- The connected Slack account cannot see the workspace, private channel, or external channel.
+- Slack workspace/org mapping changed after reconnect.
+- The channel was archived, renamed, moved, or created after the last setup check.
 
 ## What to check
 
-- Confirm Slack is connected with the expected workspace or Enterprise Grid context.
-- Check whether Ergo has access to the channel type.
-- Reconnect Slack if channel lists are stale.
-- Contact support if channels remain missing after reconnect.
+- Confirm the channel belongs to the Slack workspace connected to Ergo.
+- Confirm the connecting user can see the channel in Slack.
+- Add Ergo to the target channel when monitoring or delivery requires bot membership.
+- For private or external channels, confirm the user and bot have access to that specific channel.
+- Reconnect Slack if the workspace or channel list still looks stale.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Search for the exact channel name after confirming workspace access.
+- Add Ergo to one known channel and retry setup or delivery there.
+- If the channel is external, confirm the relevant Slack workspace can add apps to that channel.
+- Avoid assuming Enterprise Grid org access automatically exposes every workspace/channel to Ergo.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when Slack is connected, the user and bot can access the channel, and it still does not appear.
+- Include the Ergo workspace, Slack workspace, affected user, channel name, channel type, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
 - [Troubleshooting](./index)
+- [Google/Microsoft/Slack reconnects](./google-microsoft-slack-reconnects)
+- [Slack disconnect/reconnect and stale channel mappings](./slack-disconnect-reconnect-and-stale-channel-mappings)
 - [Getting support](../start-here/getting-support)
+- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)

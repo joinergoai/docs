@@ -1,28 +1,48 @@
 ---
 title: "Data sources and freshness"
-description: "Understand which connected sources feed Ergo and why meetings, CRM, drafts, and reports update on different timelines."
-keywords: ["Data sources and freshness","Start and guidelines","Ergo docs"]
+description: "Understand which systems Ergo reads from, writes to, or uses for matching, and why freshness can vary."
+keywords: ["Data sources and freshness", "Start here", "Ergo docs"]
 ---
 
+Use this page to separate sources, destinations, matching context, and generated outputs before troubleshooting freshness.
 
+## Who can use this
 
+- Everyone using Ergo, plus rollout owners and admins who need shared vocabulary.
 
-## Key things to know
+## Before you start
 
-- Review which integrations are connected for CRM, email, calendar, meetings, documents, and Slack context.
-- Check when each source last synced or produced a new output.
-- Remember that meeting outputs, CRM updates, drafts, and reports can refresh on different schedules.
-- Contact support if a connected source looks healthy but Ergo still shows stale data.
+- Know which connected sources should be available for your workspace: CRM, email, calendar, Slack, meeting capture, or notetaker data.
+- Confirm whether you are a user, admin, super admin, or spectator.
+- Ask your rollout owner before changing access, recording, integration, or admin setup defaults.
+
+## Steps
+
+- Identify whether the missing context should come from an ingest source, matching context, or destination.
+- Use CRM, email, Slack, meeting capture, notetakers, and connected call sources as primary input sources. Use calendar mainly for meeting matching and attribution, not conversation content.
+- Treat Pylon and reporting fields as destinations or outputs: Ergo can write call context or enriched fields there, but they are not standalone places Ergo reads conversation context from.
+- Confirm the relevant object, channel, calendar event, queue, account, attendee email, or field is accessible and matched to the right Ergo user and organization.
+- Treat meeting outputs as separate: capture, transcript, summary, insights, drafts, and reporting updates can become ready at different times.
+
+## What to expect
+
+- Freshness depends on the source, sync path, matching, and processing state.
+- Insights and drafts can depend on meeting classification, not only whether a recording or summary exists.
+- Use product state and code-confirmed behavior over anecdotal expectations when sources disagree.
 
 ## Common issues
 
-- The person is using the wrong workspace or team context.
-- Their role, permission, or spectator access does not match the workflow.
-- A connected source is missing, stale, or still syncing.
-- AI output needs source review before it is used externally.
+- The wrong source, account, or organization context is selected.
+- The needed source is disconnected, stale, or unmatched.
+- A meeting attendee, account, or identity mismatch makes an attended meeting appear missing or inaccessible.
+- A shared link, reporting grant, or spectator role is expected to provide broader access than it actually grants.
 
 ## Related articles
 
 - [Start here](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Spectator access](./spectator-access)
+- [Security, data retention, and LLM usage](./security-data-retention-and-llm-usage)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [First-time setup checklist](../setup/first-time-setup-checklist)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

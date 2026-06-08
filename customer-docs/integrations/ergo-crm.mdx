@@ -1,35 +1,46 @@
 ---
 title: "Ergo CRM"
-description: "Connect and maintain Ergo CRM with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Ergo CRM","Integrations","Ergo docs"]
+description: "Use Ergo as the CRM when contacts, companies, and deals should live in Ergo instead of an external CRM."
+keywords: ["Ergo CRM", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to use Ergo CRM when your team wants contacts, companies, and deals to live in Ergo rather than in Salesforce, HubSpot, Attio, or Pipedrive.
+
+## Who can use this
+
+- Admins and RevOps teams deciding the CRM source of truth.
+- Teams using Ergo deals without connecting an external CRM.
 
 ## Before you start
 
-- Have access to the Ergo CRM account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm your team wants Ergo, not an external CRM, to be the primary place for deal records.
+- Review who can create, edit, and view CRM records in Ergo.
+- Do not use external-CRM reconnect guidance for Ergo CRM; it does not rely on a third-party OAuth grant.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Ergo CRM**.
+- Connect Ergo CRM.
+- Open **Deals** and confirm the expected deals, companies, and contacts are available.
+- Review CRM permissions and field mapping before relying on write workflows.
 
-- Use Ergo CRM when your workspace manages CRM records inside Ergo.
-- Review company, deal, and stage setup before enabling automation.
-- Confirm fields match your team's reporting needs.
-- Test one deal workflow end to end.
+## What to expect
+
+- Ergo CRM is enabled from the Integrations card rather than through a third-party token or OAuth grant.
+- External CRM write paths and provider-specific limitations do not automatically apply to Ergo CRM.
+- If your team later connects an external CRM, confirm which CRM should be treated as the source of truth.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The team expected an external CRM sync, but Ergo CRM was selected instead.
+- A user lacks permission to view or edit CRM records in Ergo.
+- The team has not agreed which CRM source should own deals and companies.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Deals board overview](../deals-crm/deals-board-overview)
+- [Add or edit deals](../deals-crm/add-edit-deals)
+- [Field mapping overview](../field-mapping/field-mapping-overview)

@@ -1,35 +1,46 @@
 ---
 title: "Attio"
-description: "Connect and maintain Attio with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Attio","Integrations","Ergo docs"]
+description: "Connect Attio so Ergo can use Attio CRM records and configured CRM updates."
+keywords: ["Attio", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Attio when Attio is your CRM source for deals, companies, contacts, and fields.
+
+## Who can use this
+
+- Admins and RevOps teams configuring CRM access.
+- Operators validating object, field, and pipeline behavior.
 
 ## Before you start
 
-- Have access to the Attio account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Use an Attio account with access to the workspace records and objects Ergo should use.
+- Confirm the relevant Attio lists, attributes, and permissions before relying on CRM updates.
+- Review field mapping and CRM matching before enabling automation.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Attio**.
+- Complete the OAuth flow.
+- Confirm Attio appears connected.
+- Review field mapping and object matching with your admin.
 
-- Connect Attio from Integrations with an account that has access to the records Ergo should use.
-- Review mapped fields before enabling CRM updates.
-- Confirm companies, people, and deals are named consistently.
-- Test one record before rolling out broader automation.
+## What to expect
+
+- Ergo can use Attio CRM data where your workspace has connected and mapped the relevant objects.
+- Attio permissions, object setup, and attribute mapping determine which records Ergo can read or update.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The connected account cannot access the target Attio object or attribute.
+- A list or attribute changed after setup.
+- A record is missing because the meeting or email was not matched to the expected CRM entity.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Salesforce](./salesforce)
+- [HubSpot](./hubspot)
+- [Field mapping overview](../field-mapping/field-mapping-overview)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

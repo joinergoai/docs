@@ -1,30 +1,46 @@
 ---
 title: "Advanced CRM toggles"
-description: "Configure advanced CRM toggles so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Advanced CRM toggles","Field mapping and CRM configuration","Ergo docs"]
+description: "Change broad CRM automation controls carefully and test one record before rollout."
+keywords: ["advanced CRM settings", "CRM toggles", "automation controls"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use Advanced only when an admin needs to change broad CRM behavior that can affect matching, automation, notifications, or writeback. These toggles are powerful enough to deserve a controlled test.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review advanced CRM toggles with an admin.
-- Change one toggle at a time.
-- Test the affected workflow after saving.
-- Document organization-specific toggle choices.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Review the current setting and the workflow it affects.
+- Change only one broad toggle at a time.
+- Test with one representative record before rollout.
+- Tell impacted users what changed if the setting affects visible workflow behavior.
+
+## What to expect
+
+- Advanced toggles can change behavior without changing field mappings.
+- Some toggles influence AI or automation behavior rather than CRM schema.
+- A setting can appear correct but still fail if CRM permissions or mappings are incomplete.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- Multiple broad toggles changed at once.
+- A toggle was enabled before field mapping was complete.
+- The test record does not represent the real workflow.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting-title AI boost](./meeting-title-ai-boost)
+- [Deal qualification](./deal-qualification)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

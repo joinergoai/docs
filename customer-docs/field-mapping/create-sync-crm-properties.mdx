@@ -1,34 +1,48 @@
 ---
 title: "Create/sync CRM properties"
-description: "Configure create/sync CRM properties so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Create/sync CRM properties","Field mapping and CRM configuration","Ergo docs"]
+description: "Sync existing CRM properties into Ergo, create approved fields where supported, and refresh mappings when CRM fields change."
+keywords: ["sync CRM properties", "create CRM properties", "property sync", "field descriptions"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use create and sync flows when a CRM field needs to be added to Ergo or a newly approved Ergo field needs to exist in the CRM. Treat this as an admin workflow, not a rep-level board action.
+
+## Who can use this
+
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
 ## Before you start
 
-- Confirm CRM is connected or available.
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
 
+## Steps
 
-## Configure it
+- Open the CRM property sync modal from Field Mapping.
+- Choose the object type: deal, contact, or company.
+- Search and select existing CRM properties to sync.
+- Leave auto-generated descriptions on only when the generated description is reviewed before use.
+- Create new CRM properties only when the CRM owner has approved the field type, options, and naming.
+- Refresh or resync when one field changed in CRM.
 
-- Create required properties in the CRM when they do not exist.
-- Sync properties back into Ergo.
-- Map the synced properties to the right Ergo fields.
-- Test one record before relying on automated updates.
+## What to expect
+
+- Synced properties become available to Field Mapping and other Ergo surfaces after refresh.
+- Creating CRM properties depends on CRM support and integration permissions.
+- Existing properties are preselected in the sync modal so admins can see what is already mapped.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A property exists in CRM but was not selected during sync.
+- Auto-generated descriptions are too generic for reliable AI context.
+- The CRM blocks property creation for the integration user.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Property permissions](./property-permissions)
+- [Pipelines](./pipelines)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

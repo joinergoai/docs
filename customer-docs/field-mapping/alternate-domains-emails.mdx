@@ -1,30 +1,46 @@
 ---
 title: "Alternate domains/emails"
-description: "Configure alternate domains/emails so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Alternate domains/emails","Field mapping and CRM configuration","Ergo docs"]
+description: "Add alternate domains and emails so Ergo can recognize related account context without over-broad matching."
+keywords: ["alternate domains", "alternate emails", "account matching", "CRM matching"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use alternate domains and emails when the same account uses multiple domains, subsidiaries, aliases, or email patterns that should be treated as related context.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Add alternate domains or emails when customers use multiple identities.
-- Use this to improve matching across meetings, emails, and CRM records.
-- Review duplicates before adding alternates.
-- Test matching after changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Add only domains or emails that should be treated as the same account context.
+- Confirm the domain is not a generic provider, partner, reseller, or internal domain.
+- Review matching after adding a new alias.
+- Remove aliases that cause unrelated records to merge in context.
+
+## What to expect
+
+- Alternate domains and emails broaden matching context; they do not replace CRM associations.
+- Over-broad aliases can attach activity to the wrong account.
+- Matching changes may affect meetings, emails, drafts, and record search.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A parent company, subsidiary, and partner use overlapping domains.
+- A personal email domain was added by mistake.
+- The CRM has duplicates that alternate domains cannot safely resolve.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Company info](./company-info)
+- [Partnership domains](./partnership-domains)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

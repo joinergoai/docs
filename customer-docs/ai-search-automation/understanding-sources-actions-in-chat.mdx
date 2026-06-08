@@ -1,30 +1,50 @@
 ---
 title: "Understanding sources/actions in chat"
-description: "Use understanding sources/actions in chat with the right customer context, sources, filters, and automation checks."
-keywords: ["Understanding sources/actions in chat","Ergo AI, search, and automation","Ergo docs"]
+description: "Separate cited source context from proposed actions in Ergo chat responses."
+keywords: ["Understanding sources/actions in chat", "Ergo AI, search, and automation", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+Sources explain where an answer came from. Actions are proposed changes or workflow steps. Review both before moving forward.
 
+## Who can use this
 
-## Use this workflow
+- Anyone using Chat or the floating agent panel.
+- Managers and admins reviewing whether an AI answer is grounded.
 
-- Review the sources Ergo cites in a chat answer.
-- Check actions before approving or relying on them.
-- Open source records when an answer looks surprising.
-- Contact support if sources point to the wrong customer context.
+## Before you start
+
+- Know which source type you expected: meeting, email, CRM, document, Slack, or web.
+- Confirm the user has permission to see that source.
+- Decide whether you need an answer only or an action.
+
+## Steps
+
+- Read the answer.
+- Open or inspect cited sources when available.
+- Check whether source snippets support the specific claim.
+- Review any action card separately from the answer.
+- Approve, edit, or dismiss actions according to your workflow.
+
+## What to expect
+
+- Sources can be incomplete when underlying systems are disconnected or still indexing.
+- A source-backed answer can still need judgment if the source is stale.
+- Action cards may require explicit user confirmation before applying changes.
+- Some tool output is internal to the workflow and should not be copied into customer-facing messages without review.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- A user treats a summary as proof without checking the source.
+- A proposed action is assumed to have executed.
+- A source is missing because the record is outside the user's access.
+- The answer combines multiple source types with different freshness.
 
 ## Related articles
 
 - [Ergo AI, search, and automation](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Chat with Ergo](./chat-with-ergo)
+- [Using deal and meeting context](./using-deal-and-meeting-context)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [Security, data retention, and LLM usage](../start-here/security-data-retention-and-llm-usage)

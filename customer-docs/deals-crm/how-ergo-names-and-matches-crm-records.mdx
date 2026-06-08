@@ -1,30 +1,46 @@
 ---
 title: "How Ergo names and matches CRM records"
-description: "Use how Ergo names and matches CRM records to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["How Ergo names and matches CRM records","Deals and CRM workspace","Ergo docs"]
+description: "Understand how Ergo uses CRM records, company names, domains, contacts, meeting context, and mapped settings when records appear mismatched."
+keywords: ["CRM matching", "record matching", "company domains", "deal names"]
 ---
-
 
 ![Flow diagram showing how meeting titles, companies, domains, and CRM records affect matching.](../images/crm-record-matching-flow.svg)
 
+Use this page when a deal, company, meeting, email, or draft appears under the wrong account or is hard to find. Matching depends on CRM associations plus configured company and domain context; every spelling or alias may still need review.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Check the meeting title, company name, domain, and CRM associations.
-- Confirm the company or deal name in CRM matches the expected customer.
-- Search by alternate names if a record is hard to find.
-- Update CRM naming or associations when Ergo matched the wrong record.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Compare the CRM deal name, company name, contacts, email domains, and meeting title.
+- Check company info, alternate domains/emails, and partnership domains when context is ambiguous.
+- Confirm the selected pipeline and Companies view before changing names.
+- Open the source CRM when two records may represent the same account.
+
+## What to expect
+
+- Ergo can show CRM-backed associations and related activity when those records have been ingested and matched.
+- Alternate domains/emails broaden matching context; partnership domains help prevent partner activity from being treated as customer or prospect activity.
+- Source CRM associations still matter. If a deal is not associated to the right contact or company, fix the source CRM association before relying on Ergo matching.
 
 ## Common issues
 
-- The company or deal name differs from the meeting or customer name.
-- The meeting is associated with a different CRM record than expected.
-- Domain, contact, or account data is incomplete in the CRM.
-- The meeting source does not provide the same recording or audio assets as Ergo Notetaker.
+- The account uses multiple domains or aliases.
+- A partner, reseller, or internal attendee is being treated like the customer.
+- The CRM has duplicate companies or deals.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Add/edit deals](./add-edit-deals)
+- [Company board](./company-board)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

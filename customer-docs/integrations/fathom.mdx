@@ -1,35 +1,45 @@
 ---
 title: "Fathom"
-description: "Connect and maintain Fathom with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Fathom","Integrations","Ergo docs"]
+description: "Connect Fathom with the webhook and secret flow shown in Ergo so supported Fathom recordings can be processed."
+keywords: ["Fathom", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Fathom is one of your meeting recording sources.
+
+## Who can use this
+
+- Users and operators configuring Fathom ingestion.
+- Admins reviewing third-party notetaker overlap.
 
 ## Before you start
 
-- Have access to the Fathom account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm your workspace has access to the Fathom integration.
+- Follow the Fathom-specific instructions shown in Ergo.
+- Decide how Fathom should coexist with other notetakers.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Fathom**.
+- Follow the instructions shown in the Fathom panel.
+- Save the required secret or credential in Ergo.
+- Test with a known Fathom recording and verify it appears in Ergo.
 
-- Connect Fathom from Integrations.
-- Confirm the meetings and users Ergo should ingest.
-- Review output differences compared with Ergo Notetaker.
-- Test one meeting before using Fathom data in CRM or reporting workflows.
+## What to expect
+
+- Fathom webhook verification depends on the saved secret and supported webhook payloads.
+- Ergo may skip a Fathom payload if the recorded-by email cannot be mapped to the expected Ergo user.
+- Duplicate-source review is important if another notetaker records the same meeting.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The webhook secret does not match.
+- The recorded-by email is not mapped to the Ergo user.
+- The Fathom payload is valid but another notetaker source already captured the meeting.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)

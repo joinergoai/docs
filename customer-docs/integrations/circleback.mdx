@@ -1,35 +1,46 @@
 ---
 title: "Circleback"
-description: "Connect and maintain Circleback with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Circleback","Integrations","Ergo docs"]
+description: "Connect Circleback by sending Circleback meeting notes, transcripts, and action items to Ergo through a webhook."
+keywords: ["Circleback", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Circleback is one of your meeting note sources.
+
+## Who can use this
+
+- Users and operators configuring Circleback automation delivery.
+- Admins reviewing third-party notetaker overlap.
 
 ## Before you start
 
-- Have access to the Circleback account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Have access to Circleback automations.
+- Copy the webhook URL and sign-in secret shown in Ergo.
+- Decide how Circleback should coexist with other notetaker sources.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Circleback**.
+- Copy the webhook URL shown in Ergo.
+- In Circleback, create an automation that sends meeting notes, transcript, and action items to the webhook after meetings.
+- Paste the Circleback sign-in secret in Ergo and connect.
+- Test with one meeting.
 
-- Connect Circleback from Integrations when your team uses Circleback as a meeting source.
-- Confirm which meetings should flow into Ergo.
-- Review whether Circleback and Ergo Notetaker are both active for the same meetings.
-- Use multiple-notetaker guidance if duplicate outputs appear.
+## What to expect
+
+- Circleback delivery depends on the Circleback automation firing after the meeting.
+- Ergo processes the payload it receives; missing transcript, notes, or action items in Circleback can limit downstream output.
+- Duplicate-source review is important if another notetaker also records the same call.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The webhook URL was copied incorrectly.
+- Circleback automation does not include the expected notes, transcript, or action items.
+- A meeting is delivered more than once or another notetaker source already captured it.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)

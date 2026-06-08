@@ -1,30 +1,49 @@
 ---
 title: "Picklist and numerical buckets"
-description: "Use picklist and numerical buckets to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Picklist and numerical buckets","Reporting","Ergo docs"]
+description: "Configure picklist options and numerical ranges so Reporting charts and filters group data correctly."
+keywords: ["Picklist buckets", "Numerical buckets", "Reporting field configuration", "Range filters"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Picklist options and numerical buckets control how Reporting groups field values. Use them to make charts easier to compare across teams and time periods.
 
+## Picklist fields
 
-## Use this workflow
+Picklist fields use configured options. You can:
 
-- Choose the picklist or numerical field.
-- Define buckets that match the reporting question.
-- Preview the distribution before saving.
-- Update buckets when the underlying field changes.
+- Add options one at a time.
+- Paste comma-separated or line-separated options.
+- Merge new options with existing options.
+- Update a field's picklist values.
+- Group selected picklist values into user-configured categories when the field supports it.
 
-## Common issues
+Keep option labels mutually understandable. Reporting is easier to read when managers do not need to remember subtle differences between nearly identical values.
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+## Numerical fields
+
+Numerical fields use named ranges. When configuring ranges:
+
+- Each range needs a minimum and maximum.
+- The minimum must be lower than the maximum.
+- Ranges should not overlap.
+- Ranges are re-indexed after removal.
+
+Numerical filters use the configured range values. A selected range becomes a numeric query against that field.
+
+## After changing buckets
+
+- Refresh the dashboard or chart.
+- Check whether the chart is using cached data.
+- Re-run or request updated clustering if the field's grouping logic changed materially.
+- Revisit saved charts and reporting email cadences that rely on the field.
+
+Changing bucket configuration changes how future reads group the field; it does not prove that every historical source has been reprocessed.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Custom reporting fields](./custom-reporting-fields)
+- [Chart builder](./chart-builder)
+- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

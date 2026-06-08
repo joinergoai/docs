@@ -1,30 +1,36 @@
 ---
 title: "Using multiple notetakers with Ergo"
-description: "Handle using multiple notetakers with Ergo in the meetings and notetaker workflow."
-keywords: ["Using multiple notetakers with Ergo","Meetings and notes","Ergo docs"]
+description: "Avoid duplicate meeting records, drafts, and CRM updates when Ergo and another notetaker capture the same call."
+keywords: ["multiple notetakers", "duplicate meetings", "duplicate drafts", "meeting source"]
 ---
-
 
 ![Flow diagram showing how multiple notetakers can create duplicate context and drafts.](../images/multiple-notetakers-flow.svg)
 
+Using more than one notetaker can be useful, but it can also create duplicate meeting records and duplicate downstream work.
 
+## What can duplicate
 
-## Use this workflow
+- Meeting history records.
+- Transcripts or summaries.
+- Post-call drafts.
+- CRM updates.
+- Reporting and automation outputs.
 
-- Decide which notetaker source should drive Ergo automations.
-- Avoid connecting multiple notetakers to the same workflow when possible.
-- If you keep another notetaker for internal use, disconnect it from Ergo when duplicate drafts appear.
-- Use Ergo Desktop or Ergo Notetaker as the connected source when you want Ergo outputs and automations.
+## How to reduce duplication
 
-## Common issues
+- Pick one primary capture source for each recurring workflow.
+- Turn off the Ergo bot for meetings where another notetaker should be the source of truth.
+- Check the meeting source before pushing automations.
+- Review drafts before sending when more than one recorder joined the same meeting.
 
-- More than one notetaker source captured the same meeting.
-- An external notetaker is connected to Ergo while Ergo Notetaker or Desktop is also active.
-- Draft deduplication does not apply across every notetaker source.
-- The team wants to keep an external notetaker for internal use but not for Ergo automations.
+## When duplication is expected
+
+- You use both the Ergo bot and a third-party notetaker on the same call.
+- You upload an external recording of a meeting already captured by the bot.
+- You create manual notes and also process a transcript for the same event.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [One bot per org: shared notetaking behavior](./one-bot-per-org-shared-notetaking-behavior)
+- [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)
+- [Duplicate drafts from multiple notetakers](../troubleshooting/duplicate-drafts-from-multiple-notetakers)

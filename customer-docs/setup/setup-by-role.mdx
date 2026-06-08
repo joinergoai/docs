@@ -1,40 +1,57 @@
 ---
 title: "Setup by role"
-description: "Understand which setup and success tasks belong to RevOps, operators, AEs, CSMs, sales managers, spectators, and desktop users."
-keywords: ["Setup by role","Onboarding","Ergo docs"]
+description: "Choose the right Ergo setup path for admins, operators, standard users, managers, and spectators."
+keywords: ["Setup by role", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding view showing setup paths for RevOps, operators, users, sales managers, and spectators.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page to route each person through the setup path they own without giving broad access to settings they do not manage.
 
-## Who is this for?
+## Who can use this
 
-- For RevOps owners who configure the workspace, operators helping with delegated setup, users completing personal setup, managers using team workflows, and spectators receiving limited access.
+- Admins and super admins who own shared setup.
+- RevOps or operations teammates coordinating delegated setup work.
+- Standard users who need to connect personal sources.
+- Managers, spectators, or shared-link recipients who need limited access.
 
+## Before you start
 
-## Setup steps
+- Complete or assign shared setup before inviting the broader team: CRM, field mapping, pipeline stages, organization defaults, email templates, collaboration tools, notetaker defaults, reporting, and pricing when enabled.
+- Confirm whether each person is a user, admin, super admin, spectator, or shared-link recipient.
+- Keep admin-owned settings with the right owner, especially CRM fields, reporting grants, global access, pricing, and organization defaults.
+- Use role-specific setup pages when someone only needs part of the full rollout path.
 
-- Use the RevOps setup guide when the owner is responsible for systems, permissions, teams, CRM mappings, grading, reporting, defaults, and rollout.
-- Use the operator setup guide when someone helps administer users, templates, access, or reporting after RevOps setup direction is clear.
-- Use the AE setup guide for individual sellers who need meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.
-- Use the CSM setup guide for post-sale users who need customer meetings, summaries, account context, handoffs, and follow-up workflows.
-- Use the sales manager tips guide for managers using grading, aggregate grading, coaching, team use cases, and forecasting signals.
-- Use spectator and viewer setup when someone should view selected meetings, reports, or shared links without a full user workflow.
-- After a person finishes setup, use the matching tips for success article to understand the practical habits for that role.
+## Steps
+
+- Use the admin or delegated-operator path for shared setup: CRM connection, user and team setup, field mapping, pipeline stages, templates, collaboration tools, notetaker defaults, reporting, and pricing when enabled.
+- Use the standard-user path for personal setup: email and calendar, notetaker or desktop capture, collaboration access, email templates, and any sync-from-admin step shown in onboarding.
+- Use the manager, spectator, or shared-link path for limited review access without granting CRM writes, draft control, integration setup, or organization-wide settings unless the person's role allows it.
+- Test one narrow pilot workflow before broad rollout: one meeting or call, expected dashboard visibility, processing state, and the CRM, reporting, or draft output that should be produced.
+- Leave optional notifications, templates, and follow-up workflows for a later pass when they are not required for the first pilot.
+
+## What to expect
+
+- Role-specific setup keeps users from changing settings they do not own.
+- Admins can complete shared setup before users complete personal setup.
+- Some setup steps differ by role, spectator status, reporting access, feature availability, and connected source.
+- Ergo Desktop has separate local permissions and capture setup; web onboarding does not complete desktop setup by itself.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- A required source is disconnected, stale, or matched to the wrong account.
+- A user lacks the needed role, reporting grant, spectator scope, or shared-link access.
+- A filter, saved view, ingestion setting, or permission hides the expected result.
+- A meeting is detected but the notetaker, desktop capture, processing, or downstream output did not complete.
 
 ## Related articles
 
+- [Setup](./index)
+- [First-time setup checklist](./first-time-setup-checklist)
 - [RevOps setup for Ergo rollout](./revops-setup-for-ergo-rollout)
 - [Operator setup](./operator-setup)
 - [AE setup](./ae-setup)
 - [CSM setup](./csm-setup)
-- [Sales manager tips for success](./sales-manager-tips-for-success)
 - [Spectator and viewer setup](./spectator-and-viewer-setup)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

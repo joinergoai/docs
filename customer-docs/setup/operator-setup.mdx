@@ -1,49 +1,61 @@
 ---
 title: "Operator setup"
-description: "Help operate Ergo setup after RevOps defines systems, permissions, team defaults, and rollout rules."
-keywords: ["Operator setup","Onboarding","Ergo docs"]
+description: "Set up delegated operators or GTM ops helpers without treating operator as a separate Ergo permission role."
+keywords: ["Operator setup", "Setup", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing delegated setup, user management, and access controls.](../images/product-admin-dashboard.png)
 
+Use this page when a RevOps, admin, or GTM operations teammate delegates setup work to someone who helps users, templates, access, reporting, or source checks. Operator is a setup persona, not a separate Ergo permission role.
 
-## Who is this for?
+## Who can use this
 
-- For operators, RevOps teammates, sales operations, customer operations, enablement, or delegated admins helping administer Ergo after RevOps sets direction.
-- Requires Google Workspace or Microsoft 365, CRM, Notetaker.
+- Admins or super admins assigning delegated setup work.
+- RevOps or operations teammates helping users complete setup.
+- Delegated operators who have the admin access or approved source context required for the task.
 
 ## Before you start
 
-- Confirm which RevOps-approved admin account or source settings you should sync from.
-- Know which areas you can manage yourself and which require RevOps or super-admin help.
-- Have your own email/calendar account ready; personal Google or Microsoft grants do not transfer through admin sync.
+- Confirm which admin owns the source of truth for CRM, field mapping, pipeline stages, reporting, notetaker defaults, and organization settings.
+- Confirm the delegated operator is in the correct Ergo account, team, and role before asking them to troubleshoot users.
+- Decide which tasks require admin or super-admin access and which can be handled by a standard user completing personal setup.
+- Keep shared setup separate from personal connections. Admins provision seats and shared defaults; each user connects their own email, calendar, and notetaker or desktop setup.
+- Know which settings should be inherited from an approved admin and which settings the user must connect personally.
 
+## Steps
 
-## Setup steps
+- Review the RevOps-approved setup direction before changing users, teams, CRM fields, templates, collaboration tools, reporting, or notetaker defaults.
+- Use **Sync with Admin** when a user should inherit approved admin configuration, such as CRM keys, mapped properties, pipeline stages, company context, meeting-title phrases, templates, task settings, alternate domains, partnership domains, and advanced settings.
+- If the operator is also a user, complete personal setup: email/calendar, notetaker or desktop capture, templates, collaboration access, and any sync-from-admin step shown in onboarding.
+- For user support, confirm the user's seat, team, role, spectator status, reporting access, and connected source before changing settings.
+- For source support, check the authenticated account, CRM connection, field mapping, pipeline stages, calendar connection, and notetaker status.
+- Test one controlled workflow before declaring setup ready: one meeting or call, bot admission or desktop capture, draft generation when enabled, dashboard visibility, and CRM/contact or reporting output when configured.
 
-- **Step 1: Welcome and role check.** Confirm you are helping operate setup after RevOps has defined the workspace-level CRM, pipeline, field, notetaker, grading, reporting, and access choices.
-- **Step 2: Sync with Admin.** Open Sync with Admin, choose the RevOps-approved admin account or source settings to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, alternate domains, partnership domains, and advanced settings.
-- **Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. Admin sync does not transfer personal inbox, calendar, or OAuth grants.
-- **Step 4: Configure your workspace behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Keep personal settings aligned with RevOps' rollout unless you have a reason to differ.
-- **Step 5: Review templates.** Confirm whether you should use the team template, edit templates for your team, or leave templates to RevOps. Templates shape post-call drafts for users.
-- **Step 6: Connect the notetaker.** Confirm the approved notetaker source and connect only the source your workspace expects. Ergo Notetaker requires a connected Google or Microsoft calendar first.
-- **Step 7: Connect collaboration tools.** Connect Slack for notifications and call prep. Beeper appears only when enabled. Pylon appears only for admins when the org-level Pylon workflow is available.
-- **Operator follow-through: help users finish setup.** Verify users are in the right workspace and team, have connected email/calendar, know the notetaker behavior, and can find drafts, meetings, and support.
-- **Operator follow-through: sync to team members carefully.** Use admin/team sync only after the source settings are approved, because syncing too early can spread incomplete CRM, template, or advanced settings.
+## What to expect
+
+- Operators can help with delegated setup work only within their actual Ergo permissions.
+- Admin-configured setup can unlock context for users, but users may still need to authenticate their own email, calendar, notetaker, desktop, or collaboration sources.
+- Initial source sync, meeting capture, and downstream outputs can complete at different times.
+- Optional collaboration, template, and notification setup can be deferred when it is not needed for the first pilot.
+- Admin sync can spread incomplete CRM, template, or advanced settings, so only sync after the source configuration is approved.
 
 ## Common issues
 
-- The operator is asked to troubleshoot users without knowing which settings RevOps owns.
-- Team members are provisioned into the wrong team or workspace.
-- The operator selects their own email in Sync with Admin instead of the RevOps-approved source account to inherit from.
-- The operator expects CRM setup to be repeated even though RevOps configuration should already be inherited.
-- Settings are synced to users before the source settings are approved.
-- Users ask operators to fix CRM, reporting, or notetaker behavior that requires broader admin permission.
+- The wrong OAuth account, CRM account, calendar, or team was connected.
+- The operator is asked to fix a setting that requires admin, super-admin, reporting, or CRM permission.
+- A user expects inherited settings but has not completed personal setup or sync-from-admin.
+- Settings were synced before CRM fields, stages, templates, or advanced settings were finalized.
+- The notetaker does not join because the calendar owner, meeting link, host admission, or duplicate notetaker setup is wrong.
+- Filters, saved views, permissions, or processing state hide the expected meeting, deal, draft, or report.
 
 ## Related articles
 
+- [Setup](./index)
+- [RevOps setup for Ergo rollout](./revops-setup-for-ergo-rollout)
 - [Operator tips for success](./operator-tips-for-success)
 - [User sync](./user-sync)
 - [Email templates setup](./email-templates-setup)
-- [Sync CRM/settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Sync CRM settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

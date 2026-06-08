@@ -1,30 +1,109 @@
 ---
 title: "Email templates setup"
-description: "Complete the email templates setup onboarding step with the right owner and prerequisites."
-keywords: ["Email templates setup","Onboarding","Ergo docs"]
+description: "Set up Ergo email templates so post-call drafts follow the right structure, use case, and review workflow."
+keywords: ["Email templates setup", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page to set up the reusable email structures that guide Ergo's post-call follow-up drafts.
 
+Templates help Ergo choose the right shape for a draft. They do not replace review: every generated draft should still be checked against the meeting, recipient, CRM context, and your team's send policy.
 
-## Setup steps
+## Who should use this
 
-- Review default templates before post-call drafts begin generating.
-- Create or edit templates for the common follow-up situations your team handles.
-- Test one draft against a recent meeting to confirm tone and structure.
-- Update templates when your sales motion or customer-facing language changes.
+- Admins, RevOps owners, operators, and managers creating shared follow-up patterns before rollout.
+- AEs, CSMs, and account owners reviewing or editing templates for their own workflow.
+- Standard users who inherit templates through Sync with Admin and need to confirm which templates are active.
+
+## Before you start
+
+- Connect email and calendar, then confirm post-call follow-up drafts are enabled for the user or team.
+- Decide which call types need different structures, such as discovery, demo, proposal, renewal, onboarding, check-in, or handoff.
+- Confirm whether templates are owned centrally by an admin or edited by each user.
+- Set up email signatures separately; do not use the template body as the place for your full signature block.
+- Review any Sync with Admin or admin-push action carefully, because synced templates can overwrite a user's existing template list.
+
+## Create the right templates
+
+Each email template needs three parts.
+
+- **Name:** a short label users can recognize, such as a post-demo or renewal follow-up.
+- **Description:** routing guidance that tells Ergo when the template should apply.
+- **Content:** the reusable email structure Ergo should adapt for the specific meeting.
+
+Write the description like a selection rule, not like the email itself. For example, describe when to use the template, which call type it fits, and when not to use it. Ergo can compare available templates to the meeting, deal, and prior context, then draft without a template if none is a strong fit.
+
+## Write useful template content
+
+Keep template content short enough for a real customer follow-up.
+
+- Use static text for wording that should stay the same.
+- Use bracketed placeholders for call-specific content that Ergo should generate, such as `[brief recap of their main goal]`, `[two buyer next steps]`, or `[seller follow-up with owner and date]`.
+- Keep sections simple; long templates can make generated drafts feel rigid.
+- Do not include a full email signature in the template body. Configure the signature in the email-signature settings so it can be appended when the message is sent.
+- Avoid putting private customer examples, team-only notes, or one-off deal details into reusable templates.
+
+## Enable or disable template guidance
+
+Use the Email Templates toggle to decide whether drafts should use your active templates.
+
+- When enabled, active templates guide post-call draft structure.
+- When disabled, drafts can be generated without template guidance.
+- If a template was created only for testing or is no longer part of the workflow, delete or replace it rather than leaving stale guidance in the list.
+
+Templates are best for structure. Use draft review, reprompting, email preferences, and rules to refine tone, wording, length, or personal style after a draft is generated.
+
+## Use AI to draft or refine a template
+
+When the AI template builder is available, use it to create a first version or revise an existing template.
+
+- Give the builder the situation the template should cover.
+- Attach or reference examples only when they are safe for reuse.
+- Review the generated name, description, and content before saving.
+- Make sure the description still routes the template correctly after AI edits.
+
+## Test the template
+
+Before rolling templates out to the team, test one controlled follow-up workflow.
+
+1. Enable email templates for the user.
+2. Create or select one active template.
+3. Confirm the description clearly matches the meeting type.
+4. Use a processed customer meeting that should produce a follow-up draft.
+5. Review whether the draft followed the intended structure and filled bracketed sections with accurate source-backed details.
+6. Adjust the template, rules, or draft settings before syncing the template to other users.
+
+## What to expect
+
+- Ergo may generate without a template when no active template matches the current context strongly enough.
+- Template descriptions matter because they help route the right template to the right call type.
+- Template content shapes the draft but should not be treated as word-for-word final output.
+- Signatures are handled separately from the template body.
+- Draft eligibility still depends on meeting capture, email/calendar connection, follow-up settings, source context, and user access.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- The description is written like the email body instead of routing guidance.
+- Multiple templates have vague or overlapping descriptions, so the wrong structure is selected.
+- A team expects templates to control tone or exact phrasing when an email rule or draft reprompt would be more appropriate.
+- A full signature or closing block is added to the template body and duplicates the configured email signature.
+- Templates are disabled, stale, deleted, not synced to the user, or overwritten by an admin sync.
+- The meeting did not qualify for a post-call draft, so template setup is not the root cause.
+- The user expects every draft to use a template, even when no active template is a strong fit.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Workspace configuration](./workspace-configuration)
+- [Connect email and calendar](./connect-email-and-calendar)
+- [User sync](./user-sync)
+- [Sync CRM settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Templates overview](../drafts-email/templates-overview)
+- [Create/edit templates](../drafts-email/create-edit-templates)
+- [AI template builder](../drafts-email/ai-template-builder)
+- [Review/edit AI drafts](../drafts-email/review-edit-ai-drafts)
+- [Reprompt drafts with AI](../drafts-email/reprompt-drafts-with-ai)
+- [Email signatures and draft footers](../drafts-email/email-signatures-and-draft-footers)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [Draft send failures](../troubleshooting/draft-send-failures)

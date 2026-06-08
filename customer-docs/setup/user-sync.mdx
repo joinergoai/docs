@@ -1,30 +1,121 @@
 ---
 title: "User sync"
-description: "Complete the user sync onboarding step with the right owner and prerequisites."
-keywords: ["User sync","Onboarding","Ergo docs"]
+description: "Provision users, assign roles and teams, and copy the right admin settings without overwriting personal setup."
+keywords: ["User sync", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page when a new user should inherit shared Ergo configuration from an admin. User sync is not one action: first provision the user and assign access, then copy only the CRM and workspace settings that the user should share.
 
+## Who can use this
 
-## Setup steps
+- Admins and super admins who provision accounts, assign roles, manage teams, or push settings to users.
+- Standard users completing onboarding who need to sync their setup from an admin.
+- RevOps and operators coordinating rollout so users inherit the same CRM fields, stages, domains, templates, and advanced settings.
+- Spectators should follow the access path assigned by an admin; they should not expect standard-user setup, CRM write, or email-drafting sync behavior.
 
-- Connect the workspace account that contains the users Ergo should sync.
-- Review the synced user list before provisioning access.
-- Map users to the right teams and roles.
-- Re-sync after team or directory changes.
+## Before you start
+
+- Confirm the user belongs in the right organization, team, and role before syncing settings.
+- Make sure the admin configuration is ready: CRM connection, Field Mapping, pipeline stages, company details, meeting-title rules, templates, domains, task settings, and advanced settings.
+- Decide whether the user should inherit CRM credentials from an admin or connect their own CRM account.
+- Choose sync options intentionally. Syncing settings can overwrite the user's existing configuration.
+- Remember that personal connections are still personal. Sync does not connect a user's email, calendar, Slack account, desktop app, or third-party notetaker for them.
+
+## Provision and place the user
+
+1. Open the Admin area.
+2. Provision or invite the user.
+3. Assign the correct role, such as admin, standard user, or spectator.
+4. Add the user to the right team.
+5. Grant meeting access or reporting access separately if they need it.
+6. Ask the user to sign in and complete their personal setup steps.
+
+Do this before copying settings. A settings sync is most useful after the user's account, role, team, and access scope are correct.
+
+## Let a user sync with an admin
+
+During onboarding, a standard user can choose **Sync with Admin** and select which admin configuration to copy.
+
+Common options include:
+
+- CRM keys
+- CRM properties and property permissions
+- Pipeline stages, synced stages, stage descriptions, and pipeline restrictions
+- Company details
+- Meeting-title rules
+- Email, Slack, and CRM note templates
+- Task settings
+- Alternate domains and partnership domains
+- Advanced context and CRM behavior settings
+
+After the sync, the user should still review their own email, calendar, notetaker, drafts, Slack, and desktop settings.
+
+## Push settings from Admin
+
+Admins can also push selected settings to one user or selected team members.
+
+Use this when:
+
+- A user skipped onboarding sync.
+- A team should inherit updated CRM fields, stages, domains, or advanced settings.
+- A setup owner corrected the admin configuration after users were already invited.
+- A team needs consistent templates or meeting-title rules.
+
+Templates are usually more personal than CRM configuration, so review them before selecting template sync. In the admin push flow, templates may be left unchecked by default.
+
+## Use CRM-only sync carefully
+
+Some admin controls sync only CRM credentials from the org admin to a user. Use this when the user should share the admin's CRM integration path but should not inherit the broader workspace configuration.
+
+CRM-only sync can help a new user get connected to the CRM quickly, but Field Mapping, stages, templates, domains, reporting access, meeting access, and personal sources may still need separate checks.
+
+## Test after syncing
+
+After any sync, test the smallest workflow that depends on the copied settings.
+
+1. Ask the user to refresh or sign back in.
+2. Confirm the expected CRM connection appears.
+3. Check mapped properties, pipeline stages, meeting-title rules, templates, and domains.
+4. Confirm the user's personal email, calendar, notetaker, Slack, and desktop setup separately.
+5. Run one controlled meeting, CRM update, draft, or report depending on what the user needs.
+
+## What to expect
+
+- Sync copies selected admin configuration; it is not a full account setup wizard.
+- Sync can overwrite existing user settings for the selected options.
+- Owner fields and CRM-specific record-type behavior can depend on which CRM keys the user has.
+- Meeting access and reporting access are separate from settings sync.
+- A team sync can succeed for some selected members and fail for others, so verify the affected users before rollout.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- **The invite never arrives:** Verify the email address and provisioning status, then re-provision or resend the invite from the Admin area if needed.
+- **The user still cannot see a meeting or report:** Grant meeting or reporting access separately.
+- **A newly added user's notetaker does not join:** Confirm the user connected calendar and notetaker setup personally; settings sync does not complete those source connections.
+- **The user has synced settings but drafts are missing:** Confirm email/calendar connection, draft settings, templates, meeting eligibility, and source processing.
+- **The user has synced CRM settings but writeback fails:** Check CRM keys, property permissions, owner fields, pipeline/stage mapping, and CRM access.
+- **The user's CRM looks empty:** Confirm Sync with Admin ran from the intended admin and that the admin's CRM setup was complete before the sync.
+- **Templates changed unexpectedly:** Template sync can overwrite user templates when selected; review template ownership before syncing.
+- **The wrong admin was used as the source:** Re-sync from the intended admin after confirming their configuration is current.
+- **A user was moved teams after setup:** Recheck role, team, meeting access, reporting access, and whether team-specific settings should be pushed again.
+- **A personal source is missing:** Ask the user to connect their own email, calendar, notetaker, Slack, desktop app, or third-party source.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Workspace configuration](./workspace-configuration)
+- [Company details](./company-details)
+- [Connect your CRM](./connect-your-crm)
+- [CRM properties setup](./crm-properties-setup)
+- [Pipeline stages](./pipeline-stages)
+- [Email templates setup](./email-templates-setup)
+- [Connect email and calendar](./connect-email-and-calendar)
+- [Notetaker setup](./notetaker-setup)
+- [Provision accounts](../admin/provision-accounts)
+- [Add/remove/move members](../admin/add-remove-move-members)
+- [Sync CRM settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

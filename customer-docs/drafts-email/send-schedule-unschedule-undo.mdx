@@ -1,30 +1,51 @@
 ---
 title: "Send/schedule/unschedule/undo"
-description: "Use send/schedule/unschedule/undo for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Send/schedule/unschedule/undo","Drafts, email, and templates","Ergo docs"]
+description: "Send a draft now, schedule it for later, cancel a scheduled send, or undo supported draft actions."
+keywords: ["Send/schedule/unschedule/undo", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Use send and schedule only after the draft is ready for the recipient. Ergo validates the sender, recipients, subject, body, and thread data before completing the action.
 
+## Who can use this
 
-## Use this workflow
+- Users sending or scheduling email through Ergo.
+- Admins troubleshooting failed sends or scheduled drafts.
 
-- Review the draft and recipients.
-- Choose send, schedule, unschedule, or undo when available.
-- Confirm email connection is healthy.
-- Check the sent flow or email client after sending.
+## Before you start
+
+- Review the draft body and recipients.
+- Confirm the selected sender account is connected.
+- Confirm the draft should be sent now or scheduled for a future time.
+
+## Steps
+
+- Open the draft.
+- To send now, choose **Send** and confirm any undo prompt or validation state.
+- To schedule, choose the schedule option and select the send time.
+- To cancel a scheduled draft, open the Scheduled queue and choose the unschedule action.
+- If Ergo shows an undo option after a supported action, use it before the undo window expires.
+
+## What to expect
+
+- Send uses the connected email provider for the selected sender.
+- Scheduled drafts move to the Scheduled queue until they are sent or unscheduled.
+- Unscheduling returns the draft to an editable state when provider cancellation succeeds.
+- Undo support depends on the action and whether the undo window is still open.
+- Open tracking and sent-state updates may not appear immediately after scheduling or sending.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Email access is expired.
+- Recipients, subject, body, sender, or thread metadata are missing or invalid.
+- The scheduled send time is invalid or already passed.
+- The provider accepted the schedule but has not yet returned final sent-state or tracking data.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Open tracking and sent flow](./open-tracking-and-sent-flow)
+- [Sent email browser](./sent-email-browser)
+- [Draft send failures](../troubleshooting/draft-send-failures)

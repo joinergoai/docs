@@ -1,35 +1,46 @@
 ---
 title: "Granola"
-description: "Connect and maintain Granola with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Granola","Integrations","Ergo docs"]
+description: "Connect Granola through OAuth/MCP or an API token so Granola notes can be imported into Ergo."
+keywords: ["Granola", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Granola is one of your meeting note sources.
+
+## Who can use this
+
+- Users connecting their Granola account.
+- Operators validating Granola source status and duplicate notetaker behavior.
 
 ## Before you start
 
-- Have access to the Granola account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm the Granola integration is enabled for your workspace.
+- Decide whether you are connecting Granola through OAuth/MCP or an API token.
+- Avoid enabling multiple notetaker sources without checking duplicate behavior.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Granola**.
+- Choose the Granola connection method shown in Ergo.
+- Complete OAuth or paste the personal API token.
+- Confirm the connection status and preferred source.
+- Test with one Granola note before relying on broader import.
 
-- Connect Granola only when your team wants Granola notes to flow into Ergo.
-- Avoid connecting Granola and Ergo Notetaker to the same workflow unless you expect both sources.
-- Disconnect Granola from Ergo if duplicate drafts or duplicated context appear.
-- Use Ergo Desktop connected to Ergo when you want Ergo automations to run from desktop capture.
+## What to expect
+
+- Ergo tracks Granola connection state per source, including OAuth/MCP and API-token sources.
+- Token refresh and polling behavior happen behind the scenes, but revoked or expired credentials can stop imports.
+- Granola notes are imported when they are available through the connected source and have not already been processed.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The Granola token was revoked or expired.
+- Both OAuth/MCP and API token sources are connected and the wrong source is preferred.
+- A Granola note was already imported or is still pending.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)

@@ -1,30 +1,45 @@
 ---
-title: "Activity, emails, meetings, and documents tabs"
-description: "Use activity, emails, meetings, and documents tabs to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Activity, emails, meetings, and documents tabs","Deals and CRM workspace","Ergo docs"]
+title: "Activity, emails, and meetings"
+description: "Use deal and company detail views to verify activity timelines, emails, meetings, and custom fields before taking action."
+keywords: ["activity tab", "emails", "meetings", "deal detail"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use detail views when you need evidence behind a health signal, AI overview, draft, or CRM update. The exact sections can differ between deal detail and company detail.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open a deal or company detail page.
-- Use each tab to inspect a different source of context.
-- Check timestamps when data appears stale.
-- Use related troubleshooting if a tab is empty unexpectedly.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- On deal detail, review activity, deal info, emails, meetings, and any custom field tabs available in your workspace.
+- On company detail, review company activity, company info, emails, meetings, and related deals when available.
+- Use the right rail on deal detail for linked company and contact context.
+- Verify source recency before sending a draft or updating a CRM field.
+
+## What to expect
+
+- Activity can include emails, meetings, and connected sources such as Slack when they are associated with the record.
+- Emails and meetings appear when they are available to Ergo and matched to the record.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Activity is attached to the company instead of the deal.
+- A meeting or email exists but is not associated with the CRM record.
+- The source system is connected, but the item is not matched to the CRM record.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [AI deal/account overviews](./ai-deal-account-overviews)
+- [Bulk actions](./bulk-actions)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

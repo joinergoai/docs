@@ -1,35 +1,49 @@
 ---
 title: "Slack monitoring and pre-call context"
-description: "Connect and maintain Slack monitoring and pre-call context with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Slack monitoring and pre-call context","Integrations","Ergo docs"]
+description: "Turn Slack monitoring and pre-call context on only after the Slack workspace connection and channel access are ready."
+keywords: ["Slack monitoring and pre-call context", "Integrations", "Ergo docs"]
 ---
-
 
 ![Flow diagram showing Slack channel context feeding pre-call context and follow-up workflows.](../images/slack-context-flow.svg)
 
+Use this page when your team wants Slack channel context to inform pre-call preparation or related workflows.
+
+## Who can use this
+
+- Admins and operators enabling Slack monitoring.
+- Users validating whether Slack context is available for their meetings or deals.
 
 ## Before you start
 
-- Have access to the Slack account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Connect Slack first.
+- Confirm the target channels are approved for monitoring and the Slack app has been added to each one.
+- For Slack Connect or other shared channels, confirm your team is comfortable with the app or bot being visible to channel members.
+- Confirm whether your workflow needs a workspace install, user token, or both.
 
+## Steps
 
-## Setup steps
+- Open the Slack integration in **Integrations**.
+- Turn on Slack monitoring if your workspace is ready for monitored channels.
+- Select or add the channels the app should access.
+- Turn on pre-call meeting context if your team wants Slack context included before calls.
+- Test with one channel and one meeting before broad rollout.
 
-- Connect Slack and confirm Ergo has access to the customer channels that matter.
-- Add Ergo to new customer channels before expecting pre-call context from those channels.
-- Check whether Slack Connect or private-channel permissions affect visibility.
-- Review duplicate or missing pre-call context with support when channel setup looks correct.
+## What to expect
+
+- Slack context depends on channel access, bot membership, and the settings enabled for the workspace.
+- Ergo monitors only channels it can directly access; unadded channels, DMs, and third-party Slack management tools are not substitutes for channel access.
+- Pre-call context should be treated as context enrichment, not as a complete capture of every relevant Slack message.
+- Private or restricted Slack spaces require the appropriate workspace and channel permissions.
 
 ## Common issues
 
-- Slack is disconnected or was reconnected with the wrong workspace.
-- Ergo is not in the customer channel.
-- Private, shared, or Enterprise Grid channel permissions block visibility.
-- Old channel mappings are still affecting context or delivery.
+- The Slack app is not in the channel.
+- Monitoring is off even though Slack is connected.
+- The channel is private or restricted and the app lacks access.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Slack](./slack)
+- [Search across meetings, emails, and documents](../ai-search-automation/search-across-meetings-emails-and-documents)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

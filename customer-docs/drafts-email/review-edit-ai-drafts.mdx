@@ -1,30 +1,51 @@
 ---
 title: "Review/edit AI drafts"
-description: "Check AI-generated drafts for tone, facts, recipients, next steps, and links before sending."
-keywords: ["Review/edit AI drafts","Drafts, email, and templates","Ergo docs"]
+description: "Check recipients, thread context, body, attachments, and AI-generated copy before sending a draft."
+keywords: ["Review/edit AI drafts", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Every AI-generated email should be reviewed like a normal outbound email before it is sent.
 
+## Who can use this
 
-## Use this workflow
+- Reps and account owners sending email from Ergo.
+- Managers coaching users on draft quality and review habits.
 
-- Open the generated draft.
-- Review tone, facts, next steps, and recipients.
-- Edit anything that should not be sent as written.
-- Send, schedule, dismiss, or reprompt the draft.
+## Before you start
+
+- Open the draft from the correct queue.
+- Review the associated meeting, deal, or thread context.
+- Confirm whether the draft should reply in an existing thread or start a new one.
+
+## Steps
+
+- Check the **From**, **To**, **Cc**, and **Bcc** fields.
+- Check the subject and thread strategy.
+- Edit the body directly in the editor.
+- Add, remove, or confirm attachments and inline images.
+- Confirm the signature and any footer content.
+- Send, schedule, set a reminder, or dismiss the draft.
+
+## What to expect
+
+- Body edits save separately from metadata updates such as subject, recipients, and thread choice.
+- AI copy may miss nuance, overstate a next step, or choose the wrong tone. Edit before sending.
+- Some drafts include related thread context so you can avoid duplicating an existing conversation.
+- Provider validation can block send or schedule if required fields or thread data are invalid.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- The draft references a stale meeting or deal state.
+- The AI selected an old thread or no thread when a reply is needed.
+- Attachment or inline image limits are exceeded.
+- The signature is missing because the user's signature settings are not configured.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Reprompt drafts with AI](./reprompt-drafts-with-ai)
+- [Thread history and related threads](./thread-history-and-related-threads)
+- [Attachments, images, and links](./attachments-images-and-links)
+- [Draft send failures](../troubleshooting/draft-send-failures)

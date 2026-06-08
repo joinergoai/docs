@@ -1,35 +1,51 @@
 ---
 title: "Email/Slack delivery for scheduled runs"
-description: "Use email/Slack delivery for scheduled runs with the right customer context, sources, filters, and automation checks."
-keywords: ["Email/Slack delivery for scheduled runs","Ergo AI, search, and automation","Ergo docs"]
+description: "Choose delivery destinations for scheduled agent run results and troubleshoot delivery gaps."
+keywords: ["Email/Slack delivery for scheduled runs", "Ergo AI, search, and automation", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+Scheduled run delivery can send results to email recipients, Slack destinations, or multiple destinations when configured.
+
+## Who can use this
+
+- Users configuring scheduled run recipients.
+- Admins troubleshooting failed delivery.
 
 ## Before you start
 
-- Confirm this feature is enabled for your workspace.
-- Confirm Google Workspace or Microsoft 365, Slack is connected or available.
+- Confirm the run prompt is ready.
+- Connect Slack before selecting Slack delivery.
+- Confirm email recipients and Slack channels or DMs are appropriate for the run output.
 
+## Steps
 
-## Use this workflow
+- Open the scheduled run.
+- Add email recipients for email delivery.
+- Add a Slack channel or DM destination when Slack delivery is available.
+- Save the run.
+- Use **Run** to test delivery.
+- Check history for delivery result details.
 
-- Choose email or Slack as the delivery destination.
-- Confirm the account, channel, or recipient has access.
-- Send a test or review the first scheduled delivery.
-- Reconnect integrations if delivery stops.
+## What to expect
+
+- Delivery destinations can include email and Slack.
+- Slack delivery is sent through the connected account/workspace configured for the user or org.
+- Execution history can show delivery result details such as email recipients, Resend ID, Slack draft ID, Slack permalink, channel ID, or channel name when available.
+- Delivery success can differ from agent execution success, so check both the run status and destination result.
 
 ## Common issues
 
-- Slack is disconnected or was reconnected with the wrong workspace.
-- Ergo is not in the customer channel.
-- Private, shared, or Enterprise Grid channel permissions block visibility.
-- Old channel mappings are still affecting context or delivery.
+- Slack is disconnected or the destination is no longer accessible.
+- An email recipient is invalid.
+- The run succeeds but one destination fails.
+- The output includes sensitive context and should not be delivered to a broad channel.
 
 ## Related articles
 
 - [Ergo AI, search, and automation](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Scheduled agent runs](./scheduled-agent-runs)
+- [Scheduled run history and health](./scheduled-run-history-and-health)
+- [Slack](../integrations/slack)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)

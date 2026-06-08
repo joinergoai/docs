@@ -1,30 +1,47 @@
 ---
 title: "CRM properties"
-description: "Configure CRM properties so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["CRM properties","Field mapping and CRM configuration","Ergo docs"]
+description: "Map deal, contact, and company CRM properties so Ergo can display, reason about, and update the right fields."
+keywords: ["CRM properties", "deal properties", "contact properties", "company properties"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use CRM Properties to decide which deal, contact, and company fields Ergo can use. Mapped properties power the Deals board, detail pages, AI context, reporting, and CRM write paths.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review which CRM properties Ergo uses.
-- Confirm each property exists in the CRM and has the expected type.
-- Check field permissions for the account connected to Ergo.
-- Sync or remap properties when the CRM schema changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Review deal, contact, and company property sections separately.
+- Select existing CRM-defined properties to sync into Ergo.
+- Add or create properties only when your CRM owner approves the field name, type, and options.
+- Check field type, picklist options, multi-select behavior, descriptions, and source.
+- Keep field descriptions specific enough for AI-assisted classification.
+
+## What to expect
+
+- Mapped properties can be shown on boards, cards, lists, detail pages, and AI context surfaces.
+- CRM-defined fields and Ergo-defined fields should not be treated interchangeably without checking the source.
+- Field options must stay aligned with the CRM.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A CRM admin changed a field type or picklist option after sync.
+- A property is mapped for the wrong object type.
+- A field is visible in Ergo but not writable by the CRM integration user.
 
 ## Related articles
 
-- [CRM properties setup](../setup/crm-properties-setup)
-- [Create/sync CRM properties](./create-sync-crm-properties)
+- [Field mapping](./index)
+- [Field mapping setup: required before CRM updates work](./field-mapping-setup-required-before-crm-updates-work)
+- [Property permissions](./property-permissions)
 - [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

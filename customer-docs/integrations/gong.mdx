@@ -1,35 +1,46 @@
 ---
 title: "Gong"
-description: "Connect and maintain Gong with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Gong","Integrations","Ergo docs"]
+description: "Connect Gong so Ergo can receive supported Gong meeting or recording context."
+keywords: ["Gong", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Gong when Gong is one of your meeting recording sources.
+
+## Who can use this
+
+- Admins and operators configuring a Gong-based notetaker source.
+- Users validating whether Gong meetings are appearing in Ergo.
 
 ## Before you start
 
-- Have access to the Gong account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm your workspace has access to the Gong integration.
+- Have the credentials or JWT key requested by the integration panel.
+- Decide how Gong should coexist with Ergo Notetaker, Ergo Desktop, and other third-party notetakers.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Gong**.
+- Complete the OAuth or credential flow shown in Ergo.
+- If prompted, provide the signed JWT key used for webhook verification.
+- Confirm Gong appears connected and test with a known meeting.
 
-- Connect Gong from Integrations when your team uses Gong as a meeting source.
-- Confirm which meetings and recordings Ergo can access from Gong.
-- Check whether summaries, insights, and drafts differ from Ergo Notetaker outputs.
-- Test one meeting before relying on Gong data in reporting or CRM updates.
+## What to expect
+
+- Gong is treated as a notetaker/recording source.
+- Connection state may depend on both org-level OAuth and the JWT key required for webhooks.
+- Duplicate recordings can happen if another notetaker source captures the same call.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The JWT key is missing or incorrect.
+- Gong is connected but the specific meeting was not delivered or matched.
+- Another notetaker source captured the same meeting.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

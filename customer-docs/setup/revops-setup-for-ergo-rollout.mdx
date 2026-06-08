@@ -1,55 +1,61 @@
 ---
 title: "RevOps setup for Ergo rollout"
-description: "Set up Ergo as the RevOps owner responsible for CRM readiness, teams, permissions, defaults, call grading, reporting, and rollout."
-keywords: ["RevOps setup for Ergo rollout","Onboarding","Ergo docs"]
+description: "Prepare shared CRM, source, notetaker, and rollout defaults before inviting a broader team into Ergo."
+keywords: ["RevOps setup for Ergo rollout", "Setup", "Ergo docs"]
 ---
 
+![Product screenshot showing field mapping, pipeline stages, and CRM setup areas for admins.](../images/product-field-mapping.png)
 
-![Annotated onboarding view showing the RevOps setup path for CRM, teams, defaults, reporting, grading, and rollout.](../images/onboarding-setup-by-role-annotated.svg)
+Use this page when the admin or RevOps setup owner is preparing Ergo for a team rollout. Complete the shared setup first, then invite users to finish their personal setup.
 
+## Who can use this
 
-## Who is this for?
-
-- For RevOps owners, sales operations leaders, GTM systems owners, founders acting as RevOps, and super admins responsible for setup governance.
-- Requires CRM, Google Workspace or Microsoft 365, Notetaker, Reporting.
+- Admins and super admins who own organization-level setup.
+- RevOps or operations teammates coordinating CRM, field, pipeline, reporting, notetaker, and rollout decisions.
+- Delegated operators working from admin-approved setup direction.
 
 ## Before you start
 
-- Have production CRM admin access ready, including permission to approve or create properties, pipelines, and stages.
-- Know which CRM, email/calendar, collaboration, notetaker, reporting, grading, and access decisions should be centralized before users join.
-- Bring your current pipeline stage definitions, locked stages, meeting naming rules, reporting defaults, and call-grading rubric criteria.
+- Choose the production CRM or source of truth you want Ergo to use, and clean up unresolved test or sandbox data before broad rollout.
+- Confirm the CRM account can read and update the fields Ergo needs.
+- Finalize required deal, contact, company, owner, and pipeline-stage fields before relying on CRM writeback or reporting.
+- Decide which settings are required for the first pilot and which can wait, such as optional notifications, templates, and follow-up workflows.
+- Assign an admin owner for gated setup areas such as CRM fields, reporting grants, pricing, notetaker defaults, and organization defaults.
 
+## Steps
 
-## Setup steps
+- Connect the CRM, then complete field mapping, pipeline stages, company details, and meeting-title phrases before asking users to rely on CRM updates.
+- Connect email and calendar for the setup owner, then have each user connect their own primary email/calendar account during personal setup.
+- Configure notetaker defaults and confirm the team understands calendar ownership, waiting-room admission, and when a meeting may need manual bot dispatch.
+- Configure collaboration tools, email templates, reporting defaults, and pricing only when those outputs are part of the first rollout.
+- Invite a small pilot group and run one controlled workflow end to end: one meeting or call, expected dashboard visibility, processing state, and the CRM, reporting, or draft output that should be produced.
+- After the pilot works, invite the broader team through the appropriate role-specific setup path.
 
-- **Step 1: Welcome and role check.** Confirm RevOps owns the workspace-level setup decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, call grading, and reporting.
-- **Step 2: Connect your CRM.** Choose Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM. Use production CRM access with permission to read and update the records, objects, properties, pipelines, and stages Ergo should manage.
-- **Step 3: Connect your email and calendar.** Connect Google Workspace or Microsoft 365 for the admin account. This lets Ergo see the admin calendar, email context, and setup status; each user still connects their own personal email/calendar later.
-- **Step 4: Configure workspace email behavior.** Review Email Analysis, Followup Emails, and Surfacing if it is enabled for the workspace. Decide what should be on by default before users start expecting drafts, follow-ups, or CRM updates.
-- **Step 5: Set up email templates.** Enable templates if your team wants AI follow-up drafts to follow a known structure. Create or edit the core post-call templates before AEs and CSMs start reviewing drafts.
-- **Step 6: Connect collaboration tools.** Connect Slack for call prep, notifications, and handoffs. Connect Beeper only when it is enabled and part of your workflow. Connect Pylon only when support or customer-success recordings should be delivered there.
-- **Step 7: Connect the notetaker.** Connect calendar first, then configure the Ergo Notetaker or the approved external notetaker. For Ergo Notetaker, review post-call summary email and recording/transcript button settings after it is connected.
-- **Step 8: Add company details.** Fill in the company description, customer challenges, and solution overview. These details help Ergo write better summaries, drafts, and AI answers; the page auto-saves when you leave a field.
-- **Step 9: Add meeting title phrases.** Add the words, symbols, or phrases that identify sales or customer meetings. Use Strict Mode for exact matching or AI Boost when you want Ergo to use AI alongside the phrases.
-- **Step 10: Configure CRM properties.** Review and approve the deal, contact, and company properties Ergo should sync with CRM. Create or sync the required properties before expecting reliable CRM writeback or reporting fields.
-- **Step 11: Configure pipeline stages.** Sync or create the stages Ergo should track. Add clear descriptions, exit points, entry points, and locked stages where automation should not move deals, such as Closed Won or Closed Lost.
-- **Step 12: Configure pricing.** If you are a super admin, set how your company charges customers so Ergo can reason about deal amounts. Non-super-admins may see this step as informational and can continue.
-- **Step 13: Configure call grading with sales leadership.** Create or approve the default grading rubric before managers use scores in coaching. Keep the rubric specific enough that aggregate reports can show real differences across reps, categories, and time periods.
-- **Step 14: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.
-- **Step 15: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.
-- **Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, one graded call, and one report with a small pilot group.
+## What to expect
+
+- Shared setup affects what downstream users see in meetings, deals, drafts, reporting, and search.
+- CRM writeback and reporting are only as reliable as the connected CRM, mapped fields, pipeline stages, permissions, and meeting capture coverage.
+- Slack, templates, notifications, and some follow-up workflows can be configured later when they are not needed for the first pilot.
+- Historical backfills should start with a scoped sample and sales-relevant meetings before broad backfill.
 
 ## Common issues
 
-- CRM, field mapping, and pipeline setup are treated as optional even though downstream CRM updates depend on them.
-- Users are invited before workspace defaults, notetaker behavior, templates, and reporting access are ready.
-- The connected CRM or email/calendar account does not have the permissions Ergo needs.
-- A sandbox or synthetic CRM is connected even though Ergo needs production CRM data for useful AI output.
-- Founders, VPs, or RevOps owners expect users to self-configure choices that should be decided centrally first.
+- CRM data contains test records, stale owners, incomplete fields, or unclear pipeline stages.
+- Required CRM fields, property permissions, or field mapping are incomplete.
+- Meetings are detected but not captured because the calendar owner, host admission, meeting link, or notetaker setup is wrong.
+- A broad backfill includes internal or non-sales meetings that should not drive CRM updates.
+- Users are invited before shared setup is complete, so personal setup appears to work while downstream outputs are incomplete.
 
 ## Related articles
 
-- [RevOps tips for success](./revops-tips-for-success)
+- [Setup](./index)
+- [Setup by role](./setup-by-role)
 - [Connect your CRM](./connect-your-crm)
+- [Connect email and calendar](./connect-email-and-calendar)
 - [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [Call grading rubrics](../reporting/call-grading-rubrics)
+- [Pipeline stages](./pipeline-stages)
+- [Notetaker setup](./notetaker-setup)
+- [Meeting filter: what sales-only processing means](../meetings/meeting-filter-what-sales-only-processing-means)
+- [Backfill CRM fields from historical meetings](../field-mapping/backfill-crm-fields-from-historical-meetings)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

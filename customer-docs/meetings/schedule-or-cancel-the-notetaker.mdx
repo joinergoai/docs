@@ -1,30 +1,42 @@
 ---
 title: "Schedule or cancel the notetaker"
-description: "Handle schedule or cancel the notetaker in the meetings and notetaker workflow."
-keywords: ["Schedule or cancel the notetaker","Meetings and notes","Ergo docs"]
+description: "Turn Ergo notetaker capture on or off for a calendar meeting, including recurring meeting options."
+keywords: ["schedule notetaker", "cancel notetaker", "unschedule bot", "recurring meetings"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use the notetaker toggle when a calendar event should or should not be captured by the Ergo bot.
 
+## Before you start
 
-## Use this workflow
+- Connect the calendar account that owns the event.
+- Confirm the event has a supported meeting URL.
+- Decide whether you are changing only one event or future events in a recurring series.
 
-- Open the upcoming meeting in Ergo.
-- Schedule the notetaker if Ergo should join.
-- Cancel the notetaker if Ergo should not join.
-- For meetings that changed time or link, verify the meeting again after the calendar update syncs.
+## Schedule the notetaker
 
-## Common issues
+- Open the upcoming meeting card.
+- Turn the notetaker toggle on.
+- For recurring meetings, choose whether the change applies to this event or the future series when Ergo asks.
+- Reopen the card or refresh the list if you need to confirm the scheduled state.
+- If the bot does not join after you turn the toggle on, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting) as the manual fallback.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## Cancel the notetaker
+
+- Turn the notetaker toggle off before the meeting starts.
+- If the bot is already joining, waiting, or in the call, use the remove action shown on the meeting card.
+- For recurring meetings, choose the right recurring option so future events are not accidentally left scheduled.
+
+## What to expect
+
+- Calendar visibility and notetaker scheduling are separate. Removing the notetaker does not delete the calendar event.
+- Canceling can leave a user-unscheduled marker so Ergo does not reschedule the same event during later calendar sync.
+- If the bot is already joining, waiting, or in the meeting, the Ergo dashboard remove action is the safest path, especially when you are not the meeting host.
 
 ## Related articles
 
-- [Ergo Notetaker](../integrations/ergo-notetaker)
-- [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting)
-- [What happens when a meeting is rescheduled](./what-happens-when-a-meeting-is-rescheduled)
+- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)
+- [Recurring meetings](./recurring-meetings)
+- [Notetaker waiting-room admission guide](./notetaker-waiting-room-admission-guide)
+- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)

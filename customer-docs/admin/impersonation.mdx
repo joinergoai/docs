@@ -1,30 +1,52 @@
 ---
 title: "Impersonation"
-description: "Manage impersonation across teams, members, access, defaults, and organization settings."
-keywords: ["Impersonation","Admin","Ergo docs"]
+description: "Use impersonation carefully when support or admin diagnosis requires seeing a user workspace."
+keywords: ["impersonation", "support", "admin", "diagnosis"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page to understand what an impersonation session looks like in Ergo. Impersonation is a support or admin diagnostic mode, not a routine way to work in another user's account.
 
+## Who can use this
 
-## Configure it
+- Impersonation sessions are detected from the authenticated session token.
+- When an impersonation session is active, Ergo shows an impersonation banner identifying the user being viewed and the impersonator.
+- Do not use impersonation unless your organization and Ergo support process allow it.
 
-- Use impersonation only when you have permission and a support reason.
-- Confirm which user and workspace you are viewing.
-- Avoid changing settings unless required.
-- Exit impersonation after investigation.
+## Before you start
+
+- Confirm the exact user and workspace you need to inspect.
+- Confirm what you are allowed to view or change.
+- Avoid making changes unless the user or authorized admin explicitly requested them.
+- Keep a note of what you inspected and any changes you made.
+
+## Steps
+
+1. Enter the impersonation session only through the approved support or admin flow.
+2. Look for the **Impersonating** banner in the app.
+3. Confirm the banner shows the expected user and impersonator.
+4. Reproduce or inspect the issue.
+5. Exit impersonation when finished.
+
+## What to expect
+
+- The banner appears when the session token includes an impersonation actor.
+- The app keeps impersonation state in auth context so the banner can render across the dashboard.
+- Some user-store initialization behavior is skipped during impersonation to avoid touching the real user's stored timezone.
+- Actions taken during impersonation can affect the impersonated user's workspace. Treat the session as live access.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **No banner appears.** Do not assume you are impersonating; confirm the session source.
+- **The wrong user appears in the banner.** Exit and restart with the correct user.
+- **You need to change data.** Confirm authorization first and keep the change narrow.
+- **Timezone prompts or profile-state behavior looks different.** Some initialization is intentionally skipped while impersonating.
 
 ## Related articles
 
 - [Admin](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Agent usage and billing](./agent-usage-and-billing)
+- [Organization and team hierarchy](./organization-and-team-hierarchy)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

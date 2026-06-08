@@ -1,30 +1,46 @@
 ---
-title: "Bulk email/Slack drafts"
-description: "Use bulk email/Slack drafts to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Bulk email/Slack drafts","Deals and CRM workspace","Ergo docs"]
+title: "Bulk email drafts"
+description: "Generate email drafts for selected deals, review the shared prompt, and verify recipients before sending."
+keywords: ["bulk email drafts", "Generate Drafts", "Go Mode"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use bulk draft generation when you want Ergo to create email drafts for selected deals. Drafts are generated for review; do not assume they were sent automatically.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Filter the target deals or accounts.
-- Generate drafts for the selected audience.
-- Review the drafts before sending or posting.
-- Use bulk sending only when the message and recipients are correct.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Select the deals that need follow-up.
+- Choose **Generate Drafts** for email drafts.
+- Add optional prompt instructions that apply across all selected drafts.
+- Review each draft, recipient, thread, and source context before sending.
+
+## What to expect
+
+- Bulk generation queues drafts for selected deal IDs in Ergo's draft review flow.
+- The optional prompt is shared across the selected batch; use a narrow selection when the prompt should be specific.
+- Draft quality depends on associated meetings, emails, CRM fields, and connected activity.
 
 ## Common issues
 
-- Slack is disconnected or was reconnected with the wrong workspace.
-- Ergo is not in the customer channel.
-- Private, shared, or Enterprise Grid channel permissions block visibility.
-- Old channel mappings are still affecting context or delivery.
+- A selected deal has no associated contact email.
+- Recent source context is missing or attached to a different record.
+- The selected deals need different prompt instructions.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Bulk actions](./bulk-actions)
+- [Reminders and follow-up view](./reminders-and-follow-up-view)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

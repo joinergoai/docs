@@ -1,30 +1,45 @@
 ---
 title: "Notetaker waiting-room admission guide"
-description: "Help meeting hosts admit the Ergo bot and recover when the bot is waiting, removed, or missed."
-keywords: ["Notetaker waiting-room admission guide","Meetings and notes","Ergo docs"]
+description: "Understand what to do when the Ergo notetaker is joining, waiting, recording, or blocked from a meeting."
+keywords: ["waiting room", "admit notetaker", "bot status", "recording"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+The Ergo bot can be scheduled correctly and still fail to capture a meeting if nobody admits it from the waiting room.
 
+## Before the call
 
-## Use this workflow
+- Tell the host that an Ergo notetaker may join.
+- Make sure the event link is the same link attendees will use.
+- Keep the dashboard open if the meeting is important and you want to watch live bot status.
 
-- Tell the meeting host to admit the Ergo bot from the waiting room.
-- If the bot is removed, use Add Bot to Meeting to dispatch it again when available.
-- Check whether the meeting moved to another calendar or link.
-- If the bot still cannot join, contact support with the meeting link and time.
+## During the call
+
+- If the card shows the bot is joining or in the waiting room, ask the host to admit it.
+- If the bot is recording, let the meeting finish normally.
+- If the bot should leave, use **Remove Bot** from the meeting card.
+- If the bot disappears, never joins, or was removed before capture started, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting) to dispatch a fresh bot.
+
+## What the states mean
+
+- **Scheduled**: Ergo has a notetaker record for the event, but the bot is not in the call yet.
+- **Joining**: the bot is attempting to enter the conference.
+- **Waiting room**: the bot needs admission by the host or another attendee with permission.
+- **Recording**: the bot is in the call and recording.
+- **Removed**: the bot was removed or unscheduled for that event.
+- **No longer visible**: the bot may have left after waiting too long, being denied, or being removed. Dispatch a fresh bot if the call still needs capture.
 
 ## Common issues
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- Waiting-room settings prevent automatic entry.
+- The meeting host is external, so the host or another attendee with permission needs to admit the bot.
+- The meeting was rescheduled, created late, or changed after the notetaker was scheduled.
+- The conferencing platform or link format is not supported.
 
 ## Related articles
 
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
 - [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
 - [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting)
+- [Recording disclaimer](./recording-disclaimer)
+- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)

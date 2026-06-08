@@ -1,30 +1,34 @@
 ---
 title: "One bot per org: shared notetaking behavior"
-description: "Handle one bot per org: shared notetaking behavior in the meetings and notetaker workflow."
-keywords: ["One bot per org: shared notetaking behavior","Meetings and notes","Ergo docs"]
+description: "Understand how Ergo treats shared calendar meetings when more than one teammate is invited."
+keywords: ["one bot per org", "shared notetaking", "internal attendees", "meeting capture"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+When several people from the same Ergo org attend the same calendar meeting, Ergo sends one notetaker for that org instead of sending one bot per teammate.
 
+## What to check
 
-## Use this workflow
+- Confirm which teammate's notetaker was dispatched or which account owns the completed meeting record.
+- Confirm whether the meeting appears under your own visibility, team visibility, or org-wide admin visibility.
+- Keep bot state separate from meeting access: seeing a meeting does not mean you control every notetaker action for it.
 
-- Confirm whether your workspace uses a shared organization-level bot.
-- Do not expect a separate bot identity for every user.
-- Coordinate host admission when multiple team members attend the same meeting.
-- Use admin settings for broader meeting access and visibility.
+## What to expect
 
-## Common issues
+- Ergo stores the completed meeting with owner/dispatched-account and internal attendee context.
+- Meeting history and search use visibility rules based on owner, internal attendees, team membership, custom grants, and admin access.
+- Duplicate downstream outputs are not expected from normal same-org bot sharing. They can happen when the same conversation is captured or processed through more than one source, so review the meeting source before pushing automations or acting on drafts.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## When to use this page
+
+- Two teammates ask why they see the same meeting.
+- A meeting has a single recording but several internal attendees.
+- A team is deciding whether to use Ergo notetaker, desktop recording, or another notetaker for the same call.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](./using-multiple-notetakers-with-ergo)
+- [Meeting availability and visibility](./meeting-availability-and-visibility)
+- [Meeting history and folders](./meeting-history-and-folders)
+- [Duplicate drafts from multiple notetakers](../troubleshooting/duplicate-drafts-from-multiple-notetakers)

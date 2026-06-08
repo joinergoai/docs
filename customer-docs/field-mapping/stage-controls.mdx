@@ -1,30 +1,46 @@
 ---
 title: "Stage controls"
-description: "Configure stage controls so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Stage controls","Field mapping and CRM configuration","Ergo docs"]
+description: "Use stage controls to decide how stage configuration, CRM writes, and allowed stage actions should behave."
+keywords: ["stage controls", "allowed stage actions", "CRM stage writes"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use stage controls when you need to govern how stages can be used, changed, or written back. Treat these as admin settings because broad stage behavior affects the Deals board and CRM update paths.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review which controls are available for each stage.
-- Set controls according to your team's process.
-- Test stage movement on one deal.
-- Adjust controls when CRM behavior changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Confirm which users should edit stages or stage descriptions.
+- Confirm whether stage changes should write to the connected CRM.
+- Review allowed stage actions with sales operations.
+- Test a stage move on one record before enabling broader use.
+
+## What to expect
+
+- Stage controls depend on CRM permissions and the current pipeline configuration.
+- Controls can prevent unsafe updates, but they do not repair stale CRM mappings by themselves.
+- Changes should be coordinated with stage descriptions and restrict-to-pipeline settings.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A user can move a deal in the board but the CRM rejects the stage update.
+- Stage settings changed without retesting permissions.
+- The selected pipeline does not match the intended automation scope.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Stage drift resolution](./stage-drift-resolution)
+- [Restrict to pipeline](./restrict-to-pipeline)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

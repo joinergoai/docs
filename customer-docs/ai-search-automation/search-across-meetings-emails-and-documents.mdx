@@ -1,30 +1,53 @@
 ---
 title: "Search across meetings, emails, and documents"
-description: "Use search across meetings, emails, and documents with the right customer context, sources, filters, and automation checks."
-keywords: ["Search across meetings, emails, and documents","Ergo AI, search, and automation","Ergo docs"]
+description: "Search indexed meetings, email threads, and user documents with access-aware results."
+keywords: ["Search across meetings, emails, and documents", "Ergo AI, search, and automation", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+Search finds relevant indexed content across supported source types. It is access-aware and source-dependent, so missing results can mean missing access, missing sync, or a query/filter mismatch.
 
+## Who can use this
 
-## Use this workflow
+- Users searching for prior meetings, emails, or uploaded documents.
+- Managers reviewing source context before asking Ergo to summarize.
 
-- Open Search.
-- Enter a specific customer, phrase, person, topic, or deal.
-- Filter by source when needed.
-- Open results to verify source context.
+## Before you start
+
+- Connect the source you expect to search.
+- Enter at least two characters in the search box.
+- Confirm the user has access to the relevant meetings, email threads, or documents.
+
+## Steps
+
+- Open **Search**.
+- Enter a query.
+- Optionally filter by source type or attendee.
+- Review each result's text, source type, route, document name, date, deal IDs, and other metadata when shown.
+- Open the underlying record before relying on a result.
+- Use pagination controls when there are more results.
+
+## What to expect
+
+- Supported search entity filters include meeting, email thread, and user document.
+- Results can include a route to the underlying entity when Ergo can link it.
+- Search results are paginated, with a default page size of 20 in the current UI.
+- Search freshness depends on source ingestion and indexing.
+- Search does not bypass permissions.
 
 ## Common issues
 
-- Filters, date ranges, or source modes are too narrow.
-- Meetings, emails, or documents are still processing.
-- The search phrase does not match the customer, deal, or source text.
-- The user does not have access to the result source.
+- The query is shorter than two characters.
+- A filter excludes the result.
+- The source has not synced or indexed yet.
+- The record exists but the user does not have access.
+- A result has useful text but no direct route.
 
 ## Related articles
 
 - [Ergo AI, search, and automation](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Search filters/modes/results](./search-filters-modes-results)
+- [Chat with Ergo](./chat-with-ergo)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Data sources and freshness](../start-here/data-sources-and-freshness)

@@ -1,30 +1,56 @@
 ---
 title: "Chart builder"
-description: "Build reporting charts from the right source fields, filters, buckets, time ranges, and drilldowns."
-keywords: ["Chart builder","Reporting","Ergo docs"]
+description: "Use Chart Builder to choose reporting fields, filters, time ranges, breakdowns, chart types, and dashboard save targets."
+keywords: ["Chart builder", "Reporting fields", "Breakdowns", "Filters", "Revenue reporting", "Rubrics"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Chart Builder is where you design a single report before saving it to a dashboard.
 
+## Choose the main category
 
-## Use this workflow
+The main category controls what the chart counts or groups.
 
-- Open the chart builder.
-- Choose the data source, fields, chart type, filters, and time range.
-- Preview the chart before saving.
-- Add it to a dashboard when it is ready for repeat use.
+- Sentence fields group customer-conversation text into clusters.
+- Picklist fields group by configured values.
+- Numerical fields group by configured ranges.
+- Rubric fields show call grading results.
+- Correspondence count, revenue, and rubric-specific controls may appear only when enabled for your workspace.
 
-## Common issues
+## Add a breakdown or filter
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+- Use a breakdown category to split the main category by another field.
+- Use filters to limit the chart to selected field values.
+- Numerical filters use configured ranges.
+- Picklist and sentence filters use selected values.
+- Correspondence type filters separate meetings and emails when the correspondence chart is enabled.
+
+Rubric fields and deal/company-level fields have stricter compatibility rules. If a breakdown or filter is unavailable, choose a supported correspondence-level field instead.
+
+## Set time range and chart type
+
+Available time range choices are:
+
+- No filter
+- Last 7 days
+- Last 30 days
+- Last 90 days
+- Custom range
+
+Saved chart types are bar and pie. The preview updates as you adjust the chart configuration.
+
+## Save the report
+
+1. Confirm the preview shows the expected field and filters.
+2. Select **Save Report**.
+3. Choose an existing dashboard.
+4. Decide whether to create another report or return to Reporting.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Create/edit reports](./create-edit-reports)
+- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
+- [Custom reporting fields](./custom-reporting-fields)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

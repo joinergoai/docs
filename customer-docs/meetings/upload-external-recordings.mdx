@@ -1,34 +1,33 @@
 ---
 title: "Upload external recordings"
-description: "Handle upload external recordings in the meetings and notetaker workflow."
-keywords: ["Upload external recordings","Meetings and notes","Ergo docs"]
+description: "Import a recording that was captured outside the Ergo bot and let Ergo process it as a meeting record."
+keywords: ["upload recording", "external recording", "custom meeting", "meeting import"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use external recording upload when you have meeting media that was not captured by the scheduled Ergo bot.
 
-## Before you start
+## Before you upload
 
-- Confirm External recording is connected or available.
+- Confirm you have permission to upload and process the recording.
+- Use a recording with enough audio for transcription.
+- Add the correct title, attendees, and related context when the UI asks for it so Ergo can attribute the meeting correctly.
 
+## What happens after upload
 
-## Use this workflow
-
-- Open the upload flow for external recordings.
-- Choose the recording file and attach the right meeting or customer context.
-- Wait for processing before expecting transcript or summary outputs.
-- Contact support if upload or processing fails.
+- Ergo stores the upload as a custom meeting record.
+- Processing can create transcript and meeting outputs after the worker completes.
+- The meeting can appear in history after processing, with source and processing state distinct from bot meetings.
 
 ## Common issues
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- The upload fails or remains processing.
+- The transcript is empty because the audio is missing, short, or unclear.
+- Downstream automations may not run the same way as scheduled notetaker meetings, especially when attendee, calendar, CRM, or deal context is missing.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
+- [Push notes or meetings to automations](./push-notes-or-meetings-to-automations)
+- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)

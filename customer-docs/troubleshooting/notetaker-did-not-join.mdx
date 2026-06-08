@@ -1,46 +1,54 @@
 ---
 title: "Notetaker did not join"
-description: "Diagnose and resolve notetaker did not join in Ergo."
-keywords: ["Notetaker did not join","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot scheduled or live meetings where Ergo Notetaker did not join."
+keywords: ["notetaker did not join", "meeting bot", "waiting room", "Add Bot to Meeting", "troubleshooting"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use this page when the Ergo bot did not appear in a scheduled meeting, was not admitted, or needs to be added to a live meeting.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- The meeting starts but no Ergo bot appears.
+- The bot entered the waiting room but was not admitted.
+- The bot was removed from the meeting.
+- The bot joined the wrong occurrence of a recurring or rescheduled meeting.
+- A live external meeting link needs manual dispatch.
 
 ## Most common causes
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- Calendar or notetaker setup is disconnected, stale, or missing the event.
+- The meeting link changed after scheduling.
+- The meeting platform or waiting-room settings blocked auto-entry.
+- The host did not admit the bot from the waiting room.
+- The meeting is external, ad hoc, or live and needs **Add Bot to Meeting**.
 
 ## What to check
 
-- Check whether the meeting is on the connected calendar.
-- Check whether the meeting was rescheduled or moved to another link.
-- Confirm the host admitted the bot from the waiting room.
-- Use Add Bot to Meeting for manual dispatch when the meeting is live.
+- Confirm the notetaker is connected and the calendar event is visible in Ergo.
+- Open the specific meeting occurrence and confirm the current meeting link.
+- Ask the host to admit the bot from the waiting room.
+- Check whether another org member's bot is already covering the shared call.
+- Use **Add Bot to Meeting** for a live link or ad hoc meeting.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- For future meetings, reconnect calendar/notetaker only if the event or bot state is stale.
+- For a live meeting, use **Add Bot to Meeting** rather than waiting for the next calendar sync.
+- If the bot was removed or not admitted, treat it as a meeting-room/host action rather than a processing issue.
+- Test the next affected meeting after the access or scheduling issue is fixed.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when the calendar event, notetaker setup, meeting link, and host admission path are correct but the bot still does not join.
+- Include the workspace, affected user, meeting title or link, platform, scheduled time, and whether the bot was absent, waiting, admitted, or removed.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
-- [Notetaker waiting-room admission guide](../meetings/notetaker-waiting-room-admission-guide)
-- [Add the bot to a live or ad hoc meeting](../meetings/add-the-bot-to-a-live-or-ad-hoc-meeting)
-- [What happens when a meeting is rescheduled](../meetings/what-happens-when-a-meeting-is-rescheduled)
+- [Troubleshooting](./index)
+- [Pylon delivery failures, duplicate deliveries, and queue health](./pylon-delivery-failures-duplicate-deliveries-and-queue-health)
+- [Transcript or recording missing](./transcript-or-recording-missing)
+- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)

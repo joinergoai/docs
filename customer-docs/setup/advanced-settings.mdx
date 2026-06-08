@@ -1,30 +1,57 @@
 ---
 title: "Advanced settings"
-description: "Complete the advanced settings onboarding step with the right owner and prerequisites."
-keywords: ["Advanced settings","Onboarding","Ergo docs"]
+description: "Review optional advanced settings for domains, CRM object logging, notifications, CRM update sensitivity, and provider-specific behavior."
+keywords: ["Advanced settings", "CRM toggles", "domain settings", "Slack notifications", "Ergo setup"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page when an admin or rollout owner wants to tune advanced workspace behavior after the core setup is working. Advanced settings are optional during onboarding and can be changed later from Field Mapping.
 
+## Who can use this
 
-## Setup steps
+- Admins and RevOps owners who understand the CRM, Slack, domain, and automation impact of the change.
+- Super Admins when pricing context is included.
+- Operators can review settings, but broad defaults should be approved by the workspace owner.
 
-- Review advanced settings only after the core setup is complete.
-- Change one setting at a time when possible.
-- Test the workflow affected by the setting after saving.
-- Document organization-specific choices for future admins.
+## Before you start
+
+- Finish CRM connection, CRM properties, pipeline stages, and meeting-title rules first.
+- Decide whether the setting should apply to the whole workspace or only to a narrow test path.
+- Confirm the relevant integration is connected before changing provider-specific options.
+
+## Steps
+
+1. Review domain settings, including alternate domains, partnership domains, and alternate email addresses.
+2. Review CRM deal settings such as CRM email object logging, CRM Slack object logging, draft email CRM logging, preemptive deal creation, amount population, and CRM update sensitivity.
+3. Review Slack notification toggles for post-meeting and post-email automation notifications.
+4. Review provider-specific settings only when they apply to your connected CRM, such as HubSpot meeting association or Salesforce CDC sync status.
+5. If deal qualification settings are available in your workspace, review them with the admin who owns qualification criteria.
+6. Change one category at a time, then test the affected workflow before changing more settings.
+
+## What to expect
+
+- Advanced settings are not required to complete onboarding.
+- Some cards appear only for certain CRM providers, roles, feature flags, or connected integrations.
+- Most toggles save to the dashboard configuration for the authenticated workspace user or org context and affect downstream automation behavior.
+- Disabled or unavailable settings may mean the feature is not enabled, the viewer lacks the right role, or the required integration is not connected.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- A setting is changed before the related CRM, Slack, or domain setup is complete.
+- A broad CRM setting changes deal creation, amount population, or CRM logging behavior more than expected.
+- Domain lists include generic email domains or stale aliases that make account matching less reliable.
+- Slack notification toggles are changed without confirming where post-automation notifications should go.
+- A provider-specific card is expected but the connected CRM is a different provider.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Pricing configuration](./pricing-configuration)
+- [Alternate domains/emails](../field-mapping/alternate-domains-emails)
+- [Partnership domains](../field-mapping/partnership-domains)
+- [Advanced CRM toggles](../field-mapping/advanced-crm-toggles)
+- [Deal qualification](../field-mapping/deal-qualification)
+- [Reporting defaults](./reporting-defaults)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

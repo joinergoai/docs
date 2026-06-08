@@ -1,35 +1,46 @@
 ---
 title: "HubSpot meeting activities and recording links"
-description: "Connect and maintain HubSpot meeting activities and recording links with the right account, permissions, reconnect path, and failure checks."
-keywords: ["HubSpot meeting activities and recording links","Integrations","Ergo docs"]
+description: "Understand how Ergo links meeting context and recording URLs back to HubSpot when the HubSpot workflow is configured."
+keywords: ["HubSpot meeting activities and recording links", "Integrations", "Ergo docs"]
 ---
-
 
 ![Flow diagram showing Ergo meeting recordings linked from HubSpot meeting activities.](../images/hubspot-meeting-link-flow.svg)
 
+Use this page when HubSpot is already connected and you need meeting activity or recording-link behavior to be visible in HubSpot.
+
+## Who can use this
+
+- Admins and RevOps teams validating HubSpot activity behavior.
+- Operators investigating why a meeting, note, or recording link did not appear on the expected HubSpot record.
 
 ## Before you start
 
-- Have access to the HubSpot, Notetaker or Granola account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Connect HubSpot first.
+- Confirm the meeting is visible in Ergo and has a recording link before expecting a HubSpot link.
+- Confirm the HubSpot record match and the configured activity destination.
 
+## Steps
 
-## Setup steps
+- Open the meeting in Ergo and confirm the meeting is processed.
+- Check the matched HubSpot deal, company, or contact.
+- Review the HubSpot activity/link workflow with your admin.
+- If the link is missing, check record matching before assuming HubSpot sync failed.
 
-- Open the HubSpot company, contact, or deal associated with the meeting.
-- Look for the meeting activity created or updated by Ergo.
-- Use the View Meeting in Ergo link when it appears in the activity.
-- Remember that audio availability depends on the meeting source; some external notetakers may not provide audio to Ergo.
+## What to expect
+
+- HubSpot activity output depends on the connected HubSpot account, record matching, and the configured CRM write path.
+- Ergo should not promise a recording link on every HubSpot record. Meetings without a recording, unmatched records, or blocked HubSpot permissions can prevent the link from appearing.
+- If your team uses custom HubSpot properties or activities, validate the exact destination during setup.
 
 ## Common issues
 
-- The company or deal name differs from the meeting or customer name.
-- The meeting is associated with a different CRM record than expected.
-- Domain, contact, or account data is incomplete in the CRM.
-- The meeting source does not provide the same recording or audio assets as Ergo Notetaker.
+- The meeting did not process or does not have a recording link.
+- The HubSpot record was not matched to the meeting.
+- HubSpot permissions or activity configuration block the write.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [HubSpot](./hubspot)
+- [How Ergo names and matches CRM records](../deals-crm/how-ergo-names-and-matches-crm-records)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

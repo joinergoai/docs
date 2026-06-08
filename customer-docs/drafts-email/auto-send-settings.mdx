@@ -1,30 +1,51 @@
 ---
 title: "Auto-send settings"
-description: "Use auto-send settings for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Auto-send settings","Drafts, email, and templates","Ergo docs"]
+description: "Understand when auto-send is available, why human review is the default, and how to avoid over-enabling it."
+keywords: ["Auto-send settings", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Human review is the default email workflow in Ergo. Treat auto-send as an advanced configuration that should be enabled only after the workflow, recipients, templates, and failure handling are approved.
 
+## Who can use this
 
-## Configure it
+- Admins and RevOps teams evaluating advanced draft automation.
+- Managers deciding whether a narrow workflow is safe to send without manual review.
 
-- Review auto-send settings with an admin.
-- Confirm which workflows are eligible for auto-send.
-- Test with low-risk workflows before expanding.
-- Monitor failures and customer replies after enabling auto-send.
+## Before you start
+
+- Confirm the exact workflow where auto-send is being considered.
+- Confirm the template, recipients, sender, and timing rules are safe.
+- Review legal, compliance, and customer-communication expectations for your team.
+- Decide how failures, replies, and exceptions will be monitored.
+
+## Steps
+
+- Start with draft creation enabled but manual review required.
+- Review a sample of generated drafts for accuracy, tone, recipients, and thread choice.
+- If your workspace exposes auto-send controls, enable them only for the approved scope.
+- Monitor sent emails, open tracking, replies, and failures after enabling.
+- Disable auto-send if draft quality, routing, or provider reliability changes.
+
+## What to expect
+
+- Auto-send should not be described as the default behavior.
+- Draft creation, scheduling, and auto-send are separate concepts.
+- Auto-send scope can be narrower than all draft sources; do not assume every draft type supports it.
+- Existing drafts may not be affected by a setting change unless the current UI explicitly says they are.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- A team assumes enabling post-call drafts also enables auto-send.
+- Auto-send is enabled before templates and sender settings are stable.
+- A workflow sends to the wrong thread because context was not reviewed during rollout.
+- Failures are not monitored after automation is enabled.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Turn post-call drafts on or off](./turn-post-call-drafts-on-or-off)
+- [Send/schedule/unschedule/undo](./send-schedule-unschedule-undo)
+- [Open tracking and sent flow](./open-tracking-and-sent-flow)
+- [Draft send failures](../troubleshooting/draft-send-failures)

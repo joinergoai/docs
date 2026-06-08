@@ -1,30 +1,58 @@
 ---
 title: "Draft email logic: when drafts are created and how to dismiss"
-description: "Understand why a meeting did or did not create a draft and what to do with unwanted drafts."
-keywords: ["Draft email logic: when drafts are created and how to dismiss","Drafts, email, and templates","Ergo docs"]
+description: "Understand what creates email drafts, why some drafts are skipped, and how to dismiss drafts safely."
+keywords: ["Draft email logic: when drafts are created and how to dismiss", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Ergo creates drafts from specific workflow triggers. It does not mean every meeting, deal, or message will always produce a draft.
 
+## Who can use this
 
-## Use this workflow
+- Reps checking why a follow-up draft did or did not appear.
+- Managers and admins tuning draft workflows, templates, and source settings.
 
-- Confirm meeting source, meeting type, and email connection.
-- Review whether workspace preferences allow post-call drafts.
-- Dismiss drafts that should not be used.
-- Tune instructions or turn drafts off when repeated drafts are not useful.
+## Before you start
+
+- Confirm the user's email, calendar, and meeting sources are connected.
+- Confirm the meeting or deal belongs to a workflow that creates drafts.
+- Check whether the draft is in another queue, such as Reminders, Scheduled, Composed, or Errors.
+
+## Draft sources
+
+- **Post-call drafts** are created from qualifying recorded meetings after the meeting has enough processed context.
+- **Surfacing drafts** are proactive follow-up drafts for deal activity that Ergo evaluates as needing outreach.
+- **Composed drafts** are created manually or from Ergo Chat-style compose actions.
+- **Go Mode drafts** can be opened as a selected review set from a deal or bulk workflow.
+- **Retried failed drafts** are regenerated or resent from the failure flow.
+
+## Dismiss a draft
+
+- Open the draft from the relevant queue.
+- Choose the dismiss/discard action if the email should not be sent.
+- Use undo if Ergo shows an undo option and you dismissed by mistake.
+- If the associated opportunity should be closed out, use a disqualification flow only when that matches your team's CRM process.
+
+## What to expect
+
+- AI relevance checks and meeting processing are best-effort rules.
+- A missing draft can mean the source was disconnected, the meeting did not qualify, processing has not completed, or the workflow decided not to create one.
+- Dismissing a draft removes it from the active review queue. It does not send an email.
+- New activity can make an older draft stale; refresh or regenerate instead of sending stale context.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Draft generation is disabled or the meeting did not qualify.
+- Email grant is stale.
+- The draft was already dismissed, sent, scheduled, or moved to a reminder queue.
+- The AI created a draft, but it is attached to a different deal, meeting, or thread than expected.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Turn post-call drafts on or off](./turn-post-call-drafts-on-or-off)
+- [Dismiss/disqualify drafts](./dismiss-disqualify-drafts)
+- [Reprompt drafts with AI](./reprompt-drafts-with-ai)
+- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)

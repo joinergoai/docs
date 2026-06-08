@@ -1,34 +1,57 @@
 ---
 title: "Pipeline stages"
-description: "Configure CRM pipelines and stages so Ergo can classify, update, and report on deals correctly."
-keywords: ["Pipeline stages","Onboarding","Ergo docs"]
+description: "Sync CRM pipeline stages into Ergo, review stage descriptions, and confirm stage controls before CRM writeback."
+keywords: ["Pipeline stages", "CRM stages", "stage sync", "stage drift", "Ergo setup"]
 ---
 
+![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
-![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
+Use this page when an admin or RevOps owner is preparing deal stages for Ergo. Pipeline stages give Ergo the CRM-native stage IDs, names, descriptions, and allowed movement paths it needs for deal context, CRM updates, reporting, and agent guidance.
 
+## Who can use this
+
+- Admins and RevOps owners who manage CRM pipeline configuration.
+- Operators helping with rollout, as long as a CRM owner approves the selected pipelines and stages.
 
 ## Before you start
 
-- Confirm CRM is connected or available.
+- Connect the workspace CRM.
+- Confirm which pipelines Ergo should use. If your CRM has multiple sales motions, do not assume every pipeline belongs in the initial rollout.
+- Make sure each selected stage has a stable CRM internal ID, name, and meaning.
+- Finish CRM property setup first when stage movement depends on mapped CRM fields or permissions.
 
+## Steps
 
-## Setup steps
+1. Open **Field Mapping** and go to the pipeline or stages area.
+2. Fetch the available CRM pipelines and stages.
+3. Select the pipelines and stages Ergo should use.
+4. Sync the selected stages into Ergo. When available, use AI-generated descriptions as a draft, then review them.
+5. Confirm each stage has the right description and exit points. Exit points define which stages can be reached directly from the current stage.
+6. Add default stages only when you intentionally want Ergo-managed stages for a pipeline that is not fully represented yet.
+7. Test a narrow CRM update or deal workflow before enabling broad stage automation.
 
-- Select the CRM pipeline Ergo should use.
-- Review each stage and its meaning.
-- Confirm default stages and AI descriptions match your sales process.
-- Resolve stage drift before expecting clean updates.
+## What to expect
+
+- Ergo syncs selected stages from supported connected CRMs and stores the pipeline name, pipeline ID, stage name, internal ID, order, description, and exit points.
+- Stage descriptions are guidance for AI and workflows. Auto-generated descriptions can help, but they should be reviewed by someone who knows the sales process.
+- CRM-side changes can create drift. If a stage or pipeline is renamed, deleted, reordered, or changed in the CRM, review Field Mapping before trusting stage-based automation.
+- If no CRM is connected or the connected CRM user cannot read stage metadata, stage sync will fail until the integration or permissions are fixed.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- A CRM pipeline was changed after onboarding and Ergo still has the previous stage list.
+- A deal is created or updated without the expected stage because the required entry stage was not configured.
+- A stage exists in the CRM but was not selected during sync.
+- Stage names look right but internal IDs do not match the CRM stage IDs.
+- Exit points are too broad, too narrow, or stale after a pipeline change.
 
 ## Related articles
 
-- [Stage drift resolution](../field-mapping/stage-drift-resolution)
+- [Setup](./index)
+- [CRM properties setup](./crm-properties-setup)
+- [Pipelines](../field-mapping/pipelines)
+- [Stage definitions and AI descriptions](../field-mapping/stage-definitions-and-ai-descriptions)
+- [Default stages](../field-mapping/default-stages)
+- [Stage controls](../field-mapping/stage-controls)
 - [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [Pricing configuration](./pricing-configuration)

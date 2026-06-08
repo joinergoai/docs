@@ -1,30 +1,33 @@
 ---
 title: "Auto-delete meetings"
-description: "Handle auto-delete meetings in the meetings and notetaker workflow."
-keywords: ["Auto-delete meetings","Meetings and notes","Ergo docs"]
+description: "Use time-based deletion to remove meeting records after a configured retention period."
+keywords: ["auto-delete meetings", "time-based deletion", "meeting retention"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Time-based deletion is an org-level setting for automatically deleting meetings after a configured number of days.
 
+## Who can manage it
 
-## Use this workflow
+- Super admins can enable or disable time-based deletion.
+- The retention value must be at least one day.
 
-- Open admin meeting settings.
-- Review whether auto-delete is enabled and what retention window applies.
-- Confirm the setting with stakeholders before enabling it.
-- Use sharing and download options before content is deleted when needed.
+## Turn it on
 
-## Common issues
+- Open the notetaker settings menu from upcoming meetings.
+- Toggle **Time-Based Deletion**.
+- Enter the number of days to retain meetings.
+- Save and verify the displayed setting.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What to expect
+
+- The setting applies at the organization level.
+- Deleted meeting records are removed from meeting history.
+- Deletion is separate from notetaker scheduling, sharing, summary emails, and CRM or draft outputs that may already exist.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Delete/retry processing](./delete-retry-processing)
+- [Meeting availability and visibility](./meeting-availability-and-visibility)
+- [Security, data retention, and LLM usage](../start-here/security-data-retention-and-llm-usage)

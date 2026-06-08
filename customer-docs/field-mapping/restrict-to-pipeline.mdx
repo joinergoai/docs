@@ -1,30 +1,46 @@
 ---
 title: "Restrict to pipeline"
-description: "Configure restrict to pipeline so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Restrict to pipeline","Field mapping and CRM configuration","Ergo docs"]
+description: "Keep Ergo scoped to intended synced pipelines when your CRM has multiple pipelines."
+keywords: ["restrict to pipeline", "pipeline scope", "CRM pipeline filter"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use this page when only certain CRM pipelines should be synced into Ergo. Pipelines that are not synced are outside Ergo's configured workflow scope, so document that choice for admins and managers.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Choose the pipeline that should be eligible for the workflow.
-- Apply the restriction before enabling automation.
-- Check excluded pipelines when expected records do not update.
-- Review the setting after CRM pipeline changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Choose the CRM pipelines Ergo should sync and operate on.
+- Confirm unsynced pipelines are intentionally out of scope.
+- Recheck Deals board counts, saved views, reports, and automations after changing the setting.
+- Run a single-record test in an included pipeline, and confirm an out-of-scope pipeline is not expected in Ergo workflows.
+
+## What to expect
+
+- Pipeline sync scope affects which deal pipelines Ergo is configured to use; it is not a substitute for CRM permissions.
+- Unsynced pipelines can make valid CRM records look missing from Ergo.
+- Pipeline scope decisions should be documented for admins and managers.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A deal is in a CRM pipeline that Ergo has not synced.
+- The default pipeline changed but Ergo's synced pipeline set did not.
+- A saved view was built before the pipeline scope changed.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Stage controls](./stage-controls)
+- [Company info](./company-info)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

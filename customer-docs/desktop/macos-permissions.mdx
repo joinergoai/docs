@@ -1,34 +1,47 @@
 ---
 title: "macOS permissions"
-description: "Grant the macOS permissions Ergo Desktop needs for microphone access, meeting detection, recording, and upload."
-keywords: ["macOS permissions","Desktop","Ergo docs"]
+description: "Grant the macOS permissions Ergo Desktop needs for local capture and recording reliability."
+keywords: ["macOS permissions", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page when Ergo Desktop cannot capture audio, screen context, or meeting activity until macOS permissions are approved.
+
+## Who can use this
+
+- Desktop users setting up local capture on macOS.
+- Admins and operators troubleshooting missed capture or incomplete transcripts.
 
 ## Before you start
 
-- Install Ergo Desktop, sign in, and grant required macOS permissions.
-- Confirm Desktop app is connected or available.
+- Install and sign in to Ergo Desktop.
+- Be ready to quit and reopen Ergo Desktop after changing macOS permissions.
+- Use a short test meeting after granting permissions.
 
+## Steps
 
-## Setup steps
+- Open macOS **System Settings**.
+- Review permissions for Ergo Desktop in Privacy & Security.
+- Grant the permissions requested by the app for local capture.
+- Quit and reopen Ergo Desktop after permission changes.
+- Run a test recording and confirm transcript, recording, and upload behavior.
 
-- Open macOS System Settings.
-- Grant the permissions Ergo Desktop requests, such as microphone and accessibility permissions when prompted.
-- Restart Ergo Desktop after changing permissions.
-- Run a test meeting to confirm detection and upload work.
+## What to expect
+
+- Permission changes may not take effect until the app is quit and reopened.
+- Missing microphone or system-audio access can create incomplete transcript or recording output.
+- Screen-related permissions can affect desktop context features.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The permission was granted while the app was still running and the app was not quit and reopened.
+- The wrong app entry was approved in macOS settings.
+- A company device policy blocks the permission.
 
 ## Related articles
 
+- [Desktop](./index)
 - [Install and sign in to Ergo Desktop](./install-and-sign-in-to-ergo-desktop)
+- [Silent desktop recording](./silent-desktop-recording)
 - [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)

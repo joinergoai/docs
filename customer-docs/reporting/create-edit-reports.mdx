@@ -1,30 +1,49 @@
 ---
 title: "Create/edit reports"
-description: "Use create/edit reports to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Create/edit reports","Reporting","Ergo docs"]
+description: "Create a Reporting chart, save it to a dashboard, or edit an existing dashboard widget."
+keywords: ["Create reports", "Edit reports", "Reporting charts", "Dashboard widgets", "Chart Builder"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Reports in Ergo are chart widgets saved to a Reporting dashboard. Create them from Chart Builder, then save them to the dashboard where the team will review them.
 
+## Who can use this
 
-## Use this workflow
+- Users with Reporting create access can create and edit reports.
+- Users with view-only Reporting access can review dashboards they have access to, but may not see creation controls.
 
-- Open Reporting and create or edit a report.
-- Choose fields, filters, and time ranges.
-- Preview results before saving.
-- Share or schedule only after confirming the report answers the intended question.
+## Create a report
 
-## Common issues
+1. Open **Reporting**.
+2. Select **Create New Report**.
+3. Rename the report title if needed.
+4. Choose a main category.
+5. Optionally choose a breakdown category, filters, time range, chart type, or supported advanced view.
+6. Review the preview.
+7. Select **Save Report**.
+8. Choose the dashboard where the report should appear.
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+## Edit an existing report
+
+1. Open the dashboard that contains the chart widget.
+2. Open the widget menu.
+3. Select the edit action.
+4. Update the category, breakdown, filters, chart type, time range, revenue preset, or rubric field as needed.
+5. Select **Update Report**.
+
+## What to expect
+
+- A main category is required before a report can be saved.
+- Saved chart types are bar or pie.
+- Editing a report updates the widget configuration on the selected dashboard.
+- Some category combinations are blocked: rubric and deal/company-level fields do not support the same breakdown behavior as correspondence-level fields.
+- If a dashboard is missing from the save modal, check Reporting access and dashboard permissions.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Default dashboards](./default-dashboards)
+- [Chart builder](./chart-builder)
+- [Save widgets to dashboards](./save-widgets-to-dashboards)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

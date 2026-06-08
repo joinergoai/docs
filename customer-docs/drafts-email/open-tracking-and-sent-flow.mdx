@@ -1,30 +1,51 @@
 ---
 title: "Open tracking and sent flow"
-description: "Use open tracking and sent flow for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Open tracking and sent flow","Drafts, email, and templates","Ergo docs"]
+description: "Use sent-state and open-tracking signals without overreading them."
+keywords: ["Open tracking and sent flow", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Open tracking helps you see whether an email sent through Ergo has detected opens. Treat it as a signal, not a complete delivery or engagement record.
 
+## Who can use this
 
-## Use this workflow
+- Reps reviewing recently sent emails.
+- Managers checking sent email activity patterns.
 
-- Open the sent email browser or sent state.
-- Review sent status and open tracking where available.
-- Remember that tracking can be affected by recipient email settings.
-- Use reporting or follow-up views for next-step workflows.
+## Before you start
+
+- Send the email through Ergo.
+- Wait for sent-state and tracking data to update.
+- Confirm open tracking is enabled for your workspace and sender.
+
+## Steps
+
+- Open **Drafts**.
+- Go to the **Sent** queue.
+- Use tracking filters such as opened, unopened, or opened today.
+- Open the recent opens rail or sent-flow view when available.
+- Use the sent record to decide whether follow-up is appropriate.
+
+## What to expect
+
+- Sent records can include sent time, pending state, open count, first open, and last open.
+- Open tracking can show that an email was opened and when the latest open was detected.
+- Open tracking is pixel-based and can be blocked or inflated by email clients, proxies, previews, or security scanners.
+- Do not assume tracking identifies the exact recipient who opened an email.
+- Scheduled sends and provider updates can lag before sent or open data appears.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- No opens are detected because the recipient's client blocks tracking pixels.
+- An internal preview or security scanner causes an open event.
+- A scheduled email has not reached final sent-state yet.
+- Tracking filters hide the email you expect to see.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Sent email browser](./sent-email-browser)
+- [Send/schedule/unschedule/undo](./send-schedule-unschedule-undo)
+- [Follow-ups panel](../ai-search-automation/follow-ups-panel)
+- [Draft send failures](../troubleshooting/draft-send-failures)

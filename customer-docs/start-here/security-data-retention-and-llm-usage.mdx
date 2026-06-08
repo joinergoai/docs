@@ -1,28 +1,47 @@
 ---
 title: "Security, data retention, and LLM usage"
-description: "Use this guide to understand security, data retention, and LLM usage before working in Ergo."
-keywords: ["Security, data retention, and LLM usage","Start and guidelines","Ergo docs"]
+description: "Understand safe handling, retention, and AI-review expectations before sharing sensitive customer context."
+keywords: ["Security, data retention, and LLM usage", "Start here", "Ergo docs"]
 ---
 
+Use this page to handle sensitive customer context safely while you use Ergo's AI, meeting, CRM, and reporting workflows.
 
+## Who can use this
 
+- Everyone using Ergo, plus rollout owners and admins who need shared vocabulary.
 
-## Key things to know
+## Before you start
 
-- Review what data sources your workspace connects to Ergo.
-- Confirm which teams and users can access meeting, CRM, reporting, and draft content.
-- Use admin settings for default meeting access and sharing behavior.
-- Contact Ergo for security, retention, or regulated-industry requirements that are not visible in-app.
+- Know which connected sources should be available for your workspace: CRM, email, calendar, Slack, meeting capture, or notetaker data.
+- Confirm whether you are a user, admin, super admin, or spectator.
+- Ask your rollout owner before changing access, recording, integration, retention, or admin setup defaults.
+
+## Steps
+
+- Share only the customer context needed for the workflow you are completing.
+- Review AI-generated summaries, drafts, insights, and CRM updates before sending them externally or writing them back to a system of record.
+- Treat this page as operational guidance. Use your agreement, security packet, or Ergo support for exact retention, subprocessor, certification, and model-processing terms.
+- If you need a deletion, retention, or procurement answer, ask your rollout owner or Ergo support for the current formal security material instead of relying on a workflow page.
+
+## What to expect
+
+- Ergo's AI workflows use controlled model-processing endpoints for generation, extraction, classification, and draft creation.
+- Customer prompts and outputs are not intended to train or improve underlying foundation models, but exact contractual wording belongs in the current security material.
+- Ergo's standard agreements include data-deletion terms. Confirm the exact clause, timing, and backup treatment through your agreement or Ergo support.
+- Admins should use formal security material for procurement, legal review, or compliance review.
 
 ## Common issues
 
-- The person is using the wrong workspace or team context.
-- Their role, permission, or spectator access does not match the workflow.
-- A connected source is missing, stale, or still syncing.
-- AI output needs source review before it is used externally.
+- The wrong source, account, or organization context is selected.
+- A user expects a spectator role, shared link, or reporting grant to provide broader access than it actually grants.
+- A generated output is treated as final before a person reviews it.
+- A contractual security question is asked in a workflow context instead of through the formal security/procurement path.
 
 ## Related articles
 
-- [Recording/privacy basics](./recording-privacy-basics)
+- [Start here](./index)
+- [Data sources and freshness](./data-sources-and-freshness)
 - [Reviewing AI-generated outputs](./reviewing-ai-generated-outputs)
-- [Getting support](./getting-support)
+- [Recording/privacy basics](./recording-privacy-basics)
+- [First-time setup checklist](../setup/first-time-setup-checklist)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

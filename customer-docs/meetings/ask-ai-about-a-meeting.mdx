@@ -1,30 +1,35 @@
 ---
 title: "Ask AI about a meeting"
-description: "Handle ask AI about a meeting in the meetings and notetaker workflow."
-keywords: ["Ask AI about a meeting","Meetings and notes","Ergo docs"]
+description: "Use meeting chat to ask questions grounded in a meeting's transcript and available context."
+keywords: ["ask AI", "meeting chat", "meeting transcript", "sources"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use meeting chat when you want to ask follow-up questions about a specific meeting record.
 
+## Before you ask
 
-## Use this workflow
+- Confirm the meeting has a transcript.
+- Check that you are on the correct meeting record if there are duplicate sources.
+- Treat AI answers as generated output and review them before using them externally.
 
-- Open the meeting detail page.
-- Ask a specific question about the meeting, such as objections, next steps, or follow-up points.
-- Review the source context before acting on the answer.
-- Use a narrower question if the first answer is too broad.
+## Good questions
 
-## Common issues
+- "What were the agreed next steps?"
+- "What objections came up?"
+- "Summarize the customer's main requirements."
+- "Find quotes related to pricing."
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What to expect
+
+- Meeting chat uses the meeting transcript and available linked context when those sources are available.
+- Answers can include source snippets or timestamp-style support depending on the view.
+- It is scoped to the meeting record and the customer context Ergo can access for that record; it is not a replacement for global search or reporting.
+- Shared meeting chat can have separate authentication, rate limit, and message-count behavior from internal meeting chat.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting detail page](./meeting-detail-page)
+- [Video, transcript, and action items](./video-transcript-and-action-items)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)

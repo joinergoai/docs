@@ -1,35 +1,48 @@
 ---
 title: "Slack"
-description: "Connect and maintain Slack with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Slack","Integrations","Ergo docs"]
+description: "Connect Slack so Ergo can use approved workspace context and deliver supported Slack workflows."
+keywords: ["Slack", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Slack and manage the core Slack workspace connection.
+
+## Who can use this
+
+- Admins connecting the Slack workspace.
+- Users and operators validating Slack delivery, monitoring, or pre-call context settings.
 
 ## Before you start
 
-- Have access to the Slack account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Use a Slack workspace where your team has approved Ergo access.
+- Add the Ergo app or bot to each channel the workflow should use; workspace installation alone does not grant channel coverage.
+- Confirm the channels and user-token behavior your workflow needs.
+- Keep Slack monitoring and pre-call context settings separate from the base Slack connection.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Slack**.
+- Complete the Slack install or OAuth flow.
+- Confirm the workspace appears connected.
+- Review Slack monitoring and pre-call context only if those workflows are enabled for your team.
 
-- Connect Slack from Integrations.
-- Confirm Ergo has access to the channels where customer context or delivery should happen.
-- Add Ergo to new customer channels when the channel should be monitored or used for context.
-- Reconnect Slack if channel lists, pre-call context, or delivery stops working.
+## What to expect
+
+- The Slack connection can support notifications, summaries, handoff workflows, and Slack-related context where configured.
+- Monitoring and pre-call context require additional settings and channel access.
+- Slack context applies to channels Ergo can access after the app or bot is added; do not expect retroactive coverage of prior channel history.
+- Slack channel permissions, bot membership, and user-token setup can affect what Ergo can read or deliver.
 
 ## Common issues
 
-- Slack is disconnected or was reconnected with the wrong workspace.
-- Ergo is not in the customer channel.
-- Private, shared, or Enterprise Grid channel permissions block visibility.
-- Old channel mappings are still affecting context or delivery.
+- The app is installed in the workspace but not added to the target channel.
+- The user-token flow required for a workflow was not completed.
+- The workspace or channel policy blocks bot access.
 
 ## Related articles
 
-- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Integrations](./index)
 - [Slack monitoring and pre-call context](./slack-monitoring-and-pre-call-context)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

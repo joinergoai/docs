@@ -1,34 +1,53 @@
 ---
 title: "CRM properties setup"
-description: "Map required CRM properties during onboarding before expecting Ergo to update records or reporting fields."
-keywords: ["CRM properties setup","Onboarding","Ergo docs"]
+description: "Prepare CRM properties during onboarding so Ergo can map fields, create missing properties, and write updates safely."
+keywords: ["CRM properties setup", "CRM field mapping", "CRM writeback", "Ergo setup"]
 ---
 
+![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
-![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
+Use this page when an admin or RevOps owner is preparing CRM fields for Ergo during onboarding. CRM property setup belongs in **Field Mapping**: choose the fields Ergo should understand, create or sync the needed CRM properties, then test the setup before relying on CRM writeback or reporting.
 
+## Who can use this
+
+- Admins and RevOps owners who can manage CRM fields.
+- Operators helping with onboarding, as long as a CRM admin owns the final configuration.
 
 ## Before you start
 
-- Confirm CRM is connected or available.
+- Connect the workspace CRM first.
+- Use a CRM account that can read records and create or update fields on the objects Ergo will use.
+- Decide which fields should exist on deals or opportunities, contacts, and companies or accounts.
+- Confirm whether a field already exists in the CRM before creating a new one with a similar name.
 
+## Steps
 
-## Setup steps
+1. Open **Field Mapping** from the left navigation.
+2. Review the CRM properties Ergo already knows about and the CRM-defined properties pulled from the connected CRM.
+3. Select the properties Ergo should sync or create. Keep names and field types aligned with your CRM's conventions.
+4. Add descriptions or prompts where Ergo needs extra instruction about how a field should be populated.
+5. Create or sync the selected properties, then resolve any field drift before enabling broader automation.
+6. Test on one record or a small workflow before asking the team to rely on automated CRM updates.
 
-- Review the CRM properties Ergo needs to read and update.
-- Confirm property names, types, and permissions in your CRM.
-- Map each required property in Ergo.
-- Test with one deal before relying on automated updates.
+## What to expect
+
+- CRM properties are handled separately from pipeline stages, but both are prerequisites for reliable CRM updates.
+- Ergo compares configured properties with CRM properties for connected external CRMs and can surface drift when names, types, options, or select behavior diverge.
+- Existing CRM permissions still apply. If the connected CRM user cannot create or update a property, Ergo cannot bypass that restriction.
+- Adding or changing a property affects future automation. Treat any historical backfill expectations as a separate project unless your Ergo team has confirmed support for your workspace.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A CRM field exists but uses a different field type or option set than the Ergo configuration.
+- The connected CRM user can read a field but cannot create or update it.
+- A property was renamed or changed in the CRM after setup, creating drift.
+- A downstream CRM update is tested before properties, permissions, pipeline stages, and stage controls are all ready.
 
 ## Related articles
 
-- [CRM properties](../field-mapping/crm-properties)
+- [Setup](./index)
 - [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM properties](../field-mapping/crm-properties)
+- [Property permissions](../field-mapping/property-permissions)
+- [Pipeline stages](./pipeline-stages)
 - [CRM sync issues](../troubleshooting/crm-sync-issues)

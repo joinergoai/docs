@@ -1,30 +1,36 @@
 ---
 title: "Push notes or meetings to automations"
-description: "Handle push notes or meetings to automations in the meetings and notetaker workflow."
-keywords: ["Push notes or meetings to automations","Meetings and notes","Ergo docs"]
+description: "Manually trigger downstream automation workflows when a meeting or note has enough context."
+keywords: ["push automation", "meeting automation", "manual notes", "CRM updates"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use push actions when a meeting or manual note needs downstream processing that did not run automatically.
 
+## Before you push
 
-## Use this workflow
+- Confirm the meeting or note has useful content.
+- Check transcript or note text, attendees, and related CRM record.
+- If there is no calendar event, add attendee email context when the push flow asks for it.
+- Avoid pushing duplicate records from multiple notetakers unless you intend to run the workflow twice.
 
-- Open the note or meeting you want to use.
-- Choose the automation destination, such as Slack, Pylon, or CRM.
-- Review the generated payload before sending when the workflow allows it.
-- Check delivery status after the automation runs.
+## What can happen
+
+- Ergo can trigger downstream automation flows such as CRM updates, summaries, or draft generation depending on configuration.
+- Automation eligibility depends on source, transcript or note quality, user settings, CRM connection, and workflow configuration.
+- Processing can take a few minutes after a manual push.
+- Pushed workflows may still produce generated output that should be reviewed before use.
 
 ## Common issues
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- The meeting is still processing.
+- The transcript is missing.
+- The wrong deal or contact is linked.
+- Another meeting record already triggered the same downstream workflow.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)
+- [Using multiple notetakers with Ergo](./using-multiple-notetakers-with-ergo)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)

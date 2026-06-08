@@ -1,30 +1,50 @@
 ---
 title: "Live transcript and mute controls"
-description: "Set up and use Ergo Desktop for live transcript and mute controls."
-keywords: ["Live transcript and mute controls","Desktop","Ergo docs"]
+description: "Use live transcript controls carefully and understand how audio capture affects transcript quality."
+keywords: ["Live transcript and mute controls", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page when live transcript, audio capture, or mute behavior is not matching what you expect in Ergo Desktop.
 
+## Who can use this
 
-## Use this workflow
+- Desktop users monitoring live transcript during a call.
+- Operators troubleshooting missing speaker turns or incomplete transcript.
 
-- Open the live transcript controls in Ergo Desktop.
-- Use mute controls when audio should not be captured.
-- Review transcript availability after the meeting ends.
-- Contact support if transcript capture does not match the recording.
+## Before you start
+
+- Sign in to Ergo Desktop.
+- Grant microphone and system-audio permissions required by your setup.
+- Confirm your network can reach the transcription service.
+
+## Steps
+
+- Start a desktop recording or live capture session.
+- Open the transcript view if you need to inspect live transcript output.
+- Check whether both your microphone audio and the other side's audio are being captured.
+- Use mute controls intentionally and verify transcript behavior after muting or unmuting.
+- Stop capture when the session ends.
+
+## What to expect
+
+- Live transcript depends on audio capture and temporary transcription credentials.
+- The app separates speaker turns such as **Me** and **Them** when the capture path supports it.
+- Partial transcript can update before final transcript is saved, and live output may be less polished than the final processed transcript.
+- Muting or missing audio input can reduce transcript completeness.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Microphone or system audio permission is missing.
+- Temporary transcription credentials could not be fetched.
+- Network interruption prevents live transcript updates.
+- Recording did not start or stop normally, so no complete transcript was produced.
+- The wrong input device is active or muted.
 
 ## Related articles
 
 - [Desktop](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [macOS permissions](./macos-permissions)
+- [Silent desktop recording](./silent-desktop-recording)
+- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)

@@ -1,30 +1,46 @@
 ---
 title: "Company board"
-description: "Use company board to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Company board","Deals and CRM workspace","Ergo docs"]
+description: "Switch to Companies to review account-level records, activity, health, contacts, and related deals."
+keywords: ["company board", "Companies view", "accounts", "company detail"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use **Companies** when you want account-level context instead of a single deal pipeline. The company board is selected from the same top selector as pipelines.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open the company view from Deals or CRM workspace.
-- Filter by owner, status, health, or recent activity.
-- Open a company to review related deals, meetings, emails, and documents.
-- Check CRM sync if company data looks stale.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Select **Companies** from the Deals selector.
+- Review company cards or list rows for account context.
+- Search, sort, and filter by supported company fields.
+- Open a company to inspect available activity, emails, meetings, health, AI overview, contacts, and related deals.
+
+## What to expect
+
+- Companies are separate from deal pipeline selection.
+- Company fields depend on CRM ingestion and mapped company properties.
+- Company-level context may reveal activity that is not attached to the deal you were viewing.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- You are still on a deal pipeline rather than **Companies**.
+- Company domains or aliases are incomplete.
+- Company custom fields are not mapped.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [How Ergo names and matches CRM records](./how-ergo-names-and-matches-crm-records)
+- [Deal detail](./deal-detail)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

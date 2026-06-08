@@ -1,36 +1,45 @@
 ---
 title: "Salesfinity"
-description: "Connect and maintain Salesfinity with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Salesfinity","Integrations","Ergo docs"]
+description: "Connect Salesfinity Dialer with an API key for supported call-log and recording sync."
+keywords: ["Salesfinity", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Salesfinity Dialer should send supported call data to Ergo.
+
+## Who can use this
+
+- Admins and operators configuring dialer ingestion.
+- Users validating whether Salesfinity calls appear in Ergo.
 
 ## Before you start
 
-- Confirm this feature is enabled for your workspace.
-- Have access to the Salesfinity account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm the Salesfinity Dialer integration is enabled for your workspace.
+- Have the Salesfinity API key ready.
+- Review whether your workspace treats this integration as beta.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Salesfinity Dialer**.
+- Paste the Salesfinity API key.
+- Confirm Salesfinity appears connected.
+- Test with one completed call before relying on broad sync.
 
-- Confirm Salesfinity beta access for your workspace.
-- Connect Salesfinity from Integrations.
-- Review expected dialer activity and context behavior.
-- Contact support if beta behavior does not match your team's workflow.
+## What to expect
+
+- Salesfinity is feature-gated and marked beta in the integration metadata.
+- Ergo stores the API key and depends on downstream call-log and recording sync behavior.
+- Do not promise complete backfill or every call until a test call has been verified.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The feature flag is not enabled for the workspace.
+- The API key is invalid or lacks access.
+- The call did not include the recording or metadata needed for downstream processing.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

@@ -1,30 +1,45 @@
 ---
 title: "Reminders and follow-up view"
-description: "Use reminders and follow-up view to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Reminders and follow-up view","Deals and CRM workspace","Ergo docs"]
+description: "Use follow-up and reminder-oriented views to find deals with next actions, then confirm owner, due date, activity, and source context."
+keywords: ["follow-ups", "reminders", "has reminders", "next actions"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use follow-up and reminder-oriented views to focus on deals that need action. These views are filters over the selected pipeline, not a separate source of truth.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open Follow-ups or the deal follow-up view.
-- Review reminders by due date, customer, or owner.
-- Complete, snooze, or update follow-ups as needed.
-- Check email/calendar context when a follow-up looks unexpected.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Use **Follow-Ups** for the built-in follow-up view.
+- Use reminder-oriented filters or tabs to see deals with manually set reminders.
+- Review owner, recent correspondence, priority, stage status, and reminder due context when available.
+- Open the deal before deciding whether to act on or change the next action.
+
+## What to expect
+
+- Follow-up and reminder counts are scoped to the selected pipeline and view filters.
+- A deal can have reminder context even when it is hidden by another filter.
+- Reminder and draft queues are related workflows but should be reviewed separately.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- You are in a pipeline that does not contain the reminded deal.
+- A saved view is hiding reminders.
+- The next action is stale because the latest email or meeting was not associated correctly.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Bulk email/Slack drafts](./bulk-email-slack-drafts)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

@@ -1,45 +1,52 @@
 ---
 title: "Search/reporting has no results"
-description: "Diagnose and resolve search/reporting has no results in Ergo."
-keywords: ["Search/reporting has no results","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot empty search, AI answer, report, dashboard, and scheduled reporting results."
+keywords: ["search no results", "reporting no results", "empty dashboard", "scheduled reporting", "troubleshooting"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+Use this page when a search, AI answer, report, dashboard, or scheduled reporting preview returns no usable results.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- Search returns no matching meetings, emails, documents, deals, or sources.
+- An AI answer says there is no relevant context.
+- A report, dashboard, chart, or widget is empty.
+- A reporting email preview has no usable evidence.
 
 ## Most common causes
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+- Filters, date ranges, owner/team scope, or source fields are too narrow.
+- The underlying source has not synced, indexed, or processed yet.
+- The viewer lacks reporting access, meeting access, or shared-link access.
+- Custom fields, reporting fields, picklists, or numerical buckets have not populated.
+- The query is too specific for the available source text.
 
 ## What to check
 
-- Check filters, date range, and selected source.
-- Confirm the underlying meetings, emails, documents, or reporting fields exist.
-- Wait for processing or sync if data was just added.
-- Contact support if known data still does not appear.
+- Broaden the date range and remove filters.
+- Confirm source data exists for the affected time window.
+- Confirm meetings, emails, CRM records, or documents are processed and visible to the viewer.
+- Check reporting access, dashboard sharing, and shared-link permissions.
+- Verify custom fields, picklists, numerical buckets, and reporting fields are configured and populated.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Start with one known meeting, email, CRM record, or dashboard that should return results.
+- Remove filters before changing field definitions or source connections.
+- If the source exists but the viewer cannot see it, resolve access before rerunning the report.
+- If a scheduled preview is empty, confirm the preview window includes recent processed activity.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when a known source is processed, filters are broad, access is correct, and results are still empty.
+- Include the workspace, affected user, source type, search/report/dashboard name, filters, expected example, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
 - [Troubleshooting](./index)
+- [Draft send failures](./draft-send-failures)
+- [Permission or access denied](./permission-or-access-denied)
 - [Getting support](../start-here/getting-support)

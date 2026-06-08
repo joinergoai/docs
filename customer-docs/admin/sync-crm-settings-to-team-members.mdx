@@ -1,35 +1,85 @@
 ---
 title: "Sync CRM/settings to team members"
-description: "Manage sync CRM/settings to team members across teams, members, access, defaults, and organization settings."
-keywords: ["Sync CRM/settings to team members","Admin","Ergo docs"]
+description: "Use Admin member actions to sync CRM credentials or selected admin settings to team members."
+keywords: ["sync CRM", "sync settings", "team settings", "admin"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when a team member should inherit CRM access or selected settings from an admin configuration. There are two different Admin actions: **Sync CRM** and **Sync Settings to User**.
+
+## Who can use this
+
+- Admins can push their settings to users in the same organization.
+- The Admin member table exposes sync actions for secondary admins and members, not the primary-admin row.
+- Use these actions only when the target user should inherit the admin configuration.
 
 ## Before you start
 
-- Sign in with admin access or delegated permission for this area.
-- Confirm CRM is connected or available.
+- Confirm the target user is in the same organization.
+- Confirm the admin account has the CRM keys or settings you intend to copy.
+- Decide whether you only need CRM credentials or a broader settings push.
+- Remember that selected settings can overwrite the target user's existing configuration.
 
+## Sync CRM
 
-## Configure it
+Use **Sync CRM** when the user should receive the organization admin's CRM keys.
 
-- Open Admin settings sync.
-- Choose the CRM or settings to sync.
-- Select the target team members.
-- Ask users to verify setup after the sync completes.
+1. Open **Admin** and choose the team.
+2. Open the member's action menu.
+3. Select **Sync CRM**.
+4. Wait for the sync to finish.
+
+Ergo copies available CRM keys from the organization admin dashboard to the user's dashboard for supported CRMs, including HubSpot, Salesforce, Zoho, Attio, and Pipedrive. After keys are copied, Ergo checks whether CRM owner properties need to be created for that user.
+
+If the organization admin has no CRM keys, the sync returns successfully but has nothing to copy.
+
+## Sync settings to one user
+
+Use **Sync Settings to User** when a user should receive selected settings from the acting admin's dashboard.
+
+1. Open the member's action menu.
+2. Select **Sync Settings to User**.
+3. Choose the settings categories to copy.
+4. Select **Sync Settings**.
+
+The modal lets you choose:
+
+- Custom properties
+- Pipeline stages
+- Company details
+- Meeting titles
+- Alternate domains
+- Partnership domains
+- Task settings
+- CRM keys
+- Email templates
+- Advanced settings, including context notifications and related toggles
+
+Email templates are not selected by default. Select them only when the target user should inherit the admin's email, Slack, and CRM note templates.
+
+## What to expect
+
+- Settings sync is targeted to one user at a time from the member action menu.
+- Selected categories overwrite or replace the target user's existing values where the sync category applies.
+- Owner properties are preserved when custom properties are pushed.
+- Pipeline stage sync merges synced stages by internal ID and can add or update the target user's synced stage records.
+- Salesforce record types are synced only when the target user has Salesforce integration.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The target user is missing.** Confirm the user is provisioned in the same organization.
+- **The user dashboard is missing.** The account may need provisioning or setup completion before settings can be pushed.
+- **No CRM keys were copied.** Confirm the organization admin has the CRM connection you expected.
+- **The user lost a local setting.** Reopen the relevant settings page and adjust it manually, or repeat the sync with narrower categories.
+- **Templates were not copied.** Email templates are off by default in the sync modal.
 
 ## Related articles
 
 - [Admin](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Grant meeting/reporting access](./grant-meeting-reporting-access)
+- [Global meeting access](./global-meeting-access)
+- [CRM properties setup](../setup/crm-properties-setup)
+- [Pipeline stages](../setup/pipeline-stages)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

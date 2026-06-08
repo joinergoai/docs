@@ -1,45 +1,51 @@
 ---
 title: "Pylon delivery failures, duplicate deliveries, and queue health"
-description: "Diagnose and resolve Pylon delivery failures, duplicate deliveries, and queue health in Ergo."
-keywords: ["Pylon delivery failures, duplicate deliveries, and queue health","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot missing, duplicated, or delayed Ergo delivery into Pylon workflows."
+keywords: ["Pylon delivery", "duplicate delivery", "queue health", "recording delivery", "troubleshooting"]
 ---
-
 
 ![Flow diagram showing Pylon delivery setup, delivery attempts, duplicates, and escalation.](../images/pylon-delivery-flow.svg)
 
+Use this page when an Ergo recording, transcript, or workflow delivery expected in Pylon is missing, delayed, duplicated, or hard to trace.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- A Pylon conversation or ticket does not receive the expected recording or context.
+- A recording or notification appears more than once.
+- Delivery status is unclear after a support workflow.
+- The source meeting is still processing when Pylon delivery is expected.
 
 ## Most common causes
 
-- Pylon is disconnected or connected to the wrong workspace.
-- The affected queue, issue, or account is not visible to Ergo.
-- A delivery retried and appeared more than once.
-- The workflow failed after Ergo generated the payload.
+- Pylon API key, queue, account, or destination mapping is incorrect.
+- The source meeting, transcript, or recording asset is not ready yet.
+- A delivery job retried after a transient failure.
+- Multiple rules or workflows point at the same destination.
 
 ## What to check
 
-- Confirm Pylon is connected.
-- Check whether the affected issue, queue, or workflow is visible to Ergo.
-- Review whether duplicate deliveries are one-time, repeated, or tied to a specific workflow.
-- Contact support with the Pylon issue, workspace, and delivery time if duplicates or failures persist.
+- Confirm Pylon is connected with the intended workspace/API configuration.
+- Check the queue, destination, account, or issue mapping used by the workflow.
+- Verify the meeting has a ready recording/transcript asset before retrying delivery.
+- Check whether another automation or delivery rule targets the same Pylon destination.
+- Capture the affected Pylon destination and meeting/time window without copying private message contents.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Retry only after confirming the source asset is ready and the destination mapping is correct.
+- If duplicate delivery occurred, pause broad retries until the duplicate source is identified.
+- Test with one known meeting or workflow before re-enabling a wider queue.
+- Treat queue health and destination mapping as separate checks.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when Pylon is connected, the destination is correct, the source asset is ready, and delivery is still missing or duplicated.
+- Include the Ergo workspace, Pylon destination type, source meeting or workflow, delivery time window, and whether it was missing, duplicated, or delayed.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
 - [Troubleshooting](./index)
+- [Add Ergo to new Slack customer channels](./add-ergo-to-new-slack-customer-channels)
+- [Notetaker did not join](./notetaker-did-not-join)
 - [Getting support](../start-here/getting-support)

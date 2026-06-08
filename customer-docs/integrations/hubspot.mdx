@@ -1,35 +1,49 @@
 ---
 title: "HubSpot"
-description: "Connect and maintain HubSpot with the right account, permissions, reconnect path, and failure checks."
-keywords: ["HubSpot","Integrations","Ergo docs"]
+description: "Connect HubSpot so Ergo can use HubSpot CRM records, fields, owners, and meeting activity context."
+keywords: ["HubSpot", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect HubSpot when HubSpot is your CRM source of truth for deals, companies, contacts, owners, and fields.
+
+## Who can use this
+
+- Admins and RevOps teams configuring HubSpot access.
+- Operators validating CRM permissions, field mapping, and meeting activity behavior.
 
 ## Before you start
 
-- Have access to the HubSpot account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Use a HubSpot account with access to the objects and properties Ergo should read or update.
+- Confirm your team has decided where meeting notes, recording links, and activity updates should appear.
+- Review field mapping before enabling automation that writes CRM values.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **HubSpot**.
+- Complete the HubSpot OAuth flow.
+- Confirm HubSpot appears connected in Ergo.
+- Review CRM properties, owners, pipeline stages, and meeting activity settings.
+- Test with a small set of meetings or deals before relying on broad updates.
 
-- Connect HubSpot from Integrations with an account that can read and update the intended objects.
-- Map properties and pipeline stages before expecting writeback.
-- Check company and deal naming when a record is hard to find.
-- Verify meeting activities and recording links after the first recorded meeting.
+## What to expect
+
+- Ergo can use HubSpot CRM data for deal context, matching, field mapping, and configured CRM updates.
+- Meeting activities and recording links have their own page because they depend on both the HubSpot connection and the configured activity/link workflow.
+- HubSpot object permissions, property permissions, and pipeline setup can change what Ergo can read or write.
 
 ## Common issues
 
-- The company or deal name differs from the meeting or customer name.
-- The meeting is associated with a different CRM record than expected.
-- Domain, contact, or account data is incomplete in the CRM.
-- The meeting source does not provide the same recording or audio assets as Ergo Notetaker.
+- OAuth completed but the connected HubSpot user lacks access to a target object or property.
+- A HubSpot property was renamed, removed, or changed after field mapping.
+- Meeting links do not appear where expected because the meeting activity workflow is not configured or the meeting was not matched.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Salesforce](./salesforce)
+- [HubSpot meeting activities and recording links](./hubspot-meeting-activities-and-recording-links)
+- [Field mapping overview](../field-mapping/field-mapping-overview)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

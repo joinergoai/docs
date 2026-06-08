@@ -1,30 +1,46 @@
 ---
 title: "Field Mapping overview"
-description: "Understand how CRM properties, permissions, pipelines, and stage drift affect Ergo writeback."
-keywords: ["Field Mapping overview","Field mapping and CRM configuration","Ergo docs"]
+description: "Understand the Field Mapping tabs and the setup Ergo needs before CRM writeback, stage classification, and AI-assisted updates."
+keywords: ["field mapping", "CRM properties", "pipeline stages", "CRM permissions"]
 ---
-
 
 ![Product screenshot showing how CRM fields, pipeline stages, permissions, and sync checks fit together.](../images/product-field-mapping.png)
 
+Field Mapping is the admin setup area for CRM properties, pipeline stages, company context, meeting-title phrases, and advanced CRM controls. Use it before trusting Ergo to read, classify, or update CRM records at scale.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Connect your CRM first.
-- Review required properties, pipeline, stages, and permissions.
-- Map Ergo fields to CRM fields before expecting updates.
-- Resolve drift or permission issues before enabling broad automation.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Confirm the CRM connection is healthy.
+- Use **CRM Properties** to map deal, contact, and company fields.
+- Use **Pipeline Stages** to sync stages, write stage descriptions, and edit stages where the connected CRM supports it.
+- Use **Company Info**, **Meeting Titles**, and **Advanced** to tune matching and classification context.
+- Test one record before enabling broad automation.
+
+## What to expect
+
+- Field Mapping stores the configuration Ergo uses for CRM-backed views, write paths, matching, and AI context.
+- CRM-side changes can create drift that needs review before automation continues.
+- Some controls affect matching or classification rather than directly creating CRM objects.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A field or stage was renamed, removed, or restricted in the CRM after setup.
+- A setting was changed in Ergo but not tested on a representative record.
+- CRM permissions allow read access but block create or update actions.
 
 ## Related articles
 
+- [Field mapping](./index)
 - [Field mapping setup: required before CRM updates work](./field-mapping-setup-required-before-crm-updates-work)
-- [CRM properties](./crm-properties)
-- [Stage drift resolution](./stage-drift-resolution)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

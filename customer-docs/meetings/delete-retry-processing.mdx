@@ -1,30 +1,36 @@
 ---
-title: "Delete/retry processing"
-description: "Handle delete/retry processing in the meetings and notetaker workflow."
-keywords: ["Delete/retry processing","Meetings and notes","Ergo docs"]
+title: "Delete or retry processing"
+description: "Delete meeting records or retry supported failed processing states without confusing source-specific behavior."
+keywords: ["delete meeting", "retry processing", "failed processing", "desktop recording"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use delete and retry carefully. Deleting a meeting record is different from retrying a failed output.
 
+## Delete a meeting
 
-## Use this workflow
+- Open the meeting record.
+- Use the delete action if you have permission.
+- Deletion removes the meeting record and cleans up related folder references.
+- Stored media cleanup can be attempted as part of deletion, depending on source.
 
-- Open the affected meeting or note.
-- Use retry processing when the page offers that action.
-- Delete only when you are sure the content should be removed.
-- Contact support when retry does not recover the missing output.
+## Retry processing
 
-## Common issues
+- Retry is available only for supported failed states.
+- Desktop recordings can show processing or failed states that are distinct from bot meetings.
+- Retry reprocesses captured data; it does not send the notetaker back into a live meeting.
+- If the UI does not expose retry for a specific output, do not assume retry is supported for that state.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## Before you act
+
+- Confirm the source: bot, desktop, upload, or manual note.
+- Check whether the transcript exists.
+- Check whether deleting the record will remove context needed by drafts, reporting, or CRM workflows.
+- If CRM fields were already updated, use the appropriate undo or correction flow separately; deleting the meeting record does not roll those CRM changes back by itself.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
+- [Auto-delete meetings](./auto-delete-meetings)
+- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)

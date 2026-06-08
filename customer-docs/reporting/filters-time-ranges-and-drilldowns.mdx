@@ -1,30 +1,55 @@
 ---
 title: "Filters, time ranges, and drilldowns"
-description: "Use filters, time ranges, and drilldowns to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Filters, time ranges, and drilldowns","Reporting","Ergo docs"]
+description: "Use Reporting filters, dashboard time ranges, chart time ranges, and drilldowns without hiding the data you need."
+keywords: ["Reporting filters", "Time ranges", "Drilldowns", "Dashboard filters", "Chart filters"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Filters and time ranges are the most common reason two people see different reporting results. Check them before comparing charts.
 
+## Time ranges
 
-## Use this workflow
+Reporting supports:
 
-- Review the active filters before reading a chart.
-- Set the time range to match the question.
-- Use drilldowns to inspect underlying records.
-- Clear filters when results look unexpectedly empty.
+- No filter
+- Last 7 days
+- Last 30 days
+- Last 90 days
+- Custom range
 
-## Common issues
+Chart Builder saves a chart-level time range. Dashboards can also apply a temporary dashboard-level time range while you are viewing that dashboard. The dashboard-level range changes the current view; it does not rewrite every saved chart configuration.
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+## Field filters
+
+Filters are built from reporting fields:
+
+- Picklist and sentence fields filter by selected values.
+- Numerical fields filter by configured ranges.
+- Rubric charts support a smaller set of filters, such as user, deal stage, and amount.
+- Correspondence count can filter to meetings or emails when that mode is enabled.
+
+If a filter disappears after changing the main category, the new category may not support that filter.
+
+## Drilldowns
+
+Charts can expose drilldowns into clusters, subclusters, representative sentences, or supporting details depending on the field type and view.
+
+Use drilldowns to inspect source context before treating a chart as a coaching or forecasting conclusion. Shared chart and dashboard links may not expose every authenticated detail view.
+
+## When results look wrong
+
+- Clear the dashboard-level time range.
+- Check the chart's saved time range.
+- Remove filters one at a time.
+- Confirm the field has data for the selected period.
+- Check whether the chart is using a rubric, revenue view, correspondence type, or selected subcluster.
+- If the chart is shared, open the authenticated dashboard to compare the full view.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Chart builder](./chart-builder)
+- [Save widgets to dashboards](./save-widgets-to-dashboards)
+- [Reporting dashboard sharing and embedding troubleshooting](./reporting-dashboard-sharing-and-embedding-troubleshooting)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

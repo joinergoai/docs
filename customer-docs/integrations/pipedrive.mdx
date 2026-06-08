@@ -1,35 +1,47 @@
 ---
 title: "Pipedrive"
-description: "Connect and maintain Pipedrive with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Pipedrive","Integrations","Ergo docs"]
+description: "Connect Pipedrive with an API token so Ergo can use Pipedrive CRM records and activities."
+keywords: ["Pipedrive", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Pipedrive when Pipedrive is your CRM source for deals, people, organizations, activities, and pipeline fields.
+
+## Who can use this
+
+- Admins and RevOps teams configuring CRM access.
+- Operators validating Pipedrive activity and field behavior.
 
 ## Before you start
 
-- Have access to the Pipedrive account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Generate the API token from the Pipedrive user account that should authorize Ergo.
+- Confirm the token can access the expected pipelines, deals, people, organizations, fields, and activity types.
+- Review field mapping before enabling CRM update workflows.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Pipedrive**.
+- Paste the Pipedrive API token.
+- Confirm Pipedrive appears connected.
+- Verify the relevant pipeline, stage, field, and activity behavior before broad rollout.
 
-- Connect Pipedrive from Integrations.
-- Review pipelines, stages, and mapped properties.
-- Confirm the connected account can update the intended records.
-- Test one deal before using Pipedrive updates across the team.
+## What to expect
+
+- Ergo can use Pipedrive CRM data for configured deal context, field mapping, matching, and activity write paths.
+- Pipedrive token permissions, activity types, and pipeline setup affect what Ergo can read or write.
+- Do not assume every Pipedrive activity type exists by default. Validate call, email, and task activity types during setup.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The API token belongs to a user without access to the target pipeline or field.
+- Required activity types are missing or named differently.
+- A Pipedrive field or stage changed after field mapping.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Salesforce](./salesforce)
+- [HubSpot](./hubspot)
+- [Field mapping overview](../field-mapping/field-mapping-overview)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

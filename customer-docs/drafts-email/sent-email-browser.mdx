@@ -1,30 +1,51 @@
 ---
 title: "Sent email browser"
-description: "Use sent email browser for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Sent email browser","Drafts, email, and templates","Ergo docs"]
+description: "Review sent emails and sent-thread examples without assuming provider history is complete."
+keywords: ["Sent email browser", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+The sent email browser helps you inspect recent sent emails, choose examples for templates, and review sent drafts from Ergo.
 
+## Who can use this
 
-## Use this workflow
+- Users reviewing their own sent activity.
+- Template owners looking for safe example language.
+- Managers checking sent-state and follow-up history when permitted.
 
-- Open the sent email browser.
-- Filter by user, date, customer, or state when available.
-- Open sent emails to review context and outcomes.
-- Use troubleshooting if sent emails are missing unexpectedly.
+## Before you start
+
+- Connect the sender's email account.
+- Confirm you are viewing the correct user scope when org-wide draft access is enabled.
+- Decide whether you need a sent draft from Ergo or a provider sent-email example.
+
+## Steps
+
+- Open **Drafts** and select **Sent** for emails sent through Ergo.
+- Use tracking filters if you are reviewing sent/open activity.
+- For template work, use the sent email picker when available.
+- Search or page through available sent emails.
+- Open a thread to inspect messages before using an example.
+
+## What to expect
+
+- Sent draft records can include sent time, pending state, recipient fields, and open-tracking fields.
+- The sent email picker can search recent sent email and fetch thread messages from the connected provider.
+- Provider history, permissions, and pagination affect what appears.
+- Sent examples should be generalized before becoming templates.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Email is disconnected or the grant is expired.
+- The message was sent outside Ergo and does not appear in the Ergo sent-drafts list.
+- Search terms are too narrow.
+- A sent example contains private details and should not be reused directly.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Open tracking and sent flow](./open-tracking-and-sent-flow)
+- [AI template builder](./ai-template-builder)
+- [Create/edit templates](./create-edit-templates)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)

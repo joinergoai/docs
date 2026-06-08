@@ -1,30 +1,31 @@
 ---
 title: "Video, transcript, and action items"
-description: "Handle video, transcript, and action items in the meetings and notetaker workflow."
-keywords: ["Video, transcript, and action items","Meetings and notes","Ergo docs"]
+description: "Review the main meeting outputs and understand why each output can become available at a different time."
+keywords: ["meeting video", "meeting transcript", "action items", "summary"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Video, transcript, and action items are related outputs, but they can become ready at different times.
 
+## Video
 
-## Use this workflow
+- Bot-recorded meetings can include video playback when the recording is available.
+- Desktop recordings and uploaded recordings may have different media behavior depending on source and processing result.
+- If a meeting is private, sharing and email links can be affected even when video exists.
 
-- Open the meeting detail page after processing.
-- Review the video or recording first when transcript context looks incomplete.
-- Use action items to confirm next steps before sending follow-ups.
-- Contact support if one output is missing while others are available.
+## Transcript
 
-## Common issues
+- Transcript entries are used for summaries, meeting chat, quotes, and many downstream workflows.
+- If the transcript is empty, short, or missing, generated outputs can be incomplete or absent.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## Action items and summaries
+
+- Action items are generated from meeting content after processing.
+- Review generated action items before copying them to CRM, sending drafts, or using them in customer follow-up.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)

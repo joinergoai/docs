@@ -1,28 +1,49 @@
 ---
 title: "Prompting Ergo effectively"
-description: "Ask Ergo clearer questions by naming the customer, source, output format, and constraints you want it to use."
-keywords: ["Prompting Ergo effectively","Start and guidelines","Ergo docs"]
+description: "Write prompts that use the right Ergo account, source context, output format, and review path."
+keywords: ["Prompting Ergo effectively", "Start here", "Ergo docs"]
 ---
 
+Use this page to ask clearer questions in Chat with Ergo, search, scheduled runs, draft reprompting, templates, and post-call instructions.
 
+## Who can use this
 
+- Everyone using Ergo, plus admins who configure sources, templates, instructions, or scheduled outputs.
 
-## Key things to know
+## Before you start
 
-- Name the customer, deal, meeting, report, or document you want Ergo to use.
-- Ask for a specific output format when you need bullets, a draft, a summary, or a report-ready answer.
-- Mention constraints like date range, team, pipeline, or meeting source.
-- Review the sources and actions Ergo cites before acting on an answer.
+- Know which Ergo account, team, and source objects should answer the question.
+- Confirm whether you are a user, admin, super admin, or spectator.
+- Ask an admin or super admin before changing access, recording, integration, scheduled-run, template, or post-call-instruction defaults.
+
+## Steps
+
+- Name the account or company, deal, meeting, document, report, date range, and desired output.
+- Ask for the format you want, such as bullets, next steps, risks, call prep, a draft, or a summary.
+- Tell Ergo which context to use: a specific meeting, the latest customer conversation, a deal, a date range, a document, a report, or a set of sources.
+- Tell Ergo what to exclude, especially internal chatter, stale sources, or unverified assumptions.
+- Open cited sources before acting on high-stakes answers or proposed actions.
+
+## What to expect
+
+- Specific prompts reduce wrong-context answers.
+- Answers and generated outputs are only as good as the available sources, permissions, and prompt context.
+- For scheduled or recurring outputs, test a manual run or preview when that control is available before enabling repeat delivery.
 
 ## Common issues
 
-- The person is using the wrong workspace or team context.
-- Their role, permission, or spectator access does not match the workflow.
-- A connected source is missing, stale, or still syncing.
-- AI output needs source review before it is used externally.
+- The wrong Ergo account, team, source, account record, or date range is selected.
+- The needed source is disconnected, stale, unmatched, or outside your access.
+- The prompt is too broad or does not name the deal, meeting, customer, output format, or time window.
+- A meeting share link is treated like dashboard access; it only gives access to that specific shared meeting view.
 
 ## Related articles
 
 - [Start here](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Reviewing AI-generated outputs](./reviewing-ai-generated-outputs)
+- [Chat with Ergo](../ai-search-automation/chat-with-ergo)
+- [Using deal and meeting context](../ai-search-automation/using-deal-and-meeting-context)
+- [Scheduled agent runs](../ai-search-automation/scheduled-agent-runs)
+- [Recording/privacy basics](./recording-privacy-basics)
+- [First-time setup checklist](../setup/first-time-setup-checklist)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

@@ -1,36 +1,46 @@
 ---
 title: "Nooks"
-description: "Connect and maintain Nooks with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Nooks","Integrations","Ergo docs"]
+description: "Connect Nooks Dialer with the workspace signing-key flow shown in Ergo."
+keywords: ["Nooks", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Nooks Dialer should send call recordings and transcripts to Ergo.
+
+## Who can use this
+
+- Admins and operators configuring dialer ingestion.
+- Users validating whether Nooks calls appear in Ergo.
 
 ## Before you start
 
-- Confirm this feature is enabled for your workspace.
-- Have access to the Nooks account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm the Nooks Dialer integration is enabled for your workspace.
+- Copy the webhook URL shown in Ergo.
+- Have the Nooks webhook signing key ready.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Nooks Dialer**.
+- Open the Nooks setup modal.
+- Copy the webhook URL into Nooks.
+- Save the Nooks webhook signing key in Ergo.
+- Confirm the status shows connected and test one call.
 
-- Confirm Nooks is enabled for your workspace.
-- Connect Nooks from Integrations.
-- Review which dialer activities should influence Ergo context.
-- Test one workflow before rolling it out to the team.
+## What to expect
+
+- Nooks is feature-gated and uses an org-level API key/webhook pattern.
+- The connection status depends on the saved signing key and webhook setup.
+- Call availability depends on Nooks sending a supported payload.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The feature flag is not enabled for the workspace.
+- The webhook URL or signing key was copied incorrectly.
+- Nooks sent a payload Ergo could not verify or match.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

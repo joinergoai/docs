@@ -1,46 +1,53 @@
 ---
 title: "Draft send failures"
-description: "Diagnose and resolve draft send failures in Ergo."
-keywords: ["Draft send failures","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot email drafts that fail validation, send, schedule, or retry."
+keywords: ["draft send failure", "failed drafts", "email drafts", "retry drafts", "troubleshooting"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Use this page when an Ergo email draft fails validation, cannot be sent, does not schedule, or remains in the failed-drafts queue.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- A draft fails to send, schedule, unschedule, or retry.
+- The failed-drafts queue shows validation errors.
+- A scheduled or immediate send does not complete.
+- A reply draft is missing thread context or sender identity.
 
 ## Most common causes
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Sender email, recipients, subject, or body is missing or invalid.
+- Email grant is disconnected, expired, or connected to the wrong mailbox.
+- A reply-thread draft is missing thread context.
+- Attachments, links, images, body formatting, or provider policy caused rejection.
+- The draft was changed after generation and no longer passes validation.
 
 ## What to check
 
-- Check whether email is connected and grants are valid.
-- Open the failed draft alert or draft queue.
-- Retry after reconnecting email or resolving the error.
-- Report the failure if retry does not work.
+- Open the failed draft and fix sender, recipients, subject, and body errors.
+- Confirm the connected mailbox matches the sender on the draft.
+- Reconnect email if the grant is stale, expired, or disconnected.
+- For reply drafts, confirm the thread/history context is still available.
+- Retry from the failed-drafts queue after validation passes.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- Fix draft validation first; retrying with the same invalid fields will keep failing.
+- Reconnect email only when the mailbox or grant is the likely failure source.
+- If several drafts fail together, pause bulk sends and test one corrected draft.
+- If a scheduled send fails, verify the draft is still editable and the scheduled time/state is valid.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when validation is fixed, email is connected, and one corrected draft still fails.
+- Include the workspace, affected user, draft ID, sender, failure state, workflow type, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
+- [Troubleshooting](./index)
+- [Duplicate drafts from multiple notetakers](./duplicate-drafts-from-multiple-notetakers)
+- [Search/reporting has no results](./search-reporting-has-no-results)
+- [Getting support](../start-here/getting-support)
 - [Failed drafts retry/report](../drafts-email/failed-drafts-retry-report)
-- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)
-- [Turn post-call drafts on or off](../drafts-email/turn-post-call-drafts-on-or-off)

@@ -1,35 +1,47 @@
 ---
 title: "Fireflies"
-description: "Connect and maintain Fireflies with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Fireflies","Integrations","Ergo docs"]
+description: "Connect Fireflies with an API key and webhook secret so Fireflies transcripts can feed Ergo."
+keywords: ["Fireflies", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Fireflies is one of your meeting recording or transcription sources.
+
+## Who can use this
+
+- Admins and operators configuring third-party notetaker ingestion.
+- Users validating Fireflies meetings in Ergo.
 
 ## Before you start
 
-- Have access to the Fireflies account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm your Fireflies plan supports the webhook setup your team needs.
+- Have the Fireflies API key and webhook signing secret ready.
+- Decide how Fireflies should coexist with other notetaker sources.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Fireflies**.
+- Follow the Fireflies instructions shown in Ergo.
+- Paste the API key and webhook secret.
+- Subscribe the Fireflies webhook to the meeting events required by the integration panel.
+- Confirm a test Fireflies meeting appears in Ergo.
 
-- Connect Fireflies from Integrations when your team uses it as a meeting source.
-- Confirm which recordings and transcripts Ergo can access.
-- Check output differences compared with Ergo Notetaker.
-- Avoid connecting duplicate notetaker sources unless your team understands the output ownership.
+## What to expect
+
+- Ergo validates the Fireflies API key before saving it.
+- The webhook signing secret is checked when Fireflies sends signed webhook payloads.
+- Fireflies data still depends on Fireflies delivering transcript and summary events.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The Fireflies API key is invalid.
+- The webhook secret in Fireflies does not match the value saved in Ergo.
+- Fireflies sent only part of the meeting data or another notetaker source already captured the call.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

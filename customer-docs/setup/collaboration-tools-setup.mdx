@@ -1,30 +1,97 @@
 ---
 title: "Collaboration tools setup"
-description: "Complete the collaboration tools setup onboarding step with the right owner and prerequisites."
-keywords: ["Collaboration tools setup","Onboarding","Ergo docs"]
+description: "Connect Slack, Pylon, and available messaging tools so Ergo can deliver collaboration context and handoffs."
+keywords: ["Collaboration tools setup", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page to connect the collaboration tools that should receive Ergo context, notifications, monitoring, or handoffs. Slack is the main setup path for collaboration workflows; Pylon and token-based messaging tools only appear for workspaces and roles that can use them.
 
+## Who can use this
 
-## Setup steps
+- Standard users and admins can connect Slack when their workspace uses Slack workflows.
+- Admins manage org-level Pylon setup for sending meeting recordings to Pylon.
+- Beeper only appears when it is available for your workspace. If you do not see it, treat it as not enabled for your setup.
+- Spectators and viewers should not expect to manage integrations or collaboration write workflows.
 
-- Decide which collaboration tools Ergo should use for context, delivery, or support workflows.
-- Connect Slack, Beeper, or Pylon only where those tools are part of the customer workflow.
-- Confirm the channels, inboxes, or queues Ergo should use.
-- Test one workflow before relying on collaboration delivery for the team.
+## Before you start
+
+- Decide which outcome you need: Slack pre-call context, Slack monitoring, Slack notifications and summaries, Pylon recording delivery, or an enabled messaging workflow.
+- Connect the right Slack workspace and account. If the Slack authorization screen shows the wrong workspace, switch before approving the connection.
+- Confirm the channels, conversations, or queues that Ergo needs to reach. For private or customer channels, make sure Ergo is invited or authorized where your Slack workspace requires it.
+- Connect email, calendar, CRM, and notetaker sources separately. Collaboration setup gives Ergo a delivery or monitoring surface; it does not replace source setup.
+- Decide who owns noisy or customer-facing delivery before rolling the workflow out broadly.
+
+## Connect Slack
+
+1. Open **Integrations** or the collaboration step in onboarding.
+2. Connect or manage **Slack**.
+3. In Slack authorization, confirm the selected workspace is the workspace your team expects Ergo to use.
+4. Approve the connection and return to Ergo.
+5. Verify the Slack card shows the expected connected workspace.
+6. Add Ergo to the channels that should be monitored or used for delivery.
+
+Slack connection is only the first step. The two most important follow-up settings are separate:
+
+- **Slack Monitoring** lets Slack conversations contribute to CRM updates, meeting details, action items, and insights when the workspace and channel access support it.
+- **Pre-call Meeting Context** sends attendee context in Slack before eligible meetings when the user's calendar and Slack setup support it.
+
+## Add Ergo to channels
+
+- Add Ergo to each active customer or team channel that should be included in monitoring or delivery.
+- For private or external channels, confirm that the connected Slack user and bot have access to the channel.
+- Use a controlled channel or one current customer channel to test before adding the bot broadly.
+- Recheck new, renamed, archived, or moved channels after Slack reconnects or workspace changes.
+
+Do not assume every historical channel is picked up just because Slack is connected. If a channel was created before setup or added later, verify that Ergo is actually present and the channel appears in the relevant configuration.
+
+## Connect Pylon
+
+Pylon setup is admin-managed and org-level in Ergo.
+
+1. Generate or copy the Pylon API token your team wants Ergo to use.
+2. In Ergo, open **Integrations** and find **Pylon** under collaboration tools.
+3. Connect Pylon with the token.
+4. Verify the Pylon card shows a connected state.
+5. Test with one meeting recording that should appear in Pylon before relying on it for a full support workflow.
+
+Pylon connection is for sending meeting recordings to Pylon. It does not make Pylon a CRM source, create tickets by itself, or replace Pylon queue and account configuration.
+
+## Use Beeper only when available
+
+If Beeper appears in your workspace, connect it with the token provided for that workflow and test the destination before rollout. If Beeper does not appear, do not use this page as evidence that Beeper or informal messaging channels are generally supported for your workspace.
+
+## What to expect
+
+- Slack OAuth, Slack Monitoring, and Pre-call Meeting Context are separate states. A Slack connection alone does not mean every channel is monitored or every pre-call message will be sent.
+- Slack monitoring depends on bot/channel access, the connected workspace, CRM setup, and downstream processing.
+- Pre-call context depends on calendar access, meeting eligibility, attendee data, and the Slack setting.
+- Pylon visibility and connection controls are admin-scoped, even if other users benefit from the delivered recordings.
+- Collaboration output can lag source processing. Check the meeting, CRM, Slack, and Pylon setup path that matches the missing result.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- **Wrong Slack workspace connected:** Disconnect or manage Slack, then reconnect while selecting the intended workspace in the Slack authorization screen.
+- **Channel is missing:** Add Ergo to the channel, confirm the connected user has access, and reconnect Slack if the channel list is stale.
+- **External or private channels are unavailable:** Confirm workspace permissions and bot/channel access before treating the workflow as broken.
+- **Slack Monitoring is expected but no CRM context appears:** Confirm Slack is connected, Slack Monitoring is enabled, Ergo is in the channel, CRM setup is complete, and the workflow has processed a controlled example.
+- **Pre-call context does not arrive:** Confirm the user's calendar is connected, the meeting is eligible, Slack is connected, and **Pre-call Meeting Context** is enabled.
+- **Pylon delivery is missing:** Confirm the Pylon token is connected by an admin, the recording is ready, and the Pylon account or queue mapping is correct.
+- **Beeper is not visible:** It is not enabled for that workspace; use another supported source or ask Ergo support whether a workspace-specific workflow is available.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Workspace configuration](./workspace-configuration)
+- [Email templates setup](./email-templates-setup)
+- [Notetaker setup](./notetaker-setup)
+- [Slack](../integrations/slack)
+- [Slack monitoring and pre-call context](../integrations/slack-monitoring-and-pre-call-context)
+- [Pylon](../integrations/pylon)
+- [Beeper](../integrations/beeper)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Slack disconnect/reconnect and stale channel mappings](../troubleshooting/slack-disconnect-reconnect-and-stale-channel-mappings)
+- [Add Ergo to new Slack customer channels](../troubleshooting/add-ergo-to-new-slack-customer-channels)
+- [Pylon delivery failures, duplicate deliveries, and queue health](../troubleshooting/pylon-delivery-failures-duplicate-deliveries-and-queue-health)
+- [Roles and permissions](../start-here/roles-and-permissions)

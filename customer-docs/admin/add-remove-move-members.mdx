@@ -1,30 +1,75 @@
 ---
 title: "Add/remove/move members"
-description: "Manage add/remove/move members across teams, members, access, defaults, and organization settings."
-keywords: ["Add/remove/move members","Admin","Ergo docs"]
+description: "Add existing organization users to teams, move members between teams, or remove team and organization access from Ergo Admin."
+keywords: ["team members", "remove members", "move members", "admin"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when a person already exists in your organization and you need to change their team membership. To create a new Ergo account first, use [Provision accounts](./provision-accounts).
 
+## Who can use this
 
-## Configure it
+- Super admins can add members to teams, move members between teams, remove members from a team, and remove a user from the organization.
+- Primary and secondary admins can review their team membership, but member add, move, and removal actions are guarded by super-admin permissions.
 
-- Open Admin members.
-- Add, remove, or move the member.
-- Confirm their role and team after the change.
-- Review access to meetings, drafts, reporting, and admin areas.
+## Before you start
+
+- Confirm whether you are changing a team assignment or removing the person from the organization entirely.
+- Make sure the person already appears in the organization member list before adding them to another team.
+- Reassign a team primary admin before trying to move or remove that person.
+- Check whether the member also needs [meeting access](./grant-meeting-reporting-access), [reporting access](./grant-meeting-reporting-access), or [CRM settings sync](./sync-crm-settings-to-team-members) after the team change.
+
+## Add an existing organization user to a team
+
+1. Open **Admin** and choose the team.
+2. In the member table, use the add button in **Secondary Admins** or **Members**.
+3. Search by name or email.
+4. Select the person to add.
+
+The add dialog only shows organization users who are not already on that team. The secondary-admin list only shows organization users with an admin role. If the person is missing, provision the account first or confirm they belong to the same organization.
+
+## Move a member to a different team
+
+1. Open the member's action menu.
+2. Select **Move to Team**.
+3. Choose a destination team.
+4. Confirm the move.
+
+Ergo removes the person from the current team, adds them to the destination team, and updates the user's team assignment. A secondary admin remains a secondary admin on the destination team only when their organization role still supports admin access; otherwise they are added as a member.
+
+Primary admins cannot be moved with this action. Swap or reassign the team primary admin first.
+
+## Remove a member
+
+Open the member's action menu and choose **Remove**. The confirmation dialog has two different actions:
+
+- **Remove from team** removes the person from this team but keeps them in the organization.
+- **Remove entirely** removes the person from all teams and removes their dashboard access for the organization.
+
+Use **Remove from team** when the person should stay in Ergo but no longer belongs to this team. Use **Remove entirely** only when the person should no longer have organization access.
+
+You cannot remove a primary admin from a team. You also cannot remove a person from their only team with **Remove from team**; either move them to another team or use the organization-removal path if they should leave Ergo entirely.
+
+## What to expect
+
+- Team membership changes update the member table after the Admin data refreshes.
+- Removing a member from one team does not provision, deactivate, or delete a separate user account by itself.
+- Removing a user entirely removes them from all teams and dashboards in the organization. Treat this as a destructive access change.
+- Role changes are handled separately. Use [Promote/demote/convert roles](./promote-demote-convert-roles) when the person should stay on the team but needs a different role.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The person does not appear in Add member.** They may already be on the team, may not be provisioned in the organization, or may not have the admin role required for the secondary-admin section.
+- **Move to Team has no destination.** The member may already belong to every available team, or there may be no other team to move them to.
+- **Removal is blocked.** Primary admins must be reassigned first, and a member cannot be removed from their only team with the team-removal action.
+- **Access still looks wrong after a move.** Review meeting access, reporting access, CRM settings sync, and role settings separately.
 
 ## Related articles
 
 - [Admin](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Create/edit/delete teams](./create-edit-delete-teams)
+- [Provision accounts](./provision-accounts)
+- [Promote/demote/convert roles](./promote-demote-convert-roles)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

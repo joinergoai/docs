@@ -1,45 +1,60 @@
 ---
 title: "Spectator and viewer setup"
-description: "Give viewers limited access to the meetings, reports, or shared links they need without full user setup."
-keywords: ["Spectator and viewer setup","Onboarding","Ergo docs"]
+description: "Set up spectator seats, reporting access, and shared-link viewers without granting full user access."
+keywords: ["Spectator and viewer setup", "Setup", "Ergo docs"]
 ---
 
+![Product screenshot showing spectator and limited access controls.](../images/product-admin-dashboard.png)
 
-![Product screenshot showing spectator and viewer access controls.](../images/product-admin-dashboard.png)
+Use this page when someone needs limited visibility into Ergo without the full standard-user workflow. Spectator seats are a supported access type. Shared-link viewers and reporting viewers are access patterns, not separate workspace roles.
 
+## Who can use this
 
-## Who is this for?
-
-- For spectators, executives, managers, advisors, or cross-functional viewers who only need limited meeting or reporting visibility.
+- Admins, super admins, RevOps owners, or delegated operators provisioning limited access.
+- Executives, managers, advisors, board observers, or cross-functional teammates who only need selected meetings, reports, dashboards, or shared links.
+- Spectators who are completing the limited onboarding path assigned to them.
 
 ## Before you start
 
-- Confirm the person should have limited visibility rather than full user access.
-- Identify the exact meetings, reports, dashboards, folders, teams, or shared links they should see.
-- Ask an admin to provision access before sending the viewer to Ergo.
+- Decide what the person actually needs to inspect: a selected meeting, a folder, a report, a dashboard, a team view, or recurring spectator access.
+- Use a shared link when someone only needs one specific resource. Use reporting access when they need dashboards or recurring reports. Use a spectator seat when they need signed-in limited access across allowed areas.
+- Confirm whether the viewer should have team, meeting, reporting, global meeting, folder, or shared-link visibility.
+- Avoid giving admin, CRM, email-drafting, integration, or organization-default access when the person only needs visibility.
 
+## Steps
 
-## Setup steps
+1. Choose the narrowest access path: shared link, reporting grant, meeting or folder access, global meeting access, or spectator seat.
+2. If the person needs a spectator seat, ask an admin or super admin to add or convert the user and assign the correct team or visibility scope.
+3. If onboarding appears for the spectator, complete only the spectator path shown in Ergo, such as user sync, workspace access, and Ergo Notetaker when prompted.
+4. Do not ask spectators or shared-link viewers to set up CRM, email drafts, integrations, templates, Slack, or non-Ergo notetakers unless they are converted to a standard user or admin.
+5. Walk through the exact destination the person should use: the meeting, folder, report, dashboard, shared link, or reporting email cadence.
+6. Test access from the viewer's account or shared link before relying on it. Confirm the expected resource opens and unrelated resources remain hidden.
+7. Revisit or revoke access when a project ends, a leadership role changes, a shared link expires, or the person no longer needs visibility.
 
-- **Step 1: Confirm limited-access intent.** Use spectator or viewer access when the person should inspect selected meetings, dashboards, reports, or shared links without operating daily Ergo workflows.
-- **Step 2: Provision the viewer.** Ask an admin, RevOps owner, or delegated operator to add or convert the person and grant only the meeting, reporting, dashboard, folder, team, or shared-link visibility they need.
-- **Step 3: Sync with Admin if the onboarding flow asks for it.** Spectators may see a Sync with Admin step so their limited workspace context is aligned with admin configuration.
-- **Step 4: Connect workspace access when prompted.** The spectator onboarding path includes the email/calendar connection step. If the person is only viewing a shared link, an admin may instead send the specific shared resource.
-- **Step 5: Confirm notetaker/viewer behavior.** Spectator onboarding shows the Ergo Notetaker path only; viewers generally should not configure third-party notetakers or org-wide recording settings.
-- **Step 6: Walk through the exact destination.** Show the viewer the meetings, reports, dashboards, folders, or shared links they should use. Executives and managers usually need a dashboard/report walkthrough, not CRM or email setup.
-- **Step 7: Review and revoke access when needed.** Re-check access after team changes, leadership changes, project completion, or when a shared link should no longer be valid.
+## What to expect
+
+- Spectator access is separate from the basic `user` or `admin` role. It limits workflows such as CRM writes, email drafting, and integration connections.
+- Shared-link viewers are not workspace users unless they also sign in with an Ergo account. A shared link gives access only to the shared resource and any authentication or password checks attached to it.
+- Reporting access is granted separately from ordinary meeting access. A person may be able to open a meeting but still lack access to a report, or see a dashboard but not every drilldown.
+- The spectator onboarding path is shorter than the standard user path and should not include the full AE or CSM setup checklist.
 
 ## Common issues
 
-- The viewer is given full user access when limited meeting or reporting visibility would be safer.
-- A manager or executive expects to configure CRM or email even though their setup is usually just provisioning and dashboard walkthrough.
-- The viewer signs into the wrong workspace or opens a link without the required access.
-- A shared link, meeting folder, report, or dashboard was not actually shared with the viewer.
-- Access remains available after the viewer no longer needs it.
+- The person was given full user access when a shared link, reporting grant, or spectator seat would have been safer.
+- A shared meeting, folder, report, or dashboard was never actually shared with the viewer.
+- The viewer opens the wrong Ergo account, stale shared link, or report without the required access.
+- Meeting visibility is blocked by team scope, global meeting access, folder permissions, processing state, or shared-link settings.
+- Reporting visibility is blocked by missing reporting access, dashboard grants, filters, date ranges, or shared dashboard permissions.
 
 ## Related articles
 
+- [Setup](./index)
 - [Spectator and viewer tips for success](./spectator-and-viewer-tips-for-success)
 - [Spectator access](../start-here/spectator-access)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Spectator management](../admin/spectator-management)
+- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
+- [Global meeting access](../admin/global-meeting-access)
 - [Meeting availability and visibility](../meetings/meeting-availability-and-visibility)
+- [Share charts/dashboards](../reporting/share-charts-dashboards)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

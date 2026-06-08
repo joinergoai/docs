@@ -1,30 +1,81 @@
 ---
 title: "Promote/demote/convert roles"
-description: "Change a person's role or access level without over-granting meeting, reporting, or admin visibility."
-keywords: ["Promote/demote/convert roles","Admin","Ergo docs"]
+description: "Change member roles from Ergo Admin, including secondary-admin promotion, admin demotion, and standard-user or spectator conversion."
+keywords: ["roles", "secondary admin", "spectator", "standard user"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when a member should stay in the organization but needs a different team role or seat type. Role changes are separate from team moves, meeting access grants, and reporting access grants.
 
+## Who can use this
 
-## Configure it
+- Super admins can promote team members, demote secondary admins, and convert users between standard-user and spectator seats.
+- Primary and secondary admins can review role assignments, but role changes are guarded by super-admin permissions.
 
-- Open Admin and find the member.
-- Choose the new role or access level.
-- Confirm which navigation areas and shared resources the change affects.
-- Review access after saving the change.
+## Before you start
+
+- Confirm the person is on the correct team. If not, use [Add/remove/move members](./add-remove-move-members) first.
+- Decide whether you are changing admin authority or converting between a standard user and spectator.
+- Review any separate [meeting and reporting access](./grant-meeting-reporting-access) grants that should change after the role update.
+- Ask the member to expect a refresh or reconnect step after spectator conversion.
+
+## Promote a member to secondary admin
+
+Use **Promote to Admin** for a regular team member who should become a secondary admin.
+
+1. Open **Admin** and choose the team.
+2. Open the member's action menu.
+3. Select **Promote to Admin**.
+4. Confirm the promotion.
+
+Ergo moves the person from **Members** to **Secondary Admins** for that team and updates their organization and dashboard role to admin.
+
+## Demote a secondary admin
+
+Use **Demote to User** when a secondary admin should remain on the team but no longer have admin privileges.
+
+1. Open the secondary admin's action menu.
+2. Select **Demote to User**.
+3. Confirm the demotion.
+
+Ergo moves the person from **Secondary Admins** to **Members** for that team and updates their organization and dashboard role to user.
+
+## Convert a standard user or spectator
+
+Use **Convert to Spectator** or **Convert to User** when the person's seat type should change.
+
+When converting a standard user to spectator, Ergo:
+
+- Marks the dashboard as a spectator seat.
+- Disconnects supported third-party notetakers and Slack for that user.
+- Turns off email monitoring, follow-up email, external email client, and surfacing settings.
+- Disables Ergo for that user.
+- Disconnects the user's Recall calendar connection when one exists.
+
+When converting a spectator back to a standard user, Ergo changes the spectator flag back to standard user. The user may need to reconnect integrations, re-enable email settings, and re-enable Ergo afterward.
+
+Primary admins cannot be converted with this action.
+
+## What to expect
+
+- Role changes update the Admin member table after the data refreshes.
+- Promotion and demotion change admin authority; they do not automatically change separate meeting/reporting grants.
+- Spectator conversion intentionally disconnects or disables automation-related settings so the seat becomes view-oriented.
+- Converting back to standard user does not automatically restore every disconnected integration or toggle.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The action is missing.** Promote appears for members, demote appears for secondary admins, and convert appears only when the current user is allowed to perform the conversion.
+- **The primary admin needs to change.** Use the team primary-admin reassignment flow instead of convert, promote, or demote.
+- **The person still cannot see meetings or reports.** Check meeting access and reporting access separately.
+- **Integrations are disconnected after spectator conversion.** This is expected. Reconnect and re-enable the relevant settings after converting back to standard user.
 
 ## Related articles
 
-- [Roles and permissions](../start-here/roles-and-permissions)
+- [Admin](./index)
+- [Add/remove/move members](./add-remove-move-members)
 - [Spectator management](./spectator-management)
+- [Grant meeting/reporting access](./grant-meeting-reporting-access)
+- [Roles and permissions](../start-here/roles-and-permissions)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

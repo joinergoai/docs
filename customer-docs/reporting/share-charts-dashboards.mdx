@@ -1,36 +1,53 @@
 ---
 title: "Share charts/dashboards"
-description: "Use share charts/dashboards to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Share charts/dashboards","Reporting","Ergo docs"]
+description: "Generate, password-protect, copy, and revoke shared links for Reporting charts and dashboards."
+keywords: ["Share charts", "Share dashboards", "Reporting links", "Password protection", "Unshare"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, report controls, and sharing.](../images/product-reporting-dashboard.png)
 
+Use shared Reporting links when someone needs to review a chart or dashboard outside the normal authenticated Reporting page.
 
-## Before you start
+## Chart link or dashboard link
 
-- Confirm reporting is enabled and the viewer has reporting access.
-- Confirm the link, password, or viewer access is still valid.
-- Confirm Reporting is connected or available.
+- **Chart links** share one widget.
+- **Dashboard links** share the dashboard view.
+- Each link can be password protected.
+- Each link can be revoked by unsharing it.
 
+Shared links are best for a specific review moment. For ongoing internal access, use Reporting access grants instead.
 
-## Use this workflow
+## Share a chart
 
-- Open chart or dashboard sharing controls.
-- Choose who should have access.
-- Share the link or dashboard only with intended viewers.
-- Revoke or adjust sharing when access changes.
+1. Open the dashboard that contains the chart.
+2. Open the chart share action.
+3. Copy the generated link.
+4. Add a password if the audience needs one.
+5. Send the link only to intended viewers.
 
-## Common issues
+## Share a dashboard
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+1. Open the dashboard.
+2. Select **Share**.
+3. Copy the generated dashboard link.
+4. Add a password if needed.
+5. Revoke the link when access should end.
+
+## Password rules
+
+- Passwords must be at least 6 characters.
+- Passwords cannot exceed 128 characters.
+- Updating the password changes the password required for that shared link.
+- Removing the password leaves the shared link active unless you unshare it.
+
+## Shared view limits
+
+Shared views can be narrower than authenticated Reporting. Some sentence detail and revenue deal detail views are available only from authenticated charts. If a reviewer needs full drilldown access, grant them Reporting access instead of relying on a public link.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Save widgets to dashboards](./save-widgets-to-dashboards)
+- [Reporting dashboard sharing and embedding troubleshooting](./reporting-dashboard-sharing-and-embedding-troubleshooting)
+- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
+- [Security, data retention, and LLM usage](../start-here/security-data-retention-and-llm-usage)

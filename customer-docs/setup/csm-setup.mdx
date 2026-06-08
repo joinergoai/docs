@@ -1,47 +1,62 @@
 ---
 title: "CSM setup"
-description: "Complete the personal setup CSMs need for customer meetings, summaries, account context, follow-ups, and handoff workflows."
-keywords: ["CSM setup","Onboarding","Ergo docs"]
+description: "Set up Ergo for CSMs who need customer meetings, account context, and reviewable follow-up drafts."
+keywords: ["CSM setup", "Setup", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing the meetings dashboard for meeting history and capture.](../images/product-meetings-dashboard.png)
 
+Use this page when a CSM is completing personal setup after an admin, RevOps owner, or operator has prepared the shared CRM, fields, templates, and notetaker defaults.
 
-## Who is this for?
+## Who can use this
 
-- For CSMs, account managers, customer success leaders, founders handling customers, and post-sale teams using Ergo for customer context.
-- Requires Google Workspace or Microsoft 365, Notetaker.
+- CSMs and post-sale account owners who need Ergo for customer meetings, account context, and follow-up drafts.
+- Admins, RevOps owners, and operators helping a CSM verify setup before customer calls.
+- Managers checking whether customer-success workflows have the sources and access they need.
 
 ## Before you start
 
-- Make sure your account is provisioned in the correct workspace and team.
-- Ask whether your workspace has CS-specific pipelines, renewal or expansion stages, templates, reporting fields, or rubrics.
-- Confirm which customer meetings should be captured and which internal meetings should be skipped.
+- Confirm the CRM or customer source of truth is connected and the CSM has access to the accounts, deals, meetings, reports, and collaboration channels they should see.
+- Ask an admin to finish Field Mapping, pipeline or stage setup, account fields, templates, and reporting defaults before relying on renewal, expansion, handoff, churn-risk, or account-health workflows.
+- Use the CSM's primary work Google Workspace or Microsoft 365 account. Personal email and calendar grants must be connected by the CSM and do not transfer from admin sync.
+- If onboarding shows **Sync with Admin**, use it to inherit approved organization settings before connecting personal email, calendar, notetaker, or collaboration sources.
+- Decide which customer meetings should be captured and which internal planning meetings should be skipped.
 
+## Steps
 
-## Setup steps
+1. Complete **Sync with Admin** if it appears during onboarding.
+2. Connect Google Workspace or Microsoft 365 so Ergo can read the CSM's calendar and email context.
+3. Review the email settings your team uses, such as **Email Analysis**, **Post-Call Followup Emails**, and **Surfacing** when available.
+4. Connect the approved notetaker source after calendar access is connected. For live or ad hoc calls, use the manual Add Bot workflow when the bot is not already scheduled.
+5. Confirm the CSM has the right templates for customer follow-ups, handoffs, renewals, escalations, or check-ins.
+6. Run one real external customer meeting test. After it processes, check **Meetings** for the summary, transcript, action items, and account match.
+7. If follow-up drafts are enabled, open **Drafts** and review the generated draft before sending it externally.
+8. If account context, reporting, or CRM fields look incomplete, ask the admin or RevOps owner to check Field Mapping, account properties, stages, and source permissions.
 
-- **Step 1: Welcome and role check.** Confirm you are completing the user flow for customer-success work. Most CSMs do not configure org-wide CRM, properties, stages, or reporting defaults unless they also have admin duties.
-- **Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.
-- **Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account so Ergo can detect customer meetings and use relevant account communication context.
-- **Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Decide whether follow-up drafts should support recaps, handoffs, renewal notes, escalation updates, or customer next steps.
-- **Step 5: Review templates.** Confirm whether your team has CS-specific templates for check-ins, support escalations, renewals, expansions, executive recaps, or handoffs.
-- **Step 6: Confirm notetaker setup.** Verify which customer meetings should be captured, which internal meetings should be skipped, and whether the notetaker can see your calendar.
-- **Step 7: Connect collaboration tools.** Connect Slack if your team uses handoff notifications, pre-call context, or account alerts. Beeper appears only when enabled; Pylon appears only for admins when support delivery is configured.
-- **First test: run one customer meeting.** Confirm the summary, action items, account context, follow-up draft, shared link behavior, and any reporting or health signals before relying on the workflow broadly.
+## What to expect
+
+- CSMs usually follow the standard user setup path. They should not reconnect CRM sources, redefine fields, or change organization defaults unless they also own admin setup.
+- Drafts and account context depend on connected email/calendar, usable meeting capture, templates, CRM records, field mapping, source permissions, and processing state.
+- Customer-success workflows such as renewals, expansion signals, handoffs, churn-risk review, and account-health reporting only become reliable after the underlying CS fields, stages, templates, and reporting sources are configured.
+- Ergo outputs should be reviewed before customer-facing use, especially when they summarize customer commitments, risks, pricing, owners, links, or next steps.
 
 ## Common issues
 
-- Internal meetings are captured or customer meetings are skipped because calendar rules are unclear.
-- The CSM cannot see a meeting, account, or report because access is team-specific or shared-link based.
-- Summaries or follow-ups miss account context because documents, CRM records, or prior meetings are not linked.
-- The team expects CS renewal, expansion, or handoff workflows to work before a CS pipeline or CS-specific properties are configured.
-- The team expects sales-only draft or insight behavior to apply the same way to post-sale workflows.
+- Customer meetings are skipped, or internal meetings are captured, because calendar rules or notetaker behavior were not reviewed.
+- The CSM cannot see a meeting, account, draft, or report because access is team-specific, role-specific, source-specific, or shared-link based.
+- Summaries or drafts miss account context because CRM records, documents, prior meetings, or customer contacts are incomplete or not linked.
+- Renewal, expansion, handoff, or account-health expectations are ahead of the configured CS pipeline, account fields, templates, or reports.
+- Drafts are missing or low-quality because the meeting has not processed, the draft settings are disabled, the meeting is not eligible, another notetaker source created duplicate context, or the recipient/account context is stale.
 
 ## Related articles
 
+- [Setup](./index)
 - [CSM tips for success](./csm-tips-for-success)
 - [Connect email and calendar](./connect-email-and-calendar)
-- [Meeting detail page](../meetings/meeting-detail-page)
-- [Follow-ups panel](../ai-search-automation/follow-ups-panel)
+- [Notetaker setup](./notetaker-setup)
+- [Email templates setup](./email-templates-setup)
+- [Add the bot to a live or ad hoc meeting](../meetings/add-the-bot-to-a-live-or-ad-hoc-meeting)
+- [Drafts inbox](../drafts-email/drafts-inbox)
+- [Field Mapping overview](../field-mapping/field-mapping-overview)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

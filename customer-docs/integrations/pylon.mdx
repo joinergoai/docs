@@ -1,35 +1,46 @@
 ---
 title: "Pylon"
-description: "Connect and maintain Pylon with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Pylon","Integrations","Ergo docs"]
+description: "Connect Pylon at the workspace level so supported meeting recordings can be sent to Pylon."
+keywords: ["Pylon", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Pylon when your team wants supported Ergo meeting recordings delivered into Pylon.
+
+## Who can use this
+
+- Admins managing the org-level Pylon connection.
+- Operators validating support or customer-success handoff workflows.
 
 ## Before you start
 
-- Have access to the Pylon account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm you are an admin in Ergo.
+- Have the Pylon token your team intends Ergo to use.
+- Decide which meeting workflows should send recordings to Pylon.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Pylon**.
+- Paste the Pylon token.
+- Confirm the org-level Pylon status shows connected.
+- Test with a known supported meeting before relying on automatic delivery.
 
-- Connect Pylon from Integrations.
-- Confirm the queues or customer issues Ergo should use.
-- Check delivery and duplicate behavior after the first workflow runs.
-- Contact support if customer issues are not appearing or deliveries repeat unexpectedly.
+## What to expect
+
+- Pylon is managed as an org-level integration and is visible to admins.
+- The integration is for sending meeting recordings to Pylon; it is not a general-purpose Pylon support-ticket sync.
+- Delivery depends on meeting processing, recording availability, and the configured Pylon token.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- A non-admin user cannot connect or disconnect Pylon.
+- The token is invalid or was rotated in Pylon.
+- The meeting has not processed or does not have a recording available for delivery.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Pylon delivery failures, duplicate deliveries, and queue health](../troubleshooting/pylon-delivery-failures-duplicate-deliveries-and-queue-health)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

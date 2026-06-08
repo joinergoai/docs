@@ -1,45 +1,53 @@
 ---
 title: "Sign-in and desktop callback issues"
-description: "Diagnose and resolve sign-in and desktop callback issues in Ergo."
-keywords: ["Sign-in and desktop callback issues","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot dashboard sign-in, account mismatch, and Ergo Desktop auth callback problems."
+keywords: ["sign in", "desktop callback", "WorkOS", "desktop auth", "troubleshooting"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page when a user cannot finish dashboard sign-in, cannot complete the Ergo Desktop browser callback, or stays signed out after trying to authenticate.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- Dashboard sign-in redirects but does not complete.
+- Ergo Desktop opens the browser but remains signed out after the callback.
+- The callback page opens in the browser, but the desktop app does not receive the result.
+- Desktop setup still shows permissions or restart prompts after sign-in.
+- Sign-in says the account does not exist even though the user expects access.
 
 ## Most common causes
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The browser and desktop app are using different accounts or workspaces.
+- The user is signing in with an email alias that was not provisioned for Ergo.
+- The desktop deep link or callback did not reach the running desktop app.
+- The desktop app is out of date or was not quit and reopened after a permission change.
+- A provider, browser profile, SSO, or network policy blocked the auth flow.
 
 ## What to check
 
-- Confirm the user is signing into the correct workspace.
-- Retry sign-in in the browser or desktop app.
-- Check whether the desktop callback opens the app successfully.
-- Contact support if the callback repeatedly fails.
+- Confirm the user is signing in with the same work email they use in the dashboard.
+- If the account is not found, ask an admin to confirm the exact provisioned email before retrying.
+- Close duplicate browser auth tabs, then start sign-in again from Ergo Desktop.
+- Keep Ergo Desktop running while the browser callback opens.
+- Quit and reopen Ergo Desktop after granting macOS permissions.
+- Check the desktop app version and update from the dashboard if the installed app is old.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- If dashboard sign-in fails, try a clean browser profile or the expected work account before changing workspace access.
+- If desktop callback fails, quit and reopen the desktop app and retry sign-in from the desktop settings or sign-in control.
+- If the callback still does not arrive, update the desktop app and retry with the same account.
+- If the sign-in page flashes and returns to the starting point, capture the time window and contact support.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when the expected account, desktop version, app restart, and retry path are confirmed but sign-in still fails.
+- Include the workspace, affected user, desktop app version, browser used, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
 - [Troubleshooting](./index)
+- [Dashboard setup errors](./dashboard-setup-errors)
 - [Getting support](../start-here/getting-support)

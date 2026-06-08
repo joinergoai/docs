@@ -1,30 +1,33 @@
 ---
 title: "Summary emails and recording links"
-description: "Handle summary emails and recording links in the meetings and notetaker workflow."
-keywords: ["Summary emails and recording links","Meetings and notes","Ergo docs"]
+description: "Configure whether Ergo sends post-call summary emails and includes recording links."
+keywords: ["summary email", "recording link", "post-call email", "notetaker settings"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use notetaker settings to control whether post-call summary emails are sent and whether those emails include a button to view the recording.
 
+## Settings to check
 
-## Use this workflow
+- **Send post-call summary email** controls whether the user receives summary emails for completed meetings.
+- **Include view recording button** controls whether those emails include a recording link when a shareable recording is available.
+- Some org-level defaults can be set by admins, but users may still need to verify their own settings.
 
-- Confirm email is connected for the users who should receive summaries.
-- Check the meeting detail page for recording and share links.
-- Review recipient and access settings before forwarding links.
-- Use support if emails are missing but the meeting processed successfully.
+## What to expect
 
-## Common issues
+- Summary email delivery depends on meeting processing, transcript availability, and configured email settings.
+- The recording link is a share/view link. It does not bypass meeting visibility, sharing, or password rules.
+- Private meetings can omit or revoke share links depending on privacy state.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## Troubleshooting
+
+- If no email arrives, check whether the meeting completed and whether summary emails are enabled.
+- If the email has no recording link, check whether the meeting is private, whether the recording exists, and whether the include-link setting is enabled.
+- If a recipient cannot open the link, review meeting sharing and access rules.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Share/revoke/password-protect meetings](./share-revoke-password-protect-meetings)
+- [Meeting availability and visibility](./meeting-availability-and-visibility)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)

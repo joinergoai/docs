@@ -1,46 +1,53 @@
 ---
 title: "Troubleshoot missed detection or upload failures"
-description: "Diagnose and resolve troubleshoot missed detection or upload failures in Ergo."
-keywords: ["Troubleshoot missed detection or upload failures","Desktop","Ergo troubleshooting"]
+description: "Diagnose Desktop meetings that did not auto-record, upload, process, or appear in Ergo."
+keywords: ["Troubleshoot missed detection or upload failures", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
-## Symptoms
+Use this page when a Desktop meeting did not start, upload, process, or appear where expected.
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+## Who can use this
 
-## Most common causes
+- Desktop users recovering from a missed recording or failed upload.
+- Admins and operators collecting details before escalating.
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+## Before you start
 
-## What to check
+- Keep the app open if an upload might still be in progress.
+- Confirm the app is signed in as the same user as the dashboard.
+- Note whether the recording was calendar-sourced, detected, Quick Note, or manual.
 
-- Confirm Ergo Desktop was open and signed in during the meeting.
-- Check macOS permissions and network connectivity.
-- Verify the meeting app and audio source were detectable.
-- Contact support with the meeting time, desktop version, and whether a recording file exists.
+## Steps
 
-## Resolution steps
+- Check whether the recording indicator ever became active.
+- Confirm macOS permissions and quit and reopen the app if permissions changed.
+- Check whether the meeting already has a cloud-bot recording.
+- Look for processing or failed recording status in Ergo.
+- Retry processing only when Ergo shows a retry path.
+- If the meeting had no calendar invite or was never detected, use Quick Note or a manual note and add context for the team.
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+## What to expect
 
-## When to contact support
+- Missed detection can come from calendar visibility, meeting URL availability, disabled auto-record settings, or a runtime app issue.
+- Calendar-less meetings may require a manual Quick Note start instead of auto-detection.
+- Upload failures can come from network interruption, app shutdown, or missing upload data.
+- Retry requires the backend to have enough upload and recording metadata.
+- If a recording was skipped as a stub, it may not create a normal meeting record.
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+## Common issues
+
+- Auto-record detected meetings is off.
+- The meeting was joined from a different account, alias, or calendar than the connected user.
+- The app was closed before upload completed.
+- The recording button does not respond until the app is fully quit and reopened.
+- The recording is in failed status but missing data needed for retry.
 
 ## Related articles
 
-- [Install and sign in to Ergo Desktop](./install-and-sign-in-to-ergo-desktop)
+- [Desktop](./index)
 - [macOS permissions](./macos-permissions)
+- [Silent desktop recording](./silent-desktop-recording)
 - [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Sign-in and desktop callback issues](../troubleshooting/sign-in-and-desktop-callback-issues)

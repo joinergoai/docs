@@ -1,30 +1,56 @@
 ---
 title: "Admin dashboard overview"
-description: "Use the admin dashboard to manage teams, members, access, settings, and organization defaults."
-keywords: ["Admin dashboard overview","Admin","Ergo docs"]
+description: "Use the Admin dashboard to manage teams, provision users, review access, and change organization-level controls."
+keywords: ["Admin dashboard", "team management", "user provisioning", "reporting access", "global meeting access"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use the Admin dashboard as the control center for organization structure, team membership, access, provisioning, and admin-only defaults. Start here when you need to understand what an admin can change before opening a more specific Admin article.
 
+## Who can use this
 
-## Configure it
+- Admins who manage their team and team members.
+- Super Admins who manage organization-wide teams, global controls, persona, pipeline access, provisioning, and other broad settings.
 
-- Open Admin.
-- Review teams, members, roles, integrations, and access settings.
-- Use Admin for organization-wide or team-level changes.
-- Test user access after making changes.
+## Before you start
+
+- Sign in with admin access or delegated permission for the area you are changing.
+- Confirm whether the change is team-level or organization-wide.
+- Check the member's role, seat type, CRM connection, email connection, reporting access, and meeting visibility before changing access.
+- Use super-admin-only controls only when the change should affect the broader organization, not just one team.
+
+## Steps
+
+1. Open **Admin** from the left navigation.
+2. Review the organization overview for team count, member count, active members, admins, and spectator seats.
+3. Search for a team or member when you are troubleshooting a specific person.
+4. Expand a team to review its primary admin, secondary admins, standard users, spectators, CRM/email connection state, and active state.
+5. Use the action available for your role: provision an account, create or edit a team, add or remove members, sync CRM settings, grant reporting access, or adjust global controls.
+6. After a change, ask affected users to refresh and complete any required personal setup, such as connecting CRM, email, or calendar.
+
+## What to expect
+
+- Admin visibility and actions depend on the acting user's role and team relationship.
+- Super Admins can see additional controls such as global meeting access, persona, pipeline access, and some usage views.
+- Team membership and role changes can affect meeting access, reporting access, CRM settings, and whether a user is treated as a standard user or spectator.
+- Reporting access, global meeting access, and CRM sync settings are separate controls. Changing one does not automatically configure the others.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- The acting user is not an admin or super admin.
+- A team-level admin expects to see super-admin-only controls.
+- A user was provisioned but has not finished personal setup.
+- A member is in the wrong team, so the wrong admin owns their setup.
+- A user has Admin access but still needs separate reporting or meeting access.
 
 ## Related articles
 
 - [Admin](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Organization and team hierarchy](./organization-and-team-hierarchy)
+- [Provision accounts](./provision-accounts)
+- [Grant meeting/reporting access](./grant-meeting-reporting-access)
+- [Global meeting access](./global-meeting-access)
+- [Agent usage and billing](./agent-usage-and-billing)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

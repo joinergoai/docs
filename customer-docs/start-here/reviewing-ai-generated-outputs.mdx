@@ -1,28 +1,49 @@
 ---
 title: "Reviewing AI-generated outputs"
-description: "Review summaries, drafts, CRM updates, reports, and generated documents before using them externally."
-keywords: ["Reviewing AI-generated outputs","Start and guidelines","Ergo docs"]
+description: "Review Ergo-generated answers, summaries, drafts, insights, and CRM or reporting updates before external use."
+keywords: ["Reviewing AI-generated outputs", "Start here", "Ergo docs"]
 ---
 
+Use this page to review Ergo-generated drafts, summaries, insights, deal overviews, answers, and CRM or reporting updates before sending or syncing them.
 
+## Who can use this
 
+- Everyone using Ergo, plus admins responsible for setup, source configuration, or output review standards.
 
-## Key things to know
+## Before you start
 
-- Review summaries, drafts, CRM updates, reports, and generated documents before relying on them externally.
-- Check the source context when an output looks wrong or incomplete.
-- Edit drafts or instructions when the output is directionally right but needs tone or detail changes.
-- Report outputs that use the wrong meeting, deal, company, or customer context.
+- Know which connected sources and CRM or reporting setup should support the output you are reviewing.
+- Confirm whether you are a user, admin, super admin, or spectator.
+- Ask the admin responsible for setup before changing access, recording, integration, template, or field-mapping defaults.
+
+## Steps
+
+- Check the source objects attached to an answer, draft, report, summary, insight, deal overview, or CRM update.
+- Verify names, dates, commitments, owners, links, prices, and next steps before external use.
+- Compare the output against the source transcript, meeting summary, deal or company record, email thread, document, Slack channel, or report field when available.
+- Edit the output when only wording needs cleanup.
+- Correct the source configuration when the output used the wrong meeting, deal, company, document, channel, field, or meeting classification.
+- For CRM or reporting updates, verify field mapping and field permissions before writing changes back.
+
+## What to expect
+
+- AI output quality improves when CRM fields, company details, templates, meeting-title phrases, and connected sources are configured.
+- Drafts, summaries, insights, answers, and reporting updates can use different source objects and processing states.
+- If the output is wrong because source data is missing or mismatched, fix the source or setup path instead of only editing the generated text.
 
 ## Common issues
 
-- The person is using the wrong workspace or team context.
-- Their role, permission, or spectator access does not match the workflow.
-- A connected source is missing, stale, or still syncing.
-- AI output needs source review before it is used externally.
+- The wrong source, account, or organization context is selected.
+- The needed source is disconnected, stale, or unmatched.
+- The output used the wrong meeting, deal, company, document, channel, field, or classification.
+- A user expects a role, shared meeting view, or reporting grant to include more output visibility than it actually grants.
 
 ## Related articles
 
 - [Start here](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Security, data retention, and LLM usage](./security-data-retention-and-llm-usage)
+- [Prompting Ergo effectively](./prompting-ergo-effectively)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [First-time setup checklist](../setup/first-time-setup-checklist)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

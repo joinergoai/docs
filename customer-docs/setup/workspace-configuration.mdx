@@ -1,30 +1,104 @@
 ---
 title: "Workspace configuration"
-description: "Complete the workspace configuration onboarding step with the right owner and prerequisites."
-keywords: ["Workspace configuration","Onboarding","Ergo docs"]
+description: "Choose the workspace settings and shared defaults that control Ergo drafts, CRM context, collaboration, and team visibility."
+keywords: ["Workspace configuration", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page when you need to decide which settings should be configured once for the team and which settings each user must review for their own account.
 
+Workspace configuration is not just one screen. In Ergo, the setup owner usually configures shared CRM, template, company, meeting, reporting, and access defaults, while each user still connects and reviews their own email, calendar, notetaker, and draft settings.
 
-## Setup steps
+## Who should use this
 
-- Review workspace defaults before inviting the wider team.
-- Confirm email, calendar, collaboration, and meeting settings match the way your team works.
-- Ask admins to check team-level settings when users see different defaults.
-- Revisit workspace configuration after changing CRM, Slack, or notetaker setup.
+- Admins, super admins, RevOps owners, operators, and managers preparing a team rollout.
+- Standard users completing onboarding after an admin has prepared shared settings.
+- Spectators only for the limited setup and access paths granted by an admin.
+
+## Before you start
+
+- Connect the right CRM, email/calendar provider, notetaker source, and collaboration tools before testing downstream outputs.
+- Decide which outputs matter first: meeting capture, post-call drafts, CRM updates, deal views, reporting, Slack or Pylon handoffs, or viewer access.
+- Confirm which settings should be inherited from an admin, especially CRM keys, mapped fields, pipeline stages, company details, meeting-title rules, templates, domains, task settings, and advanced settings.
+- Decide whether users should only see their own meetings or also need broader meeting or reporting access.
+- Review whether your CRM or email provider already logs certain email activity so duplicate logging is not introduced during rollout.
+
+## Configure personal workspace settings
+
+Each standard user should review the workspace settings tied to their own connected account.
+
+- **Email Analysis** controls whether Ergo can use relevant inbox activity as context for CRM updates and downstream workflows.
+- **Post-Call Followup Emails** controls whether Ergo creates follow-up drafts after eligible meetings.
+- **Surfacing**, when available in the workspace, creates proactive follow-up drafts for stalled deal activity rather than drafts tied to one specific call.
+- **External email client**, when available, is for teams that review email through an external client layered on top of Gmail or Outlook.
+
+Follow-up and surfacing outputs should be reviewed before they reach customers unless your workspace has a separately approved auto-send workflow. Do not treat these toggles as permission for Ergo to send every generated email automatically.
+
+## Configure shared workspace defaults
+
+Admins and setup owners should configure shared defaults before inviting the broader team through onboarding.
+
+- Connect the CRM and complete Field Mapping for the fields, owners, pipelines, stages, permissions, and stage definitions that Ergo should use.
+- Add company details, meeting-title phrases, templates, domains, task settings, and advanced CRM settings that users should inherit.
+- Configure notetaker, Slack, Pylon, Beeper, and other collaboration tools only for the workflows that should be active at launch.
+- Configure reporting defaults, custom fields, rubrics, dashboards, pricing context, and reporting access only where those features are enabled.
+- Use Sync with Admin or admin push settings after the source configuration has been reviewed, because syncing can overwrite the recipient's existing configuration.
+
+## Set access intentionally
+
+Workspace configuration also includes access decisions.
+
+- Provision users from the Admin area, assign the right role, and make sure invited users complete their own onboarding.
+- Use spectator access when someone needs visibility without CRM writes, email drafting, or integration setup.
+- Grant meeting access only to the meetings, teams, or global visibility level the viewer actually needs.
+- Grant reporting access separately from meeting access; a user can have one without the other.
+- Test access with the user or viewer account after you change roles, teams, reporting grants, or shared-link settings.
+
+## Test a controlled workflow
+
+After configuration, test one narrow workflow before relying on Ergo in live operations.
+
+1. Connect or sync the required sources.
+2. Capture one eligible customer meeting or use an existing processed meeting.
+3. Confirm the meeting appears for the right users.
+4. Check whether the expected draft, CRM update, deal context, reporting field, or collaboration output appears.
+5. Review the output source evidence before expanding the rollout.
+
+## What to expect
+
+- A connected source is only the first step; downstream behavior also depends on mapped fields, permissions, user role, feature access, and source freshness.
+- Sync with Admin can copy shared configuration, but it does not connect a user's personal email, calendar, notetaker, or third-party accounts for them.
+- Drafts, CRM updates, reporting, deal views, and meeting visibility can each fail for different reasons, so verify the specific output you expected.
+- Some controls are admin-only, super-admin-only, or feature-gated.
+- Changes to shared defaults can affect downstream drafts, CRM updates, reporting visibility, meeting processing, and user access.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- Users were invited before CRM fields, templates, stages, or company context were ready.
+- A user skipped Sync with Admin or inherited settings from the wrong admin configuration.
+- The user connected the wrong email, calendar, Slack, or CRM workspace.
+- Email drafts were expected even though follow-up drafts, meeting eligibility, templates, or source access were not ready.
+- A viewer cannot see meetings or reports because meeting access and reporting access are separate grants.
+- CRM or email activity is duplicated because another system is already logging the same activity.
+- A setting exists in another setup area, such as Field Mapping, Admin, Integrations, Reporting, or Advanced Settings, rather than on the onboarding workspace-configuration step.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [First-time setup checklist](./first-time-setup-checklist)
+- [Setup by role](./setup-by-role)
+- [Connect your CRM](./connect-your-crm)
+- [Connect email and calendar](./connect-email-and-calendar)
+- [Email templates setup](./email-templates-setup)
+- [Collaboration tools setup](./collaboration-tools-setup)
+- [Notetaker setup](./notetaker-setup)
+- [User sync](./user-sync)
+- [Company details](./company-details)
+- [Meeting title phrases](./meeting-title-phrases)
+- [Advanced settings](./advanced-settings)
+- [Reporting defaults](./reporting-defaults)
+- [Admin dashboard overview](../admin/admin-dashboard-overview)
+- [Sync CRM settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

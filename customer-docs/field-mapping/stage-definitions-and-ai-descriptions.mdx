@@ -1,30 +1,48 @@
 ---
 title: "Stage definitions and AI descriptions"
-description: "Configure stage definitions and AI descriptions so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Stage definitions and AI descriptions","Field mapping and CRM configuration","Ergo docs"]
+description: "Write clear stage descriptions so Ergo can classify stage movement consistently with your sales process."
+keywords: ["stage descriptions", "AI stage classification", "pipeline definitions"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Stage descriptions tell Ergo what each stage means. They are especially important when AI-assisted classification evaluates whether a meeting, email, or deal update supports a stage change.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review the meaning of each stage.
-- Write clear descriptions that match your team's sales process.
-- Use AI descriptions to guide classification and reporting.
-- Update descriptions when stage definitions change.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Review or write a description for each active stage in the pipeline.
+- Explain the evidence required for a deal to enter that stage.
+- Include exclusions when a phrase or signal is commonly misread.
+- Keep descriptions aligned with CRM stage IDs, display names, entry criteria, and sales-manager expectations.
+- Review descriptions after process or CRM changes.
+
+## What to expect
+
+- Descriptions guide classification and review; they do not override CRM permissions.
+- Ambiguous descriptions can make stage suggestions too broad or too conservative.
+- Stage descriptions should be short, operational, and specific.
+- Stage descriptions guide classification; CRM validation rules and stage controls still govern whether a write can succeed.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- Stages have similar names but different entry criteria.
+- Descriptions describe the sales process generally instead of the evidence needed for a stage.
+- CRM stages changed but descriptions were not updated.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Pipelines](./pipelines)
+- [Default stages](./default-stages)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

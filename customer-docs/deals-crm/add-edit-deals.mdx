@@ -1,30 +1,46 @@
 ---
 title: "Add/edit deals"
-description: "Use add/edit deals to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Add/edit deals","Deals and CRM workspace","Ergo docs"]
+description: "Add or edit Deals carefully, using mapped CRM fields, pipeline stages, owners, and permissions as the source of truth."
+keywords: ["add deal", "edit deal", "CRM writeback", "deal fields"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use the add and edit paths when a deal should exist or be updated in the connected CRM-backed workspace. Confirm the source CRM, field mapping, and permissions before treating Ergo as the place to make broad record changes.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open the Deals workspace.
-- Add or edit a deal if your role and CRM permissions allow it.
-- Confirm company, owner, stage, and pipeline before saving.
-- Check CRM sync status after editing.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Use **Add Deal** from the board, then confirm required fields against the connected CRM configuration.
+- Confirm company, contacts, owner, stage, amount, close date, and any required mapped fields before saving.
+- Edit inline fields only when the field is intended to write through the connected CRM path.
+- After editing, verify the record in Ergo and, when needed, in the source CRM.
+
+## What to expect
+
+- Save behavior depends on CRM connection, mapped properties, stage configuration, and property permissions.
+- Edits made directly in the CRM may need ingestion or sync time before they appear in Ergo.
+- Native CRM task and note sync is not documented as available from this workflow.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Required fields, stage, or owner are missing.
+- Property permissions allow read but not create or update.
+- The same account appears under multiple names or domains.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Custom views and Ergo View](./custom-views-and-ergo-view)
+- [How Ergo names and matches CRM records](./how-ergo-names-and-matches-crm-records)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

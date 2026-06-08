@@ -1,30 +1,46 @@
 ---
 title: "Company info"
-description: "Configure company info so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Company info","Field mapping and CRM configuration","Ergo docs"]
+description: "Maintain company description, solution context, and durable positioning that Ergo can use in summaries, drafts, and classification."
+keywords: ["company info", "AI context", "company description", "solution context"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use Company Info to give Ergo durable context about your own company, product, and positioning. This context can help summaries, drafts, and AI-assisted reasoning, but it should stay factual and stable.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review company fields used for matching and reporting.
-- Confirm names, domains, and owner fields.
-- Update CRM data when company matching looks wrong.
-- Re-sync after changing company fields.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Add or review your company name, description, and solution context.
+- Keep language factual, current, and durable.
+- Avoid customer-specific promises or temporary launch language.
+- Update the context when positioning, ICP, or packaging changes.
+
+## What to expect
+
+- Company Info supports AI context; it does not create CRM fields by itself.
+- Overly broad descriptions can make drafts and summaries sound generic.
+- Outdated positioning can affect AI-generated language.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- Company context is stale after a positioning change.
+- The description includes private customer examples.
+- The description is too vague to guide AI outputs.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Restrict to pipeline](./restrict-to-pipeline)
+- [Alternate domains/emails](./alternate-domains-emails)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

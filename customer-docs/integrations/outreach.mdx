@@ -1,36 +1,46 @@
 ---
 title: "Outreach"
-description: "Connect and maintain Outreach with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Outreach","Integrations","Ergo docs"]
+description: "Connect Outreach Dialer so supported Outreach call recordings can feed Ergo."
+keywords: ["Outreach", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when Outreach Dialer should send call recordings and call context to Ergo.
+
+## Who can use this
+
+- Admins and operators configuring dialer ingestion.
+- Users validating whether Outreach calls appear in Ergo.
 
 ## Before you start
 
-- Confirm this feature is enabled for your workspace.
-- Have access to the Outreach account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm the Outreach Dialer integration is enabled for your workspace.
+- Connect with the Outreach account your team expects to authorize call data.
+- Confirm your Outreach call events include the recording URL required for processing.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Outreach Dialer**.
+- Complete the OAuth flow.
+- Confirm Outreach appears connected.
+- Test with one completed call that includes a recording URL.
 
-- Confirm Outreach is enabled for your workspace.
-- Connect Outreach from Integrations.
-- Review which dialer or outreach activities should influence Ergo context.
-- Test one workflow before rolling it out to the team.
+## What to expect
+
+- Outreach is feature-gated and OAuth-based.
+- Ergo processing depends on Outreach sending a supported call event with a recording URL.
+- This integration is for Outreach Dialer call data, not Outreach-sequenced emails; connect Google Workspace or Microsoft 365 for email context.
+- Calls may be delayed until the recording URL is available.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The workspace does not have the Outreach Dialer feature enabled.
+- Outreach sent a call event before the recording URL was ready.
+- The call could not be matched to the expected Ergo user or record.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

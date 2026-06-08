@@ -1,30 +1,46 @@
 ---
 title: "Property permissions"
-description: "Configure property permissions so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Property permissions","Field mapping and CRM configuration","Ergo docs"]
+description: "Control whether Ergo can create or update CRM-backed deal, contact, and company records and fields."
+keywords: ["property permissions", "CRM write permissions", "create records", "update records"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use property permissions to keep read-only context separate from fields or records Ergo is allowed to create or update. These settings work alongside the CRM integration user's permissions.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Check the connected CRM account's permissions.
-- Confirm it can read and update the mapped property.
-- Adjust permissions in the CRM if needed.
-- Re-sync or test the mapped field after permission changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Review create and update permissions for deals, contacts, and companies.
+- Disable writes for fields or record types where Ergo should only read context.
+- Keep sensitive or manager-owned fields read-only unless the CRM owner has approved automation.
+- Recheck permissions after CRM role, profile, or field-security changes.
+
+## What to expect
+
+- Ergo cannot write a field if either Field Mapping or the CRM itself blocks the action.
+- Permission changes can affect deal creation, updates, owner changes, and field writeback.
+- Read-only fields can still be useful context for AI and board display.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- The CRM user can read a field but not update it.
+- A field was newly restricted in CRM after it was mapped.
+- A broad permission toggle was changed without a single-record test.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [CRM properties](./crm-properties)
+- [Create/sync CRM properties](./create-sync-crm-properties)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

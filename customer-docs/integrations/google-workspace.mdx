@@ -1,35 +1,47 @@
 ---
 title: "Google Workspace"
-description: "Connect and maintain Google Workspace with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Google Workspace","Integrations","Ergo docs"]
+description: "Connect Gmail and Google Calendar so Ergo can use email, calendar, draft, and meeting context."
+keywords: ["Google Workspace", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect a Google Workspace account for Gmail and Google Calendar workflows.
+
+## Who can use this
+
+- Users connecting their own Gmail and Google Calendar.
+- Admins and operators helping users troubleshoot email, calendar, or draft workflows.
 
 ## Before you start
 
-- Have access to the Google Workspace account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Sign in with the Google account you use for customer email and calendar events.
+- Approve all requested Gmail and Calendar scopes during OAuth.
+- Do not connect both Google Workspace and Microsoft 365 for the same user unless your team has explicitly validated the intended provider.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Google Workspace**.
+- Complete OAuth with the correct Google account.
+- Confirm Gmail and Calendar appear connected.
+- Review the available Google settings, including inbox monitoring, follow-up emails, external email client behavior, and surfacing if those workflows apply to your team.
 
-- Connect Google Workspace from setup or Integrations.
-- Approve calendar and email scopes.
-- Confirm customer meetings are on the connected calendar.
-- Reconnect Google Workspace if Ergo stops seeing meetings or drafts cannot sync.
+## What to expect
+
+- Google Workspace powers Gmail and Calendar context for supported workflows such as email analysis, follow-up drafts, calendar-based meeting context, and upcoming meetings.
+- Calendar availability and event visibility depend on the connected account and calendar permissions.
+- If the grant expires or required scopes are revoked, affected workflows may pause until the account is reconnected.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The wrong Google account was connected.
+- A required scope was not approved or was later revoked.
+- Calendar events are on a calendar the connected account cannot access.
 
 ## Related articles
 
-- [Connect email and calendar](../setup/connect-email-and-calendar)
+- [Integrations](./index)
 - [Calendar scopes and meeting auto-join](./calendar-scopes-and-meeting-auto-join)
 - [Expired grants and reconnecting](./expired-grants-and-reconnecting)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

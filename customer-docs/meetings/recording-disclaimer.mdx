@@ -1,30 +1,33 @@
 ---
 title: "Recording disclaimer"
-description: "Handle recording disclaimer in the meetings and notetaker workflow."
-keywords: ["Recording disclaimer","Meetings and notes","Ergo docs"]
+description: "Configure and verify the org-level recording disclaimer used by the Ergo notetaker."
+keywords: ["recording disclaimer", "meeting consent", "notetaker settings"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+The recording disclaimer setting controls whether Ergo sends or displays a fixed recording notice for notetaker meetings.
 
+## Who can manage it
 
-## Use this workflow
+- Super admins can update the org-level recording disclaimer setting.
+- Members should ask an admin if the setting needs to change.
 
-- Review the disclaimer before recording meetings.
-- Ask an admin which default disclaimer your workspace uses.
-- Adjust the disclaimer only if your role has permission.
-- Confirm your team follows the recording rules required for your customers and regions.
+## What to check
 
-## Common issues
+- Whether the disclaimer is enabled in notetaker settings.
+- Whether your org has separate legal or customer-communication requirements.
+- Whether the host or meeting platform also announces recording.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## Important caveats
+
+- The setting does not replace your obligation to follow applicable consent laws or company policy.
+- The disclaimer is a notice; it does not collect attendee acknowledgment.
+- The bot can still require waiting-room admission.
+- Recording-disclaimer state is separate from summary-email settings and meeting sharing settings.
 
 ## Related articles
 
-- [Recording/privacy basics](../start-here/recording-privacy-basics)
-- [Default meeting summary settings](../admin/default-meeting-summary-settings)
-- [Recording disclaimer defaults](../admin/recording-disclaimer-defaults)
+- [Notetaker waiting-room admission guide](./notetaker-waiting-room-admission-guide)
+- [Recording privacy basics](../start-here/recording-privacy-basics)
+- [Share/revoke/password-protect meetings](./share-revoke-password-protect-meetings)

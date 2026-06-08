@@ -1,35 +1,50 @@
 ---
 title: "Microsoft 365"
-description: "Connect and maintain Microsoft 365 with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Microsoft 365","Integrations","Ergo docs"]
+description: "Connect Outlook and Microsoft Calendar so Ergo can use email, calendar, draft, and meeting context."
+keywords: ["Microsoft 365", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect a Microsoft 365 account for Outlook and calendar workflows.
+
+## Who can use this
+
+- Users connecting their own Outlook mailbox and calendar.
+- Admins and operators helping users troubleshoot email, calendar, or draft workflows.
 
 ## Before you start
 
-- Have access to the Microsoft 365 account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Sign in with the Microsoft account you use for customer email and calendar events.
+- If your Microsoft tenant requires admin consent or app allowlisting, ask your Microsoft admin to approve Ergo before users connect.
+- Each user should connect their own Microsoft account; an admin connection does not bind another user's mailbox or calendar.
+- Approve the requested Outlook and Calendar scopes.
+- Do not connect both Microsoft 365 and Google Workspace for the same user unless your team has validated the intended provider.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Microsoft 365**.
+- Complete OAuth with the correct Microsoft account.
+- Confirm Microsoft 365 appears connected.
+- Test the email/calendar workflow your team plans to use.
 
-- Connect Microsoft 365 from setup or Integrations.
-- Approve the requested email and calendar permissions.
-- Confirm the connected calendar contains the meetings Ergo should see.
-- Reconnect Microsoft 365 if meetings or drafts stop syncing.
+## What to expect
+
+- Microsoft 365 can power Outlook and Calendar context for supported email, draft, meeting, and upcoming-calendar workflows.
+- Calendar visibility depends on the connected account and its calendar permissions.
+- If the grant expires or required scopes are revoked, affected workflows may pause until reconnect.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The wrong Microsoft account was connected.
+- A Microsoft tenant policy blocks the OAuth flow until an admin approves the app.
+- A required scope was not approved or was later revoked.
+- Calendar events are on a calendar the connected account cannot access.
 
 ## Related articles
 
-- [Connect email and calendar](../setup/connect-email-and-calendar)
+- [Integrations](./index)
 - [Calendar scopes and meeting auto-join](./calendar-scopes-and-meeting-auto-join)
 - [Expired grants and reconnecting](./expired-grants-and-reconnecting)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

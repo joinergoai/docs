@@ -1,35 +1,51 @@
 ---
 title: "Desktop onboarding checklist"
-description: "Set up and use Ergo Desktop for desktop onboarding checklist."
-keywords: ["Desktop onboarding checklist","Desktop","Ergo docs"]
+description: "Verify Desktop access, sign-in, permissions, test recording, upload, and processing before using Ergo Desktop on live calls."
+keywords: ["Desktop onboarding checklist", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this checklist before depending on Ergo Desktop for important meetings.
+
+## Who can use this
+
+- New Desktop users.
+- Admins and operators helping a team roll out local recording.
 
 ## Before you start
 
-- Install Ergo Desktop, sign in, and grant required macOS permissions.
-- Confirm Desktop app is connected or available.
+- Confirm Desktop access is enabled for the workspace.
+- Install the current app from the approved download path.
+- Decide whether users should use Desktop, the cloud notetaker, or both.
 
+## Steps
 
-## Use this workflow
-
-- Install Ergo Desktop and sign in.
-- Grant required macOS permissions.
+- Install Ergo Desktop.
+- Sign in through the browser tab opened by Ergo Desktop and confirm the authenticated email.
+- Grant macOS permissions for Ergo Desktop, not only browser permissions, then quit and reopen the app.
+- Connect or enable Ergo Desktop Notetaker if your team uses the integration card.
 - Run a short test recording.
-- Confirm upload and processing complete before relying on desktop capture.
+- Stop the recording and wait for upload and processing.
+- Confirm the meeting appears in Ergo with the expected title, attendees, and transcript/recording status.
+
+## What to expect
+
+- A successful test should confirm capture, upload, and backend processing.
+- Calendar-sourced recordings, detected meetings, and Quick Note recordings may carry different metadata.
+- If a cloud bot is also scheduled, duplicate-source handling should be checked before broad rollout.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Desktop access is not enabled, so download or setup is blocked.
+- The app is signed in as the wrong user.
+- Permissions are granted but the app was not quit and reopened.
+- The recording button does not respond; quit Ergo Desktop completely and reopen it before retesting.
+- The recording captured locally but failed upload or processing.
 
 ## Related articles
 
 - [Desktop](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Ergo Desktop Notetaker](../integrations/ergo-desktop-notetaker)
+- [Silent desktop recording](./silent-desktop-recording)
+- [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)

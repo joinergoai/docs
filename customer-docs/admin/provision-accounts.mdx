@@ -1,30 +1,58 @@
 ---
 title: "Provision accounts"
-description: "Manage provision accounts across teams, members, access, defaults, and organization settings."
-keywords: ["Provision accounts","Admin","Ergo docs"]
+description: "Provision a new Ergo account, assign it to a team, and choose the right role and seat type."
+keywords: ["provision account", "new user", "seat type", "standard seat", "spectator seat"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when an admin needs to create a new Ergo account for someone in the organization. Provisioning creates the account, assigns it to a team, sets the role and seat type, and sends the user a welcome email when email delivery succeeds.
 
+## Who can use this
 
-## Configure it
+- Admins and Super Admins who can manage organization users.
 
-- Open Admin members.
-- Invite or provision users with the right role and team.
-- Confirm required integrations or sync are available.
-- Ask users to complete setup after provisioning.
+## Before you start
+
+- Create or identify the team the user should belong to.
+- Confirm the user's first name, last name, and email address.
+- Choose the role: **User** or **Admin**.
+- Choose the seat type: **Standard** or **Spectator**.
+- Confirm whether the person should contribute data through CRM/email/drafts or mainly view meetings, notes, folders, and reporting.
+
+## Steps
+
+1. Open **Admin**.
+2. Select **Provision New Account**.
+3. Choose the team.
+4. Choose the role and seat type.
+5. Enter first name, last name, and email address.
+6. Submit the form and wait for the success confirmation.
+7. Ask the user to sign in and complete personal setup for the sources they need, such as CRM, email/calendar, Slack, and notetaker.
+
+## What to expect
+
+- Provisioning creates the user and organization membership, then creates the user's Ergo dashboard.
+- Provisioned accounts have tasks disabled by default in the current backend flow.
+- Standard users have full platform access for the role they receive.
+- Spectator seats are designed for limited participation; spectator users should not be treated as normal CRM writeback or draft-email contributors.
+- A welcome email is attempted, but email delivery failure does not necessarily mean account creation failed.
+- Seat checks or billing review can happen separately from provisioning. Do not treat the provisioning page as the source of contract terms.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- The selected team list fails to load.
+- The email address is invalid or already belongs to an existing user.
+- The user is provisioned into the wrong team or with the wrong seat type.
+- The user can sign in but still has not connected required personal sources.
+- The welcome email was not delivered even though the account exists.
 
 ## Related articles
 
 - [Admin](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Create/edit/delete teams](./create-edit-delete-teams)
+- [Add/remove/move members](./add-remove-move-members)
+- [Spectator management](./spectator-management)
+- [Promote/demote/convert roles](./promote-demote-convert-roles)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

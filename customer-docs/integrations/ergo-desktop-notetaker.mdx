@@ -1,36 +1,47 @@
 ---
 title: "Ergo Desktop Notetaker"
-description: "Connect and maintain Ergo Desktop Notetaker with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Ergo Desktop Notetaker","Integrations","Ergo docs"]
+description: "Enable the desktop notetaker for local, no-bot meeting recording through the Ergo Desktop app."
+keywords: ["Ergo Desktop Notetaker", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to enable Ergo Desktop Notetaker when your team wants local desktop recording instead of a bot joining the call.
+
+## Who can use this
+
+- Users recording meetings with Ergo Desktop.
+- Admins and operators deciding whether desktop or cloud notetaking should be primary.
 
 ## Before you start
 
-- Install Ergo Desktop, sign in, and grant required macOS permissions.
-- Have access to the Desktop Notetaker account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Install and sign in to Ergo Desktop.
+- Grant the required macOS permissions.
+- Review whether cloud bot recordings, third-party notetakers, or desktop recordings may overlap.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Ergo Desktop Notetaker**.
+- Connect the desktop notetaker.
+- In Ergo Desktop, verify sign-in, permissions, and recording readiness.
+- Run a short test recording and confirm it uploads to Ergo.
 
-- Install Ergo Desktop and sign in.
-- Grant required desktop permissions.
-- Run a test recording before customer calls.
-- Use desktop troubleshooting if detection, stopping, or upload does not work as expected.
+## What to expect
+
+- Desktop recording is local audio capture and does not add a bot participant to the call.
+- A no-bot recording path does not remove your team's responsibility to follow recording consent and disclosure rules.
+- The desktop and cloud notetakers can coexist, but duplicate-source handling depends on the meeting and runtime detection.
+- Desktop capture still depends on permissions, app state, audio capture, upload, and backend processing.
 
 ## Common issues
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- macOS permissions were granted but the app was not restarted.
+- The desktop app is signed in as a different user than the dashboard.
+- A cloud bot also recorded the same meeting, requiring dedupe review.
 
 ## Related articles
 
-- [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Desktop](../desktop/index)
+- [Install and sign in to Ergo Desktop](../desktop/install-and-sign-in-to-ergo-desktop)
+- [Silent desktop recording](../desktop/silent-desktop-recording)
+- [Troubleshoot missed detection or upload failures](../desktop/troubleshoot-missed-detection-or-upload-failures)

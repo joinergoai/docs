@@ -1,30 +1,103 @@
 ---
 title: "Meeting title phrases"
-description: "Complete the meeting title phrases onboarding step with the right owner and prerequisites."
-keywords: ["Meeting title phrases","Onboarding","Ergo docs"]
+description: "Configure the meeting-title phrases and AI Boost setting Ergo uses to identify revenue-relevant meetings."
+keywords: ["Meeting title phrases", "Meeting titles", "AI Boost", "Strict Mode", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use Meeting title phrases to help Ergo identify which meetings are revenue-relevant for your team.
 
+These phrases are especially useful when your calendar uses repeatable naming patterns such as demos, discovery calls, onboarding sessions, implementation reviews, QBRs, renewals, or customer check-ins. They help Ergo separate customer-facing work from internal meetings so downstream outputs are created for the right conversations.
 
-## Setup steps
+## Who can use this
 
-- List phrases that help Ergo identify customer-facing meetings.
-- Include common naming patterns used by your sales, success, or account teams.
-- Review false positives and false negatives after the first week of usage.
-- Adjust phrases when your team changes calendar naming conventions.
+- Admins, RevOps owners, operators, sales leaders, CSM leaders, and users completing setup.
+- Standard users who need their own meeting classification to match the admin's configuration.
+- Teams reviewing why a meeting did or did not produce summaries, insights, drafts, CRM updates, or reporting data.
+
+## Before you start
+
+- Connect the calendar and intended meeting source before testing meeting classification.
+- Add company details first when AI Boost should reason about your company's customer-facing work.
+- Decide whether your team wants a narrow filter, where only clearly named meetings qualify, or a broader filter that lets AI inspect meeting content.
+- Review your common calendar naming patterns across sales, customer success, onboarding, implementation, renewals, and account management.
+- If users should inherit admin configuration, set the phrases before running Sync with Admin or pushing settings to a team.
+
+## Add phrases
+
+Add short phrases that commonly appear in customer-facing meeting titles.
+
+Good phrases are stable and easy to recognize:
+
+- `Demo`
+- `Discovery`
+- `Intro`
+- `QBR`
+- `Renewal`
+- `Implementation`
+- `Onboarding`
+- `Customer check-in`
+- A delimiter your team uses for external meetings, such as `<>`
+
+Avoid phrases that are too broad, such as `sync`, `weekly`, `team`, or `call`, unless your calendar naming convention makes them safe. Broad phrases can pull internal or unrelated meetings into downstream processing.
+
+## Choose Strict Mode or AI Boost
+
+Meeting title phrases can be used in two modes.
+
+**Strict Mode** uses only the meeting title phrases you define. A meeting title must contain one of the configured phrases to qualify through this rule. Use this when your calendar names are consistent and you want fewer false positives.
+
+**AI Boost** uses the phrases together with available meeting content and company context. A matching phrase is a strong signal, but a meeting without a matching phrase can still be classified as revenue-relevant when the content shows sales, customer success, account management, onboarding, implementation, renewal, expansion, or troubleshooting work with an external prospect or customer.
+
+AI Boost is usually the better default for teams whose meeting titles are not fully controlled by one scheduling system. Use it when your team has inconsistent titles, customer calls with person-name-only titles, or workflows where customer success and implementation calls matter as much as sales demos.
+
+## Test the filter
+
+After saving phrases, test recent or upcoming examples before relying on the setting broadly.
+
+1. Pick one clearly customer-facing meeting that should qualify.
+2. Pick one internal meeting that should not qualify.
+3. Check whether the meeting appears in the expected meeting, draft, CRM, or reporting workflow after processing.
+4. If a customer-facing meeting is missed, add a phrase that appears consistently in that title pattern or enable AI Boost.
+5. If internal meetings are included, remove overly broad phrases and review the skip-internal-meetings setting.
+
+Test after changing team calendar conventions, onboarding a new team, adding a new meeting source, or changing from Strict Mode to AI Boost.
+
+## What to expect
+
+- Meeting title phrases guide classification; they do not connect your calendar, dispatch the notetaker by themselves, or create every downstream output by themselves.
+- Downstream behavior can still depend on recording, transcript availability, meeting relevance, email/calendar access, CRM mapping, draft settings, templates, and reporting access.
+- Meetings with no substantive transcript may be treated differently from meetings that were fully recorded and processed.
+- External attendees and skip-internal-meetings settings can also affect whether a meeting is considered customer-facing.
+- Meeting title phrases can be copied through Sync with Admin or admin push settings when selected.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- **A customer call did not produce a draft or CRM update:** Check whether the title matched a phrase, whether AI Boost is enabled, whether the meeting was recorded and processed, and whether draft or CRM settings are enabled.
+- **Internal meetings are producing outputs:** Remove broad phrases and review skip-internal-meetings behavior.
+- **A meeting with only names in the title was missed:** Add a recurring delimiter or enable AI Boost so Ergo can use meeting content where available.
+- **Exploratory or relationship-building calls are missed:** Add the wording or delimiter those meetings usually share, then retest with AI Boost enabled.
+- **A no-show or very short call appears differently than expected:** Classification can depend on whether there was enough substantive transcript content.
+- **A user has different phrases than the admin:** Re-run Sync with Admin or push settings after confirming Meeting Titles is selected.
+- **A new team has different calendar naming:** Add team-specific phrases before relying on drafts, CRM updates, or reporting for that team.
+- **The notetaker did not join:** Meeting title phrases are not the only notetaker setup control. Check calendar connection, meeting link, notetaker source, and skip-internal-meetings settings separately.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Workspace configuration](./workspace-configuration)
+- [Company details](./company-details)
+- [User sync](./user-sync)
+- [CRM properties setup](./crm-properties-setup)
+- [Meeting-title AI boost](../field-mapping/meeting-title-ai-boost)
+- [Meeting filter: what sales-only processing means](../meetings/meeting-filter-what-sales-only-processing-means)
+- [Skip internal meetings](../meetings/skip-internal-meetings)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Connect email and calendar](./connect-email-and-calendar)
+- [Notetaker setup](./notetaker-setup)
+- [Draft email logic](../drafts-email/draft-email-logic-when-drafts-are-created-and-how-to-dismiss)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

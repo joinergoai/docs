@@ -1,30 +1,36 @@
 ---
 title: "Skip internal meetings"
-description: "Handle skip internal meetings in the meetings and notetaker workflow."
-keywords: ["Skip internal meetings","Meetings and notes","Ergo docs"]
+description: "Use the skip-internal-meetings setting to prevent the notetaker from joining internal-only calendar events."
+keywords: ["skip internal meetings", "notetaker settings", "internal meetings"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use this setting when your team wants Ergo to avoid internal-only calls and focus notetaker capture on external conversations.
 
+## How it works
 
-## Use this workflow
+- The setting is stored in your notetaker configuration.
+- Internal-only detection is based on attendee email domains that are configured as internal for your workspace.
+- When every attendee on a calendar event matches an internal domain, Ergo skips dispatching the bot for that event.
+- When enabled, Ergo can cancel already scheduled internal meeting bots and mark those events as user-unscheduled.
+- The setting affects bot scheduling. It does not delete existing completed meeting records.
 
-- Review how your workspace identifies internal meetings.
-- Confirm internal domains and meeting-title patterns.
-- Check skipped meetings before assuming the notetaker failed.
-- Update rules when your team changes naming or domain conventions.
+## Turn it on or off
 
-## Common issues
+- Open the notetaker settings menu from the upcoming meetings area.
+- Toggle **Skip internal meetings**.
+- Recheck upcoming meetings that were already scheduled, especially calls starting soon.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What to verify
+
+- The attendees on the calendar event reflect who is actually joining.
+- Internal domains are configured for every domain your company uses.
+- External customer calls are not skipped because invitees are missing, using a generic email address, or the calendar event is incomplete.
+- Existing records and drafts are reviewed separately from the scheduling setting.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)
+- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
+- [Meeting filter: what sales-only processing means](./meeting-filter-what-sales-only-processing-means)

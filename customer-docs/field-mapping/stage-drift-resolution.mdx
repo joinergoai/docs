@@ -1,30 +1,46 @@
 ---
 title: "Stage drift resolution"
-description: "Configure stage drift resolution so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Stage drift resolution","Field mapping and CRM configuration","Ergo docs"]
+description: "Resolve differences between CRM stages and Ergo's stored stage configuration before relying on board views or stage updates."
+keywords: ["stage drift", "CRM sync", "stage conflict", "pipeline drift"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use stage drift resolution when the CRM source and Ergo's stored stage configuration no longer agree. Drift can happen after CRM admins rename, delete, reorder, or recreate stages.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Compare the stages in Ergo with the stages in your CRM.
-- Identify renamed, deleted, reordered, or newly created stages.
-- Update mappings so Ergo and the CRM agree.
-- Re-test one deal after resolving drift.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Compare the CRM source stages with the stages stored in Ergo.
+- Sync stages from the CRM when the CRM is the source of truth.
+- Resolve renamed, reordered, deleted, or recreated stages before running automation.
+- Retest one board view and one CRM update after resolution.
+
+## What to expect
+
+- Drift can make records appear in the wrong column or block updates to a stage.
+- Stage IDs matter more than names when diagnosing drift.
+- Resolving drift may require CRM admin help if the source CRM no longer exposes the expected stage.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- CRM stages were changed outside Ergo.
+- A stage was recreated with the same name but a new ID.
+- A pipeline filter is hiding the stage you expected to see.
 
 ## Related articles
 
+- [Field mapping](./index)
+- [Reorder/delete stages](./reorder-delete-stages)
+- [Stage controls](./stage-controls)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
 - [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
-- [Pipeline stages](../setup/pipeline-stages)
-- [Field mapping setup: required before CRM updates work](./field-mapping-setup-required-before-crm-updates-work)

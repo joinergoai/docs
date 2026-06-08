@@ -1,30 +1,51 @@
 ---
 title: "Thread history and related threads"
-description: "Use thread history and related threads for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Thread history and related threads","Drafts, email, and templates","Ergo docs"]
+description: "Use email thread context to decide whether a draft should reply in-thread or start a new email."
+keywords: ["Thread history and related threads", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Thread controls help you avoid sending a follow-up as a new email when it should be a reply, or replying into an old thread when a new subject is cleaner.
 
+## Who can use this
 
-## Use this workflow
+- Reps reviewing drafts for active customer or prospect conversations.
+- Managers checking why drafts are attached to specific threads.
 
-- Open the draft or email thread.
-- Review previous messages and related threads.
-- Check whether the generated draft references the right context.
-- Use related context to edit or reprompt the draft.
+## Before you start
+
+- Connect the sender's email account.
+- Confirm the draft's recipient list is correct.
+- Review the existing conversation before changing thread strategy.
+
+## Steps
+
+- Open the draft.
+- Review the current thread choice, if one is present.
+- Open thread history to read the selected conversation.
+- Review related thread suggestions based on recipient context.
+- Choose an existing thread when the draft is a reply.
+- Choose a new thread when the email is a new topic or the old conversation is no longer appropriate.
+
+## What to expect
+
+- Thread history depends on connected email access and the thread identifiers available to Ergo.
+- Related threads are suggestions. They need human review before selection.
+- Changing subject or recipients can affect whether email clients keep a message in the same thread.
+- Some email clients may display threading differently even when Ergo sends with thread metadata.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- The email grant is expired or missing, so thread history cannot load.
+- The selected thread has the right recipient but the wrong topic.
+- A draft has no thread because it was created as a new email.
+- Related threads are incomplete when the connected account cannot access the full conversation.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Compose a new email](./compose-a-new-email)
+- [Search across meetings, emails, and documents](../ai-search-automation/search-across-meetings-emails-and-documents)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)

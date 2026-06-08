@@ -1,30 +1,51 @@
 ---
 title: "Dismiss/disqualify drafts"
-description: "Use dismiss/disqualify drafts for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Dismiss/disqualify drafts","Drafts, email, and templates","Ergo docs"]
+description: "Remove drafts from review or disqualify the related deal only when that matches your sales process."
+keywords: ["Dismiss/disqualify drafts", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Dismiss removes a draft from the active review flow. Disqualify is a stronger action that can affect the related deal, so use it only when the opportunity should be closed out.
 
+## Who can use this
 
-## Use this workflow
+- Reps processing draft queues.
+- Managers and admins defining how reps should handle bad-fit follow-ups.
 
-- Open the draft that should not be sent.
-- Dismiss or disqualify it with the appropriate reason when available.
-- Use instructions or settings to reduce repeated unwanted drafts.
-- Check whether the meeting type should be excluded from draft generation.
+## Before you start
+
+- Confirm whether the issue is the draft copy, the draft timing, or the underlying deal status.
+- Use reprompt or edit when the email is still worth sending.
+- Use dismiss when the draft should not be sent.
+- Use disqualify only when the associated deal should follow your closed-lost process.
+
+## Steps
+
+- Open the draft.
+- Choose dismiss/discard to remove only the draft from the queue.
+- Use undo if it appears and the dismissal was accidental.
+- Choose disqualify only after confirming the linked deal and your team's CRM policy.
+- Review the deal afterward if disqualification updates CRM or pipeline state in your workspace.
+
+## What to expect
+
+- Dismissing a draft does not send an email.
+- Dismissed drafts may be recoverable only through an undo window or support process, depending on timing.
+- Disqualification is not a copy-editing tool. It should reflect deal status.
+- Keyboard shortcuts and Go Mode behavior can vary by enabled workflow, so confirm the visible action before using shortcuts quickly.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- A user dismisses a draft that only needed editing.
+- A draft is disqualified when the deal should stay open.
+- A dismissed draft reappears because a new workflow creates a fresh draft from newer context.
+- The draft belongs to a different deal or user than expected.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Draft email logic: when drafts are created and how to dismiss](./draft-email-logic-when-drafts-are-created-and-how-to-dismiss)
+- [Go Mode and bulk sending](./go-mode-and-bulk-sending)
+- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

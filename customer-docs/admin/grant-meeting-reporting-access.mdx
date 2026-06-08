@@ -1,35 +1,76 @@
 ---
 title: "Grant meeting/reporting access"
-description: "Give users and spectators the meeting or reporting access they need and no more."
-keywords: ["Grant meeting/reporting access","Admin","Ergo docs"]
+description: "Grant meeting visibility or reporting dashboard access from Ergo Admin without changing a user's team or role."
+keywords: ["meeting access", "reporting access", "dashboard access", "admin"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page when a user should keep the same team and role but needs additional visibility. Meeting access and reporting access are separate grants.
+
+## Who can use this
+
+- Super admins can open **Grant Meeting Access** and **Grant Reporting Access** from the Admin member table.
+- Reporting admins can manage reporting access grants from the reporting access manager.
+- Primary-admin meeting grant scope may be limited to the teams they administer.
 
 ## Before you start
 
-- Sign in with admin access or delegated permission for this area.
-- Confirm Reporting is connected or available.
+- Decide whether the user needs meeting visibility, reporting visibility, or both.
+- Confirm the user is already in the organization.
+- Check whether a team move, role change, or spectator conversion would be the cleaner change.
+- For broad organization-wide meeting visibility, use [Global meeting access](./global-meeting-access) instead of individual grants.
 
+## Grant meeting access
 
-## Configure it
+Meeting access grants let one user view meetings for selected people. They are stored separately from team membership and role.
 
-- Open Admin and find the member or team.
-- Choose the meeting or reporting access they need.
-- Confirm whether access is team-specific, global, or shared-link based.
-- Ask the user to refresh and verify the page.
+1. Open **Admin** and choose the team.
+2. Open the member's action menu.
+3. Select **Grant Meeting Access**.
+4. Search for members whose meetings the selected user should be able to view.
+5. Select or deselect the members in the list.
+6. Save changes.
+
+The modal groups grantable users by role and marks same-team users. Saved grants can add access to meetings owned by or attended by the selected people. Deselecting same-team users can also create exclusions from implicit same-team access where the product supports it.
+
+## Grant reporting access
+
+Reporting access controls whether a non-admin user can see reporting and what they can do there.
+
+1. Open the member's action menu.
+2. Select **Grant Reporting Access**.
+3. Choose **All dashboards** or **Specific dashboards**.
+4. If needed, enable **Can create dashboards, fields, and rubrics**.
+5. Save the grant.
+
+Admins and team admins already resolve to full reporting access when reporting is enabled for the organization. For non-admin users, an explicit reporting access grant can allow all dashboards, selected dashboards, and optional create permissions.
+
+## Edit or revoke reporting access
+
+Open the existing reporting grant to update the dashboard scope, toggle create permissions, or revoke the grant. Removing the grant removes the explicit reporting access for that user; it does not remove admin-derived access.
+
+## What to expect
+
+- Meeting access affects meeting lists and meeting-detail access. It does not grant reporting access.
+- Reporting access affects the Reporting navigation and reporting dashboard permissions. It does not grant meeting visibility by itself.
+- Users may need to refresh after a grant is saved.
+- Grants are organization-specific; verify the user is in the same organization before troubleshooting.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The grant action is missing.** Confirm the acting user has the right admin permission and that the target user is in the organization.
+- **The user can see meetings but not reports.** Add or edit reporting access separately.
+- **The user can see reports but not a meeting.** Add meeting access, check team membership, or review global meeting access.
+- **A non-admin user cannot create dashboards.** Enable create permissions in the reporting access grant.
+- **A grant already exists.** Edit the existing grant instead of creating a duplicate.
 
 ## Related articles
 
+- [Admin](./index)
+- [Spectator management](./spectator-management)
 - [Global meeting access](./global-meeting-access)
+- [Sync CRM/settings to team members](./sync-crm-settings-to-team-members)
+- [Promote/demote/convert roles](./promote-demote-convert-roles)
 - [Roles and permissions](../start-here/roles-and-permissions)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

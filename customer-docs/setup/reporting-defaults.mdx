@@ -1,30 +1,56 @@
 ---
 title: "Reporting defaults"
-description: "Complete the reporting defaults onboarding step with the right owner and prerequisites."
-keywords: ["Reporting defaults","Onboarding","Ergo docs"]
+description: "Choose optional default reporting dashboards and grading rubrics during onboarding, then grant reporting access intentionally."
+keywords: ["Reporting defaults", "default dashboards", "reporting access", "sales grading rubric", "Ergo setup"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page when reporting is part of the initial rollout. Reporting defaults can create starter dashboards and a baseline grading rubric, but reporting still depends on source data, reporting access, and the reports your team actually wants to review.
 
+## Who can use this
 
-## Setup steps
+- Admins, team admins, RevOps owners, and reporting owners with reporting access.
+- Users who have been granted reporting access for all dashboards or selected dashboards.
 
-- Choose the default dashboards, cadences, or reporting fields your team should start with.
-- Confirm reporting access for the people who need to view dashboards.
-- Test one report before scheduling recurring delivery.
-- Adjust defaults after the team has enough data in Ergo.
+## Before you start
+
+- Confirm reporting is enabled for the workspace.
+- Make sure the setup owner has reporting access and creation permission.
+- Decide whether starter dashboards should be created for sales, customer success, product, or a specific team.
+- Confirm call grading should be enabled before adding a default sales grading rubric.
+
+## Steps
+
+1. In onboarding, leave enabled only the defaults your team wants: Sales Dashboard, Customer Success Dashboard, Product Dashboard, and Sales Grading Rubric.
+2. If you are already in Reporting, use **Add Default Dashboard** to create a sales, customer success, or product dashboard.
+3. When creating default dashboards from Reporting, choose a team if the dashboard should be team-specific.
+4. For sales dashboards, review any competitor picklist prompt before treating competitor reports as ready.
+5. Grant reporting access to the right viewers after defaults are created.
+6. Review the generated dashboards and edit or remove reports that do not match your operating cadence.
+
+## What to expect
+
+- If the onboarding user does not have reporting access, the reporting defaults step is skipped.
+- Admins and team admins can have full reporting access; other users depend on reporting access grants.
+- Reporting access grants can allow all dashboards, selected dashboards, and creation permission.
+- Default dashboards are starting points. They need enough relevant meeting, CRM, and reporting field data before their results are meaningful.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- A user expects to see Reporting in the sidebar but does not have reporting access.
+- Defaults are created before reporting fields, grading rubrics, or source data are ready.
+- A dashboard is visible to admins but not to a viewer with a narrower reporting grant.
+- A default dashboard exists, but a filter, team selection, time range, or missing source data makes it look empty.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Advanced settings](./advanced-settings)
+- [Default dashboards](../reporting/default-dashboards)
+- [Reporting overview](../reporting/reporting-overview)
+- [Create/edit reports](../reporting/create-edit-reports)
+- [Call grading rubrics](../reporting/call-grading-rubrics)
+- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

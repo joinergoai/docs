@@ -1,30 +1,46 @@
 ---
 title: "Company detail"
-description: "Use company detail to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Company detail","Deals and CRM workspace","Ergo docs"]
+description: "Review a company's activity, company info, emails, meetings, health, AI overview, contacts, and related deals."
+keywords: ["company detail", "account detail", "company health", "company activity"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Open company detail when you need account context across deals and communications. Company detail is especially useful when a deal looks incomplete because activity is attached at the account level.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open the company record from the board, search, or a deal.
-- Review related people, deals, meetings, emails, and documents.
-- Check domains and alternate emails when matching looks wrong.
-- Use CRM sync troubleshooting if company details are stale.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Open a company from the Companies board or a linked company card.
+- Review the company activity timeline, company info, emails, meetings, and related deals when available.
+- Use company health and AI overview as account-level context when enough source activity is available.
+- Check associated contacts and CRM fields alongside the company record.
+
+## What to expect
+
+- Company detail depends on CRM-ingested company records and associations.
+- Company activity can include emails, meetings, connected Slack activity, and related deals when those sources exist and are associated.
+- Company health and AI overview should be reviewed against the underlying source activity.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The company record exists but is not associated with the deal.
+- Company domains are incomplete or duplicated in the CRM.
+- The company has no available activity sources yet.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Deal detail](./deal-detail)
+- [Deal and account health](./deal-and-account-health)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

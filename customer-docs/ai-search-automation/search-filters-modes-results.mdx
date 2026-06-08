@@ -1,30 +1,53 @@
 ---
 title: "Search filters/modes/results"
-description: "Use search filters/modes/results with the right customer context, sources, filters, and automation checks."
-keywords: ["Search filters/modes/results","Ergo AI, search, and automation","Ergo docs"]
+description: "Use source filters, member filters, search modes, and pagination to tune results."
+keywords: ["Search filters/modes/results", "Ergo AI, search, and automation", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+Filters and modes change what Search asks for. Use them when broad results are noisy or missing the source type you care about.
 
+## Who can use this
 
-## Use this workflow
+- Users searching across multiple source types.
+- Managers narrowing results to a specific team member's meetings.
 
-- Choose the search mode or filters that match what you need.
-- Filter by meetings, emails, documents, or date range.
-- Open the result before using it in a customer workflow.
-- Clear filters when expected results are missing.
+## Before you start
+
+- Know whether you want meetings, email threads, or documents.
+- Decide whether the result should be tied to a specific attendee.
+- Start with broad search before adding multiple filters.
+
+## Steps
+
+- Enter a query of at least two characters.
+- Choose a source filter: meeting, email thread, or user document.
+- Choose a search mode: hybrid, keyword, or semantic.
+- Use the member filter when you want records tied to a specific attendee.
+- Change page size or move between pages when more results are available.
+- Remove filters if the result set is too narrow.
+
+## What to expect
+
+- **Hybrid** is the default search mode.
+- **Keyword** favors direct term matching.
+- **Semantic** favors meaning-based similarity.
+- Selecting an attendee filter clears the entity filter in the current UI.
+- Error and no-result states can mean the query, filters, access, or source sync needs adjustment.
 
 ## Common issues
 
-- Filters, date ranges, or source modes are too narrow.
-- Meetings, emails, or documents are still processing.
-- The search phrase does not match the customer, deal, or source text.
-- The user does not have access to the result source.
+- Too many filters hide relevant results.
+- Keyword mode misses paraphrased content.
+- Semantic mode returns related content that does not contain the exact term.
+- The selected attendee is not associated with the record.
+- The page offset points past the available results after a filter change.
 
 ## Related articles
 
 - [Ergo AI, search, and automation](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Search across meetings, emails, and documents](./search-across-meetings-emails-and-documents)
+- [Using deal and meeting context](./using-deal-and-meeting-context)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Data sources and freshness](../start-here/data-sources-and-freshness)

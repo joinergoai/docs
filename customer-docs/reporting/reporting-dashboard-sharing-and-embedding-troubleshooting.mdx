@@ -1,46 +1,48 @@
 ---
 title: "Reporting dashboard sharing and embedding troubleshooting"
-description: "Diagnose and resolve reporting dashboard sharing and embedding troubleshooting in Ergo."
-keywords: ["Reporting dashboard sharing and embedding troubleshooting","Reporting","Ergo troubleshooting"]
+description: "Troubleshoot shared Reporting chart and dashboard links, password prompts, revoked links, and missing shared-view details."
+keywords: ["Reporting sharing troubleshooting", "Shared dashboard", "Shared chart", "Password protected link", "Embedding"]
 ---
-
 
 ![Flow diagram showing reporting dashboard sharing, permissions, and shared links.](../images/reporting-sharing-flow.svg)
 
-## Symptoms
+Use this page when a shared Reporting chart or dashboard link does not open, asks for a password, or shows less detail than the authenticated Reporting page.
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+## Check the link type
 
-## Most common causes
+- A chart link opens one widget.
+- A dashboard link opens a dashboard view.
+- A revoked link no longer opens the shared view.
+- A password-protected link requires the current password for that share.
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+If the recipient expected a whole dashboard but received a chart link, generate a dashboard link instead.
 
-## What to check
+## If the link asks for a password
 
-- Check whether the dashboard has sharing enabled.
-- Confirm the viewer has reporting access or the correct shared link.
-- Review filters and embed settings if results look empty.
-- Contact support when permissions look correct but the shared view fails.
+1. Confirm the sender copied the current password.
+2. Check for extra spaces when entering the password.
+3. Ask the sender whether the password was changed after the link was shared.
+4. If the password should no longer be required, remove password protection from the share dialog.
 
-## Resolution steps
+## If the link opens but details are missing
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+Shared views do not always expose every authenticated detail endpoint. For example, some source sentence details and revenue deal detail views are limited to authenticated Reporting.
 
-## When to contact support
+Use the authenticated dashboard when the viewer needs:
 
-- You cannot see the page or control after an admin confirms access.
-- A connected integration appears healthy but the workflow still does not complete.
-- A customer-facing output is incorrect and cannot be corrected from the page.
+- Full drilldown context.
+- Revenue deal details.
+- Access to other dashboards.
+- Ability to edit, move, copy, or remove widgets.
+
+## Embedding caveat
+
+Shared Reporting links are generated links to shared views. If you embed them in another tool, access still depends on the link state, password state, and any shared-session requirements. Test the embedded view as the intended audience before relying on it.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Share charts/dashboards](./share-charts-dashboards)
+- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

@@ -1,30 +1,51 @@
 ---
 title: "Scheduled run history and health"
-description: "Use scheduled run history and health with the right customer context, sources, filters, and automation checks."
-keywords: ["Scheduled run history and health","Ergo AI, search, and automation","Ergo docs"]
+description: "Read scheduled agent run execution history, status, delivery results, and errors."
+keywords: ["Scheduled run history and health", "Ergo AI, search, and automation", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+History is the source of truth for whether a scheduled run queued, ran, succeeded, failed, skipped, and delivered.
 
+## Who can use this
 
-## Use this workflow
+- Users monitoring scheduled runs.
+- Admins investigating failed or missing deliveries.
 
-- Open scheduled run history.
-- Review successful, failed, and skipped runs.
-- Open failed runs to understand the cause.
-- Update prompts, schedule, or integrations when failures repeat.
+## Before you start
+
+- Open the scheduled run you want to inspect.
+- Know the expected schedule and destination.
+- Check whether the run was scheduled or manually triggered.
+
+## Steps
+
+- Open **Scheduled Agent Runs**.
+- Select **History** on a run.
+- Review recent health indicators on the run card.
+- Select a specific execution in the drawer.
+- Check status, timestamps, duration, agent text, delivery result, failure stage, and error message when available.
+
+## What to expect
+
+- Execution statuses can include queued, running, succeeded, failed, or skipped.
+- The list refreshes while runs are queued or running.
+- Recent run health is summarized on the run card.
+- Manual **Run** executions and scheduled executions can both appear in history.
+- A failed run may include a failure stage and error message, but not every failure has the same detail.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- A run is still queued or running, so final delivery is not available yet.
+- The agent completed but a delivery destination failed.
+- The schedule has no upcoming next run because the run is disabled or incomplete.
+- History is filtered to the wrong run.
 
 ## Related articles
 
 - [Ergo AI, search, and automation](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Scheduled agent runs](./scheduled-agent-runs)
+- [Email/Slack delivery for scheduled runs](./email-slack-delivery-for-scheduled-runs)
+- [Understanding sources/actions in chat](./understanding-sources-actions-in-chat)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

@@ -1,35 +1,49 @@
 ---
 title: "Calendar scopes and meeting auto-join"
-description: "Connect and maintain Calendar scopes and meeting auto-join with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Calendar scopes and meeting auto-join","Integrations","Ergo docs"]
+description: "Understand how connected calendars support meeting detection, scheduling, and auto-join behavior."
+keywords: ["Calendar scopes and meeting auto-join", "Integrations", "Ergo docs"]
 ---
-
 
 ![Flow diagram showing calendar scopes feeding meeting detection and auto-join behavior.](../images/calendar-email-connection-flow.svg)
 
+Use this page when a calendar-connected workflow is not detecting, scheduling, or joining meetings as expected.
+
+## Who can use this
+
+- Users whose Google or Microsoft calendars determine upcoming meetings.
+- Admins and operators troubleshooting calendar visibility or notetaker scheduling.
 
 ## Before you start
 
-- Have access to the Google Workspace or Microsoft 365, Calendar account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Connect Google Workspace or Microsoft 365 first.
+- Use the same email identity for calendar invites and Ergo sign-in whenever possible.
+- Confirm the meeting is on a calendar the connected account can access.
+- Review notetaker settings before assuming every calendar event should be auto-joined.
 
+## Steps
 
-## Setup steps
+- Confirm your email/calendar integration is connected.
+- Check the upcoming meeting in Ergo.
+- Review notetaker configuration, skipped internal meeting settings, and recurring meeting behavior.
+- If the meeting is missing, reconnect the email/calendar account and confirm the event is visible to the connected calendar.
 
-- Confirm the correct calendar account is connected.
-- Make sure calendar scopes were accepted during connection.
-- Check that customer meetings appear on the connected calendar.
-- Use Add Bot to Meeting for external or missed links.
+## What to expect
+
+- Calendar scopes support meeting visibility, upcoming meeting lists, availability checks, and calendar-driven notetaker scheduling.
+- Auto-join behavior depends on notetaker configuration, event visibility, meeting URL availability, and filters such as internal-meeting handling.
+- Ergo should not be described as joining every calendar event automatically.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The invite is on another calendar or alias.
+- The event has no supported meeting URL.
+- The notetaker is disabled, filtered out, or already handled by another source.
+- The Google or Microsoft grant expired.
 
 ## Related articles
 
-- [Connect email and calendar](../setup/connect-email-and-calendar)
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
+- [Integrations](./index)
+- [Google Workspace](./google-workspace)
+- [Microsoft 365](./microsoft-365)
+- [Schedule or cancel the notetaker](../meetings/schedule-or-cancel-the-notetaker)
 - [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)

@@ -1,35 +1,45 @@
 ---
 title: "BlueDot"
-description: "Connect and maintain BlueDot with the right account, permissions, reconnect path, and failure checks."
-keywords: ["BlueDot","Integrations","Ergo docs"]
+description: "Connect BlueDot with the sign-in secret shown in Ergo so BlueDot meeting payloads can be received."
+keywords: ["BlueDot", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page when BlueDot is one of your meeting recording or transcription sources.
+
+## Who can use this
+
+- Users and operators configuring a BlueDot source.
+- Admins reviewing third-party notetaker overlap.
 
 ## Before you start
 
-- Have access to the BlueDot account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm your workspace has access to the BlueDot integration.
+- Have the BlueDot sign-in secret required by the integration panel.
+- Decide whether BlueDot should be enabled alongside other notetakers.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **BlueDot**.
+- Enter the BlueDot sign-in secret.
+- Confirm BlueDot shows connected.
+- Run one test meeting and verify the meeting appears in Ergo.
 
-- Connect BlueDot from Integrations.
-- Confirm which meetings Ergo can access through BlueDot.
-- Review expected transcript and recording availability.
-- Test one meeting before relying on BlueDot-sourced outputs.
+## What to expect
+
+- BlueDot uses a sign-in secret in Ergo.
+- Meeting availability depends on BlueDot sending a supported webhook payload with meeting data.
+- If the payload does not include expected attendees, transcript, or summary data, downstream output may be incomplete.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The sign-in secret is wrong or stale.
+- The BlueDot payload was missing required meeting fields.
+- Another notetaker source also captured the meeting.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)

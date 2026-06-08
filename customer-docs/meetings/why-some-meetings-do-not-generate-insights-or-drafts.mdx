@@ -1,30 +1,38 @@
 ---
 title: "Why some meetings do not generate insights or drafts"
-description: "Check meeting type, source, filters, and email setup when expected insights or drafts are missing."
-keywords: ["Why some meetings do not generate insights or drafts","Meetings and notes","Ergo docs"]
+description: "Check the common reasons a captured meeting has no generated insights, CRM updates, or post-call drafts."
+keywords: ["missing insights", "missing drafts", "post-call drafts", "meeting outputs"]
 ---
-
 
 ![Flow diagram showing how meeting type and source affect summaries, insights, and draft generation.](../images/meeting-processing-flow.svg)
 
+A completed recording does not mean every downstream output will be created.
 
+## Common reasons
 
-## Use this workflow
+- The meeting has no transcript or an unusable transcript.
+- The meeting was treated as internal or not relevant for the configured sales workflow.
+- The meeting source does not trigger the same automations as scheduled notetaker meetings.
+- CRM, email, or template settings are not connected or configured for the user.
+- The meeting has duplicate capture sources, and outputs were generated from a different record.
 
-- Check whether the meeting was classified as a sales meeting.
-- Check which notetaker source captured the meeting.
-- Confirm email/calendar are connected for draft generation.
-- Use post-call instructions to guide drafting behavior, but do not rely on instructions as a hard filter unless configured that way.
+## What to check first
 
-## Common issues
+- Recording and transcript availability.
+- Meeting source: Ergo bot, desktop recording, manual note, external recording, or another integration.
+- Whether the meeting is linked to the right deal or attendees.
+- Whether post-call drafting and CRM update settings are enabled.
+- Whether the meeting is still processing.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What to do
+
+- If the transcript is missing, start with recording/transcript troubleshooting.
+- If the transcript exists but downstream outputs are missing, check meeting filters and automation eligibility. A filtered meeting can still have a summary or transcript while CRM updates, sales insights, or post-call drafts are suppressed.
+- If the UI exposes a push or retry action, use it once after confirming the meeting has the required context.
 
 ## Related articles
 
-- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
-- [Turn post-call drafts on or off](../drafts-email/turn-post-call-drafts-on-or-off)
-- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Meeting filter: what sales-only processing means](./meeting-filter-what-sales-only-processing-means)
+- [Push notes or meetings to automations](./push-notes-or-meetings-to-automations)
+- [Using multiple notetakers with Ergo](./using-multiple-notetakers-with-ergo)
+- [Failed drafts retry report](../drafts-email/failed-drafts-retry-report)

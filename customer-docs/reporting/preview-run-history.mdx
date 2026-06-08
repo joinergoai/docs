@@ -1,30 +1,59 @@
 ---
 title: "Preview/run history"
-description: "Use preview/run history to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Preview/run history","Reporting","Ergo docs"]
+description: "Use Reporting email run history to review preview runs, sends, statuses, failure stages, and delivery details."
+keywords: ["Reporting run history", "Preview run", "Test run", "Reporting email status", "Failure stage"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Run history shows what happened when a Reporting email cadence tried to generate or send a report.
 
+## Open run history
 
-## Use this workflow
+1. Open **Reporting**.
+2. Select **Email Cadences**.
+3. Choose the cadence.
+4. Open the run history or a recent run.
 
-- Open the reporting cadence or scheduled report.
-- Preview the next output.
-- Review run history for successful and failed sends.
-- Update filters, recipients, or integration connections when failures appear.
+The run detail drawer shows lifecycle timestamps, run status, trigger, mode, cadence snapshot, selected fields, generated output, chart results, and email delivery details when available.
 
-## Common issues
+## Run statuses
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+Runs can be:
+
+- Queued
+- Running
+- Succeeded
+- Failed
+- Skipped
+
+Active runs are refreshed periodically in the cadence list. A run may be queued or running before the final status is known.
+
+## Triggers and modes
+
+- **Scheduled**: created by the cadence schedule.
+- **Manual test**: queued from a test run.
+- **Manual send**: queued from send now.
+- **Preview mode**: renders the report without normal scheduled delivery.
+- **Send mode**: prepares and sends to recipients when the run succeeds.
+
+## Failure stages
+
+Failure details may identify a stage such as preflight, queue, agent analysis, chart data, chart render, email render, email send, or persistence. Use the stage to decide whether to adjust the cadence, check source data, retry later, or contact support.
+
+## Diagnose missing output
+
+- Confirm the cadence is enabled if you expected a scheduled run.
+- Check whether the latest run is still queued or running.
+- Review selected fields or auto-selected chart fields.
+- Check recipient count and email result.
+- If analysis failed, simplify instructions or verify the selected fields have enough recent data.
+- If chart rendering or email sending failed, retry after checking for known platform issues.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Reporting email cadences](./reporting-email-cadences)
+- [Custom reporting fields](./custom-reporting-fields)
+- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

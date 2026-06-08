@@ -1,30 +1,52 @@
 ---
 title: "Failed drafts retry/report"
-description: "Use failed drafts retry/report for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Failed drafts retry/report","Drafts, email, and templates","Ergo docs"]
+description: "Review failed drafts, retry when the cause is fixed, or report failures with useful context."
+keywords: ["Failed drafts retry/report", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+The Errors queue is for drafts or send attempts that need attention before they can be trusted.
 
+## Who can use this
 
-## Use this workflow
+- Users retrying failed draft sends.
+- Admins and RevOps teams investigating recurring draft failures.
 
-- Open the failed draft alert or draft queue.
-- Check whether email is connected and grants are valid.
-- Retry the draft when the cause is resolved.
-- Report the failed draft if retry does not work.
+## Before you start
+
+- Read the failure message shown in Ergo.
+- Check email access, recipient fields, subject, body, attachments, and thread choice.
+- Fix the underlying issue before retrying.
+
+## Steps
+
+- Open **Drafts**.
+- Go to the failed/error queue if it is visible.
+- Open the failed item and review the error details.
+- Fix missing or invalid draft fields.
+- Retry the action when the cause is clear and corrected.
+- Report the issue with the draft ID, user, time, provider, and failure message if the retry fails again.
+
+## What to expect
+
+- Failure causes vary. Do not treat any public list as exhaustive.
+- Retry may send the same draft, regenerate parts of it, or rerun a failed workflow depending on the failure type.
+- A retry can fail again if the provider grant, validation issue, or source data problem remains.
+- Some failures require admin or support intervention.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Email grant is expired.
+- Recipient, subject, body, or sender is invalid.
+- Attachment or inline image limits are exceeded.
+- The selected thread cannot be used for the message.
+- The draft source data is incomplete or unavailable.
 
 ## Related articles
 
+- [Drafts and email](./index)
+- [Send/schedule/unschedule/undo](./send-schedule-unschedule-undo)
+- [Attachments, images, and links](./attachments-images-and-links)
 - [Draft send failures](../troubleshooting/draft-send-failures)
-- [Turn post-call drafts on or off](./turn-post-call-drafts-on-or-off)
-- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)

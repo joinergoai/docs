@@ -1,30 +1,38 @@
 ---
-title: "Document scopes/status/retry/delete/download"
-description: "Use document scopes/status/retry/delete/download to manage document context, generated docs, sharing, and deal links."
-keywords: ["Document scopes/status/retry/delete/download","Knowledge base and generated docs","Ergo docs"]
+title: "Document status, retry, delete, and download"
+description: "Understand knowledge base document states and the actions available for failed, indexed, and stored files."
+keywords: ["document status", "retry document", "delete document", "download document"]
 ---
-
 
 ![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
 
+Use document status to decide whether a knowledge base file is ready, retryable, downloadable, or safe to delete.
 
+## Status values
 
-## Use this workflow
+- **Pending**: Ergo created the document record and is still indexing the extracted text.
+- **Indexed**: the document was indexed and can be used as knowledge base context.
+- **Failed**: indexing failed after text extraction or ingestion.
 
-- Open the document record.
-- Review scope, processing status, and linked objects.
-- Retry processing or download when available.
-- Delete only when the document should no longer be used as context.
+## Retry
 
-## Common issues
+- Retry is available for failed documents.
+- Retry uses the extracted text saved from the original upload.
+- Retry is not available when the document is not failed or when no extracted text is available.
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+## Delete
+
+- Delete removes the document record after cleanup.
+- If indexed chunks exist, Ergo attempts to remove them before deleting the MongoDB record.
+- If an original file was stored, Ergo also cleans up the stored file.
+
+## Download
+
+- Download is available only when the document has a stored file.
+- The backend exposes downloads through the document download route and can return inline or attachment disposition.
+- If a document has no downloadable file, the route returns that state instead of inventing a file.
 
 ## Related articles
 
-- [Knowledge base and documents](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Upload knowledge base documents](./upload-user-org-knowledge-base-docs)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

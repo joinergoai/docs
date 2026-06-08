@@ -1,30 +1,50 @@
 ---
 title: "Desktop performance requirements and current limitations"
-description: "Set up and use Ergo Desktop for desktop performance requirements and current limitations."
-keywords: ["Desktop performance requirements and current limitations","Desktop","Ergo docs"]
+description: "Set expectations for Desktop recording reliability, upload limits, live transcript dependencies, and duplicate-source behavior."
+keywords: ["Desktop performance requirements and current limitations", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page to understand what can affect Ergo Desktop capture, upload, and processing reliability.
 
+## Who can use this
 
-## Use this workflow
+- Desktop users preparing for important calls.
+- Admins and operators setting rollout expectations.
 
-- Review supported meeting and recording workflows before relying on desktop capture.
-- Keep Ergo Desktop open while meetings are running.
-- Use a stable network connection for upload.
-- Contact support if performance issues repeat after updating and checking permissions.
+## Before you start
+
+- Confirm Desktop access, sign-in, permissions, and network connectivity.
+- Use a supported Mac device and the approved Ergo Desktop download path.
+- Run a test recording on the same machine and meeting setup you plan to use.
+- Close unnecessary resource-heavy apps before recording, especially during screen sharing.
+- Avoid running multiple notetaker sources unless your team has tested dedupe behavior.
+
+## Requirements and limits
+
+- Desktop download access is feature-gated.
+- Desktop recordings require a successful upload session and backend processing.
+- The backend rate-limits successful desktop upload creation to protect the service.
+- Live transcript depends on temporary transcription credentials, audio capture, and network availability.
+- Very short or incomplete recordings may be skipped instead of becoming normal processed meetings.
+
+## What to expect
+
+- Local recording can be more private than a cloud bot because no bot joins the call, but it depends more heavily on the user's machine, permissions, and network.
+- Processing state can move through recording, uploading, processing, completed, failed, or skipped.
+- Failed desktop recordings may be retryable only when the required upload and recording identifiers are present.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- CPU, memory, screen-sharing, audio-device, or network pressure affects capture quality.
+- Upload succeeds but processing later fails.
+- The recording is too short to produce useful transcript or meeting output.
+- Another notetaker source produced a duplicate meeting.
 
 ## Related articles
 
 - [Desktop](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Silent desktop recording](./silent-desktop-recording)
+- [Live transcript and mute controls](./live-transcript-and-mute-controls)
+- [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)

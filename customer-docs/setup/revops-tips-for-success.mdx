@@ -1,47 +1,62 @@
 ---
 title: "RevOps tips for success"
-description: "Roll out Ergo successfully by setting stable CRM, field mapping, pipeline, notetaker, grading, reporting, and access defaults before inviting users broadly."
-keywords: ["RevOps tips for success","Onboarding","Ergo docs"]
+description: "Use RevOps tips to keep Ergo rollout, CRM writeback, reporting, and AI outputs grounded in clean sources."
+keywords: ["RevOps tips for success", "Setup", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing field mapping, pipeline stages, and CRM setup areas for admins.](../images/product-field-mapping.png)
 
+Use these tips after the RevOps setup checklist is assigned. The goal is to prevent rollout issues by keeping CRM mappings, source permissions, meeting capture, reporting, and AI review standards aligned before users depend on Ergo.
 
-## Who is this for?
+## Who can use this
 
-- For RevOps owners, sales operations leaders, GTM systems owners, founders acting as RevOps, and super admins making Ergo reliable before users depend on it.
-- Requires CRM, Google Workspace or Microsoft 365, Notetaker.
+- Admins and super admins who own shared setup.
+- RevOps, sales operations, or GTM operations teammates responsible for CRM data, fields, stages, reporting, and adoption.
+- Delegated operators who support users from RevOps-approved settings.
 
 ## Before you start
 
-- Use this after or during the RevOps setup flow.
-- Have one owner for CRM, one owner for call grading and reporting, one owner for user rollout, and one owner for support/adoption follow-up.
-- Keep the first rollout narrow enough to test one meeting, one draft, one CRM update, and one report.
+- Choose the production CRM or customer source of truth before broad rollout.
+- Confirm the connected CRM account can read and update the objects and fields Ergo should use.
+- Decide which workflows are in scope for the first pilot: meeting capture, CRM updates, drafts, Slack notifications, reporting, call grading, or backfills.
+- Keep future or experimental automation work separate from the current customer-facing rollout plan.
 
+## Tips
 
-## Tips for success
+- Decide centrally before inviting broadly. Set CRM connection, field mapping, pipeline stages, templates, notetaker defaults, reporting defaults, access rules, and required collaboration tools before users start personal setup.
+- Use real production context for the pilot. Ergo output quality depends on real CRM records, real calendar events, real pipeline stages, real communication history, and the correct account or deal match.
+- Treat Field Mapping as a prerequisite. If deal, contact, company, owner, property, pipeline, or stage mapping is incomplete, CRM updates and reports can look unreliable even when meetings and drafts are working.
+- Review stage controls with sales leadership. Confirm which stages Ergo should read, update, or leave alone before enabling broad CRM writeback.
+- Keep the first pilot small. Test one setup owner, one operator, one AE, one CSM, one manager, one customer meeting, one draft, one CRM update, and one reporting view before rolling out to the full team.
+- Use a scoped backfill. Start with a small historical sample and the fields that matter most before broad backfill. Document fields that should remain manual or need current data only.
+- Review AI outputs before external use or CRM writeback. Check names, dates, commitments, owners, links, prices, next steps, source meetings, and mapped fields.
+- Create a first-week feedback loop. Ask users to report missing meetings, wrong deal matches, unexpected drafts, duplicate drafts, access issues, CRM writeback problems, and reporting gaps with the meeting, deal, report, or source link.
+- Measure adoption from workflows, not logins. Useful signals include admitted notetakers, processed meetings, reviewed drafts, corrected CRM context, mapped fields, reporting views, and managers using call evidence.
 
-- **Decide centrally before inviting broadly.** Users get value faster when CRM, stages, fields, templates, notetaker behavior, reporting defaults, and access rules are set before they sign in.
-- **Use production data for the real rollout.** Ergo's AI, CRM updates, draft quality, and reporting depend on real CRM records, real calendar events, real pipeline stages, and real communication history.
-- **Treat field mapping as a prerequisite.** If properties, permissions, or stages are incomplete, downstream CRM updates and reporting will look unreliable even when the notetaker and drafts work.
-- **Define grading before managers use it.** Work with sales leadership to create a rubric that matches the coaching motion, qualification process, and deal review habits. If the score feels wrong, review the rubric criteria before dismissing the grade.
-- **Lock stages that automation should not move.** Closed Won, Closed Lost, renewal-complete, and other final states should be protected when your process requires it.
-- **Keep the first pilot small.** Test one RevOps owner, one operator, one AE, one CSM, one sales manager, one customer meeting, one draft, one CRM update, one Slack notification, one graded call, and one reporting dashboard before rolling out to the full team.
-- **Create a support loop for the first week.** Ask users to report missing meetings, wrong deal matching, unexpected drafts, access issues, and CRM writeback problems with the meeting or deal link.
-- **Measure adoption from workflows, not logins.** Good rollout signs include admitted notetakers, reviewed drafts, corrected CRM context, useful Slack briefs, managers using reports, and coaching conversations grounded in call evidence.
+## What to expect
+
+- RevOps choices affect downstream Meetings, Deals, Drafts, Reporting, Search, and CRM sync behavior.
+- Some issues are source-quality problems rather than product failures. Fix the CRM record, field mapping, stage setup, permission, meeting source, or notetaker setup before editing every generated output by hand.
+- Automation, task/note sync, audit trails, and KPI dashboards can be feature-dependent. Do not treat a planned or gated workflow as available unless it is visible in your workspace and confirmed by your admin or Ergo support.
 
 ## Common issues
 
 - Users are invited before CRM, templates, notetaker behavior, reporting defaults, or access rules are ready.
 - The pilot uses sandbox or synthetic records, so AI outputs and reports do not reflect real workflows.
-- Field mapping and stage controls are skipped even though CRM updates depend on them.
-- Too many teams are rolled out before one meeting, draft, CRM update, Slack notification, and report are tested.
-- No one owns the first-week feedback loop for missing meetings, wrong context, or draft quality.
+- Field mapping, property permissions, pipeline stages, or stage controls are skipped even though CRM updates depend on them.
+- Broad backfills are attempted before one historical sample is checked.
+- Multiple notetaker sources create duplicate meeting context or draft confusion.
+- No one owns the first-week loop for missing meetings, wrong context, access issues, or draft quality.
 
 ## Related articles
 
 - [RevOps setup for Ergo rollout](./revops-setup-for-ergo-rollout)
-- [CRM properties setup](./crm-properties-setup)
-- [Pipeline stages](./pipeline-stages)
-- [Call grading rubrics](../reporting/call-grading-rubrics)
+- [Connect your CRM](./connect-your-crm)
+- [Field Mapping overview](../field-mapping/field-mapping-overview)
+- [Stage controls](../field-mapping/stage-controls)
+- [Backfill CRM fields from historical meetings](../field-mapping/backfill-crm-fields-from-historical-meetings)
+- [Notetaker setup](./notetaker-setup)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Duplicate drafts from multiple notetakers](../troubleshooting/duplicate-drafts-from-multiple-notetakers)
+- [Reporting defaults](./reporting-defaults)

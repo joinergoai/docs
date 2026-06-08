@@ -1,34 +1,122 @@
 ---
 title: "Notetaker setup"
-description: "Choose and configure the notetaker source that will capture meetings for summaries, transcripts, and follow-up workflows."
-keywords: ["Notetaker setup","Onboarding","Ergo docs"]
+description: "Choose and test the meeting capture source that feeds Ergo transcripts, summaries, drafts, CRM updates, and reporting."
+keywords: ["Notetaker setup", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use this page to choose the meeting capture source Ergo should use for calls. The notetaker is the source for meeting transcripts, summaries, action items, CRM context, follow-up drafts, reporting, and later AI search.
+
+## Who can use this
+
+- Standard users and admins configure the notetaker source for their own meetings.
+- Super admins can manage org-level Ergo Notetaker naming and image settings when those controls are available.
+- Spectators may see a shorter notetaker setup path and should follow the setup scope assigned by an admin.
+- Teams that already use another notetaker should decide whether Ergo should use the built-in bot, Ergo Desktop, Granola, or another supported source before rollout.
 
 ## Before you start
 
-- Confirm Ergo Notetaker, Desktop Notetaker, external notetaker is connected or available.
+- Connect the user's Google or Microsoft calendar before enabling the built-in Ergo Notetaker.
+- Decide whether the meeting should use a visible meeting bot, local desktop recording, or an existing external notetaker source.
+- Choose a notetaker name that meeting hosts and attendees will recognize in the waiting room.
+- Review your team's recording, consent, and disclosure policy before sending any notetaker into customer calls.
+- Avoid connecting multiple third-party notetakers for the same calls unless your setup owner has tested the duplicate-output behavior.
 
+## Choose a capture source
 
-## Setup steps
+### Ergo Notetaker
 
-- Choose the notetaker source your workspace will use.
-- Connect calendar first so Ergo can detect upcoming meetings.
-- Confirm which meetings Ergo should join automatically.
-- Use Add Bot to Meeting when you need Ergo to join an external link manually.
+Use **Ergo Notetaker** when you want Ergo to join scheduled calendar meetings as a visible meeting participant.
+
+- Requires a connected Google or Microsoft calendar.
+- Uses the notetaker name shown in setup when the bot appears in the meeting.
+- Can use an org-level image when configured by someone with access.
+- Can send post-call summary emails, and can include a recording/transcript link when enabled.
+- Appears in upcoming-meeting controls so users can schedule, cancel, or check status for specific meetings.
+
+### Ergo Desktop Notetaker
+
+Use **Ergo Desktop Notetaker** when the user should record locally from the desktop app and no meeting bot should join the call.
+
+- Requires the Ergo Desktop app.
+- Uses local desktop capture instead of a visible meeting participant.
+- Has its own connection and recording controls.
+- May be better for bot-sensitive meetings, but should be tested with the user's meeting platform, permissions, and normal workflow before relying on it.
+
+### Supported external notetakers
+
+Use an external notetaker source when your team already captures calls in another supported system and wants Ergo to ingest that meeting data.
+
+- Connect the source shown in **Integrations**.
+- Follow the source-specific setup method shown in Ergo, such as OAuth, API key, webhook, token, or setup instructions.
+- Confirm whether that source sends transcripts, recordings, action items, timestamps, or only some of those outputs.
+- Check for duplicate drafts, duplicate meeting records, or missing recording links before rolling the source out broadly.
+
+## Set up Ergo Notetaker
+
+1. Open **Integrations** or the notetaker step in onboarding.
+2. Confirm Google or Microsoft calendar is connected.
+3. Select **Ergo Notetaker**.
+4. Set the notetaker name that should appear in meetings.
+5. Choose the transcription language option shown in the setup modal.
+6. Connect the notetaker.
+7. Review summary email settings, including whether summary emails should be sent and whether the email should include recording and transcript access.
+8. Check the dashboard or **Meetings** page for upcoming meetings that should have a scheduled notetaker.
+
+Before an important external meeting, tell the host to admit the Ergo Notetaker if the meeting platform places it in a waiting room.
+
+## Set up Ergo Desktop Notetaker
+
+1. Open **Integrations** and find **Ergo Desktop Notetaker**.
+2. Download and install the Ergo Desktop app if it is not already installed.
+3. Connect the desktop notetaker from the desktop app or from the integration controls shown in Ergo.
+4. Grant the operating-system permissions the app requests for recording.
+5. Start with one controlled meeting and confirm the recording appears in Ergo after processing.
+6. If desktop auto-recording is enabled for your workspace, test that detected meetings behave the way the user expects.
+
+Desktop setup can affect scheduled meeting-bot behavior. After switching capture paths, recheck upcoming meetings so the user knows which source will capture each call.
+
+## Test the first meeting
+
+- Use a real calendar event with the current meeting link.
+- Confirm the meeting appears in the dashboard or **Meetings** page.
+- If using the visible bot, confirm the host can admit it from the waiting room.
+- If using desktop recording, confirm the app is running and has the needed permissions.
+- After the meeting, check recording, transcript, summary, action items, and any downstream draft or CRM workflow separately.
+- If the meeting is live or ad hoc, use **Add Bot to Meeting** or the current manual capture path instead of waiting for calendar sync.
+
+## What to expect
+
+- Calendar state, bot state, desktop recording state, and processing state are separate. A meeting can be scheduled while transcript, summary, drafts, or CRM updates are still pending.
+- A changed or rescheduled meeting can need a fresh link check, a specific occurrence check, or manual dispatch.
+- If multiple teammates from the same org attend a meeting, Ergo tries to prevent duplicate capture for supported paths, but you should still test your team's source mix before rollout.
+- Third-party sources can differ in what they send to Ergo. Do not assume every source provides the same recording, timestamp, or transcript behavior as Ergo Notetaker.
+- Turning on a notetaker does not by itself complete CRM updates or drafts. CRM, email, templates, meeting eligibility, and source processing still need to be configured.
 
 ## Common issues
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- **Connect is disabled for Ergo Notetaker:** Connect Google or Microsoft calendar first.
+- **The bot did not join:** Check the specific calendar event, current meeting link, notetaker status, waiting-room admission, and whether the user canceled that occurrence.
+- **The host removed or denied the bot:** Use a desktop recording path when a visible bot is not appropriate, or ask the host to admit the bot before the meeting starts.
+- **A rescheduled meeting was missed:** Recheck the exact occurrence and meeting URL, then use **Add Bot to Meeting** for near-term or live meetings.
+- **Duplicate drafts or records appear:** Review whether Ergo Notetaker, Ergo Desktop, Granola, or another external notetaker captured the same call.
+- **The recording appears but insights are missing:** Check processing state and source eligibility before assuming the recording failed.
+- **A third-party source is connected but recording links are missing:** Confirm what that source sends to Ergo and whether recording links are part of the integration.
 
 ## Related articles
 
+- [Setup](./index)
+- [Collaboration tools setup](./collaboration-tools-setup)
+- [User sync](./user-sync)
+- [Connect email and calendar](./connect-email-and-calendar)
 - [Ergo Notetaker](../integrations/ergo-notetaker)
+- [Ergo Desktop Notetaker](../integrations/ergo-desktop-notetaker)
+- [Dashboard/upcoming meetings](../meetings/dashboard-upcoming-meetings)
 - [Schedule or cancel the notetaker](../meetings/schedule-or-cancel-the-notetaker)
+- [Add the bot to a live or ad hoc meeting](../meetings/add-the-bot-to-a-live-or-ad-hoc-meeting)
 - [Notetaker waiting-room admission guide](../meetings/notetaker-waiting-room-admission-guide)
+- [One bot per org: shared notetaking behavior](../meetings/one-bot-per-org-shared-notetaking-behavior)
+- [What happens when a meeting is rescheduled](../meetings/what-happens-when-a-meeting-is-rescheduled)
+- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Recording privacy basics](../start-here/recording-privacy-basics)

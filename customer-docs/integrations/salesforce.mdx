@@ -1,35 +1,51 @@
 ---
 title: "Salesforce"
-description: "Connect and maintain Salesforce with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Salesforce","Integrations","Ergo docs"]
+description: "Connect Salesforce to use CRM records, fields, owners, and pipeline context in Ergo."
+keywords: ["Salesforce", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Salesforce when it is your CRM source of truth for deals, accounts, contacts, fields, owners, and pipeline stages.
+
+## Who can use this
+
+- Admins and RevOps teams configuring the CRM connection.
+- Operators who need to confirm Salesforce permissions before enabling field mapping or CRM updates.
 
 ## Before you start
 
-- Have access to the Salesforce account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Use a Salesforce account that has access to the objects, fields, owners, and pipeline data Ergo should use.
+- Confirm required Salesforce validation rules and stage gates before enabling automated updates.
+- Finish field mapping before relying on CRM writebacks or stage movement.
+- Treat historical backfills as reviewable. Live data after setup is usually cleaner than old meetings processed before configuration was complete.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Salesforce**.
+- Start the OAuth flow and approve the requested Salesforce access.
+- Return to Ergo and confirm Salesforce appears connected.
+- Review CRM properties, pipeline stages, and property permissions with your admin.
+- Run a small verification workflow before enabling broad CRM updates or backfill.
 
-- Connect Salesforce from Integrations using an account with the right object and field permissions.
-- Map CRM properties before expecting updates to write back.
-- Confirm pipeline and stage settings match the Salesforce sales process.
-- Reconnect Salesforce if grants expire or sync behavior changes.
+## What to expect
+
+- Ergo can use Salesforce data for deal/account context, field mapping, CRM matching, and CRM update workflows.
+- Salesforce validation rules, required fields, object permissions, and field-level permissions can block specific writes. Ergo should not be described as overriding Salesforce controls.
+- Recording links and meeting notes may be written through configured CRM automation paths, but exact destinations depend on your field mapping and Salesforce configuration.
+- Aggregated analysis and AI summaries remain in Ergo unless a specific field or activity writeback has been configured.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- OAuth completed with an account that cannot access the target object, owner, or field.
+- Salesforce validation rules block a stage or field update.
+- Picklist values, internal IDs, or field types changed after field mapping was configured.
+- A backfill created noisy records that need review before teams rely on them.
 
 ## Related articles
 
-- [Connect your CRM](../setup/connect-your-crm)
-- [CRM properties](../field-mapping/crm-properties)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Integrations](./index)
+- [HubSpot](./hubspot)
+- [Field mapping overview](../field-mapping/field-mapping-overview)
+- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

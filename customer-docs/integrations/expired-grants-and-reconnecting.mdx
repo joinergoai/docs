@@ -1,35 +1,48 @@
 ---
 title: "Expired grants and reconnecting"
-description: "Connect and maintain Expired grants and reconnecting with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Expired grants and reconnecting","Integrations","Ergo docs"]
+description: "Reconnect Google Workspace or Microsoft 365 when an email/calendar grant expires or required scopes are revoked."
+keywords: ["Expired grants and reconnecting", "Integrations", "Ergo docs"]
 ---
-
 
 ![Flow diagram showing how an expired grant is reconnected.](../images/integration-reconnect-flow.svg)
 
+Use this page when Ergo says an email/calendar connection has expired or needs to be reconnected.
+
+## Who can use this
+
+- Users reconnecting their own Google Workspace or Microsoft 365 account.
+- Admins and operators helping users restore email or calendar workflows.
 
 ## Before you start
 
-- Have access to the Any connected integration account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Know which provider is affected: Google Workspace or Microsoft 365.
+- Reconnect with the same account that originally powered the workflow.
+- Approve all requested scopes during the reconnect flow.
 
+## Steps
 
-## Setup steps
+- Open **Integrations**.
+- Find the provider marked expired or disconnected.
+- Start the reconnect flow and complete OAuth.
+- Confirm the expired state clears.
+- Test the affected workflow, such as upcoming meetings, drafts, or calendar context.
 
-- Open Integrations and find the disconnected or expired integration.
-- Reconnect with the same account when possible.
-- Approve every required scope during the reconnect flow.
-- Re-test the workflow that was blocked, such as meeting detection, draft sync, or Slack delivery.
+## What to expect
+
+- Expired-grant handling is for Google Workspace and Microsoft 365 email/calendar providers.
+- Reconnecting restores access only for scopes the user approves and the provider allows.
+- Some queued or historical workflows may need a manual retry after reconnect.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The user reconnected a different account.
+- The provider admin policy blocks one of the requested scopes.
+- The workflow was already skipped or failed before reconnect and needs review.
 
 ## Related articles
 
+- [Integrations](./index)
+- [Google Workspace](./google-workspace)
+- [Microsoft 365](./microsoft-365)
 - [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
-- [Connect email and calendar](../setup/connect-email-and-calendar)
-- [Slack](./slack)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

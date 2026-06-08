@@ -1,20 +1,22 @@
 ---
 title: "Integrations"
-description: "Connect and maintain CRM, email, calendar, Slack, Pylon, and notetaker integrations."
+description: "Use this section to connect CRM, workspace, notetaker, dialer, support, and external-agent integrations."
 icon: "plug"
 ---
 
-Connect and maintain CRM, email, calendar, Slack, Pylon, and notetaker integrations.
+Use this section to connect the external systems that feed Ergo with CRM records, email and calendar context, meeting recordings, Slack context, dialer calls, support handoffs, and external agent access.
 
 ## Who this section is for
 
-- RevOps, operators, sales operations, support operations, admins, and users connecting personal sources like email or calendar.
+- Admins and RevOps teams choosing workspace-level sources.
+- Users connecting personal sources such as email, calendar, Slack, or a notetaker.
 
 ## Before you start
 
+- Know whether the integration is personal, workspace-level, or admin-only.
 - Use the account your team expects Ergo to read from or write through.
-- Approve every required scope during connection or reconnect.
-- Check channel, calendar, queue, object, and field permissions when a connected source looks incomplete.
+- Approve every required scope during OAuth and keep API keys, webhook secrets, and signing keys current.
+- Verify the downstream workflow after connecting. A connected card does not mean every CRM object, Slack channel, calendar event, or recording is accessible.
 
 ## Articles
 
@@ -48,4 +50,7 @@ Connect and maintain CRM, email, calendar, Slack, Pylon, and notetaker integrati
 
 ## Common issue path
 
-If you are trying to fix something specific, start with the article closest to the symptom. If you are not sure where the problem lives, use [Troubleshooting](../troubleshooting/index).
+- For expired Google or Microsoft grants, start with [Expired grants and reconnecting](./expired-grants-and-reconnecting).
+- For CRM object or field issues, check the CRM integration page and [Field mapping](../field-mapping/index).
+- For notetaker overlap, compare the bot, desktop, and third-party notetaker pages before enabling multiple sources.
+- If the symptom crosses sources or permissions, use [Troubleshooting](../troubleshooting/index).

@@ -1,36 +1,44 @@
 ---
 title: "Beeper"
-description: "Connect and maintain Beeper with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Beeper","Integrations","Ergo docs"]
+description: "Connect Beeper with a token when your team uses Beeper messaging context in Ergo."
+keywords: ["Beeper", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page to connect Beeper when the Beeper integration is enabled for your workspace.
+
+## Who can use this
+
+- Admins and operators enabling messaging context for a workspace.
+- Users asked to provide a Beeper token for supported workflows.
 
 ## Before you start
 
-- Confirm this feature is enabled for your workspace.
-- Have access to the Beeper account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Confirm the Beeper integration is enabled for your workspace.
+- Use the token source your admin provided.
+- Treat Beeper as a configured messaging source, not as a replacement for Slack or email/calendar connections.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Beeper**.
+- Paste the Beeper token.
+- Confirm the card shows connected.
+- Test the workflow your team expects Beeper to power.
 
-- Confirm Beeper is enabled for your workspace.
-- Connect Beeper from Integrations when your team uses it for customer communication.
-- Verify which customer conversations Ergo should use.
-- Test a small workflow before relying on Beeper context.
+## What to expect
+
+- Beeper is token-based and feature-gated.
+- Downstream behavior depends on the workflow enabled for your team and the token's access.
 
 ## Common issues
 
-- The integration grant expired or was revoked.
-- The reconnect was completed with a different account than expected.
-- Required scopes were not approved.
-- The connected service changed permissions or channel/calendar access.
+- The integration is not enabled for the workspace.
+- The token is expired, copied incorrectly, or lacks the expected access.
+- The team expected Slack or email behavior from a Beeper-only connection.
 
 ## Related articles
 
 - [Integrations](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Slack](./slack)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

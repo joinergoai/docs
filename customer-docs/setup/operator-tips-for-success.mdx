@@ -1,45 +1,64 @@
 ---
 title: "Operator tips for success"
-description: "Support rollout without overriding RevOps-owned decisions by syncing approved settings, helping users finish setup, and escalating permission-bound changes."
-keywords: ["Operator tips for success","Onboarding","Ergo docs"]
+description: "Use operator tips to support users from approved admin settings without changing sources you do not own."
+keywords: ["Operator tips for success", "Setup", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing admin controls for delegated setup and user support.](../images/product-admin-dashboard.png)
 
+Use these tips when you are helping users complete setup after RevOps or an admin has chosen the approved CRM, field mapping, templates, access rules, and notetaker defaults. Operator is a setup persona, not a separate Ergo permission role.
 
-## Who is this for?
+## Who can use this
 
-- For operators, enablement teammates, RevOps teammates, delegated admins, and managers who help users complete setup and support day-to-day adoption.
-- Requires Google Workspace or Microsoft 365, CRM, Notetaker.
+- Delegated operators supporting user rollout.
+- Admins, super admins, RevOps owners, or GTM operations teammates who answer setup questions.
+- Managers helping users verify meetings, drafts, reports, or CRM context without owning the source configuration.
 
 ## Before you start
 
-- Use this after your own setup is complete and you are helping others finish theirs.
-- Keep a short list of what you can change directly versus what needs RevOps or super-admin approval.
-- Know where users should report missing meetings, expired grants, wrong team access, or draft issues.
+- Know which admin account or source configuration is approved for Sync with Admin.
+- Confirm what you are allowed to change: teams, users, templates, access, reporting, notetaker settings, CRM fields, or only personal setup guidance.
+- Separate shared settings from personal grants. Users can inherit approved configuration, but each user still connects their own email, calendar, notetaker, desktop, or collaboration source when required.
+- Do not reconnect CRM sources, redefine fields, change pipeline stages, or push settings to users unless the RevOps or admin owner has approved the change.
 
+## Tips
 
-## Tips for success
+- Triage in setup order. Check the user's Ergo account, team, role, spectator status, reporting access, and Sync with Admin status before changing integrations.
+- Keep inherited settings separate from personal setup. Sync with Admin can align shared configuration, but it does not replace a user's personal Google Workspace or Microsoft 365 authorization.
+- Review email behavior after the email/calendar connection. Settings such as **Email Analysis**, **Post-Call Followup Emails**, and **Surfacing** can affect what users expect to see.
+- Check notetaker setup before blaming downstream outputs. Confirm the calendar source, meeting link, meeting host admission, manual Add Bot needs, and duplicate notetaker sources.
+- Check templates before troubleshooting draft quality. Generic or missing templates can make otherwise valid drafts feel off-brand or incomplete.
+- Check Field Mapping and pipeline stages before troubleshooting CRM updates. Missing properties, permissions, stages, or stage drift can block otherwise healthy meeting and draft workflows.
+- Confirm reporting grants before sending someone to Reporting. Reporting may not appear or may show limited data until access and dashboard grants are configured.
+- Sync to users only after the source is approved. Spreading incomplete templates, stage settings, domains, or advanced settings creates cleanup for every recipient.
+- Ask for specific examples when escalating: the affected user, source account, meeting or deal link, expected output, and approximate time window.
 
-- **Know the source of truth.** When you sync or push settings, use only RevOps-approved CRM, stage, property, template, domain, grading, reporting, and advanced settings.
-- **Do not repeat RevOps setup unless you own it.** Operators should usually inherit CRM configuration instead of reconnecting or redefining fields independently.
-- **Triage users by setup layer.** First check workspace/team, then role/access, then email/calendar grants, then notetaker status, then templates/draft settings, then CRM mapping.
-- **Keep personal grants separate from admin sync.** A user can inherit team settings, but each person still connects their own Google Workspace or Microsoft 365 account.
-- **Escalate permission-bound issues quickly.** CRM connection, org-wide Pylon, reporting defaults, grading rubrics, pricing configuration, and some access changes may require RevOps or super-admin help.
-- **Sync to users after confirming the source.** Spreading incomplete templates, stage settings, or advanced settings creates avoidable cleanup for every user.
+## What to expect
+
+- Operators can only troubleshoot within their actual Ergo permissions.
+- Users may complete onboarding successfully but still lack a feature, report, draft, or CRM output because a source, grant, mapping, template, or processing step is missing.
+- Missing results are easier to isolate when you check one layer at a time: account and role, inherited settings, personal grants, notetaker, templates, field mapping, reporting access, then filters or processing state.
+- If a user skips a sync or onboarding step, inherited configuration may be incomplete until the relevant setup step is completed.
 
 ## Common issues
 
-- The operator does not know which settings RevOps approved.
-- Users ask the operator to fix issues that require RevOps, admin, or super-admin permission.
-- Personal email/calendar grants are confused with synced admin configuration.
-- Settings are pushed to teams before the source configuration is ready.
-- Support triage starts from the symptom instead of checking workspace, role, grants, notetaker, templates, and CRM mapping in order.
+- The user is in the wrong Ergo account, team, role, or spectator state.
+- The user expects inherited settings but has not completed Sync with Admin or personal setup.
+- Email/calendar is connected to the wrong account, disconnected, or missing the settings needed for drafts and source context.
+- The notetaker misses a meeting because the calendar owner, changed link, waiting-room admission, or manual Add Bot step was missed.
+- Drafts are missing or unexpected because draft settings, templates, meeting eligibility, processing state, or duplicate notetaker sources are wrong.
+- CRM updates fail because field mapping, property permissions, pipeline stages, stage controls, or source sync are incomplete.
+- Reporting is hidden or empty because access, dashboard grants, filters, date ranges, or source fields are incomplete.
 
 ## Related articles
 
 - [Operator setup](./operator-setup)
+- [RevOps setup for Ergo rollout](./revops-setup-for-ergo-rollout)
 - [User sync](./user-sync)
-- [Sync CRM/settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Sync CRM settings to team members](../admin/sync-crm-settings-to-team-members)
+- [Connect email and calendar](./connect-email-and-calendar)
+- [Notetaker setup](./notetaker-setup)
+- [Email templates setup](./email-templates-setup)
+- [Field Mapping overview](../field-mapping/field-mapping-overview)
+- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

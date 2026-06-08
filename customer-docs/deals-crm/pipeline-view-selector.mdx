@@ -1,30 +1,46 @@
 ---
 title: "Pipeline/view selector"
-description: "Use pipeline/view selector to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Pipeline/view selector","Deals and CRM workspace","Ergo docs"]
+description: "Use the Deals selector to switch between CRM pipelines and Companies, then choose built-in or saved views without losing track of scope."
+keywords: ["pipeline selector", "Companies view", "saved views", "Ergo View"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use the selector at the top of Deals to choose a CRM pipeline or the **Companies** option. Pipeline selection and view selection are separate: the pipeline or Companies option controls the source scope, while built-in and saved views control filters and layout.
 
+## Who can use this
 
-## Configure it
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open the Deals board.
-- Select the pipeline or saved view you want to inspect.
-- Confirm filters before making bulk decisions.
-- Save or update views when the same slice is used repeatedly.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Use the top selector to choose a CRM pipeline or **Companies**.
+- Use view tabs for **Ergo View**, **Deals**, **This Week**, **Follow-Ups**, reminder-oriented views when enabled, or saved custom views.
+- Switch between kanban and list when you need a different layout for the same scope.
+- Check URL parameters and active filters before sharing a board state.
+
+## What to expect
+
+- Choosing **Companies** switches from deal-pipeline controls to the company board.
+- Built-in views can have stored preferences for board or list layout.
+- Custom views can persist filters, view type, hidden stages, and layout choices.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The selected pipeline does not contain the record.
+- The selector is on **Companies**, not a deal pipeline, or the reverse.
+- A custom view or built-in tab is applying filters you did not expect.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Deals board overview](./deals-board-overview)
+- [Kanban and list views](./kanban-and-list-views)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

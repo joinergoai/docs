@@ -1,30 +1,52 @@
 ---
 title: "Turn post-call drafts on or off"
-description: "Control whether Ergo creates post-call email drafts for users, teams, or eligible meeting types."
-keywords: ["Turn post-call drafts on or off","Drafts, email, and templates","Ergo docs"]
+description: "Enable or disable post-call email draft generation for the right users and teams."
+keywords: ["Turn post-call drafts on or off", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Post-call draft generation depends on workspace configuration, user settings, connected sources, and whether the meeting qualifies for draft creation.
 
+## Who can use this
 
-## Use this workflow
+- Admins and RevOps teams managing rollout.
+- Users checking whether their own post-call drafts should be created.
 
-- Open email or post-call preferences.
-- Choose whether Ergo should create follow-up drafts.
-- Use instructions to guide tone and eligibility.
-- Disable draft creation for users or workflows that should not receive drafts.
+## Before you start
+
+- Connect the user's email account.
+- Connect calendar and the relevant notetaker source.
+- Confirm the user belongs to the team or role that should receive post-call drafts.
+- Decide whether you are changing future draft creation only or also cleaning up existing drafts.
+
+## Steps
+
+- Open the workspace or user settings area where draft generation is configured.
+- Find the post-call email draft setting for the user, team, or workspace.
+- Turn the setting on to create drafts for future qualifying calls.
+- Turn the setting off to stop creating new post-call drafts for that scope.
+- Save the change and test with a future qualifying meeting.
+
+## What to expect
+
+- Changes affect future draft generation. Existing drafts may remain until sent, scheduled, dismissed, expired, or cleaned up.
+- Turning post-call drafts on does not mean every meeting produces a draft.
+- Turning post-call drafts off does not disable templates, signatures, manual compose, or scheduled/sent history.
+- Auto-send is separate from draft creation. Do not treat enabling drafts as enabling auto-send.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- The setting is enabled, but email or calendar access is stale.
+- The meeting did not have enough processed context.
+- The setting is enabled for the wrong user or team.
+- A draft appears from another workflow, such as surfacing or manual compose.
 
 ## Related articles
 
+- [Drafts and email](./index)
 - [Draft email logic: when drafts are created and how to dismiss](./draft-email-logic-when-drafts-are-created-and-how-to-dismiss)
-- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [Auto-send settings](./auto-send-settings)
+- [Email templates setup](../setup/email-templates-setup)
 - [Draft send failures](../troubleshooting/draft-send-failures)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)

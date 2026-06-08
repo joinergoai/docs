@@ -1,30 +1,46 @@
 ---
 title: "Deal qualification"
-description: "Configure deal qualification so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Deal qualification","Field mapping and CRM configuration","Ergo docs"]
+description: "Map qualification fields and stage expectations so AI-assisted updates use current CRM criteria instead of informal judgment."
+keywords: ["deal qualification", "qualification fields", "stage criteria", "CRM fields"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use Deal Qualification when your team expects Ergo to reason about qualification status, stage readiness, or CRM fields tied to qualification. Keep these settings aligned with the CRM and sales process.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review the criteria Ergo should use for qualification.
-- Confirm the CRM fields and meeting context that support qualification.
-- Test with a known qualified and unqualified deal.
-- Adjust criteria when your sales process changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Identify which CRM fields represent qualification.
+- Map those fields in CRM Properties before using them in AI or automation workflows.
+- Align qualification criteria with stage descriptions.
+- Review AI-generated qualification outputs before writing them back to CRM.
+
+## What to expect
+
+- Qualification behavior depends on mapped fields, stage descriptions, and available source context.
+- AI can summarize evidence, but admins should define the fields and criteria.
+- Missing or stale source data can make qualification outputs incomplete.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- Qualification fields were not mapped or are read-only.
+- Stage descriptions conflict with qualification criteria.
+- Reps use informal criteria that are not represented in the CRM.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Advanced CRM toggles](./advanced-crm-toggles)
+- [Backfill CRM fields from historical meetings](./backfill-crm-fields-from-historical-meetings)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

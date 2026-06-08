@@ -1,30 +1,81 @@
 ---
 title: "Spectator management"
-description: "Manage spectator management across teams, members, access, defaults, and organization settings."
-keywords: ["Spectator management","Admin","Ergo docs"]
+description: "Manage spectator seats in Ergo Admin, including provisioning, conversion, access checks, and integration expectations."
+keywords: ["spectator", "view-only", "seat type", "admin"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use spectator seats for people who need visibility into Ergo without full user automation. Spectator management is split across account provisioning, role conversion, meeting access, and reporting access.
 
+## Who can use this
 
-## Configure it
+- Super admins can provision spectator seats and convert users between standard and spectator.
+- Admins can review spectator status in the Admin member table and coordinate access checks.
 
-- Open Admin and find the Spectator area or member list.
-- Add, remove, or convert the spectator.
-- Grant only the meeting or reporting access needed.
-- Review access after team changes.
+## Before you start
+
+- Decide whether you are creating a new spectator or converting an existing standard user.
+- Confirm whether the spectator should be a user spectator or admin spectator.
+- Check whether they need meeting access, reporting access, or only team visibility.
+- Tell converted users that integrations and automation settings may need to be reconnected if they later become standard users again.
+
+## Create a spectator
+
+1. Open **Admin**.
+2. Select **Provision New Account**.
+3. Enter the required user and team details.
+4. Choose **Spectator** as the seat type.
+5. Choose **User** or **Admin** for the role.
+6. Provision the account and have the user complete the limited setup they need.
+
+The Admin table shows spectator users with a **Spectator** badge. Organization overview counts spectator seats separately from core seats.
+
+## Convert an existing user to spectator
+
+1. Open the user's action menu in the Admin member table.
+2. Select **Convert to Spectator**.
+3. Review the confirmation details.
+4. Confirm the conversion.
+
+When a standard user is converted to spectator, Ergo marks the dashboard as spectator, disconnects supported third-party notetakers and Slack, turns off email automation settings, disables Ergo, and disconnects the user's Recall calendar connection when one exists.
+
+Spectators cannot have Ergo enabled while they remain spectators. In the Admin table, the Ergo toggle shows as unavailable for spectator seats.
+
+## Convert a spectator back to standard user
+
+1. Open the spectator's action menu.
+2. Select **Convert to User**.
+3. Confirm the conversion.
+4. Ask the user to reconnect integrations and re-enable any needed settings.
+
+Converting back to standard user changes the seat flag, but it does not automatically restore every integration or automation toggle that was disconnected during spectator conversion.
+
+## Access checks
+
+- Use [Grant meeting/reporting access](./grant-meeting-reporting-access) when a spectator needs specific meeting or reporting visibility.
+- Use an admin spectator role when the person needs admin-level visibility or controls.
+- Do not assume spectator conversion changes historical access for every meeting or report; verify the relevant access grant.
+
+## What to expect
+
+- Spectators are view-oriented seats. They should not be used for users who need Ergo to draft emails, write CRM updates, or run user-level automation.
+- Spectator users appear inactive because active status requires CRM connection, Ergo enabled, and a standard seat.
+- A spectator can still be part of a team and can be managed from the Admin member table.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The user expected full automation.** Convert them to a standard user and have them reconnect integrations.
+- **The Ergo toggle is unavailable.** Ergo cannot be enabled for view-only accounts.
+- **The spectator cannot see the right report or meeting.** Review meeting and reporting access grants separately.
+- **The person needs a different team.** Move the member between teams instead of changing the seat type.
 
 ## Related articles
 
-- [Spectator access](../start-here/spectator-access)
+- [Admin](./index)
+- [Provision accounts](./provision-accounts)
+- [Promote/demote/convert roles](./promote-demote-convert-roles)
+- [Grant meeting/reporting access](./grant-meeting-reporting-access)
+- [Add/remove/move members](./add-remove-move-members)
 - [Roles and permissions](../start-here/roles-and-permissions)
 - [Permission or access denied](../troubleshooting/permission-or-access-denied)

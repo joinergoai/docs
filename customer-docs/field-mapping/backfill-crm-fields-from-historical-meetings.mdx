@@ -1,30 +1,47 @@
 ---
 title: "Backfill CRM fields from historical meetings"
-description: "Configure backfill CRM fields from historical meetings so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Backfill CRM fields from historical meetings","Field mapping and CRM configuration","Ergo docs"]
+description: "Set expectations for historical CRM field backfill after mapping changes, and test narrow samples before broad updates."
+keywords: ["backfill CRM fields", "historical meetings", "field backfill", "mapped fields"]
 ---
-
 
 ![Flow diagram showing options for historical CRM field backfills.](../images/crm-backfill-flow.svg)
 
+Use this page when a newly mapped field should be filled from historical meeting context. Backfill is not the same as normal forward-going CRM automation, and availability depends on source data, field type, source association, and implementation support.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Confirm whether the field needs a live sync or a historical backfill.
-- Review current product support before expecting automatic backfill.
-- Use deal-by-deal review or exported meeting context when native backfill is unavailable.
-- Contact support for high-volume backfill needs or data migration planning.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Decide which mapped fields need historical values.
+- Confirm the source meetings exist, are visible, associated to the right records, and contain enough signal.
+- Confirm the field type and write permission are compatible with backfill.
+- Prefer a small historical sample before broad backfill.
+- Document fields that should remain manual.
+
+## What to expect
+
+- Historical backfill may be limited or handled through project-specific operations rather than a universal self-serve button.
+- Newly mapped fields do not automatically backfill every existing deal.
+- Backfill does not reconstruct full CRM history. Historical emails, Slack activity, dates, stages, amounts, and closed-status fields may have additional limits or require separate review.
+- Backfill output should be reviewed before broad CRM writeback.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- The field was mapped after the relevant meetings were processed.
+- Historical meetings are missing, inaccessible, or not associated with the right record.
+- The CRM field type is not safe for broad automated backfill.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Deal qualification](./deal-qualification)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

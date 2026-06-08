@@ -1,30 +1,48 @@
 ---
 title: "Pipelines"
-description: "Configure pipelines so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Pipelines","Field mapping and CRM configuration","Ergo docs"]
+description: "Sync and manage CRM pipelines and stages so the Deals board, stage classification, and CRM writeback use the right pipeline scope."
+keywords: ["pipelines", "pipeline stages", "CRM stage sync", "CRM pipelines"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use Pipelines when the CRM has one or more deal pipelines and Ergo needs to know which stages belong to which process. Pipeline and stage setup affects the Deals board, matching, classification, and writeback.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Review which CRM pipelines Ergo should use.
-- Select the correct pipeline for each workflow.
-- Confirm stages and defaults before enabling updates.
-- Revisit pipeline settings after CRM changes.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Open **Pipeline Stages** from Field Mapping.
+- Sync CRM pipelines and stages into Ergo.
+- For supported CRMs, use edit mode carefully when creating, renaming, reordering, or deleting stages.
+- Keep pipeline names, IDs, stage order, and descriptions aligned with the CRM.
+- Sync only the pipelines Ergo should use, and document intentionally excluded pipelines for admins.
+
+## What to expect
+
+- Pipeline support depends on the connected CRM.
+- Edit-mode changes can write directly to supported CRMs.
+- Pipeline-stage changes made in the source CRM may require a manual resync before Ergo's configuration reflects them.
+- Pipeline IDs matter; do not rely only on display names when troubleshooting.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A stage exists in CRM but has not been synced into Ergo.
+- Two pipelines have similarly named stages with different IDs.
+- Deleting or renaming stages affects board filters and automation behavior.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Create/sync CRM properties](./create-sync-crm-properties)
+- [Stage definitions and AI descriptions](./stage-definitions-and-ai-descriptions)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

@@ -1,30 +1,54 @@
 ---
 title: "AI template builder"
-description: "Use AI template builder for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["AI template builder","Drafts, email, and templates","Ergo docs"]
+description: "Generate or refine email templates with AI, then review the template before using it in production drafts."
+keywords: ["AI template builder", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+The AI template builder can turn instructions, reference copy, or sent-email examples into a proposed template. Review the result before saving it.
 
+## Who can use this
 
-## Use this workflow
+- Template owners creating first drafts of reusable email templates.
+- Managers adapting successful sent emails into team guidance.
+
+## Before you start
+
+- Decide the use case for the template.
+- Gather safe reference content.
+- Remove private customer details from anything you paste into the builder.
+- Connect email if you want to browse sent emails as examples.
+
+## Steps
 
 - Open the AI template builder.
-- Describe the follow-up scenario and tone.
-- Review the generated template carefully.
-- Save only after confirming variables and wording.
+- Describe the situation the template should cover.
+- Add reference content or choose a sent email example when available.
+- Generate the template.
+- Review the proposed name, description, and content.
+- Give enhancement instructions if the template needs another pass.
+- Save the template only after removing stale, private, or over-specific language.
+
+## What to expect
+
+- The builder can generate a template name, description, and content.
+- It can enhance existing template content with new instructions.
+- Sent-email browsing depends on connected email access.
+- Cleaned message content may remove quoted history or formatting before template generation.
+- AI output can be a useful starting point but still needs human approval.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Reference content includes customer-specific names, private terms, or one-off commitments.
+- The generated description does not clearly tell Ergo when to use the template.
+- The template sounds too generic because the prompt lacks a concrete use case.
+- Sent email examples are unavailable because the email account is disconnected.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Templates overview](./templates-overview)
+- [Create/edit templates](./create-edit-templates)
+- [Sent email browser](./sent-email-browser)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)

@@ -1,30 +1,43 @@
 ---
-title: "Dashboard/upcoming meetings"
-description: "Use the dashboard to check upcoming meetings, notetaker status, and meeting readiness before calls."
-keywords: ["Dashboard/upcoming meetings","Meetings and notes","Ergo docs"]
+title: "Dashboard and upcoming meetings"
+description: "Use the dashboard to check upcoming calendar meetings, notetaker scheduling, live bot status, and meeting capture readiness."
+keywords: ["upcoming meetings", "calendar meetings", "notetaker status", "meeting dashboard"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Use the dashboard when you need to confirm whether Ergo can see an upcoming meeting and whether the notetaker is scheduled to join it.
 
+## Before you start
 
-## Use this workflow
+- Connect your calendar before relying on the upcoming meetings list.
+- Check that the event has a supported meeting link, such as Zoom, Google Meet, or Microsoft Teams.
+- Treat the calendar event, notetaker schedule, live bot status, and completed meeting record as separate states.
 
-- Open the Dashboard to review upcoming meetings.
-- Confirm meetings appear from the connected calendar.
-- Check notetaker status before customer calls.
-- Use the meeting detail page after the meeting is processed.
+## Check an upcoming meeting
 
-## Common issues
+- Open the dashboard or **Meetings**.
+- Choose the calendar you want to inspect if you have more than one connected calendar.
+- Find the event and confirm the time, attendees, meeting link, and notetaker toggle.
+- If the meeting is happening now or starting soon, check whether the bot is joining, waiting, recording, or removable.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What Ergo shows
+
+- Upcoming calendar events are fetched from the connected calendar and refreshed regularly.
+- Scheduled notetakers are checked separately from calendar events, so a calendar meeting can appear even when the notetaker is not scheduled.
+- Live bot state can show joining, waiting room, recording, not recording, removed, or scheduled depending on what Ergo receives from the notetaker service.
+- Pre-call briefings may appear separately from the notetaker state.
+
+## Common reasons a meeting is missing
+
+- The calendar account is disconnected or the grant expired.
+- The selected calendar is not the calendar that owns the event.
+- The meeting has no supported conferencing URL.
+- The meeting was created or changed too close to the start time for the calendar sync to pick it up before the call.
 
 ## Related articles
 
-- [Meetings and notetaker](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
+- [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting)
+- [What happens when a meeting is rescheduled](./what-happens-when-a-meeting-is-rescheduled)
+- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)

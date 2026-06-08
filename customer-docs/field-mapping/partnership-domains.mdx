@@ -1,30 +1,46 @@
 ---
 title: "Partnership domains"
-description: "Configure partnership domains so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Partnership domains","Field mapping and CRM configuration","Ergo docs"]
+description: "Classify partner domains separately from customer domains so partner activity does not distort account matching or deal context."
+keywords: ["partnership domains", "partner matching", "domain classification"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use partnership domains when partner, reseller, agency, or implementation activity should be recognized as partner context instead of direct customer activity.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Add partner domains when partner activity should be associated differently from customer activity.
-- Review whether the domain should be treated as partner, customer, or internal context.
-- Test related matching behavior.
-- Revisit the list as partnerships change.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Add partner domains that commonly appear in meetings or emails.
+- Decide whether each domain is partner, customer, internal, or an alternate customer domain before saving.
+- Retest matching with a recent meeting or email after changes.
+- Keep the list small enough for admins to audit.
+
+## What to expect
+
+- Partnership domains help classify context; they do not create partner CRM records by themselves.
+- Misclassified partner domains can make customer activity look indirect or unrelated.
+- Domain classification should be reviewed when partner motions change.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- A partner domain is also used by a customer subsidiary.
+- Partner attendees dominate a meeting and hide the end-customer context.
+- The domain belongs in alternate domains instead of partnership domains.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Alternate domains/emails](./alternate-domains-emails)
+- [Meeting-title AI boost](./meeting-title-ai-boost)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)

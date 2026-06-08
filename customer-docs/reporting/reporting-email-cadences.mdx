@@ -1,35 +1,55 @@
 ---
 title: "Reporting email cadences"
-description: "Use reporting email cadences to build, interpret, share, or schedule reporting in Ergo."
-keywords: ["Reporting email cadences","Reporting","Ergo docs"]
+description: "Create and manage weekly Reporting emails with recipients, fields, analysis instructions, test runs, and run history."
+keywords: ["Reporting email cadences", "Scheduled reporting email", "Weekly report", "Reporting recipients", "Test run"]
 ---
-
 
 ![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
 
+Reporting email cadences send recurring summaries based on selected Reporting fields and analysis instructions.
 
-## Before you start
+## Who can use this
 
-- Confirm reporting is enabled and the viewer has reporting access.
-- Confirm Reporting, Email is connected or available.
+- Reporting email cadences are admin-only in the Reporting page.
+- Recipients can include organization members and external email addresses.
 
+## Create a cadence
 
-## Use this workflow
+1. Open **Reporting**.
+2. Select **Email Cadences**.
+3. Select **New Cadence**.
+4. In **Setup**, enter a cadence name, weekly send day, send time, timezone, and enabled state.
+5. In **Recipients**, choose organization members or add external email addresses.
+6. In **Fields**, choose manual field selection or auto field selection.
+7. In **Analysis**, add instructions for what the report should emphasize.
+8. Save the cadence.
 
-- Choose the report or dashboard to send.
-- Set recipients, cadence, and filters.
-- Preview the email before enabling the cadence.
-- Review run history after the first delivery.
+New cadences can be saved as disabled drafts. When you continue to the analysis step for a new cadence, Ergo defaults the cadence to enabled unless you turn it off.
 
-## Common issues
+## Field selection modes
 
-- The viewer does not have reporting access.
-- Filters or time ranges exclude the expected data.
-- Meetings, CRM fields, or reporting fields are still syncing.
-- A shared link or embedded dashboard does not include the expected permissions.
+- **Manual**: select up to 10 available Ergo reporting fields or rubric fields.
+- **Auto**: leave selected fields empty and let Ergo choose fields for the run.
+
+Manual mode requires at least one field before the cadence can be enabled. Remove unavailable fields before saving.
+
+## Recipients and schedule
+
+- Recipient emails must be valid and cannot be duplicated.
+- A pending external email must be added or cleared before saving.
+- Cadences use a weekly schedule.
+- The timezone must be a valid IANA timezone.
+
+## Test and send now
+
+Use **test run** before enabling a cadence or after major field changes. Use **send now** when you want to queue an immediate send for the cadence's configured recipients.
+
+Both actions enqueue a reporting email run. A queued action is not the same as confirmed delivery; check run history for the final result.
 
 ## Related articles
 
 - [Reporting](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Preview/run history](./preview-run-history)
+- [Custom reporting fields](./custom-reporting-fields)
+- [Call grading rubrics](./call-grading-rubrics)
+- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)

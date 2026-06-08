@@ -1,30 +1,39 @@
 ---
 title: "What happens when a meeting is rescheduled"
-description: "Handle what happens when a meeting is rescheduled in the meetings and notetaker workflow."
-keywords: ["What happens when a meeting is rescheduled","Meetings and notes","Ergo docs"]
+description: "Understand how calendar changes affect upcoming meeting visibility and notetaker scheduling."
+keywords: ["rescheduled meeting", "calendar sync", "updated meeting link", "notetaker"]
 ---
-
 
 ![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
 
+Rescheduling changes the calendar event first. The notetaker state updates only after Ergo receives the changed calendar event and the notetaker provider reflects the new state, so calls changed close to start time need extra review.
 
+## What can change
 
-## Use this workflow
+- Meeting time.
+- Meeting link.
+- Calendar event ID or recurring instance ID.
+- Attendees.
+- Whether the meeting still qualifies for bot scheduling.
 
-- Update the calendar event with the new time or link.
-- Check the meeting in Ergo after the calendar update syncs.
-- Use Add Bot to Meeting if the meeting is starting soon or the bot did not re-dispatch.
-- For recurring meetings, verify the specific occurrence that changed.
+## What to do
 
-## Common issues
+- Recheck the event on the dashboard after the calendar update syncs.
+- If the meeting link changed, confirm the upcoming card shows the new URL before the call starts.
+- If the notetaker is still tied to the old link, cancel and schedule it again or use the update-link flow when the UI exposes it.
+- If the meeting was rescheduled very close to start time or the bot already joined at the old time, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting) to dispatch a fresh bot.
+- For recurring meetings, choose whether the change affects only one occurrence or future occurrences.
 
-- The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+## What to expect
+
+- A changed calendar event may briefly show stale notetaker state.
+- If an old event was explicitly unscheduled, Ergo may keep a marker so it does not re-add the bot automatically.
+- If the meeting starts before the updated event is available, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting).
+- Avoid editing or rebooking an event while the bot is already live unless you can verify the bot remains in the meeting and the completed record processes normally.
 
 ## Related articles
 
-- [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting)
+- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)
+- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
+- [Recurring meetings](./recurring-meetings)
 - [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
-- [Meeting availability and visibility](./meeting-availability-and-visibility)

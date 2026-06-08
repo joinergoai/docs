@@ -1,30 +1,50 @@
 ---
 title: "Desktop settings and updates"
-description: "Set up and use Ergo Desktop for desktop settings and updates."
-keywords: ["Desktop settings and updates","Desktop","Ergo docs"]
+description: "Review Desktop settings, sign-out behavior, auto-record configuration, and update expectations."
+keywords: ["Desktop settings and updates", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page to manage Desktop settings after the app is installed and signed in.
 
+## Who can use this
 
-## Configure it
+- Desktop users maintaining their local app setup.
+- Admins and operators troubleshooting stale app versions or settings.
 
-- Open Ergo Desktop settings.
-- Review account, recording, permissions, and update status.
-- Install updates when prompted.
-- Re-test capture after changing settings or updating the app.
+## Before you start
+
+- Confirm the app is signed in as the expected user.
+- Keep the app open long enough for settings and update checks to complete.
+- Review whether your workspace uses auto-record detected meetings.
+
+## Steps
+
+- Open Desktop settings.
+- Confirm the authenticated user.
+- Review recording and capture-related settings.
+- If your team uses auto-recording, confirm the desktop notetaker configuration allows detected-meeting recording.
+- Check whether a newer app version is available through the approved update/download path.
+- If the in-app update path is unavailable or blocked, download the current app again from the approved Ergo download path.
+- Sign out only when you are ready to clear the local authenticated session.
+
+## What to expect
+
+- The app can restore and refresh WorkOS authentication from local session data.
+- Desktop notetaker configuration includes a setting for auto-recording detected meetings.
+- The app includes an updater path, but workspace access and release availability determine what users can download or install.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The app is signed in as the wrong user.
+- Auto-record is disabled even though manual recording works.
+- A managed device blocks updates or app permissions.
+- Signing out clears local authentication and requires browser sign-in again.
 
 ## Related articles
 
 - [Desktop](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Install and sign in to Ergo Desktop](./install-and-sign-in-to-ergo-desktop)
+- [Desktop onboarding checklist](./desktop-onboarding-checklist)
+- [Sign-in and desktop callback issues](../troubleshooting/sign-in-and-desktop-callback-issues)

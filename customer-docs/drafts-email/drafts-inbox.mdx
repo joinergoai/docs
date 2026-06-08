@@ -1,30 +1,52 @@
 ---
 title: "Drafts inbox"
-description: "Review generated follow-up drafts, failed drafts, scheduled messages, sent items, and dismissed drafts."
-keywords: ["Drafts inbox","Drafts, email, and templates","Ergo docs"]
+description: "Open the Drafts inbox, find the right queue, and review drafts before sending."
+keywords: ["Drafts inbox", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Use **Drafts** as the main workspace for reviewing, editing, sending, scheduling, dismissing, and tracking email drafts created by Ergo.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps and account owners reviewing their own drafts.
+- Managers or admins with org-wide draft access, when enabled for the workspace.
 
-- Open Drafts to review generated and manual drafts.
-- Use tabs or queues to find drafts by state.
-- Review AI-generated content before sending.
-- Dismiss drafts that should not be sent.
+## Before you start
+
+- Connect the sender's email account.
+- Confirm the user has draft generation enabled for the relevant source, such as post-call follow-ups or proactive surfacing.
+- If using org-wide draft viewing, select the correct user or **All** before assuming a draft is missing.
+
+## Steps
+
+- Open **Drafts**.
+- Choose the relevant queue. Common queues include post-call, surfacing, reminders, scheduled, composed, sent, and failed drafts.
+- Use search to narrow the visible list by draft content or recipient context.
+- If org-wide draft access is enabled, use the user selector to view your drafts, another user's drafts, or all available drafts.
+- Select a draft to open the editor.
+- Review the recipients, sender, subject, body, thread choice, attachments, and signature.
+
+## What to expect
+
+- Selecting a draft only opens it; it does not send the email.
+- Draft list state is reflected in the URL, so links can open a specific queue or draft.
+- Some draft sources may also create provider-side drafts in the connected email account, but customer docs should not assume every Ergo draft is always mirrored in every email client.
+- Sent and scheduled drafts move out of the main pending review flow.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- Draft generation is disabled or the meeting did not qualify.
+- Email grant is stale.
+- The wrong user filter is selected in an org-wide draft view.
+- Recipient, subject, body, sender, or thread strategy fails validation.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Draft tabs and queues](./draft-tabs-and-queues)
+- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Team access to email drafts](./team-access-to-email-drafts)
+- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)

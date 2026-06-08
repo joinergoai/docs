@@ -1,30 +1,46 @@
 ---
 title: "Kanban and list views"
-description: "Use kanban and list views to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Kanban and list views","Deals and CRM workspace","Ergo docs"]
+description: "Choose kanban for stage-based pipeline review or list view for sortable deal comparison and custom-field review."
+keywords: ["kanban", "list view", "deal stages", "custom fields"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use kanban when you need to scan or move deals by stage. Use list view when you need dense comparison, sortable columns, and custom-field review.
 
+## Who can use this
 
-## Use this workflow
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Choose Kanban for stage-based scanning.
-- Choose list view for dense sorting and comparison.
-- Apply filters before reviewing large pipelines.
-- Open the deal detail page for full context.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+
+## Steps
+
+- Use kanban to review stage columns and move deals where your permissions allow.
+- Use list view to sort by supported fields, compare owners, dates, health, amount, and mapped fields.
+- Customize board card fields at the pipeline level.
+- Customize list columns by view and pipeline.
+
+## What to expect
+
+- Kanban stages are scoped to the selected pipeline and active filters.
+- Hidden stages affect what you see, not whether records exist.
+- List view can show standard fields and mapped custom fields, but unmapped CRM fields are not available as columns.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- A stage is hidden or filtered out.
+- A list column is hidden for the active view.
+- A custom field has not been mapped or loaded yet.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Pipeline/view selector](./pipeline-view-selector)
+- [Search/filter/sort deals](./search-filter-sort-deals)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

@@ -1,30 +1,52 @@
 ---
 title: "Create/edit templates"
-description: "Use create/edit templates for post-call email drafting, review, sending, and team follow-up workflows."
-keywords: ["Create/edit templates","Drafts, email, and templates","Ergo docs"]
+description: "Create, update, and delete email templates and variables for future draft generation."
+keywords: ["Create/edit templates", "Drafts and email", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
 
+Use template editing when you need a reusable email pattern, not when you only need to change one draft.
 
+## Who can use this
 
-## Use this workflow
+- RevOps and managers maintaining shared template guidance.
+- Reps creating personal reusable templates, when allowed.
 
-- Open Templates and choose create or edit.
-- Write the template with reusable structure and variables.
-- Preview output before saving.
-- Test the template in a draft workflow.
+## Before you start
+
+- Confirm who owns the template and who should use it.
+- Draft a clear name, description, and body.
+- Remove customer-specific details from reusable examples.
+
+## Steps
+
+- Open template settings.
+- Create a new email template or select an existing one.
+- Add or edit the template name, description, and content.
+- Add variables only when they are supported and clearly documented.
+- Save the template.
+- Test by generating or composing a draft that should use the template.
+- Delete old templates only after confirming they are no longer needed.
+
+## What to expect
+
+- Template APIs support create, update, list, and delete for email templates.
+- Template variables can also be created, updated, listed, and deleted.
+- Changes apply to future draft generation and do not automatically rewrite drafts already in the Drafts queue.
+- Email templates and Slack templates are separate template types.
 
 ## Common issues
 
-- Email grants expired or the mailbox was disconnected.
-- The meeting source or meeting type did not qualify for draft generation.
-- Another connected notetaker created duplicate context.
-- A draft failed to sync or send and needs retry or report.
+- The description does not explain when Ergo should use the template.
+- The body contains stale names, dates, or customer-specific examples.
+- A variable is deleted while a template still references it.
+- Users expect an edited template to change drafts that already exist.
 
 ## Related articles
 
 - [Drafts and email](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Templates overview](./templates-overview)
+- [AI template builder](./ai-template-builder)
+- [Email templates setup](../setup/email-templates-setup)
+- [Review/edit AI drafts](./review-edit-ai-drafts)

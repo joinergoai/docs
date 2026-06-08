@@ -1,30 +1,93 @@
 ---
 title: "Company details"
-description: "Complete the company details onboarding step with the right owner and prerequisites."
-keywords: ["Company details","Onboarding","Ergo docs"]
+description: "Add the company context Ergo uses to make drafts, CRM fields, stage descriptions, and meeting answers more specific to your business."
+keywords: ["Company details", "Company information", "Company context", "Setup", "Ergo docs"]
 ---
-
 
 ![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
 
+Use Company details to tell Ergo what your company does, which customer problems you solve, and how your solution addresses those problems.
 
+This context helps Ergo produce less generic AI output. It can inform company-aware field descriptions, pipeline stage descriptions, follow-up drafts, draft revisions, meeting or note chat answers, reporting context, and other workflows that need your team's positioning.
 
-## Setup steps
+## Who can use this
 
-- Enter the company and workspace details Ergo should use in generated outputs.
-- Review domain, naming, and account information for accuracy.
-- Update details when the company name, domain, or operating context changes.
-- Check generated drafts and reports after major company-detail updates.
+- Admins, super admins, RevOps owners, operators, founders, and sales leaders who own go-to-market context.
+- Standard users who are completing onboarding and need to review the company context copied from an admin.
+- Teams working with Ergo during rollout, especially when drafts or CRM updates need to match the team's current positioning.
+
+## Before you start
+
+- Decide who owns the shared wording. Company details should usually be maintained by the same person who owns templates, CRM field definitions, stage definitions, and sales narrative.
+- Keep the wording durable. Use language that applies across many customer conversations, not one account, one deal, or one recent support thread.
+- Connect or sync the CRM before testing CRM updates, and connect email/calendar/notetaker before testing follow-up drafts or meeting-based workflows.
+- If users should inherit admin context, complete this page before running Sync with Admin or pushing settings to a team.
+- Keep pricing assumptions on the pricing configuration page unless a super admin or rollout owner has confirmed they belong in a separate pricing setup flow.
+
+## Configure company information
+
+1. Open Company details from onboarding, setup, or Field Mapping.
+2. Review the company description. This should be a short description of what your company sells and who it helps.
+3. Add up to three customer challenges. These should be common problems your product or service is meant to solve.
+4. Add up to three solution points. These should describe how your company addresses the challenges, in language your team is comfortable using in customer-facing output.
+5. Save the page, then test one workflow that depends on company context.
+
+When AI generation is available, Ergo can draft suggested company information from your organization name and domain. Review the generated description, challenges, and solution points before saving them, because saved context can affect downstream outputs.
+
+## Write durable context
+
+Good company details are specific enough to guide AI output, but broad enough to survive more than one meeting.
+
+- Use your actual product category, customer segment, and business outcome.
+- Prefer stable problems, such as data quality, manual CRM updates, missed follow-up, fragmented customer context, or workflow visibility, over one customer's unusual edge case.
+- Phrase challenges as problems your customers experience, not as internal feature names.
+- Phrase solutions as the outcome your product creates, not as a future-plan promise.
+- Avoid private customer names, account-specific metrics, confidential pricing, or unapproved claims.
+
+Update company details when your positioning changes, you enter a new segment, your main use cases change, or generated drafts and CRM descriptions start sounding off.
+
+## Test the context
+
+After saving, test one controlled output before pushing the setting broadly.
+
+1. Generate or regenerate one CRM field description or pipeline stage description.
+2. Review one follow-up draft or draft revision from a recent eligible meeting.
+3. Ask about one meeting or note where company context should matter.
+4. Confirm the output uses your positioning without inventing claims, pricing, or customer specifics.
+5. If the output is too generic or too aggressive, revise the company description, challenges, and solution points before syncing settings to other users.
+
+## What to expect
+
+- Company details are context; every generated output may use only the parts relevant to that workflow.
+- Saved company details can be copied through Sync with Admin or admin push settings when selected.
+- Changes can affect future generated content, but existing drafts, CRM field descriptions, stage descriptions, meeting summaries, and reports may need separate review.
+- Company context works alongside the transcript, emails, CRM fields, templates, stage definitions, and user instructions available for the workflow.
+- Pricing context and account-specific commercial terms should stay out of this page unless your team has a verified pricing setup path for that information.
 
 ## Common issues
 
-- The person is in the wrong workspace.
-- Their role or permission does not match the setup path.
-- A required integration is not connected yet.
-- A setup step is hidden until earlier setup is complete or enabled for the workspace.
+- **Generated output sounds generic:** Add clearer customer challenges and solution points, then retest one draft or field description.
+- **Output uses outdated positioning:** Update company details and any templates, stage descriptions, or CRM field descriptions that still contain old language.
+- **A user has different context than the admin:** Re-run Sync with Admin or push settings after confirming Company details is selected.
+- **Company details were overwritten:** Check whether an admin sync, team sync, or AI-generated replacement recently ran.
+- **CRM updates are still wrong:** Company context helps the AI reason, but CRM behavior also depends on mapped properties, property permissions, pipeline stages, source freshness, and CRM access.
+- **Drafts are still missing:** Check email/calendar connection, notetaker processing, meeting eligibility, draft settings, and templates separately.
+- **The page is unavailable or disabled:** Confirm the user's role, feature access, and whether they are in a setup flow that includes Company details.
 
 ## Related articles
 
 - [Setup](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Workspace configuration](./workspace-configuration)
+- [User sync](./user-sync)
+- [CRM properties setup](./crm-properties-setup)
+- [Pipeline stages](./pipeline-stages)
+- [Pricing configuration](./pricing-configuration)
+- [Company info](../field-mapping/company-info)
+- [Create/sync CRM properties](../field-mapping/create-sync-crm-properties)
+- [Stage definitions and AI descriptions](../field-mapping/stage-definitions-and-ai-descriptions)
+- [Email templates setup](./email-templates-setup)
+- [Meeting title phrases](./meeting-title-phrases)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)

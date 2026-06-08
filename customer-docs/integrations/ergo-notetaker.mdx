@@ -1,35 +1,46 @@
 ---
 title: "Ergo Notetaker"
-description: "Connect and maintain Ergo Notetaker with the right account, permissions, reconnect path, and failure checks."
-keywords: ["Ergo Notetaker","Integrations","Ergo docs"]
+description: "Configure the built-in cloud notetaker that joins supported meetings as a bot."
+keywords: ["Ergo Notetaker", "Integrations", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
 
+Use this page for the built-in Ergo cloud notetaker, which joins supported meetings as a participant.
+
+## Who can use this
+
+- Admins and users setting up cloud meeting capture.
+- Operators verifying notetaker name, language, and meeting scheduling behavior.
 
 ## Before you start
 
-- Have access to the Ergo Notetaker account or admin console you plan to connect.
-- Use the account your team expects Ergo to read from or write through.
+- Connect email/calendar if you expect calendar-based scheduling.
+- Decide whether the cloud bot, desktop recorder, or a third-party notetaker should be the primary source.
+- Review recording disclosure and waiting-room expectations for your team.
 
+## Steps
 
-## Setup steps
+- Open **Integrations** and select **Ergo Notetaker**.
+- Configure the notetaker settings shown in the panel.
+- Confirm upcoming meetings appear as expected.
+- Use the Meetings area to schedule, cancel, or add the bot to a live meeting when needed.
 
-- Connect calendar before enabling automatic joins.
-- Confirm which meeting types Ergo should join.
-- Make sure the meeting host admits the bot when a waiting room is enabled.
-- Use Add Bot to Meeting for manual dispatch.
+## What to expect
+
+- The cloud notetaker appears in the meeting as a bot participant.
+- Calendar visibility, meeting URL support, waiting-room admission, and team settings affect whether it joins.
+- If another notetaker source is enabled, review duplicate-source behavior before broad rollout.
 
 ## Common issues
 
+- The calendar event is missing or has no supported meeting link.
 - The bot was not admitted from the waiting room.
-- The meeting was rescheduled or moved to a different link.
-- The meeting was on a calendar Ergo cannot access.
-- A recording is available but transcript, insights, or drafts are still missing.
+- Another notetaker source already captured the meeting.
 
 ## Related articles
 
-- [Notetaker setup](../setup/notetaker-setup)
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
-- [Add the bot to a live or ad hoc meeting](../meetings/add-the-bot-to-a-live-or-ad-hoc-meeting)
+- [Integrations](./index)
+- [Schedule or cancel the notetaker](../meetings/schedule-or-cancel-the-notetaker)
+- [Notetaker waiting room admission guide](../meetings/notetaker-waiting-room-admission-guide)
+- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)

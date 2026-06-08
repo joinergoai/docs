@@ -1,30 +1,47 @@
 ---
 title: "Deals board overview"
-description: "Use deals board overview to inspect customer context, pipeline state, and CRM activity in Ergo."
-keywords: ["Deals board overview","Deals and CRM workspace","Ergo docs"]
+description: "Open the Deals workspace, choose the right pipeline or Companies view, and scan deals by stage, owner, health, activity, and mapped CRM fields."
+keywords: ["deals board", "pipeline", "kanban", "list view", "Ergo CRM"]
 ---
-
 
 ![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
 
+Use the Deals board as the starting point for pipeline review and account follow-up. The board reads from Ergo's CRM-backed deal data and can show deal fields, health, activity recency, draft status, reminders, and custom mapped fields.
 
+## Who can use this
 
-## Key things to know
+- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
 
-- Open Deals to see active opportunities.
-- Choose the relevant pipeline or view.
-- Use filters and sorting to narrow the board.
-- Open a deal to review CRM, meeting, email, and document context.
+## Before you start
+
+- Connect CRM and complete field mapping before relying on CRM writeback.
+- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Choose the correct pipeline or the Companies selector option before searching.
+- Clear filters and saved views before assuming a record is missing.
+
+## Steps
+
+- Open **Deals**.
+- Use the selector to choose a CRM pipeline or switch to **Companies**.
+- Choose **Kanban** to scan stages or **List** to compare fields across records.
+- Use built-in views such as **Ergo View**, **Deals**, **This Week**, **Follow-Ups**, and reminders when they are enabled for your workspace.
+
+## What to expect
+
+- The board is scoped by pipeline, view, filters, search, and feature access.
+- Card and list fields can include standard deal fields plus mapped custom fields.
+- Some actions write through CRM-backed paths; only use them after confirming field mapping and permissions.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The wrong pipeline, Companies view, built-in tab, or saved custom view is selected.
+- Search or filters are still active.
+- CRM record names, domains, owners, or associations do not match the context you expected.
+- Field mapping or CRM permissions are incomplete.
 
 ## Related articles
 
 - [Deals and CRM](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Pipeline/view selector](./pipeline-view-selector)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)

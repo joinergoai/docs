@@ -1,30 +1,50 @@
 ---
 title: "Chat with Ergo"
-description: "Use chat with Ergo with the right customer context, sources, filters, and automation checks."
-keywords: ["Chat with Ergo","Ergo AI, search, and automation","Ergo docs"]
+description: "Ask Ergo questions and review its sources, context, and proposed actions before acting."
+keywords: ["Chat with Ergo", "Ergo AI, search, and automation", "Ergo docs"]
 ---
-
 
 ![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
 
+Use chat for questions and workflow help across the context Ergo can access for your workspace.
 
+## Who can use this
 
-## Use this workflow
+- Users asking about deals, meetings, emails, CRM context, or documents.
+- Managers reviewing pipeline or team context through AI summaries.
 
-- Open Chat.
-- Ask a specific question about meetings, deals, emails, documents, or reports.
-- Review sources and actions before acting on the answer.
-- Refine the prompt if the answer is too broad.
+## Before you start
+
+- Confirm the records you expect are connected and accessible.
+- Start a fresh chat when switching between unrelated deals or meetings.
+- Keep private customer context out of prompts unless the user has permission to use it.
+
+## Steps
+
+- Open Chat or the relevant agent panel.
+- Ask a specific question.
+- Include a deal, meeting, or other context when the answer should be scoped.
+- Review sources and any action cards.
+- Approve, edit, or dismiss proposed actions rather than assuming they have already happened.
+
+## What to expect
+
+- Chat answers are limited by the sources and permissions available to the user.
+- Some responses include sources, tables, draft cards, CRM action cards, or other UI blocks.
+- Chat can help create drafts or propose updates, but review remains required for customer-facing copy and CRM-changing actions.
+- A stale or missing source can make an answer incomplete.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The chat uses the wrong context because the user stayed in an old thread.
+- Source data is missing, stale, or not indexed yet.
+- The answer summarizes correctly but the proposed action still needs approval.
+- The user asks for data outside their role or workspace access.
 
 ## Related articles
 
 - [Ergo AI, search, and automation](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Understanding sources/actions in chat](./understanding-sources-actions-in-chat)
+- [Using deal and meeting context](./using-deal-and-meeting-context)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [Prompting Ergo effectively](../start-here/prompting-ergo-effectively)

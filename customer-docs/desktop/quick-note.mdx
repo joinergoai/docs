@@ -1,30 +1,48 @@
 ---
 title: "Quick Note"
-description: "Set up and use Ergo Desktop for quick note."
-keywords: ["Quick Note","Desktop","Ergo docs"]
+description: "Use Quick Note or a manual-note recording path when you need local capture tied to a note."
+keywords: ["Quick Note", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page when you want a desktop recording linked to a note instead of relying only on calendar detection.
 
+## Who can use this
 
-## Use this workflow
+- Users capturing an ad-hoc meeting or conversation.
+- Operators troubleshooting recordings that should link back to a note.
 
-- Open Quick Note from Ergo Desktop.
-- Capture the note while working or after a call.
-- Attach relevant customer, deal, or meeting context when possible.
-- Review where the note appears in Ergo after saving.
+## Before you start
+
+- Sign in to Ergo Desktop.
+- Grant macOS capture permissions.
+- Create or open the note you want the recording to relate to, if your workflow starts from a note.
+
+## Steps
+
+- Start the Quick Note or manual-note recording flow.
+- Confirm recording is active.
+- Add or edit the note title while the recording is in progress if needed.
+- Stop recording when the conversation ends.
+- Wait for upload and processing.
+- Confirm the processed meeting or recording is linked to the note.
+
+## What to expect
+
+- Desktop recordings can carry a linked note ID when the recording starts from a note.
+- If the note title is more specific than the recording-time title, Ergo can use the linked note title.
+- Untitled notes may be auto-titled after processing.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- The recording was started outside the note flow, so it is not linked to the note.
+- The note title was still generic when processing completed.
+- Upload or processing failed before the note link could be updated.
 
 ## Related articles
 
 - [Desktop](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Manual notes](../meetings/manual-notes)
+- [Silent desktop recording](./silent-desktop-recording)
+- [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)

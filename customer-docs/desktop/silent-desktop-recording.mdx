@@ -1,30 +1,51 @@
 ---
 title: "Silent desktop recording"
-description: "Set up and use Ergo Desktop for silent desktop recording."
-keywords: ["Silent desktop recording","Desktop","Ergo docs"]
+description: "Record locally with Ergo Desktop when you do not want a bot participant to join the meeting."
+keywords: ["Silent desktop recording", "Desktop", "Ergo docs"]
 ---
-
 
 ![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
 
+Use this page to record a meeting locally with Ergo Desktop instead of adding the cloud notetaker bot.
 
+## Who can use this
 
-## Use this workflow
+- Users recording calls from their own desktop.
+- Admins and operators deciding when to use local recording instead of a cloud bot.
 
-- Confirm your workspace allows silent desktop recording.
-- Start or verify desktop capture before the meeting.
-- Check recording status during and after the meeting.
-- Review recording/privacy expectations with your team.
+## Before you start
+
+- Install Ergo Desktop and sign in.
+- Grant macOS permissions and quit and reopen the app.
+- Confirm whether a cloud bot is also scheduled for the same meeting.
+- Run a short test recording before high-stakes calls.
+
+## Steps
+
+- Start the recording from a detected meeting, calendar event, Quick Note, or manual workflow.
+- Confirm the recording indicator is active.
+- Keep the app open while the call is in progress.
+- Stop the recording when the call ends.
+- Wait for upload and processing to complete in Ergo.
+
+## What to expect
+
+- Silent desktop recording captures local meeting audio and does not add a bot participant to the meeting.
+- No-bot recording does not remove your responsibility to follow recording consent and disclosure requirements.
+- The backend creates a desktop upload session, tracks recording status, and processes the recording after upload.
+- Calendar-sourced recordings keep calendar metadata; ad-hoc recordings may use detected or manually provided metadata.
+- If another bot recorded the same call, Ergo may mark the desktop recording with concurrent-bot context for dedupe handling.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+- Recording was stopped before upload completed.
+- The app lost network access before it could upload.
+- A duplicate cloud bot recording also exists.
+- The meeting was too short or had too little transcript to produce a normal processed meeting.
 
 ## Related articles
 
 - [Desktop](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Ergo Desktop Notetaker](../integrations/ergo-desktop-notetaker)
+- [Quick Note](./quick-note)
+- [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)

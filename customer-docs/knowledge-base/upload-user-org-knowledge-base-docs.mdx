@@ -1,30 +1,33 @@
 ---
-title: "Upload user/org Knowledge Base docs"
-description: "Use upload user/org knowledge base docs to manage document context, generated docs, sharing, and deal links."
-keywords: ["Upload user/org Knowledge Base docs","Knowledge base and generated docs","Ergo docs"]
+title: "Upload knowledge base documents"
+description: "Upload supported files so Ergo can index them as knowledge base context."
+keywords: ["knowledge base upload", "documents", "file types", "document indexing"]
 ---
-
 
 ![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
 
+Upload knowledge base documents when Ergo needs reusable context such as playbooks, enablement docs, FAQs, or policies.
 
+## Supported upload behavior
 
-## Use this workflow
+- The checked backend upload route accepts PDF, DOCX, DOC, TXT, and Markdown files.
+- Files must be 25 MB or smaller.
+- The upload route extracts text, stores a document record, uploads the original file when storage succeeds, and indexes extracted text for search.
+- Document status is `pending`, `indexed`, or `failed`.
 
-- Open Knowledge Base or Documents.
-- Upload user-scoped or org-scoped documents.
-- Wait for processing before expecting Ergo to use the document.
-- Review scope and permissions before using docs in customer workflows.
+## Upload a document
 
-## Common issues
+- Open the knowledge base document manager.
+- Select the document area or drag in a supported file.
+- Wait for the document to finish processing.
+- Confirm the document reaches `indexed` before expecting Ergo to use it as context.
 
-- The user is in the wrong workspace.
-- A required integration is not connected.
-- The user does not have the required role or access.
-- The relevant meeting, deal, draft, report, or integration is still processing or syncing.
+## Scope note
+
+Some UI surfaces show user and org document areas. In the checked upload route, uploaded knowledge base files are stored against the uploading user and org, and the public docs should avoid promising org-wide availability unless your current workspace UI explicitly grants it.
 
 ## Related articles
 
-- [Knowledge base and documents](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Document status, retry, delete, and download](./document-scopes-status-retry-delete-download)
+- [Post-call reference docs and summaries](./post-call-reference-docs-and-summaries)
+- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)

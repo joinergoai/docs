@@ -1,30 +1,50 @@
 ---
 title: "Recording disclaimer defaults"
-description: "Manage recording disclaimer defaults across teams, members, access, defaults, and organization settings."
-keywords: ["Recording disclaimer defaults","Admin","Ergo docs"]
+description: "Control whether Ergo sends a recording disclaimer chat message when the meeting bot joins."
+keywords: ["recording disclaimer", "notetaker", "meeting bot", "admin"]
 ---
-
 
 ![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
 
+Use this page to control the organization-level recording disclaimer for the Ergo meeting bot. The disclaimer sends a chat message when the bot joins a meeting indicating that it is recording.
 
+## Who can use this
 
-## Configure it
+- Super admins can view and change the recording disclaimer setting.
+- Other admins and users inherit the organization setting for bot-recorded meetings.
 
-- Open admin recording disclaimer settings.
-- Review the default disclaimer language.
-- Update only after confirming legal or customer requirements.
-- Test a meeting to confirm the disclaimer appears as expected.
+## Before you start
+
+- Confirm your organization's recording-notice requirements with your legal or compliance owner.
+- Decide whether the bot should post the disclaimer message for meetings it joins.
+- Review desktop recording behavior separately because desktop recording does not rely on the meeting bot joining the call.
+
+## Steps
+
+1. Open the calendar settings menu as a super admin.
+2. Find **Recording Disclaimer**.
+3. Turn the switch on or off.
+4. Confirm the setting with a scheduled bot meeting.
+
+## What to expect
+
+- When enabled, Ergo includes chat-message configuration for meeting bots so they can announce that the meeting is being recorded.
+- When changed, Ergo saves the organization setting and attempts to update active or scheduled bots for the organization.
+- The setting controls the bot disclaimer message. It does not replace your consent, notice, or recording-policy obligations.
+- The setting does not change meeting visibility, summary emails, or recording access.
 
 ## Common issues
 
-- The user is in the wrong workspace.
-- The user has the wrong role or spectator status.
-- The page requires meeting, reporting, shared-link, or admin-area access.
-- The user needs to refresh after an access change.
+- **The setting is missing.** Confirm the acting user is a super admin.
+- **A bot already joined before the change.** Check the specific meeting; already-created bot behavior can depend on whether the bot update succeeded.
+- **A desktop recording needs a notice.** Review the desktop recording workflow separately.
+- **A meeting platform does not show the chat message.** Confirm the bot was admitted, the meeting platform supports the message, and the org setting was enabled before or during bot scheduling.
 
 ## Related articles
 
 - [Admin](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Default meeting summary settings](./default-meeting-summary-settings)
+- [Agent persona](./agent-persona)
+- [Recording disclaimer](../meetings/recording-disclaimer)
+- [Roles and permissions](../start-here/roles-and-permissions)
+- [Permission or access denied](../troubleshooting/permission-or-access-denied)

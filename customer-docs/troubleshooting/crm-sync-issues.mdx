@@ -1,46 +1,53 @@
 ---
 title: "CRM sync issues"
-description: "Diagnose and resolve CRM sync issues in Ergo."
-keywords: ["CRM sync issues","Troubleshooting","Ergo troubleshooting"]
+description: "Troubleshoot CRM connection, field mapping, property permission, owner, and record visibility issues."
+keywords: ["CRM sync", "field mapping", "property permissions", "record visibility", "troubleshooting"]
 ---
-
 
 ![Flow diagram showing common checkpoints for CRM sync.](../images/field-mapping-crm-flow.svg)
 
+Use this page when CRM fields, stages, activities, deals, contacts, or companies do not appear or update where expected.
+
 ## Symptoms
 
-Use this article when this issue is blocking setup, meetings, CRM updates, drafts, access, or reporting in Ergo.
+- CRM fields, stages, activities, or associations do not update.
+- A deal, contact, or company is missing from the expected board or filtered view.
+- A CRM property, owner, pipeline, or field-mapping check fails.
+- A CRM write appears to succeed in the CRM but is not reflected in Ergo yet.
 
 ## Most common causes
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- The CRM connection is stale, disconnected, or lacks permission for the object being changed.
+- Field mapping, property permissions, owner mappings, or pipeline stages are incomplete.
+- The source CRM field name, type, options, owner field, pipeline, or stage changed.
+- The record is filtered by owner, pipeline, stage, view, or score.
+- The record is hard to match because it lacks expected contact, company, domain, or email associations.
 
 ## What to check
 
-- Check the CRM integration connection.
-- Check field mapping and property permissions.
-- Check pipeline and stage mappings.
-- Retry or contact support after confirming the mapped CRM record still exists.
+- Confirm the CRM shows connected for the affected user or workspace.
+- Run CRM property sync, owner-ID sync, and stage sync where the UI exposes those actions.
+- Check property permissions for deal, contact, and company create/update.
+- Verify the record's owner, pipeline, stage, associated contact, associated company, and domain/email match.
+- Remove narrow filters before treating a missing record as a sync failure.
 
 ## Resolution steps
 
-1. Confirm the affected workspace, user, meeting, deal, draft, report, or integration.
-2. Check the related setup article before retrying the workflow.
-3. Reconnect required integrations or update access when those checks identify the cause.
-4. Retry the workflow from Ergo.
-5. Contact support if the issue persists after the checks above.
+- If a field is blank, confirm it is mapped in Ergo and exists in the CRM with a compatible type.
+- If a write fails, check the connected CRM user's permissions and whether the CRM property accepts the value.
+- If a record is missing, test with one known deal/contact/company and compare CRM associations against Ergo filters.
+- If the source changed in CRM, resync before editing automation or stage logic.
 
 ## When to contact support
 
-- The workflow still fails after checking setup and reconnecting required integrations.
-- A meeting, draft, or CRM update is missing after the expected processing window.
-- The customer-facing error message does not explain what to fix next.
+- Contact support when the CRM is connected, mappings and permissions look correct, and one controlled record still fails.
+- Include the workspace, affected user, CRM, object type, object link or ID, field/stage involved, and approximate time window.
+- Keep examples generalized and avoid sharing sensitive customer content in support requests.
 
 ## Related articles
 
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [Troubleshooting](./index)
+- [Dashboard setup errors](./dashboard-setup-errors)
 - [Stage drift conflicts](./stage-drift-conflicts)
-- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)
+- [Getting support](../start-here/getting-support)
+- [Field Mapping overview](../field-mapping/field-mapping-overview)

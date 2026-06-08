@@ -1,30 +1,47 @@
 ---
 title: "Meeting-title AI boost"
-description: "Configure meeting-title AI boost so CRM updates, stage logic, and reporting fields work reliably."
-keywords: ["Meeting-title AI boost","Field mapping and CRM configuration","Ergo docs"]
+description: "Choose Strict Mode or AI Boost for meeting-title phrases so meeting classification uses the right level of exactness."
+keywords: ["meeting titles", "AI Boost", "Strict Mode", "meeting classification"]
 ---
-
 
 ![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
 
+Use Meeting Titles when meeting names should help classify whether a meeting is relevant to sales, pipeline, or CRM context. The toggle changes how strongly phrases guide classification.
 
+## Who can use this
 
-## Configure it
+- RevOps, sales operations, CRM owners, and admins with CRM permissions.
 
-- Add meeting-title phrases that help identify relevant customer meetings.
-- Use common title patterns from your team calendar.
-- Review classifications after adding phrases.
-- Adjust phrases when false positives appear.
+## Before you start
+
+- Use a CRM account that can read and update the fields Ergo needs.
+- Map properties, pipelines, and stages before enabling broad CRM automation.
+- Test changes on one record before rolling them out.
+
+## Steps
+
+- Add meeting-title phrases that reliably indicate relevant meetings.
+- Use **Strict Mode** only when meetings without a matching title phrase should be skipped by this workflow.
+- Use **AI Boost** when phrases should guide AI classification alongside other context.
+- Test with recent meeting titles before changing the setting broadly.
+
+## What to expect
+
+- Meeting-title phrases influence classification context; every included or excluded meeting can still depend on source and processing context.
+- AI Boost can be more flexible but should be reviewed for false positives.
+- Strict Mode can reduce false positives but may miss useful variants or externally scheduled meetings with different naming patterns.
+- Phrase matching is case-insensitive, but phrase scope still matters; broader phrases can cover more title variants.
 
 ## Common issues
 
-- The CRM property does not exist or has the wrong type.
-- The connected CRM account cannot read or update the property.
-- Pipeline or stage mappings changed in the CRM.
-- Ergo is looking at a different deal or company record than expected.
+- Phrases are too broad, such as generic customer or internal terms.
+- Meeting titles changed after a team renamed calendar events.
+- Strict Mode is too narrow for the naming patterns reps actually use.
 
 ## Related articles
 
 - [Field mapping](./index)
-- [Troubleshooting](../troubleshooting/index)
-- [Getting support](../start-here/getting-support)
+- [Partnership domains](./partnership-domains)
+- [Advanced CRM toggles](./advanced-crm-toggles)
+- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
