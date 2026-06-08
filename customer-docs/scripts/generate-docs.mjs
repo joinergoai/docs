@@ -97,12 +97,17 @@ const relatedByTitle = {
   "Recording/privacy basics": ["Recording disclaimer", "Security, data retention, and LLM usage", "Transcript or recording missing"],
   "Getting support": ["Permission or access denied", "Notetaker did not join", "CRM sync issues"],
   "First-time setup checklist": ["Setup by role", "Primary admin setup for founders, RevOps, and sales leaders", "AE setup", "Connect email and calendar"],
-  "Setup by role": ["Primary admin setup for founders, RevOps, and sales leaders", "Secondary admin and operator setup", "AE setup", "CSM setup", "Spectator and viewer setup"],
-  "Primary admin setup for founders, RevOps, and sales leaders": ["Setup by role", "Connect your CRM", "Field mapping setup: required before CRM updates work", "Admin dashboard overview"],
-  "Secondary admin and operator setup": ["Setup by role", "User sync", "Email templates setup", "Sync CRM/settings to team members"],
-  "AE setup": ["Setup by role", "Connect email and calendar", "Email templates setup", "Review/edit AI drafts"],
-  "CSM setup": ["Setup by role", "Connect email and calendar", "Meeting detail page", "Follow-ups panel"],
-  "Spectator and viewer setup": ["Setup by role", "Spectator access", "Meeting availability and visibility", "Permission or access denied"],
+  "Setup by role": ["Primary admin setup for founders, RevOps, and sales leaders", "Secondary admin and operator setup", "AE setup", "CSM setup", "Spectator and viewer setup", "AE tips for success", "CSM tips for success"],
+  "Primary admin setup for founders, RevOps, and sales leaders": ["Primary admin tips for success", "Connect your CRM", "Field mapping setup: required before CRM updates work", "Admin dashboard overview"],
+  "Secondary admin and operator setup": ["Secondary admin and operator tips for success", "User sync", "Email templates setup", "Sync CRM/settings to team members"],
+  "AE setup": ["AE tips for success", "Connect email and calendar", "Email templates setup", "Review/edit AI drafts"],
+  "CSM setup": ["CSM tips for success", "Connect email and calendar", "Meeting detail page", "Follow-ups panel"],
+  "Spectator and viewer setup": ["Spectator and viewer tips for success", "Spectator access", "Meeting availability and visibility", "Permission or access denied"],
+  "Primary admin tips for success": ["Primary admin setup for founders, RevOps, and sales leaders", "CRM properties setup", "Pipeline stages", "Reporting defaults"],
+  "Secondary admin and operator tips for success": ["Secondary admin and operator setup", "User sync", "Sync CRM/settings to team members", "Permission or access denied"],
+  "AE tips for success": ["AE setup", "Dashboard/upcoming meetings", "Review/edit AI drafts", "Slack monitoring and pre-call context"],
+  "CSM tips for success": ["CSM setup", "Meeting detail page", "Follow-ups panel", "Search across meetings, emails, and documents"],
+  "Spectator and viewer tips for success": ["Spectator and viewer setup", "Spectator access", "Meeting availability and visibility", "Share charts/dashboards"],
   "Connect your CRM": ["CRM properties setup", "Pipeline stages", "Field mapping setup: required before CRM updates work"],
   "Connect email and calendar": ["Google Workspace", "Microsoft 365", "Calendar scopes and meeting auto-join"],
   "Notetaker setup": ["Ergo Notetaker", "Schedule or cancel the notetaker", "Notetaker waiting-room admission guide"],
@@ -146,9 +151,17 @@ const relatedByTitle = {
 };
 
 const imageByTitle = {
+  "Welcome to Ergo": {
+    file: "product-dashboard-overview.png",
+    alt: "Product screenshot showing the Ergo dashboard and main navigation.",
+  },
+  "Navigating Ergo": {
+    file: "product-dashboard-overview.png",
+    alt: "Product screenshot showing the Ergo dashboard and main navigation.",
+  },
   "Roles and permissions": {
-    file: "admin-dashboard-roles-annotated.svg",
-    alt: "Annotated admin dashboard showing primary admin, secondary admin, user, and spectator access.",
+    file: "product-admin-dashboard.png",
+    alt: "Product screenshot showing the admin dashboard, team management, and role controls.",
   },
   "Setup by role": {
     file: "onboarding-setup-by-role-annotated.svg",
@@ -163,28 +176,48 @@ const imageByTitle = {
     alt: "Annotated onboarding view showing the primary admin setup path for CRM, teams, defaults, reporting, and rollout.",
   },
   "Secondary admin and operator setup": {
-    file: "admin-dashboard-roles-annotated.svg",
-    alt: "Annotated admin dashboard showing delegated setup, user management, and access controls.",
+    file: "product-admin-dashboard.png",
+    alt: "Product screenshot showing delegated setup, user management, and access controls.",
   },
   "AE setup": {
-    file: "drafts-templates-annotated.svg",
-    alt: "Annotated drafts and templates workspace showing the AE setup path for email drafts and follow-up workflows.",
+    file: "product-drafts-inbox.png",
+    alt: "Product screenshot showing the drafts workspace for post-call email review.",
   },
   "CSM setup": {
-    file: "meetings-dashboard-annotated.svg",
-    alt: "Annotated meetings dashboard showing the CSM setup path for meetings, follow-ups, and account context.",
+    file: "product-meetings-dashboard.png",
+    alt: "Product screenshot showing the meetings dashboard for meeting history and capture.",
   },
   "Spectator and viewer setup": {
-    file: "admin-dashboard-roles-annotated.svg",
-    alt: "Annotated admin dashboard showing spectator and viewer access controls.",
+    file: "product-admin-dashboard.png",
+    alt: "Product screenshot showing spectator and viewer access controls.",
+  },
+  "Primary admin tips for success": {
+    file: "product-field-mapping.png",
+    alt: "Product screenshot showing field mapping, pipeline stages, and CRM setup areas for admins.",
+  },
+  "Secondary admin and operator tips for success": {
+    file: "product-admin-dashboard.png",
+    alt: "Product screenshot showing admin controls for delegated setup and user support.",
+  },
+  "AE tips for success": {
+    file: "product-drafts-inbox.png",
+    alt: "Product screenshot showing the drafts inbox and review workflow for account executives.",
+  },
+  "CSM tips for success": {
+    file: "product-meetings-dashboard.png",
+    alt: "Product screenshot showing meetings and account context for customer success workflows.",
+  },
+  "Spectator and viewer tips for success": {
+    file: "product-reporting-dashboard.png",
+    alt: "Product screenshot showing reporting dashboards for viewer workflows.",
   },
   "Connect email and calendar": {
-    file: "calendar-email-connection-flow.svg",
-    alt: "Flow diagram showing email and calendar connection before meeting capture and draft workflows.",
+    file: "product-integrations-settings.png",
+    alt: "Product screenshot showing integration settings for connected sources.",
   },
   "Connect your CRM": {
-    file: "integrations-settings-annotated.svg",
-    alt: "Annotated integrations page showing CRM connection and setup areas.",
+    file: "product-integrations-settings.png",
+    alt: "Product screenshot showing CRM connection and setup areas.",
   },
   "Calendar scopes and meeting auto-join": {
     file: "calendar-email-connection-flow.svg",
@@ -203,12 +236,12 @@ const imageByTitle = {
     alt: "Flow diagram showing how meeting type and source affect summaries, insights, and draft generation.",
   },
   "Field mapping setup: required before CRM updates work": {
-    file: "field-mapping-annotated.svg",
-    alt: "Annotated field mapping screen showing CRM properties, pipeline stages, permissions, and sync checks.",
+    file: "product-field-mapping.png",
+    alt: "Product screenshot showing CRM properties, pipeline stages, permissions, and sync checks.",
   },
   "Field Mapping overview": {
-    file: "field-mapping-annotated.svg",
-    alt: "Annotated field mapping screen showing how CRM fields, pipeline stages, permissions, and sync checks fit together.",
+    file: "product-field-mapping.png",
+    alt: "Product screenshot showing how CRM fields, pipeline stages, permissions, and sync checks fit together.",
   },
   "CRM sync issues": {
     file: "field-mapping-crm-flow.svg",
@@ -255,8 +288,8 @@ const imageByTitle = {
     alt: "Flow diagram showing reporting dashboard sharing, permissions, and shared links.",
   },
   "Share charts/dashboards": {
-    file: "reporting-sharing-flow.svg",
-    alt: "Flow diagram showing how charts and dashboards can be shared.",
+    file: "product-reporting-dashboard.png",
+    alt: "Product screenshot showing reporting dashboards, report controls, and sharing.",
   },
 };
 
@@ -265,11 +298,59 @@ function visualFor(row) {
 
   const title = row.title.toLowerCase();
   const category = row.category;
+  const categoryVisuals = {
+    Onboarding: {
+      file: "onboarding-setup-by-role-annotated.svg",
+      alt: "Annotated onboarding screen showing role-specific setup sections.",
+    },
+    Integrations: {
+      file: "product-integrations-settings.png",
+      alt: "Product screenshot showing connected sources, reconnect states, and setup tabs.",
+    },
+    "Meetings and notes": {
+      file: "product-meetings-dashboard.png",
+      alt: "Product screenshot showing meeting history, notetaker status, and manual meeting capture.",
+    },
+    Desktop: {
+      file: "desktop-settings-annotated.svg",
+      alt: "Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.",
+    },
+    "Deals and CRM workspace": {
+      file: "product-deals-board.png",
+      alt: "Product screenshot showing pipeline views, filters, deal health, and CRM context.",
+    },
+    "Field mapping and CRM configuration": {
+      file: "product-field-mapping.png",
+      alt: "Product screenshot showing CRM properties, pipeline stages, and sync checks.",
+    },
+    "Drafts, email, and templates": {
+      file: "product-drafts-inbox.png",
+      alt: "Product screenshot showing draft queues, review controls, and send states.",
+    },
+    "Knowledge base and generated docs": {
+      file: "knowledge-base-annotated.svg",
+      alt: "Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.",
+    },
+    "Ergo AI, search, and automation": {
+      file: "product-ai-chat.png",
+      alt: "Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.",
+    },
+    Reporting: {
+      file: "product-reporting-dashboard.png",
+      alt: "Product screenshot showing reporting dashboards, filters, sharing, and report controls.",
+    },
+    Admin: {
+      file: "product-admin-dashboard.png",
+      alt: "Product screenshot showing team membership, role controls, and access settings.",
+    },
+  };
+
+  if (categoryVisuals[category]) return categoryVisuals[category];
 
   if (category === "Admin" || title.includes("role") || title.includes("permission") || title.includes("spectator")) {
     return {
-      file: "admin-dashboard-roles-annotated.svg",
-      alt: "Annotated admin dashboard showing team membership, role controls, and access settings.",
+      file: "product-admin-dashboard.png",
+      alt: "Product screenshot showing team membership, role controls, and access settings.",
     };
   }
   if (category === "Onboarding" || title.includes("setup") || title.includes("configuration")) {
@@ -280,14 +361,14 @@ function visualFor(row) {
   }
   if (category === "Integrations" || title.includes("reconnect") || title.includes("grant")) {
     return {
-      file: "integrations-settings-annotated.svg",
-      alt: "Annotated integrations page showing connected sources, reconnect states, and setup tabs.",
+      file: "product-integrations-settings.png",
+      alt: "Product screenshot showing connected sources, reconnect states, and setup tabs.",
     };
   }
   if (category === "Meetings and notes" || title.includes("notetaker") || title.includes("meeting")) {
     return {
-      file: "meetings-dashboard-annotated.svg",
-      alt: "Annotated meetings dashboard showing upcoming meetings, notetaker status, and manual bot dispatch.",
+      file: "product-meetings-dashboard.png",
+      alt: "Product screenshot showing meeting history, notetaker status, and manual meeting capture.",
     };
   }
   if (category === "Desktop" || title.includes("desktop")) {
@@ -298,20 +379,20 @@ function visualFor(row) {
   }
   if (category === "Deals and CRM workspace" || title.includes("deal") || title.includes("company")) {
     return {
-      file: "deals-crm-annotated.svg",
-      alt: "Annotated deals workspace showing pipeline views, filters, deal health, and CRM context.",
+      file: "product-deals-board.png",
+      alt: "Product screenshot showing pipeline views, filters, deal health, and CRM context.",
     };
   }
   if (category === "Field mapping and CRM configuration" || title.includes("crm") || title.includes("stage")) {
     return {
-      file: "field-mapping-annotated.svg",
-      alt: "Annotated field mapping screen showing CRM properties, pipeline stages, and sync checks.",
+      file: "product-field-mapping.png",
+      alt: "Product screenshot showing CRM properties, pipeline stages, and sync checks.",
     };
   }
   if (category === "Drafts, email, and templates" || title.includes("draft") || title.includes("email")) {
     return {
-      file: "drafts-templates-annotated.svg",
-      alt: "Annotated drafts and templates workspace showing draft queues, review controls, and send states.",
+      file: "product-drafts-inbox.png",
+      alt: "Product screenshot showing draft queues, review controls, and send states.",
     };
   }
   if (category === "Knowledge base and generated docs" || title.includes("document")) {
@@ -322,14 +403,14 @@ function visualFor(row) {
   }
   if (category === "Ergo AI, search, and automation" || title.includes("search") || title.includes("agent")) {
     return {
-      file: "ai-search-automation-annotated.svg",
-      alt: "Annotated Ergo AI and search workspace showing sources, actions, filters, and scheduled runs.",
+      file: "product-ai-chat.png",
+      alt: "Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.",
     };
   }
   if (category === "Reporting" || title.includes("report") || title.includes("dashboard")) {
     return {
-      file: "reporting-dashboard-annotated.svg",
-      alt: "Annotated reporting dashboard showing filters, chart builder, sharing, and scheduled delivery.",
+      file: "product-reporting-dashboard.png",
+      alt: "Product screenshot showing reporting dashboards, filters, sharing, and report controls.",
     };
   }
 
@@ -388,6 +469,11 @@ function descriptionFor(row) {
     "AE setup": "Complete the personal setup AEs need for meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.",
     "CSM setup": "Complete the personal setup CSMs need for customer meetings, summaries, account context, follow-ups, and handoff workflows.",
     "Spectator and viewer setup": "Give viewers limited access to the meetings, reports, or shared links they need without full user setup.",
+    "Primary admin tips for success": "Roll out Ergo successfully by setting stable CRM, field mapping, pipeline, notetaker, reporting, and access defaults before inviting users broadly.",
+    "Secondary admin and operator tips for success": "Support rollout without overriding the primary admin by syncing approved settings, helping users finish setup, and escalating permission-bound changes.",
+    "AE tips for success": "Use Ergo day to day for meeting capture, post-call drafts, deal review, chat, CRM updates, and Slack pre-call prep.",
+    "CSM tips for success": "Use Ergo for customer meetings, account context, handoffs, follow-ups, renewals, expansion signals, and customer-facing recaps.",
+    "Spectator and viewer tips for success": "Help viewers get value from Ergo through focused meeting, reporting, dashboard, and shared-link access without granting unnecessary setup permissions.",
     "First-time setup checklist": "Complete the first setup pass for admins, users, spectators, integrations, meetings, and CRM readiness.",
     "Roles and permissions": "Understand primary admin, secondary admin, user, spectator, desktop, and access-specific permissions in Ergo.",
     "Spectator access": "Give limited meeting, reporting, or shared-link visibility without granting full user access.",
@@ -467,17 +553,32 @@ function customerAudience(row) {
   if (row.title === "Primary admin setup for founders, RevOps, and sales leaders") {
     return "founders, RevOps, VPs, sales leaders, and operations owners acting as the primary admin for rollout";
   }
+  if (row.title === "Primary admin tips for success") {
+    return "founders, RevOps, VPs, sales leaders, operations owners, and super admins responsible for making Ergo reliable before users depend on it";
+  }
   if (row.title === "Secondary admin and operator setup") {
     return "RevOps teammates, sales operations, customer operations, enablement, or managers helping administer Ergo after the primary admin sets direction";
+  }
+  if (row.title === "Secondary admin and operator tips for success") {
+    return "secondary admins, operators, enablement teammates, RevOps teammates, and managers who help users complete setup and support day-to-day adoption";
   }
   if (row.title === "AE setup") {
     return "AEs, account executives, founders selling directly, and sales managers coaching reps on daily Ergo workflows";
   }
+  if (row.title === "AE tips for success") {
+    return "AEs, account executives, founders selling directly, sales managers coaching reps, and sellers who want a practical daily Ergo workflow";
+  }
   if (row.title === "CSM setup") {
     return "CSMs, account managers, customer success leaders, founders handling customers, and post-sale teams using Ergo for customer context";
   }
+  if (row.title === "CSM tips for success") {
+    return "CSMs, account managers, customer success leaders, post-sale operators, and founders using Ergo for customer context and follow-through";
+  }
   if (row.title === "Spectator and viewer setup") {
     return "spectators, executives, managers, advisors, or cross-functional viewers who only need limited meeting or reporting visibility";
+  }
+  if (row.title === "Spectator and viewer tips for success") {
+    return "spectators, executives, managers, advisors, board observers, and cross-functional viewers who need fast visibility without operating Ergo day to day";
   }
   if (row.title === "Roles and permissions") {
     return "primary admins, secondary admins, RevOps, founders, sales leaders, users, and spectators who need to understand what each access level means";
@@ -695,6 +796,11 @@ const articleAudienceTitles = new Set([
   "AE setup",
   "CSM setup",
   "Spectator and viewer setup",
+  "Primary admin tips for success",
+  "Secondary admin and operator tips for success",
+  "AE tips for success",
+  "CSM tips for success",
+  "Spectator and viewer tips for success",
   "Roles and permissions",
   "Spectator access",
 ]);
@@ -704,6 +810,16 @@ function shouldShowArticleAudience(row) {
 }
 
 const articleBeforeStartTitles = new Set([
+  "Primary admin setup for founders, RevOps, and sales leaders",
+  "Secondary admin and operator setup",
+  "AE setup",
+  "CSM setup",
+  "Spectator and viewer setup",
+  "Primary admin tips for success",
+  "Secondary admin and operator tips for success",
+  "AE tips for success",
+  "CSM tips for success",
+  "Spectator and viewer tips for success",
   "Connect your CRM",
   "Connect email and calendar",
   "Notetaker setup",
@@ -745,6 +861,61 @@ function articleBeforeStart(row) {
     title.includes("reconnecting") ||
     title.includes("expired grant");
 
+  const roleSpecific = {
+    "Primary admin setup for founders, RevOps, and sales leaders": [
+      "Have production CRM admin access ready, including permission to approve or create properties, pipelines, and stages.",
+      "Know which CRM, email/calendar, collaboration, notetaker, reporting, and access decisions should be centralized before users join.",
+      "Bring your current pipeline stage definitions, locked stages, meeting naming rules, and reporting defaults.",
+    ],
+    "Secondary admin and operator setup": [
+      "Confirm which primary admin account you should sync from.",
+      "Know which areas you can manage yourself and which require the primary admin or a super admin.",
+      "Have your own email/calendar account ready; personal Google or Microsoft grants do not transfer from the primary admin.",
+    ],
+    "AE setup": [
+      "Make sure your account is provisioned in the correct workspace and team.",
+      "Have access to your own Google Workspace or Microsoft 365 account.",
+      "Ask which notetaker, Slack workflow, and post-call draft policy your team uses.",
+    ],
+    "CSM setup": [
+      "Make sure your account is provisioned in the correct workspace and team.",
+      "Ask whether your workspace has CS-specific pipelines, renewal or expansion stages, templates, reporting fields, or rubrics.",
+      "Confirm which customer meetings should be captured and which internal meetings should be skipped.",
+    ],
+    "Spectator and viewer setup": [
+      "Confirm the person should have limited visibility rather than full user access.",
+      "Identify the exact meetings, reports, dashboards, folders, teams, or shared links they should see.",
+      "Ask an admin to provision access before sending the viewer to Ergo.",
+    ],
+    "Primary admin tips for success": [
+      "Use this after or during the primary admin setup flow.",
+      "Have one owner for CRM, one owner for user rollout, and one owner for support/adoption follow-up.",
+      "Keep the first rollout narrow enough to test one meeting, one draft, one CRM update, and one report.",
+    ],
+    "Secondary admin and operator tips for success": [
+      "Use this after your own setup is complete and you are helping others finish theirs.",
+      "Keep a short list of what you can change directly versus what needs primary-admin approval.",
+      "Know where users should report missing meetings, expired grants, wrong team access, or draft issues.",
+    ],
+    "AE tips for success": [
+      "Use this once your email/calendar and notetaker setup are complete.",
+      "Keep your daily workflow focused on meetings, drafts, deal review, Slack prep, and Chat with Ergo.",
+      "Review AI-generated outputs before sending externally.",
+    ],
+    "CSM tips for success": [
+      "Use this once your email/calendar and meeting capture setup are complete.",
+      "Know where account context lives: meetings, deal or company records, documents, search, and reporting.",
+      "Review customer-facing recaps, handoffs, and follow-ups before sending.",
+    ],
+    "Spectator and viewer tips for success": [
+      "Use this after a viewer has been provisioned and can sign in or open a shared link.",
+      "Keep viewer access focused on the specific dashboard, report, meeting folder, or shared resource they need.",
+      "Avoid asking viewers to complete CRM, email/calendar, or notetaker setup unless their role changes.",
+    ],
+  };
+
+  if (roleSpecific[row.title]) return roleSpecific[row.title];
+
   if (row.access.includes("Admin-only")) {
     items.push("Sign in as the primary admin or as a secondary admin with permission for this area.");
   }
@@ -779,6 +950,7 @@ function articleBeforeStart(row) {
 function articleType(row) {
   const title = row.title.toLowerCase();
   if (isTroubleshootingLike(row)) return "troubleshooting";
+  if (title.includes("tips for success")) return "tips";
   if (
     row.category === "Onboarding" ||
     row.category === "Integrations" ||
@@ -819,6 +991,7 @@ function articleType(row) {
 
 function stepsHeading(row) {
   const type = articleType(row);
+  if (type === "tips") return "Tips for success";
   if (type === "setup") return "Setup steps";
   if (type === "configuration") return "Configure it";
   if (type === "overview") return "Key things to know";
@@ -1006,49 +1179,108 @@ function setupSteps(row) {
       "Use the AE setup guide for individual sellers who need meetings, pre-call prep, post-call drafts, templates, follow-ups, and deal context.",
       "Use the CSM setup guide for post-sale users who need customer meetings, summaries, account context, handoffs, and follow-up workflows.",
       "Use spectator and viewer setup when someone should view selected meetings, reports, or shared links without a full user workflow.",
+      "After a person finishes setup, use the matching tips for success article to understand the practical habits for that role.",
     ],
     "Primary admin setup for founders, RevOps, and sales leaders": [
-      "Prepare production CRM access before onboarding; do not connect a sandbox or test CRM if you expect useful AI output.",
-      "Connect the CRM with an account that can read and update the objects, properties, stages, and records Ergo should manage.",
-      "Set up pipeline stages with clear entry points, exit points, and locked stages such as Closed Won when automated restaging should not happen.",
-      "Add or approve Ergo-recommended CRM properties, including fields that may not be displayed to reps but still give Ergo context for automation and reporting.",
-      "Configure email/calendar guidance for the team: inbox monitoring, follow-up drafts, surfacing, and any external email client setting. Each user still authenticates their own email.",
-      "Enable the notetaker, review what meetings it will join, connect Slack if your team uses Slack nudges or pre-call briefs, and set recording/disclaimer defaults.",
-      "Create teams, assign secondary admins, provision users, grant reporting or spectator access, and run a small test with one meeting, one draft, one CRM update, and one report before broad rollout.",
+      "**Step 1: Welcome and role check.** Confirm you are the rollout owner for workspace-level decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, and reporting.",
+      "**Step 2: Connect your CRM.** Choose Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM. Use production CRM access with permission to read and update the records, objects, properties, pipelines, and stages Ergo should manage.",
+      "**Step 3: Connect your email and calendar.** Connect Google Workspace or Microsoft 365 for the admin account. This lets Ergo see the admin calendar, email context, and setup status; each user still connects their own personal email/calendar later.",
+      "**Step 4: Configure workspace email behavior.** Review Email Analysis, Followup Emails, and Surfacing if it is enabled for the workspace. Decide what should be on by default before users start expecting drafts, follow-ups, or CRM updates.",
+      "**Step 5: Set up email templates.** Enable templates if your team wants AI follow-up drafts to follow a known structure. Create or edit the core post-call templates before AEs and CSMs start reviewing drafts.",
+      "**Step 6: Connect collaboration tools.** Connect Slack for call prep, notifications, and handoffs. Connect Beeper only when it is enabled and part of your workflow. Connect Pylon only when support or customer-success recordings should be delivered there.",
+      "**Step 7: Connect the notetaker.** Connect calendar first, then configure the Ergo Notetaker or the approved external notetaker. For Ergo Notetaker, review post-call summary email and recording/transcript button settings after it is connected.",
+      "**Step 8: Add company details.** Fill in the company description, customer challenges, and solution overview. These details help Ergo write better summaries, drafts, and AI answers; the page auto-saves when you leave a field.",
+      "**Step 9: Add meeting title phrases.** Add the words, symbols, or phrases that identify sales or customer meetings. Use Strict Mode for exact matching or AI Boost when you want Ergo to use AI alongside the phrases.",
+      "**Step 10: Configure CRM properties.** Review and approve the deal, contact, and company properties Ergo should sync with CRM. Create or sync the required properties before expecting reliable CRM writeback or reporting fields.",
+      "**Step 11: Configure pipeline stages.** Sync or create the stages Ergo should track. Add clear descriptions, exit points, entry points, and locked stages where automation should not move deals, such as Closed Won or Closed Lost.",
+      "**Step 12: Configure pricing.** If you are a super admin, set how your company charges customers so Ergo can reason about deal amounts. Non-super-admins may see this step as informational and can continue.",
+      "**Step 13: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.",
+      "**Step 14: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.",
+      "**Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, and one report with a small pilot group.",
     ],
     "Secondary admin and operator setup": [
-      "Confirm what the primary admin delegated: user provisioning, team membership, template cleanup, notetaker defaults, reporting access, support triage, or settings sync.",
-      "Use Sync with Admin when your setup should inherit the primary admin's CRM configuration, pipeline stages, and property mappings.",
-      "Select the primary admin's email in the sync dropdown; it is the admin account you are syncing from, not necessarily your own account.",
-      "Connect your own email/calendar and Slack after syncing; those personal grants do not transfer from the primary admin.",
-      "Help users finish personal setup, verify first meetings or drafts, and troubleshoot wrong workspace, expired grants, missing admin email, and hidden reporting access.",
-      "Sync CRM/settings to team members only after the primary admin has approved the source settings.",
+      "**Step 1: Welcome and role check.** Confirm you are helping operate setup after the primary admin has defined the workspace-level CRM, pipeline, field, notetaker, reporting, and access choices.",
+      "**Step 2: Sync with Admin.** Open Sync with Admin, choose the primary admin account to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, alternate domains, partnership domains, and advanced settings.",
+      "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. Admin sync does not transfer personal inbox, calendar, or OAuth grants.",
+      "**Step 4: Configure your workspace behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Keep personal settings aligned with the primary admin's rollout unless you have a reason to differ.",
+      "**Step 5: Review templates.** Confirm whether you should use the team template, edit templates for your team, or leave templates to the primary admin. Templates shape post-call drafts for users.",
+      "**Step 6: Connect the notetaker.** Confirm the approved notetaker source and connect only the source your workspace expects. Ergo Notetaker requires a connected Google or Microsoft calendar first.",
+      "**Step 7: Connect collaboration tools.** Connect Slack for notifications and call prep. Beeper appears only when enabled. Pylon appears only for admins when the org-level Pylon workflow is available.",
+      "**Operator follow-through: help users finish setup.** Verify users are in the right workspace and team, have connected email/calendar, know the notetaker behavior, and can find drafts, meetings, and support.",
+      "**Operator follow-through: sync to team members carefully.** Use admin/team sync only after the source settings are approved, because syncing too early can spread incomplete CRM, template, or advanced settings.",
     ],
     "AE setup": [
-      "Connect email and calendar so Ergo can detect customer meetings and support post-call drafts.",
-      "Confirm the notetaker source for your workspace and check upcoming meetings before calls.",
-      "Review or customize post-call email templates, draft preferences, signature behavior, and personal instructions.",
-      "Use Slack pre-call briefs and Ergo context before meetings; most AEs do not need to live in the Ergo dashboard every day.",
-      "Use your inbox as the main daily surface: post-call follow-up drafts arrive after processed calls, and surfacing drafts appear when Ergo finds deals needing attention.",
-      "Review every draft before sending. Ergo creates drafts and nudges; it should not be treated as auto-send unless your workspace has explicitly configured that workflow.",
-      "Check summaries, action items, follow-ups, and CRM context after calls, then report missing meetings, duplicate drafts, wrong deal matching, or missing transcript/recording details with the meeting link and customer name.",
+      "**Step 1: Welcome and role check.** Confirm you are completing the user flow, not the primary admin flow. Most AEs do not configure CRM, field mapping, pipeline stages, or org-wide reporting.",
+      "**Step 2: Sync with Admin.** If prompted, sync from the primary admin so you inherit the team's approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
+      "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. This lets Ergo detect your sales meetings, read relevant email context, and create drafts in your connected email workflow.",
+      "**Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. These settings affect whether Ergo monitors relevant emails, drafts follow-ups, and surfaces stalled deal follow-ups.",
+      "**Step 5: Review templates.** Confirm that post-call templates are enabled and that the template tone fits how you follow up. You can review, edit, or create templates if your workspace allows it.",
+      "**Step 6: Confirm notetaker setup.** Check which notetaker your team uses and confirm it can see your calendar. For live calls, admit the bot from the waiting room when needed.",
+      "**Step 7: Connect collaboration tools.** Connect Slack if your team uses pre-call briefs, CRM-update notifications, or deal alerts. Beeper appears only if enabled for your workspace.",
+      "**First test: run one customer meeting.** After the call, confirm the transcript, summary, action items, CRM context, and follow-up draft appear before relying on Ergo for a full call day.",
     ],
     "CSM setup": [
-      "Connect email and calendar so Ergo can detect customer meetings and support account follow-up workflows.",
-      "Ask the primary admin whether your workspace has a CS pipeline, renewal/expansion stages, or CS-specific CRM properties before your first customer workflow.",
-      "Confirm which customer meetings should be captured and which internal meetings should be skipped.",
-      "Review templates and instructions for recap emails, renewal or expansion notes, handoffs, support escalations, and customer next steps.",
-      "Use meeting history, account context, documents, and search to prepare for customer check-ins, escalations, renewals, and handoffs.",
-      "After meetings, review summaries, action items, follow-ups, account health, and shared links before sending customer-facing updates.",
-      "If your team wants expansion, churn-risk, or playbook-grading signals, ask an admin to configure the right reporting fields or rubrics.",
+      "**Step 1: Welcome and role check.** Confirm you are completing the user flow for customer-success work. Most CSMs do not configure org-wide CRM, properties, stages, or reporting defaults unless they also have admin duties.",
+      "**Step 2: Sync with Admin.** If prompted, sync from the primary admin so you inherit the approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
+      "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account so Ergo can detect customer meetings and use relevant account communication context.",
+      "**Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Decide whether follow-up drafts should support recaps, handoffs, renewal notes, escalation updates, or customer next steps.",
+      "**Step 5: Review templates.** Confirm whether your team has CS-specific templates for check-ins, support escalations, renewals, expansions, executive recaps, or handoffs.",
+      "**Step 6: Confirm notetaker setup.** Verify which customer meetings should be captured, which internal meetings should be skipped, and whether the notetaker can see your calendar.",
+      "**Step 7: Connect collaboration tools.** Connect Slack if your team uses handoff notifications, pre-call context, or account alerts. Beeper appears only when enabled; Pylon appears only for admins when support delivery is configured.",
+      "**First test: run one customer meeting.** Confirm the summary, action items, account context, follow-up draft, shared link behavior, and any reporting or health signals before relying on the workflow broadly.",
     ],
     "Spectator and viewer setup": [
-      "Confirm the person should only view selected meetings, reports, or shared links rather than use daily Ergo workflows.",
-      "Ask a primary or secondary admin to add or convert the person as a spectator or grant limited viewer access.",
-      "Grant only the team, meeting, report, dashboard, folder, or shared-link visibility they need.",
-      "Give managers and executives a dashboard walkthrough for deal health, team pipeline, call recordings, summaries, reporting, and AI questions; they usually do not need to configure CRM or email.",
-      "Have the viewer sign in to the correct workspace and verify the exact page, dashboard, report, or link they should use.",
-      "Review access after team changes, role changes, or when a shared link should be revoked.",
+      "**Step 1: Confirm limited-access intent.** Use spectator or viewer access when the person should inspect selected meetings, dashboards, reports, or shared links without operating daily Ergo workflows.",
+      "**Step 2: Provision the viewer.** Ask a primary or secondary admin to add or convert the person and grant only the meeting, reporting, dashboard, folder, team, or shared-link visibility they need.",
+      "**Step 3: Sync with Admin if the onboarding flow asks for it.** Spectators may see a Sync with Admin step so their limited workspace context is aligned with admin configuration.",
+      "**Step 4: Connect workspace access when prompted.** The spectator onboarding path includes the email/calendar connection step. If the person is only viewing a shared link, an admin may instead send the specific shared resource.",
+      "**Step 5: Confirm notetaker/viewer behavior.** Spectator onboarding shows the Ergo Notetaker path only; viewers generally should not configure third-party notetakers or org-wide recording settings.",
+      "**Step 6: Walk through the exact destination.** Show the viewer the meetings, reports, dashboards, folders, or shared links they should use. Executives and managers usually need a dashboard/report walkthrough, not CRM or email setup.",
+      "**Step 7: Review and revoke access when needed.** Re-check access after team changes, leadership changes, project completion, or when a shared link should no longer be valid.",
+    ],
+    "Primary admin tips for success": [
+      "**Decide centrally before inviting broadly.** Users get value faster when CRM, stages, fields, templates, notetaker behavior, reporting defaults, and access rules are set before they sign in.",
+      "**Use production data for the real rollout.** Ergo's AI, CRM updates, draft quality, and reporting depend on real CRM records, real calendar events, real pipeline stages, and real communication history.",
+      "**Treat field mapping as a prerequisite.** If properties, permissions, or stages are incomplete, downstream CRM updates and reporting will look unreliable even when the notetaker and drafts work.",
+      "**Lock stages that automation should not move.** Closed Won, Closed Lost, renewal-complete, and other final states should be protected when your process requires it.",
+      "**Keep the first pilot small.** Test one admin, one AE, one CSM, one customer meeting, one draft, one CRM update, one Slack notification, and one reporting dashboard before rolling out to the full team.",
+      "**Create a support loop for the first week.** Ask users to report missing meetings, wrong deal matching, unexpected drafts, access issues, and CRM writeback problems with the meeting or deal link.",
+      "**Measure adoption from workflows, not logins.** Good rollout signs include admitted notetakers, reviewed drafts, corrected CRM context, useful Slack briefs, and managers using reports.",
+    ],
+    "Secondary admin and operator tips for success": [
+      "**Know the source of truth.** When you sync or push settings, use only primary-admin-approved CRM, stage, property, template, domain, and advanced settings.",
+      "**Do not repeat primary setup unless you own it.** Secondary admins should usually inherit CRM configuration instead of reconnecting or redefining fields independently.",
+      "**Triage users by setup layer.** First check workspace/team, then role/access, then email/calendar grants, then notetaker status, then templates/draft settings, then CRM mapping.",
+      "**Keep personal grants separate from admin sync.** A user can inherit team settings, but each person still connects their own Google Workspace or Microsoft 365 account.",
+      "**Escalate permission-bound issues quickly.** CRM connection, org-wide Pylon, reporting defaults, pricing configuration, and some access changes may require primary admin or super-admin help.",
+      "**Sync to users after confirming the source.** Spreading incomplete templates, stage settings, or advanced settings creates avoidable cleanup for every user.",
+    ],
+    "AE tips for success": [
+      "**Use meetings as the engine.** Ergo's notetaker captures sales calls and produces the transcript, summary, and action items that power drafts, CRM updates, deal context, and AI answers.",
+      "**Admit the bot when it appears.** If the meeting host sees Ergo in the waiting room, admit it. If the bot is missing from a live call, use the manual Add Bot workflow or ask an admin for help.",
+      "**Work post-call drafts in batches.** Drafts can appear in your email drafts and in Ergo. Review recipients, facts, next steps, links, and tone before sending.",
+      "**Use templates to avoid starting from scratch.** Templates help Ergo match your preferred post-call structure; adjust them when your sales motion or follow-up style changes.",
+      "**Use Deals as your daily pipeline check.** Review board/list views, health, priority, recent activity, open next steps, and AI overviews to find what is moving or stalling.",
+      "**Ask Ergo specific questions.** Name the customer, deal, last meeting, date range, or desired output. For example, ask for call prep, a follow-up draft, agreed next steps, or risk summary.",
+      "**Watch Slack before calls.** If Slack is connected, use the pre-call brief and notifications as your heads-up for company background, CRM context, open items, and post-call CRM updates.",
+      "**Correct bad context early.** If a draft, deal match, CRM field, or summary looks wrong, fix the source record or ask Ergo/support for help before the same issue repeats.",
+    ],
+    "CSM tips for success": [
+      "**Use meeting history before every customer conversation.** Review the most recent calls, summaries, action items, and account context before check-ins, escalations, renewals, and handoffs.",
+      "**Make follow-ups customer-safe.** Treat Ergo drafts and summaries as a starting point; review customer facts, commitments, tone, links, and owners before sending externally.",
+      "**Ask admins for CS-specific setup.** Renewal stages, expansion signals, churn-risk fields, support-escalation templates, and CS dashboards need to be configured before Ergo can report on them reliably.",
+      "**Link context across account work.** Use company/deal records, documents, meeting history, search, and notes so handoffs and renewal prep do not depend on memory.",
+      "**Use search for account recall.** Search by customer, stakeholder, topic, meeting, date range, risk, feature request, or commitment when preparing for a customer conversation.",
+      "**Separate internal and customer meetings.** Confirm which meetings should be captured and which should be skipped so internal planning calls do not create confusing customer outputs.",
+      "**Use reporting as a signal layer.** Expansion signals, churn signals, feature requests, objections, and account health are useful only when fields, rubrics, and meeting capture are set correctly.",
+    ],
+    "Spectator and viewer tips for success": [
+      "**Start from the question the viewer needs answered.** Executives, managers, advisors, and board observers usually need a dashboard, report, meeting recording, summary, or shared link, not full setup.",
+      "**Keep access narrow.** Grant the specific team, report, dashboard, meeting folder, or shared link needed for the viewing workflow.",
+      "**Use dashboards for ongoing visibility.** Reporting and deal-health dashboards are better than sending one-off meeting links when the viewer needs recurring insight.",
+      "**Use shared meetings for specific review.** Send a meeting, clip, or password-protected link when the viewer needs one customer conversation, not broad workspace visibility.",
+      "**Explain data freshness.** Viewers should know that meeting outputs, CRM updates, and reporting dashboards can refresh on different timelines.",
+      "**Review access regularly.** Remove or narrow access after a project ends, a role changes, a shared link is no longer needed, or a viewer leaves the company.",
     ],
     "Connect your CRM": [
       "Choose the CRM your workspace uses: Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM.",
@@ -2361,6 +2593,51 @@ function commonIssues(row) {
       "The viewer signs into the wrong workspace or opens a link without the required access.",
       "A shared link, meeting folder, report, or dashboard was not actually shared with the viewer.",
       "Access remains available after the viewer no longer needs it.",
+    ];
+  }
+  if (title === "Primary admin tips for success") {
+    return [
+      "Users are invited before CRM, templates, notetaker behavior, reporting defaults, or access rules are ready.",
+      "The pilot uses sandbox or synthetic records, so AI outputs and reports do not reflect real workflows.",
+      "Field mapping and stage controls are skipped even though CRM updates depend on them.",
+      "Too many teams are rolled out before one meeting, draft, CRM update, Slack notification, and report are tested.",
+      "No one owns the first-week feedback loop for missing meetings, wrong context, or draft quality.",
+    ];
+  }
+  if (title === "Secondary admin and operator tips for success") {
+    return [
+      "The operator does not know which settings the primary admin approved.",
+      "Users ask the secondary admin to fix issues that require primary-admin or super-admin permission.",
+      "Personal email/calendar grants are confused with synced admin configuration.",
+      "Settings are pushed to teams before the source configuration is ready.",
+      "Support triage starts from the symptom instead of checking workspace, role, grants, notetaker, templates, and CRM mapping in order.",
+    ];
+  }
+  if (title === "AE tips for success") {
+    return [
+      "The AE expects drafts before the meeting has processed or before the call qualifies for draft generation.",
+      "The AE assumes Ergo auto-sends drafts instead of treating drafts as reviewable suggestions.",
+      "The bot was not admitted, the meeting moved, or the meeting was not on the connected calendar.",
+      "Deal or company context is wrong because CRM records, domains, or meeting titles are unclear.",
+      "Slack pre-call briefs or CRM-update notifications are expected before Slack is connected or the bot is in the right channels.",
+    ];
+  }
+  if (title === "CSM tips for success") {
+    return [
+      "CSM workflows expect renewal, expansion, or churn signals before CS-specific fields, stages, templates, or dashboards exist.",
+      "Internal meetings are captured or customer meetings are skipped because capture rules are unclear.",
+      "Customer recaps are sent without reviewing AI-generated commitments, owners, links, or tone.",
+      "Account context is incomplete because relevant documents, prior meetings, or CRM records are not linked.",
+      "Reporting is interpreted before enough customer meetings or mapped CS fields have populated.",
+    ];
+  }
+  if (title === "Spectator and viewer tips for success") {
+    return [
+      "A viewer receives full user access when a report, shared meeting, or spectator role would be enough.",
+      "The viewer opens the wrong workspace, stale shared link, or report without access.",
+      "Viewers expect real-time reporting before meetings and CRM updates have finished processing.",
+      "Shared links remain active after the project, board review, or leadership workflow ends.",
+      "A viewer is asked to configure email, CRM, or notetaker settings even though they only need visibility.",
     ];
   }
   if (title.includes("reporting") || row.category === "Reporting") {

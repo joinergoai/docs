@@ -5,7 +5,7 @@ keywords: ["Secondary admin and operator setup","Onboarding","Ergo docs"]
 ---
 
 
-![Annotated admin dashboard showing delegated setup, user management, and access controls.](../images/admin-dashboard-roles-annotated.svg)
+![Product screenshot showing delegated setup, user management, and access controls.](../images/product-admin-dashboard.png)
 
 
 ## Who is this for?
@@ -13,15 +13,24 @@ keywords: ["Secondary admin and operator setup","Onboarding","Ergo docs"]
 - For RevOps teammates, sales operations, customer operations, enablement, or managers helping administer Ergo after the primary admin sets direction.
 - Requires Google Workspace or Microsoft 365, CRM, Notetaker.
 
+## Before you start
+
+- Confirm which primary admin account you should sync from.
+- Know which areas you can manage yourself and which require the primary admin or a super admin.
+- Have your own email/calendar account ready; personal Google or Microsoft grants do not transfer from the primary admin.
+
 
 ## Setup steps
 
-- Confirm what the primary admin delegated: user provisioning, team membership, template cleanup, notetaker defaults, reporting access, support triage, or settings sync.
-- Use Sync with Admin when your setup should inherit the primary admin's CRM configuration, pipeline stages, and property mappings.
-- Select the primary admin's email in the sync dropdown; it is the admin account you are syncing from, not necessarily your own account.
-- Connect your own email/calendar and Slack after syncing; those personal grants do not transfer from the primary admin.
-- Help users finish personal setup, verify first meetings or drafts, and troubleshoot wrong workspace, expired grants, missing admin email, and hidden reporting access.
-- Sync CRM/settings to team members only after the primary admin has approved the source settings.
+- **Step 1: Welcome and role check.** Confirm you are helping operate setup after the primary admin has defined the workspace-level CRM, pipeline, field, notetaker, reporting, and access choices.
+- **Step 2: Sync with Admin.** Open Sync with Admin, choose the primary admin account to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, alternate domains, partnership domains, and advanced settings.
+- **Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. Admin sync does not transfer personal inbox, calendar, or OAuth grants.
+- **Step 4: Configure your workspace behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Keep personal settings aligned with the primary admin's rollout unless you have a reason to differ.
+- **Step 5: Review templates.** Confirm whether you should use the team template, edit templates for your team, or leave templates to the primary admin. Templates shape post-call drafts for users.
+- **Step 6: Connect the notetaker.** Confirm the approved notetaker source and connect only the source your workspace expects. Ergo Notetaker requires a connected Google or Microsoft calendar first.
+- **Step 7: Connect collaboration tools.** Connect Slack for notifications and call prep. Beeper appears only when enabled. Pylon appears only for admins when the org-level Pylon workflow is available.
+- **Operator follow-through: help users finish setup.** Verify users are in the right workspace and team, have connected email/calendar, know the notetaker behavior, and can find drafts, meetings, and support.
+- **Operator follow-through: sync to team members carefully.** Use admin/team sync only after the source settings are approved, because syncing too early can spread incomplete CRM, template, or advanced settings.
 
 ## Common issues
 
@@ -34,7 +43,7 @@ keywords: ["Secondary admin and operator setup","Onboarding","Ergo docs"]
 
 ## Related articles
 
-- [Setup by role](./setup-by-role)
+- [Secondary admin and operator tips for success](./secondary-admin-and-operator-tips-for-success)
 - [User sync](./user-sync)
 - [Email templates setup](./email-templates-setup)
 - [Sync CRM/settings to team members](../admin/sync-crm-settings-to-team-members)

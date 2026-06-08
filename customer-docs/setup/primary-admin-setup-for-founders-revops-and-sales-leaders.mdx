@@ -11,18 +11,32 @@ keywords: ["Primary admin setup for founders, RevOps, and sales leaders","Onboar
 ## Who is this for?
 
 - For founders, RevOps, VPs, sales leaders, and operations owners acting as the primary admin for rollout.
-- Requires CRM, Google Workspace or Microsoft 365, Notetaker, Reporting.
+- Requires CRM, Google Workspace or Microsoft 365, Notetaker.
+
+## Before you start
+
+- Have production CRM admin access ready, including permission to approve or create properties, pipelines, and stages.
+- Know which CRM, email/calendar, collaboration, notetaker, reporting, and access decisions should be centralized before users join.
+- Bring your current pipeline stage definitions, locked stages, meeting naming rules, and reporting defaults.
 
 
 ## Setup steps
 
-- Prepare production CRM access before onboarding; do not connect a sandbox or test CRM if you expect useful AI output.
-- Connect the CRM with an account that can read and update the objects, properties, stages, and records Ergo should manage.
-- Set up pipeline stages with clear entry points, exit points, and locked stages such as Closed Won when automated restaging should not happen.
-- Add or approve Ergo-recommended CRM properties, including fields that may not be displayed to reps but still give Ergo context for automation and reporting.
-- Configure email/calendar guidance for the team: inbox monitoring, follow-up drafts, surfacing, and any external email client setting. Each user still authenticates their own email.
-- Enable the notetaker, review what meetings it will join, connect Slack if your team uses Slack nudges or pre-call briefs, and set recording/disclaimer defaults.
-- Create teams, assign secondary admins, provision users, grant reporting or spectator access, and run a small test with one meeting, one draft, one CRM update, and one report before broad rollout.
+- **Step 1: Welcome and role check.** Confirm you are the rollout owner for workspace-level decisions. A notetaker-only workspace may show a shorter setup path; a full revenue workspace continues through CRM, email, workspace configuration, templates, collaboration, notetaker, CRM configuration, and reporting.
+- **Step 2: Connect your CRM.** Choose Salesforce, HubSpot, Attio, Pipedrive, or Ergo CRM. Use production CRM access with permission to read and update the records, objects, properties, pipelines, and stages Ergo should manage.
+- **Step 3: Connect your email and calendar.** Connect Google Workspace or Microsoft 365 for the admin account. This lets Ergo see the admin calendar, email context, and setup status; each user still connects their own personal email/calendar later.
+- **Step 4: Configure workspace email behavior.** Review Email Analysis, Followup Emails, and Surfacing if it is enabled for the workspace. Decide what should be on by default before users start expecting drafts, follow-ups, or CRM updates.
+- **Step 5: Set up email templates.** Enable templates if your team wants AI follow-up drafts to follow a known structure. Create or edit the core post-call templates before AEs and CSMs start reviewing drafts.
+- **Step 6: Connect collaboration tools.** Connect Slack for call prep, notifications, and handoffs. Connect Beeper only when it is enabled and part of your workflow. Connect Pylon only when support or customer-success recordings should be delivered there.
+- **Step 7: Connect the notetaker.** Connect calendar first, then configure the Ergo Notetaker or the approved external notetaker. For Ergo Notetaker, review post-call summary email and recording/transcript button settings after it is connected.
+- **Step 8: Add company details.** Fill in the company description, customer challenges, and solution overview. These details help Ergo write better summaries, drafts, and AI answers; the page auto-saves when you leave a field.
+- **Step 9: Add meeting title phrases.** Add the words, symbols, or phrases that identify sales or customer meetings. Use Strict Mode for exact matching or AI Boost when you want Ergo to use AI alongside the phrases.
+- **Step 10: Configure CRM properties.** Review and approve the deal, contact, and company properties Ergo should sync with CRM. Create or sync the required properties before expecting reliable CRM writeback or reporting fields.
+- **Step 11: Configure pipeline stages.** Sync or create the stages Ergo should track. Add clear descriptions, exit points, entry points, and locked stages where automation should not move deals, such as Closed Won or Closed Lost.
+- **Step 12: Configure pricing.** If you are a super admin, set how your company charges customers so Ergo can reason about deal amounts. Non-super-admins may see this step as informational and can continue.
+- **Step 13: Review advanced settings.** Configure alternate domains, partnership domains, alternate emails, Slack notification behavior, block-deal-creation rules, amount population, and CRM extraction eagerness only after the core CRM setup is stable.
+- **Step 14: Choose reporting defaults when reporting is enabled.** Decide whether to create the default Sales, Customer Success, and Product dashboards and the default sales grading rubric. This step only appears for workspaces with reporting access.
+- **Final check: run one narrow test.** Before broad rollout, test one customer meeting, one post-call draft, one CRM update, one stage movement, one Slack notification, and one report with a small pilot group.
 
 ## Common issues
 
@@ -34,7 +48,7 @@ keywords: ["Primary admin setup for founders, RevOps, and sales leaders","Onboar
 
 ## Related articles
 
-- [Setup by role](./setup-by-role)
+- [Primary admin tips for success](./primary-admin-tips-for-success)
 - [Connect your CRM](./connect-your-crm)
 - [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
 - [Admin dashboard overview](../admin/admin-dashboard-overview)
