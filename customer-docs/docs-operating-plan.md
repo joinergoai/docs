@@ -16,11 +16,11 @@ Use `customer-docs/` as the content root because `/docs/` is ignored by the curr
 
 The current Mintlify build includes the full inventory-derived corpus:
 
-- 209 customer-facing article pages
+- 216 customer-facing article pages
 - 14 top-level navigation groups, including a curated By role layer
 - Home page plus section index pages
 - 13 customer-facing diagram assets in `customer-docs/images/`
-- Navigation generated from `customer-docs/ergo-customer-user-docs-inventory.md`
+- Navigation generated from `customer-docs/ergo-customer-user-docs-inventory.md`, plus curated Start here and By role bridge pages
 - Generation script: `customer-docs/scripts/generate-docs.mjs`
 
 The P0 articles should be treated as the launch-critical layer. P1-P3 articles are present as customer-facing drafts and should be refined with product screenshots, exact UI labels, and owner review as the docs program matures.

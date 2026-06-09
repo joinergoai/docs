@@ -102,6 +102,15 @@ const roleNavGroup = {
   ],
 };
 
+const startHereNavPages = [
+  "customer-docs/start-here/welcome-to-ergo",
+  "customer-docs/start-here/navigating-ergo",
+  "customer-docs/start-here/roles-and-permissions",
+  "customer-docs/start-here/spectator-access",
+  "customer-docs/start-here/prompting-ergo-and-getting-support",
+  "customer-docs/start-here/find-your-role-path",
+];
+
 const relatedByTitle = {
   "Welcome to Ergo": ["First-time setup checklist", "Roles and permissions", "Getting support"],
   "Roles and permissions": ["Spectator access", "Promote/demote/convert roles", "Permission or access denied"],
@@ -2934,11 +2943,11 @@ function sectionIndexMdx(category, rows) {
   if (category === "Start and guidelines") {
     return `---
 title: "${escapeYaml(meta.group)}"
-description: "${escapeYaml(meta.description)}"
+description: "Use this section for the few articles everyone should know before going deeper into setup, workflows, or troubleshooting."
 icon: "${meta.icon}"
 ---
 
-${meta.description}
+Use this section for the few articles everyone should know before going deeper into setup, workflows, or troubleshooting.
 
 ## Who this section is for
 
@@ -2948,15 +2957,14 @@ ${renderList(audience)}
 
 ${renderList(before)}
 
-## First paths
+## Critical articles
 
-- [By role](/customer-docs/roles/index)
-- [First-time setup checklist](/customer-docs/setup/first-time-setup-checklist)
-- [Troubleshooting](/customer-docs/troubleshooting/index)
-
-## Articles
-
-${pageLinks}
+- [Welcome to Ergo](./welcome-to-ergo)
+- [Navigating Ergo](./navigating-ergo)
+- [Roles and permissions](./roles-and-permissions)
+- [Spectator access](./spectator-access)
+- [Prompting Ergo and getting support](./prompting-ergo-and-getting-support)
+- [Find your role path](./find-your-role-path)
 
 ## Common issue path
 
@@ -3115,12 +3123,12 @@ description: "Customer help center for setting up, using, and troubleshooting Er
 
 Welcome to Ergo's customer help center. Use the shortest path that matches what you are trying to do, then jump into the deeper library only when you need more detail.
 
-## Start from the human problem
+## Start with what you need
 
-- **I need the right docs for my role:** use [By role](${link("roles/index")}) for RevOps, Sales Manager, AE, CSM, or SDR paths.
+- **I need the right docs for my role:** start with [Find your role path](${link("start-here/find-your-role-path")}) for RevOps, Sales Manager, AE, CSM, or SDR paths.
 - **I am setting up Ergo:** start with [First-time setup checklist](${link("setup/first-time-setup-checklist")}), then [Setup by role](${link("setup/setup-by-role")}).
 - **Something is broken or missing:** start with [Troubleshooting](${link("troubleshooting/index")}).
-- **I need the critical concepts first:** read [Data sources and freshness](${link("start-here/data-sources-and-freshness")}), [Roles and permissions](${link("start-here/roles-and-permissions")}), and [Reviewing AI-generated outputs](${link("start-here/reviewing-ai-generated-outputs")}).
+- **I need the basics first:** read [Welcome to Ergo](${link("start-here/welcome-to-ergo")}), [Navigating Ergo](${link("start-here/navigating-ergo")}), and [Roles and permissions](${link("start-here/roles-and-permissions")}).
 
 ## Essential setup
 
@@ -3572,7 +3580,7 @@ function writeDocsJson(groups) {
       group: meta.group,
       icon: meta.icon,
       root: `customer-docs/${dir}/index`,
-      pages: rows.map(pagePathFor),
+      pages: category === "Start and guidelines" ? startHereNavPages : rows.map(pagePathFor),
     };
   });
   const startHereIndex = generatedGroups.findIndex((group) => group.group === "Start here");

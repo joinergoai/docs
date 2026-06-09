@@ -30,12 +30,8 @@
           "customer-docs/start-here/navigating-ergo",
           "customer-docs/start-here/roles-and-permissions",
           "customer-docs/start-here/spectator-access",
-          "customer-docs/start-here/data-sources-and-freshness",
-          "customer-docs/start-here/security-data-retention-and-llm-usage",
-          "customer-docs/start-here/reviewing-ai-generated-outputs",
-          "customer-docs/start-here/prompting-ergo-effectively",
-          "customer-docs/start-here/recording-privacy-basics",
-          "customer-docs/start-here/getting-support"
+          "customer-docs/start-here/prompting-ergo-and-getting-support",
+          "customer-docs/start-here/find-your-role-path"
         ]
       },
       {
