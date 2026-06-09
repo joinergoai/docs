@@ -39,6 +39,18 @@
         ]
       },
       {
+        "group": "By role",
+        "icon": "users",
+        "root": "customer-docs/roles/index",
+        "pages": [
+          "customer-docs/roles/revops",
+          "customer-docs/roles/sales-manager",
+          "customer-docs/roles/ae",
+          "customer-docs/roles/csm",
+          "customer-docs/roles/sdr"
+        ]
+      },
+      {
         "group": "Setup",
         "icon": "list-checks",
         "root": "customer-docs/setup/index",

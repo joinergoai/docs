@@ -17,7 +17,7 @@ Use `customer-docs/` as the content root because `/docs/` is ignored by the curr
 The current Mintlify build includes the full inventory-derived corpus:
 
 - 209 customer-facing article pages
-- 13 top-level collections
+- 14 top-level navigation groups, including a curated By role layer
 - Home page plus section index pages
 - 13 customer-facing diagram assets in `customer-docs/images/`
 - Navigation generated from `customer-docs/ergo-customer-user-docs-inventory.md`
@@ -28,18 +28,19 @@ The P0 articles should be treated as the launch-critical layer. P1-P3 articles a
 ## Top-Level Collections
 
 1. Start here
-2. Setup
-3. Integrations
-4. Meetings and notetaker
-5. Desktop
-6. Deals and CRM
-7. Field mapping
-8. Drafts, email, and templates
-9. Knowledge base and documents
-10. Ergo AI, search, and automation
-11. Reporting
-12. Admin
-13. Troubleshooting
+2. By role
+3. Setup
+4. Integrations
+5. Meetings and notetaker
+6. Desktop
+7. Deals and CRM
+8. Field mapping
+9. Drafts, email, and templates
+10. Knowledge base and documents
+11. Ergo AI, search, and automation
+12. Reporting
+13. Admin
+14. Troubleshooting
 
 ## Section Pattern
 

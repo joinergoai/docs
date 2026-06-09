@@ -89,6 +89,19 @@ const sectionMeta = {
   },
 };
 
+const roleNavGroup = {
+  group: "By role",
+  icon: "users",
+  root: "customer-docs/roles/index",
+  pages: [
+    "customer-docs/roles/revops",
+    "customer-docs/roles/sales-manager",
+    "customer-docs/roles/ae",
+    "customer-docs/roles/csm",
+    "customer-docs/roles/sdr",
+  ],
+};
+
 const relatedByTitle = {
   "Welcome to Ergo": ["First-time setup checklist", "Roles and permissions", "Getting support"],
   "Roles and permissions": ["Spectator access", "Promote/demote/convert roles", "Permission or access denied"],
@@ -2918,6 +2931,149 @@ function sectionIndexMdx(category, rows) {
   const audience = sectionAudience(category);
   const before = sectionBeforeStart(category);
 
+  if (category === "Start and guidelines") {
+    return `---
+title: "${escapeYaml(meta.group)}"
+description: "${escapeYaml(meta.description)}"
+icon: "${meta.icon}"
+---
+
+${meta.description}
+
+## Who this section is for
+
+${renderList(audience)}
+
+## Before you start
+
+${renderList(before)}
+
+## First paths
+
+- [By role](/customer-docs/roles/index)
+- [First-time setup checklist](/customer-docs/setup/first-time-setup-checklist)
+- [Troubleshooting](/customer-docs/troubleshooting/index)
+
+## Articles
+
+${pageLinks}
+
+## Common issue path
+
+- If you are blocked, start with the article closest to the symptom.
+- If the symptom crosses sources or permissions, use [Troubleshooting](../troubleshooting/index).
+`;
+  }
+
+  if (category === "Onboarding") {
+    return `---
+title: "${escapeYaml(meta.group)}"
+description: "Use this section to connect CRM, email/calendar, collaboration tools, notetakers, email templates, and role-specific defaults."
+icon: "${meta.icon}"
+---
+
+Use this section to connect CRM, email/calendar, collaboration tools, notetakers, email templates, and role-specific defaults.
+
+Start with the article that matches the setup owner, source, or workflow in front of you. If you know the person's job but not the product area, use [By role](/customer-docs/roles/index).
+
+## Who this section is for
+
+${renderList(audience)}
+
+## Before you start
+
+${renderList(before)}
+
+## Essential setup
+
+- [First-time setup checklist](./first-time-setup-checklist)
+- [Setup by role](./setup-by-role)
+- [Connect your CRM](./connect-your-crm)
+- [Connect email and calendar](./connect-email-and-calendar)
+- [Notetaker setup](./notetaker-setup)
+- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
+- [Pipeline stages](./pipeline-stages)
+
+## Role setup
+
+- [RevOps setup for Ergo rollout](./revops-setup-for-ergo-rollout)
+- [Operator setup](./operator-setup)
+- [AE setup](./ae-setup)
+- [CSM setup](./csm-setup)
+- [Spectator and viewer setup](./spectator-and-viewer-setup)
+- [RevOps playbook](/customer-docs/roles/revops)
+- [Sales manager playbook](/customer-docs/roles/sales-manager)
+- [AE playbook](/customer-docs/roles/ae)
+- [CSM playbook](/customer-docs/roles/csm)
+- [SDR playbook](/customer-docs/roles/sdr)
+
+## Tips and adoption
+
+- [RevOps tips for success](./revops-tips-for-success)
+- [Operator tips for success](./operator-tips-for-success)
+- [AE tips for success](./ae-tips-for-success)
+- [CSM tips for success](./csm-tips-for-success)
+- [Sales manager tips for success](./sales-manager-tips-for-success)
+- [Spectator and viewer tips for success](./spectator-and-viewer-tips-for-success)
+
+## Shared workspace configuration
+
+- [Workspace configuration](./workspace-configuration)
+- [Email templates setup](./email-templates-setup)
+- [Collaboration tools setup](./collaboration-tools-setup)
+- [User sync](./user-sync)
+- [Company details](./company-details)
+- [Meeting title phrases](./meeting-title-phrases)
+- [CRM properties setup](./crm-properties-setup)
+- [Pricing configuration](./pricing-configuration)
+- [Advanced settings](./advanced-settings)
+- [Reporting defaults](./reporting-defaults)
+
+## Common issue path
+
+- If you are blocked, start with the article closest to the symptom.
+- If the symptom crosses sources or permissions, use [Troubleshooting](../troubleshooting/index).
+`;
+  }
+
+  if (category === "Troubleshooting") {
+    return `---
+title: "${escapeYaml(meta.group)}"
+description: "Use this section to diagnose durable symptoms by checking the most common source, permission, processing, and configuration causes first."
+icon: "${meta.icon}"
+---
+
+Use this section to find the Troubleshooting article that matches the symptom, source, or access issue in front of you.
+
+## Who this section is for
+
+${renderList(audience)}
+
+## Before you start
+
+${renderList(before)}
+
+## Start with the symptom
+
+- **Sign-in, setup, or access:** [Sign-in and desktop callback issues](./sign-in-and-desktop-callback-issues), [Dashboard setup errors](./dashboard-setup-errors), [Permission or access denied](./permission-or-access-denied).
+- **CRM or pipeline data:** [CRM sync issues](./crm-sync-issues), [Stage drift conflicts](./stage-drift-conflicts).
+- **Connected sources:** [Google/Microsoft/Slack reconnects](./google-microsoft-slack-reconnects), [Slack Enterprise Grid channel listing issues](./slack-enterprise-grid-channel-listing-issues), [Slack disconnect/reconnect and stale channel mappings](./slack-disconnect-reconnect-and-stale-channel-mappings).
+- **Meetings and recordings:** [Notetaker did not join](./notetaker-did-not-join), [Transcript or recording missing](./transcript-or-recording-missing).
+- **Drafts and follow-up:** [Draft send failures](./draft-send-failures), [Duplicate drafts from multiple notetakers](./duplicate-drafts-from-multiple-notetakers).
+- **Reporting and search:** [Search/reporting has no results](./search-reporting-has-no-results).
+- **Delivery workflows:** [Add Ergo to new Slack customer channels](./add-ergo-to-new-slack-customer-channels), [Pylon delivery failures, duplicate deliveries, and queue health](./pylon-delivery-failures-duplicate-deliveries-and-queue-health).
+
+## All troubleshooting articles
+
+${pageLinks}
+
+## Common issue path
+
+- If the symptom is unclear, identify whether it started from sign-in, setup, a connected source, a meeting, a draft, a report, or access.
+- If the symptom crosses categories, check source connection, user access, object visibility, and processing state before escalating.
+`;
+  }
+
   return `---
 title: "${escapeYaml(meta.group)}"
 description: "${escapeYaml(meta.description)}"
@@ -2944,29 +3100,56 @@ If you are trying to fix something specific, start with the article closest to t
 `;
 }
 
+function docsLink(prefix, relativePath) {
+  if (prefix === ".") return `/customer-docs/${relativePath}`;
+  return `${prefix}/${relativePath}`;
+}
+
 function rootIndexMdx(prefix = ".") {
+  const link = (relativePath) => docsLink(prefix, relativePath);
+
   return `---
 title: "Ergo Docs"
 description: "Customer help center for setting up, using, and troubleshooting Ergo."
 ---
 
-Welcome to Ergo's customer help center. Start with setup if you are new, jump into the product area you are using, or use troubleshooting when something is blocking you.
+Welcome to Ergo's customer help center. Use the shortest path that matches what you are trying to do, then jump into the deeper library only when you need more detail.
 
-## Recommended first articles
+## Start from the human problem
 
-- [Welcome to Ergo](${prefix}/start-here/welcome-to-ergo)
-- [First-time setup checklist](${prefix}/setup/first-time-setup-checklist)
-- [Connect email and calendar](${prefix}/setup/connect-email-and-calendar)
-- [Notetaker setup](${prefix}/setup/notetaker-setup)
-- [Field mapping setup](${prefix}/field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [Troubleshooting](${prefix}/troubleshooting/index)
+- **I need the right docs for my role:** use [By role](${link("roles/index")}) for RevOps, Sales Manager, AE, CSM, or SDR paths.
+- **I am setting up Ergo:** start with [First-time setup checklist](${link("setup/first-time-setup-checklist")}), then [Setup by role](${link("setup/setup-by-role")}).
+- **Something is broken or missing:** start with [Troubleshooting](${link("troubleshooting/index")}).
+- **I need the critical concepts first:** read [Data sources and freshness](${link("start-here/data-sources-and-freshness")}), [Roles and permissions](${link("start-here/roles-and-permissions")}), and [Reviewing AI-generated outputs](${link("start-here/reviewing-ai-generated-outputs")}).
+
+## Essential setup
+
+- [Connect email and calendar](${link("setup/connect-email-and-calendar")})
+- [Notetaker setup](${link("setup/notetaker-setup")})
+- [Connect your CRM](${link("setup/connect-your-crm")})
+- [Field mapping setup: required before CRM updates work](${link("field-mapping/field-mapping-setup-required-before-crm-updates-work")})
+- [Pipeline stages](${link("setup/pipeline-stages")})
+- [Recording/privacy basics](${link("start-here/recording-privacy-basics")})
+
+## Common issues
+
+- [Notetaker did not join](${link("troubleshooting/notetaker-did-not-join")})
+- [Transcript or recording missing](${link("troubleshooting/transcript-or-recording-missing")})
+- [CRM sync issues](${link("troubleshooting/crm-sync-issues")})
+- [Stage drift conflicts](${link("troubleshooting/stage-drift-conflicts")})
+- [Draft send failures](${link("troubleshooting/draft-send-failures")})
+- [Duplicate drafts from multiple notetakers](${link("troubleshooting/duplicate-drafts-from-multiple-notetakers")})
+- [Permission or access denied](${link("troubleshooting/permission-or-access-denied")})
+- [Search/reporting has no results](${link("troubleshooting/search-reporting-has-no-results")})
 
 ## How to use these docs
 
-- Setup articles explain prerequisites and first-time configuration.
+- Start with setup when a source, role, or workflow has not been configured yet.
+- Complete setup in dependency order: connect email and calendar, configure the notetaker, then finish CRM field mapping before expecting CRM updates.
 - Workflow articles explain how to use a product surface.
-- Troubleshooting articles start from a symptom and walk through checks.
-- Admin-area articles are written for RevOps owners, operators, admins, and delegated teammates with permission.
+- Use troubleshooting articles when something is missing, failed, duplicated, already handled manually, or access denied.
+- For access issues, separate wrong-account selection from organization or IT permission blocks before retrying.
+- Treat examples as generalized patterns; share customer-specific screenshots, error codes, and account context only in your support channel.
 `;
 }
 
@@ -3382,22 +3565,32 @@ function escapeXml(value) {
 }
 
 function writeDocsJson(groups) {
+  const generatedGroups = groups.map(({ category, rows }) => {
+    const meta = sectionMeta[category];
+    const dir = categoryDirs[category];
+    return {
+      group: meta.group,
+      icon: meta.icon,
+      root: `customer-docs/${dir}/index`,
+      pages: rows.map(pagePathFor),
+    };
+  });
+  const startHereIndex = generatedGroups.findIndex((group) => group.group === "Start here");
+  const orderedGroups =
+    startHereIndex === -1
+      ? [roleNavGroup, ...generatedGroups]
+      : [
+          ...generatedGroups.slice(0, startHereIndex + 1),
+          roleNavGroup,
+          ...generatedGroups.slice(startHereIndex + 1),
+        ];
   const navGroups = [
     {
       group: "Home",
       icon: "home",
       pages: ["customer-docs/index"],
     },
-    ...groups.map(({ category, rows }) => {
-      const meta = sectionMeta[category];
-      const dir = categoryDirs[category];
-      return {
-        group: meta.group,
-        icon: meta.icon,
-        root: `customer-docs/${dir}/index`,
-        pages: rows.map(pagePathFor),
-      };
-    }),
+    ...orderedGroups,
   ];
 
   const config = {
