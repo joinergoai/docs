@@ -1241,7 +1241,7 @@ function setupSteps(row) {
     ],
     "Operator setup": [
       "**Step 1: Welcome and role check.** Confirm you are helping operate setup after RevOps has defined the workspace-level CRM, pipeline, field, notetaker, grading, reporting, and access choices.",
-      "**Step 2: Sync with Admin.** Open Sync with Admin, choose the RevOps-approved admin account or source settings to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, alternate domains, partnership domains, and advanced settings.",
+      "**Step 2: Sync with Admin.** Open Sync with Admin, choose the RevOps-approved admin account or source settings to inherit from, and review the selected categories. The modal can sync CRM keys, properties, pipeline stages, company descriptions, meeting titles, templates, task requests, and advanced settings.",
       "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. Admin sync does not transfer personal inbox, calendar, or OAuth grants.",
       "**Step 4: Configure your workspace behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Keep personal settings aligned with RevOps' rollout unless you have a reason to differ.",
       "**Step 5: Review templates.** Confirm whether you should use the team template, edit templates for your team, or leave templates to RevOps. Templates shape post-call drafts for users.",
@@ -1252,7 +1252,7 @@ function setupSteps(row) {
     ],
     "AE setup": [
       "**Step 1: Welcome and role check.** Confirm you are completing the user flow, not the RevOps setup flow. Most AEs do not configure CRM, field mapping, pipeline stages, call grading, or org-wide reporting.",
-      "**Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the team's approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
+      "**Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the team's approved CRM keys, properties, stages, company context, meeting-title rules, templates, and advanced settings.",
       "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account. This lets Ergo detect your sales meetings, read relevant email context, and create drafts in your connected email workflow.",
       "**Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. These settings affect whether Ergo monitors relevant emails, drafts follow-ups, and surfaces stalled deal follow-ups.",
       "**Step 5: Review templates.** Confirm that post-call templates are enabled and that the template tone fits how you follow up. You can review, edit, or create templates if your workspace allows it.",
@@ -1262,7 +1262,7 @@ function setupSteps(row) {
     ],
     "CSM setup": [
       "**Step 1: Welcome and role check.** Confirm you are completing the user flow for customer-success work. Most CSMs do not configure org-wide CRM, properties, stages, or reporting defaults unless they also have admin duties.",
-      "**Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the approved CRM keys, properties, stages, company context, meeting-title rules, templates, domains, and advanced settings.",
+      "**Step 2: Sync with Admin.** If prompted, sync from the RevOps-approved admin source so you inherit the approved CRM keys, properties, stages, company context, meeting-title rules, templates, and advanced settings.",
       "**Step 3: Connect your email and calendar.** Connect your own Google Workspace or Microsoft 365 account so Ergo can detect customer meetings and use relevant account communication context.",
       "**Step 4: Configure personal email behavior.** Review Email Analysis, Followup Emails, and Surfacing if enabled. Decide whether follow-up drafts should support recaps, handoffs, renewal notes, escalation updates, or customer next steps.",
       "**Step 5: Review templates.** Confirm whether your team has CS-specific templates for check-ins, support escalations, renewals, expansions, executive recaps, or handoffs.",
@@ -1290,7 +1290,7 @@ function setupSteps(row) {
       "**Measure adoption from workflows, not logins.** Good rollout signs include admitted notetakers, reviewed drafts, corrected CRM context, useful Slack briefs, managers using reports, and coaching conversations grounded in call evidence.",
     ],
     "Operator tips for success": [
-      "**Know the source of truth.** When you sync or push settings, use only RevOps-approved CRM, stage, property, template, domain, grading, reporting, and advanced settings.",
+      "**Know the source of truth.** When you sync or push settings, use only RevOps-approved CRM, stage, property, template, grading, reporting, and advanced settings.",
       "**Do not repeat RevOps setup unless you own it.** Operators should usually inherit CRM configuration instead of reconnecting or redefining fields independently.",
       "**Triage users by setup layer.** First check workspace/team, then role/access, then email/calendar grants, then notetaker status, then templates/draft settings, then CRM mapping.",
       "**Keep personal grants separate from admin sync.** A user can inherit team settings, but each person still connects their own Google Workspace or Microsoft 365 account.",
