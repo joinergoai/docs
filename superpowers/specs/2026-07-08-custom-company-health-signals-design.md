@@ -36,7 +36,7 @@ Modeled on `deal-health/customSemanticSignals.js`, simpler (no appliesTo, no cro
 - AI draft: `draftCustomSignal` / `generateScoringCriteriaFromSummary` with **account-flavored prompt wording** (churn, adoption, renewal, relationship language instead of deal/buying language). Same LLM plumbing (`callLLM`, deepseek).
 - Limits (same values as deals): max 10 signals/org, name ≤ 80 chars, criteria ≤ 2000, summary ≤ 2500, importance weights low=3 / medium=6 / high=9, total custom weight share capped at 25% (`computeCustomWeights` renormalizes; base 6 signals keep ≥ 75%).
 - `buildConfigWithCustomSignals(COMPANY_HEALTH_CONFIG, definitions)` — appends definition ids to signal names and injects normalized weights, mirroring the deal helper.
-- `enqueueScoredCompanyRescore({ orgId })` — queries `ShadowCrmCompanyV2` for `{ orgId, 'companyHealth.score': { $ne: null } }` (lean, `_id`/entityId projection) and enqueues `{ type: 'company', orgId, crmType, companyEntityId, triggerEntityType: 'custom_signal_config' }` jobs on the existing `health-scoring-queue` (same jobId bucketing and group ids the ingestion path uses). Returns the queued count for `apply.queued`.
+- `enqueueScoredCompanyRescore({ orgId })` — queries `ShadowCrmCompanyV2` for `{ orgId, 'companyHealth.score': { $ne: null } }` (lean, `_id`/entityId projection) and enqueues `{ type: 'company', orgId, crmType, companyEntityId, triggerEntityType: 'custom_signal_config' }` jobs on the existing `health-scoring-queue` (1-minute jobId dedup buckets mirroring the deal custom rescore; same group ids as the ingestion path). Returns the queued count for `apply.queued`.
 
 ### Routes — `src/routes/dashboard/companyHealthCustomSignals.js` (new)
 
