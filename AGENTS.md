@@ -31,3 +31,9 @@
 
 {/* Define what should and shouldn't be documented */}
 {/* Example: Don't document internal admin features */}
+
+## Cursor Cloud specific instructions
+
+- Preview the site with `mint dev` (serves `http://localhost:3000`). `mint` is a global npm CLI; the environment update script installs it automatically on startup.
+- Page navigation and MDX rendering work fully offline. In-site **search** shows "Login into CLI to enable search" until the Mintlify CLI is authenticated — this is expected in the sandbox and does not mean the preview is broken.
+- This repo is standalone: no build/test/lint scripts, no lockfile, no required env vars. Config lives in `docs.json`.
