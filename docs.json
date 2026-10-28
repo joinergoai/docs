@@ -312,7 +312,6 @@
           "customer-docs/admin/global-meeting-access",
           "customer-docs/admin/default-meeting-summary-settings",
           "customer-docs/admin/recording-disclaimer-defaults",
-          "customer-docs/admin/agent-persona",
           "customer-docs/admin/ergo-enabled-status",
           "customer-docs/admin/agent-usage-and-billing",
           "customer-docs/admin/impersonation"
@@ -344,5 +343,11 @@
   },
   "footer": {
     "socials": {}
-  }
+  },
+  "redirects": [
+    {
+      "source": "/customer-docs/admin/agent-persona",
+      "destination": "/customer-docs/admin"
+    }
+  ]
 }
