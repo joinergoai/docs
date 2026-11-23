@@ -1,0 +1,39 @@
+---
+title: "How Ergo sets the owner in your CRM"
+description: "Which person Ergo makes the owner of a new deal, contact or company in your CRM, and why an owner can stay empty."
+keywords: ["Deal owner", "Record owner", "CRM owner", "hubspot_owner_id", "OwnerId", "Owner field", "Assign owner"]
+---
+
+When Ergo creates a deal, contact or company in your CRM, it sets the owner to the CRM user of the Ergo person whose meeting, email or Slack message it worked from. Ergo does not change the owner of a record that already has one.
+
+## Who can use this
+
+- Everyone. There is no setting for the owner rule.
+
+## How Ergo finds the owner
+
+1. Ergo links each Ergo member to one CRM user by email. It compares the CRM user's email with the member's sign-in email, then with the member's other email addresses. Upper and lower case do not matter.
+2. Ergo writes the owner field of your CRM:
+   - HubSpot: **Deal owner**, **Contact owner** or **Company owner** (`hubspot_owner_id`).
+   - Salesforce: **Owner** (`OwnerId`).
+   - Attio: **Owner**.
+3. Ergo refreshes these links every hour, and after you connect HubSpot, Salesforce or Attio.
+
+## What to expect
+
+- Ergo sets the owner only when the field is empty. If the record already has an owner, Ergo keeps it, also if someone else had the call.
+- If Ergo finds no CRM user for a person, it still writes the record, but with no owner.
+- If two Ergo members have the same email as one CRM user, Ergo links none of them. The record gets no owner.
+
+## Common issues
+
+- **New records have no owner:** the person's Ergo email is not the email of an active CRM user. Use the same email in Ergo and in your CRM. Then wait up to one hour.
+- **The wrong person is owner:** Ergo used the CRM user of the person who had the meeting or sent the email. Change the owner in your CRM. Ergo does not change it back.
+- **You want to change the owner of existing deals:** do it in your CRM. Ergo never reassigns an owner.
+
+## Related articles
+
+- [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [CRM properties](https://support.joinergo.com/articles/3137295012)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

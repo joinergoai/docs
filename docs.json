@@ -98,7 +98,8 @@
           "customer-docs/integrations/nooks",
           "customer-docs/integrations/salesfinity",
           "customer-docs/integrations/mcp-external-agent-tools",
-          "customer-docs/integrations/webhooks"
+          "customer-docs/integrations/webhooks",
+          "customer-docs/integrations/ergo-api-keys"
         ]
       },
       {
@@ -165,7 +166,8 @@
           "customer-docs/deals-crm/activity-emails-meetings-and-documents-tabs",
           "customer-docs/deals-crm/bulk-actions",
           "customer-docs/deals-crm/bulk-email-slack-drafts",
-          "customer-docs/deals-crm/reminders-and-follow-up-view"
+          "customer-docs/deals-crm/reminders-and-follow-up-view",
+          "customer-docs/deals-crm/how-ergo-sets-the-owner"
         ]
       },
       {
@@ -211,7 +213,8 @@
           "customer-docs/drafts-email/team-access-to-email-drafts",
           "customer-docs/drafts-email/email-signatures-and-draft-footers",
           "customer-docs/drafts-email/templates-overview",
-          "customer-docs/drafts-email/create-edit-templates"
+          "customer-docs/drafts-email/create-edit-templates",
+          "customer-docs/drafts-email/how-ergo-learns-your-writing-style"
         ]
       },
       {
@@ -275,7 +278,8 @@
           "customer-docs/admin/global-meeting-access",
           "customer-docs/admin/default-meeting-summary-settings",
           "customer-docs/admin/ergo-enabled-status",
-          "customer-docs/admin/agent-usage-and-billing"
+          "customer-docs/admin/agent-usage-and-billing",
+          "customer-docs/admin/sso-and-okta-directory-sync"
         ]
       },
       {

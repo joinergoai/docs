@@ -1,0 +1,48 @@
+---
+title: "SSO and Okta directory sync"
+description: "Set up single sign-on (SSO) for Ergo, and add and remove members from Okta with directory sync."
+keywords: ["SSO", "Single sign-on", "SAML", "Okta", "SCIM", "Directory sync", "Provisioning", "WorkOS"]
+---
+
+With SSO, your team signs in to Ergo through your identity provider, for example Okta or Microsoft Entra ID. With Okta directory sync, Ergo adds and removes members from your Okta groups.
+
+## Who can use this
+
+- The organization **Owner**.
+- SSO and directory sync are add-ons. Ask Ergo support if your plan includes them.
+
+## Before you start
+
+- You need an admin of your identity provider (your IT team).
+- Without SSO, people sign in with Google, Microsoft or their work email.
+
+## Set up SSO
+
+1. Contact Ergo support. See [Get support](https://support.joinergo.com/articles/2708243049).
+2. Tell support which identity provider you use and who your IT admin is.
+3. Ergo support sets up SSO with your IT admin.
+4. When SSO is on, test it: one person signs in at dashboard.joinergo.com with SSO.
+
+## Set up Okta directory sync
+
+1. In Okta, set up the Ergo application and SCIM provisioning.
+2. In Ergo, open **Settings → Organization**. Below **Directory**, find **Okta directory sync** and click **Manage Okta directory**.
+3. Map each **Okta push group** to an Ergo team.
+
+## What to expect
+
+- Members that come from Okta show **Managed by Okta** and the group name in **Settings → Members**.
+- When Okta removes a person, Ergo shows **Removed in Okta**.
+- Directory sync supports Okta only.
+- If you do not see **Okta directory sync**, ask Ergo support to turn it on for your organization.
+
+## Common issues
+
+- **A person cannot sign in with SSO:** the person is not assigned to the Ergo application in your identity provider, or is not a member in Ergo.
+- **A person from Okta is in the wrong team:** check the group mapping in **Manage Okta directory**.
+
+## Related articles
+
+- [Add, remove or move members](https://support.joinergo.com/articles/2381379700)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Get support](https://support.joinergo.com/articles/2708243049)
