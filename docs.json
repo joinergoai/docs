@@ -26,6 +26,14 @@
         "icon": "sparkles",
         "root": "customer-docs/start-here/index",
         "pages": [
+          {
+            "group": "How to onboard",
+            "pages": [
+              "customer-docs/start-here/how-to-onboard",
+              "customer-docs/start-here/admin-onboarding",
+              "customer-docs/start-here/rep-onboarding"
+            ]
+          },
           "customer-docs/start-here/welcome-to-ergo",
           "customer-docs/start-here/roles-and-permissions",
           "customer-docs/start-here/spectator-access",
@@ -50,7 +58,6 @@
         "icon": "list-checks",
         "root": "customer-docs/setup/index",
         "pages": [
-          "customer-docs/setup/first-time-setup-checklist",
           "customer-docs/setup/connect-your-crm",
           "customer-docs/setup/connect-email-and-calendar",
           "customer-docs/setup/email-templates-setup",
@@ -298,6 +305,10 @@
     {
       "source": "/customer-docs/admin/agent-persona",
       "destination": "/customer-docs/admin"
+    },
+    {
+      "source": "/customer-docs/setup/first-time-setup-checklist",
+      "destination": "/customer-docs/start-here/how-to-onboard"
     }
   ]
 }
