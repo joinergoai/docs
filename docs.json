@@ -130,7 +130,8 @@
           "customer-docs/meetings/push-notes-or-meetings-to-automations",
           "customer-docs/meetings/delete-retry-processing",
           "customer-docs/meetings/using-multiple-notetakers-with-ergo",
-          "customer-docs/meetings/meeting-labels"
+          "customer-docs/meetings/meeting-labels",
+          "customer-docs/meetings/find-the-meetings-of-one-rep"
         ]
       },
       {
@@ -167,7 +168,8 @@
           "customer-docs/deals-crm/bulk-actions",
           "customer-docs/deals-crm/bulk-email-slack-drafts",
           "customer-docs/deals-crm/reminders-and-follow-up-view",
-          "customer-docs/deals-crm/how-ergo-sets-the-owner"
+          "customer-docs/deals-crm/how-ergo-sets-the-owner",
+          "customer-docs/deals-crm/why-ergo-created-a-deal"
         ]
       },
       {
@@ -297,7 +299,8 @@
           "customer-docs/troubleshooting/pylon-delivery-failures-duplicate-deliveries-and-queue-health",
           "customer-docs/troubleshooting/notetaker-did-not-join",
           "customer-docs/troubleshooting/search-reporting-has-no-results",
-          "customer-docs/troubleshooting/permission-or-access-denied"
+          "customer-docs/troubleshooting/permission-or-access-denied",
+          "customer-docs/troubleshooting/no-follow-up-draft-after-call"
         ]
       }
     ]
