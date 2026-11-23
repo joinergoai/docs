@@ -29,7 +29,8 @@ Do not consolidate from this file directly into public docs without rechecking s
 - `Ergo-Dashboard-Frontend/src/components/SyncCRMProperties.tsx`: deal/contact/company property sync, selected existing properties, auto-generated descriptions toggle, CRM-defined property visibility.
 - `Ergo-Dashboard-Frontend/src/components/SyncPipelineStages/SyncPipelineStages.tsx`: stage sync/edit modes, supported CRM handling, warning that edit mode writes directly to CRM.
 - `Ergo-Dashboard-Frontend/src/components/MeetingTitles.tsx`: meeting-title phrases, Strict Mode / AI Boost toggle behavior.
-- `Ergo-Dashboard-Backend/src/models/Dashboard.js`: `customProperties`, `contactProperties`, `companyProperties`, `pipelineStages`, `restrictToPipeline`, alternate domains, partnership domains, property permissions.
+- `Ergo-Dashboard-Backend/src/models/Dashboard.js`: `customProperties`, `contactProperties`, `companyProperties`, `pipelineStages`, `restrictToPipeline`, property permissions.
+- `Ergo-Dashboard-Backend/src/models/Org.js`: org-scoped alternate domains and partnership domains.
 - `Ergo-Dashboard-Backend/src/routes/dashboard/stages.js`, `customFields.js`, `properties.js`, and `crm.js`: pipeline stage CRUD/sync, property routing, default stages, stage and property drift utilities.
 - `Ergo-Dashboard-Backend/src/services/company-intelligence/*`, `deal-health/*`, and `crm/*PipelineService*`: company overview/details, deal health services, and CRM pipeline service support.
 

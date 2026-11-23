@@ -12,13 +12,13 @@ Use this page when a new user should inherit shared Ergo configuration from an a
 
 - Admins and super admins who provision accounts, assign roles, manage teams, or push settings to users.
 - Standard users completing onboarding who need to sync their setup from an admin.
-- RevOps and operators coordinating rollout so users inherit the same CRM fields, stages, domains, templates, and advanced settings.
+- RevOps and operators coordinating rollout so users inherit the same CRM fields, stages, templates, and advanced settings.
 - Spectators should follow the access path assigned by an admin; they should not expect standard-user setup, CRM write, or email-drafting sync behavior.
 
 ## Before you start
 
 - Confirm the user belongs in the right organization, team, and role before syncing settings.
-- Make sure the admin configuration is ready: CRM connection, Field Mapping, pipeline stages, company details, meeting-title rules, templates, domains, task settings, and advanced settings.
+- Make sure the admin configuration is ready: CRM connection, Field Mapping, pipeline stages, company details, meeting-title rules, templates, task settings, and advanced settings.
 - Decide whether the user should inherit CRM credentials from an admin or connect their own CRM account.
 - Choose sync options intentionally. Syncing settings can overwrite the user's existing configuration.
 - Remember that personal connections are still personal. Sync does not connect a user's email, calendar, Slack account, desktop app, or third-party notetaker for them.
@@ -47,7 +47,6 @@ Common options include:
 - Meeting-title rules
 - Email, Slack, and CRM note templates
 - Task settings
-- Alternate domains and partnership domains
 - Advanced context and CRM behavior settings
 
 After the sync, the user should still review their own email, calendar, notetaker, drafts, Slack, and desktop settings.
@@ -59,7 +58,7 @@ Admins can also push selected settings to one user or selected team members.
 Use this when:
 
 - A user skipped onboarding sync.
-- A team should inherit updated CRM fields, stages, domains, or advanced settings.
+- A team should inherit updated CRM fields, stages, templates, or advanced settings.
 - A setup owner corrected the admin configuration after users were already invited.
 - A team needs consistent templates or meeting-title rules.
 
@@ -69,7 +68,7 @@ Templates are usually more personal than CRM configuration, so review them befor
 
 Some admin controls sync only CRM credentials from the org admin to a user. Use this when the user should share the admin's CRM integration path but should not inherit the broader workspace configuration.
 
-CRM-only sync can help a new user get connected to the CRM quickly, but Field Mapping, stages, templates, domains, reporting access, meeting access, and personal sources may still need separate checks.
+CRM-only sync can help a new user get connected to the CRM quickly, but Field Mapping, stages, templates, reporting access, meeting access, and personal sources may still need separate checks.
 
 ## Test after syncing
 

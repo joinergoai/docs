@@ -293,5 +293,11 @@
   },
   "footer": {
     "socials": {}
-  }
+  },
+  "redirects": [
+    {
+      "source": "/customer-docs/admin/agent-persona",
+      "destination": "/customer-docs/admin"
+    }
+  ]
 }
