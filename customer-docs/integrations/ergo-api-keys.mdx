@@ -1,0 +1,48 @@
+---
+title: "Ergo API keys"
+description: "How to get an Ergo API key for meetings, recordings or health scores, and the limits of each key."
+keywords: ["API key", "Ergo API", "API token", "Developer", "Meetings API", "Recordings API", "Deal health API"]
+---
+
+Ergo API keys let your own systems read Ergo data, for example meetings, recordings or deal health scores. You cannot make a key in the Ergo app. Ergo support makes it for you.
+
+## Who can use this
+
+- The organization **Owner** asks for the key.
+
+## Before you start
+
+- To connect Claude, ChatGPT or another AI tool, you do not need a key. Use MCP: see [MCP/external agent tools](https://support.joinergo.com/articles/6631055248).
+- To send each new meeting to another system, you can use webhooks: see [Webhooks](https://support.joinergo.com/articles/1363956041).
+
+## Steps
+
+1. Contact Ergo support. See [Get support](https://support.joinergo.com/articles/2708243049).
+2. Tell support:
+   - which data you need: **meetings**, **recordings**, **deal health**, **company health** or **upsells**;
+   - which Ergo person the key acts for (usually the Owner);
+   - how long the key must work (90 days by default, up to 365 days).
+3. Ergo support makes the key and sends it to you in a secure way, with the API reference.
+4. Store the key in a safe place. Do not put it in email or chat.
+
+## What to expect
+
+- The key reads only what its person can see in Ergo. For example, it does not read private meetings that this person cannot open.
+- The data that a key can read is fixed when the key is made. For more data, ask for a new key.
+- Limits for each key:
+  - 60 requests per minute;
+  - 2,000 recording links per day;
+  - each recording link works for 15 minutes.
+- The key stops when it expires, when Ergo revokes it, or when its person is removed from Ergo.
+
+## Common issues
+
+- **The key returns 401:** the key expired, was revoked, or its person was removed. Ask support for a new key.
+- **Some meetings are missing:** the key's person cannot see them. Ask for a key for a person with wider access.
+- **Too many requests:** wait one minute. Keep to 60 requests per minute.
+
+## Related articles
+
+- [MCP/external agent tools](https://support.joinergo.com/articles/6631055248)
+- [Webhooks](https://support.joinergo.com/articles/1363956041)
+- [Get support](https://support.joinergo.com/articles/2708243049)
