@@ -1,36 +1,55 @@
 ---
 title: "Meeting availability and visibility"
-description: "Understand who can see meeting records and how sharing differs from internal visibility."
-keywords: ["meeting visibility", "meeting access", "private meeting", "shared meeting"]
+description: "Learn who can find and open a meeting in Ergo, and how private meetings and sharing work."
+keywords: ["meeting visibility", "private meetings", "Everyone can see all meetings", "Meeting access", "Meeting Privacy Rules", "Share with your organization"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Visibility decides who can find and open a meeting inside Ergo. Sharing decides who can open a link from outside. They are separate.
 
-Meeting visibility controls who can find a meeting inside Ergo. Sharing controls who can open a shared link. These are separate.
+## Who can use this
 
-## Internal visibility
+- Everyone. The **Owner** manages the organization rules.
 
-- Owners can view their own meetings.
-- Internal attendees can view meetings when access rules include them.
-- Team admins and admins may have broader visibility depending on role, team membership, and explicit grants.
-- Private meetings restrict internal visibility and can revoke existing share tokens when privacy is enabled.
+## Who can see a meeting
+
+Ergo checks these rules in order and stops at the first match.
+
+1. **Private meetings**: only the meeting owner and the internal people who attended. This overrides all rules below.
+2. **Everyone can see all meetings** is on (**Settings → Meetings → Access**), or the viewer is the organization **Owner**: every meeting in the organization. Only an Owner sees this group.
+3. **Team Admins**: their own meetings, the meetings of members of the teams they administer, and of the people granted to them.
+4. **Everyone else**: meetings they owned or attended, plus the meetings of people listed under **Meeting access** in their member details (**Settings → Members**).
+
+Also visible, subject to rule 1:
+
+- Meetings in a folder that was shared with the viewer. A **Company library** folder opens its meetings only when an Owner turns on **Everyone can open meetings**.
+- Meetings that the owner or an internal attendee shared with the organization (**Share → Share with your organization**). These viewers can find, view and ask questions. They cannot edit, delete or share. A private meeting cannot be shared this way.
+
+Being on the same team as the owner does not give access. Only team Admins get team access.
+
+## Private meetings
+
+- **By hand**: on the meeting page, select **⋮ (More actions) → Make Private**. Only the owner and internal attendees see this command. Select **Make Public** to undo.
+- **For the organization**: the Owner sets **Meeting Privacy Rules** in **Settings → Meetings → Privacy → Edit rules**, or in the **⋮ (More actions)** menu on **Meeting History**.
+- **For yourself**: each person with a Standard or Notetaker seat can set **My Privacy Rules** in the same menu, or in **Settings → Profile → Meeting privacy → Edit rules**. A meeting that you are in becomes private when its title has one of your keywords, or when it includes a person that you picked.
+- **Locked by policy**: some organizations keep certain meetings private. These show "This meeting is locked private by organization policy". You cannot make them public.
 
 ## Shared links
 
-- Shared links are opened through a share token.
-- Password-protected links require the password.
-- Some shared access flows can require authenticated shared access instead of showing the meeting immediately.
-- Revoking a share link removes the public token; it does not delete the meeting.
+- **Share** creates a link that works outside these rules. The link can be password-protected or revoked.
+- When a meeting becomes private, its links stop working.
 
-## What to check when access fails
+## Common issues
 
-- Whether the user is the owner, an internal attendee, an allowed user, or an admin with the right scope.
-- Whether the meeting is private.
-- Whether the shared link was revoked or password-protected.
-- Whether the user is trying to access a clip link instead of the full meeting link.
+- Someone cannot open a meeting. Check these points:
+  - The meeting is private, by hand or by a rule.
+  - The viewer is not the owner, an attendee, a team Admin, or a person with granted access.
+  - **Everyone can see all meetings** is off.
+  - The viewer got a clip link or a revoked share link.
+- A teammate cannot see your recordings: check if a meeting title matches a privacy keyword.
 
 ## Related articles
 
-- [Share/revoke/password-protect meetings](./share-revoke-password-protect-meetings)
-- [Meeting history and folders](./meeting-history-and-folders)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645)
+- [Meeting history and folders](https://support.joinergo.com/articles/7669432836)
+- [Meeting detail page](https://support.joinergo.com/articles/5822103848)

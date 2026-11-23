@@ -1,48 +1,50 @@
 ---
 title: "Slack"
-description: "Connect Slack so Ergo can use approved workspace context and deliver supported Slack workflows."
-keywords: ["Slack", "Integrations", "Ergo docs"]
+description: "Connect the Slack workspace and your own Slack account, and add Ergo to channels."
+keywords: ["Slack", "Workspaces", "Org integrations", "User integrations", "Slack monitoring", "Pick channels"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page to connect Slack and manage the core Slack workspace connection.
+Slack has two connections. The Owner or an Admin connects the workspace. Then each person connects their own Slack account.
 
 ## Who can use this
 
-- Admins connecting the Slack workspace.
-- Users and operators validating Slack delivery, monitoring, or pre-call context settings.
+- The organization **Owner** or a team **Admin**, with a **Standard** seat, connects the workspace.
+- Each person with a **Standard** or **Notetaker** seat connects their own account. A **Spectator** seat cannot.
+- Other people cannot connect the workspace. Ergo says that only admins can.
 
 ## Before you start
 
-- Use a Slack workspace where your team has approved Ergo access.
-- Add the Ergo app or bot to each channel the workflow should use; workspace installation alone does not grant channel coverage.
-- Confirm the channels and user-token behavior your workflow needs.
-- Keep Slack monitoring and pre-call context settings separate from the base Slack connection.
+- Use a Slack workspace where your team approved Ergo.
+- The workspace install does not put Ergo in your channels. You add Ergo to channels in a later step.
 
 ## Steps
 
-- Open **Integrations** and select **Slack**.
-- Complete the Slack install or OAuth flow.
-- Confirm the workspace appears connected.
-- Review Slack monitoring and pre-call context only if those workflows are enabled for your team.
+1. Open **Settings → Org integrations**. In the **Workspaces** section, click **Connect** in the **Slack** row.
+2. Approve the Ergo app in Slack. Ergo sends you back to **Org integrations**.
+3. In the **Enable Slack Monitoring** window, click **Enable** or **Skip**.
+4. Make sure that the **Slack** row shows **Connected** and the name of your Slack workspace.
+5. Connect your own account: open **Settings → User integrations**. In the **Slack** section, click **Connect** and approve. Ergo needs this for DMs and approvals.
+6. To add Ergo to channels, go back to **Org integrations** and click the gear in the **Slack** row. At **Channels Ergo watches**, click **Pick channels**. Select the channels and click **Add to N channels**.
 
 ## What to expect
 
-- The Slack connection can support notifications, summaries, handoff workflows, and Slack-related context where configured.
-- Monitoring and pre-call context require additional settings and channel access.
-- Slack context applies to channels Ergo can access after the app or bot is added; do not expect retroactive coverage of prior channel history.
-- Slack channel permissions, bot membership, and user-token setup can affect what Ergo can read or deliver.
+- Before the workspace is connected, the user row reads "Your admin needs to connect Slack first".
+- **Pick channels** is off until you connect your own Slack account.
+- The switch **Auto-add Ergo to Slack Connect channels** lets Ergo join new Slack Connect channels with customers by itself.
+- Review **Slack monitoring** (gear on the **Slack** row in **Org integrations**) and **Pre-call context DM** (gear on the **Slack** row in **User integrations**) if your team uses them.
+- Ergo uses AI to summarize and show customer context in Slack. AI answers can be wrong, incomplete or old.
 
 ## Common issues
 
-- The app is installed in the workspace but not added to the target channel.
-- The user-token flow required for a workflow was not completed.
-- The workspace or channel policy blocks bot access.
+- Ergo is in the workspace but not in a channel: add the channel with **Pick channels**.
+- **Pick channels** is off: connect your own Slack account first.
+- Channel policy blocks the bot: ask your Slack admin.
+- Slack stopped working: see [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253) and [Slack disconnect/reconnect and stale channel mappings](https://support.joinergo.com/articles/7906621776).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Slack monitoring and pre-call context](./slack-monitoring-and-pre-call-context)
-- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Slack monitoring and pre-call context](https://support.joinergo.com/articles/8418853270)
+- [Collaboration tools setup](https://support.joinergo.com/articles/9930195557)
+- [Add Ergo to new Slack customer channels](https://support.joinergo.com/articles/5430278897)
+- [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

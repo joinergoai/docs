@@ -1,33 +1,49 @@
 ---
 title: "Summary emails and recording links"
-description: "Configure whether Ergo sends post-call summary emails and includes recording links."
-keywords: ["summary email", "recording link", "post-call email", "notetaker settings"]
+description: "Control the post-call summary email and the recording button for your meetings."
+keywords: ["Send Summary Email", "Send Recording & Transcript", "Internal Recipients Only", "summary email", "recording link"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+After a call, Ergo can send a summary email. The email can include a button to open the recording and transcript.
 
-Use notetaker settings to control whether post-call summary emails are sent and whether those emails include a button to view the recording.
+## Who can use this
 
-## Settings to check
+- Each person with a connected **Ergo Notetaker**, for their own setting.
+- The organization **Owner** can set the default for all people. Team Admins do not see this switch.
 
-- **Send post-call summary email** controls whether the user receives summary emails for completed meetings.
-- **Include view recording button** controls whether those emails include a recording link when a shareable recording is available.
-- Some org-level defaults can be set by admins, but users may still need to verify their own settings.
+## Before you start
+
+- Connect **Ergo Notetaker** in **Settings → User integrations → Note takers**. The gear button shows only after this step.
+
+## Steps
+
+1. Open **Settings → User integrations**.
+2. In **Note takers**, find the **Ergo Notetaker** row. Click the gear button (**Ergo Notetaker settings**).
+3. In **Your settings**, turn **Send Summary Email** on or off.
+4. If the switch is on, set **Send Recording & Transcript**.
+5. If the switch is on, set **Internal Recipients Only**.
+6. Click **Done**. The switches save automatically.
 
 ## What to expect
 
-- Summary email delivery depends on meeting processing, transcript availability, and configured email settings.
-- The recording link is a share/view link. It does not bypass meeting visibility, sharing, or password rules.
-- Private meetings can omit or revoke share links depending on privacy state.
+- Ergo sends the email to all meeting participants, external participants included.
+- Turn on **Internal Recipients Only** if only people in your company must get the email.
+- Ergo sends the email only when the meeting has a summary and 2 to 9 attendees.
+- For more than 9 attendees, Ergo sends the email only when **Internal Recipients Only** is on.
+- Ergo does not send the email for a no-show or for a call with no business content.
+- **Send Recording & Transcript** adds the **View Recording & Transcript** button. Ergo does not add it for a private meeting.
+- The button opens the recording for the attendees only. The recipient confirms their email address with a one-time code.
+- The Owner sets the default in **Dashboard → Upcoming Meetings →** ⋮ (**Calendar settings**) **→ Send Summary Email**. This overwrites the setting of each person with a connected notetaker. Each person can then change their own setting.
 
-## Troubleshooting
+## Common issues
 
-- If no email arrives, check whether the meeting completed and whether summary emails are enabled.
-- If the email has no recording link, check whether the meeting is private, whether the recording exists, and whether the include-link setting is enabled.
-- If a recipient cannot open the link, review meeting sharing and access rules.
+- No email arrives: the meeting has no summary, has fewer than 2 or more than 9 attendees, or **Send Summary Email** is off.
+- The email has no button: **Send Recording & Transcript** is off, or the meeting is private.
+- A person cannot open the link: they were not in the meeting.
 
 ## Related articles
 
-- [Share/revoke/password-protect meetings](./share-revoke-password-protect-meetings)
-- [Meeting availability and visibility](./meeting-availability-and-visibility)
-- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)
+- [Recording disclaimer](https://support.joinergo.com/articles/2647025457)
+- [Meeting detail page](https://support.joinergo.com/articles/5822103848)

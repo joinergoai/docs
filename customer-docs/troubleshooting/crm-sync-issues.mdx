@@ -1,53 +1,45 @@
 ---
 title: "CRM sync issues"
-description: "Troubleshoot CRM connection, field mapping, property permission, owner, and record visibility issues."
-keywords: ["CRM sync", "field mapping", "property permissions", "record visibility", "troubleshooting"]
+description: "Find out why a CRM field, stage, or update does not work, and fix it in Settings."
+keywords: ["CRM sync", "Sync From CRM", "Resolve Conflict", "CRM Properties", "CRM Settings", "Permissions", "Activity Log"]
 ---
 
-![Flow diagram showing common checkpoints for CRM sync.](../images/field-mapping-crm-flow.svg)
-
-Use this page when CRM fields, stages, activities, deals, contacts, or companies do not appear or update where expected.
+Use this page when CRM fields or stages are missing, or when Ergo does not update the CRM as you expect.
 
 ## Symptoms
 
-- CRM fields, stages, activities, or associations do not update.
-- A deal, contact, or company is missing from the expected board or filtered view.
-- A CRM property, owner, pipeline, or field-mapping check fails.
-- A CRM write appears to succeed in the CRM but is not reflected in Ergo yet.
+- A CRM field or stage is not in Ergo.
+- A field row shows **Resolve Conflict** or **Not in CRM**.
+- A field stays blank.
+- Ergo does not create or update a deal, contact, or company.
 
-## Most common causes
+## Causes and fixes
 
-- The CRM connection is stale, disconnected, or lacks permission for the object being changed.
-- Field mapping, property permissions, owner mappings, or pipeline stages are incomplete.
-- The source CRM field name, type, options, owner field, pipeline, or stage changed.
-- The record is filtered by owner, pipeline, stage, view, or score.
-- The record is hard to match because it lacks expected contact, company, domain, or email associations.
+1. Ask the organization Owner or a team Admin to open **Settings** → **Org integrations**. In **CRM**, make sure that your CRM shows **Connected**. The connection is for the full organization.
+2. Open **Settings** → **CRM Properties** and select the team. If the field is not in the list, click **Sync From CRM**, select the field, and click **Sync Selected Properties**. This only adds fields.
+3. Look at the row of the field. If it shows **Resolve Conflict**, click it. Then click **Keep CRM Version** to use the CRM values, or **Update CRM** to send the Ergo values to the CRM.
+4. If the row shows **Not in CRM**, the CRM does not have the field now. Restore the field in the CRM, or remove the row.
+5. Read the write pill on the row. **Never writes** and **Read only in CRM** stop all writes. **Writes if empty** stops a write when the CRM field has a value. **Approval required** holds the value until a person approves it.
+6. Open **Settings** → **CRM Settings** and select the team. On the **Permissions** tab, make sure that **Allow creation** and **Allow updates** are on for the object (Deal, Contact, or Company).
+7. Open **Settings** → **CRM Stages**. Click **Sync From CRM** to add stages. If the badge **Pipeline entry point required** shows, click **Stage Settings** and set an entry point.
+8. On the **Dashboard**, click **Recent activity**. In the **Activity Log**, set **Status** to **Failed** to find an update that did not work. Check the permissions of the CRM account that connected the CRM. Check that the CRM field accepts the value.
 
-## What to check
+## Other checks
 
-- Confirm the CRM shows connected for the affected user or workspace.
-- Run CRM property sync, owner-ID sync, and stage sync where the UI exposes those actions.
-- Check property permissions for deal, contact, and company create/update.
-- Verify the record's owner, pipeline, stage, associated contact, associated company, and domain/email match.
-- Remove narrow filters before treating a missing record as a sync failure.
-
-## Resolution steps
-
-- If a field is blank, confirm it is mapped in Ergo and exists in the CRM with a compatible type.
-- If a write fails, check the connected CRM user's permissions and whether the CRM property accepts the value.
-- If a record is missing, test with one known deal/contact/company and compare CRM associations against Ergo filters.
-- If the source changed in CRM, resync before editing automation or stage logic.
+- Ergo manages the record owner fields. There is no owner sync.
+- Ergo makes no updates for a person whose **Automations** switch is off in **Settings** → **Members**.
+- Test with one known deal, contact, or company.
 
 ## When to contact support
 
-- Contact support when the CRM is connected, mappings and permissions look correct, and one controlled record still fails.
-- Include the workspace, affected user, CRM, object type, object link or ID, field/stage involved, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- Click **Support** in the left navigation.
+- Give the CRM, the object type, a link to the record, the field or stage, and the time.
+- Do not share sensitive customer content.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Dashboard setup errors](./dashboard-setup-errors)
-- [Stage drift conflicts](./stage-drift-conflicts)
-- [Getting support](../start-here/getting-support)
-- [Field Mapping overview](../field-mapping/field-mapping-overview)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)
+- [Get support](https://support.joinergo.com/articles/2708243049)

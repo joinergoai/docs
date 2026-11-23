@@ -1,46 +1,49 @@
 ---
 title: "HubSpot meeting activities and recording links"
-description: "Understand how Ergo links meeting context and recording URLs back to HubSpot when the HubSpot workflow is configured."
-keywords: ["HubSpot meeting activities and recording links", "Integrations", "Ergo docs"]
+description: "Find the meeting activity and the View Recording link that Ergo adds to HubSpot after a meeting."
+keywords: ["HubSpot", "Meeting activity", "View Recording", "Recording link", "CRM Note Template"]
 ---
 
-![Flow diagram showing Ergo meeting recordings linked from HubSpot meeting activities.](../images/hubspot-meeting-link-flow.svg)
-
-Use this page when HubSpot is already connected and you need meeting activity or recording-link behavior to be visible in HubSpot.
+After Ergo processes an external sales meeting, it logs a meeting activity in HubSpot. Use this page to find it and to see why it can be missing.
 
 ## Who can use this
 
-- Admins and RevOps teams validating HubSpot activity behavior.
-- Operators investigating why a meeting, note, or recording link did not appear on the expected HubSpot record.
+- Anyone who can open the deal, company or contact in HubSpot.
+- The organization **Owner** and team **Admins** connect HubSpot. See [HubSpot](https://support.joinergo.com/articles/7579052434).
 
 ## Before you start
 
-- Connect HubSpot first.
-- Confirm the meeting is visible in Ergo and has a recording link before expecting a HubSpot link.
-- Confirm the HubSpot record match and the configured activity destination.
+- Connect HubSpot. In **Settings → Org integrations → CRM**, the **HubSpot** row must show **Connected**.
+- Make sure that the meeting is in Ergo and that processing is complete.
 
 ## Steps
 
-- Open the meeting in Ergo and confirm the meeting is processed.
-- Check the matched HubSpot deal, company, or contact.
-- Review the HubSpot activity/link workflow with your admin.
-- If the link is missing, check record matching before assuming HubSpot sync failed.
+1. Open **Meetings** and open the meeting. Check that processing is complete.
+2. In HubSpot, open the deal, the company or a contact of the meeting.
+3. Find the meeting activity with the title of the meeting.
+4. Open the activity. The link **View Recording** is at the top of the notes.
+5. Click **View Recording**. The meeting opens in Ergo. Sign in to Ergo if Ergo asks.
+6. If the activity body is empty, look for a separate note on the same records.
+7. If there is no activity, check that the meeting had external attendees and was a sales meeting. If it was, check which deal and company Ergo matched. Then contact Ergo support.
 
 ## What to expect
 
-- HubSpot activity output depends on the connected HubSpot account, record matching, and the configured CRM write path.
-- Ergo should not promise a recording link on every HubSpot record. Meetings without a recording, unmatched records, or blocked HubSpot permissions can prevent the link from appearing.
-- If your team uses custom HubSpot properties or activities, validate the exact destination during setup.
+- There is no setting or workflow for this. Ergo logs the activity by itself.
+- The destination is fixed. Ergo creates or updates one meeting activity with the outcome Completed. It adds the activity to the matched deal, company and contacts.
+- **View Recording** opens the meeting page in Ergo. The reader must sign in to Ergo and must have access to the meeting.
+- If you turn on a CRM note template (**Settings → CRM Settings → CRM Note Template**), the activity body is empty. Ergo then adds a separate note with the template content and the links.
+- Ergo does not log internal meetings or meetings that are not sales meetings.
 
 ## Common issues
 
-- The meeting did not process or does not have a recording link.
-- The HubSpot record was not matched to the meeting.
-- HubSpot permissions or activity configuration block the write.
+- The meeting was internal or was not a sales meeting. Ergo does not log it in HubSpot.
+- The meeting matched a different deal or company. See [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398).
+- The meeting is not processed. See [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478).
+- The link does not open: the reader has no access to the meeting. See [Permission or access denied](https://support.joinergo.com/articles/4190135592).
 
 ## Related articles
 
-- [Integrations](./index)
-- [HubSpot](./hubspot)
-- [How Ergo names and matches CRM records](../deals-crm/how-ergo-names-and-matches-crm-records)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [HubSpot](https://support.joinergo.com/articles/7579052434)
+- [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)

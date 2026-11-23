@@ -107,6 +107,15 @@ Confirm after enabling:
 - Internal and unlisted articles are visible/searchable to internal users only.
 - Pylon AI summaries are supported in direct KB search, but not currently in the chat widget KB module.
 
+## Help-center domain
+
+The public KB is served at `https://support.joinergo.com`. Links to the previous host
+`https://ergo-knowledge-base.help.usepylon.com` return 404. Every publish must resolve article
+links to the new host (publish mode's default `pylon-url` link mode reads the current URL from the
+API, so a full republish does this). Articles published before the domain change were swept on
+2026-10-17 with `scripts/pylon-kb-fix-links.mjs` logic via the Pylon connector; use that script
+(`--apply`, needs `PYLON_KEY`) if old-host links reappear.
+
 ## Troubleshooting
 
 If links do not work:
@@ -141,3 +150,11 @@ On merge to the default branch:
 - Run the publish command with `PYLON_KEY` stored as a CI secret.
 - Store `outputs/pylon-kb-live.json` as an artifact.
 - Post a summary of created, updated, deleted, and warning counts back to the PR or deployment log.
+
+## 2026-11-23 rewrite
+
+- All articles were rewritten against the product on `main` and published from these mdx files with the Pylon connector.
+- Article links use the full form `https://support.joinergo.com/articles/<identifier>`, not relative paths.
+- 55 old or duplicate articles are hidden in Pylon (visibility `internal_only`, not deleted) and removed from `docs.json`. Each has route redirects to the article that replaced it. Do not republish them.
+- Collections renamed: "Field mapping" → "CRM setup", "Admin" → "Members and organization".
+- Screenshots must show sample data only, never a real account.

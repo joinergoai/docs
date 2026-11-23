@@ -1,51 +1,52 @@
 ---
 title: "Salesforce"
-description: "Connect Salesforce to use CRM records, fields, owners, and pipeline context in Ergo."
-keywords: ["Salesforce", "Integrations", "Ergo docs"]
+description: "Connect Salesforce as your CRM and set what Ergo can read, create and update."
+keywords: ["Salesforce", "CRM", "Org integrations", "Connect", "CRM Properties", "CRM Stages", "Meeting Notes"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page to connect Salesforce when it is your CRM source of truth for deals, accounts, contacts, fields, owners, and pipeline stages.
+Connect Salesforce when it is your CRM source of truth for deals, accounts and contacts.
 
 ## Who can use this
 
-- Admins and RevOps teams configuring the CRM connection.
-- Operators who need to confirm Salesforce permissions before enabling field mapping or CRM updates.
+- The organization **Owner** and team **Admins**.
+- Only these roles see **Org integrations** and can connect or disconnect the CRM.
 
 ## Before you start
 
-- Use a Salesforce account that has access to the objects, fields, owners, and pipeline data Ergo should use.
-- Confirm required Salesforce validation rules and stage gates before enabling automated updates.
-- Finish field mapping before relying on CRM writebacks or stage movement.
-- Treat historical backfills as reviewable. Live data after setup is usually cleaner than old meetings processed before configuration was complete.
+- Use a Salesforce account that can access the objects, fields, owners and pipeline data that Ergo must use.
+- An organization can have only one CRM connected. If a different CRM is connected, disconnect it first. Until you do, **Connect** in the **Salesforce** row is off.
+- Check your Salesforce validation rules and stage gates before you allow automatic updates.
 
 ## Steps
 
-- Open **Integrations** and select **Salesforce**.
-- Start the OAuth flow and approve the requested Salesforce access.
-- Return to Ergo and confirm Salesforce appears connected.
-- Review CRM properties, pipeline stages, and property permissions with your admin.
-- Run a small verification workflow before enabling broad CRM updates or backfill.
+1. Open **Settings → Org integrations**.
+2. In the **CRM** section, click **Connect** in the **Salesforce** row.
+3. Approve the Salesforce access request.
+4. Return to **Org integrations**. Make sure that the **Salesforce** row shows **Connected**.
+5. Open **Settings → CRM Properties** and **Settings → CRM Stages**. On each page, click **Sync From CRM**. Select the properties and stages that Ergo must use.
+6. Open **Settings → CRM Settings → Permissions**. Set **Allow creation** and **Allow updates** for each CRM object.
+7. Test with a small number of meetings or deals.
 
 ## What to expect
 
-- Ergo can use Salesforce data for deal/account context, field mapping, CRM matching, and CRM update workflows.
-- Salesforce validation rules, required fields, object permissions, and field-level permissions can block specific writes. Ergo should not be described as overriding Salesforce controls.
-- Recording links and meeting notes may be written through configured CRM automation paths, but exact destinations depend on your field mapping and Salesforce configuration.
-- Aggregated analysis and AI summaries remain in Ergo unless a specific field or activity writeback has been configured.
+- After you approve, a message can say that live sync is on for only some Salesforce objects. The other objects sync each night.
+- After Ergo processes an external sales meeting, it adds an Event with the subject **Meeting Notes** to the opportunity. The description has the meeting link, a **Recording** link and the meeting notes. You do not configure this.
+- The **Recording** link opens the meeting in Ergo. The reader must sign in to Ergo.
+- Ergo does not log internal meetings.
+- Salesforce rules can block a write. Ergo does not override Salesforce controls.
 
 ## Common issues
 
-- OAuth completed with an account that cannot access the target object, owner, or field.
-- Salesforce validation rules block a stage or field update.
-- Picklist values, internal IDs, or field types changed after field mapping was configured.
-- A backfill created noisy records that need review before teams rely on them.
+- A message says that live sync could not be enabled: contact Ergo support.
+- The account you approved cannot access an object, owner or field: connect again with a different account.
+- A validation rule blocks a stage or field update: change the rule or the Ergo setting.
+- A picklist value or field type changed after setup: sync the properties again.
+- Updates look wrong: see [CRM sync issues](https://support.joinergo.com/articles/6503095041).
 
 ## Related articles
 
-- [Integrations](./index)
-- [HubSpot](./hubspot)
-- [Field mapping overview](../field-mapping/field-mapping-overview)
-- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [HubSpot](https://support.joinergo.com/articles/7579052434)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

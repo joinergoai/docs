@@ -1,46 +1,44 @@
 ---
 title: "Alternate domains/emails"
-description: "Add alternate domains and emails so Ergo can recognize related account context without over-broad matching."
-keywords: ["alternate domains", "alternate emails", "account matching", "CRM matching"]
+description: "Tell Ergo about your own other domains and email addresses so your colleagues count as internal."
+keywords: ["alternate domains", "alternate emails", "internal domains", "Settings Advanced Domains"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use alternate domains and emails when the same account uses multiple domains, subsidiaries, aliases, or email patterns that should be treated as related context.
+Alternate domains and alternate emails tell Ergo who belongs to **your own** organization. Ergo treats people on these domains as colleagues, not as customers.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- **Alternate Domains:** the organization **Owner** and team **Admins**.
+- **Alternate emails:** each person, for their own profile.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Add only domains that your organization owns. Do not add the domain of a customer or of a partner.
+- If you add a customer domain, Ergo treats the people of that customer as internal. Ergo then does not find the customer company or the deal for their meetings.
+- For partner or client domains that you work with, use **Partnership Domains**.
 
 ## Steps
 
-- Add only domains or emails that should be treated as the same account context.
-- Confirm the domain is not a generic provider, partner, reseller, or internal domain.
-- Review matching after adding a new alias.
-- Remove aliases that cause unrelated records to merge in context.
+1. Open **Settings → Advanced → Domains**.
+2. Below **Alternate Domains**, type a domain that your organization owns and press Enter.
+3. To remove a domain, click the **×** on the domain.
+4. Each person: open **Settings → Profile** and click the pencil next to **Alternate emails**.
+5. Type a second work address, click **Add**, then **Save changes**.
+6. Process one meeting. Make sure that Ergo shows your colleagues as internal and the customer as external.
 
 ## What to expect
 
-- Alternate domains and emails broaden matching context; they do not replace CRM associations.
-- Over-broad aliases can attach activity to the wrong account.
-- Matching changes may affect meetings, emails, drafts, and record search.
+- You can add 50 domains at most.
+- Each person can add 3 alternate emails at most. Personal email domains are refused.
+- Ergo looks for the customer company only among the external attendees of a meeting.
 
 ## Common issues
 
-- A parent company, subsidiary, and partner use overlapping domains.
-- A personal email domain was added by mistake.
-- The CRM has duplicates that alternate domains cannot safely resolve.
+- A customer shows as internal: their domain is in **Alternate Domains**. Remove it.
+- A colleague shows as external: add their domain to **Alternate Domains**, or ask them to add the address to **Alternate emails**.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Company info](./company-info)
-- [Partnership domains](./partnership-domains)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Advanced settings](https://support.joinergo.com/articles/6033018928)
+- [Partnership domains](https://support.joinergo.com/articles/3251931164)
+- [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398)

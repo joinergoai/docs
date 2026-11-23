@@ -1,48 +1,54 @@
 ---
 title: "Stage definitions and AI descriptions"
-description: "Write clear stage descriptions so Ergo can classify stage movement consistently with your sales process."
-keywords: ["stage descriptions", "AI stage classification", "pipeline definitions"]
+description: "Write stage descriptions, entry criteria and required fields so Ergo knows when a deal belongs in a stage."
+keywords: ["Stage description", "Ask Ergo", "Entry Criteria", "Required to enter this stage", "Incomplete", "Auto-generate descriptions"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Stage descriptions tell Ergo what each stage means. They are especially important when AI-assisted classification evaluates whether a meeting, email, or deal update supports a stage change.
+A stage description tells Ergo what a stage means. Ergo uses it when it decides if a deal belongs in a stage.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- The description is for the team that you selected.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Sync your stages. See [Pipeline stages](https://support.joinergo.com/articles/1501601101).
 
 ## Steps
 
-- Review or write a description for each active stage in the pipeline.
-- Explain the evidence required for a deal to enter that stage.
-- Include exclusions when a phrase or signal is commonly misread.
-- Keep descriptions aligned with CRM stage IDs, display names, entry criteria, and sales-manager expectations.
-- Review descriptions after process or CRM changes.
+1. Open **Settings → CRM Stages**. Select the team and the **Pipeline**.
+2. Click a stage to open it.
+3. Write the **Description**. Or click **Ask Ergo** for a draft, then correct it.
+4. In **Entry Criteria**, list the evidence that Ergo must find before it selects the stage.
+5. In **Required to enter this stage**, list the deal fields that a deal must have before Ergo moves it into the stage.
+6. Repeat for each stage.
 
 ## What to expect
 
-- Descriptions guide classification and review; they do not override CRM permissions.
-- Ambiguous descriptions can make stage suggestions too broad or too conservative.
-- Stage descriptions should be short, operational, and specific.
-- Stage descriptions guide classification; CRM validation rules and stage controls still govern whether a write can succeed.
+- A stage with no description shows the badge **Incomplete**.
+- When you sync stages, **Auto-generate descriptions** is selected. Ergo writes a first description for each new stage. Read each one and correct it.
+- The first stage of a pipeline has no **Entry Criteria**.
+- **Required to enter this stage** can list a maximum of 20 deal fields, for all teams.
+- The stage row shows the **Stage Name** and the **Internal ID** from your CRM.
+- The **Description**, **Entry Criteria** and **Exit Points** apply to the selected team. A change to the **Stage Name** applies to all teams.
+- Descriptions guide Ergo. They do not override your CRM rules.
 
 ## Common issues
 
-- Stages have similar names but different entry criteria.
-- Descriptions describe the sales process generally instead of the evidence needed for a stage.
-- CRM stages changed but descriptions were not updated.
+- Two stages have similar names: write what is different in the evidence for each stage.
+- A description describes the sales process in general: write the evidence for this stage only.
+- Your CRM stages changed: check the descriptions again.
+
+## Writing advice
+
+- Keep descriptions short, specific and based on evidence.
+- Add an exclusion when Ergo often reads a phrase wrongly.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Pipelines](./pipelines)
-- [Default stages](./default-stages)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Pipelines](https://support.joinergo.com/articles/7931998666)
+- [Default stages](https://support.joinergo.com/articles/2392883371)
+- [Stage controls](https://support.joinergo.com/articles/4806151015)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)

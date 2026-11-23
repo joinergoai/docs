@@ -1,51 +1,47 @@
 ---
-title: "Notetaker adoption dashboard: reading edge cases"
-description: "Interpret notetaker adoption reporting without treating every missing or uncaptured meeting as a failed adoption signal."
-keywords: ["Notetaker adoption", "Reporting edge cases", "Meeting capture", "Ergo Notetaker", "Desktop recording"]
+title: "Notetaker Stats card"
+description: "Read the Notetaker Stats card on the Dashboard and understand its limits."
+keywords: ["Notetaker Stats", "Notetaker adoption", "Recording rate", "Dashboard", "External meetings", "% Recorded"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
+The **Notetaker Stats** card shows how many external meetings each person recorded. It is not part of Reporting.
 
-Use notetaker adoption dashboards to understand whether customer-facing conversations are being captured by the expected recording source. Do not use them as a perfect attendance or compliance ledger without checking the source context.
+## Who can use this
 
-## Check the source first
+- Only the organization **Owner** and team **Admins** see the card.
+- The card shows only if Ergo has turned it on for your organization.
+- You cannot share the card.
 
-Meetings can appear differently depending on whether they came from:
+## Steps
 
-- Ergo Notetaker.
-- Ergo Desktop recording.
-- Third-party notetakers or imported recordings.
-- Meetings that were not captured or were not processed.
+1. Select **Dashboard** in the left navigation.
+2. Find the **Notetaker Stats** card at the top of the page.
+3. Select **7d** or **30d**.
+4. Read each team row: recorded meetings, external meetings, and the percentage.
+5. Select a team row to see each person: **External Mtgs**, **Recorded**, **Bot**, **Desktop**, **% Recorded**.
+6. For a person with **Not connected**, examine the calendar and notetaker setup of that person.
+7. Before you coach a person about one meeting, open that meeting in **Meetings**.
 
-If a dashboard is tracking Ergo Notetaker usage, a meeting captured by another source may not mean the rep failed to use Ergo.
+## What to expect
 
-## Common edge cases
+- No other time range is available. The card has no user filter and no team filter.
+- Teams show with the lowest percentage first. A person without a team shows below **Unassigned**.
+- The card counts external meetings only. Internal meetings are not in the numbers.
+- The card counts only meetings that the Ergo Notetaker (**Bot**) or the Ergo desktop app (**Desktop**) recorded.
+- A meeting that only a third-party notetaker or an import captured does not count as recorded. A low percentage does not always show that a person had no recording.
+- A person shows **Not connected**, with no numbers, when the calendar is not connected or no notetaker is on.
+- Accounts with "test" in the email address do not show.
 
-- Internal meetings may be intentionally skipped.
-- Some meetings may be filtered out by title, source, user, team, or time range.
-- Rescheduled or recurring meetings can be represented differently from one-off meetings.
-- A meeting may be captured but not yet processed.
-- A user may have calendar, notetaker, or desktop setup issues outside Reporting.
-- Shared dashboard viewers may not have access to the full source detail.
+## Common issues
 
-## Review adoption safely
-
-1. Check the dashboard time range.
-2. Check user and team filters.
-3. Compare meeting source before counting a miss.
-4. Review processing status for recent meetings.
-5. Use source evidence before coaching a rep on a specific meeting.
-
-## What not to conclude
-
-- Do not assume every uncaptured internal meeting is a failed adoption event.
-- Do not assume a missing reporting row means the meeting never happened.
-- Do not assume a shared dashboard contains every detail available to an authenticated manager.
+- A low percentage for one person: check if that person uses another notetaker.
+- A recent meeting is missing: it may not be processed yet. See [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478).
+- Do not treat the card as a full attendance or compliance record.
 
 ## Related articles
 
-- [Reporting](./index)
-- [Reporting overview](./reporting-overview)
-- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Dashboard and upcoming meetings](https://support.joinergo.com/articles/4063633225)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Notetaker did not join](https://support.joinergo.com/articles/2299804002)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)

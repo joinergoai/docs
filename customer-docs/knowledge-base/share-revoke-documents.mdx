@@ -1,33 +1,44 @@
 ---
 title: "Share or revoke documents"
-description: "Create and revoke share links for generated documents."
-keywords: ["share document", "revoke document", "shared document", "document visibility"]
+description: "Share an artifact with your organization or with a public link, and stop a link."
+keywords: ["share artifact", "Public link", "Organization", "Private", "Share document", "stop sharing"]
 ---
 
-![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
+Use **Share** to let other people open an artifact. To stop sharing, change the option back to **Private** or **Organization**.
 
-Use document sharing when a generated document should be accessible through a share link.
+## Who can use this
 
-## Share a document
+- The creator of an artifact. Only the creator sees **Share**.
 
-- Open the generated document.
-- Use the share action to create a share token.
-- Copy the shared URL and send it only to intended recipients.
+## Before you start
 
-## Revoke a document link
+- Find the artifact. Open **Search** (⌘K), type **Artifacts** and press Enter.
+- Decide who needs the file: users in your organization, or people outside.
 
-- Use the revoke share action on the document.
-- Revoking removes the share token for that document.
-- Revoking a document link does not delete the document.
+## Steps
 
-## Access notes
+1. On the artifact, open the **⋯** menu and click **Share**.
+2. In the **Share document** dialog, select **Public link** (for people outside Ergo) or **Organization** (for users in your organization).
+3. Click **Copy** and send the link only to the correct people.
+4. To stop the link, open **Share** again and select **Private** or **Organization**. The public link stops immediately.
 
-- Shared document viewing is separate from internal document visibility.
-- Download access follows the shared or authenticated document route being used.
-- If a document is linked to deals, review linked deals before changing visibility or deleting it.
+## What to expect
+
+- A person who opens a public link must type an email address and then a 6-digit code from an email. Then the file shows.
+- A person with the **Public link** can view and download the file.
+- A person with the **Org link** must sign in to Ergo first.
+- There is no **Revoke** button. Selecting **Private** or **Organization** removes the public link.
+- Stopping a link does not delete the artifact.
+- If the artifact is linked to a deal, you cannot select **Private**. Unlink the artifact from its deals first.
+
+## Common issues
+
+- You do not see **Share**: you are not the creator of the artifact.
+- **Private** is not available: the artifact is linked to a deal.
+- An outside reader cannot open the link: they must confirm an email address with a code.
 
 ## Related articles
 
-- [Generated documents](./generated-documents)
-- [Link documents to deals](./link-documents-to-deals)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Generated documents](https://support.joinergo.com/articles/8336238316)
+- [Link documents to deals](https://support.joinergo.com/articles/8458870168)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

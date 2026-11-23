@@ -1,85 +1,53 @@
 ---
 title: "Connect email and calendar"
-description: "Connect the Google Workspace or Microsoft 365 account Ergo should use for email context, follow-up drafts, calendar matching, and meeting capture."
+description: "Connect Google Workspace or Microsoft 365 so Ergo finds your meetings and drafts follow-ups."
 keywords: ["Connect email and calendar", "Setup", "Google Workspace", "Microsoft 365", "Gmail", "Outlook", "Calendar"]
 ---
 
-![Product screenshot showing integration settings for connected sources.](../images/product-integrations-settings.png)
-
-Use this page when a user is connecting the mailbox and calendar Ergo should use for meeting detection, email context, follow-up drafts, signatures, and provider send validation. This is usually a personal setup step: each user should connect the primary work account that owns their customer calendar invites and sends customer email.
+Connect your work email and calendar. Ergo uses them to find your meetings and to draft follow-up emails.
 
 ## Who can use this
 
-- Standard users, AEs, CSMs, managers, operators, and admins completing their own personal setup.
-- Admins helping users confirm the right account, reconnect state, or feature toggles.
-- Spectator users should not expect email-analysis, follow-up-draft, or send settings to behave like a standard user setup path.
+- Each person, for their own account: Owner, team Admin and Member.
+- A **Notetaker** seat can connect email and calendar, but has no **Email Drafting** page.
+- A **Spectator** seat cannot connect email or calendar.
 
 ## Before you start
 
-- Choose one email provider for the user: Google Workspace or Microsoft 365. If one provider is already connected, disconnect it before connecting the other.
-- Use the user's primary work mailbox and calendar, not a personal inbox, alias-only account, or shared inbox unless that is intentionally the account Ergo should use.
-- Confirm customer meetings are invited to the same calendar account that is connected in Ergo.
-- Confirm your company allows the requested authorization. If an organization-managed provider blocks third-party app authorization, ask your internal admin or Ergo support before retrying repeatedly.
-- Complete the approved notetaker setup after calendar access is connected.
+- Use the same email address that you use to sign in to Ergo. Ergo refuses a different address.
+- You can connect **Google Workspace** or **Microsoft 365**, not both.
 
-## Connect the account
+## Steps
 
-1. Open **Integrations**.
-2. Go to the email or email-collaboration area.
-3. Choose **Google Workspace** or **Microsoft 365**.
-4. Follow the authorization flow and approve the requested email and calendar permissions.
-5. Return to Ergo and confirm the provider shows as connected.
-6. Check the connected provider's feature toggles before testing a workflow.
-
-## Check email feature toggles
-
-When the provider is connected, Ergo can show email-related settings for standard users.
-
-- **Email Analysis** controls whether Ergo analyzes relevant emails for downstream context and CRM-related workflows when enabled.
-- **Post-Call Followup Emails** controls whether post-call follow-up drafts are generated when the meeting, template, recipient, and processing context qualify.
-- **Surfacing** appears only when enabled for your workspace and can surface follow-up opportunities from recent deal context.
-- **External email client** is a delivery setting for teams that review or send drafts from an external email workflow.
-
-If a draft will not send, first check the connected email account, sender, recipient, subject, body, thread context, and any failed-draft error before reconnecting everything.
-
-## Test the calendar path
-
-1. Open **Meetings** or the dashboard upcoming-meetings area.
-2. Confirm the next customer meeting appears from the connected calendar.
-3. Open the meeting and check the current meeting link, owner, attendees, and notetaker status.
-4. If the meeting was rescheduled or the meeting link changed, recheck the specific occurrence before the call starts.
-5. For live or ad hoc calls, use **Add Bot to Meeting** with the actual Zoom, Google Meet, or Microsoft Teams room link, not a scheduling page URL.
-6. If the host controls admission, make sure the host admits the Ergo bot from the waiting room.
+1. In the setup wizard, open **Connect your email and calendar**. After setup, open **Settings → User integrations → Email & calendar**.
+2. Click **Connect** in the row **Google Workspace** or **Microsoft 365**. If the other one is connected, click **Disconnect** on that row first.
+3. Sign in to your work account and approve the email and calendar permissions.
+4. Go back to Ergo. Make sure that the button is now **Disconnect** and that the row shows your email address.
+5. Open **Settings → Email Drafting → General**. Below **What Ergo does with your mailbox**, set the switches (see below).
+6. Open **Meetings** and make sure that your next customer meeting shows.
 
 ## What to expect
 
-- Email and calendar connection is separate from CRM connection, field mapping, notetaker setup, and draft settings.
-- Calendar connection helps Ergo find and match meetings, but the notetaker still needs to join, be admitted, and finish processing before downstream outputs are available.
-- Email connection enables draft sending and email context only when the connected mailbox, settings, permissions, and workflow support it.
-- Expired or revoked Google/Microsoft grants can block the dashboard and show a reconnect prompt. Reconnect with the same intended work account.
-- Changing a provider password, revoking app access, or changing provider/admin policies can require reconnecting in Ergo.
+The switches in **Settings → Email Drafting → General** (Standard seat only):
+
+- **Post-call follow-up emails:** Ergo drafts a follow-up after each external meeting. On for a new Standard seat.
+- **Email analysis:** Ergo reads relevant emails to update your CRM. On for a new Standard seat.
+- **Email inbox flow (triage):** Ergo sorts customer threads in your inbox and drafts replies for you to send.
+- **Draft replies to internal emails:** turn it off to stop reply drafts for people from your own company.
+
+Each switch saves at once. There is no **Save** button.
 
 ## Common issues
 
-- The wrong mailbox or calendar was connected.
-- One provider is already connected, so the other provider cannot be connected until the first one is disconnected.
-- A required email or calendar permission was not approved, or the provider admin blocked the authorization.
-- The calendar appears connected, but the meeting invite lives on a different calendar or account.
-- The meeting link changed, the meeting was rescheduled, or the host did not admit the bot.
-- A scheduling page link was used instead of a live meeting-room link.
-- Drafts are disabled, the meeting did not qualify, the email grant is stale, or sender/recipient/subject/body/thread validation failed.
+- Ergo refuses the account: you signed in with a different email address. Connect the account that you use to sign in to Ergo.
+- The row shows **Expired**: click **Reconnect** and sign in with the same account.
+- The other provider button is off: disconnect the first provider.
+- No drafts: make sure that **Post-call follow-up emails** is on, and that **Settings → Profile → Process my meetings, emails and Slack** is on.
 
 ## Related articles
 
-- [Google Workspace](../integrations/google-workspace)
-- [Microsoft 365](../integrations/microsoft-365)
-- [Calendar scopes and meeting auto-join](../integrations/calendar-scopes-and-meeting-auto-join)
-- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)
-- [Email signature](../integrations/email-signature)
-- [Notetaker setup](./notetaker-setup)
-- [Dashboard/upcoming meetings](../meetings/dashboard-upcoming-meetings)
-- [Schedule or cancel the notetaker](../meetings/schedule-or-cancel-the-notetaker)
-- [Add the bot to a live or ad hoc meeting](../meetings/add-the-bot-to-a-live-or-ad-hoc-meeting)
-- [Turn post-call drafts on or off](../drafts-email/turn-post-call-drafts-on-or-off)
-- [Draft send failures](../troubleshooting/draft-send-failures)
-- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Turn post-call drafts on or off](https://support.joinergo.com/articles/3684399934)
+- [First-time setup checklist](https://support.joinergo.com/articles/9947439335)
+- [Google Workspace](https://support.joinergo.com/articles/9333675093)
+- [Microsoft 365](https://support.joinergo.com/articles/9353990784)

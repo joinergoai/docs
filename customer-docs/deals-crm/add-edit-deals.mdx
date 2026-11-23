@@ -1,46 +1,48 @@
 ---
 title: "Add/edit deals"
-description: "Add or edit Deals carefully, using mapped CRM fields, pipeline stages, owners, and permissions as the source of truth."
-keywords: ["add deal", "edit deal", "CRM writeback", "deal fields"]
+description: "Add a deal to your CRM from Ergo, edit a deal, and log an activity on it."
+keywords: ["Add Deal", "Create Deal", "Edit deal", "Property history", "Log Activity", "Deals"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use the add and edit paths when a deal should exist or be updated in the connected CRM-backed workspace. Confirm the source CRM, field mapping, and permissions before treating Ergo as the place to make broad record changes.
+You can add and edit deals in Ergo. Ergo writes each change to your CRM.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat to add, edit, move or delete deals.
+- **Notetaker** and **Spectator** seats can only read the Deals pages.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Use **Add Deal** from the board, then confirm required fields against the connected CRM configuration.
-- Confirm company, contacts, owner, stage, amount, close date, and any required mapped fields before saving.
-- Edit inline fields only when the field is intended to write through the connected CRM path.
-- After editing, verify the record in Ergo and, when needed, in the source CRM.
+1. Open **Deals** and click **Add Deal** at the top right.
+2. Fill in **Deal Name** (required). Check **Pipeline**, **Stage** and **Deal Owner**.
+3. Optional: fill in **Amount**, **Close Date**, **Company** and **Contact**. Search for a record, or click **+ Create Company** or **+ Create Contact**.
+4. Click **Create Deal**. Ergo makes the deal in your CRM and opens the deal page.
+5. Fill in custom fields on the deal page.
+6. To edit a deal, open it. Click a field in the left panel (deal name, amount, stage, pipeline, close date, owner) or in **Deal Info**.
+7. To add an email, a meeting or a note to the deal, click **Log Activity**.
 
 ## What to expect
 
-- Save behavior depends on CRM connection, mapped properties, stage configuration, and property permissions.
-- Edits made directly in the CRM may need ingestion or sync time before they appear in Ergo.
-- Native CRM task and note sync is not documented as available from this workflow.
+- The **Add Deal** dialog has one contact and no custom fields.
+- Each edit writes to your CRM at once. There is no save step.
+- In **List** view, you can click a cell to edit it. In **Board** view, you can edit the amount on the card.
+- To see or restore an earlier value, click **Property history** next to a field.
+- If a stage has required fields, Ergo opens a form when you move a deal to that stage. Fill in the fields, then confirm the move.
 
 ## Common issues
 
-- Required fields, stage, or owner are missing.
-- Property permissions allow read but not create or update.
-- The same account appears under multiple names or domains.
+- **Add Deal** does not show: you do not have a **Standard** seat, or you are on the **Tasks** tab.
+- A change does not save: check the property permissions in **Settings → CRM Settings → Permissions**.
+- The same account shows under two names: see [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398).
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Custom views and Ergo View](./custom-views-and-ergo-view)
-- [How Ergo names and matches CRM records](./how-ergo-names-and-matches-crm-records)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Deal detail](https://support.joinergo.com/articles/3265804027)
+- [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398)
+- [Property permissions](https://support.joinergo.com/articles/3280671232)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

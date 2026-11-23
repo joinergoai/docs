@@ -1,46 +1,47 @@
 ---
 title: "Bulk email drafts"
-description: "Generate email drafts for selected deals, review the shared prompt, and verify recipients before sending."
-keywords: ["bulk email drafts", "Generate Drafts", "Go Mode"]
+description: "Make email or Slack drafts for up to 30 selected deals and review them one after the other."
+keywords: ["Bulk email drafts", "Generate Drafts", "Slack Draft", "Clear Drafts", "Go Mode", "Re-draft"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use bulk draft generation when you want Ergo to create email drafts for selected deals. Drafts are generated for review; do not assume they were sent automatically.
+Select deals and let Ergo make drafts for all of them. Ergo does not send the drafts.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM and your email. See [Connect email and calendar](https://support.joinergo.com/articles/4928954637).
 
 ## Steps
 
-- Select the deals that need follow-up.
-- Choose **Generate Drafts** for email drafts.
-- Add optional prompt instructions that apply across all selected drafts.
-- Review each draft, recipient, thread, and source context before sending.
+1. On **Deals**, select the deals that need a follow-up. Select a maximum of 30 deals.
+2. Click **Generate Drafts** for email drafts.
+3. For Slack drafts, click the arrow next to the button. Select **Slack Draft**.
+4. Add an optional instruction. It applies to all the selected deals.
+5. Wait until the chip on each deal changes from **Queued** and **Drafting** to **Draft**.
+6. Click **Draft** to open the draft. Check the recipient, the thread and the text, then send.
+7. In **List** view, select 2 or more deals that have a draft. Click **Go Mode** to review the drafts one after the other.
 
 ## What to expect
 
-- Bulk generation queues drafts for selected deal IDs in Ergo's draft review flow.
-- The optional prompt is shared across the selected batch; use a narrow selection when the prompt should be specific.
-- Draft quality depends on associated meetings, emails, CRM fields, and connected activity.
+- You can start a maximum of 3 requests in one minute.
+- In **List** view, the chip is in the **Draft** column.
+- **Re-draft** shows when new correspondence arrived after the draft.
+- If Ergo skips a deal, a message shows the deal name and the reason.
+- To remove the drafts of the selected deals, select **Clear Drafts** in the arrow menu.
+- Draft quality depends on the meetings, emails and CRM fields linked to each deal.
 
 ## Common issues
 
-- A selected deal has no associated contact email.
-- Recent source context is missing or attached to a different record.
-- The selected deals need different prompt instructions.
+- A deal has no contact email: Ergo can skip it.
+- The deals need different instructions: use a smaller selection.
+- Recent context is on a different record.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Bulk actions](./bulk-actions)
-- [Reminders and follow-up view](./reminders-and-follow-up-view)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Bulk actions](https://support.joinergo.com/articles/2249354087)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Review/edit AI drafts](https://support.joinergo.com/articles/1674428019)
+- [Reminders and follow-up view](https://support.joinergo.com/articles/3788798654)

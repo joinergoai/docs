@@ -1,50 +1,47 @@
 ---
 title: "Dashboard setup errors"
-description: "Troubleshoot onboarding and dashboard setup steps that do not complete or save as expected."
-keywords: ["dashboard setup", "onboarding", "setup errors", "integrations", "troubleshooting"]
+description: "Fix problems in the setup wizard and find setup steps that are still open."
+keywords: ["Setup wizard", "Get Ergo working", "Skip step", "Unable to verify onboarding status", "Onboarding", "Settings"]
 ---
 
-![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
-
-Use this page when onboarding or a setup step appears incomplete after the user has tried to connect sources or save workspace settings.
+Use this page when a setup step fails, or when a source, notetaker, or CRM setting seems to be missing after setup.
 
 ## Symptoms
 
-- Onboarding cannot advance to the next step.
-- A setup step saves but later appears incomplete.
-- A connected source, workspace setting, notetaker, CRM field, or reporting default is missing.
-- The user skipped onboarding and later finds core workflows are not running.
+- The setup wizard shows **Unable to verify onboarding status.**
+- A step shows **This step couldn't load.**
+- The wizard shows **Couldn't finish onboarding. Try again.**
+- A connection, notetaker, or CRM setting is missing after you click **Finish**.
+- Ergo does not process the meetings of a person.
 
-## Most common causes
+## Causes and fixes
 
-- The user's role-specific setup path has not been completed.
-- A required CRM, email, calendar, collaboration, notetaker, or reporting step is missing.
-- The connected account does not have the permission or scopes needed for the workflow.
-- Setup was completed for one user, but another user still needs their own source connections.
+1. If the wizard shows **Unable to verify onboarding status.**, click **Try again**.
+2. If a step shows **This step couldn't load.**, click **Skip step**. Complete that step later in **Settings**.
+3. Each step is optional. **Back**, **Skip step**, and **Next** (or **Finish**) are always on. **Next** works when nothing is connected.
+4. After you click **Finish**, the wizard does not open again. Make all later changes in **Settings**.
+5. Open the **Dashboard**. If the card **Get Ergo working** shows, click **Connect** or **Turn on** on each open row. The rows are **Connect your CRM**, **Connect your calendar**, **Let Ergo join your calls**, and **Connect Slack**.
+6. To connect your email, calendar, Slack account, or notetaker, open **Settings** → **User integrations**.
+7. To connect the CRM, the Slack workspace, or a dialer, ask the organization Owner or a team Admin to open **Settings** → **Org integrations**. Members do not see this page.
+8. For CRM updates, ask the Owner or a team Admin to complete **Settings** → **CRM Properties** and **CRM Stages**. Then open **Settings** → **CRM Settings** → **Permissions**. Make sure that **Allow creation** and **Allow updates** are on. If a page shows **Connect your CRM to continue**, connect the CRM first.
+9. If Ergo does not process the meetings of a person, ask the Owner or the team Admin to open **Settings** → **Members**, click the person, and set **Automations** to on.
 
-## What to check
+## Roles and seats
 
-- Follow the setup checklist in role order instead of jumping between steps.
-- Confirm each source shows connected after OAuth completes.
-- Ask an admin or Super Admin to complete workspace-level settings when the user cannot see them.
-- Check whether the user is a standard user, admin, Super Admin, or spectator before changing access.
-
-## Resolution steps
-
-- Reconnect the source only when the setup step shows disconnected, expired, or incomplete.
-- For CRM setup, confirm field mapping, stages, and property permissions before expecting updates.
-- For meeting setup, confirm calendar/notetaker state and retry with one upcoming meeting.
-- For reporting setup, confirm dashboard creation and reporting access separately.
+- Open **Settings** → **Members** → **Members**. Read the **Role** column (Owner, Admin, or Member) and the **Seat** column (Standard, Notetaker, or Spectator).
+- A Spectator seat gets no setup wizard.
+- Each person connects their own email, calendar, Slack, and notetaker.
 
 ## When to contact support
 
-- Contact support when the expected role, connected source, and setup step are confirmed but the issue repeats.
-- Include the workspace, affected user, setup step, source system, visible error, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- Click **Support** in the left navigation.
+- Give the step, the source system, the message that you see, and the time.
+- Do not share sensitive customer content.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Sign-in and desktop callback issues](./sign-in-and-desktop-callback-issues)
-- [CRM sync issues](./crm-sync-issues)
-- [Getting support](../start-here/getting-support)
+- [First-time setup checklist](https://support.joinergo.com/articles/9947439335)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)
+- [Sign-in and desktop callback issues](https://support.joinergo.com/articles/4930413652)
+- [Get support](https://support.joinergo.com/articles/2708243049)

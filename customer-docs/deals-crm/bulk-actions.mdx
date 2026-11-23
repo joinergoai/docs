@@ -1,46 +1,48 @@
 ---
 title: "Bulk actions"
-description: "Use bulk actions to update selected deals, assign owners, move stages, change close dates, or generate drafts with care."
-keywords: ["bulk actions", "bulk move", "bulk owner", "bulk drafts"]
+description: "Select more than one deal and change stage, status or owner, mark VIP, make drafts or delete."
+keywords: ["Bulk actions", "Move to stage", "Set status", "Assign owner", "Mark as VIP", "Generate Drafts", "Delete"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use bulk actions only after you have confirmed the selected records, pipeline, and active filters. The bulk bar appears after you select one or more deals.
+Select deals to change many deals at once. Most actions start as soon as you select a value.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat to select deals.
+- **Notetaker** and **Spectator** seats can only read.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Select deals from kanban or list view.
-- Move selected deals to another available stage in the current pipeline.
-- Assign an owner, change close dates, or generate email drafts where available.
-- Review the selected count and target action before confirming destructive or broad updates.
+1. In **Board**, select deals with the checkbox on the card, or Shift+click.
+2. In **List**, select deals with the checkbox in the row. There is no select-all checkbox.
+3. Check the count (**N deals selected**) in the bar.
+4. Select an action: **Move to stage**, **Set status**, **Assign owner**, **Mark as VIP**, **Generate Drafts** or **Delete**.
+5. Press Esc or click **x** in the bar to clear the selection.
 
 ## What to expect
 
-- Bulk stage and owner actions depend on pipeline scope, CRM permissions, and CRM-backed write behavior.
-- Broad updates should be reviewed carefully; filtered views can make selection context easy to misread.
-- Bulk-generated drafts are queued for review and should not be treated as sent.
+- **Move to stage**, **Set status**, **Assign owner** and **Mark as VIP** start at once. There is no confirmation step.
+- Ergo writes the stage or the owner to your CRM for each deal.
+- **Set status** has **Needs Attention**, **Reviewed** and **Clear Status**.
+- If the target stage has required fields, Ergo does not move the deals in bulk. Move those deals one at a time.
+- If some deals fail, Ergo shows "N of M deals failed to move".
+- **Delete** permanently deletes the deals from your CRM. You cannot undo this. Ergo asks you to confirm first.
+- You cannot change the close date of more than one deal at a time.
+- The bar does not show on the **Tasks** tab.
 
 ## Common issues
 
-- Selection includes records from the wrong filtered view.
-- The target stage is disabled or not part of the selected pipeline.
-- CRM permissions or field mapping prevent the update.
+- The selection has deals from the wrong filter: check the filter chips before you select.
+- The target stage is not in the selected pipeline.
+- Your CRM permissions prevent the update.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Activity, emails, meetings, and documents tabs](./activity-emails-meetings-and-documents-tabs)
-- [Bulk email/Slack drafts](./bulk-email-slack-drafts)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Bulk email drafts](https://support.joinergo.com/articles/2766924623)
+- [Property permissions](https://support.joinergo.com/articles/3280671232)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

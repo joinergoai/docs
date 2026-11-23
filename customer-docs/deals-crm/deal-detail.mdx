@@ -1,47 +1,49 @@
 ---
 title: "Deal detail"
-description: "Review a deal's CRM fields, activity, emails, meetings, AI overview, health, contacts, and company context from the detail page."
-keywords: ["deal detail", "deal activity", "deal fields", "deal context"]
+description: "Use the deal page: tabs, deal fields, Draft Email, Log Activity, custom tabs and the right panel."
+keywords: ["Deal detail", "Deal Info", "Activity Timeline", "Draft Email", "Log Activity", "Add tab", "Deals"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Open deal detail when you need to inspect one opportunity more deeply than the board allows. Deal detail combines CRM-backed fields with related activity, AI context, and company/contact context.
+Open a deal to see its fields, activity, emails and meetings in one place.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- Everyone who can open **Deals**.
+- You need a **Standard** seat to edit a deal and to use **Draft Email**. **Notetaker** and **Spectator** seats can only read.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Open a deal from kanban or list view.
-- Review the sidebar fields, activity timeline, deal info, emails, and meetings.
-- Use the right rail for company and contact context.
-- Draft follow-up from the deal only after checking recent emails and meetings.
-- Edit fields only when they are mapped and intended for writeback.
+1. Open a deal from **Board** or **List** view.
+2. Use the tabs **Activity**, **Deal Info**, **Emails** and **Meetings**.
+3. On **Activity**, read the **AI Overview**, the **Deal Health** card and the **Activity Timeline**.
+4. Check the recent emails and meetings. Then click **Draft Email** at the right of the tab row.
+5. To add an email, a meeting or a note, click **Log Activity**.
+6. To make a tab with your own fields, click **+** (**Add tab**). Type a name and click **Create Tab**.
+7. Click **Back** or press Esc to go back to the board.
 
 ## What to expect
 
-- Deal detail can hide the main app sidebar and restore it when you leave.
-- Custom deal tabs are local layout helpers for organizing selected fields; they are not a CRM object model.
-- Email, meeting, and activity context appears when it is available to Ergo and matched to the deal.
+- The left panel shows the deal fields. A change to a field writes to your CRM.
+- **Draft Email** opens the chat panel. Ergo drafts the next follow-up email for the deal.
+- The right panel shows the **Company** card, the **Contacts** list, the linked Slack channels and the **Documents** of the deal.
+- Some workspaces also have the tabs **Stakeholders** and **Tasks**.
+- Ergo saves a custom tab in this browser only. Your teammates and your other browsers do not show it.
+- **CRM updates to review** shows at the top of **Activity** only when updates wait for approval.
 
 ## Common issues
 
-- The deal ID no longer exists in Ergo's CRM-backed data.
-- Activity is attached to the company or contact but not the deal.
-- Field customization hides a field you expected to see.
+- Activity is missing: it may belong to the company or a contact, not the deal.
+- A field is missing: a custom tab or the field list hides it.
+- The deal is not found: it may no longer exist in your CRM.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Company board](./company-board)
-- [Company detail](./company-detail)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Company detail](https://support.joinergo.com/articles/1988915841)
+- [Deal and account health](https://support.joinergo.com/articles/6431504796)
+- [Activity, emails, and meetings](https://support.joinergo.com/articles/2474119926)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

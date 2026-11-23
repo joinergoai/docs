@@ -1,33 +1,50 @@
 ---
 title: "Upload external recordings"
-description: "Import a recording that was captured outside the Ergo bot and let Ergo process it as a meeting record."
-keywords: ["upload recording", "external recording", "custom meeting", "meeting import"]
+description: "Import an audio or video file as a meeting, then choose whether to run your automations."
+keywords: ["Import Audio/Video", "upload recording", "Push to CRM", "external recording", "Meeting History"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Use **Import Audio/Video** to add a recording that the Ergo bot did not capture. Ergo makes a transcript and adds the meeting to **Meeting History**.
 
-Use external recording upload when you have meeting media that was not captured by the scheduled Ergo bot.
+## Who can use this
 
-## Before you upload
+- People who can open **Meetings**. Running the automations for the upload needs a **Standard** seat.
 
-- Confirm you have permission to upload and process the recording.
-- Use a recording with enough audio for transcription.
-- Add the correct title, attendees, and related context when the UI asks for it so Ergo can attribute the meeting correctly.
+## Before you start
 
-## What happens after upload
+- Make sure that you have the right to upload and process the recording.
+- Use an MP3, WAV, M4A, OGG, WebM, MP4 or MOV file. The maximum size is 1.5 GB.
+- Use a recording with enough clear audio for a transcript.
 
-- Ergo stores the upload as a custom meeting record.
-- Processing can create transcript and meeting outputs after the worker completes.
-- The meeting can appear in history after processing, with source and processing state distinct from bot meetings.
+## Steps
+
+1. Open **Meetings**.
+2. Select **⋮ (More actions) → Import Audio/Video**.
+3. Put the file in **Recording**.
+4. In **Link to Calendar Event**, search for the past meeting and select it. Ergo fills in the name, date, time and attendees.
+5. If the meeting is not in your calendar, enter the **Meeting Name**, **Date**, **Time** and **Attendees** (email addresses) manually.
+6. Select **Import**. Keep the page open until the upload is complete.
+7. Wait until the card at the top of **Meeting History** shows **Processing complete**.
+8. To run your automations, select **Push to CRM**. Check the external attendee emails and select **Push to Automations**. Or select **Skip**.
+
+## What to expect
+
+- Ergo does not run your automations for an upload automatically.
+- The meeting shows in **Meeting History** with the mark **Upload**.
+- The meeting starts with no summary and no action items.
+- To make a summary, open the **Summary** tab and use the summary bar.
 
 ## Common issues
 
-- The upload fails or remains processing.
-- The transcript is empty because the audio is missing, short, or unclear.
-- Downstream automations may not run the same way as scheduled notetaker meetings, especially when attendee, calendar, CRM, or deal context is missing.
+- Import is not available: a field is empty, or the date is in the future.
+- You left the page during the upload: the upload stops. The page warns "A file upload is still in progress."
+- The card shows "Upload failed": select **Re-upload**.
+- The card shows "Processing failed": select **Retry**. You do not upload the file again.
+- The transcript is empty: the audio is missing, short or unclear.
 
 ## Related articles
 
-- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
-- [Push notes or meetings to automations](./push-notes-or-meetings-to-automations)
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Push notes or meetings to automations](https://support.joinergo.com/articles/9743385583)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Meeting detail page](https://support.joinergo.com/articles/5822103848)
+- [Meeting history and folders](https://support.joinergo.com/articles/7669432836)

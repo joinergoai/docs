@@ -1,51 +1,47 @@
 ---
-title: "Silent desktop recording"
-description: "Record locally with Ergo Desktop when you do not want a bot participant to join the meeting."
-keywords: ["Silent desktop recording", "Desktop", "Ergo docs"]
+title: "Record a meeting with Ergo Desktop"
+description: "Record a meeting from your computer with Ergo Desktop, without a bot in the call."
+keywords: ["Record a meeting with Ergo Desktop", "Silent desktop recording", "Ergo Desktop", "Record", "Quick Note", "Video recording"]
 ---
 
-![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
-
-Use this page to record a meeting locally with Ergo Desktop instead of adding the cloud notetaker bot.
+Ergo Desktop records a meeting on your computer. No bot joins the call. By default it records video and audio.
 
 ## Who can use this
 
-- Users recording calls from their own desktop.
-- Admins and operators deciding when to use local recording instead of a cloud bot.
+- Each person who records calls from their own computer.
 
 ## Before you start
 
-- Install Ergo Desktop and sign in.
-- Grant macOS permissions and quit and reopen the app.
-- Confirm whether a cloud bot is also scheduled for the same meeting.
-- Run a short test recording before high-stakes calls.
+- Install Ergo Desktop and sign in. See [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215).
+- Give the macOS permissions. See [macOS permissions](https://support.joinergo.com/articles/4584568980).
+- Check if a cloud bot is also scheduled for the same meeting.
 
 ## Steps
 
-- Start the recording from a detected meeting, calendar event, Quick Note, or manual workflow.
-- Confirm the recording indicator is active.
-- Keep the app open while the call is in progress.
-- Stop the recording when the call ends.
-- Wait for upload and processing to complete in Ergo.
+1. Open the Ergo desktop app before the meeting starts.
+2. For a meeting on your calendar, find it under **Now** on the home page. Select **Join and Record** to open the meeting link and record. Select **Record** to record only.
+3. For a meeting without a calendar event, select **Start Recording** on the card **Meeting detected**. Or select **Quick Note**, then **Record**.
+4. Make sure that the recording card shows the timer and the label **Video** or **Audio only**.
+5. Keep the app open during the call.
+6. When the call ends, select **Stop recording** (the square icon).
+7. In **Recent**, wait until **Processing...** goes away. Then open the meeting.
 
 ## What to expect
 
-- Silent desktop recording captures local meeting audio and does not add a bot participant to the meeting.
-- No-bot recording does not remove your responsibility to follow recording consent and disclosure requirements.
-- The backend creates a desktop upload session, tracks recording status, and processes the recording after upload.
-- Calendar-sourced recordings keep calendar metadata; ad-hoc recordings may use detected or manually provided metadata.
-- If another bot recorded the same call, Ergo may mark the desktop recording with concurrent-bot context for dedupe handling.
+- Ergo records one meeting at a time. You cannot start a second recording until you stop the first.
+- With **Video recording** on, Ergo posts a recording disclosure in the meeting chat of supported meetings.
+- To record audio only, open **Settings → Desktop app → Recording** in the desktop app. Turn off **Video recording**. Then you can also turn off **Recording disclosure**.
+- You must still follow the recording consent rules that apply to your meeting.
 
 ## Common issues
 
-- Recording was stopped before upload completed.
-- The app lost network access before it could upload.
-- A duplicate cloud bot recording also exists.
-- The meeting was too short or had too little transcript to produce a normal processed meeting.
+- The row in **Recent** shows **Processing failed**: select **Retry**.
+- The upload stopped: keep the app open and connected to the internet until the upload ends.
+- A cloud bot also recorded the call: you have two recordings of one meeting.
 
 ## Related articles
 
-- [Desktop](./index)
-- [Ergo Desktop Notetaker](../integrations/ergo-desktop-notetaker)
-- [Quick Note](./quick-note)
-- [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)
+- [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215)
+- [Quick Note](https://support.joinergo.com/articles/6404825240)
+- [Desktop settings and updates](https://support.joinergo.com/articles/6871098362)
+- [Troubleshoot missed detection or upload failures](https://support.joinergo.com/articles/5749782951)

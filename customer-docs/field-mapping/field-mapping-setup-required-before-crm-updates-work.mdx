@@ -1,48 +1,50 @@
 ---
-title: "Field mapping setup: required before CRM updates work"
-description: "Complete the minimum CRM property, pipeline, stage, owner, and permission setup required before relying on Ergo CRM updates."
-keywords: ["CRM setup", "field mapping required", "CRM writeback", "pipeline stages"]
+title: "CRM setup: required before CRM updates work"
+description: "The steps to finish before Ergo can update your CRM: properties, stages, entry points and permissions."
+keywords: ["CRM updates", "Write behavior", "Entry Point", "Allow creation", "Allow updates", "CRM setup"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, permissions, and sync checks.](../images/product-field-mapping.png)
-
-Complete this setup before relying on CRM updates from Ergo. A connected CRM alone is not enough; Ergo also needs the relevant fields, stages, owners, and permissions mapped.
+A connected CRM is not enough. Ergo also needs mapped fields, synced stages and write permissions.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- A team Admin sees only the teams that the Admin manages. A **Member** cannot do this setup.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Use a CRM account that can read and update the fields that Ergo needs.
 
 ## Steps
 
-- Confirm the CRM connection is active.
-- Sync the deal, contact, and company properties Ergo should read or update.
-- Confirm owner fields and team/user mappings where owner-based views or updates matter.
-- Sync or configure pipelines and stages, including stage descriptions where AI classification uses them.
-- Review property permissions for create and update behavior.
-- Run a narrow test writeback before relying on automation.
+1. Open **Settings → Org integrations → CRM**. Make sure that your CRM is connected.
+2. Open **Settings → CRM Properties**. Select the team at the top right.
+3. Click **Sync From CRM**. In the tabs **Deal**, **Contact** and **Company**, select the fields. Click **Sync Selected Properties**.
+4. Open each field. Write a **Description** and set the **Write behavior**.
+5. Open **Settings → CRM Stages**. Click **Sync From CRM**, select your stages and click **Sync Stages**.
+6. Click **Stage Settings**. In each pipeline, turn on **Entry Point** for the stage where a new deal starts. Click **Save Changes**.
+7. Open **Settings → CRM Settings → Permissions**. Make sure that **Allow creation** and **Allow updates** are on for the records that Ergo must write.
+8. Process one meeting. Check that Ergo writes the fields and the stage to one CRM record.
 
 ## What to expect
 
-- Missing mappings usually show up as blank board fields, failed updates, incorrect stage suggestions, or records that cannot be created.
-- CRM-side changes can create drift that needs review before automation continues.
-- Field Mapping does not override CRM-level permission restrictions.
+- Each team has its own field list.
+- **Amount** and **Close Date** start as **Ergo will never write to this field**. Change them if Ergo must fill them.
+- The record-owner field of your CRM is not in the sync window. Ergo sets the record owner itself.
+- A field that is read-only in your CRM shows **Read only in CRM**. Ergo does not write to it.
+- Ergo settings do not override the permissions of your CRM.
+- Ergo cannot create a deal in a pipeline that has no entry point. The page shows **Pipeline entry point required**.
 
 ## Common issues
 
-- The integration user lacks write permission for the target field.
-- The field exists in CRM but is not selected or synced in Ergo.
-- Stage or pipeline IDs changed in CRM after initial setup.
+- The CRM user cannot write to the field: change the permission in your CRM.
+- A field exists in the CRM but not in Ergo: sync it.
+- A stage or pipeline changed in the CRM: sync again.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Field Mapping overview](./field-mapping-overview)
-- [CRM properties](./crm-properties)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Property permissions](https://support.joinergo.com/articles/3280671232)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

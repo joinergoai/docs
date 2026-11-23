@@ -1,0 +1,42 @@
+---
+title: "Webhooks"
+description: "Send each finished meeting to your own system, such as Zapier, n8n or a data warehouse."
+keywords: ["Webhooks", "notetaker.meeting.completed", "Zapier", "n8n", "API"]
+---
+
+A webhook sends each finished meeting to your own system. Ergo sends the event `notetaker.meeting.completed` when a meeting finishes processing.
+
+## Who can use this
+
+- The organization **Owner** and team **Admins**.
+- Webhooks are not available in organizations with HIPAA mode.
+
+## Before you start
+
+- Have the URL of your endpoint ready (for example a Zapier or n8n webhook URL).
+
+## Steps
+
+1. Open **Settings → Webhooks**.
+2. Click **Add webhook**.
+3. Type a name and the URL of your endpoint.
+4. Select whose meetings the webhook sends.
+5. If necessary, add title phrases, so that only meetings with these words in the title are sent.
+6. Make sure that **Send meetings to this webhook** is on. Save the webhook.
+7. Copy the signing secret and use it in your system to check that each event comes from Ergo.
+
+## What to expect
+
+- Each organization can have 10 webhooks.
+- Webhooks are shared across the organization. Each one sends meetings only for the people that you select.
+- The form shows an example of the data that Ergo sends.
+
+## Common issues
+
+- No **Webhooks** page: you are a Member, or your organization has HIPAA mode.
+- No events arrive: make sure that the switch is on, that the meeting is from a person that you selected, and that the title phrases match.
+
+## Related articles
+
+- [MCP/external agent tools](https://support.joinergo.com/articles/6631055248)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)

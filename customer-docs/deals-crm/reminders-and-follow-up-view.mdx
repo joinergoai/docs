@@ -1,45 +1,48 @@
 ---
 title: "Reminders and follow-up view"
-description: "Use follow-up and reminder-oriented views to find deals with next actions, then confirm owner, due date, activity, and source context."
-keywords: ["follow-ups", "reminders", "has reminders", "next actions"]
+description: "Use Review & Draft Follow-Ups and the Follow Ups tab, and add tasks if your workspace has the Tasks tab."
+keywords: ["Follow Ups", "Review & Draft Follow-Ups", "Re-run Review", "Tasks", "Add Task", "Reminders"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use follow-up and reminder-oriented views to focus on deals that need action. These views are filters over the selected pipeline, not a separate source of truth.
+The **Follow Ups** tab shows the deals that Ergo selected in your last pipeline review. Ergo drafts an email for each deal.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat to run the review.
+- **Notetaker** and **Spectator** seats can only read.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Use **Follow-Ups** for the built-in follow-up view.
-- Use reminder-oriented filters or tabs to see deals with manually set reminders.
-- Review owner, recent correspondence, priority, stage status, and reminder due context when available.
-- Open the deal before deciding whether to act on or change the next action.
+1. Open **Deals** and select the pipeline.
+2. Click **Review & Draft Follow-Ups** at the top right.
+3. Wait one or two minutes. You can continue to work. Ergo reads your open deals (a maximum of 60) and fills the **Follow Ups** tab.
+4. On **Follow Ups**, read the **Why** column for each deal. Click **Draft** to open the email draft.
+5. Click **Not needed** to remove a deal from the list.
+6. To review the deals of other owners, change the **Owner** filter on **Follow Ups**. Then click **Re-run Review**.
+7. If your workspace has the **Tasks** tab, use it to see your open tasks. To add a task, open a deal, click the bell icon next to the deal name, then click **Add Task**.
 
 ## What to expect
 
-- Follow-up and reminder counts are scoped to the selected pipeline and view filters.
-- A deal can have reminder context even when it is hidden by another filter.
-- Reminder and draft queues are related workflows but should be reviewed separately.
+- **Follow Ups** is not a filter. It shows the result of the review. Before the first review, it shows **Review your pipeline**.
+- The tab is a list. Only the **Owner** filter works on it.
+- A review takes a minute or two. Only one review can run at a time for each pipeline. After a review, wait 5 minutes.
+- **Re-run Review** replaces the list.
+- The number on **Follow Ups** is the number of deals from your last review. The number on **Tasks** is the number of open tasks.
+- The reminders tab is removed. Reminders are now tasks, and only some workspaces have them.
 
 ## Common issues
 
-- You are in a pipeline that does not contain the reminded deal.
-- A saved view is hiding reminders.
-- The next action is stale because the latest email or meeting was not associated correctly.
+- **Follow Ups** is empty: run **Review & Draft Follow-Ups**.
+- A deal is missing from the list: check the **Owner** filter, then run **Re-run Review**.
+- There is no **Tasks** tab: your workspace does not have tasks.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Bulk email/Slack drafts](./bulk-email-slack-drafts)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Bulk email drafts](https://support.joinergo.com/articles/2766924623)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

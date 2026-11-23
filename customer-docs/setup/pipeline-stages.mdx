@@ -1,57 +1,47 @@
 ---
 title: "Pipeline stages"
-description: "Sync CRM pipeline stages into Ergo, review stage descriptions, and confirm stage controls before CRM writeback."
-keywords: ["Pipeline stages", "CRM stages", "stage sync", "stage drift", "Ergo setup"]
+description: "Sync your CRM pipeline stages and set an entry point so Ergo can create and move deals."
+keywords: ["Pipeline stages", "CRM Stages", "Stage Settings", "Entry Point", "Lock Stage"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use this page when an admin or RevOps owner is preparing deal stages for Ergo. Pipeline stages give Ergo the CRM-native stage IDs, names, descriptions, and allowed movement paths it needs for deal context, CRM updates, reporting, and agent guidance.
+Sync the pipelines and stages from your CRM. Then set where new deals start. Without an entry point, Ergo does not create new deals.
 
 ## Who can use this
 
-- Admins and RevOps owners who manage CRM pipeline configuration.
-- Operators helping with rollout, as long as a CRM owner approves the selected pipelines and stages.
+- The organization **Owner** and team **Admins**.
+- Stage settings are for one team. Select the team at the top right of the page.
 
 ## Before you start
 
-- Connect the workspace CRM.
-- Confirm which pipelines Ergo should use. If your CRM has multiple sales motions, do not assume every pipeline belongs in the initial rollout.
-- Make sure each selected stage has a stable CRM internal ID, name, and meaning.
-- Finish CRM property setup first when stage movement depends on mapped CRM fields or permissions.
+- Connect the CRM first. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
 
 ## Steps
 
-1. Open **Field Mapping** and go to the pipeline or stages area.
-2. Fetch the available CRM pipelines and stages.
-3. Select the pipelines and stages Ergo should use.
-4. Sync the selected stages into Ergo. When available, use AI-generated descriptions as a draft, then review them.
-5. Confirm each stage has the right description and exit points. Exit points define which stages can be reached directly from the current stage.
-6. Add default stages only when you intentionally want Ergo-managed stages for a pipeline that is not fully represented yet.
-7. Test a narrow CRM update or deal workflow before enabling broad stage automation.
+1. Open **Settings → CRM Stages** (wizard step **CRM stages**). Select the team at the top right.
+2. Click **Sync From CRM**. In **CRM Pipeline Stages**, select the stages that your team uses.
+3. Keep **Auto-generate descriptions** selected and click **Sync Stages**.
+4. Click **Stage Settings**. In the setup wizard this window opens by itself after the sync.
+5. In **Pipeline Stages Control**, turn on **Entry Point** for the stage where a new deal starts. Each pipeline must have one.
+6. Set **Lock Stage** and **Status** (**Active**, **Won**, **Lost**, **Inactive**) if necessary. Click **Save Changes**.
+7. Open each stage. Check **Description** and **Exit Points**.
 
 ## What to expect
 
-- Ergo syncs selected stages from supported connected CRMs and stores the pipeline name, pipeline ID, stage name, internal ID, order, description, and exit points.
-- Stage descriptions are guidance for AI and workflows. Auto-generated descriptions can help, but they should be reviewed by someone who knows the sales process.
-- CRM-side changes can create drift. If a stage or pipeline is renamed, deleted, reordered, or changed in the CRM, review Field Mapping before trusting stage-based automation.
-- If no CRM is connected or the connected CRM user cannot read stage metadata, stage sync will fail until the integration or permissions are fixed.
+- A synced stage starts with **Entry Point** off, **Lock Stage** off and status **Active**.
+- **Save Changes** stays off while a pipeline has no entry point (unless all its stages are locked).
+- Each stage gets the later stages of the same pipeline as its **Exit Points**.
+- To have the deal owner approve each stage move, click the **⋯** button and select **Require approval before moving deals**.
+- To add the default Ergo stages, click **Add Default**. Ergo does not make a stage two times.
 
 ## Common issues
 
-- A CRM pipeline was changed after onboarding and Ergo still has the previous stage list.
-- A deal is created or updated without the expected stage because the required entry stage was not configured.
-- A stage exists in the CRM but was not selected during sync.
-- Stage names look right but internal IDs do not match the CRM stage IDs.
-- Exit points are too broad, too narrow, or stale after a pipeline change.
+- No new deals: a pipeline has no **Entry Point**. The page shows **Pipeline entry point required**.
+- A stage is missing: the sync window only adds stages. Click **Sync From CRM** again and select it.
+- A stage row shows **Resolve Conflict**: the stage changed in your CRM. Click it and choose which version to keep.
 
 ## Related articles
 
-- [Setup](./index)
-- [CRM properties setup](./crm-properties-setup)
-- [Pipelines](../field-mapping/pipelines)
-- [Stage definitions and AI descriptions](../field-mapping/stage-definitions-and-ai-descriptions)
-- [Default stages](../field-mapping/default-stages)
-- [Stage controls](../field-mapping/stage-controls)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
-- [Pricing configuration](./pricing-configuration)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Stage controls](https://support.joinergo.com/articles/4806151015)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

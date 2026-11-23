@@ -1,52 +1,47 @@
 ---
 title: "Search/reporting has no results"
-description: "Troubleshoot empty search, AI answer, report, dashboard, and scheduled reporting results."
-keywords: ["search no results", "reporting no results", "empty dashboard", "scheduled reporting", "troubleshooting"]
+description: "Fix empty results in the Search button, meeting search, and Reporting."
+keywords: ["Search", "No results", "Reporting", "No dashboards yet", "In transcript", "Reporting access", "Test Run"]
 ---
 
-![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
-
-Use this page when a search, AI answer, report, dashboard, or scheduled reporting preview returns no usable results.
+Use this page when search finds nothing, or when a chart, a dashboard, or Reporting is empty.
 
 ## Symptoms
 
-- Search returns no matching meetings, emails, documents, deals, or sources.
-- An AI answer says there is no relevant context.
-- A report, dashboard, chart, or widget is empty.
-- A reporting email preview has no usable evidence.
+- The **Search** button (⌘K) shows **No results**.
+- The meeting search shows **No results found**.
+- A chart shows **No results match these settings.**
+- The page shows **No dashboards yet**.
+- **Reporting** is not in the left navigation.
 
-## Most common causes
+## Causes and fixes
 
-- Filters, date ranges, owner/team scope, or source fields are too narrow.
-- The underlying source has not synced, indexed, or processed yet.
-- The viewer lacks reporting access, meeting access, or shared-link access.
-- Custom fields, reporting fields, picklists, or numerical buckets have not populated.
-- The query is too specific for the available source text.
+### Search
 
-## What to check
+1. Click **Search** in the left navigation (⌘K). Type the name of a page, deal, company, meeting, or chat. This search does not look in emails or documents.
+2. To search in transcripts and notes, open **Meetings** and use the search box. A hit in the content shows **In transcript** or **In notes**.
+3. Start with one meeting that you know.
+4. For an AI answer, open **Chat with Ergo** (Standard seat).
 
-- Broaden the date range and remove filters.
-- Confirm source data exists for the affected time window.
-- Confirm meetings, emails, CRM records, or documents are processed and visible to the viewer.
-- Check reporting access, dashboard sharing, and shared-link permissions.
-- Verify custom fields, picklists, numerical buckets, and reporting fields are configured and populated.
+### Reporting
 
-## Resolution steps
-
-- Start with one known meeting, email, CRM record, or dashboard that should return results.
-- Remove filters before changing field definitions or source connections.
-- If the source exists but the viewer cannot see it, resolve access before rerunning the report.
-- If a scheduled preview is empty, confirm the preview window includes recent processed activity.
+1. If **Reporting** is not in the left navigation, you do not have reporting access. The Owner and team Admins have access. A Member needs a grant.
+2. Ask the organization Owner to open **Settings** → **Members**, click your name, and click **Grant** in **Reporting access**. The Owner selects **All dashboards** or **Specific dashboards**.
+3. If a chart shows **No results match these settings.**, make the date range longer and remove the filters.
+4. If a call grading chart shows **No scored calls match these settings.**, check the rubric and the filters.
+5. If the page shows **No dashboards yet**, ask a reporting administrator to create a dashboard or to give you access to one.
+6. If a test of a reporting email is empty, open **Reporting** → **Agent Reports**. Click **Test Run** on the report. Make sure that the period has meetings that Ergo processed.
 
 ## When to contact support
 
-- Contact support when a known source is processed, filters are broad, access is correct, and results are still empty.
-- Include the workspace, affected user, source type, search/report/dashboard name, filters, expected example, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- Click **Support** in the left navigation.
+- Give the search or chart name, the filters, an example that you expect, and the time.
+- Do not share sensitive customer content.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Draft send failures](./draft-send-failures)
-- [Permission or access denied](./permission-or-access-denied)
-- [Getting support](../start-here/getting-support)
+- [Search in Ergo](https://support.joinergo.com/articles/4802879242)
+- [Filters, time ranges, and drilldowns](https://support.joinergo.com/articles/2899052555)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)
+- [Get support](https://support.joinergo.com/articles/2708243049)

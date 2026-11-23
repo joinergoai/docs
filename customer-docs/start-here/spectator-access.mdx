@@ -1,45 +1,75 @@
 ---
-title: "Spectator access"
-description: "Understand spectator seats, scoped review access, and shared links without over-granting permissions."
-keywords: ["Spectator access", "Start here", "Ergo docs"]
+title: "Seat types: what each seat can do"
+description: "Compare the Standard, Notetaker and Spectator seats, and learn how to add or change a seat."
+keywords: ["Seat types", "Standard seat", "Notetaker seat", "Spectator seat", "Spectator access", "Reporting access"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page to understand what spectator users can see and which setup steps still apply.
+Every person in Ergo has one seat type. The seat decides which features the person can use. It does not decide whose meetings the person can see. See [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431).
 
 ## Who can use this
 
-- Everyone using Ergo, plus rollout owners and admins who need shared vocabulary.
+- An **Owner** can add a person with any seat and can change the seat of a person who is in Ergo already.
+- A team **Admin** can add a person with any seat, but only into a team that the Admin administers. A team Admin cannot change a seat later.
 
-## Before you start
+## The three seats
 
-- Know which CRM, calendar, email, meeting, and collaboration sources your organization has connected to Ergo.
-- Confirm whether the person needs a spectator seat, an admin/reporting grant, a shared link, or a standard user seat.
-- Ask your rollout owner before changing access, recording, integration defaults, or admin-only setup areas.
+- **Standard**: full access. Chat with Ergo, CRM updates, email drafts, tasks, automations, the notetaker and every integration.
+- **Notetaker**: records and views meetings. No CRM writes, no email drafts and no third-party note takers.
+- **Spectator**: view-only. Ergo records nothing and writes nothing for the person.
+
+| Feature | Standard | Notetaker | Spectator |
+|---|---|---|---|
+| **Dashboard**, **Meetings**, **Deals**, and **Settings → User integrations** | Yes | Yes | Yes |
+| Chat about one meeting from its page | Yes | Yes | Yes |
+| Ergo Notetaker bot | Yes | Yes | No |
+| Ergo Desktop Notetaker (only when your organization has the desktop app) | Yes | Yes | No |
+| Own email and calendar connection | Yes | Yes | No |
+| Own Slack account for pre-call DMs | Yes | Yes | No |
+| **Chat with Ergo** | Yes | No | No |
+| **Automations**, **Drafts**, **Tasks** (when your organization has Tasks), **Settings → Email Drafting** and **Knowledge Base** | Yes | No | No |
+| CRM updates from meetings and email | Yes | No | No |
+| Third-party note takers | Yes | No | No |
+
+Reporting does not depend on the seat. A Member needs Reporting access from an Owner.
 
 ## Steps
 
-- Use spectator access for limited review workflows, not active selling or CRM administration.
-- Confirm whether the spectator needs meeting access, reporting access, reporting cadences, shared links, or team-level visibility.
-- Avoid granting full admin access when a shared meeting, shared dashboard, or reporting grant is enough.
+To add a person with a seat:
+
+1. Open **Settings → Members**.
+2. Click **Add Member**.
+3. Select the **Seat**.
+
+To change the seat of a person (Owner only):
+
+1. Open **Settings → Members** and click the person.
+2. Change **Seat type**.
+
+To see your own seat, open **Settings → Profile**.
 
 ## What to expect
 
-- Spectators do not see drafts and cannot use CRM write or email-drafting workflows.
-- Field Mapping is an admin-only configuration area; do not treat it as a spectator workflow.
-- Shared routes can provide narrow access to selected meetings, clips, notes, documents, charts, or dashboards. External recipients may need to verify their email before viewing.
+- Some pages do not show for a limited seat. Nothing is broken.
+- **Settings → User integrations** shows only the sections that the seat can use. A Spectator seat sees only **MCP**. A Notetaker seat does not see Gong or the third-party note takers.
+- On the **Dashboard**, a Spectator seat sees a **Spectator access** note in **Upcoming Meetings**.
+- A Spectator seat has no setup wizard. The app opens at the first sign-in.
+- In **Settings → Members**, the **Automations** row of the person reads "Not available on a Spectator seat." (or Notetaker).
+- A downgrade disconnects integrations. A downgrade to Spectator also cancels scheduled recordings. An upgrade does not reconnect them. The person must connect them again.
+- Seats are billable. Check your agreement before you change a seat.
 
 ## Common issues
 
-- The wrong source, account, or organization context is selected.
-- The needed source is not connected or fresh.
-- A spectator role, reporting grant, or shared link is expected to provide broader access than it actually grants.
+- A Spectator cannot use chat, or meetings do not update the CRM: the seat works as designed. Change the seat to **Standard**.
+- A Spectator needs more to review:
+  - More meetings: an Owner or the team Admin clicks **Edit** next to **Meeting access** in **Settings → Members**.
+  - Dashboards: an Owner clicks **Grant** next to **Reporting access**. A Spectator seat can get Reporting access.
+  - One recording: share the meeting.
+- The **Seat type** control is off for you: only an Owner can change a seat.
 
 ## Related articles
 
-- [Start here](./index)
-- [Roles and permissions](./roles-and-permissions)
-- [Data sources and freshness](./data-sources-and-freshness)
-- [First-time setup checklist](../setup/first-time-setup-checklist)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Change a role or seat type](https://support.joinergo.com/articles/9544077862)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)
+- [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

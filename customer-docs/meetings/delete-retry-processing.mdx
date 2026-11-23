@@ -1,36 +1,44 @@
 ---
 title: "Delete or retry processing"
-description: "Delete meeting records or retry supported failed processing states without confusing source-specific behavior."
-keywords: ["delete meeting", "retry processing", "failed processing", "desktop recording"]
+description: "Delete a meeting, undo a delete, and retry a failed desktop or uploaded recording."
+keywords: ["delete meeting", "Delete Meeting", "undo delete", "Retry", "Re-upload", "failed processing"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Deleting a meeting is not the same as retrying a failed recording. Read both parts before you act.
 
-Use delete and retry carefully. Deleting a meeting record is different from retrying a failed output.
+## Who can use this
 
-## Delete a meeting
+- The organization **Owner** can delete each meeting.
+- An internal attendee can delete a meeting only when an Owner turned on **Settings → Meetings → Allow internal attendees to delete the meeting**.
+- Only the person who wrote a note can delete it.
+- If you do not see the Delete command, you do not have permission.
 
-- Open the meeting record.
-- Use the delete action if you have permission.
-- Deletion removes the meeting record and cleans up related folder references.
-- Stored media cleanup can be attempted as part of deletion, depending on source.
+## Steps
 
-## Retry processing
+1. Open the meeting.
+2. Select **⋮ (More actions) → Delete Meeting**. For a desktop recording, the command is **Delete Recording**.
+3. In the confirmation, select **Delete Meeting**.
+4. To undo the delete, select the undo button in the "Meeting deleted" message. You have 10 seconds.
+5. To retry a failed desktop recording, find the row with "Processing failed" in **Meeting History**. Select **Retry**.
+6. To retry an uploaded recording, use the card at the top of **Meeting History**. For "Processing failed", select **Retry**. For "Upload failed", select **Re-upload**.
 
-- Retry is available only for supported failed states.
-- Desktop recordings can show processing or failed states that are distinct from bot meetings.
-- Retry reprocesses captured data; it does not send the notetaker back into a live meeting.
-- If the UI does not expose retry for a specific output, do not assume retry is supported for that state.
+## What to expect
 
-## Before you act
+- After 10 seconds, the meeting is not in Ergo and you cannot restore it in the app.
+- If the meeting had more than one capture, Ergo deletes all of them.
+- Ergo does not remove the recording files at once. To restore a meeting, or to remove its recording permanently, use the **Support** button.
+- **Retry** shows only for a desktop recording or an uploaded recording that failed. A meeting that the bot recorded has no **Retry** button.
+- Retry processes the captured data again. It does not send the bot back into a live meeting.
+- A delete does not change CRM fields that Ergo already updated. Correct those in your CRM.
 
-- Confirm the source: bot, desktop, upload, or manual note.
-- Check whether the transcript exists.
-- Check whether deleting the record will remove context needed by drafts, reporting, or CRM workflows.
-- If CRM fields were already updated, use the appropriate undo or correction flow separately; deleting the meeting record does not roll those CRM changes back by itself.
+## Common issues
+
+- No Delete command: ask your Owner to delete the meeting or to turn on the setting above.
+- A failed recording has no **Retry**: it came from the bot. See the processing states article.
 
 ## Related articles
 
-- [Meeting processing time and status states](./meeting-processing-time-and-status-states)
-- [Auto-delete meetings](./auto-delete-meetings)
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Auto-delete meetings](https://support.joinergo.com/articles/2186741482)
+- [Upload external recordings](https://support.joinergo.com/articles/5256639340)
+- [Get support](https://support.joinergo.com/articles/2708243049)

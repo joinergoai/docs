@@ -1,55 +1,50 @@
 ---
 title: "Filters, time ranges, and drilldowns"
-description: "Use Reporting filters, dashboard time ranges, chart time ranges, and drilldowns without hiding the data you need."
-keywords: ["Reporting filters", "Time ranges", "Drilldowns", "Dashboard filters", "Chart filters"]
+description: "Set the date range and filters on a chart, and open the quotes and deals behind it."
+keywords: ["Filters", "Date range", "Drilldown", "Reporting", "Export CSV", "Focus on a cluster"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
+Filters and date ranges are the most common reason two people see different results. Check them before you compare charts.
 
-Filters and time ranges are the most common reason two people see different reporting results. Check them before comparing charts.
+## Who can use this
 
-## Time ranges
+- Anyone with Reporting access can open drilldowns.
+- Users with create access can change the filters of a chart.
 
-Reporting supports:
+## Steps
 
-- No filter
-- Last 7 days
-- Last 30 days
-- Last 90 days
-- Custom range
+1. Select **Reporting** in the left navigation.
+2. Find the chart. Select **⋯** → **Edit chart**.
+3. Open **Filters**.
+4. Set **Date range**, **Deal stage**, and any other filter.
+5. Select **Save changes**.
 
-Chart Builder saves a chart-level time range. Dashboards can also apply a temporary dashboard-level time range while you are viewing that dashboard. The dashboard-level range changes the current view; it does not rewrite every saved chart configuration.
+## What to expect
 
-## Field filters
-
-Filters are built from reporting fields:
-
-- Picklist and sentence fields filter by selected values.
-- Numerical fields filter by configured ranges.
-- Rubric charts support a smaller set of filters, such as user, deal stage, and amount.
-- Correspondence count can filter to meetings or emails when that mode is enabled.
-
-If a filter disappears after changing the main category, the new category may not support that filter.
+- In the default view, each chart uses its own saved **Date range**. A dashboard-level **Time Range** button exists only in the **Legacy view**.
+- Date ranges are **All time**, **Last 7 days**, **Last 30 days**, **Last 3 months**, **Last 6 months**, **Last 12 months**, and **Custom range**.
+- The filters are: **Date range**; **Deal stage** (**All**, **Won**, **Lost**, **Open**, or **Choose stages**); field filters that you add with **Add filter**; and **Deal value** (**Minimum** and **Maximum**, both inclusive).
+- Values in one filter are alternatives. Different filters must all match.
+- If you change the reporting field and a filter does not apply, Ergo keeps the filter and shows **Conflicts with the main category**. Remove that filter. Then you can save the chart.
 
 ## Drilldowns
 
-Charts can expose drilldowns into clusters, subclusters, representative sentences, or supporting details depending on the field type and view.
+- Use the view menu on a chart: **Main clusters**, **All clusters**, **Won vs lost**, or, below **Focus on a cluster**, the subclusters of one main cluster.
+- Select the number on a bar to open the list of occurrences.
+- Each occurrence shows the quote, **View call**, and **View deal**.
+- Select **Export CSV** to download the list.
+- Use drilldowns to read the source before you use a chart for coaching or forecasting.
 
-Use drilldowns to inspect source context before treating a chart as a coaching or forecasting conclusion. Shared chart and dashboard links may not expose every authenticated detail view.
+## Common issues
 
-## When results look wrong
-
-- Clear the dashboard-level time range.
-- Check the chart's saved time range.
-- Remove filters one at a time.
-- Confirm the field has data for the selected period.
-- Check whether the chart is using a rubric, revenue view, correspondence type, or selected subcluster.
-- If the chart is shared, open the authenticated dashboard to compare the full view.
+- Two charts disagree: compare the **Date range** and the filters of each chart.
+- A chart looks empty: remove the filters one at a time. Make sure the field has data in that period.
+- A shared dashboard link shows the same charts read-only. Viewers can open the quotes and the deals behind a bar. They cannot export a CSV. A call or a deal opens only after an Ergo sign-in. Forecast charts do not show on a shared link.
 
 ## Related articles
 
-- [Reporting](./index)
-- [Chart builder](./chart-builder)
-- [Save widgets to dashboards](./save-widgets-to-dashboards)
-- [Reporting dashboard sharing and embedding troubleshooting](./reporting-dashboard-sharing-and-embedding-troubleshooting)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Create/edit reports](https://support.joinergo.com/articles/3609942735)
+- [Save widgets to dashboards](https://support.joinergo.com/articles/2123914242)
+- [Share a dashboard](https://support.joinergo.com/articles/3282621663)
+- [Search/reporting has no results](https://support.joinergo.com/articles/8146112124)

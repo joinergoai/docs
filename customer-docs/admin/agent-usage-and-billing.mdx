@@ -1,52 +1,48 @@
 ---
 title: "Agent usage and billing"
-description: "Review month-to-date Ergo Agent usage in Admin without treating it as a final invoice."
-keywords: ["agent usage", "billable turns", "month-to-date", "admin"]
+description: "Read included and extra agent usage on Settings → Usage."
+keywords: ["Usage", "Agent usage", "Extra usage", "Included usage", "Billing cycle", "Limit reached", "Settings"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page to review the **Ergo Agent Usage** panel in Admin. The panel is a usage monitor for month-to-date agent activity; it is not a contract, invoice, or final billing statement.
+**Settings** → **Usage** shows the included agent usage of each person and any extra usage in this billing cycle. It is a monitor. It is not an invoice.
 
 ## Who can use this
 
-- Admin users with access to the Admin dashboard can review usage when the usage data is available.
-- Member rows can show month-to-date billable usage for that person when the usage ledger has matching data.
+- Only an **Owner** can open **Settings** → **Usage**.
 
 ## Before you start
 
-- Use usage data for monitoring and investigation, not invoice reconciliation.
-- Escalate contract, seat, rate, or invoice questions to your Ergo contact.
-- Expect the panel to refresh periodically while the Admin page is open.
+- For questions about your contract, seats, rates, or invoices, speak to your Ergo contact.
 
 ## Steps
 
-1. Open **Admin**.
-2. Expand **Ergo Agent Usage**.
-3. Review the month-to-date billable total, billable turns, raw turns, and raw token totals.
-4. Review **Top billable users - Month to date** when usage exists.
-5. Use the member table's **Agent usage** column to inspect per-user billable usage.
+1. Sign in as an Owner.
+2. Open **Settings** → **Usage**.
+3. Read the dates at the top: **Billing cycle** and **Credit period**.
+4. Read **Extra usage this billing cycle**, **People over included usage**, and **Last billing cycle**.
+5. In the table, find a person. Read **Included usage used** and **Extra usage**.
+6. Look for the badge **Limit reached**. It shows that the person used all the included usage.
+7. To see your own usage, click your name at the bottom of the left navigation. Select **Usage remaining**, if your organization has it.
 
 ## What to expect
 
-- The summary shows month-to-date billable usage from the agent usage ledger.
-- The member table shows a dollar amount and billable-turn count when a user has billable usage this month.
-- If there is no billable usage, the UI shows `$0.00` and **No billable usage this month**.
-- If usage data is unavailable, the panel reports that Ergo Agent usage is unavailable.
-- The UI uses USD-formatted estimated usage values from the usage response; actual billing terms may differ from what appears in Admin.
+- **Included usage used** is the percent of the included usage that the person used.
+- **Extra usage** is the amount above the included usage.
+- For **Extra usage this billing cycle**, the page gives the date of the invoice that has this amount.
+- The page uses the billing cycle and the credit period, not the calendar month.
+- If there is no extra usage, the page shows **$0.00** and "No extra usage yet. Everyone is within their included usage."
 
 ## Common issues
 
-- **The panel is empty.** There may be no billable agent usage for the current month.
-- **A user's row shows no usage.** The ledger may not have billable usage matched to that user ID or email.
-- **The panel says usage is unavailable.** Retry later or contact Ergo if the issue persists.
-- **The numbers do not match an invoice.** Treat Admin usage as operational visibility and use your contract/invoice for billing reconciliation.
+- **The page says "Usage isn't turned on for your organization."** Your organization does not have usage billing. Ask your Ergo contact.
+- **The page says "Usage isn't available right now. Try again in a few minutes."** Click **Try again**.
+- **You do not see Usage in Settings.** Only an Owner sees it.
+- **The numbers do not match an invoice.** Use your contract and invoice for billing. Use this page to monitor.
 
 ## Related articles
 
-- [Admin](./index)
-- [Ergo enabled/status](./ergo-enabled-status)
-- [Impersonation](./impersonation)
-- [Spectator management](./spectator-management)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Organization and team hierarchy](https://support.joinergo.com/articles/9009087843)
+- [Ergo enabled/status](https://support.joinergo.com/articles/2370493178)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)
+- [Get support](https://support.joinergo.com/articles/2708243049)

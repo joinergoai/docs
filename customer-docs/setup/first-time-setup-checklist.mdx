@@ -1,53 +1,57 @@
 ---
 title: "First-time setup checklist"
-description: "Complete first-time Ergo setup in the right order: shared setup first, personal setup next, then one controlled test."
-keywords: ["First-time setup checklist", "Setup", "Ergo docs"]
+description: "Set up Ergo with the setup wizard: what each role sees, in which order, and what to check after Finish."
+keywords: ["First-time setup checklist", "Setup", "setup wizard", "onboarding", "Get Ergo working"]
 ---
 
-![Annotated onboarding checklist showing role-specific setup paths in Ergo.](../images/onboarding-setup-by-role-annotated.svg)
-
-Use this page as the first setup pass before inviting a broader team or judging whether Ergo outputs are complete.
+Ergo setup is a wizard. It opens when a person signs in for the first time. Each role gets its own list of steps.
 
 ## Who can use this
 
-- Admins and setup owners coordinating the rollout.
-- Users completing personal connections after shared systems are ready.
-- Spectators or managers who need limited access to meetings or reporting.
+- Everyone. The wizard shows the steps for your role and seat.
 
 ## Before you start
 
-- Decide who owns Ergo account setup before inviting the broader team.
-- Confirm whether you are setting up shared systems, personal connections, or limited access.
-- Confirm whether you are a user, admin, super admin, or spectator.
-- Keep gated areas such as CRM fields, field mapping, pricing, reporting, and organization defaults with the right admin owner.
+- The organization **Owner** does the wizard first. The Owner connects the tools that the whole organization shares (CRM, Slack workspace, dialer).
+- Have your CRM admin account and your work email account ready.
 
 ## Steps
 
-- Complete shared setup first: CRM connection, field mapping, pipeline stages, company details, meeting-title phrases, collaboration tools, notetaker defaults, email templates, and reporting or pricing setup when enabled.
-- Then complete personal setup: email/calendar connection, notetaker or desktop capture path, collaboration access, and any sync-from-admin step that applies to the user.
-- Use [Setup by role](./setup-by-role) when someone only needs the part of the setup path they own.
-- Verify one controlled workflow before broad rollout: one meeting or call, dashboard visibility, expected processing state, and CRM, reporting, or draft output when configured.
+1. Sign in at dashboard.joinergo.com. The wizard opens. Click **Begin**.
+2. **Owner:** connect the shared tools. Do **Connect your CRM**, **Connect your email and calendar**, **Connect Slack and Pylon**, **Set up your notetaker** and **Connect your dialer**.
+3. **Owner:** tell Ergo about your company and your CRM. Do **Company details**, **CRM properties** and **CRM stages**. In **CRM stages**, turn on an **Entry Point** for each pipeline. Without it, Ergo does not create new deals.
+4. **Owner:** do **Advanced settings**, **Deal and account health**, **Email templates** and **Knowledge base**.
+5. **Owner:** do **Add your team**. Click **Add Member** for each person. Select the team, the role and the seat.
+6. **Owner:** do **Automations**. If your organization has Reporting, do **Configure reporting**. Click **Finish**.
+7. Each person signs in and does the wizard for their role (see the table below).
+8. Record one external meeting as a test. Then check the summary, the draft and the CRM update.
+
+| Role or seat | Wizard steps |
+|---|---|
+| Owner | 14 steps (15 with Reporting), as above |
+| Team Admin | The Owner steps without **Connect your CRM** and **Connect your dialer** |
+| Member | **Connect your email and calendar**, **Set up your notetaker**, **Connect Slack**, **Email and drafting**, **Knowledge base**, **Automations** |
+| Notetaker seat | **Connect your email and calendar**, **Turn on the Ergo Notetaker** |
+| Spectator seat | No wizard. The app opens at once. |
 
 ## What to expect
 
-- The setup path can differ by role, spectator status, feature availability, and reporting access.
-- Admin-owned setup can unlock source context for users, but each user may still need personal email/calendar, notetaker, or collaboration access.
-- Downstream outputs depend on connected sources, permissions, field mapping, filters, and processing state.
+- The header shows **Set up Ergo**, your role and **Step n of N**. The footer has **Back**, **Skip step** and **Next** (**Finish** on the last step).
+- **Next** marks a step done, also if you connected nothing. Use **Skip step** for a step that you do not need now.
+- After **Finish**, the wizard does not open again. Make later changes in **Settings**.
+- If a connection is missing after the wizard, the **Dashboard** shows the card **Get Ergo working**. Click the button in each row.
 
 ## Common issues
 
-- A required source is disconnected, stale, or not matched to the right account.
-- A user expects to change an admin-owned setting.
-- A spectator or shared-link viewer expects broader access than their scope grants.
-- A filter, permission, or setting hides the expected result.
-- A meeting is detected but the notetaker, desktop capture, processing, or downstream output did not complete.
+- A Member sees no CRM step. This is correct: the Owner or a team Admin connects the CRM for the organization.
+- No new deals are created. Open **Settings → CRM Stages → Stage Settings** and turn on an **Entry Point** in each pipeline.
+- A person skipped a step. Open **Settings → User integrations** (personal tools) or **Settings → Org integrations** (shared tools).
 
 ## Related articles
 
-- [Setup](./index)
-- [Setup by role](./setup-by-role)
-- [Connect your CRM](./connect-your-crm)
-- [Connect email and calendar](./connect-email-and-calendar)
-- [Notetaker setup](./notetaker-setup)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [Connect email and calendar](https://support.joinergo.com/articles/4928954637)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)

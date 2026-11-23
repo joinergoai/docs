@@ -1,46 +1,46 @@
 ---
 title: "Gong"
-description: "Connect Gong so Ergo can receive supported Gong meeting or recording context."
-keywords: ["Gong", "Integrations", "Ergo docs"]
+description: "Connect Gong for your organization, then add each person's Gong key so Ergo gets their calls."
+keywords: ["Gong", "Integrations", "notetaker", "Gong webhook", "Public Key"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page to connect Gong when Gong is one of your meeting recording sources.
+Gong has two parts. The organization **Owner** connects Gong one time. Then each person adds their own key, so that Ergo gets their calls.
 
 ## Who can use this
 
-- Admins and operators configuring a Gong-based notetaker source.
-- Users validating whether Gong meetings are appearing in Ergo.
+- **Part 1:** the organization **Owner** only.
+- **Part 2:** each person with a **Standard** seat.
 
 ## Before you start
 
-- Confirm your workspace has access to the Gong integration.
-- Have the credentials or JWT key requested by the integration panel.
-- Decide how Gong should coexist with Ergo Notetaker, Ergo Desktop, and other third-party notetakers.
+- One person can use only one notetaker. Gong cannot go with the Ergo Notetaker, Ergo Desktop, Granola or a different third-party notetaker. Ergo shows **Disconnect {name} first** if you try.
+- Each person needs a Gong automation rule that sends their calls to a webhook.
 
 ## Steps
 
-- Open **Integrations** and select **Gong**.
-- Complete the OAuth or credential flow shown in Ergo.
-- If prompted, provide the signed JWT key used for webhook verification.
-- Confirm Gong appears connected and test with a known meeting.
+1. **Owner:** open **Settings → User integrations → Note takers**. On the **Gong** row, click **Connect for your organization**. (Or **Settings → Org integrations → Org-wide recording → Gong → Connect**.)
+2. **Owner:** sign in to Gong and approve the access.
+3. **Each person:** open **Settings → User integrations → Note takers → Gong** and click **Connect**.
+4. In the dialog **Connect to Gong**, click **Copy** next to the **Webhook URL**.
+5. In Gong, open your automation rule that sends your calls to a webhook. Use the URL that you copied.
+6. In Gong, copy the Signed JWT Header public key of that rule.
+7. In Ergo, paste the key in **Public Key** and click **Connect**.
+8. Make sure that the **Gong** row shows **Disconnect**. Then record one test call in Gong and look for it in **Meetings**.
 
 ## What to expect
 
-- Gong is treated as a notetaker/recording source.
-- Connection state may depend on both org-level OAuth and the JWT key required for webhooks.
-- Duplicate recordings can happen if another notetaker source captures the same call.
+- Before the Owner connects Gong, other people see **Ask your org owner to connect Gong first** and no button.
+- On **User integrations**, a connected row has no **Connected** label. The button changes to **Disconnect**.
+- The Owner sees **Connected** in **Settings → Org integrations → Org-wide recording**.
 
 ## Common issues
 
-- The JWT key is missing or incorrect.
-- Gong is connected but the specific meeting was not delivered or matched.
-- Another notetaker source captured the same meeting.
+- **Ask your org owner to connect Gong first**: the Owner must do part 1.
+- **Disconnect {name} first**: disconnect your other notetaker, then connect Gong.
+- Calls do not arrive: the Gong rule does not send to the **Webhook URL** from Ergo, or the public key is from a different rule.
 
 ## Related articles
 
-- [Integrations](./index)
-- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)

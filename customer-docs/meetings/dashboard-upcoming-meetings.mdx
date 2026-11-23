@@ -1,43 +1,50 @@
 ---
 title: "Dashboard and upcoming meetings"
-description: "Use the dashboard to check upcoming calendar meetings, notetaker scheduling, live bot status, and meeting capture readiness."
-keywords: ["upcoming meetings", "calendar meetings", "notetaker status", "meeting dashboard"]
+description: "Use the Dashboard to check that Ergo sees an upcoming meeting and that the notetaker will join."
+keywords: ["Dashboard", "Upcoming Meetings", "Bot will join", "notetaker status", "calendar"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Use the **Dashboard** in the web app to make sure that Ergo sees an upcoming meeting and that the notetaker will join it.
 
-Use the dashboard when you need to confirm whether Ergo can see an upcoming meeting and whether the notetaker is scheduled to join it.
+## Who can use this
+
+- People with a **Standard** seat or a **Notetaker** seat.
+- A Spectator seat does not get the list. The card shows **Spectator access**.
+- The desktop app and the phone app do not show the notetaker toggle.
 
 ## Before you start
 
-- Connect your calendar before relying on the upcoming meetings list.
-- Check that the event has a supported meeting link, such as Zoom, Google Meet, or Microsoft Teams.
-- Treat the calendar event, notetaker schedule, live bot status, and completed meeting record as separate states.
+- Connect your calendar in **Settings → User integrations → Email & calendar**.
+- Connect the notetaker in **Settings → User integrations → Note takers**. Select **Ergo Notetaker**, then **Connect**. The notetaker toggle shows only after this step.
+- Make sure that the calendar event has a meeting link, such as Zoom, Google Meet or Microsoft Teams.
 
-## Check an upcoming meeting
+## Steps
 
-- Open the dashboard or **Meetings**.
-- Choose the calendar you want to inspect if you have more than one connected calendar.
-- Find the event and confirm the time, attendees, meeting link, and notetaker toggle.
-- If the meeting is happening now or starting soon, check whether the bot is joining, waiting, recording, or removable.
+1. Open **Dashboard** in the web app.
+2. Find the **Upcoming Meetings** card. The list shows 2 days at a time. Click the arrows to see more days.
+3. Find the event. Check the title, the time and the attendees.
+4. Click **Join** to check the meeting link.
+5. Check the toggle. **Bot will join** means that the bot is scheduled. **Bot won't join** means that it is not.
+6. From 15 minutes before the start time, check the bot status. Click **Remove Bot** if the bot must leave.
 
-## What Ergo shows
+## What to expect
 
-- Upcoming calendar events are fetched from the connected calendar and refreshed regularly.
-- Scheduled notetakers are checked separately from calendar events, so a calendar meeting can appear even when the notetaker is not scheduled.
-- Live bot state can show joining, waiting room, recording, not recording, removed, or scheduled depending on what Ergo receives from the notetaker service.
-- Pre-call briefings may appear separately from the notetaker state.
+- The list shows only events that have a meeting link and are not finished.
+- The bot status is **Joining...**, **Waiting Room**, **In Meeting**, **Recording** or **Bot Removed**.
+- The status updates every 30 seconds.
+- The calendar menu shows the calendar of your connected account.
+- The **Meetings** page is **Meeting History**. It shows past meetings only.
 
-## Common reasons a meeting is missing
+## Common issues
 
-- The calendar account is disconnected or the grant expired.
-- The selected calendar is not the calendar that owns the event.
-- The meeting has no supported conferencing URL.
-- The meeting was created or changed too close to the start time for the calendar sync to pick it up before the call.
+- A meeting is missing: the calendar is disconnected or the connection expired.
+- A meeting is missing: the event has no meeting link.
+- A meeting is missing: someone made or changed the event just before the start time.
+- No toggle shows: **Ergo Notetaker** is not connected.
 
 ## Related articles
 
-- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
-- [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting)
-- [What happens when a meeting is rescheduled](./what-happens-when-a-meeting-is-rescheduled)
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Add the bot to a live or ad hoc meeting](https://support.joinergo.com/articles/5141256582)
+- [What happens when a meeting is rescheduled](https://support.joinergo.com/articles/3737087792)
+- [Connect email and calendar](https://support.joinergo.com/articles/4928954637)

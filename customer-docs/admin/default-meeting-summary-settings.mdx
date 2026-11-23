@@ -1,52 +1,47 @@
 ---
 title: "Default meeting summary settings"
-description: "Set the organization-wide default for post-call summary emails and recording links."
-keywords: ["meeting summary emails", "post-call summary", "recording link", "admin"]
+description: "Set the default summary email behavior for everyone with the Ergo Notetaker, from the Dashboard."
+keywords: ["Summary email", "Calendar settings", "Send Summary Email", "Send Recording & Transcript", "Internal Recipients Only", "Default"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page to set the default post-call summary email behavior for users in the organization. This controls whether summary emails are enabled by default and whether those emails include a recording and transcript link.
+An Owner can set the default for post-call summary emails. The default applies to each person who has the Ergo Notetaker connected.
 
 ## Who can use this
 
-- Super admins can set the organization-wide default from the calendar settings menu.
-- Individual users can still change their own post-call summary email setting after the default is applied.
-
-## Before you start
-
-- Decide whether post-call summary emails should be on by default for the organization.
-- Decide whether summary emails should include a **View Recording & Transcript** link by default.
-- Tell users if you are changing the default before a rollout.
+- An **Owner** sets the organization default. The Owner's own **Ergo Notetaker** must be connected.
+- Each person can change the setting for their own meetings.
 
 ## Steps
 
-1. Open the calendar settings menu.
-2. Find **Send Summary Email**.
-3. Turn the switch on or off.
-4. If summary emails are on, choose whether **Send Recording & Transcript** should also be on.
-5. Save and test with one eligible meeting.
+1. Sign in as an Owner. Make sure that your own **Ergo Notetaker** is connected.
+2. Open the **Dashboard**.
+3. In the **Upcoming Meetings** card, click the **⋮** button (**Calendar settings**) at the right of **Add Bot to Meeting**.
+4. Set **Send Summary Email** to on or off.
+5. If it is on, set **Send Recording & Transcript** and **Internal Recipients Only**.
+6. Read the message that shows how many people Ergo updated.
+7. Do a test with one external meeting.
 
 ## What to expect
 
-- **Send Summary Email** sets the default for post-call summary emails.
-- **Send Recording & Transcript** controls whether the summary email includes the recording/transcript button by default.
-- The setting updates the user's notetaker configuration. It does not change meeting visibility, reporting access, or recording-disclaimer behavior.
-- A summary email is only sent when Ergo has the required meeting data and generated summary. Some meetings may not produce or send a summary email even when the default is enabled.
+- **Send Summary Email** also changes the setting at once for each person who has the **Ergo Notetaker** connected. The screen says "Overrides all users (they can change it back)."
+- **Send Recording & Transcript** adds the recording link to the email.
+- **Internal Recipients Only** sends the email only to people in your company.
+- Each switch saves at once. There is no **Save** button.
+- Each person can change the setting: **Settings** → **User integrations** → **Note takers** → gear icon on **Ergo Notetaker** → **Your settings**.
+- The setting does not change meeting visibility, reporting access, or the recording disclaimer.
 - Private meetings do not include the recording link in the summary email.
 
 ## Common issues
 
-- **The setting is missing.** Confirm the acting user is a super admin.
-- **A user changed it back.** Users can change their own post-call summary email setting after the default is applied.
-- **No email was sent.** Confirm the meeting was processed, had a generated summary, had valid attendees, and met the delivery requirements.
-- **The recording link is missing.** Confirm **Send Recording & Transcript** is enabled and the meeting is not private.
+- **The switches are missing.** Make sure that you are an Owner and that your own **Ergo Notetaker** is connected.
+- **A person changed it back.** Each person can change their own setting.
+- **No email was sent.** Make sure that the meeting was processed and that Ergo made a summary.
+- **The recording link is missing.** Make sure that **Send Recording & Transcript** is on and that the meeting is not private.
 
 ## Related articles
 
-- [Admin](./index)
-- [Global meeting access](./global-meeting-access)
-- [Recording disclaimer defaults](./recording-disclaimer-defaults)
-- [Schedule or cancel the notetaker](../meetings/schedule-or-cancel-the-notetaker)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Dashboard and upcoming meetings](https://support.joinergo.com/articles/4063633225)
+- [Summary emails and recording links](https://support.joinergo.com/articles/2971797649)
+- [Recording disclaimer](https://support.joinergo.com/articles/2647025457)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

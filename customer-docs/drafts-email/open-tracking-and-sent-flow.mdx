@@ -1,51 +1,49 @@
 ---
 title: "Open tracking and sent flow"
-description: "Use sent-state and open-tracking signals without overreading them."
-keywords: ["Open tracking and sent flow", "Drafts and email", "Ergo docs"]
+description: "See which sent emails were opened, using the Sent tab and the Recent Opens panel."
+keywords: ["open tracking", "Sent tab", "Recent Opens", "sent email flow", "opened emails"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-Open tracking helps you see whether an email sent through Ergo has detected opens. Treat it as a signal, not a complete delivery or engagement record.
+Open tracking shows if a person opened an email that you sent from Ergo. Use it as a signal. It is not a full record of delivery or interest.
 
 ## Who can use this
 
-- Reps reviewing recently sent emails.
-- Managers checking sent email activity patterns.
+- People with a Standard seat who review emails they sent.
 
 ## Before you start
 
-- Send the email through Ergo.
-- Wait for sent-state and tracking data to update.
-- Confirm open tracking is enabled for your workspace and sender.
+- Send the email from Ergo.
+- Ergo tracks opens for each email that you send from Ergo. There is no setting to turn it on or off.
 
 ## Steps
 
-- Open **Drafts**.
-- Go to the **Sent** queue.
-- Use tracking filters such as opened, unopened, or opened today.
-- Open the recent opens rail or sent-flow view when available.
-- Use the sent record to decide whether follow-up is appropriate.
+1. Select **Drafts** in the left navigation.
+2. Select the **Sent** tab. It shows the 100 most recent emails that you sent from Ergo.
+3. Look at the mark on each row. One grey tick means sent and not opened. Two green ticks mean opened. Point at the mark to see the number of opens and the times.
+4. Look at the **Recent Opens** panel on the right of the **Drafts** list. It lists the latest open for each thread. Click an entry to open the sent email.
+5. If the **View email flow** button shows next to the tabs, click it to see **Sent email flow**. Then click a group to filter the **Sent** list.
+6. Use the search box to find an email by subject, body text or recipient.
 
 ## What to expect
 
-- Sent records can include sent time, pending state, open count, first open, and last open.
-- Open tracking can show that an email was opened and when the latest open was detected.
-- Open tracking is pixel-based and can be blocked or inflated by email clients, proxies, previews, or security scanners.
-- Do not assume tracking identifies the exact recipient who opened an email.
-- Scheduled sends and provider updates can lag before sent or open data appears.
+- Open tracking shows that an email was opened, how many times, and when the latest open was. Ergo does not track link clicks.
+- The **Sent** tab has no opened or unopened filter.
+- **View email flow** shows only for some organizations.
+- Open tracking can miss opens or add false opens. Email clients, proxies, previews and security scanners can change the result.
+- Tracking does not show which person opened an email.
+- A scheduled email shows in **Scheduled**, not in **Sent**, until it is sent.
 
 ## Common issues
 
-- No opens are detected because the recipient's client blocks tracking pixels.
-- An internal preview or security scanner causes an open event.
-- A scheduled email has not reached final sent-state yet.
-- Tracking filters hide the email you expect to see.
+- No opens show: the recipient's email client can block tracking.
+- An open shows that a preview or a security scanner caused.
+- You cannot find an email: it is older than the 100 most recent. Use the search box, or look in your own mailbox.
+- You sent the email outside Ergo. It does not show in the **Sent** tab.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Sent email browser](./sent-email-browser)
-- [Send/schedule/unschedule/undo](./send-schedule-unschedule-undo)
-- [Follow-ups panel](../ai-search-automation/follow-ups-panel)
-- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Send/schedule/unschedule/undo](https://support.joinergo.com/articles/1895556641)
+- [Reminders and follow-up view](https://support.joinergo.com/articles/3788798654)
+- [Create/edit templates](https://support.joinergo.com/articles/9891933597)
+- [Failed drafts retry/report](https://support.joinergo.com/articles/2798745358)

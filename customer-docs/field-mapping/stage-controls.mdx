@@ -1,46 +1,46 @@
 ---
 title: "Stage controls"
-description: "Use stage controls to decide how stage configuration, CRM writes, and allowed stage actions should behave."
-keywords: ["stage controls", "allowed stage actions", "CRM stage writes"]
+description: "Set Entry Point, Lock Stage, Status, Exit Points and approval for stage moves."
+keywords: ["Stage controls", "Stage Settings", "Entry Point", "Lock Stage", "Status", "Exit Points", "Require approval before moving deals"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use stage controls when you need to govern how stages can be used, changed, or written back. Treat these as admin settings because broad stage behavior affects the Deals board and CRM update paths.
+Stage controls set how Ergo uses each stage. You set them for each team.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- No setting gives this right to other people. A team Admin sees only the teams that the Admin manages.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Sync your stages. See [Pipeline stages](https://support.joinergo.com/articles/1501601101).
 
 ## Steps
 
-- Confirm which users should edit stages or stage descriptions.
-- Confirm whether stage changes should write to the connected CRM.
-- Review allowed stage actions with sales operations.
-- Test a stage move on one record before enabling broader use.
+1. Open **Settings → CRM Stages**. Select the team in the team selector at the top right.
+2. Click **Stage Settings**. The window **Pipeline Stages Control** opens.
+3. Turn on **Entry Point** for the stage where a new deal starts. Each pipeline needs one.
+4. Turn on **Lock Stage** for a stage that Ergo must not move deals out of.
+5. Set the **Status** of each stage: **Active**, **Won**, **Lost** or **Inactive**. Click **Save Changes**.
+6. Open a stage row. Set its **Exit Points**: the stages that a deal can go to next.
+7. To make Ergo ask before each stage move, click **⋯**. Turn on **Require approval before moving deals**.
 
 ## What to expect
 
-- Stage controls depend on CRM permissions and the current pipeline configuration.
-- Controls can prevent unsafe updates, but they do not repair stale CRM mappings by themselves.
-- Changes should be coordinated with stage descriptions and restrict-to-pipeline settings.
+- A stage that you sync starts as **Active**, with **Entry Point** off and **Lock Stage** off.
+- Its **Exit Points** are all the later synced stages of the pipeline. Remove the ones that a deal must not go to.
+- **Save Changes** is not available while a pipeline with unlocked synced stages has no entry point.
+- With **Require approval before moving deals**, Ergo proposes each stage move. It waits for the deal owner to approve it.
 
 ## Common issues
 
-- A user can move a deal in the board but the CRM rejects the stage update.
-- Stage settings changed without retesting permissions.
-- The selected pipeline does not match the intended automation scope.
+- Ergo does not create deals: a pipeline has no **Entry Point**.
+- Ergo does not move a deal out of a stage: the stage has **Lock Stage** on, or the next stage is not in **Exit Points**.
+- The CRM rejects a stage change: check the rules in your CRM.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Stage drift resolution](./stage-drift-resolution)
-- [Restrict to pipeline](./restrict-to-pipeline)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Restrict to pipeline](https://support.joinergo.com/articles/8307060346)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

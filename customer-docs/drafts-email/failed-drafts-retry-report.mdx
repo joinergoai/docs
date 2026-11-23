@@ -1,52 +1,49 @@
 ---
 title: "Failed drafts retry/report"
-description: "Review failed drafts, retry when the cause is fixed, or report failures with useful context."
-keywords: ["Failed drafts retry/report", "Drafts and email", "Ergo docs"]
+description: "Find an email that did not send, fix the cause, and retry or report it."
+keywords: ["Errors tab", "failed send", "Retry", "Report", "Fix", "Clear", "Review & retry", "draft send failures"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
+The **Errors** tab lists emails that did not send. A failure stays in the list for 7 days.
 
-The Errors queue is for drafts or send attempts that need attention before they can be trusted.
+## Symptoms
+
+- A message shows **N emails failed to send** with the link **Review & retry**.
+- **Drafts** in the left navigation has a red mark.
+- The **Errors** tab shows in **Drafts**. It shows only when an email did not send.
 
 ## Who can use this
 
-- Users retrying failed draft sends.
-- Admins and RevOps teams investigating recurring draft failures.
+- People with a Standard seat who send email from Ergo.
 
-## Before you start
+## Causes and fixes
 
-- Read the failure message shown in Ergo.
-- Check email access, recipient fields, subject, body, attachments, and thread choice.
-- Fix the underlying issue before retrying.
-
-## Steps
-
-- Open **Drafts**.
-- Go to the failed/error queue if it is visible.
-- Open the failed item and review the error details.
-- Fix missing or invalid draft fields.
-- Retry the action when the cause is clear and corrected.
-- Report the issue with the draft ID, user, time, provider, and failure message if the retry fails again.
+1. Select the **Errors** tab. Or click **Review & retry**.
+2. Read the reason in red on the row. Examples are **Email account connection expired** and **One or more recipients have invalid email addresses**.
+3. Click the row to open the email. Correct the recipients, the subject or the body.
+4. If the email connection is the cause, click **Fix** on the row. In **Settings → User integrations → Email & calendar**, click **Reconnect**.
+5. Go back to **Errors** and click **Retry**.
+6. If a corrected email fails again, click **Report**. The Ergo team gets the failed email. The button changes to **Reported**.
+7. To remove a failure from the list, click **Clear**.
 
 ## What to expect
 
-- Failure causes vary. Do not treat any public list as exhaustive.
-- Retry may send the same draft, regenerate parts of it, or rerun a failed workflow depending on the failure type.
-- A retry can fail again if the provider grant, validation issue, or source data problem remains.
-- Some failures require admin or support intervention.
+- Ergo tries a failed send again by itself before it shows the failure.
+- **Retry** sends the same email again. It does not write the draft again.
+- Before it sends, Ergo makes sure that the email has a sender, one or more recipients, a subject (for a new email) and a body.
+- **Fix** shows only for an email connection failure.
 
 ## Common issues
 
-- Email grant is expired.
-- Recipient, subject, body, or sender is invalid.
-- Attachment or inline image limits are exceeded.
-- The selected thread cannot be used for the message.
-- The draft source data is incomplete or unavailable.
+- The email is larger than 25 MB. Remove or compress attachments.
+- A recipient address is not valid. Correct it.
+- The email connection is expired. Reconnect it, then retry.
+- The send fails again after you correct the email. Click **Report**.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Send/schedule/unschedule/undo](./send-schedule-unschedule-undo)
-- [Attachments, images, and links](./attachments-images-and-links)
-- [Draft send failures](../troubleshooting/draft-send-failures)
-- [Google/Microsoft/Slack reconnects](../troubleshooting/google-microsoft-slack-reconnects)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Send/schedule/unschedule/undo](https://support.joinergo.com/articles/1895556641)
+- [Attachments, images, and links](https://support.joinergo.com/articles/4614702823)
+- [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253)
+- [Get support](https://support.joinergo.com/articles/2708243049)

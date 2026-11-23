@@ -1,46 +1,46 @@
 ---
 title: "Deal qualification"
-description: "Map qualification fields and stage expectations so AI-assisted updates use current CRM criteria instead of informal judgment."
-keywords: ["deal qualification", "qualification fields", "stage criteria", "CRM fields"]
+description: "Set the criteria a conversation must meet before Ergo creates a new deal."
+keywords: ["deal qualification", "qualification criteria", "BANT", "MEDDIC", "SPICED", "new deal creation"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
+Deal Qualification is a check for new deals. You write the criteria. Before Ergo creates a deal from a meeting, it checks that the conversation has enough evidence for each criterion. If not, Ergo does not create the deal.
 
-Use Deal Qualification when your team expects Ergo to reason about qualification status, stage readiness, or CRM fields tied to qualification. Keep these settings aligned with the CRM and sales process.
+This feature is not on for all organizations. If you do not see the tab, contact Ergo support.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**. A **Member** does not see **Settings → Advanced**.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Decide what a real opportunity must show: for example budget, authority, need and timeline.
+- Deal Qualification applies to new deals only. To set what a deal needs before it moves to a stage, use **Entry Criteria** on the stage in **Settings → CRM Stages**.
 
 ## Steps
 
-- Identify which CRM fields represent qualification.
-- Map those fields in CRM Properties before using them in AI or automation workflows.
-- Align qualification criteria with stage descriptions.
-- Review AI-generated qualification outputs before writing them back to CRM.
+1. Open **Settings → Advanced → Deal Qualification**. If you do not see this tab, the feature is not on for your organization.
+2. Click **Create your own**, or select the preset **BANT**, **MEDDIC** or **SPICED**.
+3. Click **Add Criterion**. Type a **Criterion name**.
+4. In **What should Ergo look for?**, write the evidence that Ergo must find in the conversation.
+5. Select the **Confidence required**: **Low**, **Medium** or **High**. Click **Save Criterion**.
+6. Make sure that the switch **Enabled** is on.
+7. Process one meeting with a new prospect. Make sure that Ergo creates the deal only when the criteria have evidence.
 
 ## What to expect
 
-- Qualification behavior depends on mapped fields, stage descriptions, and available source context.
-- AI can summarize evidence, but admins should define the fields and criteria.
-- Missing or stale source data can make qualification outputs incomplete.
+- You can have 12 criteria at most.
+- The result shows on the deal page in Ergo, in the cards **Deal Creation Qualification** and **Deal Stage Qualification**.
+- Ergo does not write the qualification result to a CRM field.
 
 ## Common issues
 
-- Qualification fields were not mapped or are read-only.
-- Stage descriptions conflict with qualification criteria.
-- Reps use informal criteria that are not represented in the CRM.
+- No tab **Deal Qualification**: the feature is not on for your organization.
+- Too few deals are created: lower the **Confidence required**, or make **What should Ergo look for?** wider.
+- Too many deals are created: raise the **Confidence required**, or add a criterion.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Advanced CRM toggles](./advanced-crm-toggles)
-- [Backfill CRM fields from historical meetings](./backfill-crm-fields-from-historical-meetings)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Advanced settings](https://support.joinergo.com/articles/6033018928)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Deal and account health](https://support.joinergo.com/articles/6431504796)

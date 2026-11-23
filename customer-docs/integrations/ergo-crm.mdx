@@ -1,46 +1,47 @@
 ---
 title: "Ergo CRM"
-description: "Use Ergo as the CRM when contacts, companies, and deals should live in Ergo instead of an external CRM."
-keywords: ["Ergo CRM", "Integrations", "Ergo docs"]
+description: "Turn on Ergo CRM when you want deals, companies and contacts to live in Ergo and not in an external CRM."
+keywords: ["Ergo CRM", "CRM", "Org integrations", "Connect", "Deals", "Disconnect"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page to use Ergo CRM when your team wants contacts, companies, and deals to live in Ergo rather than in Salesforce, HubSpot, Attio, or Pipedrive.
+Use Ergo CRM when your team wants contacts, companies and deals to live in Ergo and not in an external CRM.
 
 ## Who can use this
 
-- Admins and RevOps teams deciding the CRM source of truth.
-- Teams using Ergo deals without connecting an external CRM.
+- The organization **Owner** and team **Admins**. Only these roles can connect or disconnect a CRM.
+- The **Ergo CRM** row shows only for some organizations. If you do not see it, contact Ergo support.
 
 ## Before you start
 
-- Confirm your team wants Ergo, not an external CRM, to be the primary place for deal records.
-- Review who can create, edit, and view CRM records in Ergo.
-- Do not use external-CRM reconnect guidance for Ergo CRM; it does not rely on a third-party OAuth grant.
+- Decide that Ergo, and not an external CRM, is the main place for your deal records.
+- An organization can have only one CRM connected. If an external CRM is connected, disconnect it first.
+- Ergo CRM does not use a third-party token or an OAuth grant.
 
 ## Steps
 
-- Open **Integrations** and select **Ergo CRM**.
-- Connect Ergo CRM.
-- Open **Deals** and confirm the expected deals, companies, and contacts are available.
-- Review CRM permissions and field mapping before relying on write workflows.
+1. Open **Settings → Org integrations**.
+2. In the **CRM** section, find the **Ergo CRM** row.
+3. Click **Connect**. There is no sign-in step.
+4. Make sure that the message **Ergo CRM connected** shows and that the row shows **Connected**.
+5. Open **Deals**. Check that your deals, companies and contacts are there.
+6. Open **Settings → CRM Settings → Permissions** and **Settings → CRM Properties**. Review them before you rely on Ergo to write records.
 
 ## What to expect
 
-- Ergo CRM is enabled from the Integrations card rather than through a third-party token or OAuth grant.
-- External CRM write paths and provider-specific limitations do not automatically apply to Ergo CRM.
-- If your team later connects an external CRM, confirm which CRM should be treated as the source of truth.
+- While Ergo CRM is connected, the **Connect** button of HubSpot, Salesforce and Attio is off.
+- To change to an external CRM, click **Disconnect** in the **Ergo CRM** row first. Then connect the other CRM.
+- Do not use the reconnect guidance for external CRMs for Ergo CRM.
 
 ## Common issues
 
-- The team expected an external CRM sync, but Ergo CRM was selected instead.
-- A user lacks permission to view or edit CRM records in Ergo.
-- The team has not agreed which CRM source should own deals and companies.
+- The **Ergo CRM** row is missing: it is not turned on for your organization. Contact Ergo support.
+- You cannot connect an external CRM: Ergo CRM is still connected. Disconnect it first.
+- A person cannot see or change records: check their role and seat. See [Permission or access denied](https://support.joinergo.com/articles/4190135592).
+- Your team has not agreed which CRM owns the deals. Decide this before you start.
 
 ## Related articles
 
-- [Integrations](./index)
-- [Deals board overview](../deals-crm/deals-board-overview)
-- [Add or edit deals](../deals-crm/add-edit-deals)
-- [Field mapping overview](../field-mapping/field-mapping-overview)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Add/edit deals](https://support.joinergo.com/articles/8447302687)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)

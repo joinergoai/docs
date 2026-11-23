@@ -1,51 +1,47 @@
 ---
 title: "Send/schedule/unschedule/undo"
-description: "Send a draft now, schedule it for later, cancel a scheduled send, or undo supported draft actions."
-keywords: ["Send/schedule/unschedule/undo", "Drafts and email", "Ergo docs"]
+description: "Send a draft, schedule it for later, cancel a scheduled send, or undo an action."
+keywords: ["send", "schedule send", "unschedule", "Send Now", "Undo", "scheduled drafts"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-Use send and schedule only after the draft is ready for the recipient. Ergo validates the sender, recipients, subject, body, and thread data before completing the action.
+Send or schedule a draft only when it is ready for the recipient. You have 10 seconds to undo.
 
 ## Who can use this
 
-- Users sending or scheduling email through Ergo.
-- Admins troubleshooting failed sends or scheduled drafts.
+- People with a Standard seat who send email from Ergo.
 
 ## Before you start
 
-- Review the draft body and recipients.
-- Confirm the selected sender account is connected.
-- Confirm the draft should be sent now or scheduled for a future time.
+- Review the body and the recipients.
+- Make sure that your email account is connected.
 
 ## Steps
 
-- Open the draft.
-- To send now, choose **Send** and confirm any undo prompt or validation state.
-- To schedule, choose the schedule option and select the send time.
-- To cancel a scheduled draft, open the Scheduled queue and choose the unschedule action.
-- If Ergo shows an undo option after a supported action, use it before the undo window expires.
+1. Open the draft.
+2. To send now, click **Send** (or press Cmd/Ctrl + Enter). There is no confirm step.
+3. To schedule, click the arrow next to **Send** (or press **S**). Type or select a time in the **Schedule send...** box. The time must be from 2 minutes to 30 days from now.
+4. To cancel a scheduled email, open the **Scheduled** tab and click **Unschedule** on the row. Or open the email and click **Unschedule**.
+5. To send a scheduled email at once, open it and click **Send Now**.
+6. To cancel an action, click **Undo** in the message.
 
 ## What to expect
 
-- Send uses the connected email provider for the selected sender.
-- Scheduled drafts move to the Scheduled queue until they are sent or unscheduled.
-- Unscheduling returns the draft to an editable state when provider cancellation succeeds.
-- Undo support depends on the action and whether the undo window is still open.
-- Open tracking and sent-state updates may not appear immediately after scheduling or sending.
+- Ergo holds each action for 10 seconds. After you send, schedule, discard, set a reminder or disqualify, a message with **Undo** shows for 10 seconds.
+- Ergo sends through your connected email account.
+- A scheduled email stays in the **Scheduled** tab until it is sent or unscheduled.
+- An unscheduled email returns to an editable draft.
 
 ## Common issues
 
-- Email access is expired.
-- Recipients, subject, body, sender, or thread metadata are missing or invalid.
-- The scheduled send time is invalid or already passed.
-- The provider accepted the schedule but has not yet returned final sent-state or tracking data.
+- Email access is expired. Reconnect it, then try again.
+- A required field is missing, such as **To**, **Subject** or the body.
+- The scheduled time is too close, too far, or already past.
+- A send fails: open the **Errors** tab and read the message.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Review/edit AI drafts](./review-edit-ai-drafts)
-- [Open tracking and sent flow](./open-tracking-and-sent-flow)
-- [Sent email browser](./sent-email-browser)
-- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Review/edit AI drafts](https://support.joinergo.com/articles/1674428019)
+- [Open tracking and sent flow](https://support.joinergo.com/articles/2669378000)
+- [Failed drafts retry/report](https://support.joinergo.com/articles/2798745358)
+- [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253)

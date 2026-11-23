@@ -1,54 +1,48 @@
 ---
 title: "Notetaker did not join"
-description: "Troubleshoot scheduled or live meetings where Ergo Notetaker did not join."
-keywords: ["notetaker did not join", "meeting bot", "waiting room", "Add Bot to Meeting", "troubleshooting"]
+description: "Find out why the Ergo notetaker did not join a meeting, and add it to a live meeting."
+keywords: ["Notetaker did not join", "Add Bot to Meeting", "Bot won't join", "Skip Internal Meetings", "Waiting Room", "Upcoming Meetings"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
-
-Use this page when the Ergo bot did not appear in a scheduled meeting, was not admitted, or needs to be added to a live meeting.
+Use this page when the Ergo bot did not appear in a meeting, was not admitted, or needs to join a live meeting.
 
 ## Symptoms
 
 - The meeting starts but no Ergo bot appears.
-- The bot entered the waiting room but was not admitted.
-- The bot was removed from the meeting.
-- The bot joined the wrong occurrence of a recurring or rescheduled meeting.
-- A live external meeting link needs manual dispatch.
+- The bot is in the waiting room.
+- The row shows **Bot Removed**.
+- A meeting is not on your calendar, and you need the bot now.
 
-## Most common causes
+## Causes and fixes
 
-- Calendar or notetaker setup is disconnected, stale, or missing the event.
-- The meeting link changed after scheduling.
-- The meeting platform or waiting-room settings blocked auto-entry.
-- The host did not admit the bot from the waiting room.
-- The meeting is external, ad hoc, or live and needs **Add Bot to Meeting**.
+1. Open **Settings** → **User integrations** → **Note takers**. The **Ergo Notetaker** row must show **Disconnect**. If it shows **Connect**, click it.
+2. If **Connect** is off, connect your Google or Microsoft calendar first in **Email & calendar**. Use the account that has the same email address as your Ergo sign-in. Ergo refuses a different address.
+3. You can have only one notetaker. If the app shows **Disconnect <name> first**, disconnect that notetaker first.
+4. Open the **Dashboard**. In **Upcoming Meetings**, find the meeting. If the row shows **Bot won't join**, click the switch. The text changes to **Bot will join**. For a recurring meeting, Ergo asks **This meeting only** or **This and all future meetings**.
+5. If the meeting has only people from your company, click the three-dot button (**Calendar settings**) in **Upcoming Meetings**. Set **Skip Internal Meetings** to off.
+6. During the meeting, read the state on the row: **Joining...**, **Waiting Room**, **In Meeting**, or **Recording**. If it shows **Waiting Room**, ask the host to admit the bot.
+7. In **Upcoming Meetings**, click **Join** on the row to open the meeting link. If the link is not correct, add the bot with the correct link (step 8).
+8. To send the bot now, click **Add Bot to Meeting** in **Upcoming Meetings**. Or click **New Meeting** on the **Meetings** page. Select the meeting in **Select Meeting**, or paste the link in **Meeting Link**. Click **Dispatch Immediately**.
+9. If the row shows **Bot Removed**, do step 8 again to send a new bot.
 
-## What to check
+## What to expect
 
-- Confirm the notetaker is connected and the calendar event is visible in Ergo.
-- Open the specific meeting occurrence and confirm the current meeting link.
-- Ask the host to admit the bot from the waiting room.
-- Check whether another org member's bot is already covering the shared call.
-- Use **Add Bot to Meeting** for a live link or ad hoc meeting.
-
-## Resolution steps
-
-- For future meetings, reconnect calendar/notetaker only if the event or bot state is stale.
-- For a live meeting, use **Add Bot to Meeting** rather than waiting for the next calendar sync.
-- If the bot was removed or not admitted, treat it as a meeting-room/host action rather than a processing issue.
-- Test the next affected meeting after the access or scheduling issue is fixed.
+- The Ergo Notetaker joins external meetings from your calendar.
+- **Add Bot to Meeting** is off when the calendar is not connected or has expired. If your Google or Microsoft connection expired, Ergo shows **Reconnect Your Google Account** or **Reconnect Your Microsoft Account**. See [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253).
+- The desktop app dashboard does not have **Add Bot to Meeting**.
+- Make sure that the event is on the calendar of the connected account.
+- If another person's bot already covers a shared call, see [One bot per org: shared notetaking behavior](https://support.joinergo.com/articles/8920000915).
 
 ## When to contact support
 
-- Contact support when the calendar event, notetaker setup, meeting link, and host admission path are correct but the bot still does not join.
-- Include the workspace, affected user, meeting title or link, platform, scheduled time, and whether the bot was absent, waiting, admitted, or removed.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- Click **Support** in the left navigation.
+- Give the meeting title or link, the platform, the time, and the state of the bot (absent, waiting, admitted, or removed).
+- Do not share sensitive customer content.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Pylon delivery failures, duplicate deliveries, and queue health](./pylon-delivery-failures-duplicate-deliveries-and-queue-health)
-- [Transcript or recording missing](./transcript-or-recording-missing)
-- [Getting support](../start-here/getting-support)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Notetaker waiting-room admission guide](https://support.joinergo.com/articles/4381304803)
+- [Add the bot to a live or ad hoc meeting](https://support.joinergo.com/articles/5141256582)
+- [Skip internal meetings](https://support.joinergo.com/articles/6629085842)
+- [Get support](https://support.joinergo.com/articles/2708243049)

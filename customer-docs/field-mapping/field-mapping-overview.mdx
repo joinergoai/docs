@@ -1,46 +1,50 @@
 ---
-title: "Field Mapping overview"
-description: "Understand the Field Mapping tabs and the setup Ergo needs before CRM writeback, stage classification, and AI-assisted updates."
-keywords: ["field mapping", "CRM properties", "pipeline stages", "CRM permissions"]
+title: "CRM setup overview"
+description: "Find the CRM setup pages in Settings: properties, stages, CRM settings, company details and advanced settings."
+keywords: ["CRM setup", "CRM Properties", "CRM Stages", "CRM Settings", "Company Details", "Advanced", "Field mapping"]
 ---
 
-![Product screenshot showing how CRM fields, pipeline stages, permissions, and sync checks fit together.](../images/product-field-mapping.png)
-
-Field Mapping is the admin setup area for CRM properties, pipeline stages, company context, meeting-title phrases, and advanced CRM controls. Use it before trusting Ergo to read, classify, or update CRM records at scale.
+Set up Ergo for your CRM before Ergo updates CRM records. The setup is on five pages in **Settings**.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- A team Admin sees only the teams that the Admin manages. A **Member** does not see these pages.
+- **CRM Properties**, **CRM Stages** and **CRM Settings** are for one team. Select the team at the top right of the page.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Open **Settings → Org integrations → CRM**. Make sure that your CRM is connected. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
 
 ## Steps
 
-- Confirm the CRM connection is healthy.
-- Use **CRM Properties** to map deal, contact, and company fields.
-- Use **Pipeline Stages** to sync stages, write stage descriptions, and edit stages where the connected CRM supports it.
-- Use **Company Info**, **Meeting Titles**, and **Advanced** to tune matching and classification context.
-- Test one record before enabling broad automation.
+1. Open **Settings → CRM Properties**. Select the team. Click **Sync From CRM**. Select the deal, contact and company fields. Click **Sync Selected Properties**.
+2. Open each field. Write a **Description** and set the **Write behavior**.
+3. Open **Settings → CRM Stages**. Click **Sync From CRM**, select the stages and click **Sync Stages**.
+4. Click **Stage Settings**. Turn on **Entry Point** for the stage where a new deal starts. Click **Save Changes**.
+5. Open **Settings → CRM Settings**. Check the tabs **Permissions**, **CRM behavior** and **Meeting titles**.
+6. Open **Settings → Company Details** and **Settings → Advanced**.
+7. Test one meeting before you turn on more automations.
 
 ## What to expect
 
-- Field Mapping stores the configuration Ergo uses for CRM-backed views, write paths, matching, and AI context.
-- CRM-side changes can create drift that needs review before automation continues.
-- Some controls affect matching or classification rather than directly creating CRM objects.
+- **CRM Properties**, **CRM Stages** and **CRM Settings** are in the group **Team**. Do the setup again for each team.
+- **Company Details** describes how you sell. Ergo uses it in drafts, summaries and CRM updates.
+- **CRM Settings → Meeting titles** sets which meetings count as sales meetings.
+- **CRM Settings → CRM behavior** sets CRM logging and update sensitivity.
+- **Advanced → Domains** holds your alternate domains and your partner domains.
+- With HubSpot or Attio, the tab **Edit** in the stage sync window changes the stages in the CRM.
 
 ## Common issues
 
-- A field or stage was renamed, removed, or restricted in the CRM after setup.
-- A setting was changed in Ergo but not tested on a representative record.
-- CRM permissions allow read access but block create or update actions.
+- A CRM page shows "Connect your CRM to continue": connect the CRM first.
+- A team has no fields: sync the fields for that team.
+- A field or stage changed in the CRM: sync again. See [Stage drift conflicts](https://support.joinergo.com/articles/1509454679).
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Field mapping setup: required before CRM updates work](./field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [CRM setup: required before CRM updates work](https://support.joinergo.com/articles/1319669401)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Company details](https://support.joinergo.com/articles/8760194863)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

@@ -1,34 +1,45 @@
 ---
 title: "Manual notes"
-description: "Create, edit, share, and push manually written meeting notes when a recording is not the main source."
-keywords: ["manual notes", "meeting notes", "share notes", "push notes"]
+description: "Write notes for a call without a recording in the Ergo desktop app, and add notes to a recorded meeting."
+keywords: ["manual notes", "New Note", "My Notes", "Push Automation", "Share Note", "desktop app"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Use a manual note when you want a meeting record without a bot recording. Standalone notes are in the Ergo desktop app. The web app does not have them.
 
-Manual notes are useful when you want a meeting record without relying on a bot recording.
+## Who can use this
 
-## Use manual notes when
+- People with a **Standard** seat or a **Notetaker** seat, in the Ergo desktop app.
+- In the web app, you can add your notes to a recorded meeting. Open the meeting, open the **Summary** tab and select **My Notes**.
 
-- The call was not recorded.
-- You want to capture customer context from a live conversation.
-- You need to add attendees, CRM records, or structured notes by hand.
+## Steps
 
-## What you can do
+1. Open the Ergo desktop app.
+2. Open **Meetings** and select **New Note**.
+3. Enter a title in **Add title...**. Or select the date control (**Today**) and pick a calendar event. The event sets the title and the attendees.
+4. To add a person, select the people control, select **Add**, and enter the email address.
+5. Write in **Write your notes...**. The note saves automatically.
+6. Optional: select **Add to folder**.
+7. To share the note, select **Share**.
+8. To send the note to your automations, select **Push Automation**, then **Push**.
 
-- Create and edit notes.
-- Link notes to a calendar event or CRM record when the UI supports it.
-- Share notes through the note sharing flow.
-- Push notes to automation workflows where available.
+## What to expect
 
-## Caveats
+- The page shows "Auto-saved".
+- You cannot link a CRM record to a note. Ergo finds the CRM records from the attendees when you push the note.
+- **Push Automation** shows only for a Standard seat. The note must be saved, have content, and have an attendee from outside your company.
+- Only you can open your note in Ergo. The organization **Owner** and team **Admins** do not see your notes.
+- **Share** makes a link for other readers. You can add a password.
+- A deleted note cannot be restored.
+- A manual note is not a bot transcript. The AI output depends on what you write.
 
-- Manual notes are not the same as a bot transcript.
-- AI outputs depend on the text and context you provide.
-- Visibility follows note and meeting-note access rules, not every meeting history rule.
+## Common issues
+
+- No **New Note** button in the web app: use the desktop app.
+- No **Push Automation** button: you do not have a Standard seat, the note has no content, or it has no external attendee.
 
 ## Related articles
 
-- [Push notes or meetings to automations](./push-notes-or-meetings-to-automations)
-- [Upload external recordings](./upload-external-recordings)
-- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [Push notes or meetings to automations](https://support.joinergo.com/articles/9743385583)
+- [Upload external recordings](https://support.joinergo.com/articles/5256639340)
+- [Quick Note](https://support.joinergo.com/articles/6404825240)
+- [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215)

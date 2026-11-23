@@ -1,54 +1,51 @@
 ---
-title: "Scheduled agent runs"
-description: "Create, edit, pause, run, or delete recurring Ergo agent prompts."
-keywords: ["Scheduled agent runs", "Ergo AI, search, and automation", "Ergo docs"]
+title: "Create a scheduled automation"
+description: "Run an Ergo agent task on a schedule and send the result to Slack or email, from the Automations page."
+keywords: ["Automations", "scheduled automation", "Scheduled agent runs", "Run sandbox", "Run History"]
 ---
 
-![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
-
-Scheduled agent runs let Ergo run a saved prompt on a weekly schedule and deliver the result to configured destinations.
+Scheduled agent runs are now **Automations**. An automation can run an agent task on a schedule and send the result to Slack or email.
 
 ## Who can use this
 
-- RevOps and managers automating recurring checks.
-- Users who need periodic summaries or follow-up prompts.
+- People with a **Standard** seat.
+- Everyone can make automations for themselves (**Only me**). A team **Admin** can also make them for **A team** or the **Entire organization**.
 
 ## Before you start
 
-- Confirm scheduled agent runs are enabled for your workspace.
-- Write a prompt that can run without extra clarification.
-- Choose the timezone, days of week, time of day, and delivery destinations.
+- To send to Slack, connect the Slack workspace first (**Settings → Org integrations → Workspaces**).
+- Write a prompt that can run without more questions.
 
 ## Steps
 
-- Open **Scheduled Agent Runs** from Chat settings or the scheduled runs page.
-- Select **New Run**.
-- Enter a name and prompt.
-- Choose a weekly schedule and timezone.
-- Add email and/or Slack delivery destinations.
-- Save the run.
-- Use enable/disable to pause or resume it.
-- Use **Run** to queue a manual execution when needed.
+1. Click **Automations** in the left navigation.
+2. On the **Gallery** tab, click **Create automation**. Or click **Use template** on a template.
+3. In **When**, select **On a schedule**. Select the days, the **Time** and the **Timezone**.
+4. In **What**, select **Agent task** and type the prompt. To send fixed text, select **Static message**.
+5. In **Where**, select **Slack message** or **Send email**. Then select the channel, the teammate or the email addresses.
+6. In **Who can manage this**, select **Only me**, **A team** or **Entire organization**.
+7. Click **Create automation**. The automation is **Active** at once. To save it without a start, click **Save as draft**.
+8. On the **My automations** tab, use the switch to pause or activate the automation.
+
+## Test and run
+
+- **Run sandbox** runs the automation now and shows the result. It sends nothing and changes no CRM records. It works for **Active**, **Paused** and **Draft** automations.
+- **Run live now** is a real run, with the same effects as a scheduled run. It works only for **Active** automations.
+- To see past runs, click **Previous runs** on the row, or open the **Run History** tab.
 
 ## What to expect
 
-- The page marks the feature as alpha.
-- The current UI enforces a limit of 3 active scheduled runs.
-- Runs can be created, edited, deleted, enabled, disabled, and manually queued.
-- A disabled run will not run on schedule and cannot be manually run until enabled.
-- Scheduled runs should be checked in history for their final delivery status.
+- Your organization shares one pool of agent automations. The pool size is the number of active Standard seats, to a maximum of 20. **Active**, **Paused** and **Draft** automations count. Daily briefings and **Static message** automations do not count.
+- The top of the page shows **Org agent pool** with the number used.
+- One automation has one destination.
 
 ## Common issues
 
-- The active run limit is reached.
-- The prompt needs context that is not available at run time.
-- Delivery destinations are missing or disconnected.
-- The run is disabled or has no next run scheduled.
+- **Create automation** is off: a necessary field is empty. Read **What will run** in the **Summary** panel.
+- **Organization agent automation limit reached**: pause or delete an agent automation, or use **Static message**.
+- Slack delivery fails: connect the Slack workspace, and add Ergo to the private channel.
 
 ## Related articles
 
-- [Ergo AI, search, and automation](./index)
-- [Email/Slack delivery for scheduled runs](./email-slack-delivery-for-scheduled-runs)
-- [Scheduled run history and health](./scheduled-run-history-and-health)
-- [Understanding sources/actions in chat](./understanding-sources-actions-in-chat)
-- [Slack](../integrations/slack)
+- [Chat with Ergo](https://support.joinergo.com/articles/2744746875)
+- [Slack](https://support.joinergo.com/articles/7075762783)

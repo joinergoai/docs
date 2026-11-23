@@ -1,81 +1,60 @@
 ---
-title: "Promote/demote/convert roles"
-description: "Change member roles from Ergo Admin, including secondary-admin promotion, admin demotion, and standard-user or spectator conversion."
-keywords: ["roles", "secondary admin", "spectator", "standard user"]
+title: "Change a role or seat type"
+description: "Change a person's team role or seat type in Settings → Members, and see what a downgrade turns off."
+keywords: ["Change role", "Seat type", "Admin", "Member", "Standard", "Notetaker", "Spectator", "Members", "Settings"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page when a member should stay in the organization but needs a different team role or seat type. Role changes are separate from team moves, meeting access grants, and reporting access grants.
+Set roles and seats on the person in **Settings** → **Members**. Only an Owner can make these changes.
 
 ## Who can use this
 
-- Super admins can promote team members, demote secondary admins, and convert users between standard-user and spectator seats.
-- Primary and secondary admins can review role assignments, but role changes are guarded by super-admin permissions.
+- Only an **Owner**. A team **Admin** sees the controls greyed out.
+- An Owner can also change the Owner's own seat: **Settings** → **Profile** → **Access** → **Seat**.
 
-## Before you start
+## Change a role
 
-- Confirm the person is on the correct team. If not, use [Add/remove/move members](./add-remove-move-members) first.
-- Decide whether you are changing admin authority or converting between a standard user and spectator.
-- Review any separate [meeting and reporting access](./grant-meeting-reporting-access) grants that should change after the role update.
-- Ask the member to expect a refresh or reconnect step after spectator conversion.
+A person is an **Admin** or a **Member** in each team. An Admin can edit the team, add new people to it, turn Automations on or off for its members, and edit whose meetings they can see.
 
-## Promote a member to secondary admin
+1. Open **Settings** → **Members** and click the person.
+2. In **Memberships**, use the role list next to the team. Select **Admin** or **Member**.
 
-Use **Promote to Admin** for a regular team member who should become a secondary admin.
+Ergo saves the change at once. A role change does not change the seat or the meeting access of the person.
 
-1. Open **Admin** and choose the team.
-2. Open the member's action menu.
-3. Select **Promote to Admin**.
-4. Confirm the promotion.
+Each team must have at least one Admin. Before you change the only Admin of a team to Member, make a different person an Admin of that team.
 
-Ergo moves the person from **Members** to **Secondary Admins** for that team and updates their organization and dashboard role to admin.
+## Change a seat type
 
-## Demote a secondary admin
+1. Open **Settings** → **Members** and click the person.
+2. Change **Seat type**. Read the confirmation. It gives a short summary.
+3. Click **Change seat**.
 
-Use **Demote to User** when a secondary admin should remain on the team but no longer have admin privileges.
+### What a downgrade turns off
 
-1. Open the secondary admin's action menu.
-2. Select **Demote to User**.
-3. Confirm the demotion.
+| Cleanup | Standard → Notetaker | Standard or Notetaker → Spectator |
+|---|---|---|
+| Email features (inbox monitoring, triage, follow-ups, reply drafts, signature) | Turned off | Turned off |
+| Third-party notetakers (Gong, Fireflies, Fathom, Grain, Granola, Read.ai, Circleback, BlueDot) | Disconnected | Disconnected |
+| Own email and calendar connection | Kept | Disconnected |
+| Personal Slack connection | Kept | Disconnected (the organization Slack app stays) |
+| Ergo notetaker and scheduled recordings | Kept | Disconnected and cancelled |
+| Automations | Turned off | Turned off |
 
-Ergo moves the person from **Secondary Admins** to **Members** for that team and updates their organization and dashboard role to user.
+Ergo does not delete anything that it recorded before.
 
-## Convert a standard user or spectator
+### What an upgrade does
 
-Use **Convert to Spectator** or **Convert to User** when the person's seat type should change.
-
-When converting a standard user to spectator, Ergo:
-
-- Marks the dashboard as a spectator seat.
-- Disconnects supported third-party notetakers and Slack for that user.
-- Turns off email monitoring, follow-up email, external email client, and surfacing settings.
-- Disables Ergo for that user.
-- Disconnects the user's Recall calendar connection when one exists.
-
-When converting a spectator back to a standard user, Ergo changes the spectator flag back to standard user. The user may need to reconnect integrations, re-enable email settings, and re-enable Ergo afterward.
-
-Primary admins cannot be converted with this action.
-
-## What to expect
-
-- Role changes update the Admin member table after the data refreshes.
-- Promotion and demotion change admin authority; they do not automatically change separate meeting/reporting grants.
-- Spectator conversion intentionally disconnects or disables automation-related settings so the seat becomes view-oriented.
-- Converting back to standard user does not automatically restore every disconnected integration or toggle.
+An upgrade to Standard or Notetaker changes the seat only. It does not connect again what Ergo disconnected. Tell the person to open **Settings** → **User integrations** and connect email and calendar, Slack, and the note taker again. Then make sure that the **Automations** switch of the person is on.
 
 ## Common issues
 
-- **The action is missing.** Promote appears for members, demote appears for secondary admins, and convert appears only when the current user is allowed to perform the conversion.
-- **The primary admin needs to change.** Use the team primary-admin reassignment flow instead of convert, promote, or demote.
-- **The person still cannot see meetings or reports.** Check meeting access and reporting access separately.
-- **Integrations are disconnected after spectator conversion.** This is expected. Reconnect and re-enable the relevant settings after converting back to standard user.
+- **The Seat or Role control is greyed out.** You are a team Admin, not an Owner.
+- **The message says the integration cleanup could not be started.** Click **Retry** in the message. You can also do the same seat change again.
+- **The person cannot see Chat with Ergo.** Chat shows for Standard seats only.
+- **The person lost meetings after a downgrade.** A Spectator sees only meetings that they attended or that you granted. See [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384).
 
 ## Related articles
 
-- [Admin](./index)
-- [Add/remove/move members](./add-remove-move-members)
-- [Spectator management](./spectator-management)
-- [Grant meeting/reporting access](./grant-meeting-reporting-access)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seat types: what each seat can do](https://support.joinergo.com/articles/1478941509)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Add, remove or move members](https://support.joinergo.com/articles/2381379700)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)

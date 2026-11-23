@@ -1,56 +1,51 @@
 ---
 title: "Create/edit/delete teams"
-description: "Create, edit, or delete teams safely in the Admin dashboard without orphaning members or changing the wrong scope."
-keywords: ["create team", "edit team", "delete team", "team type", "primary admin"]
+description: "Create, edit, and delete teams in Settings → Members."
+keywords: ["Create team", "New team", "Edit team", "Delete team", "Members", "Teams", "Settings"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page when your organization needs a new team, a team detail change, or a team deletion. Teams affect ownership, admin scope, reporting setup, and member organization, so make these changes deliberately.
+Teams decide who an Admin can manage, and which meetings and settings a person can reach. Change teams with care.
 
 ## Who can use this
 
-- Super Admins can create and delete teams.
-- Super Admins can edit any team.
-- A team's primary admin can edit that team's name, description, or type.
+- An **Owner** can create and delete teams.
+- An Owner, or an **Admin** of that team, can edit a team.
 
 ## Before you start
 
-- Decide the team name, optional description, team type, and primary admin.
-- Make sure the primary admin is already an organization member with the admin role.
-- Check whether any members would be left without a team before deleting.
-- Review reporting access, CRM settings, and meeting visibility before changing team structure.
+- Decide the team name, an optional description, the team type, and the team Admin.
+- Make sure that the person who will be the team Admin already has an Ergo account in your organization. The person does not need to be an Admin of a different team.
 
 ## Steps
 
-1. Open **Admin**.
-2. To create a team, choose **Create Team**, enter a team name, choose a team type, and select a primary admin.
-3. Use the team description to explain the team's function. Ergo can prefill descriptions based on team type, but you can edit them.
-4. To edit a team, open the team actions and update its name, description, or type.
-5. To delete a team, confirm the deletion dialog only after every member has another team assignment.
-6. After creating or editing a team, review the team membership and add the right secondary admins, users, or spectators.
+1. Open **Settings** → **Members** and click the **Teams** tab.
+2. To create a team (Owner only), click **New team**.
+3. Enter the **Name**, an optional **Description**, the **Type**, and the **Admin**. Click **Create team**.
+4. To edit a team, click the pencil icon (**Edit team**) in the team row. Change the **Name**, **Description**, or **Type**. Click **Save team**.
+5. To delete a team (Owner only), click the trash icon (**Delete team**) in the team row.
+6. If the dialog lists people who belong only to this team, select a different team for each person.
+7. Type the team name. Click **Delete team** or **Move people and delete team**.
+8. To put people in the team, click **Add Member** (new account). Or open a person and click **Add to team** (existing account, Owner only).
 
 ## What to expect
 
-- Creating a team adds it to the organization's team structure and assigns a primary admin.
-- Team types are limited to the supported values in the Admin UI, such as sales, implementation, success, partnerships, growth/marketing, and product.
-- Deleting a team is blocked when any member would be left with no team.
-- Editing a team does not automatically move members or grant reporting access.
+- Use the **Description** to explain the function of the team (500 characters maximum). Ergo does not fill this field.
+- Each person keeps the Admin or Member role in the new team after a delete.
+- You cannot delete the last team, or a team that is linked to an Okta group.
+- A delete also deletes the email templates and the reporting fields of that team.
+- Editing a team does not move members and does not grant reporting access.
 
 ## Common issues
 
-- There are no eligible admin users to select as primary admin.
-- The team name is blank or the team type is invalid.
-- The acting user can view the team but does not have permission to edit or delete it.
-- Deletion fails because one or more members do not belong to another team.
-- A new team exists, but members, reporting access, and CRM settings still need follow-up.
+- You do not see **New team**: only an Owner sees it.
+- You cannot edit a team: you are not an Owner or an Admin of that team.
+- The delete is blocked: the team is the last team, or it is linked to an Okta group.
+- A new team has no people yet: add members, then check reporting access and CRM settings.
 
 ## Related articles
 
-- [Admin](./index)
-- [Organization and team hierarchy](./organization-and-team-hierarchy)
-- [Provision accounts](./provision-accounts)
-- [Add/remove/move members](./add-remove-move-members)
-- [Promote/demote/convert roles](./promote-demote-convert-roles)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Organization and team hierarchy](https://support.joinergo.com/articles/9009087843)
+- [Provision accounts](https://support.joinergo.com/articles/4601303031)
+- [Add, remove or move members](https://support.joinergo.com/articles/2381379700)
+- [Change a role or seat type](https://support.joinergo.com/articles/9544077862)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)

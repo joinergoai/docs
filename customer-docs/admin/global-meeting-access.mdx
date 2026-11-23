@@ -1,51 +1,40 @@
 ---
-title: "Global meeting access"
-description: "Control whether members can view meetings across the organization."
-keywords: ["global meeting access", "meeting visibility", "admin"]
+title: "Everyone can see all meetings"
+description: "Let everyone in the organization open any meeting with one switch in Settings → Meetings."
+keywords: ["Everyone can see all meetings", "Meeting visibility", "Settings", "Meetings", "Access", "Meeting Privacy Rules"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page when every organization member should have broad meeting visibility. For one-person or team-specific exceptions, use [Grant meeting/reporting access](./grant-meeting-reporting-access) instead.
+By default people see their own meetings, team Admins see their teams' meetings, and the Owner sees everything. If your whole organization should open any recording, turn on **Everyone can see all meetings**.
 
 ## Who can use this
 
-- Super admins can view and change the global meeting access setting.
-- Other admins and members inherit the resulting meeting visibility behavior, but they do not manage the organization-wide switch.
-
-## Before you start
-
-- Confirm this should apply to the whole organization, not a single team or user.
-- Notify teams before broadening access to meetings they may not expect others to see.
-- Review whether individual meeting grants are enough.
-- Be ready to have affected users refresh meeting lists after the change.
+- An **Owner** only. Team Admins and Members do not see **Settings** → **Meetings**.
 
 ## Steps
 
-1. Open **Admin** as a super admin.
-2. Find **Global Meeting Access**.
-3. Turn the switch on or off.
-4. Confirm the change and ask users to refresh their meeting views.
+1. Sign in as an Owner.
+2. Open **Settings** → **Meetings**.
+3. In the **Access** group, turn on **Everyone can see all meetings**.
+4. Tell people to refresh the **Meetings** page.
+
+The text below the switch says: "When off, people see their own meetings plus any access you grant in their profile."
 
 ## What to expect
 
-- When global meeting access is enabled, meeting access scope resolves to organization-wide access for members.
-- When it is disabled, users fall back to their normal access: owned meetings, attended meetings, team-admin visibility, and any custom meeting grants.
-- The toggle invalidates meeting-related data in the dashboard so meeting lists can reload with the new scope.
-- This setting affects meeting visibility. It does not grant reporting dashboard access, CRM permissions, or role changes.
+- Every person, on every seat type, can open every meeting in the organization. This includes Spectators.
+- Individual **Meeting access** grants are not needed while the switch is on. The dialog of the person shows *Everyone can see all meetings*.
+- **Private meetings stay private.** A meeting that is private, by hand or by a Meeting Privacy Rule, is visible only to its owner and attendees.
 
-## Common issues
+## Related settings
 
-- **The switch is missing.** Confirm the acting user is a super admin.
-- **Only one user needs more access.** Use meeting grants instead of enabling global access.
-- **A user still cannot see a report.** Add reporting access separately.
-- **Meeting lists look stale.** Refresh the dashboard after the setting changes.
+- **Allow internal attendees to delete the meeting** (**Access** group): when off, only an Owner of the organization can delete a meeting. When on, a person from your organization who was in the meeting can also delete it.
+- **Privacy** → **Meeting Privacy Rules** → **Edit rules**: meetings with a keyword in the title, or with the people that you select, are private to their participants.
+- **Labels**: the labels that Ergo gives to new meetings.
+- **Pipeline access** is on a different page: **Settings** → **Organization** → **Pipeline access** → **Manage**. It sets which teams can see which CRM pipelines.
 
 ## Related articles
 
-- [Admin](./index)
-- [Grant meeting/reporting access](./grant-meeting-reporting-access)
-- [Sync CRM/settings to team members](./sync-crm-settings-to-team-members)
-- [Default meeting summary settings](./default-meeting-summary-settings)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)
+- [Meeting labels](https://support.joinergo.com/articles/7792216643)

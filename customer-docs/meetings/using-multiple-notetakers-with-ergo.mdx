@@ -1,36 +1,49 @@
 ---
 title: "Using multiple notetakers with Ergo"
-description: "Avoid duplicate meeting records, drafts, and CRM updates when Ergo and another notetaker capture the same call."
-keywords: ["multiple notetakers", "duplicate meetings", "duplicate drafts", "meeting source"]
+description: "Learn which notetakers can run together and how Ergo handles two captures of one meeting."
+keywords: ["multiple notetakers", "N captures", "Primary", "duplicate meetings", "Disconnect first", "Note takers"]
 ---
 
-![Flow diagram showing how multiple notetakers can create duplicate context and drafts.](../images/multiple-notetakers-flow.svg)
+One person can use only one notetaker type at a time. Two captures of one meeting can still happen. This article explains why and what to do.
 
-Using more than one notetaker can be useful, but it can also create duplicate meeting records and duplicate downstream work.
+## Who can use this
 
-## What can duplicate
+- Anyone who manages their own notetaker in **Settings → User integrations → Note takers**.
 
-- Meeting history records.
-- Transcripts or summaries.
-- Post-call drafts.
-- CRM updates.
-- Reporting and automation outputs.
+## Before you start
 
-## How to reduce duplication
+- You can connect **Ergo Notetaker** and **Ergo Desktop Notetaker** together.
+- You cannot connect a third-party notetaker (Gong, Fireflies.ai, Circleback.ai, BlueDot, Grain or Fathom) while Ergo Notetaker or Ergo Desktop Notetaker is connected. The reverse is also true. Ergo shows "Disconnect {name} first".
+- You can connect only one third-party notetaker at a time.
+- Granola can run together with the Ergo notetakers only for some organizations.
 
-- Pick one primary capture source for each recurring workflow.
-- Turn off the Ergo bot for meetings where another notetaker should be the source of truth.
-- Check the meeting source before pushing automations.
-- Review drafts before sending when more than one recorder joined the same meeting.
+## Steps
 
-## When duplication is expected
+1. Open **Settings → User integrations**.
+2. In **Note takers**, select **Disconnect** on the notetaker that you do not want.
+3. Select **Connect** on the notetaker that you want.
+4. To stop the Ergo bot for one meeting, open **Dashboard**. In **Upcoming Meetings**, set the toggle to **Bot won't join**.
 
-- You use both the Ergo bot and a third-party notetaker on the same call.
-- You upload an external recording of a meeting already captured by the bot.
-- You create manual notes and also process a transcript for the same event.
+## What to expect
+
+- When the Ergo bot, the Ergo desktop app and Granola capture the same meeting, Ergo puts the captures together.
+- **Meeting History** shows one row with an **N captures** chip. Select the chip to open each capture.
+- The capture that Ergo uses has the **Primary** badge.
+- Ergo runs your automations for one capture. If a later capture is much more complete, Ergo can run them again for that capture.
+- Two people in one meeting can use different notetakers. Then the meeting has two captures.
+- An upload is a second meeting in **Meeting History**. Ergo runs the automations for it only if you select **Push to CRM**.
+- A note goes to the automations only if you select **Push Automation** on it. Then the note and the recording both run.
+
+## Common issues
+
+- Two drafts for one meeting: open **Meetings**, select the **N captures** chip, and write down the capture names, for example **Bot capture** and **Desktop capture**. Then select **Support** in the left navigation.
+- Two rows for one meeting: remove the filters. If both rows stay, tell support.
+- **Connect** does not change to **Connected**: disconnect the other notetaker first.
 
 ## Related articles
 
-- [One bot per org: shared notetaking behavior](./one-bot-per-org-shared-notetaking-behavior)
-- [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)
-- [Duplicate drafts from multiple notetakers](../troubleshooting/duplicate-drafts-from-multiple-notetakers)
+- [One bot per org: shared notetaking behavior](https://support.joinergo.com/articles/8920000915)
+- [Why some meetings do not generate insights or drafts](https://support.joinergo.com/articles/1207359797)
+- [Push notes or meetings to automations](https://support.joinergo.com/articles/9743385583)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Get support](https://support.joinergo.com/articles/2708243049)

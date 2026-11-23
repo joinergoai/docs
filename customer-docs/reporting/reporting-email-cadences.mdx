@@ -1,55 +1,46 @@
 ---
 title: "Reporting email cadences"
-description: "Create and manage weekly Reporting emails with recipients, fields, analysis instructions, test runs, and run history."
-keywords: ["Reporting email cadences", "Scheduled reporting email", "Weekly report", "Reporting recipients", "Test run"]
+description: "Set up an agent report that sends a weekly summary by email, and test it."
+keywords: ["Agent Reports", "Reporting email", "New Report", "Test Run", "Send Now", "Cadence"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
-
-Reporting email cadences send recurring summaries based on selected Reporting fields and analysis instructions.
+An agent report sends a recurring summary by email. It uses the reporting fields and the analysis instructions that you choose.
 
 ## Who can use this
 
-- Reporting email cadences are admin-only in the Reporting page.
-- Recipients can include organization members and external email addresses.
+- Only the organization **Owner** and team **Admins** see the **Agent Reports** tab.
+- Recipients can be organization members or external email addresses.
 
-## Create a cadence
+## Steps
 
-1. Open **Reporting**.
-2. Select **Email Cadences**.
-3. Select **New Cadence**.
-4. In **Setup**, enter a cadence name, weekly send day, send time, timezone, and enabled state.
-5. In **Recipients**, choose organization members or add external email addresses.
-6. In **Fields**, choose manual field selection or auto field selection.
-7. In **Analysis**, add instructions for what the report should emphasize.
-8. Save the cadence.
+1. Select **Reporting** in the left navigation, then the **Agent Reports** tab.
+2. Select **New Report**.
+3. In **Setup**, enter the **Name** and the **Schedule** (**Day**, **Time**, **Timezone**). Select **Continue**.
+4. In **Recipients**, select members, or enter an address and select **Add external**. Select **Continue**.
+5. In **Fields**, select **Choose fields manually** (up to 10 fields or rubrics) or **Let Ergo choose automatically** (Ergo selects 3 to 5). Select **Continue**.
+6. In **Analysis**, enter **Analysis instructions** (optional).
+7. Keep **Enable agent report** on to send on the schedule, or turn it off.
+8. Select **Create report**.
 
-New cadences can be saved as disabled drafts. When you continue to the analysis step for a new cadence, Ergo defaults the cadence to enabled unless you turn it off.
+## Test a report
 
-## Field selection modes
+- **Test Run** and **Send Now** show only on a report that is **Enabled** and complete. First enable the report and save it.
+- Select **Test Run**, select the test recipients, and send. Ergo sends a labeled test email only to those recipients.
+- Select **Send Now** to send at once to the recipients of the report.
+- For one report, you can start 7 test runs and 3 **Send Now** runs in 24 hours.
 
-- **Manual**: select up to 10 available Ergo reporting fields or rubric fields.
-- **Auto**: leave selected fields empty and let Ergo choose fields for the run.
+## What to expect
 
-Manual mode requires at least one field before the cadence can be enabled. Remove unavailable fields before saving.
-
-## Recipients and schedule
-
-- Recipient emails must be valid and cannot be duplicated.
-- A pending external email must be added or cleared before saving.
-- Cadences use a weekly schedule.
-- The timezone must be a valid IANA timezone.
-
-## Test and send now
-
-Use **test run** before enabling a cadence or after major field changes. Use **send now** when you want to queue an immediate send for the cadence's configured recipients.
-
-Both actions enqueue a reporting email run. A queued action is not the same as confirmed delivery; check run history for the final result.
+- To save without a schedule, select **Save draft**. Ergo saves the report as disabled.
+- To change a report that exists, select **Save changes**.
+- Manual field selection needs at least one field before you can enable the report.
+- Recipient addresses must be valid. You cannot add the same address two times.
+- A queued run is not a confirmed delivery. Check the run history for the result. See [Agent report run history](https://support.joinergo.com/articles/1660665197).
 
 ## Related articles
 
-- [Reporting](./index)
-- [Preview/run history](./preview-run-history)
-- [Custom reporting fields](./custom-reporting-fields)
-- [Call grading rubrics](./call-grading-rubrics)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Agent report run history](https://support.joinergo.com/articles/1660665197)
+- [Custom reporting fields](https://support.joinergo.com/articles/6979568726)
+- [Call grading rubrics](https://support.joinergo.com/articles/3553693942)
+- [Search/reporting has no results](https://support.joinergo.com/articles/8146112124)

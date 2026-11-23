@@ -1,38 +1,44 @@
 ---
 title: "Why some meetings do not generate insights or drafts"
-description: "Check the common reasons a captured meeting has no generated insights, CRM updates, or post-call drafts."
-keywords: ["missing insights", "missing drafts", "post-call drafts", "meeting outputs"]
+description: "Find out why a recorded meeting has no drafts, CRM updates or insights, and how to fix it."
+keywords: ["no drafts", "no insights", "Push Automation", "Meeting titles", "sales meeting", "Process my meetings"]
 ---
 
-![Flow diagram showing how meeting type and source affect summaries, insights, and draft generation.](../images/meeting-processing-flow.svg)
+A finished recording does not mean that Ergo creates every output. Use this list to find the cause.
 
-A completed recording does not mean every downstream output will be created.
+## Symptoms
 
-## Common reasons
+- The meeting has a recording, but no follow-up draft.
+- The meeting has no CRM update or insights.
 
-- The meeting has no transcript or an unusable transcript.
-- The meeting was treated as internal or not relevant for the configured sales workflow.
-- The meeting source does not trigger the same automations as scheduled notetaker meetings.
-- CRM, email, or template settings are not connected or configured for the user.
-- The meeting has duplicate capture sources, and outputs were generated from a different record.
+## Causes and fixes
 
-## What to check first
+1. **Seat.** Ergo runs automations only if the meeting owner has a **Standard** seat, or if an attendee from your organization has one. A **Notetaker** or **Spectator** seat alone does not run them.
+2. **Switch.** The owner turned off **Process my meetings, emails and Slack**. Check it in **Settings → Profile → Ergo on your account**.
+3. **Missing data.** For a bot meeting, Ergo needs a transcript, a title and at least one attendee with an email address.
+4. **Sales-meeting rule.** Ergo decides if each meeting is a sales meeting. If it is not, Ergo does not update the CRM from it.
+   - The **Owner** or a team **Admin** sets the rule for each team in **Settings → CRM Settings → Meeting titles**.
+   - Add the title phrases that identify a sales meeting.
+   - Turn on **AI Boost** if Ergo must also use the meeting content.
+   - If **AI Boost** is off and the list is empty, Ergo treats no meeting as a sales meeting.
+   - A title with "internal:" or "internal-" is never a sales meeting.
+5. **Privacy.** A meeting that your organization's privacy rules protect can get no downstream outputs.
+6. **Drafts setting.** Make sure that **Post-call follow-up emails** is on in **Settings → Email Drafting → General**.
+7. **CRM rules.** Check the CRM rules of your team in **Settings → CRM Settings → Permissions** and **CRM behavior**.
+8. **Automation filter.** Each automation that starts from a meeting has a **Which meetings?** filter. Open the automation and check it. With no option selected, it runs on every meeting.
 
-- Recording and transcript availability.
-- Meeting source: Ergo bot, desktop recording, manual note, external recording, or another integration.
-- Whether the meeting is linked to the right deal or attendees.
-- Whether post-call drafting and CRM update settings are enabled.
-- Whether the meeting is still processing.
+## Push the meeting again
 
-## What to do
+1. Open the meeting in **Meetings**.
+2. Click **Push Automation**. A Standard seat is necessary.
+3. Add the emails of the external attendees. Click **Push to Automations**.
 
-- If the transcript is missing, start with recording/transcript troubleshooting.
-- If the transcript exists but downstream outputs are missing, check meeting filters and automation eligibility. A filtered meeting can still have a summary or transcript while CRM updates, sales insights, or post-call drafts are suppressed.
-- If the UI exposes a push or retry action, use it once after confirming the meeting has the required context.
+Do this one time. Ergo then runs the automations and does not apply the sales-meeting check. A meeting with the **Push Needed** badge has no attendee emails and needs this step.
 
 ## Related articles
 
-- [Meeting filter: what sales-only processing means](./meeting-filter-what-sales-only-processing-means)
-- [Push notes or meetings to automations](./push-notes-or-meetings-to-automations)
-- [Using multiple notetakers with Ergo](./using-multiple-notetakers-with-ergo)
-- [Failed drafts retry report](../drafts-email/failed-drafts-retry-report)
+- [Push notes or meetings to automations](https://support.joinergo.com/articles/9743385583)
+- [Meeting title phrases](https://support.joinergo.com/articles/3908850568)
+- [Turn post-call drafts on or off](https://support.joinergo.com/articles/3684399934)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Failed drafts retry/report](https://support.joinergo.com/articles/2798745358)

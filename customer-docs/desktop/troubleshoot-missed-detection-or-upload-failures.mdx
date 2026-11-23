@@ -1,53 +1,40 @@
 ---
 title: "Troubleshoot missed detection or upload failures"
-description: "Diagnose Desktop meetings that did not auto-record, upload, process, or appear in Ergo."
-keywords: ["Troubleshoot missed detection or upload failures", "Desktop", "Ergo docs"]
+description: "Fix a desktop meeting that Ergo did not find, did not upload or did not process."
+keywords: ["Meeting detected", "Processing failed", "Retry", "Upload failed", "Ergo Desktop", "Desktop limits"]
 ---
 
-![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
+Use this page when a desktop recording did not start, did not upload or did not process.
 
-Use this page when a Desktop meeting did not start, upload, process, or appear where expected.
+## Symptoms
 
-## Who can use this
+- Ergo did not show the card **Meeting detected**.
+- The home page has no recording card with a timer under **Now**.
+- A row in **Recent** shows **Processing failed**.
+- A meeting card shows **Upload failed**.
+- The meeting does not show in **Meetings**.
 
-- Desktop users recovering from a missed recording or failed upload.
-- Admins and operators collecting details before escalating.
+## Causes and fixes
 
-## Before you start
+1. **Ergo did not find the meeting.** Open **Settings → Desktop app → System permissions** in the desktop app. Make sure that **Accessibility** and **Screen Recording** show **Granted**. If a permission shows **Required**, grant it and select **Restart Ergo**. Ergo finds meetings in apps such as Zoom, Google Meet and Microsoft Teams. For other conversations, select **Quick Note**, then **Record**.
+2. **You did not start the recording.** There is no setting for automatic recording. When the card **Meeting detected** shows, select **Start Recording**. During a recording, the home page shows the recording card with a timer under **Now**.
+3. **Processing is not done.** Look at **Recent** on the app home page. A row that shows **Processing...** is still in work. Wait.
+4. **Processing failed.** Select **Retry** on the row that shows **Processing failed**. If Ergo shows "Failed to retry processing. Please try again.", contact Ergo support. See [Get support](https://support.joinergo.com/articles/2708243049).
+5. **The upload failed.** Keep the app open and connected to the internet until the upload ends.
+6. **A bot also recorded the call.** On the web, open **Meetings** and look for a recording of the same meeting from the Ergo Notetaker bot.
 
-- Keep the app open if an upload might still be in progress.
-- Confirm the app is signed in as the same user as the dashboard.
-- Note whether the recording was calendar-sourced, detected, Quick Note, or manual.
+## Limits and good practice
 
-## Steps
-
-- Check whether the recording indicator ever became active.
-- Confirm macOS permissions and quit and reopen the app if permissions changed.
-- Check whether the meeting already has a cloud-bot recording.
-- Look for processing or failed recording status in Ergo.
-- Retry processing only when Ergo shows a retry path.
-- If the meeting had no calendar invite or was never detected, use Quick Note or a manual note and add context for the team.
-
-## What to expect
-
-- Missed detection can come from calendar visibility, meeting URL availability, disabled auto-record settings, or a runtime app issue.
-- Calendar-less meetings may require a manual Quick Note start instead of auto-detection.
-- Upload failures can come from network interruption, app shutdown, or missing upload data.
-- Retry requires the backend to have enough upload and recording metadata.
-- If a recording was skipped as a stub, it may not create a normal meeting record.
-
-## Common issues
-
-- Auto-record detected meetings is off.
-- The meeting was joined from a different account, alias, or calendar than the connected user.
-- The app was closed before upload completed.
-- The recording button does not respond until the app is fully quit and reopened.
-- The recording is in failed status but missing data needed for retry.
+- Ergo Desktop is for macOS. Download it from **Settings → User integrations → Note takers → Ergo Desktop Notetaker → Download**.
+- One person can upload 40 recordings per hour.
+- Do a test recording on the same computer before an important call.
+- Close heavy apps before you record, especially when you share your screen.
+- A very short recording can fail to give a useful transcript.
 
 ## Related articles
 
-- [Desktop](./index)
-- [macOS permissions](./macos-permissions)
-- [Silent desktop recording](./silent-desktop-recording)
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
-- [Sign-in and desktop callback issues](../troubleshooting/sign-in-and-desktop-callback-issues)
+- [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215)
+- [macOS permissions](https://support.joinergo.com/articles/4584568980)
+- [Record a meeting with Ergo Desktop](https://support.joinergo.com/articles/9478429833)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Sign-in and desktop callback issues](https://support.joinergo.com/articles/4930413652)

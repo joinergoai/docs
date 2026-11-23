@@ -1,51 +1,46 @@
 ---
-title: "Scheduled run history and health"
-description: "Read scheduled agent run execution history, status, delivery results, and errors."
-keywords: ["Scheduled run history and health", "Ergo AI, search, and automation", "Ergo docs"]
+title: "Automation run history"
+description: "Find the runs of an automation, read their status and output, and run one again."
+keywords: ["run history", "automation runs", "Previous runs", "Run again", "Completed", "Failed", "No action needed"]
 ---
 
-![Product screenshot showing Ergo AI chat, sources, actions, and scheduled runs.](../images/product-ai-chat.png)
-
-History is the source of truth for whether a scheduled run queued, ran, succeeded, failed, skipped, and delivered.
+Run History shows each run of your automations and what happened. Use it to check if a run worked.
 
 ## Who can use this
 
-- Users monitoring scheduled runs.
-- Admins investigating failed or missing deliveries.
+- The Owner and team Admins see all runs of the organization.
+- Other users see runs that they own or that ran for them.
 
 ## Before you start
 
-- Open the scheduled run you want to inspect.
-- Know the expected schedule and destination.
-- Check whether the run was scheduled or manually triggered.
+- Know the name of the automation and when it should run.
+- Check if the run was scheduled or started by hand.
 
 ## Steps
 
-- Open **Scheduled Agent Runs**.
-- Select **History** on a run.
-- Review recent health indicators on the run card.
-- Select a specific execution in the drawer.
-- Check status, timestamps, duration, agent text, delivery result, failure stage, and error message when available.
+1. Click **Automations** in the left navigation.
+2. Open the **Run History** tab. Or, on the **My automations** tab, click **Previous runs** on an automation.
+3. Use the lists **All automations** and **All statuses** to find the run.
+4. Read the label of each run: **Queued**, **Running**, **Completed**, **Failed**, **No action needed**, **Canceled** or **Scheduled**. A sandbox run also has the label **Preview**.
+5. Click the run. The dialog shows **Lifecycle** (when the run was created, started and completed) and **Output** (what Ergo sent, or the error).
+6. To run a failed or completed run again, click **Run again** → **Run latest version**.
+7. If there are more runs, click **Load more**.
 
 ## What to expect
 
-- Execution statuses can include queued, running, succeeded, failed, or skipped.
-- The list refreshes while runs are queued or running.
-- Recent run health is summarized on the run card.
-- Manual **Run** executions and scheduled executions can both appear in history.
-- A failed run may include a failure stage and error message, but not every failure has the same detail.
+- An automation row has no health indicator. To see if an automation works, click **Previous runs** and read the status of the latest runs.
+- Open a run to follow it. The dialog updates until the run ends. To update the list, load the page again.
+- For a failed run, **Output** shows the error.
 
 ## Common issues
 
-- A run is still queued or running, so final delivery is not available yet.
-- The agent completed but a delivery destination failed.
-- The schedule has no upcoming next run because the run is disabled or incomplete.
-- History is filtered to the wrong run.
+- A run is still **Queued** or **Running**. The final result is not available yet.
+- The run is **Scheduled**: it waits for its start time.
+- The list shows the wrong automation: check the **All automations** list.
 
 ## Related articles
 
-- [Ergo AI, search, and automation](./index)
-- [Scheduled agent runs](./scheduled-agent-runs)
-- [Email/Slack delivery for scheduled runs](./email-slack-delivery-for-scheduled-runs)
-- [Understanding sources/actions in chat](./understanding-sources-actions-in-chat)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Automations overview](https://support.joinergo.com/articles/8409132281)
+- [Create a scheduled automation](https://support.joinergo.com/articles/5716109397)
+- [Understanding sources/actions in chat](https://support.joinergo.com/articles/7787702900)
+- [Search/reporting has no results](https://support.joinergo.com/articles/8146112124)

@@ -1,51 +1,42 @@
 ---
 title: "Pylon delivery failures, duplicate deliveries, and queue health"
-description: "Troubleshoot missing, duplicated, or delayed Ergo delivery into Pylon workflows."
-keywords: ["Pylon delivery", "duplicate delivery", "queue health", "recording delivery", "troubleshooting"]
+description: "Find out why a meeting is not in Pylon, or shows two times, and fix the Pylon settings."
+keywords: ["Pylon", "Call recording", "Manage Pylon", "Delivery failure", "Duplicate", "Org integrations"]
 ---
 
-![Flow diagram showing Pylon delivery setup, delivery attempts, duplicates, and escalation.](../images/pylon-delivery-flow.svg)
-
-Use this page when an Ergo recording, transcript, or workflow delivery expected in Pylon is missing, delayed, duplicated, or hard to trace.
+Ergo sends each completed meeting to Pylon as a call recording. The call recording has the transcript and a link to the meeting in Ergo. Ergo attaches it to the Pylon account of the customer, not to a ticket.
 
 ## Symptoms
 
-- A Pylon conversation or ticket does not receive the expected recording or context.
-- A recording or notification appears more than once.
-- Delivery status is unclear after a support workflow.
-- The source meeting is still processing when Pylon delivery is expected.
+- A call recording for the meeting is not in Pylon.
+- Pylon shows two call recordings for one meeting.
+- The meeting is still processing when you expect it in Pylon.
 
-## Most common causes
+## Causes and fixes
 
-- Pylon API key, queue, account, or destination mapping is incorrect.
-- The source meeting, transcript, or recording asset is not ready yet.
-- A delivery job retried after a transient failure.
-- Multiple rules or workflows point at the same destination.
+1. Ask an organization admin to open **Settings** → **Org integrations** → **Workspaces**. Make sure that **Pylon** shows **Connected**.
+2. If the Pylon API key changed, click **Update** and paste the new key.
+3. Ask the organization Owner to click the gear on the **Pylon** row. In **Manage Pylon**, select **Everyone**, or select **Specific people**. Make sure that a person from the meeting is in the list.
+4. Open the meeting in **Meetings**. Make sure that the meeting has a transcript and is not a **No Show**.
+5. Make sure that the meeting is not private.
+6. Make sure that the meeting owner has the **Ergo Notetaker** or **Fathom** connected in **Settings** → **User integrations**.
 
-## What to check
+## What to expect
 
-- Confirm Pylon is connected with the intended workspace/API configuration.
-- Check the queue, destination, account, or issue mapping used by the workflow.
-- Verify the meeting has a ready recording/transcript asset before retrying delivery.
-- Check whether another automation or delivery rule targets the same Pylon destination.
-- Capture the affected Pylon destination and meeting/time window without copying private message contents.
-
-## Resolution steps
-
-- Retry only after confirming the source asset is ready and the destination mapping is correct.
-- If duplicate delivery occurred, pause broad retries until the duplicate source is identified.
-- Test with one known meeting or workflow before re-enabling a wider queue.
-- Treat queue health and destination mapping as separate checks.
+- Ergo selects the Pylon account from the email domains of the external attendees.
+- Ergo sends each meeting to Pylon one time.
+- Ergo tries again automatically when a send to Pylon fails. There is no retry button, no pause control, and no queue view.
+- Ergo does not send a meeting that is still processing.
 
 ## When to contact support
 
-- Contact support when Pylon is connected, the destination is correct, the source asset is ready, and delivery is still missing or duplicated.
-- Include the Ergo workspace, Pylon destination type, source meeting or workflow, delivery time window, and whether it was missing, duplicated, or delayed.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- If the call recording is not in Pylon after these checks, click **Support** in the left navigation.
+- If Pylon shows two call recordings for one meeting, click **Support**. Give the meeting name and the time.
+- Do not share private message contents.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Add Ergo to new Slack customer channels](./add-ergo-to-new-slack-customer-channels)
-- [Notetaker did not join](./notetaker-did-not-join)
-- [Getting support](../start-here/getting-support)
+- [Pylon](https://support.joinergo.com/articles/6049381167)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Notetaker did not join](https://support.joinergo.com/articles/2299804002)
+- [Get support](https://support.joinergo.com/articles/2708243049)

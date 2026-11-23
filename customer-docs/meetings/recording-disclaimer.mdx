@@ -1,33 +1,47 @@
 ---
 title: "Recording disclaimer"
-description: "Configure and verify the org-level recording disclaimer used by the Ergo notetaker."
-keywords: ["recording disclaimer", "meeting consent", "notetaker settings"]
+description: "Turn on the recording notice that the Ergo bot posts in the meeting chat."
+keywords: ["Recording Disclaimer", "recording notice", "Calendar settings", "Owner", "meeting bot"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+When **Recording Disclaimer** is on, the Ergo bot sends a chat message to all participants when it joins. The bot pins the message. The setting applies to the whole organization.
 
-The recording disclaimer setting controls whether Ergo sends or displays a fixed recording notice for notetaker meetings.
+## Who can use this
 
-## Who can manage it
+- Only the organization **Owner** can see and change this switch.
+- Members and team Admins must ask the Owner to change it.
 
-- Super admins can update the org-level recording disclaimer setting.
-- Members should ask an admin if the setting needs to change.
+## Before you start
 
-## What to check
+- Connect your own **Ergo Notetaker** in **Settings → User integrations → Note takers**. The Owner sees the switch only after this step.
+- Check your organization's recording-notice rules with your legal or compliance owner.
 
-- Whether the disclaimer is enabled in notetaker settings.
-- Whether your org has separate legal or customer-communication requirements.
-- Whether the host or meeting platform also announces recording.
+## Steps
 
-## Important caveats
+1. Sign in to the web app as the Owner.
+2. Open **Dashboard**.
+3. In the **Upcoming Meetings** card, click the ⋮ button (**Calendar settings**).
+4. Turn **Recording Disclaimer** on or off.
+5. Make sure that the message "Recording disclaimer enabled" or "Recording disclaimer disabled" shows.
 
-- The setting does not replace your obligation to follow applicable consent laws or company policy.
-- The disclaimer is a notice; it does not collect attendee acknowledgment.
-- The bot can still require waiting-room admission.
-- Recording-disclaimer state is separate from summary-email settings and meeting sharing settings.
+## What to expect
+
+- The message is fixed: "This meeting is being recorded and transcribed by Ergo. For more information, please visit https://joinergo.com".
+- A change also updates the bots that are already scheduled.
+- The setting is a notice. It does not collect an acknowledgment from attendees.
+- The setting does not replace your duty to follow consent laws or company policy.
+- Desktop recording does not use the bot. Review that workflow separately.
+- The setting does not change summary emails or meeting sharing.
+
+## Common issues
+
+- You do not see the switch: you are not the Owner, or your own **Ergo Notetaker** is not connected.
+- A bot already joined before the change: check that meeting. The change may not have reached that bot.
+- No chat message shows: make sure that someone admitted the bot, and that the meeting platform shows chat messages.
 
 ## Related articles
 
-- [Notetaker waiting-room admission guide](./notetaker-waiting-room-admission-guide)
-- [Recording privacy basics](../start-here/recording-privacy-basics)
-- [Share/revoke/password-protect meetings](./share-revoke-password-protect-meetings)
+- [Notetaker waiting-room admission guide](https://support.joinergo.com/articles/4381304803)
+- [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Summary emails and recording links](https://support.joinergo.com/articles/2971797649)

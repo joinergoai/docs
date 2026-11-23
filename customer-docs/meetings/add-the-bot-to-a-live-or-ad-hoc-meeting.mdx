@@ -1,40 +1,49 @@
 ---
 title: "Add the bot to a live or ad hoc meeting"
-description: "Manually send the Ergo bot to a supported meeting link when the meeting is not already scheduled from your calendar."
-keywords: ["add bot", "ad hoc meeting", "live meeting", "manual notetaker"]
+description: "Send the Ergo bot to a live, last-minute or unscheduled meeting."
+keywords: ["Add Bot to Meeting", "New Meeting", "Dispatch Immediately", "ad hoc meeting", "live meeting"]
 ---
 
-![Flow diagram showing how Add Bot to Meeting sends Ergo to an external meeting link.](../images/meetings-add-bot-flow.svg)
+Use this when a meeting is live, last-minute, or missing from the upcoming list. The bot joins the call in a few seconds.
 
-Use **Add Bot to Meeting** when the meeting is live, last-minute, or missing from the upcoming calendar list.
+## Who can use this
+
+- People with a **Standard** seat or a **Notetaker** seat. A Spectator seat cannot use this flow.
 
 ## Before you start
 
-- Copy the full Zoom, Google Meet, or Microsoft Teams meeting URL.
-- Confirm the host will admit the bot if the meeting has a waiting room.
-- Use this flow for the Ergo bot. Desktop recording is a separate capture mode.
+- Connect **Ergo Notetaker** in **Settings → User integrations → Note takers**. If it is not connected, the dialog shows a **Connect** button.
+- Copy the full Zoom, Google Meet or Microsoft Teams meeting URL.
+- This flow is for the Ergo bot. Desktop recording is a different way to capture a meeting.
 
-## Add the bot
+## Steps
 
-- Open the dashboard or **Meetings**.
-- Click **Add Bot to Meeting**.
-- Paste the meeting URL or select an available calendar event if the modal offers one.
-- Submit the request and watch the meeting card for joining or waiting-room status.
+1. Open **Dashboard** in the web app. Click **Add Bot to Meeting** in the **Upcoming Meetings** card. Or open **Meetings** and click **New Meeting**.
+2. In the **Add New Meeting** dialog, select the event in **Select Meeting**. If the event is not in the list, paste the URL in **Meeting Link**.
+3. If you pasted a link, type a title in **Title (optional)**.
+4. If you pasted a link, add the attendee emails in **Attendees**. Ergo needs them to run automations for the meeting.
+5. Click **Dispatch Immediately**.
+6. Make sure that the dialog shows **Notetaker Dispatched!**.
+7. If the meeting has a waiting room, ask the host to admit the bot.
 
 ## What to expect
 
-- Manually added meetings may be stored as unscheduled or ad hoc capture if they were not matched to a calendar event.
-- If the meeting is matched to a calendar event, Ergo can use that event context for title, attendees, and follow-up workflows.
-- Invalid or unsupported links can fail before the bot joins.
+- Ergo adds your email automatically.
+- If the link is the link of an event on your calendar that starts between 30 minutes ago and 4 hours from now, Ergo uses the title and attendees of that event.
+- Each use sends one more bot. Do not use this when a teammate's bot is already in the call.
+- After the call, find the recording on **Meetings**.
+- If automations did not run, open the meeting and click **Push Automation**. Add the emails of the external attendees. Then click **Push to Automations**. This needs a Standard seat.
 
-## After the meeting
+## Common issues
 
-- Check the meeting record for recording, transcript, and generated outputs.
-- If downstream automations did not run automatically for an ad hoc meeting, use [Push notes or meetings to automations](./push-notes-or-meetings-to-automations) where available.
+- The dialog says "Ergo notetaker not configured": connect **Ergo Notetaker** first.
+- **Add Bot to Meeting** is disabled: connect your calendar.
+- The bot does not enter: the meeting has a waiting room and nobody admitted it.
+- The link does not work: use the full meeting URL.
 
 ## Related articles
 
-- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)
-- [Notetaker waiting-room admission guide](./notetaker-waiting-room-admission-guide)
-- [Upload external recordings](./upload-external-recordings)
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
+- [Dashboard and upcoming meetings](https://support.joinergo.com/articles/4063633225)
+- [Notetaker waiting-room admission guide](https://support.joinergo.com/articles/4381304803)
+- [Push notes or meetings to automations](https://support.joinergo.com/articles/9743385583)
+- [Upload external recordings](https://support.joinergo.com/articles/5256639340)

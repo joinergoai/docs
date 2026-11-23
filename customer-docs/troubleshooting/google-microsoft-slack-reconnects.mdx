@@ -1,52 +1,52 @@
 ---
 title: "Google/Microsoft/Slack reconnects"
-description: "Troubleshoot expired or mismatched Google, Microsoft, and Slack connections."
-keywords: ["expired grants", "Google reconnect", "Microsoft reconnect", "Slack reconnect", "troubleshooting"]
+description: "Reconnect an expired Google, Microsoft, or Slack connection."
+keywords: ["Reconnect", "Expired", "Google", "Microsoft", "Slack", "Reconnect Google", "User integrations", "Fix delivery"]
 ---
 
-![Flow diagram showing reconnecting an expired integration grant.](../images/integration-reconnect-flow.svg)
-
-Use this page when Google, Microsoft, or Slack stops powering calendar, email, Slack context, notetaker, draft, or delivery workflows.
+Use this page when an expired Google, Microsoft, or Slack connection stops email, calendar, or Slack workflows.
 
 ## Symptoms
 
-- The dashboard shows an expired-grant or reconnect prompt.
-- Email, calendar, or Slack context stops updating.
-- Notetaker dispatch, drafts, scheduled runs, or Slack delivery looks stale.
-- A reconnect succeeds, but data still appears to come from the wrong account or workspace.
+- Ergo shows the screen **Reconnect Your Google Account** or **Reconnect Your Microsoft Account**.
+- You get an email from Ergo with the button **Reconnect on Ergo**.
+- The row in **Settings** → **User integrations** shows **Expired**.
+- An automation shows **Slack destination needs attention**.
 
-## Most common causes
+## Causes and fixes
 
-- OAuth grants can expire, be revoked, or be invalidated by account/security policy changes.
-- The user reconnected with a different account than the one that owns the mailbox, calendar, or Slack workspace.
-- Slack channel membership, workspace, or channel mappings changed after reconnect.
-- Required scopes or channel access were not granted during the new connection.
+### Google or Microsoft
 
-## What to check
+1. If the screen **Reconnect Your Google Account** or **Reconnect Your Microsoft Account** shows, click **Reconnect Google** or **Reconnect Microsoft**. Sign in. You cannot use other Ergo pages until you reconnect.
+2. If no screen shows, open **Settings** → **User integrations** → **Email & calendar**. On the row with the pill **Expired**, click **Reconnect**.
+3. Use the account that has the same email address as your Ergo sign-in. Ergo refuses a different address and shows **Please connect using the same email address you use to sign in to Ergo.**
+4. You can connect Google Workspace or Microsoft 365, not both. To change provider, click **Disconnect** on the connected row first. The other row shows **Disconnect Google first** or **Disconnect Microsoft first**.
+5. Read the email address on the provider row. If it is not correct, click **Disconnect** and connect the correct account.
 
-- Use the reconnect prompt when the expired-grant blocker appears.
-- Reconnect with the same work account expected to own the source.
-- Confirm Google or Microsoft email/calendar permissions were granted during the OAuth flow.
-- Confirm Slack workspace, channel membership, and private/external channel access where Slack is the affected source.
-- Retry one affected workflow after reconnect before assuming all historical data is repaired.
+### Slack
 
-## Resolution steps
+1. Open **Settings** → **User integrations** → **Slack**. If the row shows **Expired**, click **Reconnect**.
+2. For the Slack workspace, ask the organization Owner or a team Admin to open **Settings** → **Org integrations** → **Workspaces**. If **Slack** does not show **Connected**, click **Connect**.
+3. After a workspace reconnect, open **Automations**. Where **Slack destination needs attention** shows, click **Fix delivery**.
+4. If an automation shows **Ergo is not in this channel**, click **Add Ergo to channel**. Or invite **@Ergo** in Slack.
 
-- Reconnect only the affected source first.
-- If Slack still cannot find a channel, add Ergo to the channel or confirm the connecting user can see it.
-- If calendar or email still looks stale, confirm the connected account matches the user's active mailbox and calendar.
-- Do not assume reconnect backfills missed meetings, messages, or draft context automatically.
+Only Google and Microsoft have the full reconnect screen. Slack has no such screen.
+
+## After you reconnect
+
+- Do a test of one workflow.
+- A workflow that failed before the reconnect may need a manual retry.
 
 ## When to contact support
 
-- Contact support when the correct account is reconnected, permissions are granted, and one controlled workflow still fails.
-- Include the workspace, affected user, source system, connected account, workflow tested, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- Click **Support** in the left navigation.
+- Give the source system, the connected account, the workflow that you tested, and the time.
+- Do not share sensitive customer content.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Stage drift conflicts](./stage-drift-conflicts)
-- [Slack Enterprise Grid channel listing issues](./slack-enterprise-grid-channel-listing-issues)
-- [Getting support](../start-here/getting-support)
-- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)
+- [Google Workspace](https://support.joinergo.com/articles/9333675093)
+- [Microsoft 365](https://support.joinergo.com/articles/9353990784)
+- [Slack](https://support.joinergo.com/articles/7075762783)
+- [Slack disconnect/reconnect and stale channel mappings](https://support.joinergo.com/articles/7906621776)
+- [Get support](https://support.joinergo.com/articles/2708243049)
