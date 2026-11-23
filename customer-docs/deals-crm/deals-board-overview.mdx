@@ -1,47 +1,50 @@
 ---
 title: "Deals board overview"
-description: "Open the Deals workspace, choose the right pipeline or Companies view, and scan deals by stage, owner, health, activity, and mapped CRM fields."
-keywords: ["deals board", "pipeline", "kanban", "list view", "Ergo CRM"]
+description: "Use the Deals page to review your pipeline: tabs, pipeline selector, Board and List, filters and follow-ups."
+keywords: ["Deals board", "Board", "List", "High Priority", "This Week", "Follow Ups", "Board settings", "Add Deal", "Pipeline selector"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use the Deals board as the starting point for pipeline review and account follow-up. The board reads from Ergo's CRM-backed deal data and can show deal fields, health, activity recency, draft status, reminders, and custom mapped fields.
+**Deals** shows the deals from your CRM. Use it to review your pipeline and to follow up.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat to add, edit, move, select or delete deals.
+- **Notetaker** and **Spectator** seats can only read the Deals pages.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
-- Choose the correct pipeline or the Companies selector option before searching.
-- Clear filters and saved views before assuming a record is missing.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
 
 ## Steps
 
-- Open **Deals**.
-- Use the selector to choose a CRM pipeline or switch to **Companies**.
-- Choose **Kanban** to scan stages or **List** to compare fields across records.
-- Use built-in views such as **Ergo View**, **Deals**, **This Week**, **Follow-Ups**, and reminders when they are enabled for your workspace.
+1. Open **Deals** from the left navigation.
+2. Use the selector next to the **Board** / **List** switch to select a CRM pipeline or **Companies**.
+3. Select a tab: **Deals**, **High Priority**, **This Week** or **Follow Ups**.
+4. Select **Board** to see stage columns. Select **List** to see a table.
+5. Click **+ Filter** to add a filter. Type 3 characters or more in **Search deals...** to search.
+6. Click **Review & Draft Follow-Ups**. Ergo finds the deals that need a reply and drafts the emails.
+7. Click **Add Deal** to make a deal in your CRM.
+8. Click the gear icon (**Board settings**). Set the default pipeline, the default filters of the built-in tabs and the fields on the deal cards.
 
 ## What to expect
 
-- The board is scoped by pipeline, view, filters, search, and feature access.
-- Card and list fields can include standard deal fields plus mapped custom fields.
-- Some actions write through CRM-backed paths; only use them after confirming field mapping and permissions.
+- **Deals** shows your deals. **High Priority** shows your top 20% of deals by priority score, and your VIP deals.
+- **This Week** shows your deals with a meeting this week. **Follow Ups** shows the deals that Ergo found in your last pipeline review.
+- Some workspaces also have a **Tasks** tab.
+- To set which pipeline opens first, click the gear icon → **Views** → **Default pipeline**.
+- A link to **Deals** keeps the pipeline, the tab and the **Board** or **List** mode. It does not keep filters, search or sort.
+- The **Follow Ups** tab shows a list only.
 
 ## Common issues
 
-- The wrong pipeline, Companies view, built-in tab, or saved custom view is selected.
-- Search or filters are still active.
-- CRM record names, domains, owners, or associations do not match the context you expected.
-- Field mapping or CRM permissions are incomplete.
+- A deal is not on the board: look at the **Owner** chip first. Each built-in tab shows only your deals. Change or remove the **Owner** chip to see other owners.
+- Then clear the search box and the other filter chips.
+- The wrong pipeline, or **Companies**, is selected.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Pipeline/view selector](./pipeline-view-selector)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Board and List views](https://support.joinergo.com/articles/8363653782)
+- [Search/filter/sort deals](https://support.joinergo.com/articles/3971609424)
+- [Custom views and built-in tabs](https://support.joinergo.com/articles/8261291462)
+- [Add/edit deals](https://support.joinergo.com/articles/8447302687)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

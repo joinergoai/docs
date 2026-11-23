@@ -1,50 +1,46 @@
 ---
 title: "Live transcript and mute controls"
-description: "Use live transcript controls carefully and understand how audio capture affects transcript quality."
-keywords: ["Live transcript and mute controls", "Desktop", "Ergo docs"]
+description: "Read the live transcript, mute the recording, and copy the transcript in Ergo Desktop."
+keywords: ["Live transcript", "Mute recording", "Expand transcript", "Copy transcript", "Ergo Desktop"]
 ---
 
-![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
-
-Use this page when live transcript, audio capture, or mute behavior is not matching what you expect in Ergo Desktop.
+During a desktop recording, you can read the live transcript and mute the recording. Both controls are in the recording bar.
 
 ## Who can use this
 
-- Desktop users monitoring live transcript during a call.
-- Operators troubleshooting missing speaker turns or incomplete transcript.
+- Each person who records a meeting with Ergo Desktop.
 
 ## Before you start
 
-- Sign in to Ergo Desktop.
-- Grant microphone and system-audio permissions required by your setup.
-- Confirm your network can reach the transcription service.
+- Sign in to Ergo Desktop. See [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215).
+- Give the macOS permissions. See [macOS permissions](https://support.joinergo.com/articles/4584568980).
+- Make sure that your computer is connected to the internet.
 
 ## Steps
 
-- Start a desktop recording or live capture session.
-- Open the transcript view if you need to inspect live transcript output.
-- Check whether both your microphone audio and the other side's audio are being captured.
-- Use mute controls intentionally and verify transcript behavior after muting or unmuting.
-- Stop capture when the session ends.
+1. Start a recording in the Ergo desktop app. The recording bar shows at the bottom of the note.
+2. Select the waveform button (**Expand transcript**). The panel **Transcript** opens.
+3. Read the transcript. Your words are on the right. The words of other speakers are on the left, with the speaker name.
+4. To mute the recording, select the microphone button (**Mute recording**). The recording card shows **Muted**.
+5. To record again, select **Unmute recording**.
+6. To copy the text, select **Copy transcript**. To close the panel, select **Collapse transcript**.
+7. To stop, select **Stop recording**.
 
 ## What to expect
 
-- Live transcript depends on audio capture and temporary transcription credentials.
-- The app separates speaker turns such as **Me** and **Them** when the capture path supports it.
-- Partial transcript can update before final transcript is saved, and live output may be less polished than the final processed transcript.
-- Muting or missing audio input can reduce transcript completeness.
+- The live transcript needs audio and an internet connection.
+- The live transcript can be less polished than the final transcript. Ergo processes the final transcript after you stop.
+- Missing audio can make the transcript incomplete.
 
 ## Common issues
 
-- Microphone or system audio permission is missing.
-- Temporary transcription credentials could not be fetched.
-- Network interruption prevents live transcript updates.
-- Recording did not start or stop normally, so no complete transcript was produced.
-- The wrong input device is active or muted.
+- The transcript stays empty: check the microphone and screen recording permissions. Check your internet connection.
+- Some speech is missing: the recording was muted, or an audio input was missing.
+- The recording did not start or stop normally: you may not get a complete transcript.
 
 ## Related articles
 
-- [Desktop](./index)
-- [macOS permissions](./macos-permissions)
-- [Silent desktop recording](./silent-desktop-recording)
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215)
+- [macOS permissions](https://support.joinergo.com/articles/4584568980)
+- [Record a meeting with Ergo Desktop](https://support.joinergo.com/articles/9478429833)
+- [Troubleshoot missed detection or upload failures](https://support.joinergo.com/articles/5749782951)

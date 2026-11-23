@@ -1,45 +1,45 @@
 ---
 title: "BlueDot"
-description: "Connect BlueDot with the sign-in secret shown in Ergo so BlueDot meeting payloads can be received."
-keywords: ["BlueDot", "Integrations", "Ergo docs"]
+description: "Connect BlueDot so Ergo receives your BlueDot meetings through a webhook."
+keywords: ["BlueDot", "Note takers", "Webhook URL", "BlueDot sign-in secret", "User integrations"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when BlueDot is one of your meeting recording or transcription sources.
+Connect BlueDot when it is one of your meeting recording sources. You add an Ergo webhook URL in BlueDot.
 
 ## Who can use this
 
-- Users and operators configuring a BlueDot source.
-- Admins reviewing third-party notetaker overlap.
+- People with a **Standard** seat. Each person connects their own account.
+- This is a personal connection. It is not an organization connection.
 
 ## Before you start
 
-- Confirm your workspace has access to the BlueDot integration.
-- Have the BlueDot sign-in secret required by the integration panel.
-- Decide whether BlueDot should be enabled alongside other notetakers.
+- Have your BlueDot sign-in secret ready.
+- One person can connect only one of these notetakers: Gong, Fireflies, Circleback, BlueDot, Fathom, Grain. None of them works together with Ergo Notetaker, Ergo Desktop Notetaker or Granola. Ergo shows **Disconnect {name} first**.
 
 ## Steps
 
-- Open **Integrations** and select **BlueDot**.
-- Enter the BlueDot sign-in secret.
-- Confirm BlueDot shows connected.
-- Run one test meeting and verify the meeting appears in Ergo.
+1. Open **Settings → User integrations**. In **Note takers**, find **BlueDot** and click **Connect**.
+2. In the **Connect to BlueDot** window, click **Copy** next to **Webhook URL**.
+3. In BlueDot, add this URL as the webhook for your recorded meetings.
+4. In Ergo, paste your secret in **BlueDot sign-in secret**. Click **Connect**.
+5. Make sure that the **BlueDot** row shows **Disconnect** in place of **Connect**.
+6. Record one test meeting. Look for it in **Meetings**.
 
 ## What to expect
 
-- BlueDot uses a sign-in secret in Ergo.
-- Meeting availability depends on BlueDot sending a supported webhook payload with meeting data.
-- If the payload does not include expected attendees, transcript, or summary data, downstream output may be incomplete.
+- A connected row has no **Connected** label. The button changes to **Disconnect**.
+- If BlueDot sends no attendees, transcript or summary, the output in Ergo can be less complete.
 
 ## Common issues
 
-- The sign-in secret is wrong or stale.
-- The BlueDot payload was missing required meeting fields.
-- Another notetaker source also captured the meeting.
+- **Disconnect {name} first** shows: another notetaker is connected. Disconnect it first.
+- Meetings do not arrive: the webhook URL or the sign-in secret is wrong.
+- Two sources recorded one meeting: see [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190).
+- A meeting is not processed: see [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Circleback](https://support.joinergo.com/articles/8797191184)

@@ -27,11 +27,10 @@
         "root": "customer-docs/start-here/index",
         "pages": [
           "customer-docs/start-here/welcome-to-ergo",
-          "customer-docs/start-here/navigating-ergo",
           "customer-docs/start-here/roles-and-permissions",
           "customer-docs/start-here/spectator-access",
           "customer-docs/start-here/prompting-ergo-and-getting-support",
-          "customer-docs/start-here/find-your-role-path"
+          "customer-docs/start-here/getting-support"
         ]
       },
       {
@@ -52,25 +51,11 @@
         "root": "customer-docs/setup/index",
         "pages": [
           "customer-docs/setup/first-time-setup-checklist",
-          "customer-docs/setup/setup-by-role",
-          "customer-docs/setup/revops-setup-for-ergo-rollout",
-          "customer-docs/setup/operator-setup",
-          "customer-docs/setup/ae-setup",
-          "customer-docs/setup/csm-setup",
-          "customer-docs/setup/spectator-and-viewer-setup",
-          "customer-docs/setup/revops-tips-for-success",
-          "customer-docs/setup/operator-tips-for-success",
-          "customer-docs/setup/ae-tips-for-success",
-          "customer-docs/setup/csm-tips-for-success",
-          "customer-docs/setup/sales-manager-tips-for-success",
-          "customer-docs/setup/spectator-and-viewer-tips-for-success",
           "customer-docs/setup/connect-your-crm",
           "customer-docs/setup/connect-email-and-calendar",
-          "customer-docs/setup/workspace-configuration",
           "customer-docs/setup/email-templates-setup",
           "customer-docs/setup/collaboration-tools-setup",
           "customer-docs/setup/notetaker-setup",
-          "customer-docs/setup/user-sync",
           "customer-docs/setup/company-details",
           "customer-docs/setup/meeting-title-phrases",
           "customer-docs/setup/crm-properties-setup",
@@ -89,19 +74,13 @@
           "customer-docs/integrations/hubspot",
           "customer-docs/integrations/hubspot-meeting-activities-and-recording-links",
           "customer-docs/integrations/attio",
-          "customer-docs/integrations/pipedrive",
           "customer-docs/integrations/ergo-crm",
           "customer-docs/integrations/google-workspace",
-          "customer-docs/integrations/calendar-scopes-and-meeting-auto-join",
           "customer-docs/integrations/microsoft-365",
-          "customer-docs/integrations/email-signature",
-          "customer-docs/integrations/expired-grants-and-reconnecting",
           "customer-docs/integrations/slack",
           "customer-docs/integrations/slack-monitoring-and-pre-call-context",
-          "customer-docs/integrations/beeper",
           "customer-docs/integrations/pylon",
           "customer-docs/integrations/ergo-notetaker",
-          "customer-docs/integrations/ergo-desktop-notetaker",
           "customer-docs/integrations/gong",
           "customer-docs/integrations/fireflies",
           "customer-docs/integrations/circleback",
@@ -111,7 +90,8 @@
           "customer-docs/integrations/outreach",
           "customer-docs/integrations/nooks",
           "customer-docs/integrations/salesfinity",
-          "customer-docs/integrations/mcp-external-agent-tools"
+          "customer-docs/integrations/mcp-external-agent-tools",
+          "customer-docs/integrations/webhooks"
         ]
       },
       {
@@ -124,10 +104,8 @@
           "customer-docs/meetings/notetaker-waiting-room-admission-guide",
           "customer-docs/meetings/one-bot-per-org-shared-notetaking-behavior",
           "customer-docs/meetings/what-happens-when-a-meeting-is-rescheduled",
-          "customer-docs/meetings/recurring-meetings",
           "customer-docs/meetings/add-the-bot-to-a-live-or-ad-hoc-meeting",
           "customer-docs/meetings/skip-internal-meetings",
-          "customer-docs/meetings/meeting-filter-what-sales-only-processing-means",
           "customer-docs/meetings/meeting-processing-time-and-status-states",
           "customer-docs/meetings/why-some-meetings-do-not-generate-insights-or-drafts",
           "customer-docs/meetings/summary-emails-and-recording-links",
@@ -136,7 +114,6 @@
           "customer-docs/meetings/meeting-history-and-folders",
           "customer-docs/meetings/meeting-availability-and-visibility",
           "customer-docs/meetings/meeting-detail-page",
-          "customer-docs/meetings/video-transcript-and-action-items",
           "customer-docs/meetings/ask-ai-about-a-meeting",
           "customer-docs/meetings/share-revoke-password-protect-meetings",
           "customer-docs/meetings/create-and-share-clips",
@@ -144,7 +121,8 @@
           "customer-docs/meetings/manual-notes",
           "customer-docs/meetings/push-notes-or-meetings-to-automations",
           "customer-docs/meetings/delete-retry-processing",
-          "customer-docs/meetings/using-multiple-notetakers-with-ergo"
+          "customer-docs/meetings/using-multiple-notetakers-with-ergo",
+          "customer-docs/meetings/meeting-labels"
         ]
       },
       {
@@ -154,12 +132,10 @@
         "pages": [
           "customer-docs/desktop/install-and-sign-in-to-ergo-desktop",
           "customer-docs/desktop/macos-permissions",
-          "customer-docs/desktop/desktop-onboarding-checklist",
           "customer-docs/desktop/quick-note",
           "customer-docs/desktop/silent-desktop-recording",
           "customer-docs/desktop/live-transcript-and-mute-controls",
           "customer-docs/desktop/desktop-settings-and-updates",
-          "customer-docs/desktop/desktop-performance-requirements-and-current-limitations",
           "customer-docs/desktop/troubleshoot-missed-detection-or-upload-failures"
         ]
       },
@@ -169,7 +145,6 @@
         "root": "customer-docs/deals-crm/index",
         "pages": [
           "customer-docs/deals-crm/deals-board-overview",
-          "customer-docs/deals-crm/pipeline-view-selector",
           "customer-docs/deals-crm/kanban-and-list-views",
           "customer-docs/deals-crm/search-filter-sort-deals",
           "customer-docs/deals-crm/custom-views-and-ergo-view",
@@ -187,7 +162,7 @@
         ]
       },
       {
-        "group": "Field mapping",
+        "group": "CRM setup",
         "icon": "settings",
         "root": "customer-docs/field-mapping/index",
         "pages": [
@@ -195,19 +170,14 @@
           "customer-docs/field-mapping/field-mapping-setup-required-before-crm-updates-work",
           "customer-docs/field-mapping/crm-properties",
           "customer-docs/field-mapping/property-permissions",
-          "customer-docs/field-mapping/create-sync-crm-properties",
           "customer-docs/field-mapping/pipelines",
           "customer-docs/field-mapping/stage-definitions-and-ai-descriptions",
           "customer-docs/field-mapping/default-stages",
           "customer-docs/field-mapping/reorder-delete-stages",
-          "customer-docs/field-mapping/stage-drift-resolution",
           "customer-docs/field-mapping/stage-controls",
           "customer-docs/field-mapping/restrict-to-pipeline",
-          "customer-docs/field-mapping/company-info",
           "customer-docs/field-mapping/alternate-domains-emails",
           "customer-docs/field-mapping/partnership-domains",
-          "customer-docs/field-mapping/meeting-title-ai-boost",
-          "customer-docs/field-mapping/advanced-crm-toggles",
           "customer-docs/field-mapping/deal-qualification",
           "customer-docs/field-mapping/backfill-crm-fields-from-historical-meetings"
         ]
@@ -234,10 +204,7 @@
           "customer-docs/drafts-email/team-access-to-email-drafts",
           "customer-docs/drafts-email/email-signatures-and-draft-footers",
           "customer-docs/drafts-email/templates-overview",
-          "customer-docs/drafts-email/create-edit-templates",
-          "customer-docs/drafts-email/ai-template-builder",
-          "customer-docs/drafts-email/sent-email-browser",
-          "customer-docs/drafts-email/auto-send-settings"
+          "customer-docs/drafts-email/create-edit-templates"
         ]
       },
       {
@@ -251,7 +218,6 @@
           "customer-docs/knowledge-base/link-documents-to-deals",
           "customer-docs/knowledge-base/share-revoke-documents",
           "customer-docs/knowledge-base/post-call-custom-instructions",
-          "customer-docs/knowledge-base/team-user-post-call-instructions",
           "customer-docs/knowledge-base/post-call-reference-docs-and-summaries"
         ]
       },
@@ -265,11 +231,9 @@
           "customer-docs/ai-search-automation/floating-agent-panel",
           "customer-docs/ai-search-automation/using-deal-and-meeting-context",
           "customer-docs/ai-search-automation/scheduled-agent-runs",
-          "customer-docs/ai-search-automation/email-slack-delivery-for-scheduled-runs",
           "customer-docs/ai-search-automation/scheduled-run-history-and-health",
           "customer-docs/ai-search-automation/search-across-meetings-emails-and-documents",
-          "customer-docs/ai-search-automation/search-filters-modes-results",
-          "customer-docs/ai-search-automation/follow-ups-panel"
+          "customer-docs/ai-search-automation/automations-overview"
         ]
       },
       {
@@ -280,42 +244,31 @@
           "customer-docs/reporting/reporting-overview",
           "customer-docs/reporting/default-dashboards",
           "customer-docs/reporting/create-edit-reports",
-          "customer-docs/reporting/chart-builder",
           "customer-docs/reporting/filters-time-ranges-and-drilldowns",
           "customer-docs/reporting/save-widgets-to-dashboards",
           "customer-docs/reporting/share-charts-dashboards",
-          "customer-docs/reporting/reporting-dashboard-sharing-and-embedding-troubleshooting",
           "customer-docs/reporting/custom-reporting-fields",
-          "customer-docs/reporting/picklist-and-numerical-buckets",
           "customer-docs/reporting/call-grading-rubrics",
-          "customer-docs/reporting/reporting-competitors-custom-fields-and-backfill",
           "customer-docs/reporting/reporting-email-cadences",
           "customer-docs/reporting/preview-run-history",
-          "customer-docs/reporting/notetaker-adoption-dashboard-reading-edge-cases",
-          "customer-docs/reporting/cross-org-analytics"
+          "customer-docs/reporting/notetaker-adoption-dashboard-reading-edge-cases"
         ]
       },
       {
-        "group": "Admin",
+        "group": "Members and organization",
         "icon": "shield",
         "root": "customer-docs/admin/index",
         "pages": [
-          "customer-docs/admin/admin-dashboard-overview",
           "customer-docs/admin/organization-and-team-hierarchy",
           "customer-docs/admin/create-edit-delete-teams",
           "customer-docs/admin/provision-accounts",
           "customer-docs/admin/add-remove-move-members",
           "customer-docs/admin/promote-demote-convert-roles",
-          "customer-docs/admin/spectator-management",
           "customer-docs/admin/grant-meeting-reporting-access",
-          "customer-docs/admin/sync-crm-settings-to-team-members",
           "customer-docs/admin/global-meeting-access",
           "customer-docs/admin/default-meeting-summary-settings",
-          "customer-docs/admin/recording-disclaimer-defaults",
-          "customer-docs/admin/agent-persona",
           "customer-docs/admin/ergo-enabled-status",
-          "customer-docs/admin/agent-usage-and-billing",
-          "customer-docs/admin/impersonation"
+          "customer-docs/admin/agent-usage-and-billing"
         ]
       },
       {
@@ -328,14 +281,10 @@
           "customer-docs/troubleshooting/crm-sync-issues",
           "customer-docs/troubleshooting/stage-drift-conflicts",
           "customer-docs/troubleshooting/google-microsoft-slack-reconnects",
-          "customer-docs/troubleshooting/slack-enterprise-grid-channel-listing-issues",
           "customer-docs/troubleshooting/slack-disconnect-reconnect-and-stale-channel-mappings",
           "customer-docs/troubleshooting/add-ergo-to-new-slack-customer-channels",
           "customer-docs/troubleshooting/pylon-delivery-failures-duplicate-deliveries-and-queue-health",
           "customer-docs/troubleshooting/notetaker-did-not-join",
-          "customer-docs/troubleshooting/transcript-or-recording-missing",
-          "customer-docs/troubleshooting/duplicate-drafts-from-multiple-notetakers",
-          "customer-docs/troubleshooting/draft-send-failures",
           "customer-docs/troubleshooting/search-reporting-has-no-results",
           "customer-docs/troubleshooting/permission-or-access-denied"
         ]

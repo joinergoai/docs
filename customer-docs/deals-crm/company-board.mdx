@@ -1,46 +1,48 @@
 ---
 title: "Company board"
-description: "Switch to Companies to review account-level records, activity, health, contacts, and related deals."
-keywords: ["company board", "Companies view", "accounts", "company detail"]
+description: "Review companies in List, set a grouping property for Board, and move companies between columns."
+keywords: ["Company board", "Companies", "Grouping property", "Board settings", "Move to column", "Default view"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use **Companies** when you want account-level context instead of a single deal pipeline. The company board is selected from the same top selector as pipelines.
+Select **Companies** on the **Deals** page to see account-level context. It uses the same selector as the pipelines.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat to move companies.
+- **Notetaker** and **Spectator** seats can only read.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Select **Companies** from the Deals selector.
-- Review company cards or list rows for account context.
-- Search, sort, and filter by supported company fields.
-- Open a company to inspect available activity, emails, meetings, health, AI overview, contacts, and related deals.
+1. Open **Deals**. Use the selector next to the **Board** / **List** switch to select **Companies**.
+2. Review the companies in **List**.
+3. To use **Board**, click the gear icon (**Board settings**) → **General** → **Grouping property**. Select a single-select or dropdown company property.
+4. In **Board**, drag a company card to a different column.
+5. To move more than one company, select the companies and use **Move to column**.
+6. Click a company to open it.
 
 ## What to expect
 
-- Companies are separate from deal pipeline selection.
-- Company fields depend on CRM ingestion and mapped company properties.
-- Company-level context may reveal activity that is not attached to the deal you were viewing.
+- **Board** is off until you set a grouping property. Only **List** works before that.
+- The values of the grouping property become the columns.
+- When you move a company, Ergo changes the grouping property of that company in your CRM.
+- Use **Search companies...** to search.
+- Click **+ Filter** to filter by **Owner**, **Health**, **Deal Count**, **Total Value**, **Latest Meeting Outcome**, **Domain** or **Company Name**.
+- In **Board**, the sort menu has **Company Name**, **Domain**, **Deal Count**, **Total Value**, **Last Correspondence** and **Health**. In **List**, click a column header to sort.
+- To open **Companies** first each time, click the gear icon → **General** → **Default view** → **Companies**.
 
 ## Common issues
 
-- You are still on a deal pipeline rather than **Companies**.
-- Company domains or aliases are incomplete.
-- Company custom fields are not mapped.
+- **Board** is disabled: set a grouping property.
+- You see deals, not companies: you are on a pipeline. Select **Companies**.
+- A company field is empty: map the company property. See [CRM properties setup](https://support.joinergo.com/articles/3371162277).
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [How Ergo names and matches CRM records](./how-ergo-names-and-matches-crm-records)
-- [Deal detail](./deal-detail)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Company detail](https://support.joinergo.com/articles/1988915841)
+- [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

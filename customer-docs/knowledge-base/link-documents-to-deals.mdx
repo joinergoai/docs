@@ -1,33 +1,47 @@
 ---
 title: "Link documents to deals"
-description: "Attach generated documents to deals so deal views can show the right supporting materials."
-keywords: ["link documents to deals", "deal documents", "CRM deal", "document context"]
+description: "Link an artifact to one or more deals, or add a file directly to a deal."
+keywords: ["link to deals", "Artifacts", "deal documents", "Unlink from deal", "Documents section"]
 ---
 
-![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
+Link an artifact to a deal so that the file shows with the deal. Only artifacts can be linked. Knowledge Base documents cannot.
 
-Link documents to deals when a generated document should appear with the relevant deal context.
+## Who can use this
 
-## Link a document
+- The creator of an artifact. Only the creator sees **Link to deals**.
+- People who can edit CRM records, for the **Upload** button on a deal.
 
-- Open the generated document or document list.
-- Choose the deal-linking action.
-- Search for the deal.
-- Select one or more deals and save.
+## Before you start
 
-## Manage linked deals
+- Make sure that the artifact exists. See [Generated documents](https://support.joinergo.com/articles/8336238316).
+- Know the deal name.
 
-- Review the linked deal count before changing visibility.
-- Remove all deal links when the document should no longer appear in deal context.
-- Use the deal right rail to review documents already linked to a deal.
+## Steps
 
-## Caveats
+1. Open **Search** (⌘K), type **Artifacts** and press Enter.
+2. On the artifact, open the **⋯** menu and click **Link to deals**.
+3. If you have more than one pipeline, select the pipeline.
+4. Type the deal name in **Search deals by name...** and click the deal. Do this again for each deal.
+5. Click **Save**.
+6. Open the deal. The file is in the **Documents** section on the right.
 
-- The checked deal-linking API applies to generated documents.
-- Uploaded knowledge base files are reference context and should not be described as structured deal attachments unless the current UI explicitly supports that workflow.
+## What to expect
+
+- When you link a **Private** artifact to a deal, Ergo changes its sharing to **Organization**.
+- You cannot set it back to **Private** while it is linked to a deal. Unlink it first.
+- To add a file directly to a deal, open the deal. In **Documents** on the right, click **Upload**.
+- To remove one link, open the deal. In **Documents**, open the **⋯** menu on the file and click **Unlink from deal**.
+- To remove all links, open **Link to deals** on the artifact, remove each deal, then click **Save**.
+
+## Common issues
+
+- You do not see **Link to deals**: you are not the creator of the artifact.
+- You cannot find the deal: select the right pipeline, or check the spelling.
+- You want to link a Knowledge Base document: this is not possible.
 
 ## Related articles
 
-- [Generated documents](./generated-documents)
-- [Share or revoke documents](./share-revoke-documents)
-- [Activity, emails, meetings, and documents tabs](../deals-crm/activity-emails-meetings-and-documents-tabs)
+- [Generated documents](https://support.joinergo.com/articles/8336238316)
+- [Share or revoke documents](https://support.joinergo.com/articles/6142809448)
+- [Deal detail](https://support.joinergo.com/articles/3265804027)
+- [Activity, emails, and meetings](https://support.joinergo.com/articles/2474119926)

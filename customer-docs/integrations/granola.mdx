@@ -1,46 +1,47 @@
 ---
 title: "Granola"
-description: "Connect Granola through OAuth/MCP or an API token so Granola notes can be imported into Ergo."
-keywords: ["Granola", "Integrations", "Ergo docs"]
+description: "Connect Granola with a personal API token so Ergo imports your new Granola notes."
+keywords: ["Granola", "Note takers", "Personal API token", "Save token", "Granola historical import", "User integrations"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when Granola is one of your meeting note sources.
+Connect Granola when it is one of your meeting note sources. You paste a personal API token from the Granola desktop app.
 
 ## Who can use this
 
-- Users connecting their Granola account.
-- Operators validating Granola source status and duplicate notetaker behavior.
+- People with a **Standard** seat. Each person connects their own account.
+- Ergo support must turn on Granola import for your organization first. Without it, Ergo saves your token but does not import your notes.
 
 ## Before you start
 
-- Confirm the Granola integration is enabled for your workspace.
-- Decide whether you are connecting Granola through OAuth/MCP or an API token.
-- Avoid enabling multiple notetaker sources without checking duplicate behavior.
+- Ask Ergo support to turn on Granola import for your organization.
+- You need a Granola Business or Enterprise plan to make an API token.
+- You cannot connect Granola while Gong, Fireflies, Circleback, BlueDot, Fathom or Grain is connected. You also cannot connect it while Ergo Notetaker or Ergo Desktop Notetaker is connected, unless Ergo support allowed this for your organization. Disconnect the other notetaker first.
 
 ## Steps
 
-- Open **Integrations** and select **Granola**.
-- Choose the Granola connection method shown in Ergo.
-- Complete OAuth or paste the personal API token.
-- Confirm the connection status and preferred source.
-- Test with one Granola note before relying on broader import.
+1. In the Granola desktop app, open **Settings → Connectors → API keys**. Make a personal API token.
+2. In Ergo, open **Settings → User integrations**. In **Note takers**, find **Granola** and click **Connect**.
+3. In the **Connect Granola via API token** window, paste the token in **Personal API token**. Click **Save token**.
+4. Make sure that the **Granola** row shows **Disconnect**.
+5. Write one new note in Granola. Then look for the meeting in **Meetings**.
 
 ## What to expect
 
-- Ergo tracks Granola connection state per source, including OAuth/MCP and API-token sources.
-- Token refresh and polling behavior happen behind the scenes, but revoked or expired credentials can stop imports.
-- Granola notes are imported when they are available through the connected source and have not already been processed.
+- The connection brings in new notes.
+- To bring in past notes, use **Meeting backfill → Granola historical import** on the same page. It has its own token window. It does not record or sync new meetings.
+- The app has no preferred-source control. Only the API token can be connected.
 
 ## Common issues
 
-- The Granola token was revoked or expired.
-- Both OAuth/MCP and API token sources are connected and the wrong source is preferred.
-- A Granola note was already imported or is still pending.
+- No notes arrive: Granola import is not turned on for your organization. Ask Ergo support.
+- The connect is refused with "Another notetaker is already connected. Disconnect it first.": disconnect the other notetaker.
+- The token is revoked or old: make a new token and click **Connect** again.
+- A note is already imported or still waiting. See [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478).
+- Two sources recorded one meeting: see [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Fathom](https://support.joinergo.com/articles/4094195902)

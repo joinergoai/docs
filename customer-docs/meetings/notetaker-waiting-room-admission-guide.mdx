@@ -1,45 +1,51 @@
 ---
 title: "Notetaker waiting-room admission guide"
-description: "Understand what to do when the Ergo notetaker is joining, waiting, recording, or blocked from a meeting."
-keywords: ["waiting room", "admit notetaker", "bot status", "recording"]
+description: "Learn what the bot status words mean and what to do when the bot waits to be admitted."
+keywords: ["waiting room", "notetaker", "Waiting Room", "Remove Bot", "bot status"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Ergo can schedule the bot correctly and still miss a meeting if nobody admits it from the waiting room.
 
-The Ergo bot can be scheduled correctly and still fail to capture a meeting if nobody admits it from the waiting room.
+## Who can use this
 
-## Before the call
+- People with a **Standard** seat or a **Notetaker** seat. They see the bot status on the **Dashboard** in the web app.
+
+## Before you start
 
 - Tell the host that an Ergo notetaker may join.
-- Make sure the event link is the same link attendees will use.
-- Keep the dashboard open if the meeting is important and you want to watch live bot status.
+- Make sure that the event link is the same link that attendees use.
+- For an important meeting, keep **Dashboard** open in the web app. The meeting row in **Upcoming Meetings** shows the bot status. It updates every 30 seconds.
 
-## During the call
+## Steps
 
-- If the card shows the bot is joining or in the waiting room, ask the host to admit it.
-- If the bot is recording, let the meeting finish normally.
-- If the bot should leave, use **Remove Bot** from the meeting card.
-- If the bot disappears, never joins, or was removed before capture started, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting) to dispatch a fresh bot.
+1. Before the call, check that the toggle shows **Bot will join**.
+2. During the call, watch the status on the meeting row.
+3. If the row shows **Waiting Room**, ask the host to admit the bot.
+4. If the row shows **Recording**, let the meeting end normally.
+5. If the bot must leave, click **Remove Bot**.
+6. If the bot never joined or left, use **Add Bot to Meeting** to send a new bot.
 
 ## What the states mean
 
-- **Scheduled**: Ergo has a notetaker record for the event, but the bot is not in the call yet.
-- **Joining**: the bot is attempting to enter the conference.
-- **Waiting room**: the bot needs admission by the host or another attendee with permission.
-- **Recording**: the bot is in the call and recording.
-- **Removed**: the bot was removed or unscheduled for that event.
-- **No longer visible**: the bot may have left after waiting too long, being denied, or being removed. Dispatch a fresh bot if the call still needs capture.
+- **Bot will join**: Ergo scheduled the bot. It is not in the call yet. The bot joins 3 minutes before the start time.
+- **Joining...**: the bot is trying to enter the call.
+- **Waiting Room**: the bot waits for someone to admit it.
+- **In Meeting**: the bot is in the call.
+- **Recording**: the bot is in the call and records.
+- **Bot Removed**: a person removed the bot with **Remove Bot**.
+- **Bot won't join**: someone turned the toggle off before the call.
+- No status: the bot left the call.
 
 ## Common issues
 
-- Waiting-room settings prevent automatic entry.
-- The meeting host is external, so the host or another attendee with permission needs to admit the bot.
-- The meeting was rescheduled, created late, or changed after the notetaker was scheduled.
-- The conferencing platform or link format is not supported.
+- The bot leaves if nobody admits it in 33 minutes, if the host denies it, or if a person removes it.
+- The bot leaves 2 minutes after the last participant leaves.
+- The host is outside your organization: ask the host to admit the bot.
+- Someone changed or made the meeting just before the start time: use **Add Bot to Meeting**.
 
 ## Related articles
 
-- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
-- [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting)
-- [Recording disclaimer](./recording-disclaimer)
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Add the bot to a live or ad hoc meeting](https://support.joinergo.com/articles/5141256582)
+- [Recording disclaimer](https://support.joinergo.com/articles/2647025457)
+- [Dashboard and upcoming meetings](https://support.joinergo.com/articles/4063633225)

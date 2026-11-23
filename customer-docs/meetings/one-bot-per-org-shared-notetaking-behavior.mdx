@@ -1,34 +1,44 @@
 ---
 title: "One bot per org: shared notetaking behavior"
-description: "Understand how Ergo treats shared calendar meetings when more than one teammate is invited."
-keywords: ["one bot per org", "shared notetaking", "internal attendees", "meeting capture"]
+description: "Learn how Ergo sends one bot per organization and who can see the meeting."
+keywords: ["one bot per org", "shared notetaking", "Add Bot to Meeting", "Owner filter", "meeting visibility"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+When several people from one organization attend the same calendar meeting, Ergo sends one bot for the organization. Ergo does this when it schedules the bot from the calendar.
 
-When several people from the same Ergo org attend the same calendar meeting, Ergo sends one notetaker for that org instead of sending one bot per teammate.
+## Who can use this
 
-## What to check
+- Anyone who asks why a teammate's bot joined, or why they see the same meeting.
 
-- Confirm which teammate's notetaker was dispatched or which account owns the completed meeting record.
-- Confirm whether the meeting appears under your own visibility, team visibility, or org-wide admin visibility.
-- Keep bot state separate from meeting access: seeing a meeting does not mean you control every notetaker action for it.
+## Before you start
+
+- This rule applies to bots that Ergo schedules from the calendar.
+- **Add Bot to Meeting** sends one more bot each time. Do not use it when the bot of a teammate is in the call.
+
+## Steps
+
+1. Open **Meetings**.
+2. Use the **Owner** filter to find the owner of the meeting record.
+3. Open the meeting to check the attendees.
 
 ## What to expect
 
-- Ergo stores the completed meeting with owner/dispatched-account and internal attendee context.
-- Meeting history and search use visibility rules based on owner, internal attendees, team membership, custom grants, and admin access.
-- Duplicate downstream outputs are not expected from normal same-org bot sharing. They can happen when the same conversation is captured or processed through more than one source, so review the meeting source before pushing automations or acting on drafts.
+- The owner can be a different teammate from the person whose calendar started the bot.
+- The organization **Owner** sees all meetings.
+- A team **Admin** sees the meetings of the team.
+- Other people see meetings that they own or attended, and meetings that a person shared with them.
+- If the Owner turns on **Settings → Meetings → Everyone can see all meetings**, each person sees all meetings.
+- One recording can show for several teammates. This is normal.
 
-## When to use this page
+## Common issues
 
-- Two teammates ask why they see the same meeting.
-- A meeting has a single recording but several internal attendees.
-- A team is deciding whether to use Ergo notetaker, desktop recording, or another notetaker for the same call.
+- You get duplicate drafts or automation outputs: check how the meeting was captured. Two sources can capture the same call.
+- A second bot joined: someone used **Add Bot to Meeting**.
+- You cannot control the bot: seeing a meeting does not give you control of the bot.
 
 ## Related articles
 
-- [Using multiple notetakers with Ergo](./using-multiple-notetakers-with-ergo)
-- [Meeting availability and visibility](./meeting-availability-and-visibility)
-- [Meeting history and folders](./meeting-history-and-folders)
-- [Duplicate drafts from multiple notetakers](../troubleshooting/duplicate-drafts-from-multiple-notetakers)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)
+- [Meeting history and folders](https://support.joinergo.com/articles/7669432836)
+- [Add the bot to a live or ad hoc meeting](https://support.joinergo.com/articles/5141256582)

@@ -1,46 +1,44 @@
 ---
 title: "Outreach"
-description: "Connect Outreach Dialer so supported Outreach call recordings can feed Ergo."
-keywords: ["Outreach", "Integrations", "Ergo docs"]
+description: "Connect Outreach so Ergo imports your completed, recorded dialer calls."
+keywords: ["Outreach", "Dialers", "Org integrations", "Outreach calls", "call recordings"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when Outreach Dialer should send call recordings and call context to Ergo.
+Connect Outreach so that Ergo can import your recorded calls. One connection serves the whole organization.
 
 ## Who can use this
 
-- Admins and operators configuring dialer ingestion.
-- Users validating whether Outreach calls appear in Ergo.
+- The organization **Owner** and team **Admins**.
 
 ## Before you start
 
-- Confirm the Outreach Dialer integration is enabled for your workspace.
-- Connect with the Outreach account your team expects to authorize call data.
-- Confirm your Outreach call events include the recording URL required for processing.
+- Make sure that call recording is on in Outreach.
+- Use an Outreach account that can approve access to calls, prospects, users and webhooks.
+- Make sure that the Outreach user and the prospect each have an email address in Outreach.
 
 ## Steps
 
-- Open **Integrations** and select **Outreach Dialer**.
-- Complete the OAuth flow.
-- Confirm Outreach appears connected.
-- Test with one completed call that includes a recording URL.
+1. Sign in to Ergo as the Owner or a team Admin.
+2. Open **Settings → Org integrations**. In **Dialers**, find **Outreach** and select **Connect**.
+3. Sign in to Outreach and approve the access.
+4. Back in Ergo, make sure that the **Outreach** row shows the label **Connected** and the button **Disconnect**.
+5. Make one recorded call of 60 seconds or longer in Outreach. Then look for the call in **Meetings**.
 
 ## What to expect
 
-- Outreach is feature-gated and OAuth-based.
-- Ergo processing depends on Outreach sending a supported call event with a recording URL.
-- This integration is for Outreach Dialer call data, not Outreach-sequenced emails; connect Google Workspace or Microsoft 365 for email context.
-- Calls may be delayed until the recording URL is available.
+- Ergo makes the Outreach webhook itself when you connect. You do not set up call events.
+- Ergo imports an Outreach call only when the call is completed, has a recording, and is 60 seconds or longer.
+- This connection is for Outreach dialer calls. It does not read emails that Outreach sequences send. To give Ergo email context, connect Google Workspace or Microsoft 365.
 
 ## Common issues
 
-- The workspace does not have the Outreach Dialer feature enabled.
-- Outreach sent a call event before the recording URL was ready.
-- The call could not be matched to the expected Ergo user or record.
+- A call does not appear: the call was shorter than 60 seconds, had no recording, or was not completed.
+- A call does not appear: the Outreach user or the prospect has no email address in Outreach.
+- You do not see **Connect**: only the Owner or a team Admin can connect a dialer.
 
 ## Related articles
 
-- [Integrations](./index)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Connect email and calendar](https://support.joinergo.com/articles/4928954637)
+- [Nooks](https://support.joinergo.com/articles/6672173844)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Get support](https://support.joinergo.com/articles/2708243049)

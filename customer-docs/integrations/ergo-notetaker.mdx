@@ -1,46 +1,50 @@
 ---
 title: "Ergo Notetaker"
-description: "Configure the built-in cloud notetaker that joins supported meetings as a bot."
-keywords: ["Ergo Notetaker", "Integrations", "Ergo docs"]
+description: "Connect the Ergo Notetaker bot, set your summary email options and transcription language, and send it to meetings."
+keywords: ["Ergo Notetaker", "Notetaker bot", "User integrations", "Note takers", "Add Bot to Meeting", "Transcription language"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page for the built-in Ergo cloud notetaker, which joins supported meetings as a participant.
+The Ergo Notetaker is the built-in cloud bot that joins meetings from your calendar and records them.
 
 ## Who can use this
 
-- Admins and users setting up cloud meeting capture.
-- Operators verifying notetaker name, language, and meeting scheduling behavior.
+- People with a **Standard** or **Notetaker** seat. Each person connects the notetaker for their own meetings.
+- A **Spectator** seat cannot connect a notetaker.
+- The **Owner** sets the notetaker name, image and key terms for the whole organization.
 
 ## Before you start
 
-- Connect email/calendar if you expect calendar-based scheduling.
-- Decide whether the cloud bot, desktop recorder, or a third-party notetaker should be the primary source.
-- Review recording disclosure and waiting-room expectations for your team.
+- Connect your calendar first. Open **Settings → User integrations → Email & calendar** and connect **Google Workspace** or **Microsoft 365**. **Connect** for **Ergo Notetaker** stays off until you do.
+- Decide which notetaker you use. You cannot connect Ergo Notetaker while Gong, Fireflies, Circleback, BlueDot, Fathom or Grain is connected. Ergo shows **Disconnect {name} first**.
 
 ## Steps
 
-- Open **Integrations** and select **Ergo Notetaker**.
-- Configure the notetaker settings shown in the panel.
-- Confirm upcoming meetings appear as expected.
-- Use the Meetings area to schedule, cancel, or add the bot to a live meeting when needed.
+1. Open **Settings → User integrations**.
+2. In **Note takers**, find **Ergo Notetaker**. Click **Connect**.
+3. In the **Connect Ergo Notetaker?** window, click **Connect**.
+4. Wait until the row shows **Disconnect**. Then the notetaker is connected.
+5. Click the gear icon on the row. In **Ergo Notetaker settings**, set **Send Summary Email** and **Transcription language**. Changes save by themselves.
+6. Open the **Dashboard**. In **Upcoming Meetings**, check that your meetings show. Schedule or cancel the notetaker for each meeting.
+7. To send the notetaker to a meeting that is not on your calendar, click **Add Bot to Meeting**.
 
 ## What to expect
 
-- The cloud notetaker appears in the meeting as a bot participant.
-- Calendar visibility, meeting URL support, waiting-room admission, and team settings affect whether it joins.
-- If another notetaker source is enabled, review duplicate-source behavior before broad rollout.
+- **Transcription language** is **English** or **Auto-detect (multi-language)**.
+- The **Owner** opens **Settings → Org integrations → Ergo Notetaker → Notetaker identity** and clicks the gear icon to change the name, image and key terms. Other people see these values and the hint "Only your org owner can change this."
+- Each person sets only their own summary email options and language.
+- You can use Ergo Notetaker and Ergo Desktop Notetaker together.
 
 ## Common issues
 
-- The calendar event is missing or has no supported meeting link.
-- The bot was not admitted from the waiting room.
-- Another notetaker source already captured the meeting.
+- **Connect** is off: connect your calendar first.
+- **Disconnect {name} first** shows: another notetaker is connected. Disconnect it, then connect again.
+- The bot did not join: see [Notetaker did not join](https://support.joinergo.com/articles/2299804002) and [Notetaker waiting-room admission guide](https://support.joinergo.com/articles/4381304803).
+- Two sources recorded one meeting: see [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Schedule or cancel the notetaker](../meetings/schedule-or-cancel-the-notetaker)
-- [Notetaker waiting room admission guide](../meetings/notetaker-waiting-room-admission-guide)
-- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Add the bot to a live or ad hoc meeting](https://support.joinergo.com/articles/5141256582)
+- [Notetaker waiting-room admission guide](https://support.joinergo.com/articles/4381304803)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)

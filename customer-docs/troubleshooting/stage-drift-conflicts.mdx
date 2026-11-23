@@ -1,52 +1,45 @@
 ---
 title: "Stage drift conflicts"
-description: "Troubleshoot CRM pipeline stages that changed after Ergo setup and no longer match expected stage definitions."
-keywords: ["stage drift", "pipeline stages", "CRM stages", "field mapping", "troubleshooting"]
+description: "Fix pipeline stages that changed in your CRM after setup, in Settings → CRM Stages."
+keywords: ["Stage drift", "Resolve Conflict", "Not in CRM", "Keep CRM Version", "Update CRM", "CRM Stages", "Sync From CRM"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use this page when CRM pipeline stages were renamed, reordered, deleted, moved, or recreated after Ergo setup.
+Stage drift happens when a stage changes in your CRM after setup. Ergo then shows a conflict on the stage row.
 
 ## Symptoms
 
-- Ergo stage definitions differ from the current CRM pipeline.
-- A stage disappeared, was renamed, moved, archived, deleted, or recreated in CRM.
-- A deal appears in an unexpected stage or no-stage state.
-- CRM stage updates fail after pipeline changes.
+- A stage row in Ergo shows **Resolve Conflict**.
+- A stage row shows the badge **Not in CRM**.
+- A new CRM stage is not in Ergo.
+- A deal does not move to the stage that you expect.
 
-## Most common causes
+## Who can use this
 
-- CRM pipeline or stage configuration changed after Ergo setup.
-- A display name changed, but the underlying stage identifier did not.
-- A stage was deleted and recreated with the same label but a different identifier.
-- A deleted stage still has deals, or the CRM blocks deletion/movement until those deals are handled.
+- The organization **Owner** and team **Admins**. A team Admin sees only the teams that the Admin manages.
+- A **Member** does not see **CRM Stages**.
 
-## What to check
+## Causes and fixes
 
-- Open Field Mapping and compare the selected pipelines and stages against the CRM.
-- Sync stages from CRM before editing automation logic.
-- Check whether the change was only a rename or a structural change such as delete/recreate or moving stages between pipelines.
-- Check stage deal counts before deleting stages.
-- Confirm each affected deal is in the intended pipeline and active stage in the CRM.
+1. Open **Settings** → **CRM Stages**. Select the team and the pipeline.
+2. If a stage row shows **Resolve Conflict**, the stage has a different name in the CRM. Click **Resolve Conflict**. The window shows the **CRM Version** and the **Ergo Version** of the name.
+3. Click **Keep CRM Version** to use the CRM name. Click **Update CRM** to rename the stage in the CRM (HubSpot and Attio only).
+4. If **Update CRM** is off, change the stage name in the CRM. Then click **Keep CRM Version**.
+5. If a stage row shows **Not in CRM**, the CRM does not have the stage now. Ergo removes a stage that the CRM deleted. You can also click the trash icon (**Delete stage**) on the row.
+6. To add a new stage, click **Sync From CRM**. In **CRM Pipeline Stages**, select the stage and click **Sync Stages**. A stage that was made again in the CRM is a new stage. Add it in the same way.
+7. Open the new stage row and write a description.
+8. If the badge **Pipeline entry point required** shows, click **Stage Settings** and set an entry point.
+9. Do a test with one deal.
 
-## Resolution steps
+## What to expect
 
-- Resolve drift from the Field Mapping/stage pages instead of manually overwriting definitions in several places.
-- If a stage was recreated, remap or resync the current CRM stage before retrying updates.
-- If deals are stuck in a removed stage, move them in the CRM or use the CRM's supported deletion behavior first.
-- Test with one known deal before applying broader stage changes.
-
-## When to contact support
-
-- Contact support when Field Mapping shows current stages but a known deal still resolves to the wrong stage.
-- Include the workspace, CRM, pipeline, affected stage, example deal, recent stage change, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- **Sync From CRM** only adds stages. It does not rename or remove a stage. If nothing is new, the button shows **No Changes**.
+- A change of the stage order in the CRM is not a conflict.
+- To delete a CRM stage from Ergo (HubSpot and Attio only), click **Sync From CRM** and open the **Edit** tab. Click the trash icon on the stage. If the stage has deals, move the deals in the CRM first. Changes on the **Edit** tab are written to your CRM.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [CRM sync issues](./crm-sync-issues)
-- [Google/Microsoft/Slack reconnects](./google-microsoft-slack-reconnects)
-- [Getting support](../start-here/getting-support)
-- [Field Mapping overview](../field-mapping/field-mapping-overview)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Stage controls](https://support.joinergo.com/articles/4806151015)
+- [Reorder/delete stages](https://support.joinergo.com/articles/7265009989)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)
+- [Get support](https://support.joinergo.com/articles/2708243049)

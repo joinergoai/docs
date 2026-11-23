@@ -1,47 +1,48 @@
 ---
 title: "Deal and account health"
-description: "Use deal and company health as prioritization context, then verify recent meetings, emails, stage, and CRM fields before acting."
-keywords: ["deal health", "company health", "account health", "risk signals"]
+description: "Read health scores for deals and accounts, and set how Ergo scores them."
+keywords: ["Deal health", "Account health", "At Risk", "Needs Attention", "Healthy", "Deal & Account Health", "Scoring profile"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use health to decide where to look next, not as a final forecast. Health cards and badges are review aids that should be checked against recent activity and CRM state.
+Use health to decide where to look next. It is not a forecast.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- Everyone who can open **Deals** can read health.
+- An owner or team admin sets how Ergo scores health.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
 
 ## Steps
 
-- Review health on deal cards, deal detail, and company detail when available.
-- Compare the signal with indexed emails, meetings, connected Slack context, stage, amount, close date, and owner.
-- Use health history or trend context when available and supported by enough indexed activity.
-- Confirm missing or stale activity before escalating a deal.
+1. Look at the health score on a deal card, or in the **Health** column of **List** view.
+2. Open the deal. Read the **Deal Health** card with the signals and the trend chart.
+3. Open a company. Read the **Account Health** card.
+4. To change the scoring, open **Settings → Deal & Account Health**.
+5. Select the tab **Deal Health Signals** or **Account Health Signals**.
+6. Set each built-in signal to **Low**, **Medium** or **High**, or turn it off.
+7. Click **Add Signal** to make a custom signal. Click **Profile** to add a scoring profile, for example for renewals.
 
 ## What to expect
 
-- Health depends on available indexed source activity and CRM context.
-- Deal health and account health have different scopes: deal health is opportunity-specific, while account health is company-level context when available.
-- A weak or missing signal can mean missing data, not necessarily a bad deal.
-- Health is separate from CRM stage and forecast category.
+- The score is 0 to 100. Below 40 is **At Risk**. 40 to 69 is **Needs Attention**. 70 or more is **Healthy**.
+- A closed deal shows **Won** or **Lost**. A deal with no score shows **N/A**.
+- Deal health is for open deals. Account health is for post-sale accounts. Ergo scores a company only after it has a closed-won deal.
+- A profile has CRM conditions. Deals that match no profile use **Default**.
+- You can add a maximum of 10 custom signals for deals and 10 for accounts. You can add a maximum of 10 profiles.
+- Health does not change the CRM stage or the forecast category. The deal stage is one input of the deal score.
 
 ## Common issues
 
-- Emails or meetings are not associated with the deal or company.
-- Recent CRM changes have not reached Ergo yet.
-- The account is active, but activity is on a related company, contact, or deal.
+- The card shows **Not scored yet**: Ergo does not have sufficient data. For example, no emails, meetings or Slack conversations are linked to the deal.
+- The score looks wrong: check that emails and meetings are associated with the right deal or company.
+- Activity is on a related company, contact or deal.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Company detail](./company-detail)
-- [AI deal/account overviews](./ai-deal-account-overviews)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deal detail](https://support.joinergo.com/articles/3265804027)
+- [Company detail](https://support.joinergo.com/articles/1988915841)
+- [AI deal/account overviews](https://support.joinergo.com/articles/5742515808)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

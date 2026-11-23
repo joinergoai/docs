@@ -1,46 +1,47 @@
 ---
-title: "Kanban and list views"
-description: "Choose kanban for stage-based pipeline review or list view for sortable deal comparison and custom-field review."
-keywords: ["kanban", "list view", "deal stages", "custom fields"]
+title: "Board and List views"
+description: "Use Board to scan and move deals by stage, and List to compare fields in a table."
+keywords: ["Board", "List", "Card Fields", "Columns", "Board settings", "Deals", "Kanban"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use kanban when you need to scan or move deals by stage. Use list view when you need dense comparison, sortable columns, and custom-field review.
+Use **Board** to scan or move deals by stage. Use **List** to compare deals in a table.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- You need a **Standard** seat to move deals.
+- **Notetaker** and **Spectator** seats can only read the Deals pages.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Use kanban to review stage columns and move deals where your permissions allow.
-- Use list view to sort by supported fields, compare owners, dates, health, amount, and mapped fields.
-- Customize board card fields at the pipeline level.
-- Customize list columns by view and pipeline.
+1. Open **Deals** and select a pipeline.
+2. Select **Board** to see stage columns. Select **List** to see a table.
+3. In **Board**, drag a deal card to a different stage column to move the deal. If the stage has required fields, Ergo shows a form first.
+4. To change the fields on a deal card, click the gear icon (**Board settings**) → **Card Fields**. Select the fields.
+5. To change the columns in **List**, click **Columns** and select the fields under **Standard Fields** and **Custom Fields**.
+6. Click a column header to sort the list.
 
 ## What to expect
 
-- Kanban stages are scoped to the selected pipeline and active filters.
-- Hidden stages affect what you see, not whether records exist.
-- List view can show standard fields and mapped custom fields, but unmapped CRM fields are not available as columns.
+- Ergo writes the new stage to your CRM when you move a deal.
+- A card shows a maximum of 3 fields. The amount and the health score always show. The switch **Expanded card text** wraps long text.
+- **Card Fields** applies to all tabs in the selected pipeline.
+- **Columns** applies to the current tab in the selected pipeline.
+- A stage column with no deals collapses. Click a column header to collapse or expand a column.
+- The **Follow Ups** tab shows a list only. It has no **Columns** button.
+- List columns can show standard fields and your mapped custom fields.
 
 ## Common issues
 
-- A stage is hidden or filtered out.
-- A list column is hidden for the active view.
-- A custom field has not been mapped or loaded yet.
+- A stage column is missing: a filter hides its deals. To show only some stages, click **+ Filter** → **Stage** or **Stage Status**. A filter does not change the records.
+- A custom field is not a column choice: map the property first. See [CRM properties setup](https://support.joinergo.com/articles/3371162277).
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Pipeline/view selector](./pipeline-view-selector)
-- [Search/filter/sort deals](./search-filter-sort-deals)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Search/filter/sort deals](https://support.joinergo.com/articles/3971609424)
+- [Custom views and built-in tabs](https://support.joinergo.com/articles/8261291462)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

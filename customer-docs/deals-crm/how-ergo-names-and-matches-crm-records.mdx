@@ -1,46 +1,50 @@
 ---
 title: "How Ergo names and matches CRM records"
-description: "Understand how Ergo uses CRM records, company names, domains, contacts, meeting context, and mapped settings when records appear mismatched."
-keywords: ["CRM matching", "record matching", "company domains", "deal names"]
+description: "How Ergo matches a meeting to a CRM contact, company and deal, and how it names a new deal."
+keywords: ["Match CRM records", "Alternate Domains", "Partnership Domains", "Deal Name", "Alternate emails", "Wrong account"]
 ---
 
-![Flow diagram showing how meeting titles, companies, domains, and CRM records affect matching.](../images/crm-record-matching-flow.svg)
-
-Use this page when a deal, company, meeting, email, or draft appears under the wrong account or is hard to find. Matching depends on CRM associations plus configured company and domain context; every spelling or alias may still need review.
+Use this page when a deal, meeting or draft shows under the wrong account.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- Everyone can read this page.
+- An owner or team admin changes the settings that are named here.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
 
 ## Steps
 
-- Compare the CRM deal name, company name, contacts, email domains, and meeting title.
-- Check company info, alternate domains/emails, and partnership domains when context is ambiguous.
-- Confirm the selected pipeline and Companies view before changing names.
-- Open the source CRM when two records may represent the same account.
+1. Compare the email addresses of the external attendees with the contacts in your CRM.
+2. Make sure that your CRM associates each contact with the right company and deal.
+3. Ask an owner or team admin to check **Settings → Advanced → Domains** (**Alternate Domains** and **Partnership Domains**).
+4. Ask them to check **Settings → Company Details**.
+5. Check your own **Alternate emails** in **Settings → Profile**.
+6. Look in your CRM for duplicate companies or deals.
 
 ## What to expect
 
-- Ergo can show CRM-backed associations and related activity when those records have been ingested and matched.
-- Alternate domains/emails broaden matching context; partnership domains help prevent partner activity from being treated as customer or prospect activity.
-- Source CRM associations still matter. If a deal is not associated to the right contact or company, fix the source CRM association before relying on Ergo matching.
+- For a meeting, Ergo finds the contact for each external email address. Then it uses the companies and deals that your CRM associates with that contact.
+- Ergo also searches the CRM by the email domain that most external attendees have.
+- **Alternate Domains** are other email domains of your own company. Ergo treats people on these domains as internal.
+- **Partnership Domains** are the domains of your partners. Ergo does not use a partner attendee to find the customer company or deal.
+- Ergo does not update the CRM from a meeting in which all external attendees are partners.
+- Each domain list can hold a maximum of 50 domains.
+- By default, the name of a new deal is the company name of the prospect. To change this rule, an owner or team admin edits the description of **Deal Name** in **Settings → CRM Properties**.
 
 ## Common issues
 
-- The account uses multiple domains or aliases.
-- A partner, reseller, or internal attendee is being treated like the customer.
-- The CRM has duplicate companies or deals.
+- A partner or reseller is treated like the customer: add the domain to **Partnership Domains**.
+- A colleague on a second company domain counts as external: add the domain to **Alternate Domains**.
+- The deal is not associated with the right contact: fix the association in your CRM first.
+- The team limits Ergo to selected pipelines: Ergo does not use deals in other pipelines.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Add/edit deals](./add-edit-deals)
-- [Company board](./company-board)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Alternate domains/emails](https://support.joinergo.com/articles/9300714064)
+- [Partnership domains](https://support.joinergo.com/articles/3251931164)
+- [Company details](https://support.joinergo.com/articles/8760194863)
+- [Company board](https://support.joinergo.com/articles/5597117069)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

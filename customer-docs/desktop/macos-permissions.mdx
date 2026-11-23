@@ -1,47 +1,46 @@
 ---
 title: "macOS permissions"
-description: "Grant the macOS permissions Ergo Desktop needs for local capture and recording reliability."
-keywords: ["macOS permissions", "Desktop", "Ergo docs"]
+description: "Grant the three macOS permissions that Ergo Desktop needs to record meetings."
+keywords: ["macOS permissions", "Accessibility", "Microphone", "Screen Recording", "Restart Ergo", "System permissions"]
 ---
 
-![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
-
-Use this page when Ergo Desktop cannot capture audio, screen context, or meeting activity until macOS permissions are approved.
+Ergo Desktop needs three macOS permissions to record: **Accessibility**, **Microphone** and **Screen Recording**. While one is missing, the app shows "Ergo can't record meetings on this computer yet".
 
 ## Who can use this
 
-- Desktop users setting up local capture on macOS.
-- Admins and operators troubleshooting missed capture or incomplete transcripts.
+- Each person who uses Ergo Desktop on macOS.
 
 ## Before you start
 
 - Install and sign in to Ergo Desktop.
-- Be ready to quit and reopen Ergo Desktop after changing macOS permissions.
-- Use a short test meeting after granting permissions.
 
 ## Steps
 
-- Open macOS **System Settings**.
-- Review permissions for Ergo Desktop in Privacy & Security.
-- Grant the permissions requested by the app for local capture.
-- Quit and reopen Ergo Desktop after permission changes.
-- Run a test recording and confirm transcript, recording, and upload behavior.
+1. In the Ergo desktop app, open **Settings → Desktop app**.
+2. In **System permissions**, find each permission that shows **Required**.
+3. Select **Grant access** next to **Microphone**. Select **Enable access** next to **Accessibility** and **Screen Recording**.
+4. In macOS **System Settings → Privacy & Security**, turn on **Ergo** in **Accessibility**, **Microphone** and **Screen & System Audio Recording**. If **Ergo** is not in a list, select **+** and add it.
+5. Go back to Ergo and select **Restart Ergo**.
+6. Make sure that all three permissions show **Granted**. Then make a short test recording.
 
 ## What to expect
 
-- Permission changes may not take effect until the app is quit and reopened.
-- Missing microphone or system-audio access can create incomplete transcript or recording output.
-- Screen-related permissions can affect desktop context features.
+- **Accessibility** finds active meetings and participants.
+- **Microphone** captures meeting audio.
+- **Screen Recording** records the meeting window. Ergo cannot record without it.
+- The app also shows **Restart now** in the banner "Restart Ergo to apply new permissions".
+- You cannot restart during a recording. The app says "Finish recording before restarting Ergo."
+- While a permission is missing, the **Settings** item in the sidebar is marked.
 
 ## Common issues
 
-- The permission was granted while the app was still running and the app was not quit and reopened.
-- The wrong app entry was approved in macOS settings.
-- A company device policy blocks the permission.
+- A permission still shows **Required**: restart Ergo.
+- The permission is on, but Ergo does not record: make sure that the entry is **Ergo**, not another app.
+- A company device policy blocks the permission: ask your IT team.
 
 ## Related articles
 
-- [Desktop](./index)
-- [Install and sign in to Ergo Desktop](./install-and-sign-in-to-ergo-desktop)
-- [Silent desktop recording](./silent-desktop-recording)
-- [Troubleshoot missed detection or upload failures](./troubleshoot-missed-detection-or-upload-failures)
+- [Install and sign in to Ergo Desktop](https://support.joinergo.com/articles/4290838215)
+- [Record a meeting with Ergo Desktop](https://support.joinergo.com/articles/9478429833)
+- [Desktop settings and updates](https://support.joinergo.com/articles/6871098362)
+- [Troubleshoot missed detection or upload failures](https://support.joinergo.com/articles/5749782951)

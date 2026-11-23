@@ -1,54 +1,40 @@
 ---
 title: "Organization and team hierarchy"
-description: "Understand how Ergo organizes members into teams with primary admins, secondary admins, users, and spectators."
-keywords: ["organization hierarchy", "team hierarchy", "primary admin", "secondary admin", "spectator"]
+description: "How organizations, teams, roles, and seats fit together, and where to manage them in Settings."
+keywords: ["Organization", "Teams", "Owner", "Admin", "Member", "Seats", "Members", "Settings"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
+An organization has teams. Each person has a role in a team and a seat. This article shows where to manage them.
 
-Use this page to understand how Ergo represents your organization before you move members, change roles, or grant access. The Admin dashboard shows the organization, its teams, and each team's primary admin, secondary admins, users, and spectators.
+## The model
 
-## Who can use this
+- **Organization**: your company. It has one main owner and can have more owners. Each owner has the **Owner** label in **Settings** → **Members**.
+- **Teams**: groups inside the organization. Each team has a type: sales, implementation, success, partnerships, growth or marketing, product. A person can belong to several teams and has one primary team.
+- **Role in team**: **Admin** or **Member**. An Admin manages that team: edits it, adds people to it, turns Automations on or off for its people, and edits whose meetings they can see.
+- **Seat**: **Standard**, **Notetaker**, or **Spectator**. The seat decides which features the person can use. You set it per person, independent of role.
 
-- Super Admins who manage the full organization structure.
-- Team admins who manage or review the teams they own.
+## Where to manage things
 
-## Before you start
+- **Settings** → **Members**, tab **Teams**: click a team to expand it. The list shows each person with **Role**, **Seat**, and the **Automations** switch.
+- **Settings** → **Members**, tab **Members**: all the people with their team, role, seat, and **Automations** switch. It also shows the totals **Members**, **Standard seats**, **Notetaker seats**, and **Spectator seats**.
+- Click a person to see **Memberships**, **Connections**, and the access settings.
+- **Add Member**: for an Owner or a team Admin. **New team**: for an Owner.
+- **Settings** → **Organization** (Owner only): **CRM**, **Organization owners**, **Pipeline access**, and, if your organization has it, **Okta directory sync**.
+- **Settings** → **Meetings** (Owner only): **Everyone can see all meetings**, **Allow internal attendees to delete the meeting**, and **Meeting Privacy Rules**.
+- **Settings** → **Usage** (Owner only): the included agent usage of each person, and the extra usage in this billing cycle. If usage billing is not on, the page shows "Usage isn't turned on for your organization."
 
-- Confirm whether the person is an organization member, a member of one team, or a member of multiple teams.
-- Check whether the person is a primary admin, secondary admin, standard user, or spectator.
-- Confirm any separate access grants, such as reporting access, global meeting access, and CRM settings.
+## Rules to remember
 
-## Steps
-
-1. Open **Admin**.
-2. Review the organization overview and team list.
-3. Expand a team to see its primary admin, secondary admins, users, and spectators.
-4. Check the team type when it matters for reporting or operating ownership. Supported team types include sales, implementation, success, partnerships, growth/marketing, and product.
-5. Use team membership to decide who owns setup and support for each member.
-6. Review separate access controls before assuming a team change grants or removes access everywhere.
-
-## What to expect
-
-- A team has one primary admin and can have multiple secondary admins.
-- Standard users and spectators can appear within teams, but spectator status is not the same thing as a team-admin role.
-- Reporting access grants, global meeting access, and CRM sync settings are separate from team membership.
-- Team structure can influence ownership and visibility, but it should not be treated as the only permission system.
-
-## Common issues
-
-- A user is added to the organization but not placed in the expected team.
-- A team admin expects to manage a team they do not own.
-- A spectator is treated like a standard user during setup.
-- A reporting or meeting visibility issue is blamed on team membership when a separate access grant is missing.
+- Each person can see the **Members** tab. A Member sees it read-only. Only an Owner or a team Admin can make changes. A team Admin can make changes only for the people in that Admin's teams.
+- An Owner can make a team Admin an owner, or remove an added owner. Open **Settings** → **Organization** → **Organization owners** → **Manage**. Only Ergo support can change the main owner.
+- A person must be in at least one team.
+- Team Admins see the meetings of their teams' members. Members see only their own meetings unless you grant more.
+- Memberships from Okta directory sync have the label **Managed by Okta**. To remove the person from that team, remove the person from the Okta group. An Owner can change the role in Ergo.
 
 ## Related articles
 
-- [Admin](./index)
-- [Admin dashboard overview](./admin-dashboard-overview)
-- [Create/edit/delete teams](./create-edit-delete-teams)
-- [Add/remove/move members](./add-remove-move-members)
-- [Spectator management](./spectator-management)
-- [Grant meeting/reporting access](./grant-meeting-reporting-access)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Create/edit/delete teams](https://support.joinergo.com/articles/7682487269)
+- [Add, remove or move members](https://support.joinergo.com/articles/2381379700)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

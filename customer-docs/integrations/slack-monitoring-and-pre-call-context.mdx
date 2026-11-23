@@ -1,49 +1,52 @@
 ---
 title: "Slack monitoring and pre-call context"
-description: "Turn Slack monitoring and pre-call context on only after the Slack workspace connection and channel access are ready."
-keywords: ["Slack monitoring and pre-call context", "Integrations", "Ergo docs"]
+description: "Turn on Slack monitoring for the organization and the pre-call context DM for yourself."
+keywords: ["Slack monitoring", "Pre-call context DM", "Channels Ergo watches", "Pick channels", "Channel associations", "Slack settings"]
 ---
 
-![Flow diagram showing Slack channel context feeding pre-call context and follow-up workflows.](../images/slack-context-flow.svg)
-
-Use this page when your team wants Slack channel context to inform pre-call preparation or related workflows.
+Slack has two settings. **Slack monitoring** is for the whole organization. **Pre-call context DM** is for each person.
 
 ## Who can use this
 
-- Admins and operators enabling Slack monitoring.
-- Users validating whether Slack context is available for their meetings or deals.
+- The organization **Owner** and team **Admins** turn on **Slack monitoring**.
+- Each person turns on their own **Pre-call context DM**.
 
 ## Before you start
 
-- Connect Slack first.
-- Confirm the target channels are approved for monitoring and the Slack app has been added to each one.
-- For Slack Connect or other shared channels, confirm your team is comfortable with the app or bot being visible to channel members.
-- Confirm whether your workflow needs a workspace install, user token, or both.
+- Connect Slack first. See [Slack](https://support.joinergo.com/articles/7075762783).
+- Connect your own Slack account in **Settings → User integrations → Slack**. **Pick channels** is off until you do.
 
 ## Steps
 
-- Open the Slack integration in **Integrations**.
-- Turn on Slack monitoring if your workspace is ready for monitored channels.
-- Select or add the channels the app should access.
-- Turn on pre-call meeting context if your team wants Slack context included before calls.
-- Test with one channel and one meeting before broad rollout.
+1. Open **Settings → Org integrations**. In the **Workspaces** section, click the gear in the **Slack** row. The **Slack settings** window opens.
+2. Turn on **Slack monitoring**.
+3. At **Channels Ergo watches**, click **Pick channels**. Select the channels and click **Add to N channels**.
+4. If the **Review Channel Associations** window opens, select the CRM company for each channel, or click **None**. Click **Save**.
+5. Optional: turn on **Auto-add Ergo to Slack Connect channels**.
+6. For the pre-call DM, each person opens **Settings → User integrations**, clicks the gear in the **Slack** row, and turns on **Pre-call context DM**.
+7. Optional: turn on **Automatic pre-call brief**. Click **Edit prep template** to change what the DM says.
+8. Test with one channel and one external meeting.
 
 ## What to expect
 
-- Slack context depends on channel access, bot membership, and the settings enabled for the workspace.
-- Ergo monitors only channels it can directly access; unadded channels, DMs, and third-party Slack management tools are not substitutes for channel access.
-- Pre-call context should be treated as context enrichment, not as a complete capture of every relevant Slack message.
-- Private or restricted Slack spaces require the appropriate workspace and channel permissions.
+- With **Slack monitoring** on, Ergo reads the channels that it is in and updates deals with what it finds. The setting applies to everyone in the organization.
+- To open **Review Channel Associations** later, go to **Slack settings → Channel associations → Manage**. Owners and team Admins see this row.
+- Ten minutes before each external meeting, Ergo sends you a Slack DM. It shows the attendees, the last touchpoint and the open items.
+- **Automatic pre-call brief** posts the brief in the thread of that DM.
+- Pre-call context is extra context. It is not a full record of every Slack message.
 
 ## Common issues
 
-- The Slack app is not in the channel.
-- Monitoring is off even though Slack is connected.
-- The channel is private or restricted and the app lacks access.
+- Ergo is not in the channel: add it with **Pick channels**. See [Add Ergo to new Slack customer channels](https://support.joinergo.com/articles/5430278897).
+- Monitoring is off even though Slack is connected: turn on **Slack monitoring**.
+- **Pick channels** is off: connect your own Slack account first.
+- No pre-call DM: check **Pre-call context DM**, your calendar connection, and that the meeting is external.
+- Channel names are out of date: see [Slack disconnect/reconnect and stale channel mappings](https://support.joinergo.com/articles/7906621776).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Slack](./slack)
-- [Search across meetings, emails, and documents](../ai-search-automation/search-across-meetings-emails-and-documents)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Slack](https://support.joinergo.com/articles/7075762783)
+- [Collaboration tools setup](https://support.joinergo.com/articles/9930195557)
+- [Add Ergo to new Slack customer channels](https://support.joinergo.com/articles/5430278897)
+- [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

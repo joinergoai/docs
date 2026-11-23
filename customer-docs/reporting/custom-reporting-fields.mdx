@@ -1,59 +1,56 @@
 ---
 title: "Custom reporting fields"
-description: "Create and maintain the reporting fields that power Ergo charts, filters, and reporting emails."
-keywords: ["Custom reporting fields", "Sentence field", "Picklist field", "Numerical field", "Reporting configuration"]
+description: "Create Sentence and Picklist reporting fields, add default fields, and understand when data appears."
+keywords: ["Custom reporting fields", "Reporting", "Picklist", "Sentence", "Add Default", "Ask Ergo", "Competitors Mentioned"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
-
-Custom reporting fields define what Ergo can analyze and chart. Configure them carefully; unclear fields create unclear dashboards.
+Custom reporting fields define what Ergo can analyze and chart. Make each field clear. Unclear fields make unclear dashboards.
 
 ## Who can use this
 
 - Users with Reporting create access can manage custom fields.
-- Fields can be organization-level or team-level depending on where you add them.
+- The Owner or an Admin of any team can write fields for all teams. Other users with create access can write fields only for their own teams.
 
-## Field types
+## Steps
 
-- **Sentence**: captures themes or excerpts from customer conversations.
-- **Picklist**: groups results into configured options.
-- **Numerical**: groups numeric values into configured ranges.
+1. Select **Reporting** in the left navigation.
+2. Select the **Custom Fields** tab.
+3. In **Org Reporting Fields** (all teams) or **<Team name> Reporting Fields**, select **Create**.
+4. Enter the **Field Name**. Do not use a period. You cannot change the name later.
+5. Select the **Type** (**Sentence** or **Picklist**) and the **Dialog Focus** (**Customer**, **Sales Rep**, or **Both**).
+6. Enter the **Description**. For a picklist, add the **Picklist Options**.
+7. Optional: open **Advanced Settings** and add up to 10 meeting-title phrases. Ergo then fills the field only for meetings whose title has one of the phrases. Leave the list empty to include all meetings.
+8. Select **Save**. Ergo also saves the field when it has a name and a description.
 
-Each field also has a dialogue focus: customer, sales rep, or both. Use the focus to tell Ergo whose language matters for that field.
+To add fields that Ergo supplies, select **Add Default** in the same section.
 
-## Create a field
+## Picklist options
 
-1. Open **Reporting**.
-2. Select **Custom Fields**.
-3. Choose whether to add the field at the organization level or a team section.
-4. Enter a field name.
-5. Choose the field type.
-6. Write a clear description.
-7. Add picklist options if the type is picklist.
-8. Choose dialogue focus.
+- To add many options, select **Upload CSV**. Or paste a list (commas or new lines) and select **Add options from list**.
+- Ergo ignores options that the field has already.
+- A picklist field must have one option or more.
+- To group picklist values, turn on **Legacy view** → **Create New Report**. Select the pencil icon (**Configure picklist options**) on the field. The icon shows only on a field that has option groups.
+- For competitors, use the default field **Competitors Mentioned**. Edit it and enter each competitor one time, with one spelling.
 
-The field autosaves after required inputs are present. If autosave fails, retry before using the field in reports.
+## Get a draft from Ergo
 
-## Use AI suggestions
+- Select **Ask Ergo** in the corner of the **Description** box.
+- Ergo opens the agent panel with a request that you can send. Or it opens **Ask Ergo to write this field**.
+- In that dialog, describe what you want to track. Select **Generate Field**, then **Apply Suggestions**.
+- Examine the result before you use the field.
 
-AI-assisted field generation can draft a field name, type, description, focus, and picklist options. Review the suggestion before saving it. Generated configuration should be treated as a draft, not a final operating definition.
+## What to expect
 
-## Keep fields clean
-
-- Avoid duplicate field names.
-- Do not use periods in field names.
-- Prefer stable names because saved charts and email cadences reference fields.
-- Delete fields only after checking dashboards, cadences, and workflows that may depend on them.
-- Add default reporting fields when you want a verified starting set instead of writing every field manually.
-
-## Data freshness
-
-New or changed fields may not immediately show useful data. Reporting depends on source data, processing, clustering, and any field-specific refresh or backfill work. If a field is important for historical reporting, confirm how historical data will be populated before promising results to the team.
+- The **Type** list has **Sentence** and **Picklist** only. A numerical field stays available only if your organization made it before.
+- You cannot change a field name after Ergo saves the field. To use a different name, delete the field and create a new one.
+- Ergo fills a field when it processes a meeting. A new field has data only for meetings that Ergo processes after you create it.
+- Reporting has no control to fill older meetings. If you need older data, ask Ergo support before you promise a historical report.
+- Ergo makes reporting data from meetings, not from email threads.
 
 ## Related articles
 
-- [Reporting](./index)
-- [Picklist and numerical buckets](./picklist-and-numerical-buckets)
-- [Chart builder](./chart-builder)
-- [Reporting: competitors, custom fields, and backfill](./reporting-competitors-custom-fields-and-backfill)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Create/edit reports](https://support.joinergo.com/articles/3609942735)
+- [Filters, time ranges, and drilldowns](https://support.joinergo.com/articles/2899052555)
+- [Call grading rubrics](https://support.joinergo.com/articles/3553693942)
+- [Get support](https://support.joinergo.com/articles/2708243049)

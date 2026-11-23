@@ -1,50 +1,46 @@
 ---
 title: "Templates overview"
-description: "Use email templates to guide draft generation without treating templates as final copy."
-keywords: ["Templates overview", "Drafts and email", "Ergo docs"]
+description: "Learn what an email template has, who can make one, and how Ergo uses templates in drafts."
+keywords: ["email templates", "My Templates", "team templates", "brackets", "Use templates in generated emails", "attachments"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-Templates give Ergo reusable structure, language, and routing instructions for draft generation. They are one input into draft quality, not a replacement for review.
+A template gives Ergo a pattern for an email. It helps draft quality. It does not replace your review.
 
 ## Who can use this
 
-- RevOps and managers standardizing follow-up style.
-- Reps who want reusable starting points for common emails.
+- Owners and team Admins who make templates for a team. Team templates are in **Settings → Email Drafting** (below **Team**) → **Post-call email templates**. Members of the team can read them but cannot change them.
+- Each person with a Standard seat who wants personal templates (**Settings → Email Drafting → Templates → My Templates**).
 
 ## Before you start
 
-- Decide which use case the template should cover.
-- Collect example language that is safe to reuse.
-- Decide which variables belong in the template.
+- Decide which email the template covers.
+- Collect example text that is safe to reuse.
 
 ## Template parts
 
-- **Name**: the label users see.
-- **Description**: the routing guidance or purpose for the template.
-- **Content**: the reusable email body pattern.
-- **Variables**: placeholders that Ergo can fill from configured default or custom variables.
-- **Type**: email templates are separate from Slack templates.
+- **Template Name**: the label that people see.
+- **Template Description**: the situation in which Ergo must use the template, for example "Post-demo follow-up". Ergo uses it to select a template.
+- **Template Content**: the email pattern.
+- **[Brackets]**: text in square brackets tells Ergo what to write at that place, for example [next steps] or [key pain points]. There are no template variables to set up.
+- **Attachments**: files that Ergo adds to each draft that it makes from the template (up to 10 files, 25 MB in total).
 
 ## What to expect
 
-- Templates can be created, edited, listed, and deleted.
-- Template changes affect future draft generation; they do not rewrite already-created drafts.
-- AI may adapt a template to context unless your workspace intentionally uses strict template behavior.
-- Variables need clear names and descriptions so users understand what they represent.
+- There are two scopes: **My Templates** (personal, used in your drafts) and team templates (used for the post-call drafts of the team members). There is no organization scope.
+- For a post-call draft, Ergo selects the template whose name and description fit the meeting, or no template. When it selects a template, it follows the template and fills the [brackets].
+- To stop the use of templates in your drafts, turn off **Use templates in generated emails**.
+- A template change affects future drafts. It does not change existing drafts.
 
 ## Common issues
 
-- The template description is too vague, so Ergo applies it to the wrong situation.
-- Template content includes customer-specific or stale details.
-- A variable is missing, duplicated, or unclear.
-- Users expect template edits to update drafts that were already generated.
+- The description is too vague. Ergo uses the template in the wrong situation.
+- The content has old or customer-specific details.
+- You expect a template change to update drafts that exist.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Create/edit templates](./create-edit-templates)
-- [AI template builder](./ai-template-builder)
-- [Email templates setup](../setup/email-templates-setup)
-- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Create/edit templates](https://support.joinergo.com/articles/9891933597)
+- [Email templates setup](https://support.joinergo.com/articles/5839238810)
+- [Review/edit AI drafts](https://support.joinergo.com/articles/1674428019)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Post-call custom instructions](https://support.joinergo.com/articles/3463657551)

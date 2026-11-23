@@ -1,76 +1,52 @@
 ---
-title: "Grant meeting/reporting access"
-description: "Grant meeting visibility or reporting dashboard access from Ergo Admin without changing a user's team or role."
-keywords: ["meeting access", "reporting access", "dashboard access", "admin"]
+title: "Grant meeting or reporting access"
+description: "Give a person access to other people's meetings or to Reporting in Settings → Members."
+keywords: ["Meeting access", "Reporting access", "Save access", "Grant access", "Revoke access", "Members", "Settings"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page when a user should keep the same team and role but needs additional visibility. Meeting access and reporting access are separate grants.
+Both grants are in the dialog of the person on **Settings** → **Members**. They are independent. Meeting access does not open Reporting. Reporting access does not open meetings.
 
 ## Who can use this
 
-- Super admins can open **Grant Meeting Access** and **Grant Reporting Access** from the Admin member table.
-- Reporting admins can manage reporting access grants from the reporting access manager.
-- Primary-admin meeting grant scope may be limited to the teams they administer.
-
-## Before you start
-
-- Decide whether the user needs meeting visibility, reporting visibility, or both.
-- Confirm the user is already in the organization.
-- Check whether a team move, role change, or spectator conversion would be the cleaner change.
-- For broad organization-wide meeting visibility, use [Global meeting access](./global-meeting-access) instead of individual grants.
+- **Meeting access:** an Owner (anyone in the organization), or an Admin of a team that the person belongs to (people in the teams that Admin manages). You cannot edit your own.
+- **Reporting access:** an Owner. Admins already have Reporting when it is on for your organization.
 
 ## Grant meeting access
 
-Meeting access grants let one user view meetings for selected people. They are stored separately from team membership and role.
+By default a Member sees the meetings that the Member owned or attended. A team Admin also sees every meeting of the teams that Admin manages. An Owner sees everything. A grant adds the people whose meetings this person can also see.
 
-1. Open **Admin** and choose the team.
-2. Open the member's action menu.
-3. Select **Grant Meeting Access**.
-4. Search for members whose meetings the selected user should be able to view.
-5. Select or deselect the members in the list.
-6. Save changes.
+1. Open **Settings** → **Members** and click the person.
+2. Find **Meeting access**. It shows the current state: *Only their own meetings*, *Also sees …*, *Everyone can see all meetings*, or *All meetings in the organization* (the Owner).
+3. Click **Edit**.
+4. In **Whose meetings can [name] see?**, search and tick people, or use **Select all**.
+5. Click **Save access**. Tell the person to refresh the page.
 
-The modal groups grantable users by role and marks same-team users. Saved grants can add access to meetings owned by or attended by the selected people. Deselecting same-team users can also create exclusions from implicit same-team access where the product supports it.
+Private meetings are never included. A private meeting is visible only to its owner and attendees. For one recording outside the rules, use **Share** on the meeting or a shared folder.
+
+For organization-wide visibility, use [Everyone can see all meetings](https://support.joinergo.com/articles/1532088538).
 
 ## Grant reporting access
 
-Reporting access controls whether a non-admin user can see reporting and what they can do there.
+1. Open **Settings** → **Members** and click the person.
+2. Find **Reporting access**. Click **Grant** (or **Edit** if the person already has access).
+3. Select **All dashboards** or **Specific dashboards**.
+4. If necessary, select **Can create dashboards, fields, and rubrics**.
+5. Click **Grant access**.
 
-1. Open the member's action menu.
-2. Select **Grant Reporting Access**.
-3. Choose **All dashboards** or **Specific dashboards**.
-4. If needed, enable **Can create dashboards, fields, and rubrics**.
-5. Save the grant.
+To change the scope, click **Edit**, change the selection, and click **Save access**. To remove the access, click **Edit**, then **Revoke access**, then **Confirm revoke**.
 
-Admins and team admins already resolve to full reporting access when reporting is enabled for the organization. For non-admin users, an explicit reporting access grant can allow all dashboards, selected dashboards, and optional create permissions.
-
-## Edit or revoke reporting access
-
-Open the existing reporting grant to update the dashboard scope, toggle create permissions, or revoke the grant. Removing the grant removes the explicit reporting access for that user; it does not remove admin-derived access.
-
-## What to expect
-
-- Meeting access affects meeting lists and meeting-detail access. It does not grant reporting access.
-- Reporting access affects the Reporting navigation and reporting dashboard permissions. It does not grant meeting visibility by itself.
-- Users may need to refresh after a grant is saved.
-- Grants are organization-specific; verify the user is in the same organization before troubleshooting.
+If Reporting is not available to anyone in your organization, contact Ergo support.
 
 ## Common issues
 
-- **The grant action is missing.** Confirm the acting user has the right admin permission and that the target user is in the organization.
-- **The user can see meetings but not reports.** Add or edit reporting access separately.
-- **The user can see reports but not a meeting.** Add meeting access, check team membership, or review global meeting access.
-- **A non-admin user cannot create dashboards.** Enable create permissions in the reporting access grant.
-- **A grant already exists.** Edit the existing grant instead of creating a duplicate.
+- **Meeting access shows "Everyone can see all meetings" and you cannot edit it.** The organization setting is on. You do not need individual grants.
+- **A manager cannot find a rep's meeting in the per-person filter.** Grant the manager access to that rep, or make the manager an Admin of the rep's team.
+- **The person sees meetings but not Reporting.** Add a Reporting access grant. It is separate.
 
 ## Related articles
 
-- [Admin](./index)
-- [Spectator management](./spectator-management)
-- [Global meeting access](./global-meeting-access)
-- [Sync CRM/settings to team members](./sync-crm-settings-to-team-members)
-- [Promote/demote/convert roles](./promote-demote-convert-roles)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Everyone can see all meetings](https://support.joinergo.com/articles/1532088538)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)
+- [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645)
+- [Meeting history and folders](https://support.joinergo.com/articles/7669432836)

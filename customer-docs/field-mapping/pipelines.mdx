@@ -1,48 +1,50 @@
 ---
 title: "Pipelines"
-description: "Sync and manage CRM pipelines and stages so the Deals board, stage classification, and CRM writeback use the right pipeline scope."
-keywords: ["pipelines", "pipeline stages", "CRM stage sync", "CRM pipelines"]
+description: "Sync pipelines and stages from your CRM, set entry points, and remove a pipeline from a team."
+keywords: ["Pipelines", "CRM Stages", "Sync From CRM", "Entry Point", "Edit Pipeline", "Delete Pipeline", "Not in CRM"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use Pipelines when the CRM has one or more deal pipelines and Ergo needs to know which stages belong to which process. Pipeline and stage setup affects the Deals board, matching, classification, and writeback.
+Ergo needs to know which stages belong to which pipeline. You set this on **CRM Stages**.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- The setup is for one team. Select the team at the top right of the page.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Connect your CRM. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
 
 ## Steps
 
-- Open **Pipeline Stages** from Field Mapping.
-- Sync CRM pipelines and stages into Ergo.
-- For supported CRMs, use edit mode carefully when creating, renaming, reordering, or deleting stages.
-- Keep pipeline names, IDs, stage order, and descriptions aligned with the CRM.
-- Sync only the pipelines Ergo should use, and document intentionally excluded pipelines for admins.
+1. Open **Settings → CRM Stages**. Select the team.
+2. Click **Sync From CRM**. The window **CRM Pipeline Stages** shows each pipeline of your CRM.
+3. Select the stages that the team uses. **Select All** selects all the stages of one pipeline.
+4. Keep **Auto-generate descriptions** selected. Click **Sync Stages**.
+5. Click **Stage Settings**. Turn on **Entry Point** for the stage where a new deal starts in each pipeline. Click **Save Changes**.
+6. Select a pipeline in **Pipeline**. Click the pencil (**Edit Pipeline**) and write what the pipeline is for.
+7. To remove a pipeline from the team, click the trash icon (**Delete Pipeline**) next to **Pipeline**.
 
 ## What to expect
 
-- Pipeline support depends on the connected CRM.
-- Edit-mode changes can write directly to supported CRMs.
-- Pipeline-stage changes made in the source CRM may require a manual resync before Ergo's configuration reflects them.
-- Pipeline IDs matter; do not rely only on display names when troubleshooting.
+- You select stages, not pipelines. A pipeline shows in the **Pipeline** selector after one of its stages is synced.
+- Ergo cannot create a deal in a pipeline that has no entry point.
+- The pipeline name and the stage order come from your CRM. Ergo uses the text from **Edit Pipeline** when it selects a pipeline for a new deal.
+- With HubSpot or Attio, the window has the tab **Edit**. Changes there go directly to your CRM. With HubSpot you can add or rename a pipeline, and add, rename, reorder or delete a stage. With Attio you can add, rename or delete a stage.
+- With Salesforce there is no tab **Edit**. Change the stages in Salesforce.
+- **Delete Pipeline** clears the stages of the team for that pipeline. Your CRM and the other teams do not change.
+- A sync only adds stages.
 
 ## Common issues
 
-- A stage exists in CRM but has not been synced into Ergo.
-- Two pipelines have similarly named stages with different IDs.
-- Deleting or renaming stages affects board filters and automation behavior.
+- A stage is missing: it is not selected in **Sync From CRM**.
+- A stage row shows **Resolve Conflict**: the stage has a new name in the CRM. See [Stage drift conflicts](https://support.joinergo.com/articles/1509454679).
+- A stage shows **Not in CRM**: the stage is no longer in your CRM.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Create/sync CRM properties](./create-sync-crm-properties)
-- [Stage definitions and AI descriptions](./stage-definitions-and-ai-descriptions)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Stage definitions and AI descriptions](https://support.joinergo.com/articles/7126058981)
+- [Default stages](https://support.joinergo.com/articles/2392883371)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

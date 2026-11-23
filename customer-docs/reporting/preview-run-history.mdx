@@ -1,59 +1,44 @@
 ---
-title: "Preview/run history"
-description: "Use Reporting email run history to review preview runs, sends, statuses, failure stages, and delivery details."
-keywords: ["Reporting run history", "Preview run", "Test run", "Reporting email status", "Failure stage"]
+title: "Agent report run history"
+description: "Open the run history of an agent report and read the details of each run."
+keywords: ["Agent report run history", "Run history", "Agent Reports", "Test Run", "Send Now", "Lifecycle"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
+Run history shows what happened when an agent report tried to make or send a report.
 
-Run history shows what happened when a Reporting email cadence tried to generate or send a report.
+## Who can use this
 
-## Open run history
+- The organization **Owner** and team **Admins**. Only they see the **Agent Reports** tab.
 
-1. Open **Reporting**.
-2. Select **Email Cadences**.
-3. Choose the cadence.
-4. Open the run history or a recent run.
+## Steps
 
-The run detail drawer shows lifecycle timestamps, run status, trigger, mode, cadence snapshot, selected fields, generated output, chart results, and email delivery details when available.
+1. Select **Reporting** in the left navigation.
+2. Select the **Agent Reports** tab.
+3. Find the card of the report.
+4. Select the latest run on the card (for example **Succeeded 2h ago**), or one of the squares below it.
+5. Read the run details in the panel. To see a different run, select it below **Run history**.
 
-## Run statuses
+## What to expect
 
-Runs can be:
+- Run statuses are Queued, Running, Succeeded, Failed, and Skipped.
+- Badges at the top show the status, the trigger (**Scheduled**, **Manual Test**, or **Manual Send**), and the mode.
+- The panel has these sections: **Lifecycle** (Created, Scheduled for, Started, Completed, Duration), **Report configuration** (Schedule, Fields, Field mode, Recipients, Analysis instructions), **Analysis**, **Charts**, and **Email** (Delivery, Recipients, Sent at).
+- All the runs that you can start (scheduled, **Test Run**, **Send Now**) use the **Send** mode.
+- A test run sends a labeled test email to the test recipients that you select. It does not go to the recipients of the report.
 
-- Queued
-- Running
-- Succeeded
-- Failed
-- Skipped
+## Common issues
 
-Active runs are refreshed periodically in the cadence list. A run may be queued or running before the final status is known.
-
-## Triggers and modes
-
-- **Scheduled**: created by the cadence schedule.
-- **Manual test**: queued from a test run.
-- **Manual send**: queued from send now.
-- **Preview mode**: renders the report without normal scheduled delivery.
-- **Send mode**: prepares and sends to recipients when the run succeeds.
-
-## Failure stages
-
-Failure details may identify a stage such as preflight, queue, agent analysis, chart data, chart render, email render, email send, or persistence. Use the stage to decide whether to adjust the cadence, check source data, retry later, or contact support.
-
-## Diagnose missing output
-
-- Confirm the cadence is enabled if you expected a scheduled run.
-- Check whether the latest run is still queued or running.
-- Review selected fields or auto-selected chart fields.
-- Check recipient count and email result.
-- If analysis failed, simplify instructions or verify the selected fields have enough recent data.
-- If chart rendering or email sending failed, retry after checking for known platform issues.
+- A failed run shows a message in the **Lifecycle** section. For example: "The analysis failed before the report could be generated.", "A chart could not be rendered, so no email was sent.", or "The email could not be sent."
+- Use the message to decide what to do. You can change the report, examine the data, try again later, or contact support.
+- To try again, select **Send Now** on the report card. It shows only for an enabled report with no run in progress. You can use it 3 times for one report in 24 hours.
+- No scheduled run: make sure that the report is enabled.
+- A run is still Queued or Running: wait, then open the panel again.
+- If analysis failed, make sure that the selected fields have recent data.
 
 ## Related articles
 
-- [Reporting](./index)
-- [Reporting email cadences](./reporting-email-cadences)
-- [Custom reporting fields](./custom-reporting-fields)
-- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting email cadences](https://support.joinergo.com/articles/3709805929)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Custom reporting fields](https://support.joinergo.com/articles/6979568726)
+- [Search/reporting has no results](https://support.joinergo.com/articles/8146112124)
+- [Get support](https://support.joinergo.com/articles/2708243049)

@@ -1,47 +1,132 @@
 ---
-title: "Roles and permissions"
-description: "Understand user, admin, super-admin, spectator, and shared-link access before changing visibility."
-keywords: ["Roles and permissions", "Start here", "Ergo docs"]
+title: "Seats, roles and visibility"
+description: "One page on who can see and do what in Ergo: the three seat types, the Owner / Admin / Member roles, how to add, change and remove people, and how meeting visibility works."
+keywords: ["seats", "spectator", "notetaker seat", "standard seat", "owner", "admin", "member", "meeting visibility", "remove user", "add user"]
 ---
 
-![Product screenshot showing the admin dashboard, team management, and role controls.](../images/product-admin-dashboard.png)
+Access in Ergo is decided by three separate things. Knowing which one is in play answers most "why can't I see / do this" questions.
 
-Use this page to understand the role and access model before changing visibility or workflow defaults.
+| What it decides | Where it is set |
+|---|---|
+| **Seat type** decides which features a person can use (Ask Ergo, CRM writes, email drafting, the notetaker). | **Settings → Members → person → Seat type** (Owner only) |
+| **Role** decides what a person can manage for other people. | **Settings → Members → person → Memberships → role next to the team** (Owner only) |
+| **Meeting visibility** decides whose meetings a person can open. | **Settings → Members → person → Meeting access**, plus **Settings → Meetings** |
 
-## Who can use this
+## Seat types
 
-- Everyone using Ergo, plus rollout owners and admins who need shared vocabulary.
+Every person has exactly one seat. Standard is the full product; Notetaker records and views meetings; Spectator is view-only.
 
-## Before you start
+| Can they… | Standard | Notetaker | Spectator |
+|---|---|---|---|
+| Open the Dashboard, Meetings and Deals pages | Yes | Yes | Yes |
+| View meetings they are allowed to see (see *Meeting visibility* below) and chat about a single meeting | Yes | Yes | Yes |
+| Use the Ergo notetaker (bot and desktop app) to record their own meetings | Yes | Yes | No |
+| Connect their own email and calendar | Yes | Yes | No |
+| Use Chat with Ergo, Tasks, Drafts, Automations and **Settings → Email Drafting** | Yes | No | No |
+| Have Ergo write to the CRM or draft emails for them | Yes | No | No |
+| Connect a third-party notetaker (Gong, Fireflies, Fathom, Grain, Granola…) | Yes | No | No |
+| Manage the organization's Slack app | Yes | No | No |
 
-- Know which CRM, calendar, email, meeting, and collaboration sources your organization has connected to Ergo.
-- Confirm whether you are a user, admin, super admin, or spectator. Shared-link viewers are not the same thing as workspace roles.
-- Ask your rollout owner before changing access, recording, integration defaults, or admin-only setup areas.
+Three things people expect from a Spectator seat that it does not do: no Ask Ergo chat, no CRM updates from their meetings or email, and no email drafts. If someone on a Spectator seat reports that "chat disappeared" or "my deals are not syncing", the seat is the reason. Ask the Owner to change the seat to Standard.
 
-## Steps
+On **Settings → User integrations**, a Spectator seat sees only the **MCP** section. A Notetaker seat sees email and calendar, Slack, the **Ergo Notetaker** and **MCP**, but not Gong or the third-party notetakers.
 
-- Use admin access for teams, member management, field mapping, reporting grants, global meeting access, and organization defaults.
-- Use user access for personal meetings, drafts, integrations, templates, and day-to-day workflows.
-- Use spectator access when someone should review permitted meetings without drafts, CRM writes, integration control, or broad organization access.
-- Use shared links when someone only needs access to a specific shared meeting, document, chart, or dashboard.
-- Ask an admin or Ergo support to adjust reporting access, meeting visibility, global meeting access, or team membership when a page is missing.
+Seats are what you are billed for. Changing a seat changes the bill; check your agreement before converting people.
 
-## What to expect
+## Roles
 
-- Some controls are super-admin only or require Ergo support, including global meeting access, persona, and create-team behavior seen in the admin dashboard.
-- Visibility is directional: broader admin roles can see more team context, while members and spectators see narrower meeting and workflow context.
-- Access changes can affect meetings, drafts, CRM settings, and reporting visibility.
+There are two roles per team, **Admin** and **Member**, plus the organization **Owner**. An organization can have more than one Owner. The Owner is shown with an **Owner** label next to their name in the member dialog.
 
-## Common issues
+| Can they… | Owner | Team admin | Member |
+|---|---|---|---|
+| Open **Settings → Members** | Yes | Yes | Yes, read-only |
+| See the **Members** tab (everyone in the organization) | Yes | Yes | Yes, read-only |
+| **Add Member** (create a new account) | Yes, any team | Yes, into teams they administer | No |
+| Choose the seat and role for a *new* person | Yes | Yes | No |
+| **Change an existing person's seat type** | Yes | No | No |
+| Change a role (make someone an Admin, or a Member again) | Yes | No | No |
+| Add an existing person to another team, move them, or change their primary team | Yes | No | No |
+| **Remove someone from the organization** | Yes | No | No |
+| Create or delete teams | Yes | No | No |
+| Edit a team's name, description or type | Yes | Yes, their own team | No |
+| Turn **Automations** on or off for a person | Yes | Yes, their own team | Themselves only |
+| Edit whose meetings a person can see (**Meeting access**) | Yes | Yes, people in their teams | No |
+| Grant **Reporting access** to non-admins | Yes | No | No |
+| **Settings → Meetings**: Everyone can see all meetings, Allow internal attendees to delete the meeting | Yes | No | No |
+| **Settings → Organization**: Organization owners, Pipeline access | Yes | No | No |
+| Meeting Privacy Rules (auto-private by title keyword or participant) | Yes | No | No |
 
-- The wrong source, account, or organization context is selected.
-- The needed source is not connected or fresh.
-- A role or shared-link expectation is too broad for the access that was granted.
+If a button is greyed out, hover it: the tooltip says which role it needs, for example "Only the organization owner can change seat types."
+
+### Who is my Owner?
+
+Open **Settings → Organization** and look at **Organization owners**, or open **Settings → Members** and look for the **Owner** label. An organization can have more than one Owner. To add one, an Owner clicks **Manage** next to **Organization owners**, then **Add owner**. Only a team Admin can become an Owner. To change the main owner, contact Ergo support.
+
+## How-tos
+
+### Add a person
+
+1. Open **Settings → Members** and select **Add Member**.
+2. Enter their work email, first name and last name.
+3. Choose the **Team**, the **Role in team** (Member or Admin) and the **Seat** (Standard, Notetaker or Spectator).
+4. Select **Add person**.
+
+Ergo creates the account and sends a welcome email from `welcome@notifications.joinergo.com` pointing at `dashboard.joinergo.com`. There is no invite link to expire: the person signs in with the same email using your organization's sign-in method, even if the email never arrived. Past meetings they attended are re-attributed to them automatically.
+
+Team admins can add people only to the teams they administer. Full steps: [Provision accounts](https://support.joinergo.com/articles/4601303031).
+
+### Change a seat type
+
+1. Open **Settings → Members** and select the person.
+2. Change **Seat type** and confirm.
+
+Only the Owner can do this. Downgrading a seat is destructive: moving someone to Spectator disconnects their email, calendar, personal Slack and notetakers and cancels their scheduled recordings; moving to Notetaker turns off their email features and third-party notetakers. Moving up to Standard does not reconnect anything, so ask the person to reconnect their integrations afterwards. Details: [Change a role or seat type](https://support.joinergo.com/articles/9544077862).
+
+### Make someone an Admin, or move them between teams
+
+Owner only. Open **Settings → Members**, select the person, and change the role next to the team in **Memberships**, or the team memberships. A person cannot be removed from their only team; move them first. Memberships that come from Okta are managed in Okta. Details: [Add, remove or move members](https://support.joinergo.com/articles/2381379700).
+
+### Remove someone who has left
+
+1. Open **Settings → Members** and select the person.
+2. In the **Danger zone**, select **Remove**, type their email to confirm, and select **Remove from organization**.
+
+**Their data stays.** Removal revokes sign-in immediately and frees the seat, but their meetings, recordings, transcripts, notes and deal activity remain in the organization, searchable by admins and by Ask Ergo, and visible to anyone the visibility rules allow. Scheduled future recordings are cancelled. Re-adding the same person later is possible but needs Ergo support, so do not remove someone who is only going on leave; change their seat instead.
+
+### Let someone see other people's meetings
+
+By default a Member sees only meetings they owned or attended. Team admins also see every meeting of the teams they administer. The Owner sees everything.
+
+- **One person at a time:** **Settings → Members → person → Meeting access → Edit**, then pick whose meetings they can see. The Owner or an admin of the person's team can do this. You cannot edit your own.
+- **Everyone sees everything:** Owner only. Open **Settings → Meetings** and turn on **Everyone can see all meetings**.
+- **A specific recording for someone outside the rules:** use the **Share** button on the meeting, or put the meeting in a shared folder. See [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645).
+
+Meeting access does not grant Reporting; that is a separate grant on the same person dialog, Owner only.
+
+### Keep a meeting private
+
+A private meeting is visible only to its owner and the internal people who attended it, no matter what role, grant or organization-wide setting the viewer has. Share links on it are revoked.
+
+- From the meeting page, choose **Make Private** (attendees or the owner only).
+- Automatically: the Owner can open **Settings → Meetings → Meeting Privacy Rules → Edit rules** and add title keywords (for example `1:1`, `HR`, `confidential`) or people whose meetings are always private. Rules apply to the last 90 days as well. There is no built-in keyword; if teammates cannot see your recordings, check whether a word in your meeting titles matches a rule.
+
+Full rules: [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881).
+
+## What needs Ergo support
+
+- Changing the main owner of the organization.
+- Re-activating a person who was removed from the organization.
+- Turning Reporting on for the organization for the first time.
+
+Everything else on this page is self-serve for the role shown.
 
 ## Related articles
 
-- [Start here](./index)
-- [Navigating Ergo](./navigating-ergo)
-- [Spectator access](./spectator-access)
-- [First-time setup checklist](../setup/first-time-setup-checklist)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seat types: what each seat can do](https://support.joinergo.com/articles/1478941509)
+- [Provision accounts](https://support.joinergo.com/articles/4601303031)
+- [Add, remove or move members](https://support.joinergo.com/articles/2381379700)
+- [Change a role or seat type](https://support.joinergo.com/articles/9544077862)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)
+- [Everyone can see all meetings](https://support.joinergo.com/articles/1532088538)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

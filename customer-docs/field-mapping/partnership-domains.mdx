@@ -1,46 +1,48 @@
 ---
 title: "Partnership domains"
-description: "Classify partner domains separately from customer domains so partner activity does not distort account matching or deal context."
-keywords: ["partnership domains", "partner matching", "domain classification"]
+description: "Add the domains of your partners so Ergo does not treat them as the customer."
+keywords: ["Partnership Domains", "Alternate Domains", "Domains", "Advanced", "Partner attendees"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use partnership domains when partner, reseller, agency, or implementation activity should be recognized as partner context instead of direct customer activity.
+Add the email domains of your partners, resellers and agencies. Ergo then does not use them to find the customer of a meeting.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- A **Member** does not see the page **Advanced**.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Decide if a domain is a domain of your own organization or of a partner.
 
 ## Steps
 
-- Add partner domains that commonly appear in meetings or emails.
-- Decide whether each domain is partner, customer, internal, or an alternate customer domain before saving.
-- Retest matching with a recent meeting or email after changes.
-- Keep the list small enough for admins to audit.
+1. Open **Settings → Advanced → Domains**.
+2. Below **Partnership Domains**, type the domain of a partner and press Enter.
+3. To remove a domain, click the **×** on the domain.
+4. Do not add a customer domain to this list.
+5. Do not add a domain of your own organization to this list. Use **Alternate Domains** for it.
+6. Process one meeting that has a partner and a customer. Check that Ergo selects the customer company.
 
 ## What to expect
 
-- Partnership domains help classify context; they do not create partner CRM records by themselves.
-- Misclassified partner domains can make customer activity look indirect or unrelated.
-- Domain classification should be reviewed when partner motions change.
+- Ergo saves a domain when you press Enter. There is no **Save** button.
+- You can add 50 domains at most.
+- There are two lists only: **Alternate Domains** and **Partnership Domains**.
+- Ergo does not create or update a company for a partner domain.
+- Ergo does not use partner people to find the customer of a meeting.
+- Ergo can still create or update the contact of a partner attendee and link the contact to the deal.
+- Ergo treats partnership domains as internal for drafting.
 
 ## Common issues
 
-- A partner domain is also used by a customer subsidiary.
-- Partner attendees dominate a meeting and hide the end-customer context.
-- The domain belongs in alternate domains instead of partnership domains.
+- A partner domain is also used by a customer: do not add it.
+- A domain is in the wrong list: remove it and add it to the right list.
+- Ergo picks the wrong company for a meeting: see [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398).
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Alternate domains/emails](./alternate-domains-emails)
-- [Meeting-title AI boost](./meeting-title-ai-boost)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Alternate domains/emails](https://support.joinergo.com/articles/9300714064)
+- [How Ergo names and matches CRM records](https://support.joinergo.com/articles/5841172398)
+- [Advanced settings](https://support.joinergo.com/articles/6033018928)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

@@ -1,60 +1,60 @@
 ---
 title: "Draft tabs and queues"
-description: "Understand which Drafts queue to use for pending, reminder, scheduled, composed, sent, and failed emails."
-keywords: ["Draft tabs and queues", "Drafts and email", "Ergo docs"]
+description: "Learn what each tab on the Drafts page shows and how to work through them."
+keywords: ["draft tabs", "queues", "Post Call", "Reminders", "Scheduled", "Composed", "Sent", "Errors", "Go Mode"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-The Drafts page separates drafts by source and state so you can process the right work without mixing pending review, scheduled sends, sent email, and failures.
+The **Drafts** page splits drafts into tabs by source and state. Use the tabs to work on the right drafts first.
 
 ## Who can use this
 
-- Anyone reviewing drafts in Ergo.
-- Managers or admins auditing draft volume across users when org-wide draft access is enabled.
+- People with a Standard seat.
+- People who can use org-wide draft access, when Ergo support turns it on for the organization.
 
 ## Before you start
 
-- Open **Drafts** from the dashboard.
-- Confirm you are viewing the correct user if the user selector is visible.
-- Remember that visible queues can vary by enabled feature flags and by whether the selected user has drafts in that state.
+- Select **Drafts** in the left navigation.
+- If you see the owner filter, check which person it shows.
+- Some tabs show only when the feature is on for your organization.
 
-## Queue meanings
+## Tab meanings
 
-- **Post Call**: follow-up drafts generated from qualifying meetings.
-- **Surfacing**: proactive follow-up drafts based on deal activity and recent context, when enabled.
-- **Account Handoffs**: handoff emails generated for configured handoff workflows, when enabled.
-- **Reminders**: drafts you snoozed with a reminder date.
-- **Scheduled**: drafts scheduled to send later.
-- **Composed**: emails created manually or through Ergo Chat-style compose flows.
-- **Sent**: emails already sent through Ergo.
-- **Errors**: failed drafts or failed send attempts that need review, shown only when there are failures.
-- **Go Mode**: a focused review set opened from a deal or bulk workflow.
+- **All**: each draft that waits for review, from all sources. This tab opens first.
+- **Post Call**: follow-up drafts that Ergo makes after meetings.
+- **Surfacing**: proactive follow-up drafts. Shows only when the feature is on for your organization.
+- **Quote Follow-ups**: follow-up emails with a published quote link, drafted after discovery calls. Shows only when quotes are on for your organization.
+- **Account Handoffs**: handoff emails that Ergo drafts when deals reach key stages. Shows only when account handoffs are on for your organization.
+- **Reminders**: drafts that you snoozed with a reminder date.
+- **Scheduled**: drafts that wait to send at a later time.
+- **Composed**: emails that you start with **Compose**, emails that you write with Ergo chat, reply drafts from the email inbox flow, and no-show and deal follow-up drafts.
+- **Sent**: emails that Ergo sent.
+- **Errors**: emails that did not send. The tab shows only when there is a failure. A failure stays in the list for 7 days.
+- **Go Mode**: the drafts for the deals that you selected in **Deals → List**. While Go Mode is open, it is the only tab.
+- A draft that an automation makes shows only on **All**.
 
-## How to work through queues
+## How to work through the tabs
 
-- Start with pending review queues such as Post Call or Surfacing.
-- Use Reminders for drafts you intentionally deferred.
-- Use Scheduled to confirm future sends or cancel a scheduled send.
-- Use Sent for sent-state, tracking, and sent-flow review.
-- Use Errors only to retry or report failures after checking the failure message.
+1. Start with **All**, or with **Post Call**.
+2. Use **Reminders** for drafts that you chose to do later.
+3. Use **Scheduled** to check or cancel a future send.
+4. Use **Sent** to check sent email.
+5. Use **Errors** to read the message for each failure.
 
 ## What to expect
 
-- Counts and visible queues depend on the drafts returned for the selected user.
-- Scheduled and sent queues are not part of the same next/previous pending-draft navigation as review queues.
-- Search filters the visible list but does not change whether a draft exists.
+- Counts and tabs depend on the drafts for the selected person.
+- Search filters the list. It does not change whether a draft exists.
 
 ## Common issues
 
-- A queue is hidden because the feature is disabled or there are no drafts in that state.
-- A manager sees fewer drafts than expected because the user selector is scoped to one user.
-- A sent or scheduled draft is expected in a pending queue after it has already moved states.
+- A tab is missing: the feature is off for your organization, or no draft is in that state.
+- A manager sees fewer drafts than expected: the owner filter shows one person. Change it.
+- A sent draft is not in a review tab: it moved to **Sent**.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Drafts inbox](./drafts-inbox)
-- [Send/schedule/unschedule/undo](./send-schedule-unschedule-undo)
-- [Open tracking and sent flow](./open-tracking-and-sent-flow)
-- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Send/schedule/unschedule/undo](https://support.joinergo.com/articles/1895556641)
+- [Open tracking and sent flow](https://support.joinergo.com/articles/2669378000)
+- [Failed drafts retry/report](https://support.joinergo.com/articles/2798745358)
+- [Go Mode](https://support.joinergo.com/articles/1983756142)

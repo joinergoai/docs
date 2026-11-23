@@ -1,52 +1,49 @@
 ---
 title: "Create/edit templates"
-description: "Create, update, and delete email templates and variables for future draft generation."
-keywords: ["Create/edit templates", "Drafts and email", "Ergo docs"]
+description: "Create, change and delete a personal or team email template."
+keywords: ["create template", "edit template", "Template Name", "Template Description", "Template Content", "Ask Ergo", "My Templates"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-Use template editing when you need a reusable email pattern, not when you only need to change one draft.
+Use a template for an email pattern that you use again. To change one draft only, edit the draft.
 
 ## Who can use this
 
-- RevOps and managers maintaining shared template guidance.
-- Reps creating personal reusable templates, when allowed.
+- Each person with a Standard seat can make personal templates in **My Templates**.
+- Only the Owner or an Admin of a team can make or change the templates of that team.
 
 ## Before you start
 
-- Confirm who owns the template and who should use it.
-- Draft a clear name, description, and body.
-- Remove customer-specific details from reusable examples.
+- Decide who uses the template.
+- Write a clear name and description.
+- Remove customer-specific details from examples.
 
 ## Steps
 
-- Open template settings.
-- Create a new email template or select an existing one.
-- Add or edit the template name, description, and content.
-- Add variables only when they are supported and clearly documented.
-- Save the template.
-- Test by generating or composing a draft that should use the template.
-- Delete old templates only after confirming they are no longer needed.
+1. For a personal template, open **Settings → Email Drafting** (below **Your settings**) → **Templates**. Keep **My Templates** selected.
+2. For a team template, open **Settings → Email Drafting** (below **Team**). Select the team and go to **Post-call email templates**.
+3. Click **Create Template** (personal) or **Create template** (team). To change a template, click the edit button on its row.
+4. Fill in **Template Name**, **Template Description** and **Template Content**. Put [brackets] where Ergo must write text, for example [next steps].
+5. To get help with the text, click **Ask Ergo** in the content box.
+6. For a new template, click **Create template**. After that, Ergo saves each change automatically.
+7. Add attachments if you want. Ergo adds them to each draft that it makes from the template.
+8. Click **Done**. To delete the template, click **Delete template** and confirm.
 
 ## What to expect
 
-- Template APIs support create, update, list, and delete for email templates.
-- Template variables can also be created, updated, listed, and deleted.
-- Changes apply to future draft generation and do not automatically rewrite drafts already in the Drafts queue.
-- Email templates and Slack templates are separate template types.
+- The name and the content are necessary for a new template.
+- Do not add a sign-off. Ergo adds your email signature.
+- A change applies to future drafts. It does not change drafts that exist.
 
 ## Common issues
 
-- The description does not explain when Ergo should use the template.
-- The body contains stale names, dates, or customer-specific examples.
-- A variable is deleted while a template still references it.
-- Users expect an edited template to change drafts that already exist.
+- The description does not say when Ergo must use the template.
+- The content has old names, dates or customer-specific examples.
+- You expect an edited template to change drafts that exist.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Templates overview](./templates-overview)
-- [AI template builder](./ai-template-builder)
-- [Email templates setup](../setup/email-templates-setup)
-- [Review/edit AI drafts](./review-edit-ai-drafts)
+- [Templates overview](https://support.joinergo.com/articles/7614309099)
+- [Email templates setup](https://support.joinergo.com/articles/5839238810)
+- [Email signatures and draft footers](https://support.joinergo.com/articles/9446610633)
+- [Review/edit AI drafts](https://support.joinergo.com/articles/1674428019)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)

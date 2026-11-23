@@ -1,48 +1,50 @@
 ---
 title: "Reorder/delete stages"
-description: "Reorder or delete stages carefully, checking CRM support, stage IDs, deal impact, and drift before saving."
-keywords: ["reorder stages", "delete stages", "stage IDs", "CRM pipeline edit"]
+description: "Reorder, rename and delete stages: what changes in Ergo only and what changes in your CRM."
+keywords: ["Reorder stages", "Delete stage", "Save Order", "Edit tab", "Delete stage", "CRM Stages"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use reorder and delete controls only after checking the source CRM and downstream deal impact. Stage order affects board display and admin expectations; stage IDs, descriptions, and controls matter more for writeback and classification.
+There are two ways to delete a stage. One changes Ergo only. The other changes your CRM.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- A team Admin sees only the teams that the Admin manages.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- With HubSpot or Attio, tell your CRM owner before you change stages in the CRM.
 
 ## Steps
 
-- Confirm whether your connected CRM supports direct stage edits from Ergo.
-- Reorder stages to match the source CRM process.
-- Check whether deals currently sit in a stage before deleting it.
-- Resolve CRM-side drift before making additional edits.
-- Retest board filters and a single CRM update after the change.
+1. Open **Settings → CRM Stages**. Select the team and the **Pipeline**.
+2. To remove a stage from the team in Ergo only, click the trash icon (**Delete stage**) on the stage row.
+3. To change stages in the CRM (HubSpot or Attio), click **Sync From CRM**. Open the tab **Edit**.
+4. To rename a stage, click its name, type the new name and press Enter.
+5. To reorder stages (HubSpot), drag a stage to its new position. Click **Save Order**.
+6. To delete a stage in the CRM, click the trash icon on the tab **Edit**. Click **Delete**.
+7. Click **Close**. Check the stage list on the page.
 
 ## What to expect
 
-- Edit-mode changes can write directly to supported CRMs.
-- Deleting a stage can also remove or update stage references in Ergo configuration.
-- Stage display order and stage IDs are separate; both matter.
-- CRM-side stage changes may require a manual resync before Ergo's configuration reflects them.
+- The trash icon on a stage row has no confirmation. It does not change your CRM.
+- The tab **Edit** shows only for HubSpot and Attio. It warns that changes go directly to your CRM.
+- A stage name on this tab must have 3 to 255 characters.
+- The stage order comes from your CRM. The stage list has no reorder control.
+- HubSpot does not delete a stage that has deals. Move the deals first.
+- Attio moves the deals of a deleted stage to no stage. You cannot undo this.
+- With Salesforce, change the stages in Salesforce.
+- A stage that has a new name in the CRM shows **Resolve Conflict**. A stage that is no longer in the CRM shows **Not in CRM**.
 
 ## Common issues
 
-- A CRM admin already changed the stage in the source CRM.
-- A deleted stage still has deals or exit-point references.
-- Stage names were reordered but descriptions were not reviewed.
+- A CRM admin already changed the stage in the CRM: sync again and resolve the conflict.
+- A new stage in the CRM is missing: select it in **Sync From CRM**.
+- After a rename, check the stage descriptions.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Default stages](./default-stages)
-- [Stage drift resolution](./stage-drift-resolution)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Default stages](https://support.joinergo.com/articles/2392883371)
+- [Pipelines](https://support.joinergo.com/articles/7931998666)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

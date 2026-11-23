@@ -1,55 +1,53 @@
 ---
 title: "Call grading rubrics"
-description: "Create call grading rubrics for scored reporting charts and coaching review."
-keywords: ["Call grading rubrics", "Rubric fields", "Call scoring", "Reporting coaching"]
+description: "Build a call grading rubric in four steps and read the grade of a call."
+keywords: ["Call grading", "Rubric", "Scorecard", "Reporting", "Insights", "Create rubric", "Add template"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
-
-Call grading rubrics define scored criteria that Ergo can use in Reporting. Use them when managers need repeatable coaching views rather than ad hoc meeting notes.
+A call grading rubric is a set of scored criteria. Ergo grades calls against it. Managers can then see repeatable coaching data.
 
 ## Who can use this
 
 - Users with Reporting create access can manage rubrics.
-- Rubrics can be organization-level or scoped to a team.
+- A rubric applies to the whole organization or to one team.
 
-## Build a rubric
+## Steps
 
-1. Open **Reporting**.
-2. Select **Call Grading**.
-3. Add a rubric at the organization level or inside a team section.
-4. Enter a rubric name and description.
-5. Add meeting title phrases if the rubric should target only certain meeting types.
-6. Add rubric fields.
-7. For each field, define grading options with scores and labels.
-8. Save or let autosave complete before using the rubric in charts.
+1. Select **Reporting** in the left navigation, then the **Call Grading** tab.
+2. Below **Organization-wide rubrics** or below **<Team name> rubrics**, select **Create rubric**. To start from a template, select **Add template**.
+3. In **Setup**, enter the **Rubric name**. The description is optional.
+4. Optional: open **Advanced meeting-title filters** and add up to 10 phrases. Ergo then grades only calls whose title has one of the phrases.
+5. Select **Continue**. In **Scoring**, add the fields and their scores (0 to 5) with labels.
+6. Select **Continue**. In **Requirements**, write the requirements for each score.
+7. Select **Continue**. In **Review**, correct the problems that Ergo shows.
+8. Select **Create rubric**. For a rubric that exists, select **Save changes**.
 
-Rubrics require at least one rubric field before they can be saved.
+## What to expect
 
-## AI and default rubric options
+- The rubric editor has no autosave. If you close the dialog before **Review**, Ergo does not save your changes.
+- You cannot change the scope later. To use the rubric for a different team, select **Copy** on the rubric.
+- In **Scoring**, each field needs a name, a description, and two or more scores. A score is a whole number from 0 to 5. Each score has a label.
+- In **Requirements**, write 1 to 8 observable requirements for each score. Ergo gives the highest score for which the call meets all the requirements. If no score is fully met, Ergo gives the nearest score.
+- The templates are **Universal Sales Call Scorecard**, **MEDDPICC Call Scorecard**, **SPICED Call Scorecard**, **BANT Qualification Scorecard**, and **Challenger Call Scorecard**.
+- To get a draft, select **Generate draft** below **Start with AI** in the **Setup** step. Examine each field and each requirement before you save.
+- Rubrics appear as chart fields (**Grading rubric**). A rubric chart has no breakdown. Its filters are **Rep**, **Deal stage**, and **Deal value**.
 
-- The AI rubric builder can draft a rubric from a prompt.
-- AI can also help draft an individual rubric field.
-- A default rubric can be added when available.
-- Existing rubrics can be copied, including to team scope when supported.
+## See the grade of one call
 
-Review generated fields and scoring labels before using them for coaching.
+1. Open the meeting.
+2. Select the **Insights** tab.
+3. Read the score of each rubric field with the evidence.
+4. Change a score there, or select **Discard** to remove the evaluation.
 
-## Use rubrics in Reporting
+## Common issues
 
-Rubrics appear as reporting categories. Rubric charts can show rep-level grading patterns and can be filtered by supported fields. They differ from ordinary sentence or picklist fields, so some breakdowns and filters may be unavailable.
-
-## Keep grading fair
-
-- Keep scoring options explicit.
-- Use conditional scoring only when managers understand when it applies.
-- Pair rubric charts with source evidence before coaching.
-- Update meeting title phrases if the rubric is catching the wrong meetings.
+- A rubric grades the wrong calls: change the meeting-title phrases.
+- Look at the source evidence before you coach from a chart.
 
 ## Related articles
 
-- [Reporting](./index)
-- [Chart builder](./chart-builder)
-- [Filters, time ranges, and drilldowns](./filters-time-ranges-and-drilldowns)
-- [Custom reporting fields](./custom-reporting-fields)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Create/edit reports](https://support.joinergo.com/articles/3609942735)
+- [Filters, time ranges, and drilldowns](https://support.joinergo.com/articles/2899052555)
+- [Custom reporting fields](https://support.joinergo.com/articles/6979568726)
+- [Meeting detail page](https://support.joinergo.com/articles/5822103848)

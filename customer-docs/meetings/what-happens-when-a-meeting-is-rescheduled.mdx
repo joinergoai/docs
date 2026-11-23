@@ -1,39 +1,46 @@
 ---
 title: "What happens when a meeting is rescheduled"
-description: "Understand how calendar changes affect upcoming meeting visibility and notetaker scheduling."
-keywords: ["rescheduled meeting", "calendar sync", "updated meeting link", "notetaker"]
+description: "Learn how the notetaker follows a calendar change and what to check when a meeting moves."
+keywords: ["rescheduled meeting", "meeting link changed", "notetaker", "calendar sync", "Add Bot to Meeting"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+When you change a calendar event, Ergo updates the notetaker at the next calendar sync. A change close to the start time needs extra review.
 
-Rescheduling changes the calendar event first. The notetaker state updates only after Ergo receives the changed calendar event and the notetaker provider reflects the new state, so calls changed close to start time need extra review.
+## Who can use this
 
-## What can change
+- People with a **Standard** seat or a **Notetaker** seat.
 
-- Meeting time.
-- Meeting link.
-- Calendar event ID or recurring instance ID.
-- Attendees.
-- Whether the meeting still qualifies for bot scheduling.
+## Before you start
 
-## What to do
+- Connect your calendar and **Ergo Notetaker** in **Settings → User integrations**.
 
-- Recheck the event on the dashboard after the calendar update syncs.
-- If the meeting link changed, confirm the upcoming card shows the new URL before the call starts.
-- If the notetaker is still tied to the old link, cancel and schedule it again or use the update-link flow when the UI exposes it.
-- If the meeting was rescheduled very close to start time or the bot already joined at the old time, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting) to dispatch a fresh bot.
-- For recurring meetings, choose whether the change affects only one occurrence or future occurrences.
+## Steps
+
+1. Wait for the calendar change to sync.
+2. Open **Dashboard** in the web app. Find the meeting in **Upcoming Meetings**.
+3. Check the time and the attendees.
+4. If the link changed, click **Join** on the meeting row. Make sure that the new meeting opens.
+5. Check that the toggle shows **Bot will join**.
+6. If the bot did not move to the new link, turn the toggle off and then on.
+7. If the meeting starts before the change syncs, use **Add Bot to Meeting** with the new link.
 
 ## What to expect
 
-- A changed calendar event may briefly show stale notetaker state.
-- If an old event was explicitly unscheduled, Ergo may keep a marker so it does not re-add the bot automatically.
-- If the meeting starts before the updated event is available, use [Add the bot to a live or ad hoc meeting](./add-the-bot-to-a-live-or-ad-hoc-meeting).
-- Avoid editing or rebooking an event while the bot is already live unless you can verify the bot remains in the meeting and the completed record processes normally.
+- Ergo moves the bot to the new link when the calendar change syncs.
+- Do not change the meeting link while the bot is in the call. If the link changes, the bot leaves the call and Ergo schedules a new bot for the new link.
+- For a recurring meeting, your calendar app asks if the change is for one occurrence or for all later occurrences. Ergo follows the calendar.
+- Ergo asks its own question only when you click the notetaker toggle of a recurring meeting.
+- If you turned the toggle off for an event, Ergo keeps that choice and does not add the bot again.
+
+## Common issues
+
+- The bot is still tied to the old link: turn the toggle off and then on.
+- The meeting moved to a time too close to the start: use **Add Bot to Meeting**.
+- The bot already joined at the old time: use **Add Bot to Meeting** to send a new bot.
 
 ## Related articles
 
-- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)
-- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
-- [Recurring meetings](./recurring-meetings)
-- [Notetaker did not join](../troubleshooting/notetaker-did-not-join)
+- [Dashboard and upcoming meetings](https://support.joinergo.com/articles/4063633225)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Add the bot to a live or ad hoc meeting](https://support.joinergo.com/articles/5141256582)
+- [Notetaker waiting-room admission guide](https://support.joinergo.com/articles/4381304803)

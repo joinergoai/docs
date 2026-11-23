@@ -1,47 +1,46 @@
 ---
 title: "Search/filter/sort deals"
-description: "Search, filter, and sort Deals without mistaking a scoped view for missing CRM data."
-keywords: ["deal search", "deal filters", "deal sort", "saved views"]
+description: "Search, filter and sort deals on the Deals page, and find a deal that does not show."
+keywords: ["Search deals", "Filter", "Sort", "Owner filter", "Reset", "Deals"]
 ---
 
-![Product screenshot showing pipeline views, filters, deal health, and CRM context.](../images/product-deals-board.png)
-
-Use search, filters, and sorting to narrow the board or list. Check the active pipeline, view tab, filters, and search text before deciding a deal is absent.
+Use search, filters and sort to narrow the **Board** or **List**. Each built-in tab starts with filters.
 
 ## Who can use this
 
-- Sales reps, account owners, managers, RevOps, and admins working from pipeline and account context.
+- Everyone who can open **Deals**. All seats can read the page.
 
 ## Before you start
 
-- Connect CRM and complete field mapping before relying on CRM writeback.
-- Check pipeline, view, filter, ownership, and record matching before assuming a record is missing.
-- Confirm Deals access is enabled for your workspace; contact your admin or Ergo support if you do not see it.
+- Connect your CRM. If the page shows **No CRM Connected**, ask an owner or team admin to connect it in **Settings → Org integrations → CRM**.
 
 ## Steps
 
-- Search by deal or company context when you know the name.
-- Filter by supported standard fields such as stage, owner, team, amount, dates, activity, status, and priority.
-- Filter by mapped custom fields when those fields are available in the board bootstrap.
-- Sort list view by supported list columns.
-- Clear search and temporary filters, or switch to a less-scoped view such as **Deals**, when troubleshooting.
+1. Open **Deals** and select the pipeline.
+2. Type 3 characters or more in **Search deals...**. Press / to go to the box.
+3. Click **+ Filter** (or press F). Select a field, then set the value.
+4. To use a mapped custom field, select it in the same list under **Custom Properties**.
+5. In **List**, click a column header to sort.
+6. In **Board**, use the sort menu next to the search box. Click the arrow to change the direction.
+7. Click **Reset** to go back to the default filters of the tab.
 
 ## What to expect
 
-- Search is applied within the selected pipeline or view.
-- Some built-in views add preset filters, such as follow-up or reminder-oriented rows.
-- Custom-field filters depend on fields synced through Field Mapping.
+- Search finds deals by deal name, company name, contact name or email, meeting title, and the text of emails.
+- Filter fields: **Owner**, **Team**, **Stage**, **Stage Status**, **Amount**, **Close Date**, **Create Date**, **Health**, **Priority**, **Last Meeting**, **Latest Meeting Outcome**, **Last Email**, **Last Correspondence**, **Status** and **Company**.
+- Sort menu in **Board**: **Last Correspondence** (default), **Deal Name**, **Amount**, **Close Date**, **Create Date**, **Health**, **Priority**, **Owner**.
+- Preset filters: all built-in tabs start with **Owner** set to you. **High Priority** adds **Priority** Top 20% or VIP. **This Week** adds **Last Meeting** this week. **Follow Ups** accepts only the **Owner** filter.
+- **Reset** shows after you change a filter, the sort or the search on a built-in tab.
 
 ## Common issues
 
-- Search text is still active.
-- A built-in or custom view is applying saved filters.
-- The filter uses a display name when the underlying record is keyed by ID.
+- A deal is missing: clear the search box. Then look at the filter chips.
+- The **Deals** tab is not unfiltered. It shows only your deals. Remove the **Owner** chip to see all deals in the pipeline.
+- The wrong pipeline, or **Companies**, is selected.
 
 ## Related articles
 
-- [Deals and CRM](./index)
-- [Kanban and list views](./kanban-and-list-views)
-- [Custom views and Ergo View](./custom-views-and-ergo-view)
-- [Field mapping setup: required before CRM updates work](../field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
+- [Deals board overview](https://support.joinergo.com/articles/5823240236)
+- [Board and List views](https://support.joinergo.com/articles/8363653782)
+- [Custom views and built-in tabs](https://support.joinergo.com/articles/8261291462)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

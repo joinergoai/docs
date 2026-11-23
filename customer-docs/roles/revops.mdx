@@ -1,52 +1,52 @@
 ---
 title: "RevOps playbook"
-description: "Use this path to coordinate Ergo rollout, CRM setup, field mapping, reporting, access, and source-quality decisions."
+description: "Set up Ergo for your team and keep CRM data, stages and access reliable."
+keywords: ["RevOps playbook", "RevOps", "Setup wizard", "CRM setup", "Owner", "Reporting access"]
 ---
 
-Use this page when RevOps, sales operations, GTM operations, or an admin owner is preparing Ergo for a team. The goal is to make the shared setup reliable before users judge meetings, drafts, CRM updates, reporting, or AI output.
+Use this page when you prepare Ergo for a team. Make the shared setup reliable before people judge meetings, drafts, CRM updates or reports.
 
-## What Ergo helps RevOps do
+## Who can use this
 
-- Make pipeline data trustworthy by connecting CRM, meetings, email, Slack, and mapped fields into one workflow.
-- Reduce manual CRM auditing by configuring mapped record updates from captured customer activity, with the right permissions, automations, and review path.
-- Keep stages, next steps, close dates, owners, and mapped qualification fields aligned with the team's process.
-- Give managers and reps reliable views for follow-up, pipeline review, reporting, and coaching.
-- Route setup and source-quality issues quickly because the docs separate configuration, connected-source, permission, and processing problems.
+- The organization **Owner** and team **Admins** who do the shared setup.
+- Some pages are for the **Owner** only, such as the **Reporting access** grant.
 
-## Setup and workflows
+## Before you start
 
-### Setup first
+- Choose the CRM that is your source of truth.
+- Decide which workflows are in scope for a pilot. For example: meeting capture, CRM updates, drafts, Slack, reports.
 
-- [First-time setup checklist](/customer-docs/setup/first-time-setup-checklist)
-- [Setup by role](/customer-docs/setup/setup-by-role)
-- [RevOps setup for Ergo rollout](/customer-docs/setup/revops-setup-for-ergo-rollout)
-- [RevOps tips for success](/customer-docs/setup/revops-tips-for-success)
+## Steps
 
-### Workflows to use day to day
+1. Sign in for the first time. The setup wizard opens. It has up to 15 steps, from **Connect your CRM** to **Configure reporting**.
+2. Do the wizard first. A team **Admin** sees the same list without **Connect your CRM** and **Connect your dialer**.
+3. Review CRM setup in **Settings → CRM Properties**, **CRM Stages** and **CRM Settings**.
+4. In **CRM Stages**, click **Stage Settings**. Set **Entry Point**, **Lock Stage** and **Status** with sales leadership.
+5. Add people in **Settings → Members → Add Member**. Pick the seat and the team.
+6. Give Reporting access: open **Settings → Members**, click the person, and click **Grant** next to **Reporting access**.
+7. Run a small pilot. Test one meeting, one draft, one CRM update and one report.
 
-- [Connect your CRM](/customer-docs/setup/connect-your-crm)
-- [Field mapping setup: required before CRM updates work](/customer-docs/field-mapping/field-mapping-setup-required-before-crm-updates-work)
-- [CRM properties setup](/customer-docs/setup/crm-properties-setup)
-- [Pipeline stages](/customer-docs/setup/pipeline-stages)
-- [Stage controls](/customer-docs/field-mapping/stage-controls)
-- [Reporting defaults](/customer-docs/setup/reporting-defaults)
-- [Collaboration tools setup](/customer-docs/setup/collaboration-tools-setup)
-- [Notetaker setup](/customer-docs/setup/notetaker-setup)
+## What to expect
+
+- CRM setup is per team. A change applies to each person in that team.
+- **Copy configuration** in **Settings → CRM Settings** replaces a team's setup. You cannot undo it.
+- A person who clicks **Skip step** in the wizard misses only their own connection or setting. They can do it later in **Settings**.
+- You do not map the CRM record owner field. Ergo sets the owner.
+- An **Owner** and team **Admins** have all dashboards. A **Member** needs a grant.
 
 ## Common issues
 
-- [CRM sync issues](/customer-docs/troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](/customer-docs/troubleshooting/stage-drift-conflicts)
-- [Dashboard setup errors](/customer-docs/troubleshooting/dashboard-setup-errors)
-- [Permission or access denied](/customer-docs/troubleshooting/permission-or-access-denied)
-- [Duplicate drafts from multiple notetakers](/customer-docs/troubleshooting/duplicate-drafts-from-multiple-notetakers)
-- [Search/reporting has no results](/customer-docs/troubleshooting/search-reporting-has-no-results)
+- CRM updates look wrong: check **CRM Properties** and **CRM Stages**. See [CRM sync issues](https://support.joinergo.com/articles/6503095041) and [Stage drift conflicts](https://support.joinergo.com/articles/1509454679).
+- A person cannot see **Reporting**: check Reporting access. See [Dashboard setup errors](https://support.joinergo.com/articles/3951667254).
+- Duplicate drafts: more than one notetaker records the same meeting. See [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190).
+- A person cannot open a page: see [Permission or access denied](https://support.joinergo.com/articles/4190135592).
+- Check AI output and CRM writes with a small sample before you roll out to everyone.
 
-## Deep references
+## Related articles
 
-- [Roles and permissions](/customer-docs/start-here/roles-and-permissions)
-- [Data sources and freshness](/customer-docs/start-here/data-sources-and-freshness)
-- [Field Mapping overview](/customer-docs/field-mapping/field-mapping-overview)
-- [Advanced CRM toggles](/customer-docs/field-mapping/advanced-crm-toggles)
-- [Backfill CRM fields from historical meetings](/customer-docs/field-mapping/backfill-crm-fields-from-historical-meetings)
-- [Reviewing AI-generated outputs](/customer-docs/start-here/reviewing-ai-generated-outputs)
+- [First-time setup checklist](https://support.joinergo.com/articles/9947439335)
+- [Connect your CRM](https://support.joinergo.com/articles/2772377599)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Reporting defaults](https://support.joinergo.com/articles/3118742738)
+- [Backfill CRM fields from historical meetings](https://support.joinergo.com/articles/4314149169)

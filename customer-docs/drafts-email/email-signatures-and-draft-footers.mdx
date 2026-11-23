@@ -1,51 +1,51 @@
 ---
 title: "Email signatures and draft footers"
-description: "Configure signatures, import from Gmail, and avoid duplicate sign-offs in sent drafts."
-keywords: ["Email signatures and draft footers", "Drafts and email", "Ergo docs"]
+description: "Add, import and choose email signatures, and turn the Sent with Ergo footer on or off."
+keywords: ["email signature", "Import from Gmail", "Sent with Ergo", "Include signature in Gmail drafts", "default signature", "footer"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-Signature settings control what gets appended to emails sent through Ergo. Review them before a team rollout so generated drafts do not duplicate sign-offs or footers.
+Signatures control what Ergo adds to the end of your emails. Set them up so that drafts do not show a sign-off two times.
 
 ## Who can use this
 
-- Users sending email through Ergo.
-- Admins and RevOps teams standardizing outbound email setup.
+- People with a Standard seat who send email from Ergo.
+- **Email Drafting** shows in Settings only for a Standard seat.
 
 ## Before you start
 
-- Connect the sender's email account.
-- Decide whether to import an existing Gmail signature or enter one manually.
-- Review whether your workspace uses a sent-with-Ergo footer or similar marker.
+- Connect your email account. See [Connect email and calendar](https://support.joinergo.com/articles/4928954637).
+- Decide if you import your Gmail signature or type one.
 
 ## Steps
 
-- Open email signature settings.
-- Review the current signature.
-- Import from Gmail when available, or save a manual signature.
-- Remove the signature if it should not be appended.
-- Toggle sent-with-Ergo footer behavior if your workspace exposes that setting.
-- Send a test draft to confirm the final email renders correctly.
+1. Open **Settings → Email Drafting** (below **Your settings**) → **Personalization**. Go to **Email signatures**. Or, in a draft, click **Edit** in the **Signature** bar.
+2. Click **Import from Gmail**. It shows only when a Google account is connected.
+3. Or click **Add signature**, type a **Signature name** and the text, and click **Save**. For Microsoft 365, paste the signature here.
+4. Select the star (**Set as default**) on the signature that goes on each new draft.
+5. To remove a signature, click the delete button on it and confirm.
+6. Turn **Sent with Ergo** on or off. The switch is below the signature list.
 
 ## What to expect
 
-- Signature settings can include signature HTML, last updated time, Google token status, and sent-with-Ergo footer state.
-- Draft body and signature are separate. Avoid manually adding a second signature block to the body.
-- Import from Gmail depends on Google access.
-- Signature changes affect future sends; already-sent emails do not change.
+- You can keep up to 25 signatures. The signature with the **Default** label goes on each new draft.
+- In a draft, use the signature menu to select **Default**, **No signature** or another signature for that email.
+- You cannot edit a signature with the **Gmail** label in Ergo. Edit it in Gmail and click **Import from Gmail** again. Edit a signature that you added in Ergo with **Edit signature**.
+- Ergo cannot import a signature from Outlook.
+- When **Sent with Ergo** is on, Ergo adds the Ergo footer to the emails that you send.
+- For a Google account, **Include signature in Gmail drafts** adds your default signature to the Gmail drafts that Ergo makes.
+- A signature change affects future emails. It does not change sent emails.
 
 ## Common issues
 
-- Gmail import fails because the Google grant is missing or expired.
-- A user adds a manual sign-off in the body and also has a saved signature.
-- The signature uses formatting that renders differently in the provider.
-- The footer setting is changed but old drafts still contain manually typed footer text.
+- The signature shows two times: your mail client adds its own signature to drafts. Turn off **Include signature in Gmail drafts**.
+- You added a sign-off in the body and also have a saved signature. Remove one.
+- **Import from Gmail** does not show: connect Google Workspace first.
+- No signature shows in a draft: no signature is saved. Add one.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Review/edit AI drafts](./review-edit-ai-drafts)
-- [Google Workspace](../integrations/google-workspace)
-- [Email signature](../integrations/email-signature)
-- [Draft send failures](../troubleshooting/draft-send-failures)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Review/edit AI drafts](https://support.joinergo.com/articles/1674428019)
+- [Google Workspace](https://support.joinergo.com/articles/9333675093)
+- [Microsoft 365](https://support.joinergo.com/articles/9353990784)
+- [Failed drafts retry/report](https://support.joinergo.com/articles/2798745358)

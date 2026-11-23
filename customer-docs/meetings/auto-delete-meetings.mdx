@@ -1,33 +1,45 @@
 ---
 title: "Auto-delete meetings"
-description: "Use time-based deletion to remove meeting records after a configured retention period."
-keywords: ["auto-delete meetings", "time-based deletion", "meeting retention"]
+description: "Delete meetings automatically after a set number of days with Time-Based Deletion."
+keywords: ["Time-Based Deletion", "auto-delete", "retention", "Calendar settings", "delete meetings"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+**Time-Based Deletion** deletes meetings that are older than a number of days that you set. The setting applies to the whole organization.
 
-Time-based deletion is an org-level setting for automatically deleting meetings after a configured number of days.
+## Who can use this
 
-## Who can manage it
+- Only the organization **Owner** sees this switch.
 
-- Super admins can enable or disable time-based deletion.
-- The retention value must be at least one day.
+## Before you start
 
-## Turn it on
+- Know that the deletion is permanent. You cannot restore a deleted meeting.
 
-- Open the notetaker settings menu from upcoming meetings.
-- Toggle **Time-Based Deletion**.
-- Enter the number of days to retain meetings.
-- Save and verify the displayed setting.
+## Steps
+
+1. Sign in to the web app as the Owner.
+2. Open **Dashboard**.
+3. In the **Upcoming Meetings** card, select the ⋮ button (**Calendar settings**).
+4. Turn on **Time-Based Deletion**.
+5. In **Delete after … days**, enter a whole number of days. The default is 14. The minimum is 1.
+6. Wait for the confirmation message. The setting saves automatically.
+7. Open the menu again. Make sure that the switch and the number of days are correct.
 
 ## What to expect
 
-- The setting applies at the organization level.
-- Deleted meeting records are removed from meeting history.
-- Deletion is separate from notetaker scheduling, sharing, summary emails, and CRM or draft outputs that may already exist.
+- There is no **Save** button. The switch saves at once. A change to the number saves after you stop typing.
+- A message shows, for example "Time-based deletion enabled (14 day retention)".
+- Ergo deletes only meetings that were recorded after you turned the setting on. Older meetings stay in **Meeting History**.
+- If you turn the setting off and then on again, the start time moves to that moment.
+- The desktop app does not show this menu.
+
+## Common issues
+
+- You do not see **Time-Based Deletion**: you are not the Owner.
+- Old meetings stay: Ergo does not delete meetings that were recorded before you turned the setting on.
+- A meeting is missing from **Meetings**: ask the Owner if **Time-Based Deletion** is on.
 
 ## Related articles
 
-- [Delete/retry processing](./delete-retry-processing)
-- [Meeting availability and visibility](./meeting-availability-and-visibility)
-- [Security, data retention, and LLM usage](../start-here/security-data-retention-and-llm-usage)
+- [Delete or retry processing](https://support.joinergo.com/articles/3559756999)
+- [Meeting availability and visibility](https://support.joinergo.com/articles/9550556881)
+- [Meeting history and folders](https://support.joinergo.com/articles/7669432836)

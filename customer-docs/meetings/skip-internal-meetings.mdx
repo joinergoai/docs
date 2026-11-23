@@ -1,36 +1,44 @@
 ---
 title: "Skip internal meetings"
-description: "Use the skip-internal-meetings setting to prevent the notetaker from joining internal-only calendar events."
-keywords: ["skip internal meetings", "notetaker settings", "internal meetings"]
+description: "Stop the Ergo bot from joining your internal-only calls."
+keywords: ["Skip Internal Meetings", "internal meetings", "Calendar settings", "Alternate Domains", "notetaker"]
 ---
 
-![Product screenshot showing meeting history, notetaker status, and manual meeting capture.](../images/product-meetings-dashboard.png)
+Turn on **Skip Internal Meetings** when you want the Ergo bot to skip calls where all attendees are from your company. The setting applies to your calendar only.
 
-Use this setting when your team wants Ergo to avoid internal-only calls and focus notetaker capture on external conversations.
+## Who can use this
 
-## How it works
+- Each person with a connected **Ergo Notetaker**, for their own calendar.
+- Each person on a team must turn it on for themselves.
 
-- The setting is stored in your notetaker configuration.
-- Internal-only detection is based on attendee email domains that are configured as internal for your workspace.
-- When every attendee on a calendar event matches an internal domain, Ergo skips dispatching the bot for that event.
-- When enabled, Ergo can cancel already scheduled internal meeting bots and mark those events as user-unscheduled.
-- The setting affects bot scheduling. It does not delete existing completed meeting records.
+## Before you start
 
-## Turn it on or off
+- Connect **Ergo Notetaker** in **Settings → User integrations → Note takers**. The switch shows only after this step.
+- Make sure that each extra domain of your company is in **Settings → Advanced → Domains → Alternate Domains**. The organization **Owner** or a team **Admin** can add a domain.
 
-- Open the notetaker settings menu from the upcoming meetings area.
-- Toggle **Skip internal meetings**.
-- Recheck upcoming meetings that were already scheduled, especially calls starting soon.
+## Steps
 
-## What to verify
+1. Open **Dashboard** in the web app.
+2. In the **Upcoming Meetings** card, click the ⋮ button (**Calendar settings**).
+3. Turn **Skip Internal Meetings** on or off.
+4. Look at the meetings in **Upcoming Meetings**. An internal meeting shows **Bot won't join**.
 
-- The attendees on the calendar event reflect who is actually joining.
-- Internal domains are configured for every domain your company uses.
-- External customer calls are not skipped because invitees are missing, using a generic email address, or the calendar event is incomplete.
-- Existing records and drafts are reviewed separately from the scheduling setting.
+## What to expect
+
+- Ergo always counts the domain of your email address as internal.
+- A message shows how many scheduled internal meetings lost the notetaker.
+- The setting changes bot scheduling only. It does not delete meeting records.
+- If you turn the setting off later, the bot does not come back for the meetings that Ergo cancelled. Turn on the toggle for each of these meetings on **Dashboard**.
+
+## Common issues
+
+- A customer call is skipped: check that the attendees on the calendar event are correct and complete.
+- An internal call is not skipped: its domain is missing in **Alternate Domains**.
+- You do not see the switch: **Ergo Notetaker** is not connected.
 
 ## Related articles
 
-- [Dashboard and upcoming meetings](./dashboard-upcoming-meetings)
-- [Schedule or cancel the notetaker](./schedule-or-cancel-the-notetaker)
-- [Meeting filter: what sales-only processing means](./meeting-filter-what-sales-only-processing-means)
+- [Dashboard and upcoming meetings](https://support.joinergo.com/articles/4063633225)
+- [Schedule or cancel the notetaker](https://support.joinergo.com/articles/8109694724)
+- [Alternate domains/emails](https://support.joinergo.com/articles/9300714064)
+- [Why some meetings do not generate insights or drafts](https://support.joinergo.com/articles/1207359797)

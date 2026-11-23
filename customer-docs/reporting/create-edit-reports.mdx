@@ -1,49 +1,58 @@
 ---
 title: "Create/edit reports"
-description: "Create a Reporting chart, save it to a dashboard, or edit an existing dashboard widget."
-keywords: ["Create reports", "Edit reports", "Reporting charts", "Dashboard widgets", "Chart Builder"]
+description: "Make a chart in the chart builder, save it to a dashboard, and edit it later."
+keywords: ["Create chart", "Edit chart", "Chart builder", "Reporting", "Save chart", "Date range"]
 ---
 
-![Product screenshot showing reporting dashboards, filters, sharing, and report controls.](../images/product-reporting-dashboard.png)
-
-Reports in Ergo are chart widgets saved to a Reporting dashboard. Create them from Chart Builder, then save them to the dashboard where the team will review them.
+A report is a chart on a Reporting dashboard. You build the chart in the chart builder. Then you save it to a dashboard.
 
 ## Who can use this
 
-- Users with Reporting create access can create and edit reports.
-- Users with view-only Reporting access can review dashboards they have access to, but may not see creation controls.
+- Users with Reporting create access can create and edit charts.
+- Users without create access can look at dashboards. They cannot see the creation controls.
 
-## Create a report
+## Before you start
 
-1. Open **Reporting**.
-2. Select **Create New Report**.
-3. Rename the report title if needed.
-4. Choose a main category.
-5. Optionally choose a breakdown category, filters, time range, chart type, or supported advanced view.
-6. Review the preview.
-7. Select **Save Report**.
-8. Choose the dashboard where the report should appear.
+- The dashboard must exist before you save a chart to it. See [Default dashboards](https://support.joinergo.com/articles/7968597484).
 
-## Edit an existing report
+## Steps
 
-1. Open the dashboard that contains the chart widget.
-2. Open the widget menu.
-3. Select the edit action.
-4. Update the category, breakdown, filters, chart type, time range, revenue preset, or rubric field as needed.
-5. Select **Update Report**.
+1. Select **Reporting** in the left navigation.
+2. On the **Dashboards** tab, select **Create a chart**.
+3. Enter a name in **Chart name**.
+4. Select a field in **Reporting field**.
+5. Select the chart type in **Chart**: **Bars** (how often each one comes up), **Deal value**, **Over time** (by month), **Breakdown** (split by another field), or **Won vs lost**.
+6. Open **Filters**. Set **Date range**, **Deal stage**, and other filters if necessary.
+7. Examine the **Live preview**. Then select **Save chart**.
+8. In **Save to a dashboard**, select the dashboard. Select **Save chart** again.
+
+## Edit a chart
+
+1. Open the dashboard that has the chart.
+2. On the chart, select **⋯**.
+3. Select **Edit chart**.
+4. Change the settings.
+5. Select **Save changes**.
 
 ## What to expect
 
-- A main category is required before a report can be saved.
-- Saved chart types are bar or pie.
-- Editing a report updates the widget configuration on the selected dashboard.
-- Some category combinations are blocked: rubric and deal/company-level fields do not support the same breakdown behavior as correspondence-level fields.
-- If a dashboard is missing from the save modal, check Reporting access and dashboard permissions.
+- A chart field is a reporting field, a close reason, or a grading rubric. The label is **Grading rubric** for a rubric.
+- CRM deal and company properties are available only as a breakdown or a filter.
+- A grading rubric chart has no breakdown. Its filters are **Rep**, **Deal stage**, and **Deal value**.
+- **Date range** options are **All time**, **Last 7 days**, **Last 30 days**, **Last 3 months**, **Last 6 months**, **Last 12 months**, and **Custom range**. An **Over time** chart does not offer **Last 7 days** and **Last 30 days**.
+- To filter by deal amount, use **Deal value** (**Minimum** and **Maximum**) in **Filters**.
+- There are no pie charts. A pie chart from the Legacy view shows as bars.
+- After you save, Ergo opens the dashboard and shows the new chart. To make another chart, select **Create a chart** again.
+
+## Common issues
+
+- The dashboard is not in the save list: check your Reporting access and the dashboard permissions.
+- There are no results: see [Search/reporting has no results](https://support.joinergo.com/articles/8146112124).
 
 ## Related articles
 
-- [Reporting](./index)
-- [Default dashboards](./default-dashboards)
-- [Chart builder](./chart-builder)
-- [Save widgets to dashboards](./save-widgets-to-dashboards)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Default dashboards](https://support.joinergo.com/articles/7968597484)
+- [Filters, time ranges, and drilldowns](https://support.joinergo.com/articles/2899052555)
+- [Save widgets to dashboards](https://support.joinergo.com/articles/2123914242)
+- [Custom reporting fields](https://support.joinergo.com/articles/6979568726)

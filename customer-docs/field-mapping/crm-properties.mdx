@@ -1,47 +1,53 @@
 ---
 title: "CRM properties"
-description: "Map deal, contact, and company CRM properties so Ergo can display, reason about, and update the right fields."
-keywords: ["CRM properties", "deal properties", "contact properties", "company properties"]
+description: "Sync CRM fields into Ergo, set write behavior and approval, make new fields, and fix field conflicts."
+keywords: ["CRM Properties", "Sync From CRM", "Write behavior", "Add Property", "Push to CRM", "Resolve Conflict", "Require approval before writing"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use CRM Properties to decide which deal, contact, and company fields Ergo can use. Mapped properties power the Deals board, detail pages, AI context, reporting, and CRM write paths.
+CRM properties are the deal, contact and company fields that Ergo can read and write. Each team has its own list.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- A team Admin sees only the teams that the Admin manages. A **Member** does not see this page.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Connect your CRM. See [Connect your CRM](https://support.joinergo.com/articles/2772377599).
+- Get the approval of your CRM owner before you push a new field to the CRM.
 
 ## Steps
 
-- Review deal, contact, and company property sections separately.
-- Select existing CRM-defined properties to sync into Ergo.
-- Add or create properties only when your CRM owner approves the field name, type, and options.
-- Check field type, picklist options, multi-select behavior, descriptions, and source.
-- Keep field descriptions specific enough for AI-assisted classification.
+1. Open **Settings → CRM Properties**. Select the team in the team selector at the top right.
+2. Click **Sync From CRM**. The window **Select Properties to Sync from CRM** opens.
+3. Use the tabs **Deal**, **Contact** and **Company**. **Custom** shows the fields that your company made. **CRM Defined** shows the standard fields of your CRM.
+4. Click each field that Ergo must use. Keep **Auto-generate descriptions** selected. Click **Sync Selected Properties**.
+5. Click a field to open it. Check the **Description**, the **Field type** and the **Options**.
+6. Set the **Write behavior**. Select **Require approval before writing** if a person must approve each value.
+7. To make a field that is not in your CRM, click **Add Property**. Fill in **Property Name**, **Field Type** and **Description**. Click **Create Property**. Then click **Push to CRM** on the field row.
+8. To remove a field from the team, click the trash icon (**Remove field**) on the field row.
 
 ## What to expect
 
-- Mapped properties can be shown on boards, cards, lists, detail pages, and AI context surfaces.
-- CRM-defined fields and Ergo-defined fields should not be treated interchangeably without checking the source.
-- Field options must stay aligned with the CRM.
+- **Write behavior** has three values: **Ergo can always write to this field**, **Ergo will only write if not already populated** and **Ergo will never write to this field**.
+- Changes to a field save automatically.
+- Fields that are already mapped show **(synced)**. You cannot clear them in the sync window.
+- After the sync, the message **Added N properties** shows. Ergo then writes a first description for each new field.
+- **Add Property** makes the field in Ergo only. **Push to CRM** needs a description.
+- **Add Default** adds the fields that Ergo recommends.
+- A change to a field name, type or option applies to all teams. Descriptions and write rules are for one team.
+- A field with no description shows **Incomplete**. Click **Ask Ergo** for a draft, then correct it.
+- **Remove field** removes the field at once, with no confirmation.
 
 ## Common issues
 
-- A CRM admin changed a field type or picklist option after sync.
-- A property is mapped for the wrong object type.
-- A field is visible in Ergo but not writable by the CRM integration user.
+- A field changed in the CRM: the row shows **Resolve Conflict**. Click it. Select **Keep CRM Version** or **Update CRM**.
+- A standard CRM field is missing in the sync window: change the view from **Custom** to **CRM Defined**.
+- A field shows in Ergo but Ergo cannot write to it: check **Write behavior** and the permission of the CRM user.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Field mapping setup: required before CRM updates work](./field-mapping-setup-required-before-crm-updates-work)
-- [Property permissions](./property-permissions)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [CRM properties setup](https://support.joinergo.com/articles/3371162277)
+- [Property permissions](https://support.joinergo.com/articles/3280671232)
+- [Stage drift conflicts](https://support.joinergo.com/articles/1509454679)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

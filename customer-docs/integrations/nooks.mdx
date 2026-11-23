@@ -1,46 +1,45 @@
 ---
 title: "Nooks"
-description: "Connect Nooks Dialer with the workspace signing-key flow shown in Ergo."
-keywords: ["Nooks", "Integrations", "Ergo docs"]
+description: "Connect Nooks with a webhook so Ergo receives your Nooks calls."
+keywords: ["Nooks", "Dialers", "Org integrations", "Webhook signing key", "call.logged"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when Nooks Dialer should send call recordings and transcripts to Ergo.
+Connect Nooks so that Ergo receives your calls. One connection serves the whole organization. It uses a webhook URL from Ergo and a signing key from Nooks.
 
 ## Who can use this
 
-- Admins and operators configuring dialer ingestion.
-- Users validating whether Nooks calls appear in Ergo.
+- The organization **Owner** and team **Admins**.
 
 ## Before you start
 
-- Confirm the Nooks Dialer integration is enabled for your workspace.
-- Copy the webhook URL shown in Ergo.
-- Have the Nooks webhook signing key ready.
+- Make sure that you can make webhooks in Nooks.
 
 ## Steps
 
-- Open **Integrations** and select **Nooks Dialer**.
-- Open the Nooks setup modal.
-- Copy the webhook URL into Nooks.
-- Save the Nooks webhook signing key in Ergo.
-- Confirm the status shows connected and test one call.
+1. Sign in to Ergo as the Owner or a team Admin.
+2. Open **Settings → Org integrations**. In **Dialers**, find **Nooks** and select **Connect**.
+3. In the dialog **Nooks Dialer**, select **Copy** next to **Webhook URL**.
+4. In Nooks, go to the webhook settings (the **Webhooks** page under the Nooks integrations). Make a webhook for the event **call.logged**, paste the URL, and save it.
+5. Copy the signing key that Nooks shows after the save. Nooks shows it one time.
+6. In Ergo, paste the key in **Webhook signing key** and select **Save setup**.
+7. Make sure that the dialog shows **Active** and that the **Nooks** row shows the label **Connected**.
+8. Make one test call.
 
 ## What to expect
 
-- Nooks is feature-gated and uses an org-level API key/webhook pattern.
-- The connection status depends on the saved signing key and webhook setup.
-- Call availability depends on Nooks sending a supported payload.
+- The signing key starts with `nooks-webhook-signing-key-`. Ergo accepts only a key with this start.
+- A new key replaces the old key for the organization.
+- The **Nooks API key** row in **Meeting backfill** is a different connection. It imports past calls only.
 
 ## Common issues
 
-- The feature flag is not enabled for the workspace.
-- The webhook URL or signing key was copied incorrectly.
-- Nooks sent a payload Ergo could not verify or match.
+- Ergo does not accept the key: the key does not start with `nooks-webhook-signing-key-`. Check that you copied the whole key.
+- You lost the key: make a new webhook in Nooks to get a new key. Then save it in Ergo.
+- The dialog shows **Not connected**: save the signing key again.
 
 ## Related articles
 
-- [Integrations](./index)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Outreach](https://support.joinergo.com/articles/4534096844)
+- [Salesfinity](https://support.joinergo.com/articles/2216734899)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Get support](https://support.joinergo.com/articles/2708243049)

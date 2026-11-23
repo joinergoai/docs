@@ -1,52 +1,48 @@
 ---
 title: "Slack disconnect/reconnect and stale channel mappings"
-description: "Troubleshoot stale Slack workspace, channel, and delivery mappings after disconnecting or reconnecting Slack."
-keywords: ["Slack reconnect", "Slack channel mappings", "Slack monitoring", "stale mappings", "troubleshooting"]
+description: "Reconnect Slack, fix channel associations, and fix Slack delivery in automations."
+keywords: ["Slack", "Disconnect", "Reconnect", "Channel associations", "Pick channels", "Fix delivery", "Slack settings"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
+Ergo has two Slack connections. Use this page when a reconnect works but channels or destinations still look wrong.
 
-Use this page when Slack reconnect succeeds but channel lists, monitoring, CRM capture, or delivery destinations still look stale.
+## Who can use this
 
-## Symptoms
+- Each person can reconnect their own Slack account.
+- The organization **Owner** and team **Admins** manage the Slack workspace and the channel associations.
 
-- Slack reconnect succeeds but old channels, workspaces, or teams still appear.
-- Monitoring, CRM capture, or delivery points to the wrong channel.
-- A stale channel mapping survives disconnect/reconnect.
-- A channel was renamed, archived, or replaced after setup.
+## Before you start
 
-## Most common causes
+- The **Slack workspace** is for the full organization. Your **Slack account** is only for you.
+- A workspace disconnect stops Slack for all people. Do not disconnect the workspace unless Slack must stop for everyone.
+- A person needs a Standard seat to connect the workspace.
 
-- Previous Slack workspace or channel mappings still need review after reconnect.
-- The connected account changed, so channel visibility changed.
-- The target channel was renamed, archived, moved, or replaced.
-- Ergo was removed from the channel or never added after reconnect.
+## Steps
 
-## What to check
+1. Find which connection has the problem.
+2. Your account: open **Settings** → **User integrations** → **Slack**. Click **Disconnect**, then **Connect**. Sign in with your work Slack account.
+3. Workspace (Owner or team Admin): open **Settings** → **Org integrations** → **Workspaces**. If the **Slack** row does not show **Connected** and the name of the correct Slack workspace, click **Connect**.
+4. After a workspace reconnect, click the gear on the **Slack** row. In **Slack settings**, click **Pick channels**. Select the channels and click **Add to N channels**.
+5. In **Slack settings**, click **Manage** in **Channel associations**. For each channel, select the correct company or click **None**. Click **Save**.
+6. Open **Automations**. Where a row shows **Slack destination needs attention**, click **Fix delivery**. Select the correct channel, or click **Add Ergo to channel**. Then click **Refresh status**.
+7. Do a test with one channel.
 
-- Disconnect and reconnect Slack with the intended work account.
-- Confirm the Slack workspace and target channels after reconnect.
-- Add Ergo to channels that should be monitored or used for delivery.
-- Re-save any delivery, monitoring, or scheduled-run destinations that still point to old channels.
-- Retry one controlled Slack workflow before broad rollout.
+## What to expect
 
-## Resolution steps
+- An automation with a bad channel shows one of these: **Ergo is not in this channel**, **This Slack channel is archived**, **Ergo cannot access this channel**, or **Ergo is disconnected from Slack**.
+- Reconnecting alone may not restore channel membership. Add Ergo to the channels again.
+- After a reconnect, Ergo does not send again the automation runs that failed. Run those automations again if you need the output.
 
-- Treat reconnect as an auth repair; review channel mappings separately after reconnecting.
-- Review channel membership and destination settings after reconnect.
-- Do not assume Slack reconnect backfills messages sent while Ergo was absent.
-- If a channel still appears stale, create one controlled delivery or monitoring test and capture the result.
+## Common issues
 
-## When to contact support
-
-- Contact support when the correct Slack workspace is connected, Ergo is in the channel, destinations were re-saved, and the mapping still points incorrectly.
-- Include the Ergo workspace, Slack workspace, affected channel, expected destination, actual destination, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- **A channel points to the wrong company.** Fix it in **Channel associations**.
+- **A channel was renamed, archived, or replaced.** Select the correct channel in the automation.
+- **The Slack row does not show the right workspace.** Ask the Owner or a team Admin to reconnect it.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Slack Enterprise Grid channel listing issues](./slack-enterprise-grid-channel-listing-issues)
-- [Add Ergo to new Slack customer channels](./add-ergo-to-new-slack-customer-channels)
-- [Getting support](../start-here/getting-support)
-- [Expired grants and reconnecting](../integrations/expired-grants-and-reconnecting)
+- [Slack](https://support.joinergo.com/articles/7075762783)
+- [Slack monitoring and pre-call context](https://support.joinergo.com/articles/8418853270)
+- [Add Ergo to new Slack customer channels](https://support.joinergo.com/articles/5430278897)
+- [Google/Microsoft/Slack reconnects](https://support.joinergo.com/articles/5648164253)
+- [Get support](https://support.joinergo.com/articles/2708243049)

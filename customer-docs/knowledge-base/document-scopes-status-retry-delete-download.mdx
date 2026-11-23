@@ -1,38 +1,52 @@
 ---
 title: "Document status, retry, delete, and download"
-description: "Understand knowledge base document states and the actions available for failed, indexed, and stored files."
-keywords: ["document status", "retry document", "delete document", "download document"]
+description: "Read the status of a Knowledge Base document, then retry, download or delete it."
+keywords: ["document status", "Indexing failed", "Retry indexing", "delete document", "download document", "Knowledge Base"]
 ---
 
-![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
+Use the status of a Knowledge Base document to see if it is ready. Then retry, download or delete it.
 
-Use document status to decide whether a knowledge base file is ready, retryable, downloadable, or safe to delete.
+## Who can use this
 
-## Status values
+- People with a Standard seat.
+- You can delete your own documents. Only team Admins can delete team documents. Only the Owner and Admins can delete organization documents.
+- All users who can see a document can download it.
 
-- **Pending**: Ergo created the document record and is still indexing the extracted text.
-- **Indexed**: the document was indexed and can be used as knowledge base context.
-- **Failed**: indexing failed after text extraction or ingestion.
+## Before you start
 
-## Retry
+- Open **Settings → Knowledge Base**.
+- Each document shows its status and these icons: view, download, edit summary, retry indexing and delete.
 
-- Retry is available for failed documents.
-- Retry uses the extracted text saved from the original upload.
-- Retry is not available when the document is not failed or when no extracted text is available.
+## Status labels
 
-## Delete
+- **Uploading...**: the file is on its way to Ergo.
+- **Processing...**: Ergo reads and indexes the file.
+- No label: the document is ready. Your agents can use it.
+- **Indexing failed**: Ergo could not index the file. Put the pointer on the label to see the cause.
 
-- Delete removes the document record after cleanup.
-- If indexed chunks exist, Ergo attempts to remove them before deleting the MongoDB record.
-- If an original file was stored, Ergo also cleans up the stored file.
+## Steps
 
-## Download
+1. To retry a failed document, click the **Retry indexing** icon. Only a user who can manage the document sees this icon.
+2. To download a document, click the download icon.
+3. To delete a document, click the trash icon.
+4. In the **Delete Document?** dialog, click **Delete**.
 
-- Download is available only when the document has a stored file.
-- The backend exposes downloads through the document download route and can return inline or attachment disposition.
-- If a document has no downloadable file, the route returns that state instead of inventing a file.
+## What to expect
+
+- Retry is available only for a document that shows **Indexing failed**.
+- The deletion is permanent, and your agents stop using the document.
+- Ergo removes the document from search, then deletes the file. If Ergo cannot remove the document from search, the document stays in the list. Try again.
+- If there is no download icon, Ergo has no stored file for this document.
+
+## Common issues
+
+- A document stays on **Processing...**: wait, then reload the page.
+- **Indexing failed** again after a retry: read the cause on the label. Upload the file again.
+- You do not see the delete or retry icon: your role does not manage this document.
 
 ## Related articles
 
-- [Upload knowledge base documents](./upload-user-org-knowledge-base-docs)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Upload knowledge base documents](https://support.joinergo.com/articles/2185489721)
+- [Share or revoke documents](https://support.joinergo.com/articles/6142809448)
+- [Post-call reference docs and summaries](https://support.joinergo.com/articles/7128580019)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

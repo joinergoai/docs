@@ -1,53 +1,46 @@
 ---
-title: "Share charts/dashboards"
-description: "Generate, password-protect, copy, and revoke shared links for Reporting charts and dashboards."
-keywords: ["Share charts", "Share dashboards", "Reporting links", "Password protection", "Unshare"]
+title: "Share a dashboard"
+description: "Share a Reporting dashboard with a link, add a password, and stop the link."
+keywords: ["Share dashboard", "Reporting links", "Password protection", "Share with a link"]
 ---
 
-![Product screenshot showing reporting dashboards, report controls, and sharing.](../images/product-reporting-dashboard.png)
+You can share a Reporting dashboard with a link. You cannot share one chart with a link.
 
-Use shared Reporting links when someone needs to review a chart or dashboard outside the normal authenticated Reporting page.
+## Who can use this
 
-## Chart link or dashboard link
+- People who can create dashboards in Reporting.
 
-- **Chart links** share one widget.
-- **Dashboard links** share the dashboard view.
-- Each link can be password protected.
-- Each link can be revoked by unsharing it.
+## Before you start
 
-Shared links are best for a specific review moment. For ongoing internal access, use Reporting access grants instead.
+- Viewers of a shared link can open the quotes and the deals behind each chart. Share only with people who can see that data.
+- Your organization can turn off public links. The dialog then shows **Public links are turned off for your organization**.
 
-## Share a chart
+## Steps
 
-1. Open the dashboard that contains the chart.
-2. Open the chart share action.
-3. Copy the generated link.
-4. Add a password if the audience needs one.
-5. Send the link only to intended viewers.
+1. Click **Reporting** in the left navigation and open the dashboard.
+2. Click the **⋯** menu next to the dashboard name.
+3. Click **Share**.
+4. Turn on **Share with a link**.
+5. Click **Copy link**.
+6. If the audience needs a password, turn on **Require a password**, type the password, and click **Done**.
+7. Send the link (and the password) to the viewers. Tell them that Ergo asks for an email verification code.
+8. To stop access, open **Share** again and turn off **Share with a link**.
 
-## Share a dashboard
+## What to expect
 
-1. Open the dashboard.
-2. Select **Share**.
-3. Copy the generated dashboard link.
-4. Add a password if needed.
-5. Revoke the link when access should end.
+- The link first shows **Verify Your Email**. The viewer types an email address, clicks **Send verification code**, and types the 6-digit code from the email. Then the password, if you set one.
+- A viewer cannot export a CSV, edit a chart or change a grade. To open a call or a deal, the viewer must sign in to Ergo. Forecast charts do not show on a shared link.
+- To send one chart, click **⋯** on the chart → **Download image**.
+- When you turn off **Share with a link**, the link stops at once and Ergo deletes the password. If you turn it on again, Ergo makes a new link.
 
-## Password rules
+## Common issues
 
-- Passwords must be at least 6 characters.
-- Passwords cannot exceed 128 characters.
-- Updating the password changes the password required for that shared link.
-- Removing the password leaves the shared link active unless you unshare it.
-
-## Shared view limits
-
-Shared views can be narrower than authenticated Reporting. Some sentence detail and revenue deal detail views are available only from authenticated charts. If a reviewer needs full drilldown access, grant them Reporting access instead of relying on a public link.
+- No **Share** item: you do not have create access in Reporting.
+- The viewer did not get the code: ask them to check spam, and to use the address that you expect.
+- Passwords must have 6 to 128 characters: letters A–Z, numbers and common symbols, with no space at the start or the end.
 
 ## Related articles
 
-- [Reporting](./index)
-- [Save widgets to dashboards](./save-widgets-to-dashboards)
-- [Reporting dashboard sharing and embedding troubleshooting](./reporting-dashboard-sharing-and-embedding-troubleshooting)
-- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
-- [Security, data retention, and LLM usage](../start-here/security-data-retention-and-llm-usage)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Default dashboards](https://support.joinergo.com/articles/7968597484)
+- [Create/edit reports](https://support.joinergo.com/articles/3609942735)

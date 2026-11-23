@@ -1,56 +1,51 @@
 ---
 title: "Reporting defaults"
-description: "Choose optional default reporting dashboards and grading rubrics during onboarding, then grant reporting access intentionally."
-keywords: ["Reporting defaults", "default dashboards", "reporting access", "sales grading rubric", "Ergo setup"]
+description: "Add default reporting fields, coaching rubrics and dashboards when you set up Reporting."
+keywords: ["Reporting defaults", "Configure reporting", "Reporting properties", "Coaching rubrics", "Legacy view", "Reporting access"]
 ---
 
-![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
-
-Use this page when reporting is part of the initial rollout. Reporting defaults can create starter dashboards and a baseline grading rubric, but reporting still depends on source data, reporting access, and the reports your team actually wants to review.
+Use this page when Reporting is part of your first rollout. The setup wizard adds fields and rubrics. It does not make dashboards.
 
 ## Who can use this
 
-- Admins, team admins, RevOps owners, and reporting owners with reporting access.
-- Users who have been granted reporting access for all dashboards or selected dashboards.
+- The **Owner** and team **Admins**, if your organization has Reporting.
+- Only the **Owner** gives Reporting access to other people.
+- A **Member** never gets the **Configure reporting** step.
 
 ## Before you start
 
-- Confirm reporting is enabled for the workspace.
-- Make sure the setup owner has reporting access and creation permission.
-- Decide whether starter dashboards should be created for sales, customer success, product, or a specific team.
-- Confirm call grading should be enabled before adding a default sales grading rubric.
+- Check that your organization has Reporting. If the step **Configure reporting** does not show, it does not.
+- Decide if you want call grading.
 
 ## Steps
 
-1. In onboarding, leave enabled only the defaults your team wants: Sales Dashboard, Customer Success Dashboard, Product Dashboard, and Sales Grading Rubric.
-2. If you are already in Reporting, use **Add Default Dashboard** to create a sales, customer success, or product dashboard.
-3. When creating default dashboards from Reporting, choose a team if the dashboard should be team-specific.
-4. For sales dashboards, review any competitor picklist prompt before treating competitor reports as ready.
-5. Grant reporting access to the right viewers after defaults are created.
-6. Review the generated dashboards and edit or remove reports that do not match your operating cadence.
+1. In the setup wizard, open the last step, **Configure reporting**.
+2. On the **Reporting properties** tab, click **Add Default** to add the recommended fields. Or click **Create** to make your own. Do this for the organization and for each team.
+3. On the **Coaching rubrics** tab, click **Add template** or **Create rubric**.
+4. Click **Finish**.
+5. After setup, open **Reporting**. Use the **Custom Fields** and **Call Grading** tabs to change fields and rubrics.
+6. To add a default dashboard, open **Reporting → Dashboards** and turn on **Legacy view** at the top right. Click **Add Default Dashboard**. Select **Sales Default Dashboard**, **Customer Success Dashboard** or **Product Dashboard**.
+7. Owner: open **Settings → Members**, click the person, and click **Grant** next to **Reporting access**.
 
 ## What to expect
 
-- If the onboarding user does not have reporting access, the reporting defaults step is skipped.
-- Admins and team admins can have full reporting access; other users depend on reporting access grants.
-- Reporting access grants can allow all dashboards, selected dashboards, and creation permission.
-- Default dashboards are starting points. They need enough relevant meeting, CRM, and reporting field data before their results are meaningful.
+- **Add Default Dashboard** does not show in the new Reporting view. It shows only with **Legacy view** on and with the right to create.
+- In the **Reporting access** window, select **All dashboards** or **Specific dashboards**. Select **Can create dashboards, fields, and rubrics** if the person must make reports.
+- An **Owner** and team **Admins** have all dashboards already.
+- Default dashboards need enough meeting and CRM data before the results mean something.
 
 ## Common issues
 
-- A user expects to see Reporting in the sidebar but does not have reporting access.
-- Defaults are created before reporting fields, grading rubrics, or source data are ready.
-- A dashboard is visible to admins but not to a viewer with a narrower reporting grant.
-- A default dashboard exists, but a filter, team selection, time range, or missing source data makes it look empty.
+- A person cannot see **Reporting** in the left navigation: Reporting access is missing. See [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384).
+- A dashboard looks empty: a filter, team, time range or missing data hides the results. See [Search/reporting has no results](https://support.joinergo.com/articles/8146112124).
+- You cannot find **Add Default Dashboard**: turn on **Legacy view**.
+- A dashboard is visible to an **Admin** but not to another person: the grant is for specific dashboards only.
 
 ## Related articles
 
-- [Setup](./index)
-- [Advanced settings](./advanced-settings)
-- [Default dashboards](../reporting/default-dashboards)
-- [Reporting overview](../reporting/reporting-overview)
-- [Create/edit reports](../reporting/create-edit-reports)
-- [Call grading rubrics](../reporting/call-grading-rubrics)
-- [Grant meeting/reporting access](../admin/grant-meeting-reporting-access)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Search/reporting has no results](../troubleshooting/search-reporting-has-no-results)
+- [Reporting overview](https://support.joinergo.com/articles/7280561380)
+- [Default dashboards](https://support.joinergo.com/articles/7968597484)
+- [Create/edit reports](https://support.joinergo.com/articles/3609942735)
+- [Call grading rubrics](https://support.joinergo.com/articles/3553693942)
+- [Custom reporting fields](https://support.joinergo.com/articles/6979568726)
+- [First-time setup checklist](https://support.joinergo.com/articles/9947439335)

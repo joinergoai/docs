@@ -1,35 +1,47 @@
 ---
 title: "Post-call reference docs and summaries"
-description: "Upload reference docs for post-call drafting and manage generated document summaries."
-keywords: ["post-call reference docs", "document summaries", "draft context", "retry summary"]
+description: "Add reference documents for post-call drafts and manage their summaries."
+keywords: ["reference documents", "post-call", "document summary", "Generating summary", "Summary failed", "Email Drafting"]
 ---
 
-![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
+Reference documents are files that Ergo uses when it drafts post-call emails. Ergo reads a short summary of each file.
 
-Post-call reference documents are admin-managed files used as drafting context for post-call email generation.
+## Who can use this
 
-## What admins can do
+- The Owner and Admins manage the organization documents.
+- The Admins of a team manage the documents of that team.
+- Ergo uses team documents together with the organization documents for the members of that team.
 
-- Upload reference documents from post-call configuration.
-- Keep up to the configured document limit.
-- Delete reference documents that should no longer guide drafts.
-- Edit a generated summary.
-- Retry summary generation when a summary fails.
+## Before you start
 
-## Summary states
+- Choose a playbook or guide that helps drafts. Each file must be 25 MB or smaller.
 
-- **Pending**: Ergo is generating the document summary.
-- **Ready**: the summary is available for post-call context.
-- **Failed**: summary generation failed and can be retried where the UI exposes retry.
+## Steps
 
-## How summaries are used
+1. Open **Settings → Email Drafting** in the **Team** group.
+2. For documents for all users, open the **Organization** tab. For documents for one team, open the **Team** tab and select the team.
+3. In **Reference documents**, click **Click to upload or drag and drop**, or drag a file into the area.
+4. Wait until **Generating summary…** goes away. Read the summary.
+5. To change the summary, click **Edit**, change the text, then click **Save**. The maximum is 8,000 characters.
+6. If you see **Summary failed**, click **Retry**.
+7. To remove a document, click the trash icon on its row.
 
-- Ergo uses the summary as lightweight drafting context.
-- Full document content may be pulled when needed by the workflow.
-- Reference docs are post-call drafting guidance, not a replacement for reviewing the generated draft.
+## What to expect
+
+- You can keep a maximum of 20 reference documents for the organization and 20 for each team.
+- At the limit, delete a document before you upload a new one.
+- After an Admin changes a summary, the badge **Edited** shows.
+- Ergo uses the summary as short drafting context. It reads the full content when needed.
+- Reference documents guide drafts. They do not replace your review of each draft.
+
+## Common issues
+
+- The upload area does not accept a file: you are at the limit of 20.
+- You cannot manage the documents of a team: only Admins of that team can.
+- **Summary failed** shows: click **Retry**.
 
 ## Related articles
 
-- [Post-call custom instructions](./post-call-custom-instructions)
-- [Upload knowledge base documents](./upload-user-org-knowledge-base-docs)
-- [Review and edit AI drafts](../drafts-email/review-edit-ai-drafts)
+- [Post-call custom instructions](https://support.joinergo.com/articles/3463657551)
+- [Upload knowledge base documents](https://support.joinergo.com/articles/2185489721)
+- [Review/edit AI drafts](https://support.joinergo.com/articles/1674428019)

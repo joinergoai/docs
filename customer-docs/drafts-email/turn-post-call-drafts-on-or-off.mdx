@@ -1,52 +1,46 @@
 ---
 title: "Turn post-call drafts on or off"
-description: "Enable or disable post-call email draft generation for the right users and teams."
-keywords: ["Turn post-call drafts on or off", "Drafts and email", "Ergo docs"]
+description: "Turn the post-call follow-up email draft on or off for your own account."
+keywords: ["Turn post-call drafts on or off", "Post-call follow-up emails", "Email Drafting", "Drafts"]
 ---
 
-![Product screenshot showing draft queues, review controls, and send states.](../images/product-drafts-inbox.png)
-
-Post-call draft generation depends on workspace configuration, user settings, connected sources, and whether the meeting qualifies for draft creation.
+After each external meeting, Ergo can draft a follow-up email for you. You turn this on or off for your own account.
 
 ## Who can use this
 
-- Admins and RevOps teams managing rollout.
-- Users checking whether their own post-call drafts should be created.
+- Each person with a **Standard** seat, for their own account.
+- An admin cannot change this switch for a team or for the organization.
 
 ## Before you start
 
-- Connect the user's email account.
-- Connect calendar and the relevant notetaker source.
-- Confirm the user belongs to the team or role that should receive post-call drafts.
-- Decide whether you are changing future draft creation only or also cleaning up existing drafts.
+- Connect your email and calendar. See [Connect email and calendar](https://support.joinergo.com/articles/4928954637).
 
 ## Steps
 
-- Open the workspace or user settings area where draft generation is configured.
-- Find the post-call email draft setting for the user, team, or workspace.
-- Turn the setting on to create drafts for future qualifying calls.
-- Turn the setting off to stop creating new post-call drafts for that scope.
-- Save the change and test with a future qualifying meeting.
+1. Click **Settings** in the left navigation.
+2. Below **Your settings**, click **Email Drafting**.
+3. Click the **General** tab.
+4. In **What Ergo does with your mailbox**, turn **Post-call follow-up emails** on or off.
+5. The change saves at once. There is no **Save** button.
+6. To test, hold a meeting with an external attendee. Then open **Drafts → Post Call**.
 
 ## What to expect
 
-- Changes affect future draft generation. Existing drafts may remain until sent, scheduled, dismissed, expired, or cleaned up.
-- Turning post-call drafts on does not mean every meeting produces a draft.
-- Turning post-call drafts off does not disable templates, signatures, manual compose, or scheduled/sent history.
-- Auto-send is separate from draft creation. Do not treat enabling drafts as enabling auto-send.
+- A new Standard seat starts with **Post-call follow-up emails** on.
+- Ergo does not send a post-call draft by itself. You review and send each draft.
+- Ergo drafts only after external meetings.
 
 ## Common issues
 
-- The setting is enabled, but email or calendar access is stale.
-- The meeting did not have enough processed context.
-- The setting is enabled for the wrong user or team.
-- A draft appears from another workflow, such as surfacing or manual compose.
+- No drafts after a meeting:
+  - **Post-call follow-up emails** is off.
+  - **Settings → Profile → Ergo on your account → Process my meetings, emails and Slack** is off. This switch pauses all drafts for you.
+  - The meeting had no external attendee.
+  - You do not have a Standard seat.
+- No **Email Drafting** page below **Your settings**: you do not have a Standard seat.
 
 ## Related articles
 
-- [Drafts and email](./index)
-- [Draft email logic: when drafts are created and how to dismiss](./draft-email-logic-when-drafts-are-created-and-how-to-dismiss)
-- [Auto-send settings](./auto-send-settings)
-- [Email templates setup](../setup/email-templates-setup)
-- [Draft send failures](../troubleshooting/draft-send-failures)
-- [Why some meetings do not generate insights or drafts](../meetings/why-some-meetings-do-not-generate-insights-or-drafts)
+- [Drafts inbox](https://support.joinergo.com/articles/5954330608)
+- [Connect email and calendar](https://support.joinergo.com/articles/4928954637)
+- [Why some meetings do not generate insights or drafts](https://support.joinergo.com/articles/1207359797)

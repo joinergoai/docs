@@ -1,45 +1,45 @@
 ---
 title: "Salesfinity"
-description: "Connect Salesfinity Dialer with an API key for supported call-log and recording sync."
-keywords: ["Salesfinity", "Integrations", "Ergo docs"]
+description: "Connect Salesfinity with an API key and a webhook so Ergo receives your calls."
+keywords: ["Salesfinity", "Dialers", "Org integrations", "Team API key", "Call Logged"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when Salesfinity Dialer should send supported call data to Ergo.
+Connect Salesfinity so that Ergo receives your calls. One connection serves the whole organization. You enter an API key in Ergo and make a webhook in Salesfinity.
 
 ## Who can use this
 
-- Admins and operators configuring dialer ingestion.
-- Users validating whether Salesfinity calls appear in Ergo.
+- The organization **Owner** and team **Admins**.
 
 ## Before you start
 
-- Confirm the Salesfinity Dialer integration is enabled for your workspace.
-- Have the Salesfinity API key ready.
-- Review whether your workspace treats this integration as beta.
+- Have the Salesfinity team API key ready.
 
 ## Steps
 
-- Open **Integrations** and select **Salesfinity Dialer**.
-- Paste the Salesfinity API key.
-- Confirm Salesfinity appears connected.
-- Test with one completed call before relying on broad sync.
+1. Sign in to Ergo as the Owner or a team Admin.
+2. Open **Settings → Org integrations**. In **Dialers**, find **Salesfinity** and select **Connect**.
+3. In the dialog **Connect Salesfinity Dialer**, paste the key in **Team API key** and select **Connect**.
+4. Select **Copy** next to the **Webhook URL** that Ergo now shows.
+5. In Salesfinity, open **Settings → Connections → Webhooks** and select **Create Webhook**. Name it **Ergo Call Import**.
+6. Set the event to **Call Logged**. Select all call dispositions.
+7. Paste the Ergo URL in **Post URL** and save the webhook.
+8. In Ergo, select **Done**. Then make one test call and look for it in **Meetings**.
 
 ## What to expect
 
-- Salesfinity is feature-gated and marked beta in the integration metadata.
-- Ergo stores the API key and depends on downstream call-log and recording sync behavior.
-- Do not promise complete backfill or every call until a test call has been verified.
+- The label **Connected** shows that Ergo saved the API key. It does not show that calls arrive.
+- No call arrives until you make the webhook in Salesfinity.
+- When you select all call dispositions, Ergo receives every eligible call, also calls with custom dispositions.
 
 ## Common issues
 
-- The feature flag is not enabled for the workspace.
-- The API key is invalid or lacks access.
-- The call did not include the recording or metadata needed for downstream processing.
+- No calls arrive: the webhook is missing in Salesfinity, or the event is not **Call Logged**.
+- Some calls are missing: not all call dispositions are selected in the webhook.
+- You do not see **Connect**: only the Owner or a team Admin can connect a dialer.
 
 ## Related articles
 
-- [Integrations](./index)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Outreach](https://support.joinergo.com/articles/4534096844)
+- [Nooks](https://support.joinergo.com/articles/6672173844)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Get support](https://support.joinergo.com/articles/2708243049)

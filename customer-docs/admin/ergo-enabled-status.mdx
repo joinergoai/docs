@@ -1,53 +1,43 @@
 ---
 title: "Ergo enabled/status"
-description: "Understand and manage the Ergo enabled toggle and Active/Inactive member status in Admin."
-keywords: ["Ergo enabled", "active status", "inactive status", "admin"]
+description: "Turn Automations on or off for a person in Settings → Members."
+keywords: ["Automations switch", "Members", "Settings", "Process my meetings, emails and Slack", "Standard seat", "Ergo enabled"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page to understand the **Ergo** toggle and the **Active** or **Inactive** status shown in the Admin member table.
+The **Automations** switch controls whether Ergo works on a person's meetings, emails, and Slack conversations. When it is on, Ergo also updates the CRM.
 
 ## Who can use this
 
-- Admins can fetch member Ergo status for users in their organization.
-- Admins can toggle Ergo for users in the same organization when the target account supports it.
-- Users can also manage their own Ergo enabled status outside Admin.
-
-## Before you start
-
-- Confirm the user belongs to your organization.
-- Check whether the user is a spectator. Spectators are view-only accounts and cannot have Ergo enabled.
-- Confirm the user's CRM connection if you are troubleshooting **Inactive** status.
+- An **Owner** can change **Automations** for each person.
+- A team **Admin** can change it only for the people in the teams that the Admin manages. For other people the switch is disabled.
+- A **Member** sees the page read-only.
+- A person with a Standard seat can change the setting for their own account.
 
 ## Steps
 
-1. Open **Admin** and choose the team.
-2. Find the user in the member table.
-3. Review the **Status** badge and the **Ergo** column.
-4. If the toggle is available, turn Ergo on or off for that user.
-5. Ask the user to refresh and verify their own status.
+1. Open **Settings** → **Members**.
+2. On the **Members** tab, find the person. Or, on the **Teams** tab, click the team to see its people.
+3. Look at the **Automations** switch in the row of the person.
+4. To turn it on, click the switch. The person must have a Standard seat.
+5. To turn it off, click the switch. Then click **Turn off Automations** in the confirmation.
+6. To change your own account, open **Settings** → **Profile** → **Ergo on your account**. Use **Process my meetings, emails and Slack**.
 
 ## What to expect
 
-- **Enabled** means the user's dashboard has `ergoEnabled` set to on.
-- **Active** in the Admin table requires three things: CRM connected, Ergo enabled, and a standard seat.
-- **Inactive** can mean the user is missing CRM connection, has Ergo disabled, or is a spectator.
-- Spectators show **N/A** in the Ergo column and cannot be enabled while they remain spectators.
-- If a dashboard record is missing, the Admin action returns an error instead of changing status.
+- When the switch is on, Ergo processes the meetings, emails, and Slack conversations of the person and updates the CRM.
+- A person with a Notetaker seat or a Spectator seat cannot have **Automations** on. On the **Teams** tab the **Automations** column shows **N/A** for these people.
+- In the dialog of the person, the row shows "Not available on a Spectator seat." or "Not available on a Notetaker seat."
 
 ## Common issues
 
-- **The user is still inactive after enabling Ergo.** Confirm their CRM is connected and that they are not a spectator.
-- **The toggle is unavailable.** The user may be a spectator or the acting user may not have the right admin access.
-- **The toggle fails.** Confirm the user is in the same organization and has a dashboard record.
-- **A spectator needs automation.** Convert the user to a standard seat first, then reconnect integrations and enable Ergo as needed.
+- **The switch is disabled.** You are not an Owner or an Admin of that person's team. The screen says "Only the admin of their team can turn Ergo on or off."
+- **You cannot turn it on.** The person is on a Notetaker or Spectator seat. An Owner must change the seat first. See [Change a role or seat type](https://support.joinergo.com/articles/9544077862).
+- **A person needs the CRM updated.** An Owner or a team Admin connects the CRM in **Settings** → **Org integrations** → **CRM**.
 
 ## Related articles
 
-- [Admin](./index)
-- [Agent persona](./agent-persona)
-- [Agent usage and billing](./agent-usage-and-billing)
-- [Spectator management](./spectator-management)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Permission or access denied](../troubleshooting/permission-or-access-denied)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Seat types: what each seat can do](https://support.joinergo.com/articles/1478941509)
+- [Change a role or seat type](https://support.joinergo.com/articles/9544077862)
+- [Agent usage and billing](https://support.joinergo.com/articles/1054617481)
+- [Permission or access denied](https://support.joinergo.com/articles/4190135592)

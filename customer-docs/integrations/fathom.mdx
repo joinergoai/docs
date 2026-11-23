@@ -1,45 +1,47 @@
 ---
 title: "Fathom"
-description: "Connect Fathom with the webhook and secret flow shown in Ergo so supported Fathom recordings can be processed."
-keywords: ["Fathom", "Integrations", "Ergo docs"]
+description: "Connect Fathom with an API key so Ergo receives your new Fathom recordings."
+keywords: ["Fathom", "Note takers", "API Key", "Meeting backfill", "User integrations"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when Fathom is one of your meeting recording sources.
+Connect Fathom when it is one of your meeting recording sources. You paste one API key. Ergo sets up the webhook for you.
 
 ## Who can use this
 
-- Users and operators configuring Fathom ingestion.
-- Admins reviewing third-party notetaker overlap.
+- People with a **Standard** seat. Each person connects their own account.
+- This is a personal connection. It is not an organization connection.
 
 ## Before you start
 
-- Confirm your workspace has access to the Fathom integration.
-- Follow the Fathom-specific instructions shown in Ergo.
-- Decide how Fathom should coexist with other notetakers.
+- Make an API key in your Fathom API settings.
+- Use one notetaker for each person. While Fathom is connected, you cannot connect Ergo Notetaker, Ergo Desktop Notetaker, Granola, Gong, Fireflies, Circleback or BlueDot. Ergo shows **Disconnect Fathom first**.
 
 ## Steps
 
-- Open **Integrations** and select **Fathom**.
-- Follow the instructions shown in the Fathom panel.
-- Save the required secret or credential in Ergo.
-- Test with a known Fathom recording and verify it appears in Ergo.
+1. In Fathom, open your API settings and make an API key.
+2. In Ergo, open **Settings → User integrations**. In **Note takers**, find **Fathom** and click **Connect**.
+3. In the **Connect Fathom** window, paste the key in **API Key**. Click **Connect**.
+4. Make sure that the row shows **Disconnect**.
+5. Record one new meeting in Fathom.
+6. After Fathom completes the recording, look for the meeting in **Meetings**.
 
 ## What to expect
 
-- Fathom webhook verification depends on the saved secret and supported webhook payloads.
-- Ergo may skip a Fathom payload if the recorded-by email cannot be mapped to the expected Ergo user.
-- Duplicate-source review is important if another notetaker records the same meeting.
+- You do not copy a URL or a secret. Ergo checks the key and makes the Fathom webhook itself.
+- The connection brings in only new recordings.
+- To bring in past Fathom meetings, use **Meeting backfill → Fathom** on the same page. The window is **Import historical Fathom meetings**.
 
 ## Common issues
 
-- The webhook secret does not match.
-- The recorded-by email is not mapped to the Ergo user.
-- The Fathom payload is valid but another notetaker source already captured the meeting.
+- The connect fails with a message that the webhook registration failed: click **Connect** again. If it fails again, make a new API key in Fathom.
+- The API key is not valid: copy it again from Fathom.
+- **Disconnect Fathom first** shows on another notetaker: Fathom is connected. Disconnect it first.
+- Two sources recorded one meeting: see [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190).
+- A meeting is not processed: see [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [Granola](https://support.joinergo.com/articles/9094503466)

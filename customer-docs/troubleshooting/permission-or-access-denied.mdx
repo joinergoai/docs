@@ -1,51 +1,47 @@
 ---
 title: "Permission or access denied"
-description: "Troubleshoot hidden pages, denied access, shared-link access, and missing role or reporting permissions."
-keywords: ["access denied", "permissions", "reporting access", "meeting access", "shared links"]
+description: "Find out why a page, meeting, or setting is not available to a person, and who can fix it."
+keywords: ["Access denied", "Permission", "Reporting access", "Meeting access", "Meeting not accessible", "Owner", "Seat type"]
 ---
 
-![Product screenshot showing team membership, role controls, and access settings.](../images/product-admin-dashboard.png)
-
-Use this page when a user cannot open a page, meeting, report, draft, shared link, admin control, or source-backed workflow they expected to access.
+Ergo does not show an access denied page. A page that a person cannot use is not in the left navigation. Its link opens the **Dashboard**.
 
 ## Symptoms
 
-- A page is hidden or returns access denied.
-- A shared link asks for authentication, password, or one-time access.
-- A user cannot see meetings, reporting, drafts, field mapping, or admin controls.
-- A spectator or standard user expects an admin-only workflow.
+- A page is not in the left navigation.
+- A meeting shows **Meeting not accessible** or **Meeting access restricted**.
+- A control in **Settings** → **Members** is off.
+- The full screen shows **You don't have access to Ergo**.
 
-## Most common causes
+## Causes and fixes
 
-- Role, team, spectator, meeting access, or reporting access is insufficient.
-- The user is in the wrong workspace or signed in with the wrong account.
-- Feature flag, source connection, or workspace access is not enabled for that user.
-- Shared link password, authentication, or one-time access is required.
-- The source object is private, deleted, filtered, or not shared with that viewer.
+1. Open **Settings** → **Members** → **Members**. Find the person. Read the **Team**, **Role** (Owner, Admin, or Member), and **Seat** (Standard, Notetaker, or Spectator).
+2. If **Automations**, **Drafts**, or **Chat with Ergo** is not in the left navigation, the person does not have a Standard seat. Only the organization Owner can change **Seat type**.
+3. If **Reporting** is not in the left navigation, ask the Owner to click the person and click **Grant** in **Reporting access**.
+4. If a meeting shows **Meeting not accessible**, ask the Owner or the team Admin of the person to click **Edit** in **Meeting access**. Then select the people and click **Save access**. A person cannot change their own meeting access.
+5. To let all people see all meetings, the Owner sets **Everyone can see all meetings** to on in **Settings** → **Meetings**.
+6. If **CRM Properties**, **CRM Stages**, or **Org integrations** is not in **Settings**, the person is not the Owner or a team Admin. The Owner can change the role to **Admin** in the **Memberships** of the person.
+7. If a control in **Settings** → **Members** is off, hold the pointer on it to read the reason. Only the Owner can change the seat type, change team roles, and add people to teams.
+8. The pages **Organization** and **Usage** show only to the Owner.
+9. If the full screen shows **You don't have access to Ergo**, the account is not in an active Ergo organization. Ask the Owner to add the person in **Settings** → **Members**.
 
-## What to check
+## What to expect
 
-- Confirm the user is in the correct workspace and signed in with the expected account.
-- Confirm role, team membership, spectator status, and admin/Super Admin status.
-- Check reporting access grants, dashboard sharing, meeting access, and global meeting access separately.
-- Check whether the source object exists and is visible to the acting user.
-- Use a shared meeting, chart, dashboard, clip, note, or document link when narrow access is enough.
-
-## Resolution steps
-
-- Ask an admin to adjust the narrowest access that matches the task.
-- Do not share broad credentials to work around an access issue.
-- If the user needs reporting, grant reporting access; if they need a meeting, share or grant meeting access.
-- If the user needs admin controls, confirm they are an admin and that the control is not Super Admin-only.
+- A Member sees **Settings** → **Members** read-only.
+- Private meetings are visible only to their owner and attendees.
+- A shared link can give narrow access. See [Share, revoke, or password-protect meetings](https://support.joinergo.com/articles/7720202645).
+- Do not share credentials to work around an access issue. Ask for the narrowest access that fits the task.
 
 ## When to contact support
 
-- Contact support when the correct role, workspace, access grant, and source object are confirmed but access is still denied.
-- Include the workspace, affected user, requested page/object/link, current role, expected access, actual error, and approximate time window.
-- Keep examples generalized and avoid sharing sensitive customer content in support requests.
+- Click **Support** in the left navigation.
+- Give the person, the page or meeting, the current role and seat, and the access that you expect.
+- Do not share sensitive customer content.
 
 ## Related articles
 
-- [Troubleshooting](./index)
-- [Search/reporting has no results](./search-reporting-has-no-results)
-- [Getting support](../start-here/getting-support)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)
+- [Grant meeting or reporting access](https://support.joinergo.com/articles/3277963384)
+- [Everyone can see all meetings](https://support.joinergo.com/articles/1532088538)
+- [Change a role or seat type](https://support.joinergo.com/articles/9544077862)
+- [Get support](https://support.joinergo.com/articles/2708243049)

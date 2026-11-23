@@ -1,39 +1,46 @@
 ---
 title: "Meeting processing time and status states"
-description: "Understand separate recording, transcript, summary, insight, draft, and desktop-upload processing states."
-keywords: ["meeting processing", "processing status", "transcript", "summary", "desktop recording"]
+description: "Read the status text on a meeting and learn what to do when a recording or transcript is missing."
+keywords: ["meeting processing", "Recording generating", "Processing your recording", "Processing failed", "Retry", "transcript missing"]
 ---
 
-![Flow diagram showing recording, transcript, summary, insights, and drafts as separate processing outputs.](../images/meeting-processing-flow.svg)
+A meeting is not one all-or-nothing state. A recording can be ready while the transcript, summary, drafts or CRM updates are still pending.
 
-Do not treat a meeting as one all-or-nothing state. Ergo can have a recording ready while transcript, summary, insights, drafts, or reporting are still pending.
+## Who can use this
 
-## State types to keep separate
+- Anyone who can open the meeting in **Meetings**.
 
-- **Recording state**: whether media was captured and stored.
-- **Transcript state**: whether transcript segments are available.
-- **Summary state**: whether a meeting summary or generated note is ready.
-- **Insight and reporting state**: whether reporting fields or rubric outputs have been computed.
-- **Draft state**: whether post-call emails or follow-ups were generated.
-- **Desktop processing state**: desktop recordings can show `processing`, `completed`, `completed_no_transcript`, or `failed`.
+## Steps
 
-## What to do while processing
+1. Open **Meetings** and read the text on the meeting row.
+2. If the row shows **Recording generating...** (bot recording) or **Processing your recording...** (desktop recording), wait.
+3. Open the meeting. Read the text on the **Summary** tab and in the transcript area.
+4. If a desktop recording shows **Processing failed**, click **Retry** on the row.
+5. If a follow-up draft or CRM update is missing, click **Recent activity** on **Dashboard**. Find the meeting in the **Activity Log**.
+6. To run the automations again, open the meeting and click **Push Automation**.
 
-- Wait for the specific output you need instead of retrying everything immediately.
-- Refresh the meeting list or detail page after a few minutes.
-- For desktop recordings, a processing card can appear before the completed meeting record is ready.
-- Use retry only where the UI exposes retry for the failed output.
+## What to expect
 
-## When to escalate
+- Ergo has no fixed processing time. Wait for the output that you need.
+- **Recording is processing** shows on the meeting page while the recording is not ready.
+- **Recording complete — no transcript available** shows when the audio was not captured.
+- The **Summary** tab shows the summary when it is ready.
+- For a call with no business content, the summary says "This meeting was classified as not relevant — no substantive business content was detected." A no-show has the **No Show** badge.
+- **Retry** works for a desktop recording that shows **Processing failed**, and for an upload that failed. A bot recording has no **Retry** button.
 
-- The recording is missing after the bot was admitted and recording.
-- The transcript is empty or failed for a meeting with meaningful audio.
-- A desktop recording remains failed.
-- A required draft or reporting output is missing after the meeting has a transcript.
+## Common issues
+
+- The transcript is missing: the bot did not join, nobody admitted it, or the audio was not captured.
+- The desktop app shows **Upload failed**: open **Meetings**. When the row shows **Processing failed**, click **Retry**.
+- A meeting is not in **Meetings**: look for a row with the chip **N captures**. Ergo shows two captures of one meeting as one row.
+- A meeting is not in **Meetings**: ask the organization **Owner** if **Time-Based Deletion** is on, or if a privacy rule hides the meeting.
+- The page shows **Meeting not accessible**: ask the Owner or your team **Admin** to open **Settings → Members**, click your name, and click **Edit** in **Meeting access**.
+- Still stuck: use the **Support** button. Give the meeting title, the source and the missing output.
 
 ## Related articles
 
-- [Video, transcript, and action items](./video-transcript-and-action-items)
-- [Why some meetings do not generate insights or drafts](./why-some-meetings-do-not-generate-insights-or-drafts)
-- [Delete/retry processing](./delete-retry-processing)
-- [Transcript or recording missing](../troubleshooting/transcript-or-recording-missing)
+- [Why some meetings do not generate insights or drafts](https://support.joinergo.com/articles/1207359797)
+- [Delete or retry processing](https://support.joinergo.com/articles/3559756999)
+- [Meeting detail page](https://support.joinergo.com/articles/5822103848)
+- [Troubleshoot missed detection or upload failures](https://support.joinergo.com/articles/5749782951)
+- [Get support](https://support.joinergo.com/articles/2708243049)

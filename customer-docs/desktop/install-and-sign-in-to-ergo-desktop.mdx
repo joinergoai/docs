@@ -1,49 +1,49 @@
 ---
 title: "Install and sign in to Ergo Desktop"
-description: "Download Ergo Desktop, complete WorkOS sign-in, and confirm the app is using the right Ergo account."
-keywords: ["Install and sign in to Ergo Desktop", "Desktop", "Ergo docs"]
+description: "Download Ergo Desktop, sign in, grant permissions and connect the desktop notetaker."
+keywords: ["Ergo Desktop", "install", "sign in", "Set Up Ergo Desktop", "Desktop Notetaker Connected", "Download for macOS"]
 ---
 
-![Annotated Ergo Desktop settings screen showing sign-in, permissions, status, and upload health.](../images/desktop-settings-annotated.svg)
-
-Use this page to install Ergo Desktop and sign in before relying on local recording.
+Ergo Desktop records meetings from your computer. No bot joins the call. Install it and sign in before you rely on local recording.
 
 ## Who can use this
 
-- Users with access to Ergo Desktop.
-- Admins helping users verify the download and sign-in flow.
+- Each person who wants to record with Ergo Desktop. Ergo Desktop is available for macOS.
 
 ## Before you start
 
-- Confirm your workspace has Desktop access enabled.
-- Use the same email identity you use for the Ergo dashboard; the sign-in email must match the account provisioned for your workspace.
-- Keep the app open until the browser sign-in callback returns to the desktop app.
+- Make sure that you see the row **Ergo Desktop Notetaker** in **Settings → User integrations → Note takers**. If you do not, ask Ergo support to turn on Ergo Desktop for your organization.
+- Use the same Ergo account that you use on the web.
 
 ## Steps
 
-- Download Ergo Desktop from the approved Ergo download path.
-- Open the app.
-- Start sign-in from the desktop app.
-- Complete the browser-based WorkOS sign-in.
-- Return to the desktop app and confirm your email appears as the authenticated user.
-- Open the dashboard and confirm you are using the same Ergo account.
+1. On the web, open **Settings → User integrations**. In **Note takers**, find **Ergo Desktop Notetaker** and select **Download**.
+2. In the dialog **Download the Ergo Desktop app**, select **Download for macOS**.
+3. Open the downloaded file. Drag **Ergo** to **Applications**. Start **Ergo**.
+4. On the screen **Sign in to Ergo**, select **Sign in**. Your browser opens. Sign in with your Ergo account.
+5. On the page **Sign-in complete**, select **Open Ergo**.
+6. On the screen **Set Up Ergo Desktop**, grant **Microphone Access**, **Screen Recording** and **Accessibility**.
+7. Select **Connect** next to **Desktop Notetaker Connected**.
+8. Select **Restart Ergo**. Open the user menu at the bottom of the left sidebar. Make sure that it shows your email.
 
 ## What to expect
 
-- The backend download path is feature-gated for Desktop access.
-- Desktop sign-in uses a browser auth flow and a desktop callback.
-- The app stores the authenticated session locally and can refresh tokens.
+- By default, Ergo Desktop records video and audio of supported meetings. Ergo posts a recording disclosure in the meeting chat.
+- To record audio only, open **Settings → Desktop app → Recording** in the desktop app. Turn off **Video recording**. Then you can also turn off **Recording disclosure**.
+- You can use Ergo Desktop Notetaker and Ergo Notetaker together.
+- Desktop recording does not remove your duty to follow recording consent rules.
+- To test, select **Quick Note**, then **Record**. Speak for one minute and select **Stop recording**. Look at **Recent** on the home page. The row shows **Processing...**. If it shows **Processing failed**, select **Retry**.
 
 ## Common issues
 
-- The download is unavailable because Desktop access is not enabled for the workspace.
-- Sign-in fails because the email is not provisioned for the workspace or belongs to a different Ergo account.
-- The browser callback opens but does not return to the desktop app.
-- The desktop app is signed in as a different user than the dashboard.
+- **Connect** does not change to **Connected**: you have Gong, Fireflies.ai, Circleback.ai, BlueDot, Fathom or Grain connected. Disconnect it in **Settings → User integrations** on the web.
+- The browser does not open the app: select **Open Ergo** on the page. If the page shows **Sign-in link expired**, select **Sign in** in the app again.
+- The app shows a different user than the web: sign out and sign in with the correct account.
 
 ## Related articles
 
-- [Desktop](./index)
-- [macOS permissions](./macos-permissions)
-- [Desktop onboarding checklist](./desktop-onboarding-checklist)
-- [Sign-in and desktop callback issues](../troubleshooting/sign-in-and-desktop-callback-issues)
+- [macOS permissions](https://support.joinergo.com/articles/4584568980)
+- [Quick Note](https://support.joinergo.com/articles/6404825240)
+- [Record a meeting with Ergo Desktop](https://support.joinergo.com/articles/9478429833)
+- [Desktop settings and updates](https://support.joinergo.com/articles/6871098362)
+- [Troubleshoot missed detection or upload failures](https://support.joinergo.com/articles/5749782951)

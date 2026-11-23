@@ -1,46 +1,48 @@
 ---
 title: "Circleback"
-description: "Connect Circleback by sending Circleback meeting notes, transcripts, and action items to Ergo through a webhook."
-keywords: ["Circleback", "Integrations", "Ergo docs"]
+description: "Connect Circleback so Ergo receives your meeting notes, transcripts and action items."
+keywords: ["Circleback", "Circleback.ai", "Note takers", "Webhook URL", "Circleback sign-in secret", "Automation"]
 ---
 
-![Product screenshot showing connected sources, reconnect states, and setup tabs.](../images/product-integrations-settings.png)
-
-Use this page when Circleback is one of your meeting note sources.
+Connect Circleback when it is one of your meeting note sources. You make an automation in Circleback that sends each meeting to Ergo.
 
 ## Who can use this
 
-- Users and operators configuring Circleback automation delivery.
-- Admins reviewing third-party notetaker overlap.
+- People with a **Standard** seat. Each person connects their own account.
+- This is a personal connection. It is not an organization connection.
 
 ## Before you start
 
 - Have access to Circleback automations.
-- Copy the webhook URL and sign-in secret shown in Ergo.
-- Decide how Circleback should coexist with other notetaker sources.
+- Get your sign-in secret from Circleback.
+- One person can connect only one of these notetakers: Gong, Fireflies, Circleback, BlueDot, Fathom, Grain. None of them works together with Ergo Notetaker, Ergo Desktop Notetaker or Granola. Ergo shows **Disconnect {name} first**.
 
 ## Steps
 
-- Open **Integrations** and select **Circleback**.
-- Copy the webhook URL shown in Ergo.
-- In Circleback, create an automation that sends meeting notes, transcript, and action items to the webhook after meetings.
-- Paste the Circleback sign-in secret in Ergo and connect.
-- Test with one meeting.
+1. Open **Settings → User integrations**. In **Note takers**, find **Circleback.ai** and click **Connect**.
+2. In the **Connect to Circleback.ai** window, click **Copy** next to **Webhook URL**.
+3. In Circleback, open **Automations** and make an automation.
+4. Set **When to run** to **After every meeting**.
+5. Add the step **Send webhook request**. Paste the URL. Under **What to include**, select **Meeting Notes**, **Transcript** and **Action Items**.
+6. Add the step **End Automation**. Name the automation and save it.
+7. In Ergo, paste your secret in **Circleback sign-in secret**. Click **Connect**.
+8. Make sure that the row shows **Disconnect**. Finish one test meeting and look for it in **Meetings**.
 
 ## What to expect
 
-- Circleback delivery depends on the Circleback automation firing after the meeting.
-- Ergo processes the payload it receives; missing transcript, notes, or action items in Circleback can limit downstream output.
-- Duplicate-source review is important if another notetaker also records the same call.
+- Ergo gets a meeting only when the Circleback automation runs after the meeting.
+- If Circleback has no transcript, notes or action items, the output in Ergo can be less complete.
 
 ## Common issues
 
-- The webhook URL was copied incorrectly.
-- Circleback automation does not include the expected notes, transcript, or action items.
-- A meeting is delivered more than once or another notetaker source already captured it.
+- **Disconnect {name} first** shows: another notetaker is connected. Disconnect it first.
+- Meetings do not arrive: the webhook URL was copied wrong, or the automation does not include notes, transcript and action items.
+- Two sources recorded one meeting: see [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190).
+- A meeting is not processed: see [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478).
 
 ## Related articles
 
-- [Integrations](./index)
-- [Using multiple notetakers with Ergo](../meetings/using-multiple-notetakers-with-ergo)
-- [Meeting processing time and status states](../meetings/meeting-processing-time-and-status-states)
+- [Using multiple notetakers with Ergo](https://support.joinergo.com/articles/3534048190)
+- [Meeting processing time and status states](https://support.joinergo.com/articles/3507520478)
+- [Notetaker setup](https://support.joinergo.com/articles/1280940465)
+- [BlueDot](https://support.joinergo.com/articles/5424968361)

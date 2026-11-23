@@ -1,46 +1,45 @@
 ---
 title: "Restrict to pipeline"
-description: "Keep Ergo scoped to intended synced pipelines when your CRM has multiple pipelines."
-keywords: ["restrict to pipeline", "pipeline scope", "CRM pipeline filter"]
+description: "Make Ergo look for deals only in the pipeline of your team."
+keywords: ["Restrict to pipeline", "CRM Stages", "More stage settings", "Pipeline", "Deal search"]
 ---
 
-![Product screenshot showing CRM properties, pipeline stages, and sync checks.](../images/product-field-mapping.png)
-
-Use this page when only certain CRM pipelines should be synced into Ergo. Pipelines that are not synced are outside Ergo's configured workflow scope, so document that choice for admins and managers.
+**Restrict to pipeline** is one switch. When it is on, Ergo looks up deals only in the pipeline of your team.
 
 ## Who can use this
 
-- RevOps, sales operations, CRM owners, and admins with CRM permissions.
+- The organization **Owner** and team **Admins**.
+- A team Admin sees only the teams that the Admin manages. A **Member** does not see this page.
 
 ## Before you start
 
-- Use a CRM account that can read and update the fields Ergo needs.
-- Map properties, pipelines, and stages before enabling broad CRM automation.
-- Test changes on one record before rolling them out.
+- Sync the stages of one pipeline for the team. See [Pipeline stages](https://support.joinergo.com/articles/1501601101).
 
 ## Steps
 
-- Choose the CRM pipelines Ergo should sync and operate on.
-- Confirm unsynced pipelines are intentionally out of scope.
-- Recheck Deals board counts, saved views, reports, and automations after changing the setting.
-- Run a single-record test in an included pipeline, and confirm an out-of-scope pipeline is not expected in Ergo workflows.
+1. Open **Settings → CRM Stages**. Select the team in the team selector at the top right.
+2. Make sure that the team has stages from one pipeline only.
+3. Click the **⋯** button to the right of **Sync From CRM**.
+4. Turn on **Restrict to pipeline**.
+5. Process one meeting. Check that Ergo updates a deal in the pipeline of the team, not a deal in a different pipeline.
 
 ## What to expect
 
-- Pipeline sync scope affects which deal pipelines Ergo is configured to use; it is not a substitute for CRM permissions.
-- Unsynced pipelines can make valid CRM records look missing from Ergo.
-- Pipeline scope decisions should be documented for admins and managers.
+- The switch shows only when the team has stages from exactly one pipeline.
+- With the switch off, Ergo can find a deal in any pipeline of your CRM.
+- The switch limits where Ergo looks for deals. It does not give or remove the right to write a stage.
+- This switch does not choose the pipelines that a team uses. Use **Sync From CRM** for that.
+- The switch does not change the Deals board.
 
 ## Common issues
 
-- A deal is in a CRM pipeline that Ergo has not synced.
-- The default pipeline changed but Ergo's synced pipeline set did not.
-- A saved view was built before the pipeline scope changed.
+- The switch does not show: the team has stages from two or more pipelines.
+- Ergo updates a deal in a different pipeline: the switch is off.
+- Ergo does not find a deal that exists: the deal is in a different pipeline and the switch is on.
 
 ## Related articles
 
-- [Field mapping](./index)
-- [Stage controls](./stage-controls)
-- [Company info](./company-info)
-- [CRM sync issues](../troubleshooting/crm-sync-issues)
-- [Stage drift conflicts](../troubleshooting/stage-drift-conflicts)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Pipelines](https://support.joinergo.com/articles/7931998666)
+- [Stage controls](https://support.joinergo.com/articles/4806151015)
+- [CRM sync issues](https://support.joinergo.com/articles/6503095041)

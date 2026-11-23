@@ -1,51 +1,49 @@
 ---
 title: "Pricing configuration"
-description: "Add organization-level pricing context during onboarding so Ergo can reason about deal amounts without turning the page into a public pricing promise."
-keywords: ["Pricing configuration", "pricing model", "deal amount", "Super Admin", "Ergo setup"]
+description: "Describe how your company charges customers so Ergo can extract deal amounts more accurately."
+keywords: ["Pricing configuration", "Pricing Description", "Advanced", "Pricing tab", "Deal amounts"]
 ---
 
-![Annotated onboarding screen showing role-specific setup sections.](../images/onboarding-setup-by-role-annotated.svg)
-
-Use this page when a Super Admin needs to describe how your organization prices its own product or service for Ergo. This setup is internal workspace context for deal reasoning. It is not Ergo billing, plan management, or a public source of commercial terms.
+Write one short text that describes how your company charges customers. Ergo uses it for deal amount extraction. It is not Ergo billing.
 
 ## Who can use this
 
-- Super Admins can configure or update pricing context.
-- Non-super-admin users may see the onboarding step as informational and can continue without editing it.
+- Only the organization **Owner** can read or change the pricing description.
+- A team **Admin** sees the **Pricing** tab as read only. The tab says that only an Owner can change pricing.
+- A **Member** does not see this page.
 
 ## Before you start
 
-- Confirm the approved internal pricing model with the rollout owner.
-- Keep confidential customer-specific discounts, legal terms, and negotiated exceptions out of the generic pricing description unless your team intentionally wants Ergo to use them as workspace context.
-- Make sure related CRM amount, package, discount, or pricing fields are mapped separately if you expect CRM records or reports to use those fields.
+- Confirm your pricing model with your rollout owner.
+- Do not put secret discounts, legal terms or one-time exceptions in the text.
+- Map CRM amount, package and discount fields separately. See [CRM properties setup](https://support.joinergo.com/articles/3371162277).
 
 ## Steps
 
-1. Open the pricing configuration step during onboarding or from the Field Mapping setup area when available.
-2. Enter a concise pricing description in plain language. Include the pricing model, package structure, units, tiers, or assumptions that help Ergo reason about deal amounts.
-3. Save by leaving the field or completing the step.
-4. Revisit the description when your packaging or pricing model changes.
-5. Test deal amount reasoning on a small set of records before relying on pricing-informed automation or reports.
+1. Sign in as the **Owner**.
+2. In the setup wizard, open the step **Advanced settings** and click **Pricing**. After setup, open **Settings → Advanced → Pricing**.
+3. In **Pricing Description**, write how you charge customers. Include the price model, packages, units and tiers.
+4. Click out of the field or press Enter. Ergo saves by itself.
+5. Change the text when your pricing changes.
+6. Test with a small number of deals.
 
 ## What to expect
 
-- Pricing configuration stores one organization-level text description.
-- Super Admin access is required for the pricing configuration API.
-- The description helps Ergo infer or explain deal amounts, but it does not replace CRM amount fields, quote approvals, or billing systems.
-- If no pricing configuration exists, the step can still be completed by users who are not allowed to edit it.
+- There is one text for the whole organization.
+- The text helps Ergo extract deal amounts. It does not replace CRM amount fields, quote approvals or a billing system.
+- The tab says: "Configure how your company charges customers for accurate deal amount extraction."
+- If deal qualification is off for your organization, the **Owner** step in the wizard opens on **Pricing**.
 
 ## Common issues
 
-- A user expects to edit pricing but is not a Super Admin.
-- CRM fields for amount, package, or discount are unmapped, so downstream reports still lack structured pricing data.
-- The pricing description is too broad, stale, or includes exceptions that should not apply to every deal.
-- Someone treats this page as customer-facing pricing. Keep public pricing and contract language in the approved commercial source of truth.
+- You cannot edit the text: you are not the **Owner**.
+- Reports lack pricing data: the CRM amount, package or discount fields are not mapped.
+- Amounts look wrong: the text is too broad, old or full of exceptions. Make it shorter and more exact.
+- This page is not for public pricing. Keep public pricing and contract terms in your own commercial source.
 
 ## Related articles
 
-- [Setup](./index)
-- [Pipeline stages](./pipeline-stages)
-- [Advanced settings](./advanced-settings)
-- [Roles and permissions](../start-here/roles-and-permissions)
-- [Agent usage and billing](../admin/agent-usage-and-billing)
-- [Dashboard setup errors](../troubleshooting/dashboard-setup-errors)
+- [First-time setup checklist](https://support.joinergo.com/articles/9947439335)
+- [Advanced settings](https://support.joinergo.com/articles/6033018928)
+- [Pipeline stages](https://support.joinergo.com/articles/1501601101)
+- [Seats, roles and visibility](https://support.joinergo.com/articles/6821509431)

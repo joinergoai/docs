@@ -1,33 +1,47 @@
 ---
 title: "Upload knowledge base documents"
-description: "Upload supported files so Ergo can index them as knowledge base context."
-keywords: ["knowledge base upload", "documents", "file types", "document indexing"]
+description: "Upload documents to My documents, Team or Organization so Ergo agents can use them."
+keywords: ["knowledge base", "upload documents", "My documents", "Team", "Organization", "Document summary", "file types"]
 ---
 
-![Annotated knowledge base showing document status, scopes, linked deals, and sharing controls.](../images/knowledge-base-annotated.svg)
+Upload playbooks, FAQs and policies so that Ergo agents can use them when they draft and answer.
 
-Upload knowledge base documents when Ergo needs reusable context such as playbooks, enablement docs, FAQs, or policies.
+## Who can use this
 
-## Supported upload behavior
+- People with a Standard seat. **Knowledge Base** is in **Settings** only for these seats.
+- All users can add to **My documents**. Only team Admins can add to their team. Only the Owner and Admins can add to **Organization**.
 
-- The checked backend upload route accepts PDF, DOCX, DOC, TXT, and Markdown files.
-- Files must be 25 MB or smaller.
-- The upload route extracts text, stores a document record, uploads the original file when storage succeeds, and indexes extracted text for search.
-- Document status is `pending`, `indexed`, or `failed`.
+## Before you start
 
-## Upload a document
+- Decide who needs the document: only you, a team, or the organization.
+- A document in **My documents** is for you only. A document in **Team** is shared with everyone on that team. A document in **Organization** is shared with everyone in the organization.
+- Other users can view and download team and organization documents.
 
-- Open the knowledge base document manager.
-- Select the document area or drag in a supported file.
-- Wait for the document to finish processing.
-- Confirm the document reaches `indexed` before expecting Ergo to use it as context.
+## Steps
 
-## Scope note
+1. Open **Settings → Knowledge Base**.
+2. Select a tab: **My documents**, **Team** or **Organization**. On the **Team** tab, select the team if you are in more than one team.
+3. Click the upload area (**Click to upload or drag and drop**), or drag the files into it. The chip in the area shows where the files go, for example **Adds to My documents · only you**.
+4. Wait until **Uploading...** and **Processing...** go away. Then the document is ready.
+5. Read the **Document summary**. To change it, click the **Edit summary** icon, change the text, then click **Save**.
+6. If the document shows **Indexing failed**, click the **Retry indexing** icon.
 
-Some UI surfaces show user and org document areas. In the checked upload route, uploaded knowledge base files are stored against the uploading user and org, and the public docs should avoid promising org-wide availability unless your current workspace UI explicitly grants it.
+## What to expect
+
+- Ergo accepts these file types: PDF, Word (DOCX, DOC, DOTX, RTF), Excel (XLSX, XLS, XLSM), CSV, PowerPoint (PPTX, PPT), text (TXT, MD, HTML, JSON) and images (JPG, PNG, GIF, WEBP, BMP, TIFF, HEIC).
+- Each file must be 25 MB or smaller. You can upload a maximum of 10 files at one time.
+- Ergo reads the file and indexes its text. Then Ergo writes a **Document summary**. Your agents use the summary to decide when to read the document. You can edit the summary.
+- A document that is ready has no label.
+
+## Common issues
+
+- The document shows **Indexing failed**. Put the pointer on the label to see the cause. Then retry.
+- The tab you need does not let you add files. Your role does not allow it for that scope.
+- Ergo does not use the document yet. Wait until it is ready.
 
 ## Related articles
 
-- [Document status, retry, delete, and download](./document-scopes-status-retry-delete-download)
-- [Post-call reference docs and summaries](./post-call-reference-docs-and-summaries)
-- [Reviewing AI-generated outputs](../start-here/reviewing-ai-generated-outputs)
+- [Document status, retry, delete, and download](https://support.joinergo.com/articles/1723956985)
+- [Post-call reference docs and summaries](https://support.joinergo.com/articles/7128580019)
+- [Share or revoke documents](https://support.joinergo.com/articles/6142809448)
+- [Link documents to deals](https://support.joinergo.com/articles/8458870168)
